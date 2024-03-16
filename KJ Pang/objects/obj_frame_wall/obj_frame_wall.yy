@@ -9,7 +9,10 @@
     "name":"Wall",
     "path":"folders/Objects/Wall.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_parent_wall",
+    "path":"objects/obj_parent_wall/obj_parent_wall.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -28,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_frame_wall6",
-    "path":"sprites/spr_frame_wall6/spr_frame_wall6.yy",
+    "name":"spr_frame_wall",
+    "path":"sprites/spr_frame_wall/spr_frame_wall.yy",
   },
   "spriteMaskId":null,
   "visible":true,
