@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"LoadBackgroundImage",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"LoadBackgroundImage",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
