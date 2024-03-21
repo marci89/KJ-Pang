@@ -1,16 +1,20 @@
 
 #region Init basic things
 
-//Load background with current level number
-LoadBackgroundImage(global.level);
-//wall frame creating
-InitWallFrame();
+
+pausedText = GetLocalizedText("paused");
+LoadGameSettings();
+LoadBackgroundImage(global.level); //Load background with current level number
+InitWallFrame(); //wall frame creating
 
 #endregion
 
 
 PlayMusic(snd_mtFuji, false);
-global.levelName = "Japan";
+
+global.levelName = "japan";
+
+
 
 instance_create_layer(100,100,"Screen", obj_life_item);
 instance_create_layer(120,120,"Screen", obj_life_item);
@@ -30,11 +34,12 @@ var az = instance_create_layer(160,140,"Screen", obj_life_item);
 
   
   
-for (var i = 0; i < 20; ++i) {
+for (var i = 0; i < 700; ++i) {
 	CreateLifePoint(100 +i, 500, lifePointType.Blue);
 //  instance_create_layer(100 +i, 500,"Screen", obj_life_point);
 }
 
+/*
 for (var i = 0; i < 20; ++i) {
 	CreateLifePoint(200 +i, 500, lifePointType.Green);
 //  instance_create_layer(100 +i, 500,"Screen", obj_life_point);
@@ -50,7 +55,7 @@ for (var i = 0; i < 20; ++i) {
 //  instance_create_layer(100 +i, 500,"Screen", obj_life_point);
 }
 
-for (var i = 0; i < 1000; ++i) {
+for (var i = 0; i < 20; ++i) {
 	CreateLifePoint(400 +i, 500, lifePointType.Purple);
 //  instance_create_layer(100 +i, 500,"Screen", obj_life_point);
 }
@@ -67,6 +72,7 @@ for (var i = 0; i < 20; ++i) {
 	CreateLifePoint(900 +i, 500, lifePointType.Pink);
 //  instance_create_layer(100 +i, 500,"Screen", obj_life_point);
 }
+*/
   
  instance_create_layer(500,400,"Wall", obj_red_wall);
  instance_create_layer(550,600,"Wall", obj_red_wall);

@@ -1,5 +1,5 @@
+/// @desc Growing animation
 
-// Growing animation
 if (!isPickedUp) {
 	if (isGrowing) {
 	    // Increase sprite size

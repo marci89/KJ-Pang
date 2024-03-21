@@ -1,5 +1,5 @@
+/// @desc Pick up animation
 
-//Pick up animation
 if (isPickedUp) {
 	image_xscale -= growingAmount; 
 	image_yscale -= growingAmount;

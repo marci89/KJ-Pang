@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"LoadBackgroundImage",
+  "%Name":"GameSettingsManager",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"LoadBackgroundImage",
+  "name":"GameSettingsManager",
   "parent":{
     "name":"FileManipulating",
     "path":"folders/Scripts/FileManipulating.yy",

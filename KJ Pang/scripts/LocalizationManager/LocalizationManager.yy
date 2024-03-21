@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"LoadBackgroundImage",
+  "%Name":"LocalizationManager",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"LoadBackgroundImage",
+  "name":"LocalizationManager",
   "parent":{
     "name":"FileManipulating",
     "path":"folders/Scripts/FileManipulating.yy",

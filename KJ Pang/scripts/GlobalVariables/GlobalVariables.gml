@@ -10,6 +10,7 @@ global.PlayerCurrentWeaponType = weaponType.SingleSting; //Player current weapon
 global.soundEnable = false; // sound enable
 global.musicEnable = false; // music enable
 global.isPaused = false; // paused or not
+global.language = languageType.Hungarian; // selected language
 
 
 
@@ -20,7 +21,12 @@ global.isRestartLevelAfterDead = false; // restart the room after death or not.
 
 
 
-
+//Languages
+enum languageType {
+	English,
+	Hungarian
+};
+	
 
 // life point colors
 enum lifePointType{
