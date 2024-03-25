@@ -1,12 +1,12 @@
 {
   "$GMScript":"",
-  "%Name":"CheckLifePoint",
+  "%Name":"Enums",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"CheckLifePoint",
+  "name":"Enums",
   "parent":{
-    "name":"Checker",
-    "path":"folders/Scripts/Checker.yy",
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

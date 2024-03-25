@@ -20,6 +20,3 @@ isDead = false; // death or alive
 isInvincible = false; // if this is true, nothing hurts you.
 
 
-
-
-

@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"CheckLifePoint",
+  "%Name":"CheckObjectRoomCollide",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"CheckLifePoint",
+  "name":"CheckObjectRoomCollide",
   "parent":{
     "name":"Checker",
     "path":"folders/Scripts/Checker.yy",

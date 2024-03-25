@@ -1,4 +1,7 @@
 
+var halfSpriteWidth = sprite_width / 2;
+var halfSpriteHeight = sprite_height / 2;
+		
 #region Player inputs
 
 inputX = keyboard_check(vk_right) - keyboard_check(vk_left);
@@ -8,29 +11,29 @@ inputFire = keyboard_check_pressed(vk_space);
 
 #endregion
 
+
 #region Movement
 
 if (!isDead) {
 
   // Horizontal movement
-  if (!place_meeting(x, y - 1, obj_parent_wall)) {
-     moveX = inputX * moveSpeed;
+  if (!place_meeting(x, y - 1, obj_parent_wall) ) {
+        moveX = inputX * moveSpeed;				
   }
-
+  
   // Jump
   if (inputJump && (place_meeting(x, y + 1, obj_parent_wall) || place_meeting(x, y - 1, obj_parent_wall))) {
-     if (inputDown) {
-        moveY = -jumpSpeed / 2; // falling back faster when down key is pressed during jumping
-    } else {
-        moveY = -jumpSpeed; // Normal jump when down key is not pressed
-    }  
-  }
+		if (inputDown) {
+		    moveY = -jumpSpeed / 2; // falling back faster when down key is pressed during jumping
+		} else {
+		    moveY = -jumpSpeed; // Normal jump when down key is not pressed
+		}  
+    }
 }
 
 // Final movement velocity
 var _finalMoveX = moveX;
 var _finalMoveY = moveY;
-
 
 
 /// Platform collisions
@@ -40,7 +43,6 @@ if (place_meeting(x + _finalMoveX, y, obj_parent_wall)) {
     while (!place_meeting(x + sign(_finalMoveX), y, obj_parent_wall)) {
         x += sign(_finalMoveX);
     }
-    
     _finalMoveX = 0;
 }
 
@@ -51,8 +53,32 @@ if (place_meeting(x, y + _finalMoveY, obj_parent_wall)) {
     }
     
     _finalMoveY = 0;
-    moveY = 0; // Reset vertical movement
+    moveY = 0; 
 }
+
+
+
+#region Screen collision without walls
+
+if (!isDead){
+	
+// X check
+	var targetX = x + inputX * 1; // Calculate the target X position
+    targetX = clamp(targetX, 30, global.roomWidth - halfSpriteWidth);
+
+    x = targetX;
+
+    if (targetX <= 30 || targetX >= global.roomWidth - halfSpriteWidth) {
+        _finalMoveX = 0;
+    }
+	
+  // Y check
+  if (CheckScreenCollisionTopWithoutWallForObject(y, sprite_height)) {
+     moveY += 1; 
+	}  
+}
+
+#endregion
 
 
 //checking getting stuck situations
@@ -106,11 +132,13 @@ if(place_meeting(x, y, obj_parent_wall)) {
 }
 
 
-// Move
+// Move update
 x += _finalMoveX;
 y += _finalMoveY;
 
+#endregion
 
+#region gravity
 
 // Gravity
 if (!place_meeting(x, y + 1, obj_parent_wall)  || moveY < 0) {
@@ -122,9 +150,9 @@ if (!place_meeting(x, y + 1, obj_parent_wall)  || moveY < 0) {
     }
 }
 
-
-
 #endregion
+
+
 
 #region Sprite change
 
@@ -169,7 +197,7 @@ if (!isDead) {
 			PlaySound(snd_death, false);
 
 			moveX =0;			
-		    alarm[0] = room_speed * 4;
+		    alarm[0] = 150;
 		}
 	 }
 	
@@ -178,12 +206,11 @@ if (!isDead) {
 #region Blinking
 
 	if(isBlinked){
-	    alarm[1] = room_speed * 0.1;
+	    alarm[1] = 7;
 	    isBlinked = false;
 	}
 	
 #endregion
-
 
 #region Shoot
 

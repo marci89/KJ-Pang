@@ -1,9 +1,14 @@
-//Apply gravity
-moveY += gravSpeed;
+// Apply gravity
+if (isGravityEnabled) {
+    moveY += gravSpeed;
+}
 
+
+
+#region Wall collision
 
 //Collide on x-axis
-if (place_meeting(x + moveX, y, obj_parent_wall)) {
+if (place_meeting(x + moveX, y, obj_parent_wall)  ) {
     while (!place_meeting(x + sign(moveX), y, obj_parent_wall)) {
         x += sign(moveX);
     }
@@ -13,7 +18,7 @@ if (place_meeting(x + moveX, y, obj_parent_wall)) {
 
 
 //Collide on y-axis
-if (place_meeting(x, y + moveY, obj_parent_wall)) {
+if (place_meeting(x, y + moveY, obj_parent_wall) ) {
     while (!place_meeting(x, y + sign(moveY), obj_parent_wall)) {
         y += sign(moveY);
     }
@@ -21,6 +26,44 @@ if (place_meeting(x, y + moveY, obj_parent_wall)) {
 	moveY *=-bounceDecay;
 }
 
-// Move (update positions)
+#endregion
+
+#region Screen collision
+
+var halfSpriteWidth = sprite_width / 2;
+var halfSpriteHeight = sprite_height / 2;
+
+//Left
+if (CheckScreenCollisionLeftWithoutWallForObject(x, halfSpriteWidth)) {
+	   x = halfSpriteWidth;
+	   moveX *=-bounceDecay;
+}
+
+//Right
+if (CheckScreenCollisionRightWithoutWallForObject(x, halfSpriteWidth)) {
+	    x = global.roomWidth - halfSpriteWidth;
+        moveX *= -bounceDecay;
+}
+
+//Top
+if (CheckScreenCollisionTopWithoutWallForObject(y, halfSpriteHeight)) {
+	     y = halfSpriteHeight;
+        moveY *= -bounceDecay;
+}
+
+//Bottom
+if (CheckScreenCollisionBottomWithoutWallForObject(y, halfSpriteHeight)) {
+	    y = global.roomHeight - halfSpriteHeight;
+        moveY *= -bounceDecay;
+}
+
+#endregion
+
+
+//update movement position
 x += moveX;
 y += moveY;
+
+
+
+

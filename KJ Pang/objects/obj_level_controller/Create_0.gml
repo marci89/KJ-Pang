@@ -3,9 +3,10 @@
 
 
 pausedText = GetLocalizedText("paused");
+
 LoadGameSettings();
 LoadBackgroundImage(global.level); //Load background with current level number
-InitWallFrame(); //wall frame creating
+InitWallFrame(spr_ground_wall); //wall frame creating
 
 #endregion
 
@@ -16,33 +17,39 @@ global.levelName = "japan";
 
 
 
-instance_create_layer(100,100,"Screen", obj_life_item);
-instance_create_layer(120,120,"Screen", obj_life_item);
-instance_create_layer(140,130,"Screen", obj_life_item);
-instance_create_layer(160,140,"Screen", obj_life_item);
 
-var az = instance_create_layer(160,140,"Screen", obj_life_item);
+for (var i = 0; i < 250; ++i) {
+instance_create_layer(i *32, 250,"Wall", obj_red_wall);
+}
 
-  
+for (var i = 0; i < 250; ++i) {
+instance_create_layer(i *32, 1,"Wall", obj_red_wall);
+}
 
 
- instance_create_layer(700, 600,"Enemy", obj_giant_ball);
- instance_create_layer(300, 300,"Screen", obj_player);
+
+ //instance_create_layer(700, 600,"Enemy", obj_giant_ball);
+// instance_create_layer(200, 200,"Enemy", obj_giant_ball);
+ instance_create_layer(100, 140,"Enemy", obj_giant_ball);
+ instance_create_layer(200, 140,"Enemy", obj_giant_ball);
+ instance_create_layer(600, 140,"Enemy", obj_giant_ball);
+ instance_create_layer(700, 140,"Enemy", obj_giant_ball);
+ instance_create_layer(800, 140,"Enemy", obj_giant_ball);
+ instance_create_layer(300, 100,"Screen", obj_player);
  
  
 
-
   
   
-for (var i = 0; i < 700; ++i) {
-	CreateLifePoint(100 +i, 500, lifePointType.Blue);
+for (var i = 0; i < 900; ++i) {
+//	CreateLifePoint(100 +i, 500, lifePointType.Blue);
 //  instance_create_layer(100 +i, 500,"Screen", obj_life_point);
 }
 
-/*
+
 for (var i = 0; i < 20; ++i) {
 	CreateLifePoint(200 +i, 500, lifePointType.Green);
-//  instance_create_layer(100 +i, 500,"Screen", obj_life_point);
+ // instance_create_layer(100 +i, 500,"Screen", obj_life_point);
 }
 
 for (var i = 0; i < 20; ++i) {
@@ -72,11 +79,11 @@ for (var i = 0; i < 20; ++i) {
 	CreateLifePoint(900 +i, 500, lifePointType.Pink);
 //  instance_create_layer(100 +i, 500,"Screen", obj_life_point);
 }
-*/
+
   
- instance_create_layer(500,400,"Wall", obj_red_wall);
- instance_create_layer(550,600,"Wall", obj_red_wall);
- instance_create_layer(600,600,"Wall", obj_red_wall);
+ //instance_create_layer(500,400,"Wall", obj_red_wall);
+ //instance_create_layer(550,600,"Wall", obj_red_wall);
+ //instance_create_layer(600,600,"Wall", obj_red_wall);
  
 
 

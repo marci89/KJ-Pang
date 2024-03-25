@@ -1,3 +1,4 @@
+/// @desc Death animation
 
 	if(global.isRestartLevelAfterDead) {
 		room_restart();

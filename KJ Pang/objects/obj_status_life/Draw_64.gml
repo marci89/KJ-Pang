@@ -1,11 +1,11 @@
-
+/// @desc growing animation
 
 #region Grow animation
 
 	if(previousLife != global.playerLife){
 		image_xscale +=growAmount;
 		image_xscale += growAmount;
-	    alarm[0]  = room_speed * growDuration;
+	    alarm[0]  = growDuration;
 		previousLife = global.playerLife;
 	}
 
