@@ -17,12 +17,12 @@ inputFire = keyboard_check_pressed(vk_space);
 if (!isDead) {
 
   // Horizontal movement
-  if (!place_meeting(x, y - 1, obj_parent_wall) ) {
+  if (!place_meeting(x, y - 1, obj_wall_parent) ) {
         moveX = inputX * moveSpeed;				
   }
   
   // Jump
-  if (inputJump && (place_meeting(x, y + 1, obj_parent_wall) || place_meeting(x, y - 1, obj_parent_wall))) {
+  if (inputJump && (place_meeting(x, y + 1, obj_wall_parent) || place_meeting(x, y - 1, obj_wall_parent))) {
 		if (inputDown) {
 		    moveY = -jumpSpeed / 2; // falling back faster when down key is pressed during jumping
 		} else {
@@ -39,16 +39,16 @@ var _finalMoveY = moveY;
 /// Platform collisions
 
 // X
-if (place_meeting(x + _finalMoveX, y, obj_parent_wall)) {
-    while (!place_meeting(x + sign(_finalMoveX), y, obj_parent_wall)) {
+if (place_meeting(x + _finalMoveX, y, obj_wall_parent)) {
+    while (!place_meeting(x + sign(_finalMoveX), y, obj_wall_parent)) {
         x += sign(_finalMoveX);
     }
     _finalMoveX = 0;
 }
 
 // Y
-if (place_meeting(x, y + _finalMoveY, obj_parent_wall)) {
-    while (!place_meeting(x, y + sign(_finalMoveY), obj_parent_wall)) {
+if (place_meeting(x, y + _finalMoveY, obj_wall_parent)) {
+    while (!place_meeting(x, y + sign(_finalMoveY), obj_wall_parent)) {
         y += sign(_finalMoveY);
     }
     
@@ -82,48 +82,48 @@ if (!isDead){
 
 
 //checking getting stuck situations
-if(place_meeting(x, y, obj_parent_wall)) {
+if(place_meeting(x, y, obj_wall_parent)) {
 	for(var i = 0; i < 1000; ++i) {
 		//Right
-		if(!place_meeting(x + i, y, obj_parent_wall)) {
+		if(!place_meeting(x + i, y, obj_wall_parent)) {
 			x += i;
 			break;
 		}
 		//Left
-		if(!place_meeting(x - i, y, obj_parent_wall)) {
+		if(!place_meeting(x - i, y, obj_wall_parent)) {
 			x -= i;
 			break;
 		}
 		//Up
-		if(!place_meeting(x, y - i, obj_parent_wall)) {
+		if(!place_meeting(x, y - i, obj_wall_parent)) {
 			y -= i;
 			break;
 		}
 		//Down
-		if(!place_meeting(x, y + i, obj_parent_wall)) {
+		if(!place_meeting(x, y + i, obj_wall_parent)) {
 			y += i;
 			break;
 		}
 		//Top Right
-		if(!place_meeting(x + i, y - i, obj_parent_wall)) {
+		if(!place_meeting(x + i, y - i, obj_wall_parent)) {
 			x += i;
 			y -= i;
 			break;
 		}
 		//Top Left
-		if(!place_meeting(x - i, y - i, obj_parent_wall)) {
+		if(!place_meeting(x - i, y - i, obj_wall_parent)) {
 			x -= i;
 			y -= i;
 			break;
 		}
 		//Bottom Right
-		if(!place_meeting(x + i, y + i, obj_parent_wall)) {
+		if(!place_meeting(x + i, y + i, obj_wall_parent)) {
 			x += i;
 			y += i;
 			break;
 		}
 		//Bottom Left
-		if(!place_meeting(x - i, y + i, obj_parent_wall)) {
+		if(!place_meeting(x - i, y + i, obj_wall_parent)) {
 			x -= i;
 			y += i;
 			break;
@@ -141,7 +141,7 @@ y += _finalMoveY;
 #region gravity
 
 // Gravity
-if (!place_meeting(x, y + 1, obj_parent_wall)  || moveY < 0) {
+if (!place_meeting(x, y + 1, obj_wall_parent)  || moveY < 0) {
 	
 	  if (inputDown) {
         moveY += gravSpeed * 2; // Fall faster when down key is pressed
@@ -174,7 +174,7 @@ if (!isDead) {
 	else if (moveY == 0 && inputX != 0 && sprite_index != spr_player_run) {
 	    sprite_index = spr_player_run;
 	}
-	else if (moveY == 0 && inputX == 0 && place_meeting(x, y + 1, obj_parent_wall) && sprite_index != spr_player_idle) {
+	else if (moveY == 0 && inputX == 0 && place_meeting(x, y + 1, obj_wall_parent) && sprite_index != spr_player_idle) {
 	    sprite_index = spr_player_idle;
 	}
 } else // if died
@@ -190,7 +190,7 @@ if (!isDead) {
 #region Death
 
 // Collision with enemy
-    if (place_meeting(x, y, obj_parent_enemy)) {
+    if (place_meeting(x, y, obj_enemy_parent)) {
 		if (!isDead && !isInvincible) {
 			isDead = true;
 	        global.playerLife -= 1;
@@ -215,7 +215,7 @@ if (!isDead) {
 #region Shoot
 
 	if(inputFire){
-		instance_create_layer(x,y,"Screen", obj_sting_head);
+		instance_create_layer(x,y,"Screen", obj_weapon_sting_head);
 	}
 	
 #endregion

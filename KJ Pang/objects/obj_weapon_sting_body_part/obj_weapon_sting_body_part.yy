@@ -1,16 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_status_weapon",
-  "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_weapon_sting_body_part",
+  "eventList":[],
   "managed":true,
-  "name":"obj_status_weapon",
+  "name":"obj_weapon_sting_body_part",
   "overriddenProperties":[],
   "parent":{
-    "name":"Status",
-    "path":"folders/Objects/Status.yy",
+    "name":"Sting",
+    "path":"folders/Objects/Weapon/Sting.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_item_double_sting",
-    "path":"sprites/spr_item_double_sting/spr_item_double_sting.yy",
+    "name":"spr_weapon_sting_body_part",
+    "path":"sprites/spr_weapon_sting_body_part/spr_weapon_sting_body_part.yy",
   },
   "spriteMaskId":null,
   "visible":true,

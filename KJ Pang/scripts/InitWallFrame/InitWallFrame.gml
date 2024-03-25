@@ -7,19 +7,19 @@ function InitWallFrame(groundWallSprite) {
 	    //Top part
 	    for (var i = 0; i < 73; i++) {
 	        var wall_x = i * global.wallFrameSize;
-			instance_create_layer(wall_x, 0, "Wall", obj_frame_wall);
+			instance_create_layer(wall_x, 0, "Wall", obj_wall_frame);
 	    }
 	
 		//Left part
 		for (var i = 1; i < 49; i++) {
 	        var wall_y = i * global.wallFrameSize;
-		    instance_create_layer(0, wall_y, "Wall", obj_frame_wall);
+		    instance_create_layer(0, wall_y, "Wall", obj_wall_frame);
 	    }
 	
 		  //Right part
 		  for (var i = 1; i < 49; i++) {
 	        var wall_y = i * global.wallFrameSize;
-			var wall = instance_create_layer(1008, wall_y, "Wall", obj_frame_wall);
+			var wall = instance_create_layer(1008, wall_y, "Wall", obj_wall_frame);
 			wall.image_xscale = -1;
 			wall.x += global.wallFrameSize;		
 	    }
@@ -35,7 +35,7 @@ function InitWallGround(groundWallSprite) {
 	  for (var i = 0; i < 73; i++) {
         var wall_x = i * global.wallFrameSize;
 		
-		var wall = instance_create_layer(wall_x, 700, "Wall", obj_ground_wall);
+		var wall = instance_create_layer(wall_x, 700, "Wall", obj_wall_ground);
 		wall.sprite_index = groundWallSprite;
 		
 		if(i == 72){

@@ -1,16 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_status_weapon",
-  "eventList":[
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_item_double_sting",
+  "eventList":[],
   "managed":true,
-  "name":"obj_status_weapon",
+  "name":"obj_item_double_sting",
   "overriddenProperties":[],
   "parent":{
-    "name":"Status",
-    "path":"folders/Objects/Status.yy",
+    "name":"Weapon",
+    "path":"folders/Objects/Item/Weapon.yy",
   },
   "parentObjectId":null,
   "persistent":false,
