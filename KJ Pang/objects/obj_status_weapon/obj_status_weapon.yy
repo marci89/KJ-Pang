@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_item_double_sting",
-    "path":"sprites/spr_item_double_sting/spr_item_double_sting.yy",
+    "name":"spr_status_shot_gun",
+    "path":"sprites/spr_status_shot_gun/spr_status_shot_gun.yy",
   },
   "spriteMaskId":null,
   "visible":true,

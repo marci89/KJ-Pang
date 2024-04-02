@@ -1,9 +1,12 @@
+
+#region Gravity
+
 // Apply gravity
 if (isGravityEnabled) {
-    moveY += gravSpeed;
+    moveY += gravSpeedY;
 }
 
-
+#endregion
 
 #region Wall collision
 
@@ -59,11 +62,17 @@ if (CheckScreenCollisionBottomWithoutWallForObject(y, halfSpriteHeight)) {
 
 #endregion
 
+#region Update movement position
 
 //update movement position
 x += moveX;
 y += moveY;
 
+#endregion
 
+#region Health check
 
+if(hitPoint <= 0) instance_destroy();
+
+#endregion
 

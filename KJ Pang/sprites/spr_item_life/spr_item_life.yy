@@ -23,7 +23,7 @@
   ],
   "name":"spr_item_life",
   "nineSlice":null,
-  "origin":4,
+  "origin":7,
   "parent":{
     "name":"Life",
     "path":"folders/Sprites/Item/Life.yy",
@@ -76,7 +76,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":25,
-    "yorigin":25,
+    "yorigin":51,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

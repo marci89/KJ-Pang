@@ -1,6 +1,7 @@
 
 #region Init basic things
 
+global.PlayerCurrentWeaponType = weaponType.SingleSting;
 
 pausedText = GetLocalizedText("paused");
 
@@ -19,11 +20,11 @@ global.levelName = "japan";
 
 
 for (var i = 0; i < 250; ++i) {
-instance_create_layer(i *32, 250,"Wall", obj_wall_red);
+//instance_create_layer(i *32, 250,"Wall", obj_wall_red);
 }
 
-for (var i = 0; i < 250; ++i) {
-instance_create_layer(i *32, 1,"Wall", obj_wall_red);
+for (var i = 0; i < 20; ++i) {
+instance_create_layer(i *32, 550,"Wall", obj_wall_red);
 }
 
 
@@ -32,10 +33,13 @@ instance_create_layer(i *32, 1,"Wall", obj_wall_red);
 // instance_create_layer(200, 200,"Enemy", obj_giant_ball);
  instance_create_layer(100, 140,"Enemy", obj_enemy_normal_ball_giant);
  instance_create_layer(200, 140,"Enemy", obj_enemy_normal_ball_giant);
- instance_create_layer(600, 140,"Enemy", obj_enemy_normal_ball_giant);
- instance_create_layer(700, 140,"Enemy", obj_enemy_normal_ball_giant);
- instance_create_layer(800, 140,"Enemy", obj_enemy_normal_ball_giant);
- instance_create_layer(300, 100,"Screen", obj_player);
+// instance_create_layer(600, 140,"Enemy", obj_enemy_normal_ball_giant);
+// instance_create_layer(700, 140,"Enemy", obj_enemy_normal_ball_giant);
+ //instance_create_layer(800, 140,"Enemy", obj_enemy_normal_ball_giant);
+ instance_create_layer(300, 700,"Screen", obj_player);
+ instance_create_layer(500, 700,"Screen", obj_item_double_sting);
+ instance_create_layer(100, 300,"Screen", obj_item_life);
+ instance_create_layer(300, 300,"Screen", obj_item_double_sting);
  
  
 

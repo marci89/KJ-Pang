@@ -1,31 +1,60 @@
+
+#region variables
+
 var maxIterations = 100; // Set a maximum number of iterations
 var iterations = 0; // Counter variable
+isOnGround = place_meeting(x, y + 1, obj_wall_parent); // Check if the object is on the ground
 
+#endregion
 
-//Apply gravity
+#region gravity
+
 moveY += gravSpeed;
 
-// Check if the object is on the ground
-isOnGround = place_meeting(x, y + 1, obj_wall_parent);
-
+#endregion
 
 #region hopping effect on the ground by enemy
 
-var reactionDistance = 100; // action zone
+var enemyReactionDistance = 100;
 
 // Detect Nearby Enemies
 var nearestEnemy = instance_nearest(x, y, obj_enemy_parent);
-var distanceToEnemy = point_distance(x, y, nearestEnemy.x, nearestEnemy.y);
 
-// React to Nearby Enemies
-if (distanceToEnemy < reactionDistance && isOnGround) {
-   moveY = random_range(-2,-6); // x direction
-   moveX = random_range(-1,1); // x direction
+if (instance_exists(nearestEnemy)) {
+	
+	var distanceToEnemy = point_distance(x, y, nearestEnemy.x, nearestEnemy.y);
+
+	// React to Nearby Enemies
+	if (distanceToEnemy < enemyReactionDistance && isOnGround) {
+	   moveY = random_range(-2,-6); // x direction
+	   moveX = random_range(-1,1); // x direction
+	}
 }
 
 #endregion
 
+#region hopping effect on the ground by weapon
 
+if (global.PlayerCurrentWeaponType != weaponType.PowerWire) {
+
+	var weaponReactionDistance = 100; // action zone
+
+	// Detect Nearby weapon
+	var nearestWeapon = instance_nearest(x, y, obj_weapon_parent);
+
+	if (instance_exists(nearestWeapon)) {
+	
+		var distanceToWeapon = point_distance(x, y, nearestWeapon.x, nearestWeapon.y);
+
+		// React to Nearby Weapon
+		if (distanceToWeapon < weaponReactionDistance && isOnGround && y < global.roomHeight - 70) {
+		   moveY = random_range(-2,-6); // y direction
+		   moveX = random_range(-1,1); // x direction
+		}
+	}
+}
+
+#endregion
 
 #region Collide with wall
 
@@ -85,10 +114,12 @@ if (CheckScreenCollisionBottomWithoutWallForObject(y, halfSpriteHeight)) {
 
 #endregion
 
+#region Move (update positions)
 
-// Move (update positions)
 x += moveX;
 y += moveY;
+
+#endregion
 
 #region Collide with player
 

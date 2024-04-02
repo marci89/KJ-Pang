@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"CreateRandomizeSound",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CreateRandomizeSound",
+  "parent":{
+    "name":"Creator",
+    "path":"folders/Scripts/Creator.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

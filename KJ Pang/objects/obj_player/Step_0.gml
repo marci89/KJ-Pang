@@ -1,18 +1,20 @@
 
+#region Variables
+
 var halfSpriteWidth = sprite_width / 2;
 var halfSpriteHeight = sprite_height / 2;
+
+#endregion
 		
 #region Player inputs
 
 inputX = keyboard_check(vk_right) - keyboard_check(vk_left);
 inputJump = keyboard_check_pressed(vk_up);
 inputDown = keyboard_check(vk_down);
-inputFire = keyboard_check_pressed(vk_space);
 
 #endregion
 
-
-#region Movement
+#region Movement and jump
 
 if (!isDead) {
 
@@ -35,8 +37,9 @@ if (!isDead) {
 var _finalMoveX = moveX;
 var _finalMoveY = moveY;
 
+#endregion
 
-/// Platform collisions
+#region Wall collisions
 
 // X
 if (place_meeting(x + _finalMoveX, y, obj_wall_parent)) {
@@ -50,13 +53,12 @@ if (place_meeting(x + _finalMoveX, y, obj_wall_parent)) {
 if (place_meeting(x, y + _finalMoveY, obj_wall_parent)) {
     while (!place_meeting(x, y + sign(_finalMoveY), obj_wall_parent)) {
         y += sign(_finalMoveY);
-    }
-    
+    }   
     _finalMoveY = 0;
     moveY = 0; 
 }
 
-
+#endregion
 
 #region Screen collision without walls
 
@@ -80,8 +82,8 @@ if (!isDead){
 
 #endregion
 
+#region checking getting stuck situations
 
-//checking getting stuck situations
 if(place_meeting(x, y, obj_wall_parent)) {
 	for(var i = 0; i < 1000; ++i) {
 		//Right
@@ -131,8 +133,10 @@ if(place_meeting(x, y, obj_wall_parent)) {
 	}
 }
 
+#endregion
 
-// Move update
+#region  Move update
+
 x += _finalMoveX;
 y += _finalMoveY;
 
@@ -140,7 +144,6 @@ y += _finalMoveY;
 
 #region gravity
 
-// Gravity
 if (!place_meeting(x, y + 1, obj_wall_parent)  || moveY < 0) {
 	
 	  if (inputDown) {
@@ -151,8 +154,6 @@ if (!place_meeting(x, y + 1, obj_wall_parent)  || moveY < 0) {
 }
 
 #endregion
-
-
 
 #region Sprite change
 
@@ -168,18 +169,18 @@ if (!isDead) {
 	if(!isDead)   image_speed = 1;
 
 
-	if ((fallingWithoutInput || moveY < 0) && sprite_index != spr_player_jump) {
-	    sprite_index = spr_player_jump;
+	if ((fallingWithoutInput || moveY < 0) && sprite_index != spriteJump) {
+	    sprite_index = spriteJump;
 	}
-	else if (moveY == 0 && inputX != 0 && sprite_index != spr_player_run) {
-	    sprite_index = spr_player_run;
+	else if (moveY == 0 && inputX != 0 && sprite_index != spriteRun) {
+	    sprite_index = spriteRun;
 	}
-	else if (moveY == 0 && inputX == 0 && place_meeting(x, y + 1, obj_wall_parent) && sprite_index != spr_player_idle) {
-	    sprite_index = spr_player_idle;
+	else if (moveY == 0 && inputX == 0 && place_meeting(x, y + 1, obj_wall_parent) && sprite_index != spriteIdle) {
+	    sprite_index = spriteIdle;
 	}
 } else // if died
 {
-	sprite_index = spr_player_dead;
+	sprite_index = spriteDead;
 	if (image_index >= image_number - 1) {
 	    image_speed = 0; // Stop animation
 	}
@@ -208,14 +209,6 @@ if (!isDead) {
 	if(isBlinked){
 	    alarm[1] = 7;
 	    isBlinked = false;
-	}
-	
-#endregion
-
-#region Shoot
-
-	if(inputFire){
-		instance_create_layer(x,y,"Screen", obj_weapon_sting_head);
 	}
 	
 #endregion

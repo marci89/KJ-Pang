@@ -23,7 +23,7 @@ function LoadGameSettings(){
 	  if file_exists(filename) {	
 		    ini_open(working_directory + filename)
 			
-	     	global.language = ini_read_real("Settings", "language", global.language);
+	     	global.language = ini_read_real("Settings", "language", 0);
 			global.soundEnable =  ini_read_string("Settings", "soundEnable",false);
 			global.musicEnable =  ini_read_string("Settings", "musicEnable", false);
 			
