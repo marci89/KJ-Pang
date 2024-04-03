@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_player_jump",
   "bboxMode":2,
-  "bbox_bottom":110,
+  "bbox_bottom":111,
   "bbox_left":20,
   "bbox_right":58,
   "bbox_top":0,

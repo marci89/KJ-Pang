@@ -1,6 +1,6 @@
 //inputs
 inputX = 0; // left and right key
-inputJump = 0; // jump key
+inputJump = 87; // jump key
 inputDown = 0; // down key
 
 //Movement
@@ -9,6 +9,7 @@ moveY = 0; // y movement (jump)
 moveSpeed = 5; // move speed
 jumpSpeed = 15; // jump height
 gravSpeed = 0.5; // player gravity
+isOnGround  = false; // it is on ground or air
 
 //blinking
 isBlinked = false; // after death you will blink for a while

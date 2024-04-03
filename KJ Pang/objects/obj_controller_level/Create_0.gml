@@ -19,13 +19,12 @@ global.levelName = "japan";
 
 
 
-for (var i = 0; i < 250; ++i) {
-//instance_create_layer(i *32, 250,"Wall", obj_wall_red);
-}
+
 
 for (var i = 0; i < 20; ++i) {
-instance_create_layer(i *32, 550,"Wall", obj_wall_red);
+instance_create_layer(i *32, 500,"Wall", obj_wall_red);
 }
+
 
 
 
@@ -36,7 +35,8 @@ instance_create_layer(i *32, 550,"Wall", obj_wall_red);
 // instance_create_layer(600, 140,"Enemy", obj_enemy_normal_ball_giant);
 // instance_create_layer(700, 140,"Enemy", obj_enemy_normal_ball_giant);
  //instance_create_layer(800, 140,"Enemy", obj_enemy_normal_ball_giant);
- instance_create_layer(300, 700,"Screen", obj_player);
+ //instance_create_layer(600, 500,"Screen", obj_player22);
+ instance_create_layer(600, 280,"Screen", obj_player);
  instance_create_layer(500, 700,"Screen", obj_item_double_sting);
  instance_create_layer(100, 300,"Screen", obj_item_life);
  instance_create_layer(300, 300,"Screen", obj_item_double_sting);

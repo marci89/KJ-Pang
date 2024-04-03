@@ -3,12 +3,14 @@
 
 if (!instance_exists(player)) return;
 
+ isAllowFired =  player.isOnGround == true ? true : false;
+ 
 #endregion
 
 #region Variables
 
-inputFirePressed = keyboard_check_pressed(vk_space);
-inputFire = keyboard_check(vk_space);
+inputFirePressed = keyboard_check_pressed(vk_control);
+inputFire = keyboard_check(vk_control);
 
 #endregion
 	
@@ -30,3 +32,5 @@ inputFire = keyboard_check(vk_space);
 		}
 		
 #endregion
+
+	show_debug_message(isAllowFired);

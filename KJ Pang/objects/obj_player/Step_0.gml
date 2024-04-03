@@ -3,6 +3,7 @@
 
 var halfSpriteWidth = sprite_width / 2;
 var halfSpriteHeight = sprite_height / 2;
+isOnGround = place_meeting(x, y + 1, obj_wall_parent); // Check if the object is on the ground
 
 #endregion
 		
@@ -24,7 +25,7 @@ if (!isDead) {
   }
   
   // Jump
-  if (inputJump && (place_meeting(x, y + 1, obj_wall_parent) || place_meeting(x, y - 1, obj_wall_parent))) {
+  if (inputJump && (place_meeting(x, y + 1, obj_wall_parent) )) {
 		if (inputDown) {
 		    moveY = -jumpSpeed / 2; // falling back faster when down key is pressed during jumping
 		} else {
@@ -164,7 +165,7 @@ if (!isDead) {
 	var fallingWithoutInput = (moveY > 0) && (inputX == 0);
 
 	//direction
-	if (moveX != 0)  image_xscale = sign(inputX);
+	if (inputX != 0)  image_xscale = sign(inputX);
 	
 	if(!isDead)   image_speed = 1;
 
@@ -191,16 +192,16 @@ if (!isDead) {
 #region Death
 
 // Collision with enemy
-    if (place_meeting(x, y, obj_enemy_parent)) {
-		if (!isDead && !isInvincible) {
-			isDead = true;
-	        global.playerLife -= 1;
-			PlaySound(snd_death, false);
+if (collision_circle(x, y-30, 25, obj_enemy_parent, true, true)) {
+	if (!isDead && !isInvincible) {
+		isDead = true;
+		global.playerLife -= 1;
+		PlaySound(snd_death, false);
 
-			moveX =0;			
-		    alarm[0] = 150;
-		}
-	 }
+		moveX =0;			
+		alarm[0] = 150;
+	}
+}
 	
 #endregion
 
@@ -212,4 +213,6 @@ if (!isDead) {
 	}
 	
 #endregion
+
+
 

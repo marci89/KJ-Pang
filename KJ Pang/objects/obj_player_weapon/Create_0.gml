@@ -10,6 +10,7 @@ isFired = false; // fired or not
 
 isWeaponReloading = false; // during reload weapon can't shoot
 reloadingTime = 15; // reload time
+isAllowFired = true; // allow to shoot or not
 
 
 inputFirePressed = 0; // fire key pressed
@@ -41,7 +42,7 @@ function handleSingleSting() {
 	y = player.y - weaponY;
 
 	// shoot
-    if (inputFire || inputFirePressed) {
+    if ((inputFire || inputFirePressed) && isAllowFired) {
 		if (!instance_exists(obj_weapon_sting_head)) {
 			if(!isWeaponReloading) {
 				rotationDirection = weaponDirection;
@@ -82,7 +83,7 @@ function handleDoubleSting() {
 
 //instance_number(obj_weapon_sting_head);
 	// shoot
-    if (inputFire || inputFirePressed) {
+    if ((inputFire || inputFirePressed)  && isAllowFired) {
 		if (instance_number(obj_weapon_sting_head) <= 1) {
 			if(!isWeaponReloading) {
 				rotationDirection = weaponDirection;

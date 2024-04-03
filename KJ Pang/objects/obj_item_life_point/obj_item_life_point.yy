@@ -31,7 +31,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
+  "solid":false,
   "spriteId":{
     "name":"spr_item_life_point_red",
     "path":"sprites/spr_item_life_point_red/spr_item_life_point_red.yy",
