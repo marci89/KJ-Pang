@@ -101,3 +101,43 @@ function handleDoubleSting() {
 }
 
 #endregion
+
+
+#region power wire function
+
+function handlePowerWire() {
+	
+	var weaponX = stingX;
+	var weaponY = stingY;
+	sprite_index = spr_player_weapon_harpoon; // set the weapon image
+	
+	if((player.sprite_index == player.spriteRun // invisible the weapon during running and jump
+	|| player.sprite_index == player.spriteJump
+	|| player.sprite_index == player.spriteDead)
+	&& !isFired) {
+		image_alpha = 0;
+	} else image_alpha = 1;
+	
+	//Set the x and y position to character
+	x = weaponDirection == 1 ? player.x + weaponX : player.x - weaponX;
+	y = player.y - weaponY;
+
+	// shoot
+    if ((inputFire || inputFirePressed) && isAllowFired) {
+		if (!instance_exists(obj_weapon_power_wire_head)) {
+			if(!isWeaponReloading) {
+				rotationDirection = weaponDirection;
+				isFired = true;
+				isWeaponReloading = true;
+			    image_angle = weaponDirection == 1 ? 90 : -90;
+				alarm[0]  = weaponFiredRotationSpeed;
+				alarm[1]  = reloadingTime;
+			
+				PlaySound(snd_string_shoot, false);
+				instance_create_layer(player.x, player.y,"Screen", obj_weapon_power_wire_head);
+			}
+		}
+	}
+}
+
+#endregion

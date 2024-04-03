@@ -79,8 +79,8 @@ if (CheckScreenCollisionTopWithoutWallForObject(y, halfSpriteHeight)) {
 
 if (place_meeting(x, y, obj_player)) {
 	
-    global.PlayerCurrentWeaponType = weaponType.DoubleSting;
-	PlaySound(snd_string_pickup, false);
+    global.PlayerCurrentWeaponType = weaponType.PowerWire;
+	 CreateRandomPowerWireSound()
 	instance_destroy();
 }
 

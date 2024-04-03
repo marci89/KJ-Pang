@@ -16,7 +16,7 @@ inputFire = keyboard_check(vk_control);
 	
 #region direction
 
-	if (player.inputX != 0) {
+	if (player.inputX != 0 && !player.isDead) {
 		image_xscale = sign(player.inputX);
 		weaponDirection = player.inputX == 1 ? 1 :-1; 
 	}
@@ -27,8 +27,13 @@ inputFire = keyboard_check(vk_control);
 	
 		if(global.PlayerCurrentWeaponType == weaponType.SingleSting) {	
 			handleSingleSting();
+			
 		} else if(global.PlayerCurrentWeaponType == weaponType.DoubleSting) {
-			handleDoubleSting()
+			handleDoubleSting();
+			
+		}  else if(global.PlayerCurrentWeaponType == weaponType.PowerWire) {
+			handlePowerWire();
+			
 		}
 		
 #endregion

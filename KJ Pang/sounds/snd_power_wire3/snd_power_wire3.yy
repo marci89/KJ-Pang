@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"snd_string_shoot",
+  "%Name":"snd_power_wire3",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,17 +9,17 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.68,
-  "name":"snd_string_shoot",
+  "duration":2.168156,
+  "name":"snd_power_wire3",
   "parent":{
-    "name":"Sting",
-    "path":"folders/Sounds/Voice/Weapon/Sting.yy",
+    "name":"PowerWire",
+    "path":"folders/Sounds/Voice/Weapon/PowerWire.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_string_shoot.mp3",
+  "soundFile":"snd_power_wire3.mp3",
   "type":0,
   "volume":1.0,
 }

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"SoundManager",
   "parent":{
-    "name":"FileManipulating",
-    "path":"folders/Scripts/FileManipulating.yy",
+    "name":"Sound",
+    "path":"folders/Scripts/Sound.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

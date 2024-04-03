@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":7,
   "parent":{
-    "name":"Sting",
-    "path":"folders/Sprites/Item/Weapon/Sting.yy",
+    "name":"PowerWire",
+    "path":"folders/Sprites/Item/Weapon/PowerWire.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

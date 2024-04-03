@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"CreateRandomizeSound",
   "parent":{
-    "name":"Creator",
-    "path":"folders/Scripts/Creator.yy",
+    "name":"Sound",
+    "path":"folders/Scripts/Sound.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

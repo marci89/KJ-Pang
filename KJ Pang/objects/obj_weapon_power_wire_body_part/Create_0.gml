@@ -3,4 +3,4 @@
 event_inherited()
 damage = 5; // weapon damage value
 
-stingHead = obj_weapon_sting_head; // sting body part's head
+powerWireHead = obj_weapon_power_wire_head; // power wire body part's head
