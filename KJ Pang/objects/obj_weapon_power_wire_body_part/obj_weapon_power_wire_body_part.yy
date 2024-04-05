@@ -32,7 +32,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":false,
+  "solid":true,
   "spriteId":{
     "name":"spr_weapon_power_wire_body_part",
     "path":"sprites/spr_weapon_power_wire_body_part/spr_weapon_power_wire_body_part.yy",

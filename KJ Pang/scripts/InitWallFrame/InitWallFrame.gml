@@ -11,13 +11,13 @@ function InitWallFrame(groundWallSprite) {
 	    }
 	
 		//Left part
-		for (var i = 1; i < 49; i++) {
+		for (var i = 1; i < 50; i++) {
 	        var wall_y = i * global.wallFrameSize;
 		    instance_create_layer(0, wall_y, "Wall", obj_wall_frame);
 	    }
 	
 		  //Right part
-		  for (var i = 1; i < 49; i++) {
+		  for (var i = 1; i < 50; i++) {
 	        var wall_y = i * global.wallFrameSize;
 			var wall = instance_create_layer(1008, wall_y, "Wall", obj_wall_frame);
 			wall.image_xscale = -1;

@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_machine_gun_shoot",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":2.568,
+  "name":"snd_machine_gun_shoot",
+  "parent":{
+    "name":"MachineGun",
+    "path":"folders/Sounds/Voice/Weapon/MachineGun.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_machine_gun_shoot.mp3",
+  "type":0,
+  "volume":1.0,
+}

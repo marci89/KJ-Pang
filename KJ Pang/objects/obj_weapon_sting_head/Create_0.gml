@@ -2,7 +2,7 @@
 //parent properties
 event_inherited()
 moveY = 0; // y movement 
-moveSpeed = 8; // move speed
+moveSpeed = 5; // move speed
 damage = 5; // weapon damage value
 
 bodyPartList = ds_list_create(); // list of body part objects

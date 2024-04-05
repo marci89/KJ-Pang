@@ -6,6 +6,8 @@
  
  #endregion
 
+if(!isConnectedtoWall) {
+	
 #region create body parts to list
 
 //Create instances
@@ -32,6 +34,8 @@ bodyPart3.stingHead = id;
 bodyPart4.stingHead = id;
 
 #endregion
+
+}
 
 #region Screen collision
 

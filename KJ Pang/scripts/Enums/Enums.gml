@@ -26,5 +26,5 @@ enum weaponType{
     DoubleSting,
     PowerWire,
 	MachineGun,
-	ShootGun
+	ShotGun
 };
