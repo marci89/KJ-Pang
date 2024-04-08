@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_item_life_point_light",
-    "path":"sprites/spr_item_life_point_light/spr_item_life_point_light.yy",
+    "name":"spr_status_life_point",
+    "path":"sprites/spr_status_life_point/spr_status_life_point.yy",
   },
   "spriteMaskId":null,
   "visible":true,

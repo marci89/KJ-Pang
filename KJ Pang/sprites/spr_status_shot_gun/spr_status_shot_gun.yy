@@ -2,9 +2,9 @@
   "$GMSprite":"",
   "%Name":"spr_status_shot_gun",
   "bboxMode":0,
-  "bbox_bottom":79,
+  "bbox_bottom":24,
   "bbox_left":0,
-  "bbox_right":99,
+  "bbox_right":79,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"74c29d08-cc6e-438c-8590-9799dea4a9dd","name":"74c29d08-cc6e-438c-8590-9799dea4a9dd","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"bb1a7902-ec5e-4f7f-9e32-512ce3396985","name":"bb1a7902-ec5e-4f7f-9e32-512ce3396985","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":80,
+  "height":25,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"a6004eb5-87bd-4dad-bcd9-657043cf5a90","blendMode":0,"displayName":"default","isLocked":false,"name":"a6004eb5-87bd-4dad-bcd9-657043cf5a90","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"8897223c-31d7-4208-9022-6627568bc178","blendMode":0,"displayName":"default","isLocked":false,"name":"8897223c-31d7-4208-9022-6627568bc178","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_status_shot_gun",
   "nineSlice":null,
@@ -69,13 +69,13 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"74c29d08-cc6e-438c-8590-9799dea4a9dd","path":"sprites/spr_status_shot_gun/spr_status_shot_gun.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"7a0d874d-2fcf-4b38-b4a6-de5a878e1c91","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"bb1a7902-ec5e-4f7f-9e32-512ce3396985","path":"sprites/spr_status_shot_gun/spr_status_shot_gun.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"bf862860-861b-4354-98aa-27d9e30ca5f6","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":50,
+    "xorigin":40,
     "yorigin":0,
   },
   "swatchColours":null,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":100,
+  "width":80,
 }

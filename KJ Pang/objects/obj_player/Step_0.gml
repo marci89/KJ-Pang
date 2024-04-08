@@ -195,7 +195,7 @@ if (!isDead) {
 if (collision_circle(x, y-30, 25, obj_enemy_parent, true, true)) {
 	if (!isDead && !isInvincible) {
 		isDead = true;
-		global.playerLife -= 1;
+		global.life -= 1;
 		PlaySound(snd_death, false);
 
 		moveX =0;			

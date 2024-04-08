@@ -12,9 +12,6 @@ if (!instance_exists(player)) return;
 inputFirePressed = keyboard_check_pressed(vk_control);
 inputFire = keyboard_check(vk_control);
 
-bulletX = weaponDirection == 1 ? x-10 : x+10;	
-bulletY = weaponDirection == 1 ? y - sprite_width :  y + sprite_width;
-
 #endregion
 	
 #region direction
@@ -26,27 +23,19 @@ bulletY = weaponDirection == 1 ? y - sprite_width :  y + sprite_width;
 
 #endregion
 
-#region update animation positions
-
-	var animationX = weaponDirection == 1 ? x-10 : x+10;	
-	var animationY = weaponDirection == 1 ? y - sprite_width :  y + sprite_width;
-	updateFireAnimationPosition(animationX, animationY);
-
-#endregion
-
 #region check ammo
 
 //machinegun
-if(global.PlayerCurrentWeaponType == weaponType.MachineGun) {
+if(global.PlayerWeaponType == weaponType.MachineGun) {
 	if(global.machineGunAmmo <= 0) {
-		global.PlayerCurrentWeaponType = weaponType.SingleSting;
+		global.PlayerWeaponType = weaponType.SingleSting;
 	}
 }
 
 //shotgun
-if(global.PlayerCurrentWeaponType == weaponType.ShotGun) {
+if(global.PlayerWeaponType == weaponType.ShotGun) {
 	if(global.shotgunAmmo <= 0) {
-		global.PlayerCurrentWeaponType = weaponType.SingleSting;
+		global.PlayerWeaponType = weaponType.SingleSting;
 	}
 }
 
@@ -54,21 +43,28 @@ if(global.PlayerCurrentWeaponType == weaponType.ShotGun) {
 
 #region weapon type check
 	
-		if(global.PlayerCurrentWeaponType == weaponType.SingleSting) {	
+		if(global.PlayerWeaponType == weaponType.SingleSting) {	
 			handleSingleSting();
 			
-		} else if(global.PlayerCurrentWeaponType == weaponType.DoubleSting) {
+		} else if(global.PlayerWeaponType == weaponType.DoubleSting) {
 			handleDoubleSting();
 			
-		}  else if(global.PlayerCurrentWeaponType == weaponType.PowerWire) {
+		}  else if(global.PlayerWeaponType == weaponType.PowerWire) {
 			handlePowerWire();
 			
-		} else if(global.PlayerCurrentWeaponType == weaponType.MachineGun) {
+		} else if(global.PlayerWeaponType == weaponType.MachineGun) {
 			handleMachineGun();
 			
-		}  else if(global.PlayerCurrentWeaponType == weaponType.ShotGun) {
+		}  else if(global.PlayerWeaponType == weaponType.ShotGun) {
 			handleShotgun();		
 		}
 		
 #endregion
 
+#region update animation positions
+
+	var animationX = weaponDirection == 1 ? x-10 : x+10;	
+	var animationY = weaponDirection == 1 ? y - sprite_width :  y + sprite_width;
+	updateFireAnimationPosition(animationX, animationY);
+	
+#endregion

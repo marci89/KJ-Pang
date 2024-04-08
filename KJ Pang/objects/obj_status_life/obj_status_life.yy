@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_item_life",
-    "path":"sprites/spr_item_life/spr_item_life.yy",
+    "name":"spr_status_life",
+    "path":"sprites/spr_status_life/spr_status_life.yy",
   },
   "spriteMaskId":null,
   "visible":true,

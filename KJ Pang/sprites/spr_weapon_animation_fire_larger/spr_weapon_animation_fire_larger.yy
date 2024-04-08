@@ -28,8 +28,8 @@
   "nineSlice":null,
   "origin":7,
   "parent":{
-    "name":"Weapon",
-    "path":"folders/Sprites/Weapon.yy",
+    "name":"Animation",
+    "path":"folders/Sprites/Weapon/Animation.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -30,15 +30,38 @@ instance_create_layer(i *32, 500,"Wall", obj_wall_red);
 
 
 
- instance_create_layer(100, 140,"Enemy", obj_enemy_normal_ball_giant);
- instance_create_layer(200, 140,"Enemy", obj_enemy_normal_ball_giant);
+ //instance_create_layer(100, 140,"Enemy", obj_enemy_normal_ball_giant);
+ //instance_create_layer(200, 140,"Enemy", obj_enemy_normal_ball_giant);
 // instance_create_layer(600, 140,"Enemy", obj_enemy_normal_ball_giant);
 // instance_create_layer(700, 140,"Enemy", obj_enemy_normal_ball_giant);
  //instance_create_layer(800, 140,"Enemy", obj_enemy_normal_ball_giant);
- //instance_create_layer(600, 500,"Screen", obj_player22);
  instance_create_layer(600, 280,"Screen", obj_player);
  instance_create_layer(500, 100,"Screen", obj_item_shotgun);
-// instance_create_layer(100, 300,"Screen", obj_item_life);
+ instance_create_layer(500, 620,"Screen", obj_item_double_sting);
+ instance_create_layer(500, 100,"Screen", obj_item_shotgun);
+ instance_create_layer(300, 100,"Screen", obj_item_food);
+ instance_create_layer(350, 100,"Screen", obj_item_food);
+ instance_create_layer(400, 100,"Screen", obj_item_food);
+ instance_create_layer(450, 100,"Screen", obj_item_food);
+ instance_create_layer(500, 100,"Screen", obj_item_food);
+ instance_create_layer(550, 100,"Screen", obj_item_food);
+ instance_create_layer(250, 100,"Screen", obj_item_food);
+ instance_create_layer(200, 100,"Screen", obj_item_food);
+ instance_create_layer(200, 100,"Screen", obj_item_food);
+ instance_create_layer(200, 100,"Screen", obj_item_food);
+ instance_create_layer(200, 100,"Screen", obj_item_food);
+ instance_create_layer(200, 100,"Screen", obj_item_food);
+ instance_create_layer(200, 100,"Screen", obj_item_food);
+ instance_create_layer(200, 100,"Screen", obj_item_food);
+ instance_create_layer(200, 100,"Screen", obj_item_food);
+ instance_create_layer(200, 100,"Screen", obj_item_food);
+ instance_create_layer(200, 100,"Screen", obj_item_food);
+ instance_create_layer(200, 100,"Screen", obj_item_food);
+ instance_create_layer(200, 100,"Screen", obj_item_food);
+ instance_create_layer(200, 100,"Screen", obj_item_food);
+ instance_create_layer(150, 100,"Screen", obj_item_power_wire);
+ 
+ instance_create_layer(100, 300,"Screen", obj_item_life);
  instance_create_layer(300, 100,"Screen", obj_item_machine_gun);
  
  
@@ -62,7 +85,7 @@ for (var i = 0; i < 20; ++i) {
 }
 
 for (var i = 0; i < 20; ++i) {
-	CreateLifePoint(300 +i, 500, lifePointType.Yellow);
+//	CreateLifePoint(300 +i, 500, lifePointType.Yellow);
 //  instance_create_layer(100 +i, 500,"Screen", obj_life_point);
 }
 

@@ -13,7 +13,7 @@ moveY += gravSpeed;
 
 #region hopping effect on the ground by weapon
 
-if (global.PlayerCurrentWeaponType != weaponType.PowerWire) {
+if (global.PlayerWeaponType != weaponType.PowerWire) {
 	
 	var distanceY = instance_exists(obj_player) ? obj_player.y : global.roomHeight - 70;
 	var weaponReactionDistance = 100;
@@ -79,7 +79,7 @@ if (CheckScreenCollisionTopWithoutWallForObject(y, halfSpriteHeight)) {
 
 if (place_meeting(x, y, obj_player)) {
 	
-    global.PlayerCurrentWeaponType = weaponType.DoubleSting;
+    global.PlayerWeaponType = weaponType.DoubleSting;
 	PlaySound(snd_string_pickup, false);
 	instance_destroy();
 }

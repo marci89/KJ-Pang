@@ -17,10 +17,6 @@ shotgunShootingPositionX = harpoonX -10; // shotgun x position when shoot
 shotgunShootingPositionY = shotgunY -10; // shotgun y position when shoot
 
 
-//bullet and animation position
-bulletX = 0;	
-bulletY = 0;
-
 //direction
 weaponDirection = 1; // image direction
 rotationDirection = 1; // rotation direction when shoot
@@ -75,10 +71,10 @@ function createFireAnimation(posX, posY) {
 	} else {
 		fireAnimation = instance_create_layer(fireanimationX, fireanimationY, "Screen", obj_weapon_animation_fire);
 			
-		if (global.PlayerCurrentWeaponType == weaponType.MachineGun)
+		if (global.PlayerWeaponType == weaponType.MachineGun)
 			fireAnimation.sprite_index =  spr_weapon_animation_fire;
 		
-		if (global.PlayerCurrentWeaponType == weaponType.ShotGun)
+		if (global.PlayerWeaponType == weaponType.ShotGun)
 			fireAnimation.sprite_index = spr_weapon_animation_fire_larger;	
 	}
 }
@@ -88,7 +84,7 @@ function createFireAnimation(posX, posY) {
 #region fire animation update position
 
 function updateFireAnimationPosition(posX, posY) {
-	if (instance_exists(fireAnimation)) {
+	if (instance_exists(fireAnimation) && isFired) {
 		fireAnimation.x = posX;
 		fireAnimation.y = posY;
 	}
@@ -193,6 +189,7 @@ function createShotgunBullets(posX, posY) {
 #region single sting function
 
 function handleSingleSting() {
+
 	
 	weaponX = harpoonX;
 	weaponY = harpoonY;
@@ -205,7 +202,7 @@ function handleSingleSting() {
 	y = player.y - weaponY;
 
 	// shoot
-    if ((inputFire || inputFirePressed) && isAllowFired) {
+    if ((inputFire || inputFirePressed) && isAllowFired && !player.isDead) {
 		if (!instance_exists(obj_weapon_sting_head)) {
 			if(!isWeaponReloading) {
 				rotationDirection = weaponDirection;
@@ -239,7 +236,7 @@ function handleDoubleSting() {
 	y = player.y - weaponY;
 
 	// shoot
-    if ((inputFire || inputFirePressed)  && isAllowFired) {
+    if ((inputFire || inputFirePressed)  && isAllowFired && !player.isDead) {
 		if (instance_number(obj_weapon_sting_head) <= 1) {
 			if(!isWeaponReloading) {
 				rotationDirection = weaponDirection;
@@ -273,7 +270,7 @@ function handlePowerWire() {
 	y = player.y - weaponY;
 
 	// shoot
-    if ((inputFire || inputFirePressed) && isAllowFired) {
+    if ((inputFire || inputFirePressed) && isAllowFired  && !player.isDead) {
 		if (!instance_exists(obj_weapon_power_wire_head)) {
 			if(!isWeaponReloading) {
 				rotationDirection = weaponDirection;
@@ -298,13 +295,15 @@ function handleMachineGun() {
 	
 	weaponX = machineGunX;
 	weaponY = machineGunY;
-	weaponShootingPositionX = machineGunShootingPositionX;
-	weaponShootingPositionY = machineGunShootingPositionY;
+	var weaponShootingPositionX = machineGunShootingPositionX;
+	var weaponShootingPositionY = machineGunShootingPositionY;
 
 	sprite_index = spr_player_weapon_machine_gun; // set the weapon image
 	
+
+		
 	//While shooting change gun angle
-	if ((inputFire || inputFirePressed)) {
+	if ((inputFire || inputFirePressed) && !player.isDead) {
 		image_angle = weaponDirection == 1 ? 90 : -90;	
 		isFired = true;
 		
@@ -319,7 +318,7 @@ function handleMachineGun() {
 	}
 	
 	if (!player.isOnGround) isFired = false;
-	setWeaponVisibility();
+		setWeaponVisibility();
 
 
 	//Set the x and y position to character
@@ -327,7 +326,7 @@ function handleMachineGun() {
 	y = player.y - weaponY;
 
 	// shoot
-    if ((inputFire || inputFirePressed) && isAllowFired) {
+    if ((inputFire || inputFirePressed) && isAllowFired && !player.isDead) {
 			if(!isWeaponReloading) {
 				rotationDirection = weaponDirection;
 				isWeaponReloading = true;
@@ -335,9 +334,17 @@ function handleMachineGun() {
 				PlaySound(snd_machine_gun_shoot, false);
 				
 				//bullet create
+				var bulletX = weaponDirection == 1 ? x-10 : x+10;	
+				var bulletY = weaponDirection == 1 ? y - sprite_width :  y + sprite_width;
 				createFireAnimation(bulletX, bulletY)
 				instance_create_layer(bulletX, bulletY,"Screen", obj_weapon_machine_gun_bullet);
 				global.machineGunAmmo--;
+				
+				// handle weapon change
+				if(global.machineGunAmmo == 0) {
+					isWeaponReloading = false;
+				    image_angle = weaponDirection == 1 ? 90 : -90;
+				}
 			}
 	}	
 }
@@ -350,8 +357,8 @@ function handleShotgun() {
 	
 	weaponX = shotgunX;
 	weaponY = shotgunY;
-	weaponShootingPositionX = shotgunShootingPositionX;
-	weaponShootingPositionY = shotgunShootingPositionY;
+	var weaponShootingPositionX = shotgunShootingPositionX;
+	var weaponShootingPositionY = shotgunShootingPositionY;
 	
 	sprite_index = spr_player_weapon_shotgun; // set the weapon image
 	
@@ -360,7 +367,7 @@ function handleShotgun() {
 	setWeaponVisibility();
 	
 	//While shooting change gun angle
-	if ((inputFire || inputFirePressed)) {
+	if ((inputFire || inputFirePressed)  && !player.isDead) {
 		image_angle = weaponDirection == 1 ? 90 : -90;	
 		isFired = true;
 		
@@ -387,12 +394,19 @@ function handleShotgun() {
 				PlaySound(snd_shotgun_shoot, false);
 				
 				//bullet create
+				var bulletX = weaponDirection == 1 ? x-10 : x+10;	
+				var bulletY = weaponDirection == 1 ? y - sprite_width :  y + sprite_width;
 				createFireAnimation(bulletX, bulletY);
 				createShotgunBullets(bulletX, bulletY);
 				global.shotgunAmmo--;
+				
+				// handle weapon change
+				if(global.shotgunAmmo == 0) {
+					isWeaponReloading = false;
+				    image_angle = weaponDirection == 1 ? 90 : -90;
+				}
 			} 
 	}	
-
 }
 
 #endregion

@@ -28,10 +28,10 @@ if (ds_exists(bodyPartList, ds_type_list)) {
 
 #region give this object to children body parts
 
-bodyPart1.stingHead = id;
-bodyPart2.stingHead = id;
-bodyPart3.stingHead = id;
-bodyPart4.stingHead = id;
+bodyPart1.powerWireHead = id;
+bodyPart2.powerWireHead = id;
+bodyPart3.powerWireHead = id;
+bodyPart4.powerWireHead = id;
 
 #endregion
 

@@ -1,9 +1,16 @@
 
 
-previousLifePoint = global.playerLifePoint; // last life number
+previousLifePoint = global.lifePoint; // last life number
+
+//grow animation
 scaleDirection = 1; // 1 for increasing, -1 for decreasing
 growDuration = 3; // alarm time
 growAmount = 0.05; // size amount
 
-image_xscale+=0.2;
-image_yscale+=0.2;
+randomize();
+
+image_speed = 0;
+image_index = irandom_range(0, 8); // random image
+
+
+

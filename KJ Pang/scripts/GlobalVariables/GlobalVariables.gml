@@ -1,10 +1,15 @@
 //Player
-global.playerScore = 1234567; //player score
-global.playerLife =  200; //player life
-global.playerLifePoint = 0; //player life points
+global.score = 1234567; //player score
+global.life =  200; //player life
+global.lifePoint = 0; //player life points
+
+// Special ability
+global.playerSpecialAbility = specialAbilityType.TimeSlow; // character's special ability
+global.food = 0; // food number for special ability
+global.foodMax = 20; // max food capacity
 
 //Weapon
-global.PlayerCurrentWeaponType = weaponType.PowerWire; //Player current weapon type. 
+global.PlayerWeaponType = weaponType.SingleSting; //Player current weapon type. 
 global.shotgunAmmo = 0;
 global.machineGunAmmo = 0;
 

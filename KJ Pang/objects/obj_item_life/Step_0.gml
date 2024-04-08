@@ -49,7 +49,7 @@ if (CheckScreenCollisionTopWithoutWallForObject(y, halfSpriteHeight)) {
 if (place_meeting(x, y, obj_player)) {
 	
 	if(!isPickedUp) {	
-    global.playerLife++;
+    global.life++;
 	PlaySound(snd_extra_life, false);
 	isPickedUp = true;
 	}
@@ -60,7 +60,7 @@ if (place_meeting(x, y, obj_player)) {
 
 #region hopping effect on the ground by weapon
 
-if (global.PlayerCurrentWeaponType != weaponType.PowerWire) {
+if (global.PlayerWeaponType != weaponType.PowerWire) {
 	var distanceY = instance_exists(obj_player) ? obj_player.y : global.roomHeight - 70;
 	var weaponReactionDistance = 100;
 

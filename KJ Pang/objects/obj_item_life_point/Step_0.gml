@@ -35,7 +35,7 @@ if (instance_exists(nearestEnemy)) {
 
 #region hopping effect on the ground by weapon
 
-if (global.PlayerCurrentWeaponType != weaponType.PowerWire) {
+if (global.PlayerWeaponType != weaponType.PowerWire) {
 
 	var weaponReactionDistance = 100; // action zone
 
@@ -126,7 +126,7 @@ y += moveY;
 if (place_meeting(x, y, obj_player)) {
 	
 	if(!isPickedUp) {	
-    global.playerLifePoint++;
+    global.lifePoint++;
 	CheckLifePoint();
     PlaySound(snd_life_point, false);
 	isPickedUp = true;

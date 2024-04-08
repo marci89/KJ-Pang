@@ -28,3 +28,8 @@ enum weaponType{
 	MachineGun,
 	ShotGun
 };
+
+//weapons
+enum specialAbilityType{
+    TimeSlow,
+};

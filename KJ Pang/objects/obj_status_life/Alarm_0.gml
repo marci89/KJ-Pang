@@ -1,5 +1,5 @@
 
-//Growing animation
+/// @desc Grow animation
 
 // Initialize a variable to track the direction of scaling
 if (scaleDirection == 1) {
