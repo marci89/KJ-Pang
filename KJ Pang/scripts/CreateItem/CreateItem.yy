@@ -1,12 +1,12 @@
 {
   "$GMScript":"",
-  "%Name":"CreateInstance",
+  "%Name":"CreateItem",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"CreateInstance",
+  "name":"CreateItem",
   "parent":{
-    "name":"Creator",
-    "path":"folders/Scripts/Creator.yy",
+    "name":"Item",
+    "path":"folders/Scripts/Creator/Item.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -2,7 +2,6 @@
 #region Check important things
 
 if (!instance_exists(player)) return;
-
  isAllowFired =  player.isOnGround == true ? true : false;
  
 #endregion

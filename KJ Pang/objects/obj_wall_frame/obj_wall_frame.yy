@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_frame_wall",
-    "path":"sprites/spr_frame_wall/spr_frame_wall.yy",
+    "name":"spr_wall_frame",
+    "path":"sprites/spr_wall_frame/spr_wall_frame.yy",
   },
   "spriteMaskId":null,
   "visible":true,

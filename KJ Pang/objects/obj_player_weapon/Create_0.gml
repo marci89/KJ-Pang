@@ -40,7 +40,6 @@ reloadingShotgunTime = 90; // reload time
 player = obj_player; // player
 fireAnimation = obj_weapon_animation_fire; // set default animation for shooting
 
-depth = -500; // depht level to will be above on everything
 
 
 #region weapon visibility

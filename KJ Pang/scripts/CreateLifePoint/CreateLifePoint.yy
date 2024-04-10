@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"CreateLifePoint",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CreateLifePoint",
+  "parent":{
+    "name":"Item",
+    "path":"folders/Scripts/Creator/Item.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

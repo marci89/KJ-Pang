@@ -1,6 +1,6 @@
 
 
-//Create random sound for wall hit by gun bullet
+//Create random sound for wall hit by sting
 function CreateRandomStingHitWallSound(){
 	
 	var randomIndex = irandom_range(1, 3); 

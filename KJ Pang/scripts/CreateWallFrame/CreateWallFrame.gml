@@ -1,5 +1,5 @@
 // Wall frame creating function
-function InitWallFrame(groundWallSprite) {
+function CreateWallFrame(groundWallSprite) {
 	
 	// if it has than create wall frame for the room
 	if(global.hasRoomWallFrame) {
@@ -25,11 +25,11 @@ function InitWallFrame(groundWallSprite) {
 	    }
 	}
 	//Bottom part
-	InitWallGround(groundWallSprite);
+	CreateWallGround(groundWallSprite);
 }
 
 // ground wall creating
-function InitWallGround(groundWallSprite) {
+function CreateWallGround(groundWallSprite) {
 	
 	 //Bottom part
 	  for (var i = 0; i < 73; i++) {

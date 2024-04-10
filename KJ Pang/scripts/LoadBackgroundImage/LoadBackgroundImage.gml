@@ -1,9 +1,9 @@
 
 // Load background image from file
-function LoadBackgroundImage(levelNumber){
+function LoadBackgroundImage(name){
 	
 	var folderPath = "Images/Backgrounds/";
-	var fullPath = folderPath + "level_" + string(levelNumber) + ".png";
+	var fullPath = folderPath + string(name) + ".png";
 	var imageindex = sprite_add(fullPath, false, false, 0, 0, 0);
 
 	// Check if the image was loaded successfully

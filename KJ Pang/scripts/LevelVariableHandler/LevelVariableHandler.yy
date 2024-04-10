@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"LevelVariableHandler",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"LevelVariableHandler",
+  "parent":{
+    "name":"VariableHandler",
+    "path":"folders/Scripts/VariableHandler.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"CreateLevelNormal",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CreateLevelNormal",
+  "parent":{
+    "name":"Level",
+    "path":"folders/Scripts/Level.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

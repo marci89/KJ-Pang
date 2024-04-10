@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"CreateFoodByImageIndex",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CreateFoodByImageIndex",
+  "parent":{
+    "name":"Item",
+    "path":"folders/Scripts/Creator/Item.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

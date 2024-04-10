@@ -1,12 +1,12 @@
 {
   "$GMScript":"",
-  "%Name":"InitWallFrame",
+  "%Name":"CreateWall",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"InitWallFrame",
+  "name":"CreateWall",
   "parent":{
-    "name":"Creator",
-    "path":"folders/Scripts/Creator.yy",
+    "name":"Wall",
+    "path":"folders/Scripts/Creator/Wall.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -1,6 +1,7 @@
 
   var startY = global.roomHeight + 5;
 
+//Create status objects
  instance_create_layer(60, startY,"Status", obj_status_special_ability);
  instance_create_layer(30, startY +75,"Status", obj_status_food);
  instance_create_layer(160,startY + 5,"Status", obj_status_weapon);

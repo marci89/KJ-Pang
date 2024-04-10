@@ -1,0 +1,1 @@
+wallColor = wallColorType.Red;

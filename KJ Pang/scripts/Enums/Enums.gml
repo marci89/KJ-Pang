@@ -4,8 +4,15 @@ enum languageType {
 	English,
 	Hungarian
 };
-	
 
+//game diffiult
+enum gameDifficultType{
+    Normal,
+    Hard,
+    Nightmare,
+	Impossible
+};
+	
 // life point colors
 enum lifePointType{
     Red,
@@ -20,6 +27,21 @@ enum lifePointType{
 	Pink
 };
 
+// wall colors
+enum wallColorType{
+    Red,
+    Blue,
+    Green,
+};
+
+// wall direction type if you want to generate many walls in a for loop
+enum wallCreatorDirectionType{
+    Left,
+    Right,
+    Top,
+    Bottom,
+};
+
 //weapons
 enum weaponType{
     SingleSting,
@@ -29,7 +51,7 @@ enum weaponType{
 	ShotGun
 };
 
-//weapons
+//special ability
 enum specialAbilityType{
     TimeSlow,
 };

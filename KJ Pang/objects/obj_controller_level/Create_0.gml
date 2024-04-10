@@ -1,117 +1,23 @@
 
+SetGameVariables(); // ezt majd ki kell szedni!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+LoadGameSettings(); // ezt majd ki kell szedni!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 #region Init basic things
-
-
 
 pausedText = GetLocalizedText("paused");
 
-LoadGameSettings();
-LoadBackgroundImage(global.level); //Load background with current level number
-InitWallFrame(spr_ground_wall); //wall frame creating
-
+SetLevelVariables();
 
 #endregion
 
+#region create current level
 
-PlayMusic(snd_mtFuji, false);
-
-global.levelName = "japan";
-
-
-
-
-
-
-for (var i = 0; i < 20; ++i) {
-instance_create_layer(i *32, 500,"Wall", obj_wall_red);
+if(global.gameDifficult == gameDifficultType.Normal) {
+	CreateLevelNormal();
 }
 
+#endregion
 
-
-
-
- //instance_create_layer(100, 140,"Enemy", obj_enemy_normal_ball_giant);
- //instance_create_layer(200, 140,"Enemy", obj_enemy_normal_ball_giant);
-// instance_create_layer(600, 140,"Enemy", obj_enemy_normal_ball_giant);
-// instance_create_layer(700, 140,"Enemy", obj_enemy_normal_ball_giant);
- //instance_create_layer(800, 140,"Enemy", obj_enemy_normal_ball_giant);
- instance_create_layer(600, 280,"Screen", obj_player);
- instance_create_layer(500, 100,"Screen", obj_item_shotgun);
- instance_create_layer(500, 620,"Screen", obj_item_double_sting);
- instance_create_layer(500, 100,"Screen", obj_item_shotgun);
- instance_create_layer(300, 100,"Screen", obj_item_food);
- instance_create_layer(350, 100,"Screen", obj_item_food);
- instance_create_layer(400, 100,"Screen", obj_item_food);
- instance_create_layer(450, 100,"Screen", obj_item_food);
- instance_create_layer(500, 100,"Screen", obj_item_food);
- instance_create_layer(550, 100,"Screen", obj_item_food);
- instance_create_layer(250, 100,"Screen", obj_item_food);
- instance_create_layer(200, 100,"Screen", obj_item_food);
- instance_create_layer(200, 100,"Screen", obj_item_food);
- instance_create_layer(200, 100,"Screen", obj_item_food);
- instance_create_layer(200, 100,"Screen", obj_item_food);
- instance_create_layer(200, 100,"Screen", obj_item_food);
- instance_create_layer(200, 100,"Screen", obj_item_food);
- instance_create_layer(200, 100,"Screen", obj_item_food);
- instance_create_layer(200, 100,"Screen", obj_item_food);
- instance_create_layer(200, 100,"Screen", obj_item_food);
- instance_create_layer(200, 100,"Screen", obj_item_food);
- instance_create_layer(200, 100,"Screen", obj_item_food);
- instance_create_layer(200, 100,"Screen", obj_item_food);
- instance_create_layer(200, 100,"Screen", obj_item_food);
- instance_create_layer(150, 100,"Screen", obj_item_power_wire);
- 
- instance_create_layer(100, 300,"Screen", obj_item_life);
- instance_create_layer(300, 100,"Screen", obj_item_machine_gun);
- 
- 
-
-  
-  
-for (var i = 0; i < 900; ++i) {
-//	CreateLifePoint(100 +i, 500, lifePointType.Blue);
-//  instance_create_layer(100 +i, 500,"Screen", obj_life_point);
-}
-
-
-for (var i = 0; i < 20; ++i) {
-//	CreateLifePoint(200 +i, 500, lifePointType.Green);
- // instance_create_layer(100 +i, 500,"Screen", obj_life_point);
-}
-
-for (var i = 0; i < 20; ++i) {
-//	CreateLifePoint(300 +i, 500, lifePointType.Red);
-//  instance_create_layer(100 +i, 500,"Screen", obj_life_point);
-}
-
-for (var i = 0; i < 20; ++i) {
-//	CreateLifePoint(300 +i, 500, lifePointType.Yellow);
-//  instance_create_layer(100 +i, 500,"Screen", obj_life_point);
-}
-
-for (var i = 0; i < 20; ++i) {
-//	CreateLifePoint(400 +i, 500, lifePointType.Purple);
-//  instance_create_layer(100 +i, 500,"Screen", obj_life_point);
-}
-
-for (var i = 0; i < 5; ++i) {
-//	CreateLifePoint(600 +i, 500, lifePointType.Orange);
-//  instance_create_layer(100 +i, 500,"Screen", obj_life_point);
-}
-
-for (var i = 0; i < 20; ++i) {
-	//CreateLifePoint(500 +i, 500, lifePointType.Light);
-	//CreateLifePoint(700 +i, 500, lifePointType.Black);
-//	CreateLifePoint(800 +i, 500, lifePointType.White);
-//	CreateLifePoint(900 +i, 500, lifePointType.Pink);
-//  instance_create_layer(100 +i, 500,"Screen", obj_life_point);
-}
-
-  
- //instance_create_layer(500,400,"Wall", obj_red_wall);
- //instance_create_layer(550,600,"Wall", obj_red_wall);
- //instance_create_layer(600,600,"Wall", obj_red_wall);
- 
 
 
 

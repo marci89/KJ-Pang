@@ -1,6 +1,6 @@
 //Init vars
-moveX = random_range(-10,10); // x direction
-moveY = random_range(-10,10); // y direction
+moveX =0; // x direction
+moveY = 5; // y direction
 gravSpeed = 0.1; // gravity
 bounceDecay = 0.5; //bounce
 rotateAngle = 1; //rotate

@@ -3,6 +3,7 @@ inputX = 0; // left and right key
 inputJump = 87; // jump key
 inputDown = 0; // down key
 
+
 //Movement
 moveX = 0; // x movement (move left or right)
 moveY = 0; // y movement (jump)
@@ -22,7 +23,8 @@ spriteRun = spr_player_run;
 spriteDead = spr_player_dead;
 
 //Create player's gun
-instance_create_layer(x,y,"Screen", obj_player_weapon);
+instance_create_layer(x,y,"TopLayer", obj_player_weapon);
+
 
 //Abilities
 isDead = false; // death or alive

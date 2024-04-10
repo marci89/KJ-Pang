@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"GameVariableHandler",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"GameVariableHandler",
+  "parent":{
+    "name":"VariableHandler",
+    "path":"folders/Scripts/VariableHandler.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Ground",
-    "path":"folders/Sprites/Wall/Ground.yy",
+    "name":"Frame",
+    "path":"folders/Sprites/Wall/Frame.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
