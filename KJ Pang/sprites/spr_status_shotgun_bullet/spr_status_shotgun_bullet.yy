@@ -23,7 +23,7 @@
   ],
   "name":"spr_status_shotgun_bullet",
   "nineSlice":null,
-  "origin":7,
+  "origin":6,
   "parent":{
     "name":"Bullet",
     "path":"folders/Sprites/Status/Weapon/Bullet.yy",
@@ -75,7 +75,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":4,
+    "xorigin":0,
     "yorigin":25,
   },
   "swatchColours":null,

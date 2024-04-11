@@ -310,8 +310,8 @@
   "maintainGms1Font":false,
   "name":"ft_status_normal_font",
   "parent":{
-    "name":"Fonts",
-    "path":"folders/Fonts.yy",
+    "name":"Status",
+    "path":"folders/Fonts/Status.yy",
   },
   "pointRounding":0,
   "ranges":[

@@ -8,8 +8,8 @@ if (!instance_exists(player)) return;
 
 #region Variables
 
-inputFirePressed = keyboard_check_pressed(vk_control);
-inputFire = keyboard_check(vk_control);
+inputFirePressed = player.inputFirePressed;
+inputFire = player.inputFire;
 
 #endregion
 	
@@ -25,16 +25,16 @@ inputFire = keyboard_check(vk_control);
 #region check ammo
 
 //machinegun
-if(global.PlayerWeaponType == weaponType.MachineGun) {
-	if(global.machineGunAmmo <= 0) {
-		global.PlayerWeaponType = weaponType.SingleSting;
+if(player.weapon == weaponType.MachineGun) {
+	if(player.machineGunAmmo <= 0) {
+		player.weapon = weaponType.SingleSting;
 	}
 }
 
 //shotgun
-if(global.PlayerWeaponType == weaponType.ShotGun) {
-	if(global.shotgunAmmo <= 0) {
-		global.PlayerWeaponType = weaponType.SingleSting;
+if(player.weapon == weaponType.ShotGun) {
+	if(player.shotgunAmmo <= 0) {
+		player.weapon = weaponType.SingleSting;
 	}
 }
 
@@ -42,19 +42,19 @@ if(global.PlayerWeaponType == weaponType.ShotGun) {
 
 #region weapon type check
 	
-		if(global.PlayerWeaponType == weaponType.SingleSting) {	
+		if(player.weapon == weaponType.SingleSting) {	
 			handleSingleSting();
 			
-		} else if(global.PlayerWeaponType == weaponType.DoubleSting) {
+		} else if(player.weapon == weaponType.DoubleSting) {
 			handleDoubleSting();
 			
-		}  else if(global.PlayerWeaponType == weaponType.PowerWire) {
+		}  else if(player.weapon == weaponType.PowerWire) {
 			handlePowerWire();
 			
-		} else if(global.PlayerWeaponType == weaponType.MachineGun) {
+		} else if(player.weapon == weaponType.MachineGun) {
 			handleMachineGun();
 			
-		}  else if(global.PlayerWeaponType == weaponType.ShotGun) {
+		}  else if(player.weapon == weaponType.ShotGun) {
 			handleShotgun();		
 		}
 		

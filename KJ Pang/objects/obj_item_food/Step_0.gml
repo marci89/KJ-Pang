@@ -15,7 +15,7 @@ moveY += gravSpeed;
 
 if (global.PlayerWeaponType != weaponType.PowerWire) {
 	
-	var distanceY = instance_exists(obj_player) ? obj_player.y : global.roomHeight - 70;
+	var distanceY = instance_exists(obj_player_one) ? obj_player_one.y : global.roomHeight - 70;
 	var weaponReactionDistance = 100;
 	
 
@@ -77,14 +77,29 @@ if (CheckScreenCollisionTopWithoutWallForObject(y, halfSpriteHeight)) {
 
 #region Collide with player
 
-if (place_meeting(x, y, obj_player)) {
+// player 1
+if (place_meeting(x, y, obj_player_one)) {
 	
 	if(!isPickedUp) {	
-	global.food++;
+	global.playerOneFood++;
 	PlaySound(snd_food_pickup, false);
 	isPickedUp = true;
 	
-		if(global.food == global.foodMax) {
+		if(global.playerOneFood == global.foodMax) {
+			PlaySound(snd_special_ability_ready, false);
+		} else PlaySound(snd_food_pickup, false);
+	}
+}
+
+//player 2
+if (place_meeting(x, y, obj_player_two)) {
+	
+	if(!isPickedUp) {	
+	global.playerTwoFood++;
+	PlaySound(snd_food_pickup, false);
+	isPickedUp = true;
+	
+		if(global.playerTwoFood == global.foodMax) {
 			PlaySound(snd_special_ability_ready, false);
 		} else PlaySound(snd_food_pickup, false);
 	}

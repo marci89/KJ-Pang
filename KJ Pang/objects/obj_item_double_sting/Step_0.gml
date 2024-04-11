@@ -15,7 +15,7 @@ moveY += gravSpeed;
 
 if (global.PlayerWeaponType != weaponType.PowerWire) {
 	
-	var distanceY = instance_exists(obj_player) ? obj_player.y : global.roomHeight - 70;
+	var distanceY = instance_exists(obj_player_one) ? obj_player_one.y : global.roomHeight - 70;
 	var weaponReactionDistance = 100;
 	
 
@@ -77,9 +77,18 @@ if (CheckScreenCollisionTopWithoutWallForObject(y, halfSpriteHeight)) {
 
 #region Collide with player
 
-if (place_meeting(x, y, obj_player)) {
+//player 1
+if (place_meeting(x, y, obj_player_one)) {
 	
-    global.PlayerWeaponType = weaponType.DoubleSting;
+    obj_player_one.weapon = weaponType.DoubleSting;
+	PlaySound(snd_string_pickup, false);
+	instance_destroy();
+}
+
+//player 2
+if (place_meeting(x, y, obj_player_two)) {
+	
+    obj_player_two.weapon = weaponType.DoubleSting;
 	PlaySound(snd_string_pickup, false);
 	instance_destroy();
 }

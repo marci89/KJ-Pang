@@ -1,10 +1,17 @@
 
+#region Check things
+
+if(player == noone) return;
+
+if (!instance_exists(player)) return;
+
+#endregion
 
 #region Grow animation
 
-	if(previousFoodQuantity != global.food){
+	if(previousFoodQuantity != player.getFood()){
 	    alarm[0]  = growDuration;
-		previousFoodQuantity = global.food;
+		previousFoodQuantity = player.getFood();
 	}
 
 #endregion
@@ -12,7 +19,7 @@
 #region image handler
 
 if(isActive) {
-	sprite_index = noone;
+	//sprite_index = noone;
 } else {
 	sprite_index = image;
 	image_index = imageIndex;
@@ -20,20 +27,37 @@ if(isActive) {
 
 #endregion
 
-#region Show foods or ready label
+#region Check the food is max or not (isActive)
 
-draw_self();
-draw_set_font(ft_status_normal_font);
-draw_set_color(c_white);
-
-if(global.food == global.foodMax) {
+if(player.getFood() >= global.foodMax) {
 	isActive = true;
 } else isActive = false;
 
-if(isActive) {
-	draw_text(x , y - 23, specialAbilityReadyText);
+#endregion
+
+#region set positions
+
+if (global.playerNumber == 1) {
+	posX = x + 20;
+	posY = y - 19;
+	
 } else {
-	draw_text(x + 20 , y - 23, string(global.food) + "/" + string(global.foodMax));
+	posX = x-15
+	posY = y + 7;
+}
+
+#endregion
+
+#region Show foods or MAX label
+
+draw_self();
+draw_set_font(ft_status_small_font);
+draw_set_color(c_white);
+
+if(isActive) {
+	draw_text(posX , posY, "max");
+} else {
+	draw_text(posX , posY, string(player.getFood()) + "/" + string(global.foodMax));
 }
 
 #endregion

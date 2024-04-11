@@ -3,7 +3,7 @@
 
 // Initialize a variable to track the direction of scaling
 if (scaleDirection == 1) {
-    if (image_xscale <= 1.5) {
+    if (image_xscale <= 1.15) {
         image_xscale += growAmount;
         image_yscale += growAmount;
         alarm[0] = growDuration;

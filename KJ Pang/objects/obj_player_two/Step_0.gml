@@ -12,6 +12,8 @@ isOnGround = place_meeting(x, y + 1, obj_wall_parent); // Check if the object is
 inputX = keyboard_check(vk_right) - keyboard_check(vk_left);
 inputJump = keyboard_check_pressed(vk_up);
 inputDown = keyboard_check(vk_down);
+inputFirePressed = keyboard_check_pressed(vk_control);
+inputFire = keyboard_check(vk_control);
 
 #endregion
 
@@ -195,7 +197,7 @@ if (!isDead) {
 if (collision_circle(x, y-30, 25, obj_enemy_parent, true, true)) {
 	if (!isDead && !isInvincible) {
 		isDead = true;
-		global.life -= 1;
+		global.playerTwoLife -= 1;
 		PlaySound(snd_death, false);
 
 		moveX =0;			
@@ -213,6 +215,4 @@ if (collision_circle(x, y-30, 25, obj_enemy_parent, true, true)) {
 	}
 	
 #endregion
-
-
 

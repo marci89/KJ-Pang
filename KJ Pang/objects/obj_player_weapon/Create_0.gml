@@ -37,7 +37,7 @@ reloadingMachineGunTime = 4; // reload time
 reloadingShotgunTime = 90; // reload time
 
 //important objects
-player = obj_player; // player
+player = obj_player_one; // player
 fireAnimation = obj_weapon_animation_fire; // set default animation for shooting
 
 
@@ -70,10 +70,10 @@ function createFireAnimation(posX, posY) {
 	} else {
 		fireAnimation = instance_create_layer(fireanimationX, fireanimationY, "Screen", obj_weapon_animation_fire);
 			
-		if (global.PlayerWeaponType == weaponType.MachineGun)
+		if (player.weapon == weaponType.MachineGun)
 			fireAnimation.sprite_index =  spr_weapon_animation_fire;
 		
-		if (global.PlayerWeaponType == weaponType.ShotGun)
+		if (player.weapon == weaponType.ShotGun)
 			fireAnimation.sprite_index = spr_weapon_animation_fire_larger;	
 	}
 }
@@ -185,6 +185,8 @@ function createShotgunBullets(posX, posY) {
 
 #endregion
 
+
+
 #region single sting function
 
 function handleSingleSting() {
@@ -292,6 +294,7 @@ function handlePowerWire() {
 
 function handleMachineGun() {
 	
+	
 	weaponX = machineGunX;
 	weaponY = machineGunY;
 	var weaponShootingPositionX = machineGunShootingPositionX;
@@ -337,15 +340,15 @@ function handleMachineGun() {
 				var bulletY = weaponDirection == 1 ? y - sprite_width :  y + sprite_width;
 				createFireAnimation(bulletX, bulletY)
 				instance_create_layer(bulletX, bulletY,"Screen", obj_weapon_machine_gun_bullet);
-				global.machineGunAmmo--;
+				 player.machineGunAmmo --;
 				
 				// handle weapon change
-				if(global.machineGunAmmo == 0) {
+				if(player.machineGunAmmo == 0) {
 					isWeaponReloading = false;
 				    image_angle = weaponDirection == 1 ? 90 : -90;
 				}
 			}
-	}	
+	}
 }
 
 #endregion
@@ -397,10 +400,10 @@ function handleShotgun() {
 				var bulletY = weaponDirection == 1 ? y - sprite_width :  y + sprite_width;
 				createFireAnimation(bulletX, bulletY);
 				createShotgunBullets(bulletX, bulletY);
-				global.shotgunAmmo--;
-				
+				player.shotgunAmmo--;
+							
 				// handle weapon change
-				if(global.shotgunAmmo == 0) {
+				if(player.shotgunAmmo == 0) {
 					isWeaponReloading = false;
 				    image_angle = weaponDirection == 1 ? 90 : -90;
 				}

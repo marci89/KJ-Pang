@@ -1,19 +1,22 @@
 //Game
 global.gameDifficult = gameDifficultType.Normal; // game difficult level
+global.playerNumber = 1; // it can be 1 or 2. play alone or with your friend
 
 //Player
-global.score = 0; //player score
-global.life =  3; //player life
-global.lifePoint = 0; //player life points
+global.playerOneName = "PLAYER-1" // player 1 display name
+global.playerTwoName = "PLAYER-2" // player 2 display name
+global.playerOneScore = 0; //player1 score
+global.playerTwoScore = 0; //player2 score
+global.playerOneLife =  3; //player1 life
+global.playerTwoLife =  3; //player2 life
+global.playerOneLifePoint = 0; //player1 life points
+global.playerTwoLifePoint = 0; //player2 life points
 
-// Special ability
-global.playerSpecialAbility = specialAbilityType.TimeSlow; // character's special ability
-global.food = 0; // food number for special ability
+global.playerOneSpecialAbility = specialAbilityType.TimeSlow; // player 1's special ability
+global.playerTwoSpecialAbility = specialAbilityType.TimeSlow; // player 2's special ability
+global.playerOneFood = 0; // food number for player 1 special ability
+global.playerTwoFood = 0; // food number for player 2 special ability
 
-//Weapon
-global.PlayerWeaponType = weaponType.SingleSting; //Player current weapon type. 
-global.shotgunAmmo = 0;
-global.machineGunAmmo = 0;
 
 //Setting and basic things
 global.soundEnable = false; // sound enable

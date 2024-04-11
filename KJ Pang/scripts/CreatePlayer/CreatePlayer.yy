@@ -1,12 +1,12 @@
 {
   "$GMScript":"",
-  "%Name":"CheckLifePoint",
+  "%Name":"CreatePlayer",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"CheckLifePoint",
+  "name":"CreatePlayer",
   "parent":{
-    "name":"Checker",
-    "path":"folders/Scripts/Checker.yy",
+    "name":"Player",
+    "path":"folders/Scripts/Creator/Player.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

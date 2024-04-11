@@ -1,8 +1,9 @@
 
-previousFoodQuantity = global.food; // last food number
-specialAbilityReadyText =GetLocalizedText("specialAbilityReady"); // ready text
-
+player = noone; // actual player
+previousFoodQuantity = 0 // last food number
 isActive = false; // the ability active or not (you have enough food)
+posX = 0;
+posY = 0;
 
 //grow animation
 scaleDirection = 1; // 1 for increasing, -1 for decreasing
@@ -16,4 +17,11 @@ imageIndex = irandom_range(0, 12); // random image
 image = spr_status_food; //sprite
 
 
+#region set player
 
+function setPlayer(playerRequest) {
+	player = playerRequest;
+	previousFoodQuantity = player.getFood();
+}
+
+#endregion

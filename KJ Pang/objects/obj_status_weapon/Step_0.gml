@@ -1,23 +1,31 @@
 
+#region Check things
+
+if(player == noone) return;
+
+if (!instance_exists(player)) return;
+
+#endregion
+
 #region weapon sprite update
 
-if(global.PlayerWeaponType == weaponType.SingleSting) {
+if(player.weapon == weaponType.SingleSting) {
 	sprite_index = spr_status_single_sting;
 }
 
-if(global.PlayerWeaponType == weaponType.DoubleSting) {
+if(player.weapon == weaponType.DoubleSting) {
 	sprite_index = spr_status_double_sting;
 }
 
-if(global.PlayerWeaponType == weaponType.PowerWire) {
+if(player.weapon == weaponType.PowerWire) {
 	sprite_index = spr_status_power_wire;
 }
 
-if(global.PlayerWeaponType == weaponType.MachineGun) {
+if(player.weapon == weaponType.MachineGun) {
 	sprite_index = spr_status_machine_gun;
 }
 
-if(global.PlayerWeaponType == weaponType.ShotGun) {
+if(player.weapon == weaponType.ShotGun) {
 	sprite_index = spr_status_shot_gun;
 }
 
