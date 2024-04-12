@@ -51,20 +51,32 @@ function CreateLevelNormal1() {
 	CreateWallMany(500, 300, wallColorType.Green, wallCreatorDirectionType.Bottom, 5);
 	
 	//item
-	CreateItem(50, 200, obj_item_machine_gun)
-	CreateItem(50, 650, obj_item_shotgun)
+	CreateItem(100, 200,  obj_item_shotgun)
+	CreateItem(50, 650,obj_item_machine_gun)
 	CreateItem(80, 200, obj_item_life)
 	CreateItem(120, 200, obj_item_life)
 	CreateItem(160, 200, obj_item_life)
 	CreateItem(200, 200, obj_item_food)
 	CreateLifePoint(300, 300, lifePointType.Orange)
-	CreateLifePointWithMovement(300, 300, lifePointType.Orange)
-	CreateItem(400, 200, obj_item_food)
+	CreateLifePointWithMovement(300, 300, lifePointType.Yellow)
+	CreateLifePointWithMovement(300, 300, lifePointType.Yellow)
+	CreateLifePointWithMovement(300, 300, lifePointType.Yellow)
+	CreateLifePointWithMovement(300, 300, lifePointType.Yellow)
+	CreateLifePointWithMovement(300, 300, lifePointType.Yellow)
+	CreateLifePointWithMovement(300, 300, lifePointType.Yellow)
+	CreateLifePointWithMovement(300, 300, lifePointType.Yellow)
+	CreateLifePointWithMovement(300, 300, lifePointType.Yellow)
+	CreateLifePointWithMovement(300, 300, lifePointType.Yellow)
+	CreateLifePointWithMovement(300, 300, lifePointType.Yellow)
+	
+	
+	CreateItem(450, 200, obj_item_shotgun)
+		//CreateItem(400, 200, obj_item_life_point)
 	CreateFoodByImageIndex(32,30,1);
 	
 	
 	//Enemy
-	  instance_create_layer(800, 200,"Enemy", obj_enemy_normal_ball_giant);
+	 // instance_create_layer(800, 200,"Enemy", obj_enemy_normal_ball_giant);
 	
 }
 

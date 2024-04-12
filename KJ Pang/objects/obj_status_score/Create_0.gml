@@ -4,6 +4,7 @@ scoreText = GetLocalizedText("score");
 #region set player
 
 function setPlayer(playerRequest) {
+	
 	player = playerRequest;
 }
 

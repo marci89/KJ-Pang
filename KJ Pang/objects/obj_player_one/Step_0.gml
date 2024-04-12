@@ -163,26 +163,25 @@ if (!place_meeting(x, y + 1, obj_wall_parent)  || moveY < 0) {
 //if not dead
 if (!isDead) {
 	
-	//falling situation
-	var fallingWithoutInput = (moveY > 0) && (inputX == 0);
+	var fallingWithoutInput = (moveY > 0) && (inputX == 0) && !isOnGround; 	//falling situation
+	if (inputX != 0)  image_xscale = sign(inputX); 	//direction
+	if(!isDead)   image_speed = 1; // add speed for sprite if not dead
 
-	//direction
-	if (inputX != 0)  image_xscale = sign(inputX);
-	
-	if(!isDead)   image_speed = 1;
-
-
-	if ((fallingWithoutInput || moveY < 0) && sprite_index != spriteJump) {
+	//jump
+	if ((fallingWithoutInput || moveY < 0) && sprite_index != spriteJump && isOnGround) {
 	    sprite_index = spriteJump;
 	}
+	//runing
 	else if (moveY == 0 && inputX != 0 && sprite_index != spriteRun) {
 	    sprite_index = spriteRun;
 	}
-	else if (moveY == 0 && inputX == 0 && place_meeting(x, y + 1, obj_wall_parent) && sprite_index != spriteIdle) {
+	//idle
+	else if (moveY == 0 && inputX == 0 && place_meeting(x, y + 1, obj_wall_parent)
+	&& sprite_index != spriteIdle) {
 	    sprite_index = spriteIdle;
 	}
-} else // if died
-{
+} else { // if died
+	
 	sprite_index = spriteDead;
 	if (image_index >= image_number - 1) {
 	    image_speed = 0; // Stop animation

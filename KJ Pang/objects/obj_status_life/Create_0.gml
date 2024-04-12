@@ -11,8 +11,9 @@ growAmount = 0.05; // size amount
 #region set player
 
 function setPlayer(playerRequest) {
+
 	player = playerRequest;
-	previousLife = player.getLife();
+	previousLife = player.getLife();	
 }
 
 #endregion

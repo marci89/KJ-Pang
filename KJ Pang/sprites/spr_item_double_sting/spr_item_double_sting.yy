@@ -23,7 +23,7 @@
   ],
   "name":"spr_item_double_sting",
   "nineSlice":null,
-  "origin":7,
+  "origin":4,
   "parent":{
     "name":"Sting",
     "path":"folders/Sprites/Item/Weapon/Sting.yy",
@@ -76,7 +76,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":16,
-    "yorigin":33,
+    "yorigin":16,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

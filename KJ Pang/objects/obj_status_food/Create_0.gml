@@ -20,6 +20,7 @@ image = spr_status_food; //sprite
 #region set player
 
 function setPlayer(playerRequest) {
+	
 	player = playerRequest;
 	previousFoodQuantity = player.getFood();
 }
