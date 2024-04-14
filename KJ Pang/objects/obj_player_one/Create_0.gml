@@ -35,6 +35,49 @@ CreatePlayerWeapon(x, y, id);
 isDead = false; // death or alive
 isInvincible = false; // if this is true, nothing hurts you.
 
+#region input device manager
+
+function SetPlayerInputs() {
+	
+	//Keyboard
+	if(global.playerOneInputDeviceType == inputDeviceType.Keyboard) {
+		inputX = keyboard_check(vk_right) - keyboard_check(vk_left);
+		inputJump = keyboard_check_pressed(vk_up);
+		inputDown = keyboard_check(vk_down);
+		inputFirePressed = keyboard_check_pressed(vk_control);
+		inputFire = keyboard_check(vk_control);
+	}
+	
+	//Controller
+	if(global.playerOneInputDeviceType == inputDeviceType.Controller) {
+			
+		// input x (left and right) with axis
+		inputX = gamepad_axis_value(0, gp_axislh); // Read horizontal (X-axis) input from the left joystick of gamepad index 0
+		
+		var deadZone = 0.2; // Optionally apply dead zone to ignore small joystick movements
+		if (abs(inputX) < deadZone) {
+		 inputX = 0;
+		}
+		
+		if (inputX > 0.2) // Normalize inputX to ensure it ranges from -1 to 1
+			inputX = 1;
+		else if (inputX < -0.2) 
+			inputX = -1;
+		
+		// input x (left and right) with pad buttons
+		if(gamepad_button_check(0, gp_padr) || gamepad_button_check(0, gp_padl)) {	
+			inputX = gamepad_button_check(0, gp_padr) - gamepad_button_check(0, gp_padl);
+		}
+		
+		// jump, fire
+	    inputJump = gamepad_button_check(0, gp_face1) || gamepad_button_check(0, gp_padu);
+		inputDown = gamepad_button_check(0, gp_face4) || gamepad_button_check(0, gp_padd);
+		inputFirePressed = gamepad_button_check(0, gp_face3);
+		inputFire = gamepad_button_check(0, gp_face3);   
+	}
+}
+
+#endregion
 
 #region Get food function
 

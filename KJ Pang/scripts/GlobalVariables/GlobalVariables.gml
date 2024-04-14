@@ -5,6 +5,8 @@ global.playerNumber = 1; // it can be 1 or 2. play alone or with your friend
 //Player
 global.playerOneName = "PLAYER-1" // player 1 display name
 global.playerTwoName = "PLAYER-2" // player 2 display name
+global.playerOneInputDeviceType = inputDeviceType.Keyboard; // player 1 device type (keyborad, controller)
+global.playerTwoInputDeviceType = inputDeviceType.Controller; // player 2 device type (keyborad, controller)
 global.playerOneScore = 0; //player1 score
 global.playerTwoScore = 0; //player2 score
 global.playerOneLife =  3; //player1 life

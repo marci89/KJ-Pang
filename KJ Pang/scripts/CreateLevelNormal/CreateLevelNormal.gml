@@ -6,11 +6,13 @@ function CreateLevelNormal(){
 global.hasRoomWallFrame = true;
 global.isRestartLevelAfterDead = false;
 
-global.playerNumber = 1; 
+global.playerNumber = 2; 
 
 //Player
 global.playerOneName = "PLAYER-1" // player 1 display name
 global.playerTwoName = "PLAYER-2" // player 2 display name
+global.playerOneInputDeviceType = inputDeviceType.Controller;
+global.playerTwoInputDeviceType = inputDeviceType.Controller;
 global.playerOneScore = 0; //player1 score
 global.playerTwoScore = 0; //player2 score
 global.playerOneLife =  1; //player1 life
@@ -77,9 +79,9 @@ function CreateLevelNormal1() {
 	
 	
 	//Enemy
-	  instance_create_layer(800, 200,"Enemy", obj_enemy_normal_ball_giant);
-	  instance_create_layer(200, 200,"Enemy", obj_enemy_normal_ball_giant);
-	  instance_create_layer(210, 200,"Enemy", obj_enemy_normal_ball_giant);
+	 // instance_create_layer(800, 200,"Enemy", obj_enemy_normal_ball_giant);
+	 // instance_create_layer(200, 200,"Enemy", obj_enemy_normal_ball_giant);
+	 // instance_create_layer(210, 200,"Enemy", obj_enemy_normal_ball_giant);
 	
 }
 

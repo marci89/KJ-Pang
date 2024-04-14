@@ -9,11 +9,7 @@ isOnGround = place_meeting(x, y + 1, obj_wall_parent); // Check if the object is
 		
 #region Player inputs
 
-inputX = keyboard_check(vk_right) - keyboard_check(vk_left);
-inputJump = keyboard_check_pressed(vk_up);
-inputDown = keyboard_check(vk_down);
-inputFirePressed = keyboard_check_pressed(vk_control);
-inputFire = keyboard_check(vk_control);
+SetPlayerInputs();
 
 #endregion
 

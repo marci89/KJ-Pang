@@ -5,12 +5,18 @@ enum languageType {
 	Hungarian
 };
 
-//game diffiult
+//game difficult
 enum gameDifficultType{
     Normal,
     Hard,
     Nightmare,
 	Impossible
+};
+
+//input device type for player
+enum inputDeviceType{
+    Keyboard,
+    Controller,
 };
 	
 // life point colors

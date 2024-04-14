@@ -192,7 +192,7 @@ function handleDoubleSting() {
     if ((inputFire || inputFirePressed)  && isAllowFired && !player.isDead) {
 		
 		//Count player's sting number
-		var stingHeadCount = GetWeaponInstanceNumber(obj_weapon_sting_head, player);
+		var stingHeadCount = GetWeaponInstanceNumber(obj_weapon_sting_head, player ?? noone);
 		
 		if (stingHeadCount <= 1) {
 			if(!isWeaponReloading) {
@@ -230,7 +230,7 @@ function handlePowerWire() {
     if ((inputFire || inputFirePressed) && isAllowFired  && !player.isDead) {
 		
 		//Count player's power wire number
-		var powerWireHeadCount = GetWeaponInstanceNumber(obj_weapon_power_wire_head, player);
+		var powerWireHeadCount = GetWeaponInstanceNumber(obj_weapon_power_wire_head, player ?? noone);
 		
 		if (powerWireHeadCount == 0) {
 			if(!isWeaponReloading) {
