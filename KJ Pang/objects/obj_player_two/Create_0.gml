@@ -29,8 +29,8 @@ spriteRun = spr_player_run;
 spriteDead = spr_player_dead;
 
 //Create player's gun
-var playerWeapon = instance_create_layer(x,y,"TopLayer", obj_player_weapon);
-playerWeapon.player = id;
+CreatePlayerWeapon(x, y, id);
+
 
 
 
@@ -39,41 +39,49 @@ isDead = false; // death or alive
 isInvincible = false; // if this is true, nothing hurts you.
 
 
-#region Get food
+#region Get food function
 
-function getFood() {
+function GetFood() {
 	return global.playerTwoFood;
 }
 
 #endregion
 
-#region Get life
+#region Get life function
 
-function getLife() {
+function GetLife() {
 	return global.playerTwoLife;
 }
 
 #endregion
 
-#region Get life point
+#region Get life point function
 
-function getLifePoint() {
+function GetLifePoint() {
 	return global.playerTwoLifePoint;
 }
 
 #endregion
 
-#region Get score
+#region Get score function
 
-function getScore() {
+function GetScore() {
 	return global.playerTwoScore;
 }
 
 #endregion
 
-#region Get player name
+#region Set score function
 
-function getName() {
+function SetScore(value) {
+	 global.playerTwoScore += value;
+}
+
+#endregion
+
+#region Get player name function
+
+function GetName() {
 	return global.playerTwoName;
 }
 

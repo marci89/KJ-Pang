@@ -1,8 +1,7 @@
 #region Check things
 
-if(player == noone) return;
-
-if (!instance_exists(player)) return;
+//Check player validation
+if(!IsPlayerExists(player)) return;
 
 #endregion
 

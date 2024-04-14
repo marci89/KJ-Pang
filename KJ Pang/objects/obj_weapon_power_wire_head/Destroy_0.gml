@@ -1,1 +1,1 @@
-deleteAllBodyPart(); // delete all of body parts
+DeleteAllBodyPart(); // delete all of body parts

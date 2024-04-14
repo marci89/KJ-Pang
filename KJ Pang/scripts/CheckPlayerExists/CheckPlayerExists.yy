@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"CheckPlayerExists",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CheckPlayerExists",
+  "parent":{
+    "name":"Checker",
+    "path":"folders/Scripts/Checker.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

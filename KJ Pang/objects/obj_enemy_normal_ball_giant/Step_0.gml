@@ -69,10 +69,3 @@ x += moveX;
 y += moveY;
 
 #endregion
-
-#region Health check
-
-if(hitPoint <= 0) instance_destroy();
-
-#endregion
-

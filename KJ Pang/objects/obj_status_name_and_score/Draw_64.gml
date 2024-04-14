@@ -10,16 +10,15 @@ draw_text(x + 25 , y - 25, string(playerName) + " - " + string(playerScore));
 
 #region Check things
 
-if(player == noone) return;
-
-if (!instance_exists(player)) return;
+//Check player validation
+if(!IsPlayerExists(player)) return;
 
 #endregion
 
 #region Set player data
 
-playerScore = player.getScore();
-playerName = player.getName();
+playerScore = player.GetScore();
+playerName = player.GetName();
 
 #endregion
 

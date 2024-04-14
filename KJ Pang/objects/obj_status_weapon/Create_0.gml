@@ -2,10 +2,9 @@ player = noone; // actual player
 
 #region set player
 
-function setPlayer(playerRequest) {
+function SetPlayer(playerRequest) {
 
-	player = playerRequest;
-	previousLife = player.getLife();	
+	player = playerRequest;	
 }
 
 #endregion

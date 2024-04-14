@@ -1,10 +1,10 @@
 
 //parent properties
 event_inherited()
-
-moveX = 0; // x movement (left)
-moveY = 0; // y movement (up)
+moveSpeed = 8; // move speed
 damage = 10; // weapon damage value
+
+//own properties
 
 //trail effect
 trailPositions = ds_list_create(); // trail position list

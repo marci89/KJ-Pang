@@ -37,9 +37,6 @@
     "name":"spr_item_shotgun",
     "path":"sprites/spr_item_shotgun/spr_item_shotgun.yy",
   },
-  "spriteMaskId":{
-    "name":"spr_item_power_wire",
-    "path":"sprites/spr_item_power_wire/spr_item_power_wire.yy",
-  },
+  "spriteMaskId":null,
   "visible":true,
 }

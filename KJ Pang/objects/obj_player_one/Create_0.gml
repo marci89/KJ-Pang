@@ -7,8 +7,8 @@ inputFire = 0; // fire key (shoot)
 
 //Weapon
 weapon = weaponType.SingleSting; //Player current weapon type. 
-shotgunAmmo = 0;
-machineGunAmmo = 0;
+shotgunAmmo = 0; //shotgunAmmo
+machineGunAmmo = 0; //machineGunAmmo
 
 //Movement
 moveX = 0; // x movement (move left or right)
@@ -29,50 +29,56 @@ spriteRun = spr_player_run;
 spriteDead = spr_player_dead;
 
 //Create player's gun
-var playerWeapon = instance_create_layer(x,y,"TopLayer", obj_player_weapon);
-
-
+CreatePlayerWeapon(x, y, id);
 
 //Abilities
 isDead = false; // death or alive
 isInvincible = false; // if this is true, nothing hurts you.
 
 
-#region Get food
+#region Get food function
 
-function getFood() {
+function GetFood() {
 	return global.playerOneFood;
 }
 
 #endregion
 
-#region Get life
+#region Get life function
 
-function getLife() {
+function GetLife() {
 	return global.playerOneLife;
 }
 
 #endregion
 
-#region Get life point
+#region Get life point function
 
-function getLifePoint() {
+function GetLifePoint() {
 	return global.playerOneLifePoint;
 }
 
 #endregion
 
-#region Get score
+#region Get score function
 
-function getScore() {
+function GetScore() {
 	return global.playerOneScore;
 }
 
 #endregion
 
-#region Get player name
+#region Set score function
 
-function getName() {
+function SetScore(value) {
+	 global.playerOneScore += value;
+}
+
+#endregion
+
+#region Get player name function
+
+function GetName() {
 	return global.playerOneName;
 }
 

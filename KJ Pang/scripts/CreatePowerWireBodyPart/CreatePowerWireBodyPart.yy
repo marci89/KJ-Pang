@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"CreatePowerWireBodyPart",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CreatePowerWireBodyPart",
+  "parent":{
+    "name":"Weapon",
+    "path":"folders/Scripts/Creator/Weapon.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,17 +1,16 @@
 
 #region Check things
 
-if(player == noone) return;
-
-if (!instance_exists(player)) return;
+//Check player validation
+if(!IsPlayerExists(player)) return;
 
 #endregion
 
 #region Grow animation
 
-	if(previousFoodQuantity != player.getFood()){
+	if(previousFoodQuantity != player.GetFood()){
 	    alarm[0]  = growDuration;
-		previousFoodQuantity = player.getFood();
+		previousFoodQuantity = player.GetFood();
 	}
 
 #endregion
@@ -29,7 +28,7 @@ if(isActive) {
 
 #region Check the food is max or not (isActive)
 
-if(player.getFood() >= global.foodMax) {
+if(player.GetFood() >= global.foodMax) {
 	isActive = true;
 } else isActive = false;
 
@@ -57,7 +56,7 @@ draw_set_color(c_white);
 if(isActive) {
 	draw_text(posX , posY, "max");
 } else {
-	draw_text(posX , posY, string(player.getFood()) + "/" + string(global.foodMax));
+	draw_text(posX , posY, string(player.GetFood()) + "/" + string(global.foodMax));
 }
 
 #endregion

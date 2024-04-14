@@ -6,17 +6,17 @@ function CreateLevelNormal(){
 global.hasRoomWallFrame = true;
 global.isRestartLevelAfterDead = false;
 
-global.playerNumber = 2; 
+global.playerNumber = 1; 
 
 //Player
 global.playerOneName = "PLAYER-1" // player 1 display name
 global.playerTwoName = "PLAYER-2" // player 2 display name
-global.playerOneScore = 12345678; //player1 score
-global.playerTwoScore = 12345678; //player2 score
-global.playerOneLife =  300; //player1 life
-global.playerTwoLife =  300; //player2 life
-global.playerOneLifePoint = 200; //player1 life points
-global.playerTwoLifePoint = 246; //player2 life points
+global.playerOneScore = 0; //player1 score
+global.playerTwoScore = 0; //player2 score
+global.playerOneLife =  1; //player1 life
+global.playerTwoLife =  1; //player2 life
+global.playerOneLifePoint = 0; //player1 life points
+global.playerTwoLifePoint = 0; //player2 life points
 
 if(global.level == 1) CreateLevelNormal1()
 
@@ -39,7 +39,6 @@ function CreateLevelNormal1() {
 
 	CreatePlayer(900, 300); // create player
 	
-	
 	//Wall
 	CreateWall(50, 50, wallColorType.Green);
 	
@@ -52,7 +51,8 @@ function CreateLevelNormal1() {
 	
 	//item
 	CreateItem(100, 200,  obj_item_shotgun)
-	CreateItem(50, 650,obj_item_machine_gun)
+	CreateItem(100, 650,obj_item_double_sting)
+	CreateItem(200, 650,obj_item_power_wire)
 	CreateItem(80, 200, obj_item_life)
 	CreateItem(120, 200, obj_item_life)
 	CreateItem(160, 200, obj_item_life)
@@ -70,13 +70,16 @@ function CreateLevelNormal1() {
 	CreateLifePointWithMovement(300, 300, lifePointType.Yellow)
 	
 	
-	CreateItem(450, 200, obj_item_shotgun)
+	CreateItem(400, 200, obj_item_machine_gun)
 		//CreateItem(400, 200, obj_item_life_point)
 	CreateFoodByImageIndex(32,30,1);
 	
 	
+	
 	//Enemy
-	 // instance_create_layer(800, 200,"Enemy", obj_enemy_normal_ball_giant);
+	  instance_create_layer(800, 200,"Enemy", obj_enemy_normal_ball_giant);
+	  instance_create_layer(200, 200,"Enemy", obj_enemy_normal_ball_giant);
+	  instance_create_layer(210, 200,"Enemy", obj_enemy_normal_ball_giant);
 	
 }
 

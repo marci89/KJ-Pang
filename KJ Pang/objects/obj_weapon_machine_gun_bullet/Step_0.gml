@@ -1,6 +1,5 @@
 #region movement
 
-//movement
  moveY = -moveSpeed;
  y += moveY;
  

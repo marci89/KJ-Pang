@@ -1,15 +1,15 @@
 
 //parent properties
 event_inherited()
-moveY = 0; // y movement 
 moveSpeed = 5; // move speed
 damage = 5; // weapon damage value
 
+//own properties
 bodyPartList = ds_list_create(); // list of body part objects
 
 #region delete this instance's all body part function
 
-function deleteAllBodyPart() {
+function DeleteAllBodyPart() {
 
     var listSize = ds_list_size(bodyPartList);
     

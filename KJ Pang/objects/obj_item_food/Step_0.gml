@@ -8,7 +8,8 @@ event_inherited()
 // player 1
 if (place_meeting(x, y, obj_player_one)) {
 	
-	if(!isPickedUp) {	
+	if(!isPickedUp) {
+	global.playerOneScore += itemScore;
 	global.playerOneFood++;
 	PlaySound(snd_food_pickup, false);
 	isPickedUp = true;
@@ -22,7 +23,8 @@ if (place_meeting(x, y, obj_player_one)) {
 //player 2
 if (place_meeting(x, y, obj_player_two)) {
 	
-	if(!isPickedUp) {	
+	if(!isPickedUp) {
+	global.playerTwoScore += itemScore;
 	global.playerTwoFood++;
 	PlaySound(snd_food_pickup, false);
 	isPickedUp = true;

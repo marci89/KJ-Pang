@@ -1,9 +1,10 @@
 
 player = noone; // actual player
+posX = 0; // position x
+posY = 0; // position y
 previousFoodQuantity = 0 // last food number
 isActive = false; // the ability active or not (you have enough food)
-posX = 0;
-posY = 0;
+
 
 //grow animation
 scaleDirection = 1; // 1 for increasing, -1 for decreasing
@@ -19,10 +20,10 @@ image = spr_status_food; //sprite
 
 #region set player
 
-function setPlayer(playerRequest) {
+function SetPlayer(playerRequest) {
 	
 	player = playerRequest;
-	previousFoodQuantity = player.getFood();
+	previousFoodQuantity = player.GetFood();
 }
 
 #endregion

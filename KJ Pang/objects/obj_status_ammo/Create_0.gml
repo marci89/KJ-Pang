@@ -1,10 +1,10 @@
 player = noone; // actual player
-posX = 0;
-posY = 0;
+posX = 0; // position x
+posY = 0; // position y
 
 #region set player
 
-function setPlayer(playerRequest) {
+function SetPlayer(playerRequest) {
 	
 	player = playerRequest;
 }

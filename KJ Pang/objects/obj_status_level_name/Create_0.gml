@@ -1,3 +1,3 @@
 
-levelText =  GetLocalizedText("level");
-levelNameText =  GetLocalizedText(global.levelName);
+levelText =  GetLocalizedText("level"); // level translate
+levelNameText =  GetLocalizedText(global.levelName); // level name with translate

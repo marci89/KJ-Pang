@@ -10,10 +10,10 @@ growAmount = 0.05; // size amount
 
 #region set player
 
-function setPlayer(playerRequest) {
+function SetPlayer(playerRequest) {
 
 	player = playerRequest;
-	previousLife = player.getLife();	
+	previousLife = player.GetLife();	
 }
 
 #endregion

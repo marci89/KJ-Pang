@@ -9,7 +9,8 @@ isOnGround = place_meeting(x, y + 1, obj_wall_parent); // Check if the object is
 
 #region gravity
 
-moveY += gravSpeed;
+if(isGravityEnable)
+	moveY += gravSpeed;
 
 #endregion
 
@@ -49,8 +50,7 @@ var nearestWeapon = instance_nearest(x, y, obj_weapon_parent);
 			hoopingSpeedLeftMax = -2;
 			hoopingSpeedRightMax = 2;
 			hoopingSpeedHeightMin = -4;
-			hoopingSpeedHeightMax = -6;
-		
+			hoopingSpeedHeightMax = -6;	
 		}
 	
 		var distanceToWeapon = point_distance(x, y, nearestWeapon.x, nearestWeapon.y);
@@ -66,6 +66,28 @@ var nearestWeapon = instance_nearest(x, y, obj_weapon_parent);
 			    moveX = random_range(hoopingSpeedLeftMin, hoopingSpeedLeftMax); // x direction
 			}
 		}
+}
+
+#endregion
+
+#region hopping effect on the ground by enemy
+
+if(isHoppingEffectByEnemyEnable) {
+	var enemyReactionDistance = 100;
+
+	// Detect Nearby Enemies
+	var nearestEnemy = instance_nearest(x, y, obj_enemy_parent);
+
+	if (instance_exists(nearestEnemy)) {
+	
+		var distanceToEnemy = point_distance(x, y, nearestEnemy.x, nearestEnemy.y);
+
+		// React to Nearby Enemies
+		if (distanceToEnemy < enemyReactionDistance && isOnGround) {
+		   moveY = random_range(-2,-6); // x direction
+		   moveX = random_range(-1,1); // x direction
+		}
+	}
 }
 
 #endregion
@@ -95,7 +117,7 @@ if (CheckScreenCollisionTopWithoutWallForObject(y, halfSpriteHeight)) {
 
 //Bottom
 if (CheckScreenCollisionBottomWithoutWallForObject(y, halfSpriteHeight)) {
-	    y = global.roomHeight - halfSpriteHeight;
+	    y = (global.roomHeight - halfSpriteHeight);
         moveY *= -bounceDecay;
 }
 
@@ -103,28 +125,29 @@ if (CheckScreenCollisionBottomWithoutWallForObject(y, halfSpriteHeight)) {
 
 #region Collide with wall
 
-//Collide on x-axis with wall
-if (place_meeting(x + moveX, y, obj_wall_parent)) {
-	iterations = 0; // Reset iterations counter
-    while (!place_meeting(x + sign(moveX), y, obj_wall_parent) && iterations < maxIterations) {
-        x += sign(moveX);
-		   iterations++; // Increment iterations counter
-    }
-	//Bounce
-	moveX *=-bounceDecay;
+if(isSolidWallCollision) {
+	//Collide on x-axis with wall
+	if (place_meeting(x + moveX, y, obj_wall_parent)) {
+		iterations = 0; // Reset iterations counter
+	    while (!place_meeting(x + sign(moveX), y, obj_wall_parent) && iterations < maxIterations) {
+	        x += sign(moveX);
+			   iterations++; // Increment iterations counter
+	    }
+		//Bounce
+		moveX *=-bounceDecay;
+	}
+
+	//Collide on y-axis with wall
+	if (place_meeting(x, y + moveY, obj_wall_parent)) {
+		iterations = 0; // Reset iterations counter
+	    while (!place_meeting(x, y + sign(moveY), obj_wall_parent) && iterations < maxIterations) {
+	        y += sign(moveY);
+			   iterations++; // Increment iterations counter
+	    } 
+		//Bounce
+		moveY *=-bounceDecay;
+	}
 }
-
-
-//Collide on y-axis with wall
-if (place_meeting(x, y + moveY, obj_wall_parent)) {
-	iterations = 0; // Reset iterations counter
-    while (!place_meeting(x, y + sign(moveY), obj_wall_parent) && iterations < maxIterations) {
-        y += sign(moveY);
-		   iterations++; // Increment iterations counter
-    } 
-	//Bounce
-	moveY *=-bounceDecay;
-} 
 
 #endregion
 

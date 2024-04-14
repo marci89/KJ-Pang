@@ -1,6 +1,19 @@
 
-//Default properties for children
-moveY = 0; // y movement 
+//movement
 moveX = 0; // x movement 
-moveSpeed = 14; // move speed
+moveY = 0; // y movement 
+moveSpeed = 8; // move speed
+
 damage = 1; // weapon damage value
+
+// actual player
+player = noone; 
+
+#region Set player
+
+function SetPlayer(playerRequest) {
+	
+	player = playerRequest;
+}
+
+#endregion

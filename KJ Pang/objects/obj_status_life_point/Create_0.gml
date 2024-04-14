@@ -14,9 +14,9 @@ image_index = irandom_range(0, 8); // random image
 
 #region set player
 
-function setPlayer(playerRequest) {	
+function SetPlayer(playerRequest) {	
 	player = playerRequest;
-	previousLifePoint = player.getLifePoint();
+	previousLifePoint = player.GetLifePoint();
 }
 
 #endregion

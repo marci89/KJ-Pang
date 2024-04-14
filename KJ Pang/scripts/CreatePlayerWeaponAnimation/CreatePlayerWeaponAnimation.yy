@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"CreatePlayerWeaponAnimation",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CreatePlayerWeaponAnimation",
+  "parent":{
+    "name":"Player",
+    "path":"folders/Scripts/Creator/Player.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

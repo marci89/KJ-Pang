@@ -1,14 +1,14 @@
 player = noone; // actual player
-playerScore = 0;
-playerName = "";
+playerScore = 0; //player's score
+playerName = ""; // player's name
 
 #region set player
 
-function setPlayer(playerRequest) {
+function SetPlayer(playerRequest) {
 	
 	player = playerRequest;
-	playerScore = player.getScore();
-	playerName = player.getName();
+	playerScore = player.GetScore();
+	playerName = player.GetName();
 }
 
 #endregion

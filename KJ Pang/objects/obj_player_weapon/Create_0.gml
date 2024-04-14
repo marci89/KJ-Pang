@@ -41,6 +41,14 @@ player = obj_player_one; // player
 fireAnimation = obj_weapon_animation_fire; // set default animation for shooting
 
 
+#region set player
+
+function SetPlayer(playerRequest) {
+	
+	player = playerRequest;
+}
+
+#endregion
 
 #region weapon visibility
 
@@ -68,7 +76,7 @@ function createFireAnimation(posX, posY) {
 		fireAnimation.x = fireanimationX
 		fireAnimation.y = fireanimationY
 	} else {
-		fireAnimation = instance_create_layer(fireanimationX, fireanimationY, "Screen", obj_weapon_animation_fire);
+		fireAnimation = CreatePlayerWeaponAnimation(fireanimationX, fireanimationY, obj_weapon_animation_fire );
 			
 		if (player.weapon == weaponType.MachineGun)
 			fireAnimation.sprite_index =  spr_weapon_animation_fire;
@@ -98,94 +106,33 @@ function createShotgunBullets(posX, posY) {
 	var bulletX = posX;		
 	var bulletY = posY;
 	var defaultMoveY = -12;
-				
-	var bullet1 = instance_create_layer(bulletX, bulletY,"Screen", obj_weapon_shotgun_bullet);			
-	var bullet2 = instance_create_layer(bulletX, bulletY,"Screen", obj_weapon_shotgun_bullet);
-	var bullet3 = instance_create_layer(bulletX, bulletY,"Screen", obj_weapon_shotgun_bullet);
-	var bullet4 = instance_create_layer(bulletX, bulletY,"Screen", obj_weapon_shotgun_bullet);
-	var bullet5 = instance_create_layer(bulletX, bulletY,"Screen", obj_weapon_shotgun_bullet);
-	var bullet6 = instance_create_layer(bulletX, bulletY,"Screen", obj_weapon_shotgun_bullet);
-	var bullet7 = instance_create_layer(bulletX, bulletY,"Screen", obj_weapon_shotgun_bullet);
-	var bullet8 = instance_create_layer(bulletX, bulletY,"Screen", obj_weapon_shotgun_bullet);
-	var bullet9 = instance_create_layer(bulletX, bulletY,"Screen", obj_weapon_shotgun_bullet);
-	var bullet10 = instance_create_layer(bulletX, bulletY,"Screen", obj_weapon_shotgun_bullet);
-	var bullet11 = instance_create_layer(bulletX, bulletY,"Screen", obj_weapon_shotgun_bullet);
-	var bullet12 = instance_create_layer(bulletX, bulletY,"Screen", obj_weapon_shotgun_bullet);
-	var bullet13 = instance_create_layer(bulletX, bulletY,"Screen", obj_weapon_shotgun_bullet);
-	var bullet14 = instance_create_layer(bulletX, bulletY,"Screen", obj_weapon_shotgun_bullet);
-	var bullet15 = instance_create_layer(bulletX, bulletY,"Screen", obj_weapon_shotgun_bullet);
-	var bullet16 = instance_create_layer(bulletX, bulletY,"Screen", obj_weapon_shotgun_bullet);
-	var bullet17 = instance_create_layer(bulletX, bulletY,"Screen", obj_weapon_shotgun_bullet);
-	var bullet18 = instance_create_layer(bulletX, bulletY,"Screen", obj_weapon_shotgun_bullet);
-	var bullet19 = instance_create_layer(bulletX, bulletY,"Screen", obj_weapon_shotgun_bullet);
-	var bullet20 = instance_create_layer(bulletX, bulletY,"Screen", obj_weapon_shotgun_bullet);
-	var bullet21 = instance_create_layer(bulletX, bulletY,"Screen", obj_weapon_shotgun_bullet);
-	var bullet22 = instance_create_layer(bulletX, bulletY,"Screen", obj_weapon_shotgun_bullet);
-	var bullet23 = instance_create_layer(bulletX, bulletY,"Screen", obj_weapon_shotgun_bullet);
-				
-				
-	bullet1.moveY = defaultMoveY;
-	bullet1.moveX = -1;
-	bullet2.moveY = defaultMoveY;
-	bullet2.moveX = 1;
-				
-	bullet3.moveY = defaultMoveY;
-	bullet3.moveX = -2;			
-	bullet4.moveY = defaultMoveY;
-	bullet4.moveX = 2;
-				
-	bullet5.moveY = defaultMoveY;
-	bullet5.moveX = -4;			
-	bullet6.moveY = defaultMoveY;
-	bullet6.moveX = 4;
-				
-	bullet7.moveY = defaultMoveY;
-	bullet7.moveX = -6;			
-	bullet8.moveY = defaultMoveY;
-	bullet8.moveX = 6;
-				
-	bullet9.moveY = defaultMoveY;
-	bullet9.moveX = -8;			
-	bullet10.moveY = defaultMoveY;
-	bullet10.moveX = 8;
-				
-	bullet11.moveY = defaultMoveY;
-	bullet11.moveX = -10;			
-	bullet12.moveY = defaultMoveY;
-	bullet12.moveX = 10;
-				
-	bullet13.moveY = defaultMoveY;
-	bullet13.moveX = -12;			
-	bullet14.moveY = defaultMoveY;
-	bullet14.moveX = 12;
-				
-	bullet15.moveY = defaultMoveY;
-	bullet15.moveX = -16;			
-	bullet16.moveY = defaultMoveY;
-	bullet16.moveX = 16;
-				
-	bullet17.moveY = defaultMoveY;
-	bullet17.moveX = -20;			
-	bullet18.moveY = defaultMoveY;
-	bullet18.moveX = 20;
-				
-	bullet19.moveY = defaultMoveY;
-	bullet19.moveX = -24;			
-	bullet20.moveY = defaultMoveY;
-	bullet20.moveX = 24;
-				
-	bullet21.moveY = defaultMoveY;
-	bullet21.moveX = -30;			
-	bullet22.moveY = defaultMoveY;
-	bullet22.moveX = 30;
-	
-	bullet23.moveY = defaultMoveY;
-	bullet23.moveX = 0;
+			
+	CreateWeaponWithMovement(bulletX, bulletY, -1, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, 1, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, -2, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, 2, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, -4, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, 4, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, -6, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, 6, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, -8, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, 8, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, -10, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, 10, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, -12, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, 12, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, -16, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, 16, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, -20, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, 20, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, -24, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, 24, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, -30, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, 30, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, 0, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
 }
 
 #endregion
-
-
 
 #region single sting function
 
@@ -204,7 +151,11 @@ function handleSingleSting() {
 
 	// shoot
     if ((inputFire || inputFirePressed) && isAllowFired && !player.isDead) {
-		if (!instance_exists(obj_weapon_sting_head)) {
+		
+		//Count player's sting number
+		var stingHeadCount = GetWeaponInstanceNumber(obj_weapon_sting_head, player ?? noone);
+		
+		if (stingHeadCount == 0) {
 			if(!isWeaponReloading) {
 				rotationDirection = weaponDirection;
 				isFired = true;
@@ -214,7 +165,8 @@ function handleSingleSting() {
 				alarm[1]  = reloadingHarpoonTime;
 			
 				PlaySound(snd_string_shoot, false);
-				instance_create_layer(player.x, player.y,"Screen", obj_weapon_sting_head);
+				CreateWeapon(player.x, player.y, obj_weapon_sting_head, player ?? noone);
+
 			}
 		}
 	}
@@ -238,7 +190,11 @@ function handleDoubleSting() {
 
 	// shoot
     if ((inputFire || inputFirePressed)  && isAllowFired && !player.isDead) {
-		if (instance_number(obj_weapon_sting_head) <= 1) {
+		
+		//Count player's sting number
+		var stingHeadCount = GetWeaponInstanceNumber(obj_weapon_sting_head, player);
+		
+		if (stingHeadCount <= 1) {
 			if(!isWeaponReloading) {
 				rotationDirection = weaponDirection;
 				isFired = true;
@@ -248,7 +204,7 @@ function handleDoubleSting() {
 				alarm[1]  = reloadingHarpoonTime;
 			
 				PlaySound(snd_string_shoot, false);
-				instance_create_layer(player.x, player.y,"Screen", obj_weapon_sting_head);
+				CreateWeapon(player.x, player.y, obj_weapon_sting_head, player ?? noone);
 			}
 		}
 	}
@@ -272,7 +228,11 @@ function handlePowerWire() {
 
 	// shoot
     if ((inputFire || inputFirePressed) && isAllowFired  && !player.isDead) {
-		if (!instance_exists(obj_weapon_power_wire_head)) {
+		
+		//Count player's power wire number
+		var powerWireHeadCount = GetWeaponInstanceNumber(obj_weapon_power_wire_head, player);
+		
+		if (powerWireHeadCount == 0) {
 			if(!isWeaponReloading) {
 				rotationDirection = weaponDirection;
 				isFired = true;
@@ -282,7 +242,7 @@ function handlePowerWire() {
 				alarm[1]  = reloadingHarpoonTime;
 			
 				PlaySound(snd_string_shoot, false);
-				instance_create_layer(player.x, player.y,"Screen", obj_weapon_power_wire_head);
+				CreateWeapon(player.x, player.y, obj_weapon_power_wire_head, player ?? noone);
 			}
 		}
 	}
@@ -339,7 +299,8 @@ function handleMachineGun() {
 				var bulletX = weaponDirection == 1 ? x-10 : x+10;	
 				var bulletY = weaponDirection == 1 ? y - sprite_width :  y + sprite_width;
 				createFireAnimation(bulletX, bulletY)
-				instance_create_layer(bulletX, bulletY,"Screen", obj_weapon_machine_gun_bullet);
+				CreateWeapon(bulletX, bulletY, obj_weapon_machine_gun_bullet, player ?? noone);
+				
 				 player.machineGunAmmo --;
 				
 				// handle weapon change

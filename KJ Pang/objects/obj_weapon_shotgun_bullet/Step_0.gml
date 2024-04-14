@@ -1,6 +1,5 @@
 #region movement
 
-//movement
 x += moveX ;
 y += moveY ;
 

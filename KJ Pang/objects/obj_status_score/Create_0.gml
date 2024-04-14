@@ -1,9 +1,9 @@
 player = noone; // actual player
-scoreText = GetLocalizedText("score");
+scoreText = GetLocalizedText("score"); // score translate
 
 #region set player
 
-function setPlayer(playerRequest) {
+function SetPlayer(playerRequest) {
 	
 	player = playerRequest;
 }
