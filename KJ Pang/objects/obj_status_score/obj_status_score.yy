@@ -9,8 +9,8 @@
   "name":"obj_status_score",
   "overriddenProperties":[],
   "parent":{
-    "name":"Status",
-    "path":"folders/Objects/Status.yy",
+    "name":"Score",
+    "path":"folders/Objects/Status/Score.yy",
   },
   "parentObjectId":null,
   "persistent":false,

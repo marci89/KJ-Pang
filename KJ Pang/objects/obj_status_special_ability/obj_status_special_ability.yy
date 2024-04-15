@@ -9,8 +9,8 @@
   "name":"obj_status_special_ability",
   "overriddenProperties":[],
   "parent":{
-    "name":"Status",
-    "path":"folders/Objects/Status.yy",
+    "name":"SpecialAbility",
+    "path":"folders/Objects/Status/SpecialAbility.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -36,5 +36,7 @@ global.isRestartLevelAfterDead = false; // restart the room after death or not.
 global.level = 1; // level number
 global.levelName = "?"; // level name
 global.isPaused = false; // paused or not
+global.hasLevelTime = true; // the level has time management or not.
+global.isLevelTimeUp = false; // The level time has expired and game over.
 
 }

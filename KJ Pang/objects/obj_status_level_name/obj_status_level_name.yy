@@ -9,8 +9,8 @@
   "name":"obj_status_level_name",
   "overriddenProperties":[],
   "parent":{
-    "name":"Status",
-    "path":"folders/Objects/Status.yy",
+    "name":"LevelName",
+    "path":"folders/Objects/Status/LevelName.yy",
   },
   "parentObjectId":null,
   "persistent":false,

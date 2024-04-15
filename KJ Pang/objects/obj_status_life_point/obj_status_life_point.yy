@@ -10,8 +10,8 @@
   "name":"obj_status_life_point",
   "overriddenProperties":[],
   "parent":{
-    "name":"Status",
-    "path":"folders/Objects/Status.yy",
+    "name":"Life",
+    "path":"folders/Objects/Status/Life.yy",
   },
   "parentObjectId":null,
   "persistent":false,

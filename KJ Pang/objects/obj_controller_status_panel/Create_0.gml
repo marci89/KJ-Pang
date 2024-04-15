@@ -108,29 +108,5 @@ function CreateMultiPlayerStatusPanelForPlayerTwo() {
 	
 #endregion
 
-#region Create status panel
-
-//Create status objects for single player
-if(global.playerNumber == 1) {
-	if(instance_exists(obj_player_one)) {
-		CreateSinglePlayerStatusPanel();
-	}	 
-}
-//Create status objects for multiplayer
-else if(global.playerNumber == 2) {
-	
-	//level name
-	instance_create_layer(410, startY + 25,"Status", obj_status_level_name);
-	
-	//player 1
-	if(instance_exists(obj_player_one)) {
-		CreateMultiPlayerStatusPanelForPlayerOne();
-	}
-		
-	//player 2
-	if(instance_exists(obj_player_two)) {
-		CreateMultiPlayerStatusPanelForPlayerTwo();
-	}
-}
-
-#endregion
+//create status
+alarm[0] = 50;

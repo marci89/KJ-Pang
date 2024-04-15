@@ -3,6 +3,7 @@
 function SetLevelVariables(){
 
 //Weapon
-global.PlayerWeaponType = weaponType.SingleSting; //Player current weapon type. 
+global.PlayerWeaponType = weaponType.SingleSting; //Player current weapon type.
+global.isLevelTimeUp = false; // The level time has expired and game over.
 
 }

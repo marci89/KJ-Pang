@@ -30,3 +30,15 @@ if keyboard_check_pressed(ord("P")) {
     }
 
 #endregion
+
+#region level time management
+
+if(global.isLevelTimeUp) {
+	CreateRoomTransition(false); // room change animation
+	instance_deactivate_layer("Status");
+	global.isLevelTimeUp = false;
+
+	alarm[0] = 150; // restart room
+}
+
+#endregion

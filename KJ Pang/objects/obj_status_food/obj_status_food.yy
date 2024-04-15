@@ -10,8 +10,8 @@
   "name":"obj_status_food",
   "overriddenProperties":[],
   "parent":{
-    "name":"Status",
-    "path":"folders/Objects/Status.yy",
+    "name":"SpecialAbility",
+    "path":"folders/Objects/Status/SpecialAbility.yy",
   },
   "parentObjectId":null,
   "persistent":false,

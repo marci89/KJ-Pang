@@ -10,8 +10,8 @@
   "name":"obj_status_weapon",
   "overriddenProperties":[],
   "parent":{
-    "name":"Status",
-    "path":"folders/Objects/Status.yy",
+    "name":"Weapon",
+    "path":"folders/Objects/Status/Weapon.yy",
   },
   "parentObjectId":null,
   "persistent":false,
