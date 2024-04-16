@@ -2,7 +2,7 @@
 //Create life point
 function CreateLifePoint(xValue, yValue, type){
 	
-  var result = instance_create_layer(xValue, yValue,"Screen", obj_item_life_point);
+  var result = instance_create_layer(xValue, yValue,"Item", obj_item_life_point);
   
   	if (type == lifePointType.Red) result.image = spr_item_life_point_red;
   	if (type == lifePointType.Blue) result.image = spr_item_life_point_blue;
@@ -20,7 +20,7 @@ function CreateLifePoint(xValue, yValue, type){
 function CreateLifePointWithMovement(xValue, yValue, type){
 	var moveX = random_range(-10,10); // x direction
 	var moveY = random_range(-10,10); // y direction
-	var result = instance_create_layer(xValue, yValue,"Screen", obj_item_life_point);
+	var result = instance_create_layer(xValue, yValue,"Item", obj_item_life_point);
   
   	if (type == lifePointType.Red) result.image = spr_item_life_point_red;
   	if (type == lifePointType.Blue) result.image = spr_item_life_point_blue;

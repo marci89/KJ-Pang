@@ -5,6 +5,8 @@ weaponY = 0; // main variable for player's weapon y pos
 
 harpoonX = 5; // harpoo x position
 harpoonY = 39; // harpoo y position
+stingStartYPositionSpace = -6; // add plus space the sting when it will be created
+powerWireStartYPositionSpace = -4; // add plus space the sting when it will be created
 
 machineGunX = -30; // machineGun x position
 machineGunY = 28; // machineGun y position
@@ -107,29 +109,29 @@ function createShotgunBullets(posX, posY) {
 	var bulletY = posY;
 	var defaultMoveY = -12;
 			
-	CreateWeaponWithMovement(bulletX, bulletY, -1, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, 1, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, -2, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, 2, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, -4, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, 4, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, -6, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, 6, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, -8, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, 8, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, -10, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, 10, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, -12, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, 12, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, -16, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, 16, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, -20, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, 20, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, -24, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, 24, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, -30, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, 30, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, 0, defaultMoveY, obj_weapon_shotgun_bullet, player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, -1, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, 1, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, -2, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, 2, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, -4, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, 4, defaultMoveY, obj_weapon_shotgun_bullet,"TopWeapon", player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, -6, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, 6, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, -8, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, 8, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, -10, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, 10, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, -12, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, 12, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, -16, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, 16, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, -20, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, 20, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, -24, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, 24, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, -30, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, 30, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, 0, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
 }
 
 #endregion
@@ -165,7 +167,7 @@ function handleSingleSting() {
 				alarm[1]  = reloadingHarpoonTime;
 			
 				PlaySound(snd_string_shoot, false);
-				CreateWeapon(player.x, player.y, obj_weapon_sting_head, player ?? noone);
+				CreateWeapon(player.x, player.y + stingStartYPositionSpace, obj_weapon_sting_head, "Weapon", player ?? noone);
 
 			}
 		}
@@ -204,7 +206,7 @@ function handleDoubleSting() {
 				alarm[1]  = reloadingHarpoonTime;
 			
 				PlaySound(snd_string_shoot, false);
-				CreateWeapon(player.x, player.y, obj_weapon_sting_head, player ?? noone);
+				CreateWeapon(player.x, player.y + stingStartYPositionSpace, obj_weapon_sting_head, "Weapon", player ?? noone);
 			}
 		}
 	}
@@ -242,7 +244,7 @@ function handlePowerWire() {
 				alarm[1]  = reloadingHarpoonTime;
 			
 				PlaySound(snd_string_shoot, false);
-				CreateWeapon(player.x, player.y, obj_weapon_power_wire_head, player ?? noone);
+				CreateWeapon(player.x, player.y + powerWireStartYPositionSpace, obj_weapon_power_wire_head, "Weapon", player ?? noone);
 			}
 		}
 	}
@@ -299,7 +301,7 @@ function handleMachineGun() {
 				var bulletX = weaponDirection == 1 ? x-10 : x+10;	
 				var bulletY = weaponDirection == 1 ? y - sprite_width :  y + sprite_width;
 				createFireAnimation(bulletX, bulletY)
-				CreateWeapon(bulletX, bulletY, obj_weapon_machine_gun_bullet, player ?? noone);
+				CreateWeapon(bulletX, bulletY, obj_weapon_machine_gun_bullet, "TopWeapon", player ?? noone);
 				
 				 player.machineGunAmmo --;
 				

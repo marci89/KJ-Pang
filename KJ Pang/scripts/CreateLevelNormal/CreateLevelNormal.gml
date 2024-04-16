@@ -6,7 +6,7 @@ function CreateLevelNormal(){
 global.hasRoomWallFrame = true;
 global.isRestartLevelAfterDead = false;
 global.hasLevelTime = true;
-global.levelTimeMax = 5;
+global.levelTimeMax = 200;
 
 global.playerNumber = 1; 
 
@@ -21,6 +21,7 @@ global.playerOneLife =  1; //player1 life
 global.playerTwoLife =  1; //player2 life
 global.playerOneLifePoint = 0; //player1 life points
 global.playerTwoLifePoint = 0; //player2 life points
+global.level = 1;
 
 if(global.level == 1) CreateLevelNormal1()
 
@@ -45,6 +46,7 @@ function CreateLevelNormal1() {
 	
 	//Wall
 	CreateWall(50, 50, wallColorType.Green);
+	//CreateWall(950, 30, wallColorType.Green);
 	
 	CreateWallMany(global.wallFrameSize, 500, wallColorType.Blue, wallCreatorDirectionType.Right, 5);
 	
@@ -81,7 +83,7 @@ function CreateLevelNormal1() {
 	
 	
 	//Enemy
-	  instance_create_layer(800, 200,"Enemy", obj_enemy_normal_ball_giant);
+	 // instance_create_layer(800, 200,"Enemy", obj_enemy_normal_ball_giant);
 	  instance_create_layer(200, 200,"Enemy", obj_enemy_normal_ball_giant);
 	  instance_create_layer(210, 200,"Enemy", obj_enemy_normal_ball_giant);
 	
