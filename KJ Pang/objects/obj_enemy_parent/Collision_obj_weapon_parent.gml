@@ -4,10 +4,12 @@
 if (!instance_exists(other)) return;
 
 #endregion
-
+	
 #region Damage
 
+if(isActive) {
 hitPoint -= other.damage; // reduce enemy's health by weapon damage	
+}
 
 #endregion
 

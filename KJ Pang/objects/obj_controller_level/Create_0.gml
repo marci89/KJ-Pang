@@ -3,13 +3,13 @@
 SetGameVariables(); // ezt majd ki kell szedni!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 LoadGameSettings(); // ezt majd ki kell szedni!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-CreateRoomTransition(true);
 
 #region Init basic things
 
-pausedText = GetLocalizedText("paused");
+CreateRoomTransition(true); // room start animation
 
-SetLevelVariables();
+pausedText = GetLocalizedText("paused"); // translate text
+SetLevelVariables(); // set varibales to start the level
 
 #endregion
 

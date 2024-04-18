@@ -1,5 +1,6 @@
 
-// Load background image from file
+#region Load background image from file
+
 function LoadBackgroundImage(name){
 	
 	var folderPath = "Images/Backgrounds/";
@@ -13,3 +14,5 @@ function LoadBackgroundImage(name){
 	    show_debug_message("Failed to load image");
 	}
 }
+
+#endregion

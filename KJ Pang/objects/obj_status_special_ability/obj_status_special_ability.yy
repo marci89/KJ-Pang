@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_status_special_ability",
-    "path":"sprites/spr_status_special_ability/spr_status_special_ability.yy",
+    "name":"spr_item_time_slow",
+    "path":"sprites/spr_item_time_slow/spr_item_time_slow.yy",
   },
   "spriteMaskId":null,
   "visible":true,

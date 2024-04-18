@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"BlinkingEnemy",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"BlinkingEnemy",
+  "parent":{
+    "name":"Effect",
+    "path":"folders/Scripts/Game/Effect.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

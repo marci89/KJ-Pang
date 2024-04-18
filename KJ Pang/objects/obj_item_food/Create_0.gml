@@ -13,3 +13,8 @@ image_index = irandom_range(0, 35); // random image
 
 #endregion
 
+#region Set temporary properties
+
+SetTemporaryProperties();
+
+#endregion

@@ -8,3 +8,9 @@ isHoppingEffectByEnemyEnable = true;
 itemScore = 1; // score of item
 rotateAngle = 1; //rotation
 image = spr_item_life_point_red; // default image
+
+#region Set temporary properties
+
+SetTemporaryProperties();
+
+#endregion

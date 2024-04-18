@@ -1,12 +1,12 @@
 {
   "$GMScript":"",
-  "%Name":"CheckPlayerExists",
+  "%Name":"SetObjectPropertyValues",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"CheckPlayerExists",
+  "name":"SetObjectPropertyValues",
   "parent":{
-    "name":"Checker",
-    "path":"folders/Scripts/Checker.yy",
+    "name":"Game",
+    "path":"folders/Scripts/Game.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

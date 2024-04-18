@@ -1,5 +1,9 @@
 
+#region Variables
+
 startY = global.roomHeight + 5;
+
+#endregion
 
 #region Create singleplayer staus panel function
 

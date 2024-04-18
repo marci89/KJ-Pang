@@ -1,0 +1,3 @@
+ ///@desc Blinking enemies
+
+BlinkingEnemies();

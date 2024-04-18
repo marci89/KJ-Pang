@@ -1,4 +1,6 @@
-//The creation of any weapon. Add an weapon object.
+
+#region The creation of any weapon. Add an weapon object.
+
 function CreateWeapon(xValue, yValue, type, layerName, player){
 	
 	if (IsPlayerExists(player)) {
@@ -7,7 +9,10 @@ function CreateWeapon(xValue, yValue, type, layerName, player){
 	}
 }
 
-//Create weapon with movement
+#endregion
+
+#region Create weapon with movement
+
 function CreateWeaponWithMovement(xValue, yValue, moveX, moveY, type, layerName,  player){
 	 var result = instance_create_layer(xValue, yValue,layerName, type);
 	 result.SetPlayer(player);
@@ -15,3 +20,5 @@ function CreateWeaponWithMovement(xValue, yValue, moveX, moveY, type, layerName,
 	 result.moveY = moveY;
 	 return result;
 }
+
+#endregion

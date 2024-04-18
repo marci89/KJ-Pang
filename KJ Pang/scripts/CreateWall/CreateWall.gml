@@ -1,11 +1,16 @@
-//Create one wall
+
+#region Create one wall
+
 function CreateWall(xValue, yValue, wallColor){
 	
   var result = instance_create_layer(xValue, yValue,"Wall", obj_wall);
   result.wallColor = wallColor
 }
 
-//Create many walls
+#endregion
+
+#region Create many walls
+
 function CreateWallMany(xValue, yValue, wallColor, wallDirection, quantity){
 	
 	//right
@@ -40,3 +45,5 @@ function CreateWallMany(xValue, yValue, wallColor, wallDirection, quantity){
 		}
 	}
 }
+
+#endregion

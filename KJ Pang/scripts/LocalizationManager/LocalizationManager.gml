@@ -1,5 +1,6 @@
 
-//Returns the localized text associated with the given key.
+#region Returns the localized text associated with the given key.
+
 function GetLocalizedText(key){
 	
 	  var localizedText = key; 
@@ -18,3 +19,5 @@ function GetLocalizedText(key){
    // return the text
    return localizedText;	  
 }
+
+#endregion

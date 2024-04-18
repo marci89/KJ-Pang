@@ -1,5 +1,6 @@
 
-//Save settings
+#region Save settings
+
 function SaveGameSettings(){
 	  var filename = "Data/gameSettings.ini";
 	  
@@ -16,7 +17,10 @@ function SaveGameSettings(){
 	   }  
 }
 
-//load settings
+#endregion
+
+#region load settings
+
 function LoadGameSettings(){
 	  var filename = "Data/gameSettings.ini";
 	  
@@ -33,3 +37,5 @@ function LoadGameSettings(){
 	    show_debug_message("gameSettings file not found: " + filename);
 	   }  
 }
+
+#endregion

@@ -1,4 +1,6 @@
-// Wall frame creating function
+
+#region Wall frame creating function
+
 function CreateWallFrame(groundWallSprite) {
 	
 	// if it has than create wall frame for the room
@@ -28,7 +30,10 @@ function CreateWallFrame(groundWallSprite) {
 	CreateWallGround(groundWallSprite);
 }
 
-// ground wall creating
+#endregion
+
+#region ground wall creating - private function
+
 function CreateWallGround(groundWallSprite) {
 	
 	 //Bottom part
@@ -43,3 +48,5 @@ function CreateWallGround(groundWallSprite) {
 		}
     }
 }
+
+#endregion

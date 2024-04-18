@@ -1,11 +1,15 @@
 
-//Languages
+#region Languages
+
 enum languageType {
 	English,
 	Hungarian
 };
 
-//game difficult
+#endregion
+
+#region game difficult
+
 enum gameDifficultType{
     Normal,
     Hard,
@@ -13,13 +17,19 @@ enum gameDifficultType{
 	Impossible
 };
 
-//input device type for player
+#endregion
+
+#region input device type for player
+
 enum inputDeviceType{
     Keyboard,
     Controller,
 };
+
+#endregion
 	
-// life point colors
+#region life point colors
+
 enum lifePointType{
     Red,
     Blue,
@@ -33,14 +43,20 @@ enum lifePointType{
 	Pink
 };
 
-// wall colors
+#endregion
+
+#region wall colors
+
 enum wallColorType{
     Red,
     Blue,
     Green,
 };
 
-// wall direction type if you want to generate many walls in a for loop
+#endregion
+
+#region  wall direction type if you want to generate many walls in a for loop
+
 enum wallCreatorDirectionType{
     Left,
     Right,
@@ -48,7 +64,10 @@ enum wallCreatorDirectionType{
     Bottom,
 };
 
-//weapons
+#endregion
+
+#region weapons
+
 enum weaponType{
     SingleSting,
     DoubleSting,
@@ -57,7 +76,12 @@ enum weaponType{
 	ShotGun
 };
 
-//special ability
+#endregion
+
+#region special ability
+
 enum specialAbilityType{
     TimeSlow,
 };
+
+#endregion

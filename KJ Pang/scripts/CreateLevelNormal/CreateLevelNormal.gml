@@ -4,7 +4,7 @@
 function CreateLevelNormal(){
 
 global.hasRoomWallFrame = true;
-global.isRestartLevelAfterDead = false;
+global.isRestartLevelAfterDead = true;
 global.hasLevelTime = true;
 global.levelTimeMax = 200;
 
@@ -80,12 +80,25 @@ function CreateLevelNormal1() {
 		//CreateItem(400, 200, obj_item_life_point)
 	CreateFoodByImageIndex(32,30,1);
 	
+		CreateItem(770, 200, obj_item_time_slow);
+		CreateItem(750, 200, obj_item_time_slow);
+		CreateItem(740, 200, obj_item_time_slow);
+		CreateItem(730, 200, obj_item_time_slow);
+		CreateItem(720, 200, obj_item_time_slow);
+		CreateItem(700, 200, obj_item_time_freeze);
+	
 	
 	
 	//Enemy
 	 // instance_create_layer(800, 200,"Enemy", obj_enemy_normal_ball_giant);
-	  instance_create_layer(200, 200,"Enemy", obj_enemy_normal_ball_giant);
-	  instance_create_layer(210, 200,"Enemy", obj_enemy_normal_ball_giant);
+	  var a = instance_create_layer(200, 200,"Enemy", obj_enemy_normal_ball_giant);
+	  a.isBlinkingStarted = true;
+	  //a.isHarmless = true;
+	  a.SetTemporaryProperties();
+	  var b = instance_create_layer(300, 100,"Enemy", obj_enemy_normal_ball_giant);
+	  b.isBlinkingStarted = true;
+	 // b.isHarmless = true;
+	  b.SetTemporaryProperties();
 	
 }
 

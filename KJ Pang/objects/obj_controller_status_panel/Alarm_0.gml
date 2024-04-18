@@ -1,4 +1,4 @@
- /// @desc Create status
+ /// @desc Create status panel
  
  #region Create status panel
 

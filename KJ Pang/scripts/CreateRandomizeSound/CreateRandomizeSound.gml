@@ -1,6 +1,7 @@
 
 
-//Create random sound for wall hit by sting
+#region Create random sound for wall hit by sting
+
 function CreateRandomStingHitWallSound(){
 	
 	var randomIndex = irandom_range(1, 3); 
@@ -20,7 +21,10 @@ function CreateRandomStingHitWallSound(){
     }
 }
 
-//Create random sound for wall hit by gun bullet
+#endregion
+
+#region Create random sound for wall hit by gun bullet
+
 function CreateRandomBulletHitWallSound(){
 	
 	var randomIndex = irandom_range(1, 4); 
@@ -43,7 +47,10 @@ function CreateRandomBulletHitWallSound(){
     }
 }
 
-//Create random sound for power wire
+#endregion
+
+#region Create random sound for power wire
+
 function CreateRandomPowerWireSound(){
 	
 	var randomIndex = irandom_range(1, 3); 
@@ -62,3 +69,5 @@ function CreateRandomPowerWireSound(){
             break;
     }
 }
+
+#endregion

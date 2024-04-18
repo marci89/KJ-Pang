@@ -1,5 +1,6 @@
 
-//Create life point
+#region Create life point
+
 function CreateLifePoint(xValue, yValue, type){
 	
   var result = instance_create_layer(xValue, yValue,"Item", obj_item_life_point);
@@ -14,9 +15,14 @@ function CreateLifePoint(xValue, yValue, type){
   	if (type == lifePointType.White) result.image = spr_item_life_point_white;
   	if (type == lifePointType.Black) result.image = spr_item_life_point_black;
   	if (type == lifePointType.Pink) result.image = spr_item_life_point_pink;
+	
+	result.SetTemporaryProperties();
 }
 
-//Create life point with movement
+#endregion
+
+#region Create life point with movement
+
 function CreateLifePointWithMovement(xValue, yValue, type){
 	var moveX = random_range(-10,10); // x direction
 	var moveY = random_range(-10,10); // y direction
@@ -35,4 +41,7 @@ function CreateLifePointWithMovement(xValue, yValue, type){
 	
 	result.moveX = moveX;
 	result.moveY = moveY;
+	result.SetTemporaryProperties();
 }
+
+#endregion

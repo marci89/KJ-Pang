@@ -7,9 +7,60 @@ isOnGround = place_meeting(x, y + 1, obj_wall_parent); // Check if the object is
 
 #endregion
 
+#region Time freeze effect
+
+if(global.isRoomTimeFreezed) {
+
+	// set delay value
+	var slowFactorX = CalculateTimeFreezeEffectDecay(moveX)
+	var slowFactorY = CalculateTimeFreezeEffectDecay(moveY)
+
+	//delay x movement
+	if (moveX > 0.2)  moveX -= slowFactorX; 
+	else if (moveX < -0.2) moveX += slowFactorX;
+	else moveX = 0;
+	
+	//delay y movement
+	if (moveY > 0.2) moveY -= slowFactorY;
+	else if (moveY < -0.2) moveY += slowFactorY;
+	else moveY = 0; 
+	
+	//disabled gravity
+	isGravityEnabled = false;
+} 
+
+#endregion
+
+#region Time slow effect
+
+if(global.isRoomTimeSlowed) {
+	
+	// set delay value
+	var slowFactorX = CalculateTimeSlowEffectDecay(moveX)
+	var slowFactorY = CalculateTimeSlowEffectDecay(moveY)
+	
+	//delay x movement
+	if (moveX != 0){
+		if (moveX >= 0.2 && moveX >= 0) moveX-= slowFactorX;
+		else if (moveX <= -0.2 && moveX <= 0) moveX += slowFactorX;
+	}
+	
+	//delay y movement
+	if (moveY != 0){
+		if (moveY >= 0.2 && moveY >= 0) moveY-= slowFactorY;
+		else if (moveY <= -0.2 && moveY <= 0) moveY += slowFactorY;
+	}
+	
+	//slow gravity
+	if (isGravityEnabled)
+		gravSpeed = 0.002;
+}
+
+#endregion
+
 #region gravity
 
-if(isGravityEnable)
+if(isGravityEnabled)
 	moveY += gravSpeed;
 
 #endregion
@@ -83,7 +134,7 @@ if(isHoppingEffectByEnemyEnable) {
 		var distanceToEnemy = point_distance(x, y, nearestEnemy.x, nearestEnemy.y);
 
 		// React to Nearby Enemies
-		if (distanceToEnemy < enemyReactionDistance && isOnGround) {
+		if (distanceToEnemy < enemyReactionDistance && isOnGround && nearestEnemy.isOnGround) {
 		   moveY = random_range(-2,-6); // x direction
 		   moveX = random_range(-1,1); // x direction
 		}
