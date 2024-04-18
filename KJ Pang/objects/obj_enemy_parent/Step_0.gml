@@ -38,7 +38,6 @@ if(global.isRoomTimeFreezed) {
 	//disabled gravity and set harmless
 	isGravityXEnabled = false;
 	isGravityYEnabled = false;
-	isHarmless = true;
 } 
 
 #endregion
@@ -153,3 +152,33 @@ y += moveY;
 
 #endregion
 
+#region Weapon collide
+
+if (place_meeting(x, y, obj_weapon_parent)) {
+	
+	// get the other object
+	var weapon = instance_place(x, y, obj_weapon_parent);
+
+    if (instance_exists(weapon)) { // check exists
+		
+		//damage
+		if(isActive && !isAllowWeaponPassThrough && !isImmuneToWeapon) {
+			hitPoint -= weapon.damage; // reduce enemy's health by weapon damage	
+		}
+			
+		//Health check
+		if(hitPoint <= 0 && !isDestroyed) {
+			if(IsPlayerExists(weapon.player)) {
+				weapon.player.SetScore(enemyScore);
+			}
+	
+			isDestroyed = true;
+			DestroyWeapon(weapon);
+			instance_destroy();
+		} else {
+			DestroyWeapon(weapon);
+		}	
+	}
+}
+
+#endregion

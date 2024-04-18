@@ -5,7 +5,7 @@ if (!isStopped) {
 	time--
 	
 	//Add noticed sound
-	if(time < 15 && time > 5)
+	if(time < 15 && time >= 5)
 		PlaySound(snd_time_counter, false);
 		
 	//Add time end soon sound

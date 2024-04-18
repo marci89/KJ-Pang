@@ -32,6 +32,7 @@ spriteDead = spr_player_dead;
 CreatePlayerWeapon(x, y, id);
 
 //Abilities
+isActive = true; // if it is active it can do everything (live) else deactive so freezed.
 isDead = false; // death or alive
 isInvincible = false; // if this is true, nothing hurts you.
 
@@ -123,6 +124,31 @@ function SetScore(value) {
 
 function GetName() {
 	return global.playerOneName;
+}
+
+#endregion
+
+#region Player death function
+
+function Death() {
+	
+	isDead = true;
+	global.playerOneLife -= 1;
+	PlaySound(snd_death, false);
+	moveX =0;	
+	
+	//check dead type
+	if(global.isRestartLevelAfterDead) {
+		CreateRoomTransition(false); // room change animation
+		
+		if(global.playerNumber == 2) {
+				DeactivateObjects(obj_enemy_parent);
+				DeactivateObjects(obj_item_parent);
+		}
+	}
+			
+	// restart room		
+	alarm[0] = 170;
 }
 
 #endregion

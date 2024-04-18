@@ -20,10 +20,15 @@ hitPoint = 1; //health
 isDestroyed = false; // death or not
 isHarmless = false; // not hurt the player if it is true
 
+//Weapon
+isImmuneToWeapon = false // not hurts the weapon
+isAllowWeaponPassThrough = false; // the weapon passes through it and not hurts
+
 //blinking
 isBlinkingStarted = false; // inactive for a while when created
 isBlinked = false; // after death you will blink for a while
 blinkDuration = 25; // Duration of the blinking animation in number
+
 
 
 // temporary properties
@@ -33,7 +38,6 @@ var originalGravSpeedX;
 var originalGravSpeedY;
 var originalGravityXEnabled;
 var originalGravityYEnabled;
-var originalIsHarmless;
 
 
 #region Set temporary properties function
@@ -44,8 +48,7 @@ function SetTemporaryProperties() {
 	originalGravSpeedX = gravSpeedX; // x gavity speed
 	originalGravSpeedY = gravSpeedY; // y gavity speed
 	originalGravityXEnabled = isGravityXEnabled; // gravity x enabled or not
-	originalGravityYEnabled = isGravityYEnabled; // gravity y enabled or not
-	originalIsHarmless  = isHarmless; // not hurt the player if it is true
+	originalGravityYEnabled = isGravityYEnabled; // gravity y enabled or not	
 }
 
 #endregion
@@ -58,8 +61,7 @@ function SetOriginalProperties() {
 	gravSpeedX = originalGravSpeedX; // x gavity speed
 	gravSpeedY = originalGravSpeedY; // y gavity speed
 	isGravityXEnabled = originalGravityXEnabled; // gravity x enabled or not
-	isGravityYEnabled = originalGravityYEnabled; // gravity y enabled or not
-	isHarmless  = originalIsHarmless; // not hurt the player if it is true
+	isGravityYEnabled = originalGravityYEnabled; // gravity y enabled or not		
 }
 
 #endregion
@@ -68,12 +70,8 @@ function SetOriginalProperties() {
 
 function DestroyWeapon(weapon) {
 	if (instance_exists(weapon)) {
-		if(isActive) {
-		 // Check the colliding instance type
-		// if (weapon.object_index == obj_weapon_sting_head) {
-			 instance_destroy(weapon);
-		//	 }
-		} 
+		if(!isAllowWeaponPassThrough)
+			instance_destroy(weapon);
 	}
 }
 

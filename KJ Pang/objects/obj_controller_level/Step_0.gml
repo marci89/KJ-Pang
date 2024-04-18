@@ -41,11 +41,24 @@ if keyboard_check_pressed(ord("P")) {
 #region level time management
 
 if(global.isLevelTimeUp) {
+	
+	//inactivate objects
+	DeactivateObjects(obj_enemy_parent);
+	DeactivateObjects(obj_item_parent);
+	
+	//player died
+	if(IsPlayerExists(obj_player_one ?? noone))
+			obj_player_one.Death();
+			
+	if(IsPlayerExists(obj_player_two ?? noone))
+			obj_player_two.Death();
+	
+	// restart the level
 	CreateRoomTransition(false); // room change animation
 	instance_deactivate_layer("Status");
 	global.isLevelTimeUp = false;
-
-	alarm[0] = 150; // restart room
+			
+	alarm[0] = 250; // restart room
 }
 
 #endregion

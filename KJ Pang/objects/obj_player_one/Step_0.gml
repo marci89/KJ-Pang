@@ -189,28 +189,20 @@ if (!isDead) {
 #region Death
 
 // Collision with enemy
-if (collision_circle(x, y-30, 25, obj_enemy_parent, true, true)) {
-	
- var enemyInstance = instance_place(x, y - 30, obj_enemy_parent);
-    if (enemyInstance != noone) {
-        if (enemyInstance.isHarmless) {
-		//	return;
-		}
-	}
-	
-	if (!isDead && !isInvincible) {
-		
-			
-		 
-		 
-		isDead = true;
-		global.playerOneLife -= 1;
-		PlaySound(snd_death, false);
+if (collision_circle(x, y-30, 24, obj_enemy_parent, true, true)) {
 
-		moveX =0;			
-		alarm[0] = 150;
+	if(!global.isRoomTimeFreezed) {
+		 var enemyInstance = instance_place(x, y - 30, obj_enemy_parent);
+		    if (enemyInstance != noone) {
+		        if (!enemyInstance.isHarmless) {
+					if (!isDead && !isInvincible) {
+						
+					Death();
+					
+					}
+				}
+			}
 	}
-	
 }
 	
 #endregion

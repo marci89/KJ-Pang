@@ -11,7 +11,7 @@ isGravityEnabled = true; //has gravity or not
 bounceDecay = 0.5; //bounce
 decayItemOnGroundValue = 0.8; //Decay item on ground
 
-
+isActive = true; // if it is active it can do everything (live) else deactive so freezed.
 isSolidWallCollision = true; // if true it can interact walls, if false it has no action
 isHoppingEffectByEnemyEnable = false; //hopping effect
 isOnGround  = false; // it is on ground or air

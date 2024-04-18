@@ -4,7 +4,7 @@
 function CreateLevelNormal(){
 
 global.hasRoomWallFrame = true;
-global.isRestartLevelAfterDead = true;
+global.isRestartLevelAfterDead = false;
 global.hasLevelTime = true;
 global.levelTimeMax = 200;
 

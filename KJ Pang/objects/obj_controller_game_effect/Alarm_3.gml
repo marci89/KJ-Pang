@@ -1,3 +1,4 @@
  ///@desc Blinking enemies
 
-BlinkingEnemies();
+if(global.isRoomTimeFreezed)
+	BlinkingEnemies();

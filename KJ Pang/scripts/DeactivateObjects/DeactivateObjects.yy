@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"DeactivateObjects",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"DeactivateObjects",
+  "parent":{
+    "name":"Game",
+    "path":"folders/Scripts/Game.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

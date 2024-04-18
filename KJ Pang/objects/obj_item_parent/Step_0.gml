@@ -1,4 +1,10 @@
 
+#region isActive check
+
+if(!isActive) return;
+
+#endregion
+
 #region variables
 
 var maxIterations = 100; // Set a maximum number of iterations
