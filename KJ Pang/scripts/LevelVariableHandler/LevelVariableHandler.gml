@@ -9,6 +9,7 @@ function SetLevelVariables(){
 	//Weapon
 	global.PlayerWeaponType = weaponType.SingleSting; //Player current weapon type.
 	
+	
 	//manipulating
 	global.isRoomTimeSlowed = false; // active the time slow effect or not
 	global.isRoomTimeFreezed = false; // active the time freeze effect or not

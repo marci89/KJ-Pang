@@ -168,7 +168,7 @@ if (place_meeting(x, y, obj_weapon_parent)) {
 			
 		//Health check
 		if(hitPoint <= 0 && !isDestroyed) {
-			if(IsPlayerExists(weapon.player)) {
+			if(IsInstanceExists(weapon.player)) {
 				weapon.player.SetScore(enemyScore);
 			}
 	

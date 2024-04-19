@@ -69,8 +69,7 @@ function SetOriginalProperties() {
 #region Destroy weapon if enemy collide with it function
 
 function DestroyWeapon(weapon) {
-	if (instance_exists(weapon)) {
-		if(!isAllowWeaponPassThrough)
+	 if (instance_exists(weapon) && !isAllowWeaponPassThrough) {
 			instance_destroy(weapon);
 	}
 }

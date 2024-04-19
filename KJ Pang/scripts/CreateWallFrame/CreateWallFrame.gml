@@ -9,7 +9,10 @@ function CreateWallFrame(groundWallSprite) {
 	    //Top part
 	    for (var i = 0; i < 73; i++) {
 	        var wall_x = i * global.wallFrameSize;
-			instance_create_layer(wall_x, 0, "Wall", obj_wall_frame);
+			var wall = instance_create_layer(wall_x, 0, "Wall", obj_wall_frame);
+			
+			if(i == 72)
+				wall.sprite_index = spr_ground_last_wall;		
 	    }
 	
 		//Left part

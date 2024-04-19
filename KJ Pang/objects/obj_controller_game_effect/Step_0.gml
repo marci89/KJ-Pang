@@ -3,7 +3,7 @@
 #region time slow effect
 
 if (global.isRoomTimeSlowed && !isTimeSlowActive){
-
+		
 	//check time freeze
 	if(global.isRoomTimeFreezed) {
 		//Set original positions, properties to handle slow effect
@@ -23,7 +23,7 @@ if (global.isRoomTimeSlowed && !isTimeSlowActive){
 #region time freeze effect
 
 if (global.isRoomTimeFreezed && !isTimeFreezeActive){
-	
+		
 	alarm[1] = global.TimeManipulatingEffectDuration;
 	alarm[2] = global.TimeManipulatingEffectDuration - 190; 
 	alarm[3] = global.TimeManipulatingEffectDuration - 175; 

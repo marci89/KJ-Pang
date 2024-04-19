@@ -7,7 +7,7 @@
 		var totalWeapons = instance_number(type); // get all weapon number with type
 
 		//Check player validatity
-		if(!IsPlayerExists(player)) return weaponCount;
+		if(!IsInstanceExists(player)) return weaponCount;
 
 			// Loop through all instances of weapon type
 			for (var i = 0; i < totalWeapons; i++) {	

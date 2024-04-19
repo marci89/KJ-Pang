@@ -11,7 +11,7 @@ draw_text(x + 25 , y - 25, string(playerName) + " - " + string(playerScore));
 #region Check things
 
 //Check player validation
-if(!IsPlayerExists(player)) return;
+if(!IsInstanceExists(player)) return;
 
 #endregion
 

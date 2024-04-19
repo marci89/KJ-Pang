@@ -47,10 +47,10 @@ if(global.isLevelTimeUp) {
 	DeactivateObjects(obj_item_parent);
 	
 	//player died
-	if(IsPlayerExists(obj_player_one ?? noone))
+	if(IsInstanceExists(obj_player_one ?? noone))
 			obj_player_one.Death();
 			
-	if(IsPlayerExists(obj_player_two ?? noone))
+	if(IsInstanceExists(obj_player_two ?? noone))
 			obj_player_two.Death();
 	
 	// restart the level

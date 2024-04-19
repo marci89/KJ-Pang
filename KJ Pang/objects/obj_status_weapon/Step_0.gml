@@ -2,7 +2,7 @@
 #region Check things
 
 //Check player validation
-if(!IsPlayerExists(player)) return;
+if(!IsInstanceExists(player)) return;
 
 #endregion
 

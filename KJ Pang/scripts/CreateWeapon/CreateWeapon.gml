@@ -3,7 +3,7 @@
 
 function CreateWeapon(xValue, yValue, type, layerName, player){
 	
-	if (IsPlayerExists(player)) {
+	if (IsInstanceExists(player)) {
 		 var result = instance_create_layer(xValue, yValue, layerName, type);
 		 result.SetPlayer(player)
 	}
