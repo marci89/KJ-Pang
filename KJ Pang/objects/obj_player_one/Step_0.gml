@@ -191,7 +191,7 @@ if (!isDead) {
 // Collision with enemy
 if (collision_circle(x, y-30, 24, obj_enemy_parent, true, true)) {
 
-	if(!global.isRoomTimeFreezed) {
+	if(global.currentLevelEffect != levelEffectType.TimeFreeze) {
 		 var enemyInstance = instance_place(x, y - 30, obj_enemy_parent);
 		    if (enemyInstance != noone) {
 		        if (!enemyInstance.isHarmless) {

@@ -16,7 +16,7 @@ function CreateLifePoint(xValue, yValue, type){
   	if (type == lifePointType.Black) result.image = spr_item_life_point_black;
   	if (type == lifePointType.Pink) result.image = spr_item_life_point_pink;
 	
-	result.SetTemporaryProperties();
+	result.SetOriginalProperties();
 }
 
 #endregion
@@ -41,7 +41,7 @@ function CreateLifePointWithMovement(xValue, yValue, type){
 	
 	result.moveX = moveX;
 	result.moveY = moveY;
-	result.SetTemporaryProperties();
+	result.SetOriginalProperties();
 }
 
 #endregion

@@ -11,7 +11,6 @@ function SetLevelVariables(){
 	
 	
 	//manipulating
-	global.isRoomTimeSlowed = false; // active the time slow effect or not
-	global.isRoomTimeFreezed = false; // active the time freeze effect or not
+	global.currentLevelEffect = noone;
 
 }

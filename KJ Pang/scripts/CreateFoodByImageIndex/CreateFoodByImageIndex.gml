@@ -17,7 +17,7 @@ function CreateFoodByImageIndexWithMovement(xValue, yValue, moveX, moveY, index)
   result.image_index = index;
   result.moveX = moveX;
   result.moveY = moveY;
-  result.SetTemporaryProperties();
+  result.SetOriginalProperties();
 }
 
 

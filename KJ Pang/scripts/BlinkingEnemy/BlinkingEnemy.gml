@@ -1,13 +1,16 @@
 
-#region Blinking enemies
+#region Blinking enemies during time freeze
 
-function BlinkingEnemies() {
+function BlinkingEnemiesDuringTimeFreeze() {
 	
 	var enemyCount = instance_number(obj_enemy_parent);
 	
 	for (var i = 0; i < enemyCount; i++) {
 		var enemy = instance_find(obj_enemy_parent, i);
-		enemy.isBlinkingStarted = true;
+		
+		//Check effect and enemy effect enable
+		if(global.currentLevelEffect == levelEffectType.TimeFreeze && enemy.isTimeFreezeEffectEnabled)
+			enemy.isBlinkingStarted = true;
 	}
 }
 	

@@ -1,5 +1,5 @@
 
-#region Languages
+#region languages
 
 enum languageType {
 	English,
@@ -15,6 +15,19 @@ enum gameDifficultType{
     Hard,
     Nightmare,
 	Impossible
+};
+
+#endregion
+
+#region level effect type
+
+enum levelEffectType{
+    TimeFreeze,
+    TimeSlow,
+	AntiGravity,
+	ReverseGravity,
+	StrongReverseGravity,
+	
 };
 
 #endregion

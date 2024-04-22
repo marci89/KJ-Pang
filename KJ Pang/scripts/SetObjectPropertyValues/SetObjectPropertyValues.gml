@@ -12,7 +12,7 @@ function SetAllEnemyOriginalProperties() {
 	
 #endregion
 
-#region Set item original properties
+#region Set items original properties
 
 function SetAllItemOriginalProperties() {
 
@@ -25,27 +25,27 @@ function SetAllItemOriginalProperties() {
 	
 #endregion
 
-#region Set enemies Temporary properties
+#region Reset enemies values to original properties
 
-function SetAllEnemyTemporaryProperties() {
+function ResetAllEnemyValuesToOriginalProperties() {
 	
 	var enemyCount = instance_number(obj_enemy_parent);
 	for (var i = 0; i < enemyCount; i++) {
 		var enemy = instance_find(obj_enemy_parent, i);  
-		enemy.SetTemporaryProperties();
+		enemy.ResetToOriginalProperties();
 	}
 }
 	
 #endregion
 
-#region Set item Temporary properties
+#region Reset items values to original properties
 
-function SetAllItemTemporaryProperties() {
+function ResetAllItemValuesToOriginalProperties() {
 
 	var itemCount = instance_number(obj_item_parent);
 	for (var i = 0; i < itemCount; i++) {
 		var item = instance_find(obj_item_parent, i);  
-		item.SetTemporaryProperties();
+		item.ResetToOriginalProperties();
 	}
 }
 	

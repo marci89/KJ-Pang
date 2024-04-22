@@ -40,7 +40,6 @@ function SetGameVariables(){
 	global.isLevelTimeUp = false; // The level time has expired and game over.
 
 	//manipulating
-	global.isRoomTimeSlowed = false; // active the time slow effect or not
-	global.isRoomTimeFreezed = false; // active the time freeze effect or not
+	global.currentLevelEffect = noone;
 
 }

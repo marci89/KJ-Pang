@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_strong_reverse_gravity",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":5.496,
+  "name":"snd_strong_reverse_gravity",
+  "parent":{
+    "name":"Gravity",
+    "path":"folders/Sounds/Voice/Item/Gravity.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_strong_reverse_gravity.mp3",
+  "type":0,
+  "volume":1.0,
+}

@@ -1,13 +1,14 @@
 
 
+
 SetGameVariables(); // ezt majd ki kell szedni!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 LoadGameSettings(); // ezt majd ki kell szedni!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 #region Init basic things
 
+audio_stop_all(); // stop every sounds before start
 CreateRoomTransition(true); // room start animation
-
 pausedText = GetLocalizedText("paused"); // translate text
 SetLevelVariables(); // set varibales to start the level
 

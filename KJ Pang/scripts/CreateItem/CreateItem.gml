@@ -16,7 +16,7 @@ function CreateItemWithMovement(xValue, yValue, moveX, moveY, type){
   var result = instance_create_layer(xValue, yValue,"Item", type);
   result.moveX = moveX;
   result.moveY = moveY;
-  result.SetTemporaryProperties();
+  result.SetOriginalProperties();
 }
 
 #endregion

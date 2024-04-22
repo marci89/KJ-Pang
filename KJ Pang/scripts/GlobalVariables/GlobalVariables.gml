@@ -36,8 +36,7 @@
 	global.isLevelTimeUp = false; // The level time has expired and game over.
 
 	//manipulating
-	global.isRoomTimeSlowed = false; // active the time slow effect or not
-	global.isRoomTimeFreezed = false; // active the time freeze effect or not
+	global.currentLevelEffect = noone;
 
 
 
@@ -58,4 +57,5 @@
 
 	global.levelTimeMax = 200; // level's max time
 
-	global.TimeManipulatingEffectDuration = 800; // time manipulation duration value
+	global.timeManipulatingEffectDuration = 800; // time manipulation duration value
+	global.gravityEffectDuration = 1000; // gravity effect duration value

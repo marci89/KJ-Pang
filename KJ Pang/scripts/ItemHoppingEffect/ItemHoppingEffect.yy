@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"ItemHoppingEffect",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ItemHoppingEffect",
+  "parent":{
+    "name":"Effect",
+    "path":"folders/Scripts/Game/Effect.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

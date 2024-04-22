@@ -17,8 +17,8 @@ isActive = true; // if enemy is active it can do everything (live) else deactive
 isOnGround  = true; // it is on ground or air
 enemyScore = 0; // score value after enemy dead
 hitPoint = 1; //health
-isDestroyed = false; // death or not
 isHarmless = false; // not hurt the player if it is true
+isDestroyed = false; // death or not
 
 //Weapon
 isImmuneToWeapon = false // not hurts the weapon
@@ -29,39 +29,48 @@ isBlinkingStarted = false; // inactive for a while when created
 isBlinked = false; // after death you will blink for a while
 blinkDuration = 25; // Duration of the blinking animation in number
 
+//effects
+isTimeFreezeEffectEnabled = true; // time freeze effect allowed
+isTimeSlowEffectEnabled = true; // time slow effect allowed
+isAntigravityEffectEnabled = true; // Antigravity effect allowed
+isReverseGravityEffectEnabled = true; // reverse gravity effect allowed
+isStrongReverseGravityEffectEnabled = true; // strong reverse gravity effect allowed
 
 
-// temporary properties
-var originalMoveX;
-var originalMoveY;
-var originalGravSpeedX;
-var originalGravSpeedY;
-var originalGravityXEnabled;
-var originalGravityYEnabled;
+// original properties
+originalMoveX = moveX;
+originalMoveY = moveY;
+originalGravSpeedX = gravSpeedX;
+originalGravSpeedY = gravSpeedY;
+originalGravityXEnabled = gravSpeedX;
+originalGravityYEnabled = gravSpeedY;
+originalBounceDecay = bounceDecay;
 
 
-#region Set temporary properties function
+#region Set original properties function
 
-function SetTemporaryProperties() {
+function SetOriginalProperties() {
 	originalMoveX = moveX; //left and right movement
 	originalMoveY = moveY; //up and down movement
 	originalGravSpeedX = gravSpeedX; // x gavity speed
 	originalGravSpeedY = gravSpeedY; // y gavity speed
 	originalGravityXEnabled = isGravityXEnabled; // gravity x enabled or not
-	originalGravityYEnabled = isGravityYEnabled; // gravity y enabled or not	
+	originalGravityYEnabled = isGravityYEnabled; // gravity y enabled or not
+	originalBounceDecay = bounceDecay; // bounce value
 }
 
 #endregion
 
-#region Set original properties function
+#region Reset to original properties function
 
-function SetOriginalProperties() {
+function ResetToOriginalProperties () {
 	moveX = originalMoveX; //left and right movement
 	moveY = originalMoveY; //up and down movement
 	gravSpeedX = originalGravSpeedX; // x gavity speed
 	gravSpeedY = originalGravSpeedY; // y gavity speed
 	isGravityXEnabled = originalGravityXEnabled; // gravity x enabled or not
-	isGravityYEnabled = originalGravityYEnabled; // gravity y enabled or not		
+	isGravityYEnabled = originalGravityYEnabled; // gravity y enabled or not
+	bounceDecay = originalBounceDecay; // bounce value
 }
 
 #endregion
@@ -71,6 +80,172 @@ function SetOriginalProperties() {
 function DestroyWeapon(weapon) {
 	 if (instance_exists(weapon) && !isAllowWeaponPassThrough) {
 			instance_destroy(weapon);
+	}
+}
+
+#endregion
+
+//effects
+
+#region Time freeze effect function
+
+function TimeFreezeEffect() {
+	
+	// set delay value
+	var slowFactorX = CalculateTimeFreezeEffectDecay(moveX ?? 0)
+	var slowFactorY = CalculateTimeFreezeEffectDecay(moveY ?? 0)
+
+	//delay x movement
+	if (moveX > 0.2)  moveX -= slowFactorX; 
+	else if (moveX < -0.2) moveX += slowFactorX;
+	else moveX = 0;
+	
+	//delay y movement
+	if (moveY > 0.2) moveY -= slowFactorY;
+	else if (moveY < -0.2) moveY += slowFactorY;
+	else moveY = 0; 
+	
+	//disabled gravity
+	isGravityXEnabled = false;
+	isGravityYEnabled = false;
+}
+
+#endregion
+
+#region Time slow effect function
+
+function TimeSlowEffect() {
+	
+	// set delay value
+	var slowFactorX = CalculateTimeSlowEffectDecay(moveX ?? 0)
+	var slowFactorY = CalculateTimeSlowEffectDecay(moveY ?? 0)
+
+	//delay x movement
+	if (moveX != 0){
+		if (moveX >= 0.2 && moveX >= 0) moveX-= slowFactorX;
+		else if (moveX <= -0.2 && moveX <= 0) moveX += slowFactorX;
+	}
+
+	//delay y movement
+	if (moveY != 0){
+		if (moveY >= 0.2 && moveY >= 0) moveY-= slowFactorY;
+		else if (moveY <= -0.2 && moveY <= 0) moveY += slowFactorY;
+	}
+	
+	//slow gravity
+	if (isGravityXEnabled)
+		gravSpeedX = 0.002;
+		
+	if (isGravityYEnabled)
+		gravSpeedY = 0.002;
+}
+
+#endregion
+
+#region Reverse gravity effect function
+
+function ReverseGravityEffect() {
+	
+	//set gravity y to opposite grav direction
+	if (isGravityYEnabled)
+		gravSpeedY = -abs(gravSpeedY ?? 0);
+			
+	//set gravity x to opposite grav y direction
+	if (isGravityXEnabled) {
+		gravSpeedY = -abs(gravSpeedX ?? 0);
+		gravSpeedX = 0;
+		isGravityXEnabled = false;
+		isGravityYEnabled = true;
+	}
+
+}
+
+#endregion
+
+#region Strong reverse gravity effect function
+
+function StrongReverseGravityEffect() {
+	
+	// set delay value
+	var slowFactorX = CalculateTimeSlowEffectDecay(moveX)
+	
+	//delay x movement
+	if (moveX > 0.2)  moveX -= slowFactorX; 
+	else if (moveX < -0.2) moveX += slowFactorX;
+	else moveX = 0;
+	
+	isGravityYEnabled = true;
+	gravSpeedY = -0.5;
+	bounceDecay = 0;
+}
+
+#endregion
+
+#region Antigravity effect function
+
+function AntiGravityEffect() {
+	
+	// set delay value
+	var slowFactorX = CalculateTimeSlowEffectDecay(moveX)
+	var slowFactorY = CalculateTimeSlowEffectDecay(moveY)
+
+	//delay x movement
+	if (moveX != 0){
+		if (moveX >= 0.6 && moveX >= 0) moveX-= slowFactorX;
+		else if (moveX <= -0.6 && moveX <= 0) moveX += slowFactorX;
+	}
+
+	//delay y movement
+	if (moveY != 0){
+		if (moveY >= 0.6 && moveY >= 0) moveY-= slowFactorY;
+		else if (moveY <= -0.6 && moveY <= 0) moveY += slowFactorY;
+	}
+	
+	//set gravity
+	isGravityYEnabled = true;
+	
+	//disabled gravity x
+	isGravityXEnabled = false;
+	
+	//random value for grav
+	gravSpeedY = random_range(-0.04, 0.04);
+	
+	// Generate a random drift value for the x-axis
+    driftX = random_range(-0.04, 0.04);
+
+    // Apply the drift to horizontal movement
+    moveX += driftX;	
+}
+
+#endregion
+
+#region Handle active level effects
+
+function HandleEffect() {
+	
+	if(global.currentLevelEffect == levelEffectType.TimeFreeze
+	&& isTimeFreezeEffectEnabled) {
+		TimeFreezeEffect();
+	}
+	
+	if(global.currentLevelEffect == levelEffectType.TimeSlow
+	&& isTimeSlowEffectEnabled) {
+		TimeSlowEffect();
+	}
+	
+	if(global.currentLevelEffect == levelEffectType.ReverseGravity
+	&& isReverseGravityEffectEnabled) {
+		ReverseGravityEffect();
+	}
+	
+	if(global.currentLevelEffect == levelEffectType.StrongReverseGravity
+	&& isStrongReverseGravityEffectEnabled) {
+		StrongReverseGravityEffect();
+	}
+	
+	if(global.currentLevelEffect == levelEffectType.AntiGravity
+	&& isAntigravityEffectEnabled) {
+		AntiGravityEffect();
 	}
 }
 

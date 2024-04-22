@@ -8,23 +8,13 @@ event_inherited()
 if (place_meeting(x, y, obj_player_one)) {
 	
 	//controller object
-	var controllerObj = obj_controller_game_effect;
+	var controllerObj = obj_controller_level_effect;
 	
 	if(!isPickedUp) {
 		if(IsInstanceExists(controllerObj ?? noone)) {
-			if ( !controllerObj.isTimeSlowActive
-			&& !global.isRoomTimeFreezed) {
-
-				//Set current positions, properties to remember movement after the time start
-				SetAllEnemyTemporaryProperties();
-				SetAllItemTemporaryProperties();
-			}
-			
-			//deactive slow effect to restart the counter
-			controllerObj.isTimeSlowActive = false;
+			controllerObj.ExecuteTimeSlowEffect();
 		}
 				
-		global.isRoomTimeSlowed = true;
 		isPickedUp = true;
 	}
 }
@@ -33,23 +23,13 @@ if (place_meeting(x, y, obj_player_one)) {
 if (place_meeting(x, y, obj_player_two)) {
 	
 	//controller object
-	var controllerObj = obj_controller_game_effect;
+	var controllerObj = obj_controller_level_effect;
 	
 	if(!isPickedUp) {
 		if(IsInstanceExists(controllerObj ?? noone)) {
-			if ( !controllerObj.isTimeSlowActive
-			&& !global.isRoomTimeFreezed) {
-
-				//Set current positions, properties to remember movement after the time start
-				SetAllEnemyTemporaryProperties();
-				SetAllItemTemporaryProperties();
-			}
-			
-			//deactive slow effect to restart the counter
-			controllerObj.isTimeSlowActive = false;
+			controllerObj.ExecuteTimeSlowEffect();
 		}
 				
-		global.isRoomTimeSlowed = true;
 		isPickedUp = true;
 	}
 }

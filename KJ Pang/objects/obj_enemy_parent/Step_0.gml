@@ -1,6 +1,5 @@
 
-
-#region Inactive after created check
+#region Inactive and blinkig after created check
 
 if (isBlinkingStarted) {
 		isBlinked = true;
@@ -17,57 +16,9 @@ if(!isActive) return;
 
 #endregion
 
-#region Time freeze effect
+#region Handle active effect
 
-if(global.isRoomTimeFreezed) {
-
-	// set delay value
-	var slowFactorX = CalculateTimeFreezeEffectDecay(moveX)
-	var slowFactorY = CalculateTimeFreezeEffectDecay(moveY)
-
-	//delay x movement
-	if (moveX > 0.2)  moveX -= slowFactorX; 
-	else if (moveX < -0.2) moveX += slowFactorX;
-	else moveX = 0;
-	
-	//delay y movement
-	if (moveY > 0.2) moveY -= slowFactorY;
-	else if (moveY < -0.2) moveY += slowFactorY;
-	else moveY = 0; 
-	
-	//disabled gravity and set harmless
-	isGravityXEnabled = false;
-	isGravityYEnabled = false;
-} 
-
-#endregion
-
-#region Time slow effect
-
-if(global.isRoomTimeSlowed) {
-	// set delay value
-	var slowFactorX = CalculateTimeSlowEffectDecay(moveX)
-	var slowFactorY = CalculateTimeSlowEffectDecay(moveY)
-
-	//delay x movement
-	if (moveX != 0){
-		if (moveX >= 0.2 && moveX >= 0) moveX-= slowFactorX;
-		else if (moveX <= -0.2 && moveX <= 0) moveX += slowFactorX;
-	}
-
-	//delay y movement
-	if (moveY != 0){
-		if (moveY >= 0.2 && moveY >= 0) moveY-= slowFactorY;
-		else if (moveY <= -0.2 && moveY <= 0) moveY += slowFactorY;
-	}
-	
-	//slow gravity
-	if (isGravityXEnabled)
-		gravSpeedX = 0.002;
-		
-	if (isGravityYEnabled)
-		gravSpeedY = 0.002;
-}
+HandleEffect();
 
 #endregion
 

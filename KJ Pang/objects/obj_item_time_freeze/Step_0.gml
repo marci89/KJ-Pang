@@ -8,16 +8,13 @@ event_inherited()
 if (place_meeting(x, y, obj_player_one)) {
 	
 	//controller object
-	var controllerObj = obj_controller_game_effect;
+	var controllerObj = obj_controller_level_effect;
 	
 	if(!isPickedUp) {
-		
-		//deactive freeze effect to restart the counter
 		if(IsInstanceExists(controllerObj ?? noone)) {
-				controllerObj.isTimeFreezeActive = false;
+			controllerObj.ExecuteTimeFreezeEffect();
 		}
 		
-		global.isRoomTimeFreezed = true;
 		isPickedUp = true;
 	}
 }
@@ -26,16 +23,13 @@ if (place_meeting(x, y, obj_player_one)) {
 if (place_meeting(x, y, obj_player_two)) {
 	
 	//controller object
-	var controllerObj = obj_controller_game_effect;
+	var controllerObj = obj_controller_level_effect;
 	
 	if(!isPickedUp) {
-		
-		//deactive freeze effect to restart the counter
 		if(IsInstanceExists(controllerObj ?? noone)) {
-				controllerObj.isTimeFreezeActive = false;
+			controllerObj.ExecuteTimeFreezeEffect();
 		}
 		
-		global.isRoomTimeFreezed = true;
 		isPickedUp = true;
 	}
 }
