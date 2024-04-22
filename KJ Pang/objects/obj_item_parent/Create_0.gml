@@ -3,6 +3,9 @@
 moveX = 0; // X movement
 moveY = 5; // y movement
 
+// actual player if this item give something to player or effectable for it
+player = noone; 
+
 //gravity
 gravSpeed = 0.1; //gravity
 isGravityEnabled = true; //has gravity or not

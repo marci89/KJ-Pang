@@ -50,11 +50,18 @@ function SetPlayerInputs() {
 		inputFire = keyboard_check(vk_control);
 	}
 	
+	//Controller device number
+	controllerDeviceNumber = 1;
+	
+	//Check player 1 device type and if use keyboard set first controller device
+	if(global.playerOneInputDeviceType == inputDeviceType.Keyboard)
+		controllerDeviceNumber = 0;
+	
 	//Controller
 	if(global.playerTwoInputDeviceType == inputDeviceType.Controller) {
 			
 		// input x (left and right) with axis
-		inputX = gamepad_axis_value(1, gp_axislh); // Read horizontal (X-axis) input from the left joystick of gamepad index 0
+		inputX = gamepad_axis_value(controllerDeviceNumber, gp_axislh); // Read horizontal (X-axis) input from the left joystick of gamepad index 0
 		
 		var deadZone = 0.2; // Optionally apply dead zone to ignore small joystick movements
 		if (abs(inputX) < deadZone) {
@@ -67,16 +74,16 @@ function SetPlayerInputs() {
 			inputX = -1;
 		
 		// input x (left and right) with pad buttons
-		if(gamepad_button_check(1, gp_padr) || gamepad_button_check(1, gp_padl)) {	
-			inputX = gamepad_button_check(1, gp_padr) - gamepad_button_check(1, gp_padl);
+		if(gamepad_button_check(controllerDeviceNumber, gp_padr) || gamepad_button_check(controllerDeviceNumber, gp_padl)) {	
+			inputX = gamepad_button_check(controllerDeviceNumber, gp_padr) - gamepad_button_check(controllerDeviceNumber, gp_padl);
 		}
 
 			
 		// jump, fire
-	    inputJump = gamepad_button_check(1, gp_face1) || gamepad_button_check(1, gp_padu);
-		inputDown = gamepad_button_check(1, gp_face4) || gamepad_button_check(1, gp_padd);
-		inputFirePressed = gamepad_button_check(1, gp_face3);
-		inputFire = gamepad_button_check(1, gp_face3);   
+	    inputJump = gamepad_button_check(controllerDeviceNumber, gp_face1) || gamepad_button_check(controllerDeviceNumber, gp_padu);
+		inputDown = gamepad_button_check(controllerDeviceNumber, gp_face4) || gamepad_button_check(controllerDeviceNumber, gp_padd);
+		inputFirePressed = gamepad_button_check(controllerDeviceNumber, gp_face3);
+		inputFire = gamepad_button_check(controllerDeviceNumber, gp_face3);   
 	}
 }
 

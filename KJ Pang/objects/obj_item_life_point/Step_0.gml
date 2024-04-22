@@ -2,6 +2,25 @@
 //parent properties
 event_inherited()
 
+#region Magnet effect 
+
+if(hasActiveMagnetEffect) {
+	if (IsInstanceExists(player)) {
+		playerHalfHeight = player.sprite_height / 2;
+		
+		// Calculate direction towards character
+		var followDirection = point_direction(x, y,
+		player.x,
+		player.y - playerHalfHeight);
+    
+		// Set moveX and moveY based on direction
+		moveX = lengthdir_x(magnetFieldSpeed, followDirection);
+		moveY = lengthdir_y(magnetFieldSpeed, followDirection);
+	}
+}
+
+#endregion
+
 #region Collide with player
 
 //player 1

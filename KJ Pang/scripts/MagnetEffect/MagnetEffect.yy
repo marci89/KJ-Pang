@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"MagnetEffect",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"MagnetEffect",
+  "parent":{
+    "name":"Effect",
+    "path":"folders/Scripts/Game/Effect.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

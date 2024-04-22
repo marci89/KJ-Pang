@@ -81,7 +81,8 @@ function CreateLevelNormal1() {
 		//CreateItem(400, 200, obj_item_life_point)
 	CreateFoodByImageIndex(32,30,1);
 	
-		CreateItem(850, 200, obj_item_gravity_strong_reverse);
+		//CreateItem(850, 200, obj_item_gravity_strong_reverse);
+		CreateItem(850, 200, obj_item_magnet);
 		CreateItem(800, 200, obj_item_gravity_reverse);
 		CreateItem(770, 200, obj_item_antigravity);
 	//	CreateItem(750, 200, obj_item_time_slow);
