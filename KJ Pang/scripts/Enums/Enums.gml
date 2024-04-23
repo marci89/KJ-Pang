@@ -19,6 +19,24 @@ enum gameDifficultType{
 
 #endregion
 
+#region input device type for player
+
+enum inputDeviceType{
+    Keyboard,
+    Controller,
+};
+
+#endregion
+
+#region Character gender
+
+enum PlayerGenderType{
+    Female,
+    Male	
+};
+
+#endregion
+
 #region level effect type
 
 enum levelEffectType{
@@ -28,15 +46,6 @@ enum levelEffectType{
 	ReverseGravity,
 	StrongReverseGravity,
 	
-};
-
-#endregion
-
-#region input device type for player
-
-enum inputDeviceType{
-    Keyboard,
-    Controller,
 };
 
 #endregion

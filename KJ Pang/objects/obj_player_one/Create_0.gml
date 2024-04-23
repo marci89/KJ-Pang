@@ -23,10 +23,10 @@ isBlinked = false; // after death you will blink for a while
 blinkDuration = 51; // Duration of the blinking animation in number
 
 //Sprites
-spriteIdle = spr_player_idle;
-spriteJump = spr_player_jump;
-spriteRun = spr_player_run;
-spriteDead = spr_player_dead;
+spriteIdle = spr_player_female_idle;
+spriteJump = spr_player_female_jump;
+spriteRun = spr_player_female_run;
+spriteDead = spr_player_female_dead;
 
 //Create player's gun
 CreatePlayerWeapon(x, y, id);
@@ -35,6 +35,25 @@ CreatePlayerWeapon(x, y, id);
 isActive = true; // if it is active it can do everything (live) else deactive so freezed.
 isDead = false; // death or alive
 isInvincible = false; // if this is true, nothing hurts you.
+
+#region Set sprites
+
+function SetSprites() {
+	
+	if (global.playerOneGender == PlayerGenderType.Female) {
+		spriteIdle = spr_player_female_idle;
+		spriteJump = spr_player_female_jump;
+		spriteRun = spr_player_female_run;
+		spriteDead = spr_player_female_dead;
+	} else if (global.playerOneGender == PlayerGenderType.Male) {
+		spriteIdle = spr_player_male_idle;
+		spriteJump = spr_player_male_jump;
+		spriteRun = spr_player_male_run;
+		spriteDead = spr_player_male_dead;
+	}
+}
+
+#endregion
 
 #region input device manager
 
@@ -152,6 +171,10 @@ function Death() {
 }
 
 #endregion
+
+
+//set sprites depends on gender
+SetSprites();
 
 
 

@@ -13,6 +13,8 @@
 	global.playerTwoLife =  3; //player2 life
 	global.playerOneLifePoint = 0; //player1 life points
 	global.playerTwoLifePoint = 0; //player2 life points
+	global.playerOneGender = PlayerGenderType.Female; // player 1 gender
+	global.playerTwoGender = PlayerGenderType.Male; // player 2 gender
 
 	global.playerOneSpecialAbility = specialAbilityType.TimeSlow; // player 1's special ability
 	global.playerTwoSpecialAbility = specialAbilityType.TimeSlow; // player 2's special ability

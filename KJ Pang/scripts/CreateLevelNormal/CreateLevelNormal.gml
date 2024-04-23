@@ -8,7 +8,7 @@ global.isRestartLevelAfterDead = true;
 global.hasLevelTime = true;
 global.levelTimeMax = 200;
 
-global.playerNumber = 1; 
+global.playerNumber = 2; 
 
 //Player
 global.playerOneName = "PLAYER-1" // player 1 display name

@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"spr_player_idle",
-    "path":"sprites/spr_player_idle/spr_player_idle.yy",
+    "name":"spr_player_female_idle",
+    "path":"sprites/spr_player_female_idle/spr_player_female_idle.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -167,7 +167,7 @@ function ReverseGravityEffect() {
 function StrongReverseGravityEffect() {
 	
 	// set delay value
-	var slowFactorX = CalculateTimeSlowEffectDecay(moveX)
+	var slowFactorX = CalculateTimeSlowEffectDecay(moveX ?? 0)
 	
 	//delay x movement
 	if (moveX > 0.2)  moveX -= slowFactorX; 
