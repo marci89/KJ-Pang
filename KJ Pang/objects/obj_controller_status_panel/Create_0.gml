@@ -12,13 +12,13 @@ function CreateSinglePlayerStatusPanel() {
      //level name
 	 var singlePlayerLevelName = instance_create_layer(450, startY + 25,"Status", obj_status_level_name);
 	
-	 //special ability
-	 var singlePlayerSpecialAbility = instance_create_layer(60, startY,"Status", obj_status_special_ability);
-	 singlePlayerSpecialAbility.SetPlayer(obj_player_one);
+	 // special ability
+	 var specialAbilityPlayerOne = instance_create_layer(30, startY + 20,"Status", obj_status_special_ability);
+	 specialAbilityPlayerOne.SetPlayer(obj_player_one);
 	 
 	 // food
-	 var singlePlayerFood = instance_create_layer(30, startY +67,"Status", obj_status_food);
-	 singlePlayerFood.SetPlayer(obj_player_one);
+	 var foodPlayerOne = instance_create_layer(70, startY + 43,"Status", obj_status_food);
+	 foodPlayerOne.SetPlayer(obj_player_one);
 	 
 	 //weapon
 	 var singlePlayerWeapon = instance_create_layer(145,startY + 5,"Status", obj_status_weapon);
@@ -50,7 +50,7 @@ function CreateMultiPlayerStatusPanelForPlayerOne() {
 	 // player 1 name
 	 var namePlayerOne = instance_create_layer(0, startY + 20,"Status", obj_status_name_and_score);
 	 namePlayerOne.SetPlayer(obj_player_one);
-	 
+	 	 
 	 // special ability
 	 var specialAbilityPlayerOne = instance_create_layer(30, startY + 25,"Status", obj_status_special_ability);
 	 specialAbilityPlayerOne.SetPlayer(obj_player_one);

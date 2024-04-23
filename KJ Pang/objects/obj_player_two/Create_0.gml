@@ -4,6 +4,7 @@ inputJump = 0; // jump key
 inputDown = 0; // down key
 inputFirePressed = 0; // fire key pressed (shoot)
 inputFire = 0; // fire key (shoot)
+inputSpecialAbility = 0; // activate special ability
 
 //Weapon
 weapon = weaponType.SingleSting; //Player current weapon type. 
@@ -37,6 +38,8 @@ isActive = true; // if it is active it can do everything (live) else deactive so
 isDead = false; // death or alive
 isInvincible = false; // if this is true, nothing hurts you.
 
+//Settings
+
 #region Set sprites
 
 function SetSprites() {
@@ -67,6 +70,7 @@ function SetPlayerInputs() {
 		inputDown = keyboard_check(vk_down);
 		inputFirePressed = keyboard_check_pressed(vk_control);
 		inputFire = keyboard_check(vk_control);
+		inputSpecialAbility = keyboard_check(vk_space);
 	}
 	
 	//Controller device number
@@ -102,11 +106,15 @@ function SetPlayerInputs() {
 	    inputJump = gamepad_button_check(controllerDeviceNumber, gp_face1) || gamepad_button_check(controllerDeviceNumber, gp_padu);
 		inputDown = gamepad_button_check(controllerDeviceNumber, gp_face4) || gamepad_button_check(controllerDeviceNumber, gp_padd);
 		inputFirePressed = gamepad_button_check(controllerDeviceNumber, gp_face3);
-		inputFire = gamepad_button_check(controllerDeviceNumber, gp_face3);   
+		inputFire = gamepad_button_check(controllerDeviceNumber, gp_face3);
+		inputSpecialAbility = gamepad_button_check(controllerDeviceNumber, gp_face2);
 	}
 }
 
 #endregion
+
+
+// get properties
 
 #region Get food function
 
@@ -156,6 +164,17 @@ function GetName() {
 
 #endregion
 
+#region Get player special ability function
+
+function GetSpecialAbility() {
+	return global.playerTwoSpecialAbility;
+}
+
+#endregion
+
+
+// functions
+
 #region Player death function
 
 function Death() {
@@ -180,6 +199,69 @@ function Death() {
 }
 
 #endregion
+
+#region Activate special ability
+
+function ActivateSpecialAbility() {
+	
+	//variables
+	var specialAbility = global.playerTwoSpecialAbility;
+	var effectControllerObj = obj_controller_level_effect;
+	
+	//check food number
+	if(global.playerTwoFood < global.foodMax) {
+		return;
+	} else {
+		global.playerTwoFood = 0;
+	}
+	
+	//activate AntiGravity
+	if (specialAbility == specialAbilityType.AntiGravity) {
+		if(IsInstanceExists(effectControllerObj ?? noone)) {
+			effectControllerObj.ExecuteAntigravityEffect();
+		}
+	}
+	
+	//activate ReverseGravity
+	if (specialAbility == specialAbilityType.ReverseGravity) {
+		if(IsInstanceExists(effectControllerObj ?? noone)) {
+			effectControllerObj.ExecuteReverseGravityEffect();
+		}
+	}
+	
+	//activate ReverseGravity
+	if (specialAbility == specialAbilityType.StrongReverseGravity) {
+		if(IsInstanceExists(effectControllerObj ?? noone)) {
+			effectControllerObj.ExecuteStrongReverseGravityEffect();
+		}
+	}
+	
+	//activate ReverseGravity
+	if (specialAbility == specialAbilityType.Magnet) {
+		ExecuteMagnetEffect(obj_player_Two);
+		PlaySound(snd_magnet, false);
+	}
+	
+	//activate ReverseGravity
+	if (specialAbility == specialAbilityType.TimeFreeze) {
+		if(IsInstanceExists(effectControllerObj ?? noone)) {
+			effectControllerObj.ExecuteTimeFreezeEffect();
+		}
+	}
+	
+	//activate ReverseGravity
+	if (specialAbility == specialAbilityType.TimeSlow) {
+		if(IsInstanceExists(effectControllerObj ?? noone)) {
+			effectControllerObj.ExecuteTimeSlowEffect();
+		}
+	}
+	
+}
+		
+
+
+#endregion
+
 
 //set sprites depends on gender
 SetSprites();

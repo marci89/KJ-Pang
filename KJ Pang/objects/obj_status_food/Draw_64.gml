@@ -36,14 +36,8 @@ if(player.GetFood() >= global.foodMax) {
 
 #region set positions
 
-if (global.playerNumber == 1) {
-	posX = x + 20;
-	posY = y - 19;
-	
-} else {
-	posX = x-15
-	posY = y + 7;
-}
+posX = x-15
+posY = y + 7;
 
 #endregion
 

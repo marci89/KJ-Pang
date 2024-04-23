@@ -7,19 +7,12 @@ function SetGameVariables(){
 	global.playerNumber = 1; // it can be 1 or 2. play alone or with your friend
 
 	//Player
-	global.playerOneName = "PLAYER-1" // player 1 display name
-	global.playerTwoName = "PLAYER-2" // player 2 display name
-	global.playerOneInputDeviceType = inputDeviceType.Keyboard; // player 1 device type (keyborad, controller)
-	global.playerTwoInputDeviceType = inputDeviceType.Controller; // player 2 device type (keyborad, controller)
 	global.playerOneScore = 0; //player1 score
 	global.playerTwoScore = 0; //player2 score
 	global.playerOneLife =  3; //player1 life
 	global.playerTwoLife =  3; //player2 life
 	global.playerOneLifePoint = 0; //player1 life points
 	global.playerTwoLifePoint = 0; //player2 life points
-
-	global.playerOneSpecialAbility = specialAbilityType.TimeSlow; // player 1's special ability
-	global.playerTwoSpecialAbility = specialAbilityType.TimeSlow; // player 2's special ability
 	global.playerOneFood = 0; // food number for player 1 special ability
 	global.playerTwoFood = 0; // food number for player 2 special ability
 

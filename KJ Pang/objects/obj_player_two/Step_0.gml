@@ -38,6 +38,14 @@ var _finalMoveY = moveY;
 
 #endregion
 
+#region Activate special ability
+
+  if (inputSpecialAbility) {
+	ActivateSpecialAbility();
+  }
+
+#endregion
+
 #region Wall collisions
 
 // X

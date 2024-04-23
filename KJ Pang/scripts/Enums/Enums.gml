@@ -37,6 +37,19 @@ enum PlayerGenderType{
 
 #endregion
 
+#region special ability
+
+enum specialAbilityType{
+    TimeSlow,
+	TimeFreeze,
+	AntiGravity,
+	ReverseGravity,
+	StrongReverseGravity,
+	Magnet	
+};
+
+#endregion
+
 #region level effect type
 
 enum levelEffectType{
@@ -100,10 +113,3 @@ enum weaponType{
 
 #endregion
 
-#region special ability
-
-enum specialAbilityType{
-    TimeSlow,
-};
-
-#endregion

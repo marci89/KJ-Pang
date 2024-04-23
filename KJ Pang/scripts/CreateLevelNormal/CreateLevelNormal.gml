@@ -80,6 +80,32 @@ function CreateLevelNormal1() {
 	CreateItem(400, 200, obj_item_machine_gun)
 		//CreateItem(400, 200, obj_item_life_point)
 	CreateFoodByImageIndex(32,30,1);
+	CreateFoodByImageIndex(32,30,1);
+	CreateFoodByImageIndex(32,30,1);
+	CreateFoodByImageIndex(32,30,1);
+	CreateFoodByImageIndex(32,30,1);
+	CreateFoodByImageIndex(32,30,1);
+	CreateFoodByImageIndex(32,30,1);
+	CreateFoodByImageIndex(32,30,1);
+	CreateFoodByImageIndex(32,30,1);
+	CreateFoodByImageIndex(32,30,1);
+	CreateFoodByImageIndex(32,30,1);
+	CreateFoodByImageIndex(32,30,1);
+	CreateFoodByImageIndex(32,30,1);
+	CreateFoodByImageIndex(32,30,1);
+	CreateFoodByImageIndex(32,30,1);
+	CreateFoodByImageIndex(32,30,1);
+	CreateFoodByImageIndex(32,30,1);
+	CreateFoodByImageIndex(32,30,1);
+	CreateFoodByImageIndex(32,30,1);
+	CreateFoodByImageIndex(32,30,1);
+	CreateFoodByImageIndex(32,30,1);
+	CreateFoodByImageIndex(32,30,1);
+	CreateFoodByImageIndex(32,30,1);
+	CreateFoodByImageIndex(32,30,1);
+	CreateFoodByImageIndex(32,30,1);
+	CreateFoodByImageIndex(32,30,1);
+	CreateFoodByImageIndex(32,30,1);
 	
 		//CreateItem(850, 200, obj_item_gravity_strong_reverse);
 		CreateItem(850, 200, obj_item_magnet);
