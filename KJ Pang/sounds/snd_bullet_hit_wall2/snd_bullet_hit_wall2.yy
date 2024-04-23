@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_bullet_hit_wall2.mp3",
   "type":0,
-  "volume":1.0,
+  "volume":0.74,
 }

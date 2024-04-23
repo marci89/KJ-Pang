@@ -24,12 +24,8 @@ if (!isDead) {
   
   // Jump
   if (inputJump && (place_meeting(x, y + 1, obj_wall_parent) )) {
-		if (inputDown) {
-		    moveY = -jumpSpeed / 2; // falling back faster when down key is pressed during jumping
-		} else {
-		    moveY = -jumpSpeed; // Normal jump when down key is not pressed
-		}  
-    }
+	 moveY = -jumpSpeed; // Normal jump when down key is not pressed
+   }
 }
 
 // Final movement velocity
@@ -153,11 +149,7 @@ y += _finalMoveY;
 
 if (!place_meeting(x, y + 1, obj_wall_parent)  || moveY < 0) {
 	
-	  if (inputDown) {
-        moveY += gravSpeed * 2; // Fall faster when down key is pressed
-    } else {
-        moveY += gravSpeed; // Normal gravity when down key is not pressed
-    }
+     moveY += gravSpeed;
 }
 
 #endregion

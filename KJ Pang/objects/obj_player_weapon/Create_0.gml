@@ -166,7 +166,7 @@ function handleSingleSting() {
 				alarm[0]  = weaponFiredRotationSpeed;
 				alarm[1]  = reloadingHarpoonTime;
 			
-				PlaySound(snd_string_shoot, false);
+				PlaySound(snd_string_shoot, false, 2);
 				CreateWeapon(player.x, player.y + stingStartYPositionSpace, obj_weapon_sting_head, "Weapon", player ?? noone);
 
 			}
@@ -205,7 +205,7 @@ function handleDoubleSting() {
 				alarm[0]  = weaponFiredRotationSpeed;
 				alarm[1]  = reloadingHarpoonTime;
 			
-				PlaySound(snd_string_shoot, false);
+				PlaySound(snd_string_shoot, false, 2);
 				CreateWeapon(player.x, player.y + stingStartYPositionSpace, obj_weapon_sting_head, "Weapon", player ?? noone);
 			}
 		}
@@ -243,7 +243,7 @@ function handlePowerWire() {
 				alarm[0]  = weaponFiredRotationSpeed;
 				alarm[1]  = reloadingHarpoonTime;
 			
-				PlaySound(snd_string_shoot, false);
+				PlaySound(snd_string_shoot, false, 2);
 				CreateWeapon(player.x, player.y + powerWireStartYPositionSpace, obj_weapon_power_wire_head, "Weapon", player ?? noone);
 			}
 		}

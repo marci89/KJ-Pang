@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_machine_gun_pickup.mp3",
   "type":0,
-  "volume":1.0,
+  "volume":0.56,
 }

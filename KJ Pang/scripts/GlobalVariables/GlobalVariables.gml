@@ -16,7 +16,7 @@
 	global.playerOneGender = PlayerGenderType.Female; // player 1 gender
 	global.playerTwoGender = PlayerGenderType.Male; // player 2 gender
 
-	global.playerOneSpecialAbility = specialAbilityType.Magnet; // player 1's special ability
+	global.playerOneSpecialAbility = specialAbilityType.StrongReverseGravity; // player 1's special ability
 	global.playerTwoSpecialAbility = specialAbilityType.TimeFreeze; // player 2's special ability
 	global.playerOneFood = 0; // food number for player 1 special ability
 	global.playerTwoFood = 0; // food number for player 2 special ability
@@ -57,7 +57,7 @@
 	global.lifePointMax = 100; //  max life point capacity
 	global.foodMax = 20; // max food capacity
 
-	global.levelTimeMax = 200; // level's max time
+	global.levelTimeMax = 105; // level's max time
 
 	global.timeManipulatingEffectDuration = 800; // time manipulation duration value
 	global.gravityEffectDuration = 1000; // gravity effect duration value

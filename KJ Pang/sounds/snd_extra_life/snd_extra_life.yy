@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_extra_life.wav",
   "type":0,
-  "volume":0.8,
+  "volume":0.31,
 }

@@ -49,7 +49,7 @@ function ExecuteTimeSlowEffect() {
 		
 	alarm[0] = global.timeManipulatingEffectDuration; // effect end
 	alarm[1] = global.timeManipulatingEffectDuration - 190; // before end play start time sound
-	PlaySound(snd_time_stop, false);
+	PlaySound(snd_time_stop, false, 2);
 	
 	// set effect
 	global.currentLevelEffect = levelEffectType.TimeSlow;
@@ -71,7 +71,7 @@ function ExecuteTimeFreezeEffect() {
 	alarm[0] = global.timeManipulatingEffectDuration; //effect end
 	alarm[1] = global.timeManipulatingEffectDuration - 190; // before end play start time sound
 	alarm[2] = global.timeManipulatingEffectDuration - 175; // blinking
-	PlaySound(snd_time_stop, false);
+	PlaySound(snd_time_stop, false, 2);
 	
 	// set effect
 	global.currentLevelEffect = levelEffectType.TimeFreeze;
@@ -96,7 +96,7 @@ function ExecuteAntigravityEffect() {
 		return;
 		
 	alarm[0] = global.gravityEffectDuration; // effect end
-	PlaySound(snd_antigravity, false);
+	PlaySound(snd_antigravity, false, 2);
 	
 	//hopping items
 	ItemHoppingEffect();
@@ -123,7 +123,7 @@ function ExecuteReverseGravityEffect() {
 		return;
 		
 	alarm[0] = global.gravityEffectDuration; // effect end
-	PlaySound(snd_reverse_gravity, false);
+	PlaySound(snd_reverse_gravity, false, 1);
 	
 	// set effect
 	global.currentLevelEffect = levelEffectType.ReverseGravity;
@@ -147,7 +147,7 @@ function ExecuteStrongReverseGravityEffect() {
 		return;
 		
 	alarm[0] = global.gravityEffectDuration; // effect end
-	PlaySound(snd_strong_reverse_gravity, false);
+	PlaySound(snd_strong_reverse_gravity, false, 1);
 	
 	// set effect
 	global.currentLevelEffect = levelEffectType.StrongReverseGravity;

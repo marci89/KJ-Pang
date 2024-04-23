@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.75,
+  "duration":0.25542,
   "name":"snd_life_point",
   "parent":{
     "name":"Life",
@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_life_point.wav",
   "type":0,
-  "volume":0.61,
+  "volume":0.48,
 }

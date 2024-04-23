@@ -1,10 +1,12 @@
 //inputs
 inputX = 0; // left and right key
 inputJump = 0; // jump key
-inputDown = 0; // down key
 inputFirePressed = 0; // fire key pressed (shoot)
 inputFire = 0; // fire key (shoot)
 inputSpecialAbility = 0; // activate special ability
+
+// sound controll for character voice
+isCharacterVoiceEnabled = true;
 
 //Weapon
 weapon = weaponType.SingleSting; //Player current weapon type. 
@@ -67,10 +69,9 @@ function SetPlayerInputs() {
 	if(global.playerTwoInputDeviceType == inputDeviceType.Keyboard) {
 		inputX = keyboard_check(vk_right) - keyboard_check(vk_left);
 		inputJump = keyboard_check_pressed(vk_up);
-		inputDown = keyboard_check(vk_down);
 		inputFirePressed = keyboard_check_pressed(vk_control);
 		inputFire = keyboard_check(vk_control);
-		inputSpecialAbility = keyboard_check(vk_space);
+		inputSpecialAbility = keyboard_check_pressed(vk_space);
 	}
 	
 	//Controller device number
@@ -104,10 +105,9 @@ function SetPlayerInputs() {
 			
 		// jump, fire
 	    inputJump = gamepad_button_check(controllerDeviceNumber, gp_face1) || gamepad_button_check(controllerDeviceNumber, gp_padu);
-		inputDown = gamepad_button_check(controllerDeviceNumber, gp_face4) || gamepad_button_check(controllerDeviceNumber, gp_padd);
 		inputFirePressed = gamepad_button_check(controllerDeviceNumber, gp_face3);
 		inputFire = gamepad_button_check(controllerDeviceNumber, gp_face3);
-		inputSpecialAbility = gamepad_button_check(controllerDeviceNumber, gp_face2);
+		inputSpecialAbility = gamepad_button_check_pressed(controllerDeviceNumber, gp_face2);
 	}
 }
 
@@ -175,15 +175,40 @@ function GetSpecialAbility() {
 
 // functions
 
+#region death sound function
+
+function CreateDeathSound() {
+	
+	// death sound effect
+	if(global.playerTwoGender == PlayerGenderType.Female) {
+		CreateRandomFemaleDeathSound();
+	} else {
+		CreateRandomMaleDeathSound();
+	}
+	
+	//other player talk
+	if (IsInstanceExists(obj_player_one ?? noone)) {
+		if(global.playerOneGender == PlayerGenderType.Female) {
+			alarm[2] = 20;
+		} else {
+			alarm[2] = 60;
+		}
+	}
+}
+	
+#endregion
+
 #region Player death function
 
 function Death() {
 	
 	isDead = true;
 	global.playerTwoLife -= 1;
-	PlaySound(snd_death, false);
-	moveX =0;	
+	moveX = 0;	
 	
+	// death sound
+	CreateDeathSound();
+		
 	//check dead type
 	if(global.isRestartLevelAfterDead) {
 		CreateRoomTransition(false); // room change animation
@@ -210,7 +235,24 @@ function ActivateSpecialAbility() {
 	
 	//check food number
 	if(global.playerTwoFood < global.foodMax) {
+		
+		if(global.playerTwoGender == PlayerGenderType.Female
+		&& isCharacterVoiceEnabled) {
+			
+			PlaySound(snd_female_not_use_yet, false);
+			
+		} else if(global.playerTwoGender == PlayerGenderType.Male
+		&& isCharacterVoiceEnabled) {
+			
+			PlaySound(snd_male_not_use_yet, false, 3);
+		}
+		
+		isCharacterVoiceEnabled = false;
+		alarm[3] = 100;
+		
+		
 		return;
+		
 	} else {
 		global.playerTwoFood = 0;
 	}
