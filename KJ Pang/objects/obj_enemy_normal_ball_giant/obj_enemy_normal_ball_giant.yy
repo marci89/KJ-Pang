@@ -34,10 +34,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":true,
-  "spriteId":{
-    "name":"spr_enemy_normal_ball_giant_red",
-    "path":"sprites/spr_enemy_normal_ball_giant_red/spr_enemy_normal_ball_giant_red.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

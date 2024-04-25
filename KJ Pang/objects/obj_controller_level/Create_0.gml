@@ -10,14 +10,14 @@ LoadGameSettings(); // ezt majd ki kell szedni!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 audio_stop_all(); // stop every sounds before start
 CreateRoomTransition(true); // room start animation
 pausedText = GetLocalizedText("paused"); // translate text
-SetLevelVariables(); // set varibales to start the level
+
 
 #endregion
 
 #region create current level
 
-if(global.gameDifficult == gameDifficultType.Normal) {
-	CreateLevelNormal();
+if(global.gameDifficult == gameDifficultType.Easy) {
+	CreateLevelEasy();
 }
 
 #endregion

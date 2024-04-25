@@ -4,7 +4,7 @@
   "bboxMode":1,
   "bbox_bottom":139,
   "bbox_left":0,
-  "bbox_right":134,
+  "bbox_right":139,
   "bbox_top":0,
   "collisionKind":2,
   "collisionTolerance":255,
@@ -12,14 +12,14 @@
   "edgeFiltering":true,
   "For3D":true,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"48a1c206-bd84-4a2d-ad0a-640a28579873","name":"48a1c206-bd84-4a2d-ad0a-640a28579873","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"1a9ea42d-78a7-49c4-bac7-e20d0c9a3f61","name":"1a9ea42d-78a7-49c4-bac7-e20d0c9a3f61","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":140,
   "HTile":true,
   "layers":[
-    {"$GMImageLayer":"","%Name":"b0e9c2fc-a286-4b5a-ace3-2ae67b45cf8e","blendMode":0,"displayName":"default","isLocked":false,"name":"b0e9c2fc-a286-4b5a-ace3-2ae67b45cf8e","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"538008c4-aa99-4946-b4f0-df5524ab24ad","blendMode":0,"displayName":"default","isLocked":false,"name":"538008c4-aa99-4946-b4f0-df5524ab24ad","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_enemy_normal_ball_giant_red",
   "nineSlice":{
@@ -88,13 +88,13 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"48a1c206-bd84-4a2d-ad0a-640a28579873","path":"sprites/spr_enemy_normal_ball_giant_red/spr_enemy_normal_ball_giant_red.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"effbffc4-7eba-4846-b4da-6cfc9c17e0c4","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"1a9ea42d-78a7-49c4-bac7-e20d0c9a3f61","path":"sprites/spr_enemy_normal_ball_giant_red/spr_enemy_normal_ball_giant_red.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"045cdb55-1554-4018-a819-f08eb9be2f4d","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":67,
+    "xorigin":70,
     "yorigin":70,
   },
   "swatchColours":null,
@@ -105,5 +105,5 @@
   },
   "type":0,
   "VTile":true,
-  "width":135,
+  "width":140,
 }

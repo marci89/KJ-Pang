@@ -12,6 +12,9 @@ gravSpeedY = 0.1; // y gavity speed
 //bounce
 bounceDecay = 1; // Bounce decay
 
+//jump height
+jumpHeightMax = -12; // moveY controll to set maximum jumping height
+
 //basic
 isActive = true; // if enemy is active it can do everything (live) else deactive so freezed.
 isOnGround  = true; // it is on ground or air
@@ -19,6 +22,7 @@ enemyScore = 0; // score value after enemy dead
 hitPoint = 1; //health
 isHarmless = false; // not hurt the player if it is true
 isDestroyed = false; // death or not
+
 
 //Weapon
 isImmuneToWeapon = false // not hurts the weapon

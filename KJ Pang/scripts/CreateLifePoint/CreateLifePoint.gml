@@ -23,9 +23,8 @@ function CreateLifePoint(xValue, yValue, type){
 
 #region Create life point with movement
 
-function CreateLifePointWithMovement(xValue, yValue, type){
-	var moveX = random_range(-10,10); // x direction
-	var moveY = random_range(-10,10); // y direction
+function CreateLifePointWithMovement(xValue, yValue, moveX, moveY, type){
+	
 	var result = instance_create_layer(xValue, yValue,"Item", obj_item_life_point);
   
   	if (type == lifePointType.Red) result.image = spr_item_life_point_red;

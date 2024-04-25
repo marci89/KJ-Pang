@@ -127,6 +127,14 @@ if (CheckScreenCollisionBottomWithoutWallForObject(y, halfSpriteHeight)) {
 
 #endregion
 
+#region Jumping height settings
+
+if (moveY < jumpHeightMax  ) {
+	moveY = jumpHeightMax;
+}
+
+#endregion
+
 #region Update movement position
 
 //update movement position

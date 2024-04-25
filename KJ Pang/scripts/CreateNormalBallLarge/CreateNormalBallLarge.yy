@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"CreateNormalBallLarge",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CreateNormalBallLarge",
+  "parent":{
+    "name":"NormalBall",
+    "path":"folders/Scripts/Creator/Enemy/NormalBall.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

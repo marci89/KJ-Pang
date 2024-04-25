@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"CreateNormalBallMedium",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CreateNormalBallMedium",
+  "parent":{
+    "name":"NormalBall",
+    "path":"folders/Scripts/Creator/Enemy/NormalBall.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

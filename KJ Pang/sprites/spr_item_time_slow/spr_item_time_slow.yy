@@ -23,7 +23,7 @@
   ],
   "name":"spr_item_time_slow",
   "nineSlice":null,
-  "origin":1,
+  "origin":4,
   "parent":{
     "name":"Time",
     "path":"folders/Sprites/Item/Time.yy",
@@ -76,7 +76,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":11,
-    "yorigin":0,
+    "yorigin":23,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

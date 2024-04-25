@@ -10,7 +10,8 @@ enum languageType {
 
 #region game difficult
 
-enum gameDifficultType{
+enum gameDifficultType {
+	Easy,
     Normal,
     Hard,
     Nightmare,
@@ -109,6 +110,50 @@ enum weaponType{
     PowerWire,
 	MachineGun,
 	ShotGun
+};
+
+#endregion
+
+#region Normal ball colors
+
+enum normalBallColorType{
+    Red,
+    Blue,
+    Green
+};
+
+#endregion
+
+#region Normal ball drop item types
+
+//normal giant ball drop rate
+enum normalBallGiantDropItemType {
+    Nothing,
+    DropQualityLevel_1,
+	DropQualityLevel_2,
+	DropQualityLevel_3,
+	DropQualityLevel_4,
+	DropQualityLevel_5,
+	DropQualityLevel_6,
+	DropQualityLevel_7,
+	DropQualityLevel_8,
+	DropQualityLevel_9,
+	DropQualityLevel_10,
+};
+
+//normal large ball drop rate
+enum normalBallLargeDropItemType {
+    Nothing,
+    DropQualityLevel_1,
+	DropQualityLevel_2,
+	DropQualityLevel_3,
+	DropQualityLevel_4,
+	DropQualityLevel_5,
+	DropQualityLevel_6,
+	DropQualityLevel_7,
+	DropQualityLevel_8,
+	DropQualityLevel_9,
+	DropQualityLevel_10,
 };
 
 #endregion

@@ -3,7 +3,7 @@
 function SetGameVariables(){
 
 	//Game
-	global.gameDifficult = gameDifficultType.Normal; // game difficult level
+	global.gameDifficult = gameDifficultType.Easy; // game difficult level
 	global.playerNumber = 1; // it can be 1 or 2. play alone or with your friend
 
 	//Player
@@ -34,5 +34,5 @@ function SetGameVariables(){
 
 	//manipulating
 	global.currentLevelEffect = noone;
-
+	
 }

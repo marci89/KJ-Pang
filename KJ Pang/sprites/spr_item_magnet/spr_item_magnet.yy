@@ -23,7 +23,7 @@
   ],
   "name":"spr_item_magnet",
   "nineSlice":null,
-  "origin":1,
+  "origin":4,
   "parent":{
     "name":"Magnet",
     "path":"folders/Sprites/Item/Magnet.yy",
@@ -76,7 +76,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":15,
-    "yorigin":0,
+    "yorigin":18,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
