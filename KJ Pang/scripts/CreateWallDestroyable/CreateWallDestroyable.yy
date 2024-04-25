@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"CreateWallDestroyable",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CreateWallDestroyable",
+  "parent":{
+    "name":"Wall",
+    "path":"folders/Scripts/Creator/Wall.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -87,6 +87,7 @@ enum wallColorType{
     Red,
     Blue,
     Green,
+	Destroyable
 };
 
 #endregion

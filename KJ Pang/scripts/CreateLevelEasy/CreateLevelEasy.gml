@@ -26,7 +26,7 @@ global.hasLevelTime = false;
 global.playerNumber = 2; 
 
 
-if(global.level == 1) CreateLevelEasy1();
+if(global.level == 1) CreateLevelTest();
 
 }
 
@@ -77,10 +77,13 @@ function CreateLevelTest() {
 	
 	CreateWallMany(global.wallFrameSize, 500, wallColorType.Blue, wallCreatorDirectionType.Right, 5);
 	
-	CreateWallMany(500, 300, wallColorType.Red, wallCreatorDirectionType.Left, 5);
-	CreateWallMany(500, 300, wallColorType.Blue, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(500, 300, wallColorType.Blue, wallCreatorDirectionType.Top, 5);
-	CreateWallMany(500, 300, wallColorType.Green, wallCreatorDirectionType.Bottom, 5);
+	//CreateWallMany(500, 300, wallColorType.Red, wallCreatorDirectionType.Left, 5);
+	//CreateWallMany(500, 300, wallColorType.Blue, wallCreatorDirectionType.Right, 5);
+	//CreateWallMany(500, 300, wallColorType.Blue, wallCreatorDirectionType.Top, 5);
+	//CreateWallMany(500, 300, wallColorType.Green, wallCreatorDirectionType.Bottom, 5);
+	CreateWallDestroyableMany(500, 332, wallCreatorDirectionType.Left, 3);
+	CreateWallDestroyableMany(500, 364, wallCreatorDirectionType.Left, 3);
+	CreateWallDestroyableMany(500, 300, wallCreatorDirectionType.Left, 3);
 	
 	//item
 	CreateItem(100, 200,  obj_item_shotgun)

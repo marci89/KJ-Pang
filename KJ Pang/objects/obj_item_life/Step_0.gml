@@ -7,6 +7,8 @@ event_inherited()
 //player 1
 if (place_meeting(x, y, obj_player_one)) {
 	
+	bounceDecay = 0; // if collected not bounce
+	
 	if(!isPickedUp) {	
     global.playerOneLife++;
 	PlaySound(snd_extra_life, false);
@@ -16,6 +18,8 @@ if (place_meeting(x, y, obj_player_one)) {
 
 //player 2
 if (place_meeting(x, y, obj_player_two)) {
+	
+	bounceDecay = 0; // if collected not bounce
 	
 	if(!isPickedUp) {	
     global.playerTwoLife++;
