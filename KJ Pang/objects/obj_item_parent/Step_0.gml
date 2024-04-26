@@ -28,42 +28,20 @@ if(isGravityEnabled)
 
 #region hopping effect on the ground by weapon
 
-var weaponReactionDistance = 120; // action zone
-
 // Detect Nearby weapon
 var nearestWeapon = instance_nearest(x, y, obj_weapon_parent);
-	
 	if (instance_exists(nearestWeapon)) {
-		//Set the hopping movement default values
-		var hoopingSpeedLeftMin = 0;
-		var hoopingSpeedRightMin = 0;
-		var hoopingSpeedLeftMax = 0;
-		var hoopingSpeedRightMax = 0;
-		var hoopingSpeedHeightMin = 0;
-		var hoopingSpeedHeightMax = 0;
-
-		//sting, power wire, machinegun
-		 if ( nearestWeapon.object_index == obj_weapon_sting_head
-		 || nearestWeapon.object_index == obj_weapon_power_wire_head
-		 || nearestWeapon.object_index == obj_weapon_machine_gun_bullet
-		 ) {
-			hoopingSpeedLeftMin = -0.3;
-			hoopingSpeedRightMin = 0.3;
-			hoopingSpeedLeftMax = -1;
-			hoopingSpeedRightMax = 1;
-			hoopingSpeedHeightMin = -1;
-			hoopingSpeedHeightMax = -1.5;	
-		}
+		//distance
+		var weaponReactionDistance = nearestWeapon.weaponReactionDistance;
 		
-		//shotgun
-		 if ( nearestWeapon.object_index == obj_weapon_shotgun_bullet) {
-			hoopingSpeedLeftMin = -1;
-			hoopingSpeedRightMin = 1;
-			hoopingSpeedLeftMax = -2;
-			hoopingSpeedRightMax = 2;
-			hoopingSpeedHeightMin = -4;
-			hoopingSpeedHeightMax = -6;	
-		}
+		//Set the hopping movement values from weapon
+		var hoopingSpeedLeftMin = nearestWeapon.itemHoopingSpeedLeftMin;
+		var hoopingSpeedRightMin = nearestWeapon.itemHoopingSpeedRightMin;
+		var hoopingSpeedLeftMax = nearestWeapon.itemHoopingSpeedLeftMax;
+		var hoopingSpeedRightMax = nearestWeapon.itemHoopingSpeedRightMax;
+		var hoopingSpeedHeightMin = nearestWeapon.itemHoopingSpeedHeightMin;
+		var hoopingSpeedHeightMax = nearestWeapon.itemHoopingSpeedHeightMax;
+
 	
 		var distanceToWeapon = point_distance(x, y, nearestWeapon.x, nearestWeapon.y);
 
@@ -78,28 +56,6 @@ var nearestWeapon = instance_nearest(x, y, obj_weapon_parent);
 			    moveX = random_range(hoopingSpeedLeftMin, hoopingSpeedLeftMax); // x direction
 			}
 		}
-}
-
-#endregion
-
-#region hopping effect on the ground by enemy
-
-if(isHoppingEffectByEnemyEnable) {
-	var enemyReactionDistance = 100;
-
-	// Detect Nearby Enemies
-	var nearestEnemy = instance_nearest(x, y, obj_enemy_parent);
-
-	if (instance_exists(nearestEnemy)) {
-	
-		var distanceToEnemy = point_distance(x, y, nearestEnemy.x, nearestEnemy.y);
-
-		// React to Nearby Enemies
-		if (distanceToEnemy < enemyReactionDistance && isOnGround && nearestEnemy.isOnGround) {
-		   moveY = random_range(-2,-6); // y direction
-		   moveX = random_range(-1,1); // x direction
-		}
-	}
 }
 
 #endregion

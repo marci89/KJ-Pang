@@ -26,22 +26,22 @@ function SetLevelVariables(){
 	global.normalBallGiantMoveX = 0.5;
 	global.normalBallGiantMoveY = -1;
 	global.normalBallGiantGravityY = 0.04;
-	global.normalBallGiantJumpHeightMax = -12;
+	global.normalBallGiantJumpHeightMax = -9;
 	//Large normal ball default properties
 	global.normalBallLargeMoveX = 0.5;
 	global.normalBallLargeMoveY = -1;
 	global.normalBallLargeGravityY = 0.04;
-	global.normalBallLargeJumpHeightMax = -12;
+	global.normalBallLargeJumpHeightMax = -6;
 	//Medium normal ball default properties
 	global.normalBallMediumMoveX = 0.5;
 	global.normalBallMediumMoveY = -1;
 	global.normalBallMediumGravityY = 0.04;
-	global.normalBallMediumJumpHeightMax = -12;
+	global.normalBallMediumJumpHeightMax = -5;
 	//Small normal ball default properties
 	global.normalBallSmallMoveX = 0.5;
-	global.normalBallSmallMoveY = -1;
+	global.normalBallSmallMoveY = -2;
 	global.normalBallSmallGravityY = 0.04;
-	global.normalBallSmallJumpHeightMax = -12;
+	global.normalBallSmallJumpHeightMax = -4;
 	
 #endregion
 

@@ -2,9 +2,9 @@
   "$GMSprite":"",
   "%Name":"spr_item_life_point_orange",
   "bboxMode":1,
-  "bbox_bottom":39,
+  "bbox_bottom":31,
   "bbox_left":0,
-  "bbox_right":39,
+  "bbox_right":31,
   "bbox_top":0,
   "collisionKind":0,
   "collisionTolerance":75,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"4b33cc1b-d2d7-496d-bbb0-6fb0b6060a8c","name":"4b33cc1b-d2d7-496d-bbb0-6fb0b6060a8c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"8ccddcd6-2a8b-4429-96f8-e31f4af99bbf","name":"8ccddcd6-2a8b-4429-96f8-e31f4af99bbf","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":40,
+  "height":32,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"7e98be5e-5b68-4b35-b2d8-e538b0d3393c","blendMode":0,"displayName":"default","isLocked":false,"name":"7e98be5e-5b68-4b35-b2d8-e538b0d3393c","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"269167bf-6c2b-4aee-b076-0dd39bd568cc","blendMode":0,"displayName":"default","isLocked":false,"name":"269167bf-6c2b-4aee-b076-0dd39bd568cc","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_item_life_point_orange",
   "nineSlice":{
@@ -88,14 +88,14 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"4b33cc1b-d2d7-496d-bbb0-6fb0b6060a8c","path":"sprites/spr_item_life_point_orange/spr_item_life_point_orange.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"b5fdca03-4ded-49a8-aadf-a91c9f5f8f07","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8ccddcd6-2a8b-4429-96f8-e31f4af99bbf","path":"sprites/spr_item_life_point_orange/spr_item_life_point_orange.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"18d495e9-b1a7-457a-a7a8-ceaca1a5abda","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":20,
-    "yorigin":20,
+    "xorigin":16,
+    "yorigin":16,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
@@ -105,5 +105,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":40,
+  "width":32,
 }

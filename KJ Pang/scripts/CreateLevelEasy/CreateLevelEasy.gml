@@ -23,7 +23,7 @@ global.playerOneFood = 50;
 	
 global.levelTimeMax = 105;
 global.hasLevelTime = false;
-global.playerNumber = 2; 
+global.playerNumber = 1; 
 
 
 if(global.level == 1) CreateLevelTest();
@@ -42,13 +42,29 @@ function CreateLevelEasy1() {
 	PlayMusic(snd_mtFuji, false); // play music
     global.levelName = "japan"; // level name value for status panel
 
-	CreatePlayer(900, 300); // create player
+	//CreatePlayer(900, 300); // create player
 	
 	//Enemy
 	
 	CreateNormalBallGiant(300, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
-	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_1, true);
+	normalBallColorType.Red, normalBallGiantDropItemType.Nothing, true);
+	
+	CreateNormalBallLarge(500, 100, global.normalBallLargeMoveX, global.normalBallLargeMoveY,
+	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
+	normalBallColorType.Red, normalBallGiantDropItemType.Nothing, true);
+	
+	CreateNormalBallMedium(700, 100, global.normalBallMediumMoveX, global.normalBallMediumMoveY,
+	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
+	normalBallColorType.Red, true);
+	
+	CreateNormalBallSmall(800, 100, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
+	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
+	normalBallColorType.Red,  true);
+	
+		CreateNormalBallSmall(800, 670, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
+	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
+	normalBallColorType.Red,  true);
 
 	
 }
@@ -141,6 +157,10 @@ function CreateLevelTest() {
 	CreateNormalBallGiant(300, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
 	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_1, true);
+	
+	CreateNormalBallGiant(200, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
+	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
+	normalBallColorType.Green, normalBallGiantDropItemType.DropQualityLevel_1, true);
 	
 }
 

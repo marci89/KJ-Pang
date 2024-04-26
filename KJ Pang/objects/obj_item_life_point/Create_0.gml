@@ -2,7 +2,7 @@
 //parent properties
 event_inherited()
 decayItemOnGroundValue = 0.99;
-isHoppingEffectByEnemyEnable = true;
+bounceDecay = 0.5; //bounce
 
 //own properties
 itemScore = 1; // score of item
