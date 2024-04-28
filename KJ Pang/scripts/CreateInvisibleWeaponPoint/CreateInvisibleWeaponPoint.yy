@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"CreateInvisibleWeaponPoint",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CreateInvisibleWeaponPoint",
+  "parent":{
+    "name":"Weapon",
+    "path":"folders/Scripts/Creator/Weapon.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

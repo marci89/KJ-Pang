@@ -1,10 +1,28 @@
 
 //parent properties
 event_inherited()
-decayItemOnGroundValue = 0.99;
+decayItemOnGroundValue = 0.7;
 
 //own properties
 rotateAngle = 1; //rotation
 image = spr_wall_destroyable_piece_bottom_left; // default image
+type = wallType.Destroyable;
+color = c_white;
 
-alarm[1] = 1000;
+alarm[1] = 400;
+
+#region Set Color
+
+function SetColor() {
+	
+	if(type == wallType.Red)
+		color = c_red
+	
+	if(type == wallType.Blue)
+			color =c_aqua;
+	
+	if(type == wallType.Green)
+		color = c_lime;
+	}
+
+#endregion

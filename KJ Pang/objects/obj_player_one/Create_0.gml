@@ -10,8 +10,9 @@ isCharacterVoiceEnabled = true;
 
 //Weapon
 weapon = weaponType.SingleSting; //Player current weapon type. 
-shotgunAmmo = 0; //shotgunAmmo
-machineGunAmmo = 0; //machineGunAmmo
+shotgunAmmo = 0; //shotgun ammo
+machineGunAmmo = 0; //machineGun ammo
+grenadeAmmo = 0; //grenade ammo
 
 //Movement
 moveX = 0; // x movement (move left or right)

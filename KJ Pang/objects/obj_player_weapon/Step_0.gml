@@ -38,6 +38,13 @@ if(player.weapon == weaponType.ShotGun) {
 	}
 }
 
+//grenade
+if(player.weapon == weaponType.Grenade) {
+	if(player.grenadeAmmo <= 0) {
+		player.weapon = weaponType.SingleSting;
+	}
+}
+
 #endregion
 
 #region weapon type check
@@ -55,7 +62,10 @@ if(player.weapon == weaponType.ShotGun) {
 			handleMachineGun();
 			
 		}  else if(player.weapon == weaponType.ShotGun) {
-			handleShotgun();		
+			handleShotgun();
+			
+		}  else if(player.weapon == weaponType.Grenade) {
+			handleGrenade();		
 		}
 		
 #endregion

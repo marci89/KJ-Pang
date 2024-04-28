@@ -44,9 +44,17 @@ var nearestWeapon = instance_nearest(x, y, obj_weapon_parent);
 
 	
 		var distanceToWeapon = point_distance(x, y, nearestWeapon.x, nearestWeapon.y);
+		var isHoppingEnable  = false;
+		
+		//check postions to set hopping effect or not
+		if(nearestWeapon.object_index == obj_weapon_invisible_weapon_point) {
+			isHoppingEnable = true;
+		} else if (y < nearestWeapon.player.y-40){
+			isHoppingEnable = true;
+		}
 
 		// React to Nearby Weapon
-		if (distanceToWeapon < weaponReactionDistance && isOnGround && y < global.roomHeight - 70) {
+		if (distanceToWeapon < weaponReactionDistance && isOnGround && isHoppingEnable) {
 			
 			if (nearestWeapon.x < x) {
 				moveY = random_range(hoopingSpeedHeightMin, hoopingSpeedHeightMax); // y direction

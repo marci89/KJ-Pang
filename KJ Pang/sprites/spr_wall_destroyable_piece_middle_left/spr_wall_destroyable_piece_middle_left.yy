@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Destroyable",
-    "path":"folders/Sprites/Wall/WallPiece/Destroyable.yy",
+    "name":"NormalWall",
+    "path":"folders/Sprites/Wall/WallPiece/NormalWall.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

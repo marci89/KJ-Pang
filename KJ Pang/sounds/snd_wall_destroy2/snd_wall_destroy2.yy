@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_wall_destroy2",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":5.433469,
+  "name":"snd_wall_destroy2",
+  "parent":{
+    "name":"Wall",
+    "path":"folders/Sounds/Voice/Wall.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_wall_destroy2.mp3",
+  "type":0,
+  "volume":1.0,
+}

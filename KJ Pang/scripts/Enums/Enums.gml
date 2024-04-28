@@ -83,11 +83,13 @@ enum lifePointType{
 
 #region wall colors
 
-enum wallColorType{
+enum wallType{
     Red,
     Blue,
     Green,
-	Destroyable
+	Destroyable,
+	Frame,
+	Indestructible
 };
 
 #endregion
@@ -110,7 +112,8 @@ enum weaponType{
     DoubleSting,
     PowerWire,
 	MachineGun,
-	ShotGun
+	ShotGun,
+	Grenade,
 };
 
 #endregion

@@ -3,21 +3,28 @@
 weaponX = 0; // main variable for player's weapon x pos
 weaponY = 0; // main variable for player's weapon y pos
 
+//harpoon
 harpoonX = 5; // harpoo x position
 harpoonY = 39; // harpoo y position
 stingStartYPositionSpace = -6; // add plus space the sting when it will be created
 powerWireStartYPositionSpace = -4; // add plus space the sting when it will be created
 
+//machinegun
 machineGunX = -30; // machineGun x position
 machineGunY = 28; // machineGun y position
 machineGunShootingPositionX =  harpoonX -5; //machineGun x position when shoot
 machineGunShootingPositionY =  machineGunY -10; //machineGun y position when shoot
 
+//shotgun
 shotgunX = -30; // shotgun x position
 shotgunY =30; // shotgun y position
 shotgunShootingPositionX = harpoonX -10; // shotgun x position when shoot
 shotgunShootingPositionY = shotgunY -10; // shotgun y position when shoot
 
+
+//grenade
+grenadeX = -5; // grenade x position
+grenadeY = 35; // grenade y position
 
 //direction
 weaponDirection = 1; // image direction
@@ -37,6 +44,7 @@ inputFire = 0; // fire key
 reloadingHarpoonTime = 15; // reload time
 reloadingMachineGunTime = 4; // reload time
 reloadingShotgunTime = 90; // reload time
+reloadingGrenadeTime = 15; // reload time
 
 //important objects
 player = obj_player_one; // player
@@ -376,4 +384,48 @@ function handleShotgun() {
 
 #endregion
 
+
+//Bombs
+
+#region grenade function
+
+function handleGrenade() {
+
+	
+	weaponX = grenadeX;
+	weaponY = grenadeY;
+	sprite_index = spr_player_weapon_grenade; // set the weapon image
+	
+	setWeaponVisibility();
+	
+	//Set the x and y position to character
+	x = weaponDirection == 1 ? player.x + weaponX : player.x - weaponX;
+	y = player.y - weaponY;
+
+	// shoot
+    if ((inputFire || inputFirePressed) && isAllowFired && !player.isDead) {
+		
+			if(!isWeaponReloading) {
+				rotationDirection = weaponDirection;
+				isFired = true;
+				isWeaponReloading = true;
+				alarm[1]  = reloadingGrenadeTime;
+				
+				var directionValue = weaponDirection == 1 ? 4 : -4; // direction
+				
+				PlaySound(snd_throw, false, 2);
+				CreateWeaponWithMovement(player.x, player.y - grenadeY, directionValue, -4, obj_weapon_grenade, "Weapon", player ?? noone);
+
+				player.grenadeAmmo --;
+				
+				// handle weapon change
+				if(player.grenadeAmmo == 0) {
+					isWeaponReloading = false;
+				    image_angle = weaponDirection == 1 ? 90 : -90;
+				}
+			}
+	}
+}
+
+#endregion
 

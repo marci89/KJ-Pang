@@ -2,13 +2,16 @@
 
 #region sprite image
 
-if(wallColor == wallColorType.Red)
+if(wallColor == wallType.Red)
 	sprite_index = spr_wall_red;
+	color = c_red;
 	
-if(wallColor == wallColorType.Blue)
+if(wallColor == wallType.Blue)
 	sprite_index = spr_wall_blue;
+	color = c_blue;
 	
-if(wallColor == wallColorType.Green)
+if(wallColor == wallType.Green)
 	sprite_index = spr_wall_green;
+	color = c_green;
 	
 #endregion

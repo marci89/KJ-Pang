@@ -65,6 +65,8 @@ function CreateLevelEasy1() {
 		CreateNormalBallSmall(800, 670, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
 	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
 	normalBallColorType.Red,  true);
+	
+		CreateItem(100, 200,  obj_item_grenade)
 
 	
 }
@@ -88,25 +90,26 @@ function CreateLevelTest() {
 	CreatePlayer(900, 300); // create player
 	
 	//Wall
-	CreateWall(50, 50, wallColorType.Green);
+	CreateWall(50, 50, wallType.Blue);
 	//CreateWall(950, 30, wallColorType.Green);
 	
-	CreateWallMany(global.wallFrameSize, 500, wallColorType.Blue, wallCreatorDirectionType.Right, 5);
+	//CreateWallMany(global.wallFrameSize, 500, wallType.Red, wallCreatorDirectionType.Right, 5);
+	CreateWallIndestructibleMany(global.wallFrameSize, 500, wallCreatorDirectionType.Right, 5);
 	
-	//CreateWallMany(500, 300, wallColorType.Red, wallCreatorDirectionType.Left, 5);
-	//CreateWallMany(500, 300, wallColorType.Blue, wallCreatorDirectionType.Right, 5);
-	//CreateWallMany(500, 300, wallColorType.Blue, wallCreatorDirectionType.Top, 5);
-	//CreateWallMany(500, 300, wallColorType.Green, wallCreatorDirectionType.Bottom, 5);
+	//CreateWallMany(500, 300, wallType.Red, wallCreatorDirectionType.Left, 5);
+	//CreateWallMany(500, 300, wallType.Blue, wallCreatorDirectionType.Right, 5);
+	//CreateWallMany(500, 300, wallType.Blue, wallCreatorDirectionType.Top, 5);
+	//CreateWallMany(500, 300, wallType.Green, wallCreatorDirectionType.Bottom, 5);
 	CreateWallDestroyableMany(500, 332, wallCreatorDirectionType.Left, 3);
 	CreateWallDestroyableMany(500, 364, wallCreatorDirectionType.Left, 3);
 	CreateWallDestroyableMany(500, 300, wallCreatorDirectionType.Left, 3);
 	
 	//item
-	CreateItem(100, 200,  obj_item_shotgun)
+//	CreateItem(100, 200,  obj_item_shotgun)
 	CreateItem(100, 650,obj_item_double_sting)
 	CreateItem(200, 650,obj_item_power_wire)
-	CreateItem(80, 200, obj_item_life)
-	CreateItem(120, 200, obj_item_life)
+//	CreateItem(80, 200, obj_item_life)
+	CreateItem(120, 200, obj_item_grenade)
 	CreateItem(160, 200, obj_item_life)
 	CreateItem(200, 200, obj_item_food)
 	
@@ -142,7 +145,7 @@ function CreateLevelTest() {
 	CreateFoodByImageIndex(32,30,1);
 	
 		//CreateItem(850, 200, obj_item_gravity_strong_reverse);
-		CreateItem(850, 200, obj_item_magnet);
+		CreateItem(850, 200, obj_item_grenade);
 		CreateItem(800, 200, obj_item_gravity_reverse);
 		CreateItem(770, 200, obj_item_antigravity);
 	//	CreateItem(750, 200, obj_item_time_slow);
@@ -161,6 +164,12 @@ function CreateLevelTest() {
 	CreateNormalBallGiant(200, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
 	normalBallColorType.Green, normalBallGiantDropItemType.DropQualityLevel_1, true);
+	
+		
+		CreateNormalBallSmall(800, 690, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
+	global.normalBallSmallGravityY, -0.5,
+	normalBallColorType.Red,  true);
+	
 	
 }
 

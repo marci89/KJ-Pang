@@ -15,11 +15,15 @@ DropItem();
 
 
 //Create child balls
-CreateNormalBallMedium(x, y, -global.normalBallMediumMoveX, global.normalBallMediumMoveY,
+
+randomize();
+var childPositionX = random_range(2, 10);
+
+CreateNormalBallMedium(x-childPositionX, y, -global.normalBallMediumMoveX, global.normalBallMediumMoveY,
 	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
 	colorType, false);
 	
-CreateNormalBallMedium(x, y, global.normalBallMediumMoveX, global.normalBallMediumMoveY,
+CreateNormalBallMedium(x+childPositionX, y, global.normalBallMediumMoveX, global.normalBallMediumMoveY,
 	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
 	colorType, false);
 

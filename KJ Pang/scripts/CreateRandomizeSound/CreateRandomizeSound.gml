@@ -88,6 +88,26 @@ function CreateRandomBulletHitWallSound(){
 
 #endregion
 
+#region Create random sound for wall break
+
+function CreateRandomWallBreakSound(){
+	
+	var randomIndex = irandom_range(1, 2); 
+    switch (randomIndex) {
+        case 1:
+            PlaySound(snd_wall_destroy, false);
+            break;
+        case 2:
+            PlaySound(snd_wall_destroy2, false);
+            break;
+        default:
+            PlaySound(snd_wall_destroy, false);
+            break;
+    }
+}
+
+#endregion
+
 #region Create random sound for power wire
 
 function CreateRandomPowerWireSound(){

@@ -28,4 +28,9 @@ if(player.weapon == weaponType.ShotGun) {
 	sprite_index = spr_status_shot_gun;
 }
 
+if(player.weapon == weaponType.Grenade) {
+	sprite_index = spr_status_grenade;
+}
+
+
 #endregion

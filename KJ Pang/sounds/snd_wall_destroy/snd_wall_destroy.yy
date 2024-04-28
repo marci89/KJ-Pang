@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.848549,
+  "duration":4.048969,
   "name":"snd_wall_destroy",
   "parent":{
     "name":"Wall",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_wall_destroy.wav",
+  "soundFile":"snd_wall_destroy.mp3",
   "type":0,
-  "volume":0.64,
+  "volume":1.0,
 }
