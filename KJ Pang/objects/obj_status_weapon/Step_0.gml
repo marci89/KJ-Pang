@@ -36,6 +36,14 @@ if(player.weapon == weaponType.Detonator) {
 	sprite_index = spr_status_detonator;
 }
 
+if(player.weapon == weaponType.Bomb) {
+	sprite_index = spr_status_bomb;
+}
+
+if(player.weapon == weaponType.LandMine) {
+	sprite_index = spr_status_land_mine;
+}
+
 
 
 #endregion

@@ -119,7 +119,7 @@ function CreateLevelTest() {
 	CreateItem(200, 200, obj_item_food)
 	
 	
-	CreateItem(400, 200, obj_item_shotgun)
+	CreateItem(400, 200, obj_item_machine_gun)
 		//CreateItem(400, 200, obj_item_life_point)
 	CreateFoodByImageIndex(32,30,1);
 	CreateFoodByImageIndex(32,30,2);
@@ -150,20 +150,20 @@ function CreateLevelTest() {
 	CreateFoodByImageIndex(32,30,1);
 	
 		//CreateItem(850, 200, obj_item_gravity_strong_reverse);
-		CreateItem(850, 200, obj_item_detonator);
-		CreateItem(800, 200, obj_item_detonator);
+		CreateItem(850, 200, obj_item_grenade);
+		CreateItem(800, 200, obj_item_bomb);
 		CreateItem(770, 200, obj_item_detonator);
 	//	CreateItem(750, 200, obj_item_time_slow);
 	//	CreateItem(740, 200, obj_item_time_slow);
 	//	CreateItem(730, 200, obj_item_time_slow);
 	//	CreateItem(720, 200, obj_item_time_slow);
-		CreateItem(700, 200, obj_item_time_slow);
+		CreateItem(700, 200, obj_item_land_mine);
 	
 	
 	
 	//Enemy
 	
-	/*
+	
 	CreateNormalBallGiant(300, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
 	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_1, true);
@@ -171,7 +171,7 @@ function CreateLevelTest() {
 	CreateNormalBallGiant(200, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
 	normalBallColorType.Green, normalBallGiantDropItemType.DropQualityLevel_1, true);
-	*/
+	
 	
 	
 	

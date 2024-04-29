@@ -39,5 +39,5 @@
     "path":"sprites/spr_weapon_invisible_weapon_point/spr_weapon_invisible_weapon_point.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

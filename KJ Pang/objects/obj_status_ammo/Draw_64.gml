@@ -50,7 +50,7 @@ else if(player.weapon == weaponType.Grenade) {
 	if(global.playerNumber == 1) {
 		draw_text(posX + 20 , posY, "* " + string(player.grenadeAmmo));
 	} else {
-		draw_text(posX-40 , posY, "* " + string(player.grenadeAmmo));
+		draw_text(posX-30 , posY-15, "* " + string(player.grenadeAmmo));
 	}
 	sprite_index = noone;	
 }
@@ -60,10 +60,31 @@ else if(player.weapon == weaponType.Detonator) {
 	if(global.playerNumber == 1) {
 		draw_text(posX + 20 , posY, "* " + string(player.detonatorAmmo));
 	} else {
-		draw_text(posX-40 , posY, "* " + string(player.detonatorAmmo));
+		draw_text(posX-30 , posY-15, "* " + string(player.detonatorAmmo));
 	}
 	sprite_index = noone;	
 }
+
+//bomb
+else if(player.weapon == weaponType.Bomb) {
+	if(global.playerNumber == 1) {
+		draw_text(posX + 20 , posY, "* " + string(player.bombAmmo));
+	} else {
+		draw_text(posX-30 , posY-15, "* " + string(player.bombAmmo));
+	}
+	sprite_index = noone;	
+}
+
+//land mine
+else if(player.weapon == weaponType.LandMine) {
+	if(global.playerNumber == 1) {
+		draw_text(posX + 20 , posY, "* " + string(player.landMineAmmo));
+	} else {
+		draw_text(posX-20 , posY-15, "* " + string(player.landMineAmmo));
+	}
+	sprite_index = noone;	
+}
+
 
 //nothing
 else sprite_index = noone;

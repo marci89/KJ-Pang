@@ -18,6 +18,9 @@ isActive = true; // if it is active it can do everything (live) else deactive so
 isSolidWallCollision = true; // if true it can interact walls, if false it has no action
 isOnGround  = false; // it is on ground or air
 
+isAllowEffect = true;
+isAllowWeaponHopping = true;
+
 //Shrinking animation
 shrinkingAmount = 0.05; // amount of Shrinking
 isPickedUp = false; // is picked up or not
@@ -169,6 +172,10 @@ function AntiGravityEffect() {
 #region Handle active level effects
 
 function HandleEffect() {
+	
+	if(!isAllowEffect) {
+		return;
+	}
 	
 	if(global.currentLevelEffect == levelEffectType.TimeFreeze) {
 		TimeFreezeEffect();

@@ -61,6 +61,20 @@ if(player.weapon == weaponType.Detonator) {
 	}
 }
 
+//bomb
+if(player.weapon == weaponType.Bomb) {
+	if(player.bombAmmo <= 0) {
+		player.weapon = weaponType.SingleSting;
+	}
+}
+
+//land mine
+if(player.weapon == weaponType.LandMine) {
+	if(player.landMineAmmo <= 0) {
+		player.weapon = weaponType.SingleSting;
+	}
+}
+
 #endregion
 
 #region weapon type check
@@ -85,6 +99,12 @@ if(player.weapon == weaponType.Detonator) {
 		
 		}  else if(player.weapon == weaponType.Detonator) {
 			handleDetonator();		
+		
+		}  else if(player.weapon == weaponType.Bomb) {
+			handleBomb();
+			
+		} else if(player.weapon == weaponType.LandMine) {
+			handleLandMine();		
 		}
 		
 #endregion

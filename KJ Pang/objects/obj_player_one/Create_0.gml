@@ -14,6 +14,8 @@ shotgunAmmo = 0; //shotgun ammo
 machineGunAmmo = 0; //machineGun ammo
 grenadeAmmo = 0; //grenade ammo
 detonatorAmmo = 0; //detonator ammo
+bombAmmo = 0; //bomb ammo
+landMineAmmo = 0; //land mine ammo
 
 //Movement
 moveX = 0; // x movement (move left or right)

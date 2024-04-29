@@ -28,6 +28,8 @@ if(isGravityEnabled)
 
 #region hopping effect on the ground by weapon
 
+if(isAllowWeaponHopping) {
+
 // Detect Nearby weapon
 var nearestWeapon = instance_nearest(x, y, obj_weapon_parent);
 	if (instance_exists(nearestWeapon)) {
@@ -64,6 +66,7 @@ var nearestWeapon = instance_nearest(x, y, obj_weapon_parent);
 			    moveX = random_range(hoopingSpeedLeftMin, hoopingSpeedLeftMax); // x direction
 			}
 		}
+	}
 }
 
 #endregion

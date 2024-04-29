@@ -30,6 +30,14 @@ grenadeY = 35; // grenade y position
 detonatorX = -5; // detonator x position
 detonatorY = 35; // detonator y position
 
+//bomb
+bombX = -5; // bomb x position
+bombY = 35; // bomb y position
+
+//landMine
+landMineX = 9; // landMine x position
+landMineY = 35; // landMine y position
+
 //direction
 weaponDirection = 1; // image direction
 rotationDirection = 1; // rotation direction when shoot
@@ -50,6 +58,9 @@ reloadingMachineGunTime = 4; // reload time
 reloadingShotgunTime = 90; // reload time
 reloadingGrenadeTime = 15; // reload time
 reloadingDetonatorTime = 15; // reload time
+reloadingBombTime = 20; // reload time
+reloadingLandMineTime = 10; // reload time
+
 
 //important objects
 player = obj_player_one; // player
@@ -495,6 +506,88 @@ function handleDetonator() {
 		if(player.detonatorAmmo == 0) {
 			image_angle = 0;
 		}
+	}
+}
+
+#endregion
+
+#region bomb function
+
+function handleBomb() {
+
+	
+	weaponX = bombX;
+	weaponY = bombY;
+	sprite_index = spr_player_weapon_bomb; // set the weapon image
+	
+	setWeaponVisibility();
+	
+	//Set the x and y position to character
+	x = weaponDirection == 1 ? player.x + weaponX : player.x - weaponX;
+	y = player.y - weaponY;
+
+	// shoot
+    if ((inputFire || inputFirePressed) && isAllowFired && !player.isDead && !isWeaponReloading) {
+		
+			if(!isWeaponReloading) {
+				rotationDirection = weaponDirection;
+				isFired = true;
+				isWeaponReloading = true;
+				alarm[1]  = reloadingBombTime;
+				
+				var directionValue = weaponDirection == 1 ? 1 : -1; // direction
+				
+				PlaySound(snd_throw, false, 2);
+				CreateWeaponWithMovement(player.x, player.y - grenadeY, directionValue, -3, obj_weapon_bomb, "Weapon", player ?? noone);
+
+				player.bombAmmo --;
+				
+				// handle weapon change
+				if(player.bombAmmo == 0) {
+				   image_angle = 0;
+				}
+			}
+	}
+}
+
+#endregion
+
+#region land mine function
+
+function handleLandMine() {
+
+	
+	weaponX = landMineX;
+	weaponY = landMineY;
+	sprite_index = spr_player_weapon_land_mine; // set the weapon image
+	
+	setWeaponVisibility();
+	
+	//Set the x and y position to character
+	x = weaponDirection == 1 ? player.x + weaponX : player.x - weaponX;
+	y = player.y - weaponY;
+
+	// shoot
+    if ((inputFire || inputFirePressed) && isAllowFired && !player.isDead && !isWeaponReloading) {
+		
+			if(!isWeaponReloading) {
+				rotationDirection = weaponDirection;
+				isFired = true;
+				isWeaponReloading = true;
+				alarm[1]  = reloadingLandMineTime;
+				
+				var directionValue = 0;
+				
+				PlaySound(snd_throw, false, 2);
+				CreateWeaponWithMovement(player.x, player.y - grenadeY, directionValue, -2, obj_weapon_land_mine, "Weapon", player ?? noone);
+
+				player.landMineAmmo --;
+				
+				// handle weapon change
+				if(player.landMineAmmo == 0) {
+				   image_angle = 0;
+				}
+			}
 	}
 }
 

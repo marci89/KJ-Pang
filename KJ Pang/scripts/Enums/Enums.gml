@@ -115,6 +115,8 @@ enum weaponType{
 	ShotGun,
 	Grenade,
 	Detonator,
+	Bomb,
+	LandMine
 };
 
 #endregion
