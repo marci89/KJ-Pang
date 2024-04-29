@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_weapon_shotgun_bullet",
-    "path":"sprites/spr_weapon_shotgun_bullet/spr_weapon_shotgun_bullet.yy",
+    "name":"spr_weapon_invisible_weapon_point",
+    "path":"sprites/spr_weapon_invisible_weapon_point/spr_weapon_invisible_weapon_point.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -32,5 +32,10 @@ if(player.weapon == weaponType.Grenade) {
 	sprite_index = spr_status_grenade;
 }
 
+if(player.weapon == weaponType.Detonator) {
+	sprite_index = spr_status_detonator;
+}
+
+
 
 #endregion

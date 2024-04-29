@@ -192,7 +192,8 @@ if (!isDead) {
 if (collision_circle(x, y-25, 28, obj_enemy_parent, true, true)) {
 
 	if(global.currentLevelEffect != levelEffectType.TimeFreeze) {
-		 var enemyInstance = instance_place(x, y-25, obj_enemy_parent);
+		// var enemyInstance = instance_place(x, y-25, obj_enemy_parent);
+			var enemyInstance = collision_circle(x, y-25, 28, obj_enemy_parent, true, true);
 		    if (enemyInstance != noone) {
 		        if (!enemyInstance.isHarmless) {
 					if (!isDead && !isInvincible) {

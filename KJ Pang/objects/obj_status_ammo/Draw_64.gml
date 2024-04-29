@@ -55,6 +55,16 @@ else if(player.weapon == weaponType.Grenade) {
 	sprite_index = noone;	
 }
 
+//detonator
+else if(player.weapon == weaponType.Detonator) {
+	if(global.playerNumber == 1) {
+		draw_text(posX + 20 , posY, "* " + string(player.detonatorAmmo));
+	} else {
+		draw_text(posX-40 , posY, "* " + string(player.detonatorAmmo));
+	}
+	sprite_index = noone;	
+}
+
 //nothing
 else sprite_index = noone;
 

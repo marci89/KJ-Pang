@@ -114,6 +114,7 @@ enum weaponType{
 	MachineGun,
 	ShotGun,
 	Grenade,
+	Detonator,
 };
 
 #endregion

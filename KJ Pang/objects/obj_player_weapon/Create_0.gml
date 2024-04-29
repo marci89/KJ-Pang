@@ -26,6 +26,10 @@ shotgunShootingPositionY = shotgunY -10; // shotgun y position when shoot
 grenadeX = -5; // grenade x position
 grenadeY = 35; // grenade y position
 
+//detonator
+detonatorX = -5; // detonator x position
+detonatorY = 35; // detonator y position
+
 //direction
 weaponDirection = 1; // image direction
 rotationDirection = 1; // rotation direction when shoot
@@ -45,6 +49,7 @@ reloadingHarpoonTime = 15; // reload time
 reloadingMachineGunTime = 4; // reload time
 reloadingShotgunTime = 90; // reload time
 reloadingGrenadeTime = 15; // reload time
+reloadingDetonatorTime = 15; // reload time
 
 //important objects
 player = obj_player_one; // player
@@ -144,10 +149,11 @@ function createShotgunBullets(posX, posY) {
 
 #endregion
 
+//weapons
+
 #region single sting function
 
 function handleSingleSting() {
-
 	
 	weaponX = harpoonX;
 	weaponY = harpoonY;
@@ -160,7 +166,7 @@ function handleSingleSting() {
 	y = player.y - weaponY;
 
 	// shoot
-    if ((inputFire || inputFirePressed) && isAllowFired && !player.isDead) {
+    if ((inputFire || inputFirePressed) && isAllowFired && !player.isDead && !isWeaponReloading) {
 		
 		//Count player's sting number
 		var stingHeadCount = GetWeaponInstanceNumber(obj_weapon_sting_head, player ?? noone);
@@ -199,7 +205,7 @@ function handleDoubleSting() {
 	y = player.y - weaponY;
 
 	// shoot
-    if ((inputFire || inputFirePressed)  && isAllowFired && !player.isDead) {
+    if ((inputFire || inputFirePressed)  && isAllowFired && !player.isDead && !isWeaponReloading) {
 		
 		//Count player's sting number
 		var stingHeadCount = GetWeaponInstanceNumber(obj_weapon_sting_head, player ?? noone);
@@ -237,7 +243,7 @@ function handlePowerWire() {
 	y = player.y - weaponY;
 
 	// shoot
-    if ((inputFire || inputFirePressed) && isAllowFired  && !player.isDead) {
+    if ((inputFire || inputFirePressed) && isAllowFired  && !player.isDead  && !isWeaponReloading) {
 		
 		//Count player's power wire number
 		var powerWireHeadCount = GetWeaponInstanceNumber(obj_weapon_power_wire_head, player ?? noone);
@@ -275,7 +281,7 @@ function handleMachineGun() {
 
 		
 	//While shooting change gun angle
-	if ((inputFire || inputFirePressed) && !player.isDead) {
+	if ((inputFire || inputFirePressed) && !player.isDead ) {
 		image_angle = weaponDirection == 1 ? 90 : -90;	
 		isFired = true;
 		
@@ -298,7 +304,7 @@ function handleMachineGun() {
 	y = player.y - weaponY;
 
 	// shoot
-    if ((inputFire || inputFirePressed) && isAllowFired && !player.isDead) {
+    if ((inputFire || inputFirePressed) && isAllowFired && !player.isDead && !isWeaponReloading) {
 			if(!isWeaponReloading) {
 				rotationDirection = weaponDirection;
 				isWeaponReloading = true;
@@ -315,8 +321,7 @@ function handleMachineGun() {
 				
 				// handle weapon change
 				if(player.machineGunAmmo == 0) {
-					isWeaponReloading = false;
-				    image_angle = weaponDirection == 1 ? 90 : -90;
+				    image_angle = 0;
 				}
 			}
 	}
@@ -359,7 +364,7 @@ function handleShotgun() {
 	y = player.y - weaponY;
 
 	// shoot
-    if ((inputFire || inputFirePressed) && isAllowFired && !player.isDead) {
+    if ((inputFire || inputFirePressed) && isAllowFired && !player.isDead && !isWeaponReloading) {
 			if(!isWeaponReloading) {
 				rotationDirection = weaponDirection;
 				isWeaponReloading = true;
@@ -375,8 +380,8 @@ function handleShotgun() {
 							
 				// handle weapon change
 				if(player.shotgunAmmo == 0) {
-					isWeaponReloading = false;
-				    image_angle = weaponDirection == 1 ? 90 : -90;
+					image_angle = 0;
+					alarm[1]  = reloadingHarpoonTime;
 				}
 			} 
 	}	
@@ -403,7 +408,7 @@ function handleGrenade() {
 	y = player.y - weaponY;
 
 	// shoot
-    if ((inputFire || inputFirePressed) && isAllowFired && !player.isDead) {
+    if ((inputFire || inputFirePressed) && isAllowFired && !player.isDead && !isWeaponReloading) {
 		
 			if(!isWeaponReloading) {
 				rotationDirection = weaponDirection;
@@ -420,10 +425,76 @@ function handleGrenade() {
 				
 				// handle weapon change
 				if(player.grenadeAmmo == 0) {
-					isWeaponReloading = false;
-				    image_angle = weaponDirection == 1 ? 90 : -90;
+				   image_angle = 0;
 				}
 			}
+	}
+}
+
+#endregion
+
+#region detonator function
+
+function handleDetonator() {
+
+	weaponX = detonatorX;
+	weaponY = detonatorY;
+	
+	//Count player's detonator number
+	var detonatorCount = GetWeaponInstanceNumber(obj_weapon_detonator, player ?? noone);
+	
+	// set the weapon image
+	if(detonatorCount > 0) {
+		weaponY += 20;
+		weaponX += 7;
+		sprite_index = spr_player_weapon_detonator_controller; 
+	} else {
+		sprite_index = spr_player_weapon_detonator;
+	}
+	
+	setWeaponVisibility();
+	
+	//Set the x and y position to character
+	x = weaponDirection == 1 ? player.x + weaponX : player.x - weaponX;
+	y = player.y - weaponY;
+
+	// shoot
+    if ((inputFire || inputFirePressed) && isAllowFired && !player.isDead && !isWeaponReloading) {
+		if (detonatorCount == 0) {
+			if(!isWeaponReloading) {
+				rotationDirection = weaponDirection;
+				isFired = false;
+				isWeaponReloading = true;
+				alarm[1]  = reloadingDetonatorTime;
+				
+				var directionValue = weaponDirection == 1 ? 9 : -9; // direction
+				
+				PlaySound(snd_throw, false, 2);
+				CreateWeaponWithMovement(player.x, player.y - detonatorY, directionValue, -9, obj_weapon_detonator, "Weapon", player ?? noone);
+
+		
+				
+			}
+		} else {
+			//Check exists detonator
+			var detonator  = GetWeaponInstanceObject(obj_weapon_detonator, player ?? noone);
+			if(IsInstanceExists(detonator)) {
+				
+				PlaySound(snd_detonator_activate, false, 10);
+				instance_destroy(detonator);
+				player.detonatorAmmo --;
+				
+				rotationDirection = weaponDirection;
+				isWeaponReloading = true;
+				alarm[1]  = reloadingDetonatorTime;
+			}
+			
+		}
+		
+		// handle weapon change
+		if(player.detonatorAmmo == 0) {
+			image_angle = 0;
+		}
 	}
 }
 

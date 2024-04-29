@@ -4,6 +4,15 @@
 if (!instance_exists(player)) return;
  isAllowFired =  player.isOnGround == true ? true : false;
  
+//Check exists detonator
+if(player.weapon != weaponType.Detonator) {
+	var detonator  = GetWeaponInstanceObject(obj_weapon_detonator, player ?? noone);
+		if(IsInstanceExists(detonator)) {
+				instance_destroy(detonator);
+				player.detonatorAmmo --;
+		}
+}
+ 
 #endregion
 
 #region Variables
@@ -45,6 +54,13 @@ if(player.weapon == weaponType.Grenade) {
 	}
 }
 
+//detonator
+if(player.weapon == weaponType.Detonator) {
+	if(player.detonatorAmmo <= 0) {
+		player.weapon = weaponType.SingleSting;
+	}
+}
+
 #endregion
 
 #region weapon type check
@@ -66,6 +82,9 @@ if(player.weapon == weaponType.Grenade) {
 			
 		}  else if(player.weapon == weaponType.Grenade) {
 			handleGrenade();		
+		
+		}  else if(player.weapon == weaponType.Detonator) {
+			handleDetonator();		
 		}
 		
 #endregion

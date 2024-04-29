@@ -93,8 +93,13 @@ function CreateLevelTest() {
 	CreateWall(50, 50, wallType.Blue);
 	//CreateWall(950, 30, wallColorType.Green);
 	
-	//CreateWallMany(global.wallFrameSize, 500, wallType.Red, wallCreatorDirectionType.Right, 5);
-	CreateWallIndestructibleMany(global.wallFrameSize, 500, wallCreatorDirectionType.Right, 5);
+	CreateWallMany(global.wallFrameSize, 500, wallType.Red, wallCreatorDirectionType.Right, 5);
+	CreateWallMany(global.wallFrameSize, 532, wallType.Blue, wallCreatorDirectionType.Right, 5);
+	CreateWallMany(global.wallFrameSize, 564, wallType.Green, wallCreatorDirectionType.Right, 5);
+	CreateWallMany(global.wallFrameSize, 596, wallType.Green, wallCreatorDirectionType.Right, 5);
+	CreateWallMany(global.wallFrameSize, 629, wallType.Green, wallCreatorDirectionType.Right, 5);
+	CreateWallMany(global.wallFrameSize, 661, wallType.Green, wallCreatorDirectionType.Right, 5);
+	CreateWallMany(global.wallFrameSize, 690, wallType.Green, wallCreatorDirectionType.Right, 5);
 	
 	//CreateWallMany(500, 300, wallType.Red, wallCreatorDirectionType.Left, 5);
 	//CreateWallMany(500, 300, wallType.Blue, wallCreatorDirectionType.Right, 5);
@@ -114,7 +119,7 @@ function CreateLevelTest() {
 	CreateItem(200, 200, obj_item_food)
 	
 	
-	CreateItem(400, 200, obj_item_machine_gun)
+	CreateItem(400, 200, obj_item_shotgun)
 		//CreateItem(400, 200, obj_item_life_point)
 	CreateFoodByImageIndex(32,30,1);
 	CreateFoodByImageIndex(32,30,2);
@@ -145,18 +150,20 @@ function CreateLevelTest() {
 	CreateFoodByImageIndex(32,30,1);
 	
 		//CreateItem(850, 200, obj_item_gravity_strong_reverse);
-		CreateItem(850, 200, obj_item_grenade);
-		CreateItem(800, 200, obj_item_gravity_reverse);
-		CreateItem(770, 200, obj_item_antigravity);
+		CreateItem(850, 200, obj_item_detonator);
+		CreateItem(800, 200, obj_item_detonator);
+		CreateItem(770, 200, obj_item_detonator);
 	//	CreateItem(750, 200, obj_item_time_slow);
 	//	CreateItem(740, 200, obj_item_time_slow);
 	//	CreateItem(730, 200, obj_item_time_slow);
 	//	CreateItem(720, 200, obj_item_time_slow);
-		CreateItem(700, 200, obj_item_time_freeze);
+		CreateItem(700, 200, obj_item_time_slow);
 	
 	
 	
 	//Enemy
+	
+	/*
 	CreateNormalBallGiant(300, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
 	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_1, true);
@@ -164,11 +171,8 @@ function CreateLevelTest() {
 	CreateNormalBallGiant(200, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
 	normalBallColorType.Green, normalBallGiantDropItemType.DropQualityLevel_1, true);
+	*/
 	
-		
-		CreateNormalBallSmall(800, 690, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY, -0.5,
-	normalBallColorType.Red,  true);
 	
 	
 }

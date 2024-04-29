@@ -15,7 +15,7 @@ function SetWeaponValues(type, destroyTime) {
 	
 	if(type == weaponType.Grenade) {
 		
-		damage = 1; // damage
+		damage = 3; // damage
 		//item hooping values when shooting near them
 		weaponReactionDistance = 300; // action zone (distance)
 		itemHoopingSpeedLeftMin = -3;

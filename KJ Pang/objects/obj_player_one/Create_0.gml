@@ -13,6 +13,7 @@ weapon = weaponType.SingleSting; //Player current weapon type.
 shotgunAmmo = 0; //shotgun ammo
 machineGunAmmo = 0; //machineGun ammo
 grenadeAmmo = 0; //grenade ammo
+detonatorAmmo = 0; //detonator ammo
 
 //Movement
 moveX = 0; // x movement (move left or right)

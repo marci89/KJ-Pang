@@ -2,6 +2,7 @@
 //parent properties
 event_inherited()
 decayItemOnGroundValue = 0.7;
+bounceDecay = 0.5; //bounce
 
 //own properties
 rotateAngle = 1; //rotation
