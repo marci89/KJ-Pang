@@ -23,7 +23,8 @@ global.playerOneFood = 50;
 	
 global.levelTimeMax = 105;
 global.hasLevelTime = false;
-global.playerNumber = 1; 
+global.playerNumber = 2; 
+global.hasRoomWallFrame = false;
 
 
 if(global.level == 1) CreateLevelTest();
@@ -119,7 +120,7 @@ function CreateLevelTest() {
 	CreateItem(200, 200, obj_item_food)
 	
 	
-	CreateItem(400, 200, obj_item_machine_gun)
+	CreateLifePoint(400,200,lifePointType.Red);
 		//CreateItem(400, 200, obj_item_life_point)
 	CreateFoodByImageIndex(32,30,1);
 	CreateFoodByImageIndex(32,30,2);
@@ -150,20 +151,20 @@ function CreateLevelTest() {
 	CreateFoodByImageIndex(32,30,1);
 	
 		//CreateItem(850, 200, obj_item_gravity_strong_reverse);
-		CreateItem(850, 200, obj_item_grenade);
-		CreateItem(800, 200, obj_item_bomb);
-		CreateItem(770, 200, obj_item_detonator);
-	//	CreateItem(750, 200, obj_item_time_slow);
-	//	CreateItem(740, 200, obj_item_time_slow);
-	//	CreateItem(730, 200, obj_item_time_slow);
-	//	CreateItem(720, 200, obj_item_time_slow);
-		CreateItem(700, 200, obj_item_land_mine);
+		CreateItem(850, 200, obj_item_machine_gun);
+		CreateItem(750, 200, obj_item_bomb);
+		CreateItem(690, 200, obj_item_tracking_rocket_launcher);
+		CreateItem(600, 200, obj_item_rocket_launcher);
+		CreateItem(500, 200, obj_item_shotgun);
+		CreateItem(400, 200, obj_item_land_mine);
+		CreateItem(350, 200, obj_item_detonator);
+		//CreateItem(700, 200, obj_item_rocket_launcher);
 	
 	
 	
 	//Enemy
 	
-	
+	/*
 	CreateNormalBallGiant(300, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
 	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_1, true);
@@ -171,6 +172,7 @@ function CreateLevelTest() {
 	CreateNormalBallGiant(200, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
 	normalBallColorType.Green, normalBallGiantDropItemType.DropQualityLevel_1, true);
+	*/
 	
 	
 	

@@ -3,4 +3,4 @@
 event_inherited()
 
 //own properties
-ammoCapacity = 3; // ammo value
+ammoCapacity = 72; // ammo value

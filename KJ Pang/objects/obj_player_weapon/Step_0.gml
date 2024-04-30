@@ -1,7 +1,10 @@
 
 #region Check important things
 
+//Check exists
 if (!instance_exists(player)) return;
+
+//allow fired on ground
  isAllowFired =  player.isOnGround == true ? true : false;
  
 //Check exists detonator
@@ -75,6 +78,20 @@ if(player.weapon == weaponType.LandMine) {
 	}
 }
 
+//rocket launcher
+if(player.weapon == weaponType.RocketLauncher) {
+	if(player.rocketLauncherAmmo <= 0) {
+		player.weapon = weaponType.SingleSting;
+	}
+}
+
+//tracking rocket launcher
+if(player.weapon == weaponType.TrackingRocketLauncher) {
+	if(player.trackingRocketLauncherAmmo <= 0) {
+		player.weapon = weaponType.SingleSting;
+	}
+}
+
 #endregion
 
 #region weapon type check
@@ -105,7 +122,15 @@ if(player.weapon == weaponType.LandMine) {
 			
 		} else if(player.weapon == weaponType.LandMine) {
 			handleLandMine();		
+		
+		} else if(player.weapon == weaponType.RocketLauncher) {
+			handleRocketLauncher();	
+			
+		} else if(player.weapon == weaponType.TrackingRocketLauncher) {
+			handleTrackingRocketLauncher();		
 		}
+		
+		
 		
 #endregion
 

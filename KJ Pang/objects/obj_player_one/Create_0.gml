@@ -16,6 +16,8 @@ grenadeAmmo = 0; //grenade ammo
 detonatorAmmo = 0; //detonator ammo
 bombAmmo = 0; //bomb ammo
 landMineAmmo = 0; //land mine ammo
+rocketLauncherAmmo = 0; //rocketLauncher ammo
+trackingRocketLauncherAmmo = 0; //tracling rocketLauncher ammo
 
 //Movement
 moveX = 0; // x movement (move left or right)
@@ -265,27 +267,27 @@ function ActivateSpecialAbility() {
 		}
 	}
 	
-	//activate ReverseGravity
+	//activate StrongReverseGravity
 	if (specialAbility == specialAbilityType.StrongReverseGravity) {
 		if(IsInstanceExists(effectControllerObj ?? noone)) {
 			effectControllerObj.ExecuteStrongReverseGravityEffect();
 		}
 	}
 	
-	//activate ReverseGravity
+	//activate Magnet
 	if (specialAbility == specialAbilityType.Magnet) {
 		ExecuteMagnetEffect(obj_player_one);
 		PlaySound(snd_magnet, false);
 	}
 	
-	//activate ReverseGravity
+	//activate TimeFreeze
 	if (specialAbility == specialAbilityType.TimeFreeze) {
 		if(IsInstanceExists(effectControllerObj ?? noone)) {
 			effectControllerObj.ExecuteTimeFreezeEffect();
 		}
 	}
 	
-	//activate ReverseGravity
+	//activate TimeSlow
 	if (specialAbility == specialAbilityType.TimeSlow) {
 		if(IsInstanceExists(effectControllerObj ?? noone)) {
 			effectControllerObj.ExecuteTimeSlowEffect();

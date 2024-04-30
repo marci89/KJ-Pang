@@ -48,9 +48,9 @@ else if(player.weapon == weaponType.MachineGun) {
 //grenade
 else if(player.weapon == weaponType.Grenade) {
 	if(global.playerNumber == 1) {
-		draw_text(posX + 20 , posY, "* " + string(player.grenadeAmmo));
+		draw_text(posX + 43 , posY-25, "* " + string(player.grenadeAmmo));
 	} else {
-		draw_text(posX-30 , posY-15, "* " + string(player.grenadeAmmo));
+		draw_text(posX-30 , posY-10, "* " + string(player.grenadeAmmo));
 	}
 	sprite_index = noone;	
 }
@@ -58,7 +58,7 @@ else if(player.weapon == weaponType.Grenade) {
 //detonator
 else if(player.weapon == weaponType.Detonator) {
 	if(global.playerNumber == 1) {
-		draw_text(posX + 20 , posY, "* " + string(player.detonatorAmmo));
+		draw_text(posX + 45 , posY-37, "* " + string(player.detonatorAmmo));
 	} else {
 		draw_text(posX-30 , posY-15, "* " + string(player.detonatorAmmo));
 	}
@@ -68,9 +68,9 @@ else if(player.weapon == weaponType.Detonator) {
 //bomb
 else if(player.weapon == weaponType.Bomb) {
 	if(global.playerNumber == 1) {
-		draw_text(posX + 20 , posY, "* " + string(player.bombAmmo));
+		draw_text(posX + 45 , posY-30, "* " + string(player.bombAmmo));
 	} else {
-		draw_text(posX-30 , posY-15, "* " + string(player.bombAmmo));
+		draw_text(posX-30 , posY-10, "* " + string(player.bombAmmo));
 	}
 	sprite_index = noone;	
 }
@@ -78,11 +78,31 @@ else if(player.weapon == weaponType.Bomb) {
 //land mine
 else if(player.weapon == weaponType.LandMine) {
 	if(global.playerNumber == 1) {
-		draw_text(posX + 20 , posY, "* " + string(player.landMineAmmo));
+		draw_text(posX + 52 , posY-37, "* " + string(player.landMineAmmo));
 	} else {
 		draw_text(posX-20 , posY-15, "* " + string(player.landMineAmmo));
 	}
 	sprite_index = noone;	
+}
+
+//rocket launcher
+else if(player.weapon == weaponType.RocketLauncher) {
+	if(global.playerNumber == 1) {
+		draw_text(posX + 12 , posY-4, "* " + string(player.rocketLauncherAmmo));
+	} else {
+		draw_text(posX+3 , posY, string(player.rocketLauncherAmmo));
+	}
+	sprite_index = spr_status_rocket_launcher_missile;	
+}
+
+//tracking rocket launcher
+else if(player.weapon == weaponType.TrackingRocketLauncher) {
+	if(global.playerNumber == 1) {
+		draw_text(posX + 12 , posY-4, "* " + string(player.trackingRocketLauncherAmmo));
+	} else {
+		draw_text(posX +3 , posY, string(player.trackingRocketLauncherAmmo));
+	}
+	sprite_index = spr_status_tracking_rocket_launcher_missile;	
 }
 
 

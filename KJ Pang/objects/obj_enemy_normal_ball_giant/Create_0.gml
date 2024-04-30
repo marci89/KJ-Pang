@@ -11,6 +11,7 @@ gravSpeedY = 0.02; // y gavity speed
 hitPoint = 1; //health
 enemyScore = 20; // score
 
+
 //Color
 colorType = normalBallColorType.Red;
 

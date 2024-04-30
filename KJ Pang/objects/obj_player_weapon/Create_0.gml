@@ -38,6 +38,21 @@ bombY = 35; // bomb y position
 landMineX = 9; // landMine x position
 landMineY = 35; // landMine y position
 
+//rocket launcher
+rocketLauncherX = -30; // x position
+rocketLauncherY =30; // y position
+rocketLauncherShootingPositionX = harpoonX -10; //  x position when shoot
+rocketLauncherShootingPositionY = shotgunY -10; //  y position when shoot
+
+//tracking rocket launcher
+trackingRocketLauncherX = -30; // x position
+trackingRocketLauncherY =30; // y position
+trackingRocketLauncherShootingPositionX = harpoonX -10; //  x position when shoot
+trackingRocketLauncherShootingPositionY = shotgunY -10; //  y position when shoot
+
+
+
+
 //direction
 weaponDirection = 1; // image direction
 rotationDirection = 1; // rotation direction when shoot
@@ -60,6 +75,9 @@ reloadingGrenadeTime = 15; // reload time
 reloadingDetonatorTime = 15; // reload time
 reloadingBombTime = 20; // reload time
 reloadingLandMineTime = 10; // reload time
+reloadingRocketLauncherTime = 50; // reload time
+reloadingTrackingRocketLauncherTime = 17; // reload time
+
 
 
 //important objects
@@ -132,7 +150,8 @@ function createShotgunBullets(posX, posY) {
 	var bulletX = posX;		
 	var bulletY = posY;
 	var defaultMoveY = -12;
-			
+		
+
 	CreateWeaponWithMovement(bulletX, bulletY, -1, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
 	CreateWeaponWithMovement(bulletX, bulletY, 1, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
 	CreateWeaponWithMovement(bulletX, bulletY, -2, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
@@ -319,7 +338,8 @@ function handleMachineGun() {
 			if(!isWeaponReloading) {
 				rotationDirection = weaponDirection;
 				isWeaponReloading = true;
-				alarm[1]  = reloadingMachineGunTime;	
+				alarm[0]  = weaponFiredRotationSpeed;
+				alarm[1]  = reloadingMachineGunTime;
 				PlaySound(snd_machine_gun_shoot, false);
 				
 				//bullet create
@@ -379,6 +399,7 @@ function handleShotgun() {
 			if(!isWeaponReloading) {
 				rotationDirection = weaponDirection;
 				isWeaponReloading = true;
+				alarm[0]  = weaponFiredRotationSpeed;
 				alarm[1]  = reloadingShotgunTime;	
 				PlaySound(snd_shotgun_shoot, false);
 				
@@ -387,7 +408,7 @@ function handleShotgun() {
 				var bulletY = weaponDirection == 1 ? y - sprite_width :  y + sprite_width;
 				createFireAnimation(bulletX, bulletY);
 				createShotgunBullets(bulletX, bulletY);
-				player.shotgunAmmo--;
+				player.shotgunAmmo -= 24;
 							
 				// handle weapon change
 				if(player.shotgunAmmo == 0) {
@@ -425,6 +446,7 @@ function handleGrenade() {
 				rotationDirection = weaponDirection;
 				isFired = true;
 				isWeaponReloading = true;
+				alarm[0]  = weaponFiredRotationSpeed;
 				alarm[1]  = reloadingGrenadeTime;
 				
 				var directionValue = weaponDirection == 1 ? 4 : -4; // direction
@@ -476,6 +498,7 @@ function handleDetonator() {
 				rotationDirection = weaponDirection;
 				isFired = false;
 				isWeaponReloading = true;
+				alarm[0]  = weaponFiredRotationSpeed;
 				alarm[1]  = reloadingDetonatorTime;
 				
 				var directionValue = weaponDirection == 1 ? 9 : -9; // direction
@@ -497,6 +520,7 @@ function handleDetonator() {
 				
 				rotationDirection = weaponDirection;
 				isWeaponReloading = true;
+				alarm[0]  = weaponFiredRotationSpeed;
 				alarm[1]  = reloadingDetonatorTime;
 			}
 			
@@ -533,6 +557,7 @@ function handleBomb() {
 				rotationDirection = weaponDirection;
 				isFired = true;
 				isWeaponReloading = true;
+				alarm[0]  = weaponFiredRotationSpeed;
 				alarm[1]  = reloadingBombTime;
 				
 				var directionValue = weaponDirection == 1 ? 1 : -1; // direction
@@ -574,6 +599,7 @@ function handleLandMine() {
 				rotationDirection = weaponDirection;
 				isFired = true;
 				isWeaponReloading = true;
+				alarm[0]  = weaponFiredRotationSpeed;
 				alarm[1]  = reloadingLandMineTime;
 				
 				var directionValue = 0;
@@ -592,4 +618,127 @@ function handleLandMine() {
 }
 
 #endregion
+
+// rocket launcher
+
+#region rocket launcher function
+
+function handleRocketLauncher() {
+	
+	weaponX = rocketLauncherX;
+	weaponY = rocketLauncherY;
+	var weaponShootingPositionX = rocketLauncherShootingPositionX;
+	var weaponShootingPositionY = rocketLauncherShootingPositionY;
+	
+	sprite_index = spr_player_weapon_rocket_launcher; // set the weapon image
+	
+		
+	if (!player.isOnGround) isFired = false;
+	setWeaponVisibility();
+	
+	//While shooting change gun angle
+	if ((inputFire || inputFirePressed)  && !player.isDead) {
+		image_angle = weaponDirection == 1 ? 90 : -90;	
+		isFired = true;
+		
+		// during shoot set player center x pos because this weapon is longer
+	    weaponX = weaponShootingPositionX; 
+		weaponY = weaponShootingPositionY;
+	} else {
+		image_angle = 0;	
+		weaponX = rocketLauncherX; // set basic x pos
+		weaponY = rocketLauncherY; // set basic x pos
+		isFired = false;
+	}
+
+	//Set the x and y position to character
+	x = weaponDirection == 1 ? player.x + weaponX : player.x - weaponX;
+	y = player.y - weaponY;
+
+	// shoot
+    if ((inputFire || inputFirePressed) && isAllowFired && !player.isDead && !isWeaponReloading) {
+			if(!isWeaponReloading) {
+				rotationDirection = weaponDirection;
+				isWeaponReloading = true;
+				alarm[0]  = weaponFiredRotationSpeed;
+				alarm[1]  = reloadingRocketLauncherTime;	
+				PlaySound(snd_rocket_launcher_missile, false);
+				
+				//bullet create
+				var bulletX = weaponDirection == 1 ? x-3 : x+3;	
+				var bulletY = weaponDirection == 1 ? y - sprite_width :  y + sprite_width;
+				CreateWeapon(bulletX, bulletY, obj_weapon_rocket_launcher_missile, "TopWeapon", player ?? noone);
+				player.rocketLauncherAmmo--;
+							
+				// handle weapon change
+				if(player.rocketLauncherAmmo == 0) {
+					image_angle = 0;
+					alarm[1]  = reloadingHarpoonTime;
+				}
+			} 
+	}	
+}
+
+#endregion
+
+#region tracking rocket launcher function
+
+function handleTrackingRocketLauncher() {
+	
+	weaponX = trackingRocketLauncherX;
+	weaponY = trackingRocketLauncherY;
+	var weaponShootingPositionX = trackingRocketLauncherShootingPositionX;
+	var weaponShootingPositionY = trackingRocketLauncherShootingPositionY;
+	
+	sprite_index = spr_player_weapon_tracking_rocket_launcher; // set the weapon image
+	
+		
+	if (!player.isOnGround) isFired = false;
+	setWeaponVisibility();
+	
+	//While shooting change gun angle
+	if ((inputFire || inputFirePressed)  && !player.isDead) {
+		image_angle = weaponDirection == 1 ? 90 : -90;	
+		isFired = true;
+		
+		// during shoot set player center x pos because this weapon is longer
+	    weaponX = weaponShootingPositionX; 
+		weaponY = weaponShootingPositionY;
+	} else {
+		image_angle = 0;	
+		weaponX = trackingRocketLauncherX; // set basic x pos
+		weaponY = trackingRocketLauncherY; // set basic x pos
+		isFired = false;
+	}
+
+	//Set the x and y position to character
+	x = weaponDirection == 1 ? player.x + weaponX : player.x - weaponX;
+	y = player.y - weaponY;
+
+	// shoot
+    if ((inputFire || inputFirePressed) && isAllowFired && !player.isDead && !isWeaponReloading) {
+			if(!isWeaponReloading) {
+				rotationDirection = weaponDirection;
+				isWeaponReloading = true;
+				alarm[0]  = weaponFiredRotationSpeed;
+				alarm[1]  = reloadingTrackingRocketLauncherTime;	
+				PlaySound(snd_small_missile, false);
+				
+				//bullet create
+				var bulletX = weaponDirection == 1 ? x-3 : x+3;	
+				var bulletY = weaponDirection == 1 ? y - sprite_width :  y + sprite_width;
+				CreateWeapon(bulletX, bulletY, obj_weapon_tracking_rocket_launcher_missile, "TopWeapon", player ?? noone);
+				player.trackingRocketLauncherAmmo--;
+							
+				// handle weapon change
+				if(player.trackingRocketLauncherAmmo == 0) {
+					image_angle = 0;
+					alarm[1]  = reloadingHarpoonTime;
+				}
+			} 
+	}	
+}
+
+#endregion
+
 

@@ -44,6 +44,16 @@ if(player.weapon == weaponType.LandMine) {
 	sprite_index = spr_status_land_mine;
 }
 
+if(player.weapon == weaponType.RocketLauncher) {
+	sprite_index = spr_status_rocket_launcher;
+}
+
+
+if(player.weapon == weaponType.TrackingRocketLauncher) {
+	sprite_index = spr_status_tracking_rocket_launcher;
+}
+
+
 
 
 #endregion

@@ -8,15 +8,15 @@ type = weaponType.Grenade; // weapon type
 isWallBreaker = true;
 
 
-
 #region Set Weapon values
 
 function SetWeaponValues(type, destroyTime) {
 	
-	//grenade
+	//original
 	if(type == weaponType.Grenade
 	|| type == weaponType.Detonator 
-	|| type == weaponType.LandMine)	{
+	|| type == weaponType.LandMine
+	|| type == weaponType.RocketLauncher)	{
 		
 		damage = 3; // damage
 		//item hooping values when shooting near them

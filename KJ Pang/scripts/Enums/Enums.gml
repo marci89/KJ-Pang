@@ -116,7 +116,9 @@ enum weaponType{
 	Grenade,
 	Detonator,
 	Bomb,
-	LandMine
+	LandMine,
+	RocketLauncher,
+	TrackingRocketLauncher
 };
 
 #endregion
