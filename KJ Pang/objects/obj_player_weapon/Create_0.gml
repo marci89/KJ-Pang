@@ -4,8 +4,8 @@ weaponX = 0; // main variable for player's weapon x pos
 weaponY = 0; // main variable for player's weapon y pos
 
 //harpoon
-harpoonX = 5; // harpoo x position
-harpoonY = 39; // harpoo y position
+harpoonX = 5; // harpoon x position
+harpoonY = 39; // harpoon y position
 stingStartYPositionSpace = -6; // add plus space the sting when it will be created
 powerWireStartYPositionSpace = -4; // add plus space the sting when it will be created
 
@@ -21,6 +21,9 @@ shotgunY =30; // shotgun y position
 shotgunShootingPositionX = harpoonX -10; // shotgun x position when shoot
 shotgunShootingPositionY = shotgunY -10; // shotgun y position when shoot
 
+//pistol
+pistolX = 5; // pistol x position
+pistolY = 39; // pistol y position
 
 //grenade
 grenadeX = -5; // grenade x position
@@ -77,6 +80,7 @@ reloadingBombTime = 20; // reload time
 reloadingLandMineTime = 10; // reload time
 reloadingRocketLauncherTime = 50; // reload time
 reloadingTrackingRocketLauncherTime = 17; // reload time
+reloadingPistolTime = 17; // reload time
 
 
 
@@ -345,6 +349,7 @@ function handleMachineGun() {
 				//bullet create
 				var bulletX = weaponDirection == 1 ? x-10 : x+10;	
 				var bulletY = weaponDirection == 1 ? y - sprite_width :  y + sprite_width;
+
 				createFireAnimation(bulletX, bulletY)
 				CreateWeapon(bulletX, bulletY, obj_weapon_machine_gun_bullet, "TopWeapon", player ?? noone);
 				
@@ -421,6 +426,50 @@ function handleShotgun() {
 
 #endregion
 
+#region pistol function
+
+function handlePistol() {
+	
+	weaponX = pistolX;
+	weaponY = pistolY;
+	sprite_index = spr_player_weapon_pistol; // set the weapon image
+	
+	setWeaponVisibility();
+	
+	//Set the x and y position to character
+	x = weaponDirection == 1 ? player.x + weaponX : player.x - weaponX;
+	y = player.y - weaponY;
+
+	// shoot
+    if ((inputFire || inputFirePressed) && isAllowFired && !player.isDead && !isWeaponReloading) {
+		
+		if(!isWeaponReloading) {
+			rotationDirection = weaponDirection;
+			isFired = true;
+			isWeaponReloading = true;
+			image_angle = weaponDirection == 1 ? 90 : -90;
+			alarm[0]  = weaponFiredRotationSpeed;
+			alarm[1]  = reloadingPistolTime;
+			
+			PlaySound(snd_pistol_shoot, false, 1);
+				
+				//bullet create
+			var bulletX = weaponDirection == 1 ? x-5 : x+5;	
+			var bulletY = weaponDirection == 1 ? y - sprite_width :  y + sprite_width;
+			createFireAnimation(bulletX, bulletY)
+			CreateWeapon(bulletX, bulletY, obj_weapon_pistol_bullet, "TopWeapon", player ?? noone);
+				
+				player.pistolAmmo --;
+				
+			// handle weapon change
+			if(player.pistolAmmo == 0) {
+				image_angle = 0;
+			}
+		}
+	}
+}
+
+#endregion
 
 //Bombs
 

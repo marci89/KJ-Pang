@@ -12,8 +12,8 @@
   "duration":0.783656,
   "name":"snd_machine_gun_pickup",
   "parent":{
-    "name":"MachineGun",
-    "path":"folders/Sounds/Voice/Weapon/MachineGun.yy",
+    "name":"Gun",
+    "path":"folders/Sounds/Voice/Weapon/Gun.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

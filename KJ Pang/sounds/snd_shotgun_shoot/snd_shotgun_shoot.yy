@@ -12,8 +12,8 @@
   "duration":1.272,
   "name":"snd_shotgun_shoot",
   "parent":{
-    "name":"Shotgun",
-    "path":"folders/Sounds/Voice/Weapon/Shotgun.yy",
+    "name":"Gun",
+    "path":"folders/Sounds/Voice/Weapon/Gun.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

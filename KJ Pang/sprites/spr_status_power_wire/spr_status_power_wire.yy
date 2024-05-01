@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":1,
   "parent":{
-    "name":"Weapon",
-    "path":"folders/Sprites/Status/Weapon.yy",
+    "name":"Sting",
+    "path":"folders/Sprites/Status/Weapon/Sting.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -9,8 +9,8 @@
   "name":"obj_item_double_sting",
   "overriddenProperties":[],
   "parent":{
-    "name":"Weapon",
-    "path":"folders/Objects/Item/Weapon.yy",
+    "name":"Sting",
+    "path":"folders/Objects/Item/Weapon/Sting.yy",
   },
   "parentObjectId":{
     "name":"obj_item_parent",

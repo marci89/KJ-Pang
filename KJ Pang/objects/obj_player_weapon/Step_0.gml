@@ -50,6 +50,13 @@ if(player.weapon == weaponType.ShotGun) {
 	}
 }
 
+//pistol
+if(player.weapon == weaponType.Pistol) {
+	if(player.pistolAmmo <= 0) {
+		player.weapon = weaponType.SingleSting;
+	}
+}
+
 //grenade
 if(player.weapon == weaponType.Grenade) {
 	if(player.grenadeAmmo <= 0) {
@@ -111,6 +118,9 @@ if(player.weapon == weaponType.TrackingRocketLauncher) {
 		}  else if(player.weapon == weaponType.ShotGun) {
 			handleShotgun();
 			
+		}  else if(player.weapon == weaponType.Pistol) {
+			handlePistol();
+			
 		}  else if(player.weapon == weaponType.Grenade) {
 			handleGrenade();		
 		
@@ -138,6 +148,11 @@ if(player.weapon == weaponType.TrackingRocketLauncher) {
 
 	var animationX = weaponDirection == 1 ? x-10 : x+10;	
 	var animationY = weaponDirection == 1 ? y - sprite_width :  y + sprite_width;
+	
+	if(player.weapon == weaponType.Pistol) {
+		animationX = weaponDirection == 1 ? x-5 : x+5;	
+	}
+	
 	updateFireAnimationPosition(animationX, animationY);
 	
 #endregion

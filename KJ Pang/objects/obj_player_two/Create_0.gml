@@ -12,12 +12,14 @@ isCharacterVoiceEnabled = true;
 weapon = weaponType.SingleSting; //Player current weapon type. 
 shotgunAmmo = 0; //shotgun ammo
 machineGunAmmo = 0; //machineGun ammo
+pistolAmmo = 0; //pistol ammo
 grenadeAmmo = 0; //grenade ammo
 detonatorAmmo = 0; //detonator ammo
 bombAmmo = 0; //bomb ammo
 landMineAmmo = 0; //land mine ammo
 rocketLauncherAmmo = 0; //rocketLauncher ammo
 trackingRocketLauncherAmmo = 0; //tracling rocketLauncher ammo
+
 
 //Movement
 moveX = 0; // x movement (move left or right)

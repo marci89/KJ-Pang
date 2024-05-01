@@ -12,8 +12,8 @@
   "duration":1.536,
   "name":"snd_small_missile_explosion",
   "parent":{
-    "name":"Missle",
-    "path":"folders/Sounds/Voice/Weapon/Missle.yy",
+    "name":"Missile",
+    "path":"folders/Sounds/Voice/Weapon/Missile.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

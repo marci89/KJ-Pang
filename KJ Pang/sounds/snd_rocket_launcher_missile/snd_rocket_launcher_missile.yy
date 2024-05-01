@@ -12,8 +12,8 @@
   "duration":5.32898,
   "name":"snd_rocket_launcher_missile",
   "parent":{
-    "name":"Missle",
-    "path":"folders/Sounds/Voice/Weapon/Missle.yy",
+    "name":"Missile",
+    "path":"folders/Sounds/Voice/Weapon/Missile.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

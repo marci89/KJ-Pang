@@ -45,6 +45,16 @@ else if(player.weapon == weaponType.MachineGun) {
 	sprite_index = spr_status_machinegun_bullet;	
 }
 
+//pistol
+else if(player.weapon == weaponType.Pistol) {
+	if(global.playerNumber == 1) {
+		draw_text(posX , posY, "* " + string(player.pistolAmmo));
+	} else {
+		draw_text(posX-5 , posY, string(player.pistolAmmo));
+	}
+	sprite_index = spr_status_pistol_bullet;	
+}
+
 //grenade
 else if(player.weapon == weaponType.Grenade) {
 	if(global.playerNumber == 1) {

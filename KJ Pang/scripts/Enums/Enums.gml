@@ -113,6 +113,7 @@ enum weaponType{
     PowerWire,
 	MachineGun,
 	ShotGun,
+	Pistol,
 	Grenade,
 	Detonator,
 	Bomb,
