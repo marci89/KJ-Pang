@@ -115,6 +115,16 @@ else if(player.weapon == weaponType.TrackingRocketLauncher) {
 	sprite_index = spr_status_tracking_rocket_launcher_missile;	
 }
 
+//flameThrower
+else if(player.weapon == weaponType.FlameThrower) {
+	if(global.playerNumber == 1) {
+		draw_text(posX+ 5 , posY, "* " + string(player.flameThrowerAmmo));
+	} else {
+		draw_text(posX-5 , posY, string(player.flameThrowerAmmo));
+	}
+	sprite_index = spr_status_flame_picture;	
+}
+
 
 //nothing
 else sprite_index = noone;

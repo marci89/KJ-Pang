@@ -21,8 +21,8 @@
 	global.playerTwoLifePoint = 0; //player2 life points
 	global.playerOneGender = PlayerGenderType.Female; // player 1 gender
 	global.playerTwoGender = PlayerGenderType.Male; // player 2 gender
-	global.playerOneSpecialAbility = specialAbilityType.StrongReverseGravity; // player 1's special ability
-	global.playerTwoSpecialAbility = specialAbilityType.TimeFreeze; // player 2's special ability
+	global.playerOneSpecialAbility = specialAbilityType.EnergyShield; // player 1's special ability
+	global.playerTwoSpecialAbility = specialAbilityType.EnergyShield; // player 2's special ability
 	global.playerOneFood = 0; // food number for player 1 special ability
 	global.playerTwoFood = 0; // food number for player 2 special ability
 

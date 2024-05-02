@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"DynamiteEffect",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"DynamiteEffect",
+  "parent":{
+    "name":"Effect",
+    "path":"folders/Scripts/Game/Effect.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

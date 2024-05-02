@@ -1,21 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_weapon_invisible_weapon_point",
+  "%Name":"obj_item_flamethrower",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_weapon_invisible_weapon_point",
+  "name":"obj_item_flamethrower",
   "overriddenProperties":[],
   "parent":{
-    "name":"InvisibleWeaponPoint",
-    "path":"folders/Objects/Weapon/InvisibleWeaponPoint.yy",
+    "name":"Special",
+    "path":"folders/Objects/Item/Weapon/Special.yy",
   },
   "parentObjectId":{
-    "name":"obj_weapon_parent",
-    "path":"objects/obj_weapon_parent/obj_weapon_parent.yy",
+    "name":"obj_item_parent",
+    "path":"objects/obj_item_parent/obj_item_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -35,9 +34,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_weapon_invisible_weapon_point",
-    "path":"sprites/spr_weapon_invisible_weapon_point/spr_weapon_invisible_weapon_point.yy",
+    "name":"spr_item_flamethrower",
+    "path":"sprites/spr_item_flamethrower/spr_item_flamethrower.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

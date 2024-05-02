@@ -53,6 +53,12 @@ trackingRocketLauncherY =30; // y position
 trackingRocketLauncherShootingPositionX = harpoonX -10; //  x position when shoot
 trackingRocketLauncherShootingPositionY = shotgunY -10; //  y position when shoot
 
+//FlameThrower
+flameThrowerX = -30; // x position
+flameThrowerY =30; // y position
+flameThrowerShootingPositionX = harpoonX -10; //  x position when shoot
+flameThrowerShootingPositionY = shotgunY -10; //  y position when shoot
+
 
 
 
@@ -81,6 +87,7 @@ reloadingLandMineTime = 10; // reload time
 reloadingRocketLauncherTime = 50; // reload time
 reloadingTrackingRocketLauncherTime = 17; // reload time
 reloadingPistolTime = 17; // reload time
+reloadingFlameThrowerTime = 5; // reload time
 
 
 
@@ -790,4 +797,85 @@ function handleTrackingRocketLauncher() {
 
 #endregion
 
+//special weapons
+
+#region FlameThrower function
+
+function handleFlameThrower() {
+	
+	weaponX = flameThrowerX;
+	weaponY = flameThrowerY;
+	var weaponShootingPositionX = flameThrowerShootingPositionX;
+	var weaponShootingPositionY = flameThrowerShootingPositionY;
+
+	sprite_index = spr_player_weapon_flamethrower; // set the weapon image
+	
+
+		
+	//While shooting change gun angle
+	if ((inputFire || inputFirePressed) && !player.isDead ) {
+		image_angle = weaponDirection == 1 ? 90 : -90;	
+		isFired = true;
+		
+		// during shoot set player center x pos because this weapon is longer
+	    weaponX = weaponShootingPositionX; 
+		weaponY = weaponShootingPositionY;
+	} else {
+		image_angle = 0;	
+		weaponX = flameThrowerX; // set basic x pos
+		weaponY = flameThrowerY; // set basic x pos
+		isFired = false;
+	}
+	
+	if (!player.isOnGround) isFired = false;
+		setWeaponVisibility();
+
+
+	//Set the x and y position to character
+	x = weaponDirection == 1 ? player.x + weaponX : player.x - weaponX;
+	y = player.y - weaponY;
+
+	// shoot
+    if ((inputFire || inputFirePressed) && isAllowFired && !player.isDead && !isWeaponReloading) {
+			if(!isWeaponReloading) {
+				rotationDirection = weaponDirection;
+				isWeaponReloading = true;
+				alarm[0]  = weaponFiredRotationSpeed;
+				alarm[1]  = reloadingFlameThrowerTime;
+				
+
+			// Check if the sound is not already playing
+			if (!audio_is_playing(snd_flame_thrower_shoot)) {
+				PlaySound(snd_flame_thrower_shoot, false);
+	
+			}
+						
+				//bullet create
+				var bulletX = weaponDirection == 1 ? x-10 : x+10;	
+				var bulletY = weaponDirection == 1 ? y - sprite_width + 50 :  y + sprite_width + 50;
+				var destroyTime = 60;
+
+				//fire animation
+				effect_create_above( ef_smokeup, bulletX, bulletY -50, 2, c_red);
+				effect_create_above( ef_smokeup, bulletX, bulletY -50, 1, c_yellow);
+				effect_create_above( ef_smokeup, bulletX, bulletY -50, 0, c_white);
+
+				//invisible bullets
+				CreateInvisibleWeaponWithMovement(bulletX, bulletY, -0.3, 5, invisibleWeaponShapeType.Point, weaponType.FlameThrower, "Weapon", player ?? noone, destroyTime, false);
+				CreateInvisibleWeaponWithMovement(bulletX, bulletY, -0.6, 5, invisibleWeaponShapeType.Point, weaponType.FlameThrower, "Weapon", player ?? noone, destroyTime, false);
+				CreateInvisibleWeaponWithMovement(bulletX, bulletY, 0.3, 5, invisibleWeaponShapeType.Point, weaponType.FlameThrower, "Weapon", player ?? noone, destroyTime, false);
+				CreateInvisibleWeaponWithMovement(bulletX, bulletY, 0.6, 5, invisibleWeaponShapeType.Point, weaponType.FlameThrower, "Weapon", player ?? noone, destroyTime, false);
+				CreateInvisibleWeaponWithMovement(bulletX, bulletY, 0, 5, invisibleWeaponShapeType.Point, weaponType.FlameThrower, "Weapon", player ?? noone, destroyTime, false);
+				
+				 player.flameThrowerAmmo -= 5;
+				
+				// handle weapon change
+				if(player.flameThrowerAmmo == 0) {
+				    image_angle = 0;
+				}
+			}
+	}
+}
+
+#endregion
 

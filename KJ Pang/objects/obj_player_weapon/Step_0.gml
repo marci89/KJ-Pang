@@ -99,6 +99,14 @@ if(player.weapon == weaponType.TrackingRocketLauncher) {
 	}
 }
 
+//FlameThrower
+if(player.weapon == weaponType.FlameThrower) {
+	if(player.flameThrowerAmmo <= 0) {
+		player.weapon = weaponType.SingleSting;
+	}
+}
+
+
 #endregion
 
 #region weapon type check
@@ -138,7 +146,11 @@ if(player.weapon == weaponType.TrackingRocketLauncher) {
 			
 		} else if(player.weapon == weaponType.TrackingRocketLauncher) {
 			handleTrackingRocketLauncher();		
+			
+		} else if(player.weapon == weaponType.FlameThrower) {
+			handleFlameThrower();		
 		}
+		
 		
 		
 		

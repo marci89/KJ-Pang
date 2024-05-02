@@ -19,7 +19,7 @@ bombAmmo = 0; //bomb ammo
 landMineAmmo = 0; //land mine ammo
 rocketLauncherAmmo = 0; //rocketLauncher ammo
 trackingRocketLauncherAmmo = 0; //tracling rocketLauncher ammo
-
+flameThrowerAmmo = 0; //flamethrower ammo
 
 //Movement
 moveX = 0; // x movement (move left or right)
@@ -47,6 +47,7 @@ CreatePlayerWeapon(x, y, id);
 isActive = true; // if it is active it can do everything (live) else deactive so freezed.
 isDead = false; // death or alive
 isInvincible = false; // if this is true, nothing hurts you.
+hasEnergyShield = false; // energy shield
 
 //Settings
 
@@ -303,6 +304,21 @@ function ActivateSpecialAbility() {
 	if (specialAbility == specialAbilityType.TimeSlow) {
 		if(IsInstanceExists(effectControllerObj ?? noone)) {
 			effectControllerObj.ExecuteTimeSlowEffect();
+		}
+	}
+	
+	//activate dynamite
+	if (specialAbility == specialAbilityType.Dynamite) {
+		var instance = instance_create_layer(x, y,"Item", obj_item_dynamite);
+		instance.image_alpha = 0;
+	}
+	
+	//activate energy shield
+	if (specialAbility == specialAbilityType.EnergyShield) {
+		  if(!hasEnergyShield) {
+				CreatePlayerEnergyShield(x, y, obj_player_two ?? noone);
+			} else {
+			PlaySound(snd_energy_shield_activate, false);
 		}
 	}
 	

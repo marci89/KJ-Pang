@@ -191,7 +191,6 @@ if (!isDead) {
 
 // Collision with enemy
 if (collision_circle(x, y-25, 28, obj_enemy_parent, true, true)) {
-	show_debug_message("itt")
 	if(global.currentLevelEffect != levelEffectType.TimeFreeze) {
 		// var enemyInstance = instance_place(x, y, obj_enemy_parent);
 		var enemyInstance = collision_circle(x, y-25, 28, obj_enemy_parent, true, true);
@@ -199,7 +198,17 @@ if (collision_circle(x, y-25, 28, obj_enemy_parent, true, true)) {
 		        if (!enemyInstance.isHarmless) {
 					if (!isDead && !isInvincible) {
 						
-					Death();
+						//shield check
+						if(hasEnergyShield) {
+							PlaySound(snd_energy_shield_deactivate, false);
+							hasEnergyShield = false;
+							isDead = false;
+							isInvincible = true;
+							isBlinked = true;
+						} else {
+							
+							Death();
+						}
 					
 					}
 				}

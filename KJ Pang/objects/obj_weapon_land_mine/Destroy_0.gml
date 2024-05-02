@@ -17,7 +17,7 @@ var destroyTime = 10;
 //1. row
 for (var i = 0; i < numPoints; i++) {
 	var positionY =  y - 100;
-    CreateInvisibleWeaponPoint(x + xOffset, positionY, obj_weapon_invisible_weapon_point, weaponType.LandMine, "Weapon", player ?? noone, destroyTime, true);
+    CreateInvisibleWeapon(x + xOffset, positionY, invisibleWeaponShapeType.Square, weaponType.LandMine, "Weapon", player ?? noone, destroyTime, true);
     xOffset += xOffsetIncrement; // Increment the x-offset for the next point
 }
 
@@ -26,7 +26,7 @@ xOffset = -100;
 //2. row
 for (var i = 0; i < numPoints; i++) {
 	var positionY =  y - 70;
-    CreateInvisibleWeaponPoint(x + xOffset, positionY, obj_weapon_invisible_weapon_point, weaponType.LandMine, "Weapon", player ?? noone, destroyTime, true);
+    CreateInvisibleWeapon(x + xOffset, positionY, invisibleWeaponShapeType.Square, weaponType.LandMine, "Weapon", player ?? noone, destroyTime, true);
     xOffset += xOffsetIncrement; // Increment the x-offset for the next point
 }
 
@@ -35,7 +35,7 @@ xOffset = -100;
 //3. row
 for (var i = 0; i < numPoints; i++) {
 	var positionY =  y-35;
-    CreateInvisibleWeaponPoint(x + xOffset, positionY, obj_weapon_invisible_weapon_point, weaponType.LandMine, "Weapon", player ?? noone, destroyTime, true);
+    CreateInvisibleWeapon(x + xOffset, positionY, invisibleWeaponShapeType.Square, weaponType.LandMine, "Weapon", player ?? noone, destroyTime, true);
     xOffset += xOffsetIncrement; // Increment the x-offset for the next point
 }
 
@@ -44,7 +44,7 @@ xOffset = -100;
 //4. row
 for (var i = 0; i < numPoints; i++) {
 	var positionY =  y;
-    CreateInvisibleWeaponPoint(x + xOffset, positionY, obj_weapon_invisible_weapon_point, weaponType.LandMine, "Weapon", player ?? noone, destroyTime, true);
+    CreateInvisibleWeapon(x + xOffset, positionY, invisibleWeaponShapeType.Square, weaponType.LandMine, "Weapon", player ?? noone, destroyTime, true);
     xOffset += xOffsetIncrement; // Increment the x-offset for the next point
 }
 
@@ -53,7 +53,7 @@ xOffset = -100;
 //5. row
 for (var i = 0; i < numPoints; i++) {
 	var positionY =  y + 35;
-    CreateInvisibleWeaponPoint(x + xOffset, positionY, obj_weapon_invisible_weapon_point, weaponType.LandMine, "Weapon", player ?? noone, destroyTime, true);
+    CreateInvisibleWeapon(x + xOffset, positionY, invisibleWeaponShapeType.Square, weaponType.LandMine, "Weapon", player ?? noone, destroyTime, true);
     xOffset += xOffsetIncrement; // Increment the x-offset for the next point
 }
 
@@ -62,7 +62,7 @@ xOffset = -100;
 //6. row
 for (var i = 0; i < numPoints; i++) {
 	var positionY =  y + 70;
-    CreateInvisibleWeaponPoint(x + xOffset, positionY, obj_weapon_invisible_weapon_point, weaponType.LandMine, "Weapon", player ?? noone, destroyTime, true);
+    CreateInvisibleWeapon(x + xOffset, positionY, invisibleWeaponShapeType.Square, weaponType.LandMine, "Weapon", player ?? noone, destroyTime, true);
     xOffset += xOffsetIncrement; // Increment the x-offset for the next point
 }
 
@@ -71,7 +71,7 @@ xOffset = -100;
 //7. row
 for (var i = 0; i < numPoints; i++) {
 	var positionY =  y + 100;
-    CreateInvisibleWeaponPoint(x + xOffset, positionY, obj_weapon_invisible_weapon_point, weaponType.LandMine, "Weapon", player ?? noone, destroyTime, true);
+    CreateInvisibleWeapon(x + xOffset, positionY, invisibleWeaponShapeType.Square, weaponType.LandMine, "Weapon", player ?? noone, destroyTime, true);
     xOffset += xOffsetIncrement; // Increment the x-offset for the next point
 }
 

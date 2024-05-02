@@ -34,7 +34,17 @@ function SetSprite(specialAbility) {
 	if (specialAbility == specialAbilityType.TimeSlow) {
 		activeImage = spr_status_time_slow;
 		inactiveImage = spr_status_inactive_time_slow;
-	}		
+	}
+	
+	if (specialAbility == specialAbilityType.Dynamite) {
+		activeImage = spr_status_dynamite;
+		inactiveImage = spr_status_inactive_dynamite;
+	}	
+	
+	if (specialAbility == specialAbilityType.EnergyShield) {
+		activeImage = spr_status_energy_shield;
+		inactiveImage = spr_status_inactive_energy_shield;
+	}	
 }
 
 #endregion

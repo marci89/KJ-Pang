@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"CreatePlayerEnergyShield",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CreatePlayerEnergyShield",
+  "parent":{
+    "name":"Player",
+    "path":"folders/Scripts/Creator/Player.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -49,7 +49,7 @@ var nearestWeapon = instance_nearest(x, y, obj_weapon_parent);
 		var isHoppingEnable  = false;
 		
 		//check postions to set hopping effect or not
-		if(nearestWeapon.object_index == obj_weapon_invisible_weapon_point) {
+		if(nearestWeapon.object_index == obj_weapon_invisible_weapon) {
 			isHoppingEnable = true;
 		} else if (y < nearestWeapon.player.y-40){
 			isHoppingEnable = true;

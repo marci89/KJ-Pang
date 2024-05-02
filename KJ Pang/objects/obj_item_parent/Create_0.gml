@@ -24,6 +24,7 @@ isAllowWeaponHopping = true;
 //Shrinking animation
 shrinkingAmount = 0.05; // amount of Shrinking
 isPickedUp = false; // is picked up or not
+isdestroyedAfterPickUp = true; //destroy or not if picked up
 
 //Shrinking animation start
 alarm[0]  = 5;

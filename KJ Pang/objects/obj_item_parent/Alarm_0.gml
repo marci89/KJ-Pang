@@ -6,7 +6,11 @@ if (isPickedUp) {
 
 	// Check if the size is less than or equal to 0
 	if (image_xscale <= 0 || image_yscale <= 0) {
-	    instance_destroy(); // Delete the instance
+		if(isdestroyedAfterPickUp) {
+			instance_destroy(); // Delete the instance
+		} else {
+			shrinkingAmount = 0;
+		}
 	}
 }
 

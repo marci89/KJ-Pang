@@ -42,7 +42,7 @@ var destroyTime = 10;
 //1. row
 for (var i = 0; i < numPoints; i++) {
 	var positionY =  y - 195;
-    CreateInvisibleWeaponPoint(x + xOffset, positionY, obj_weapon_invisible_weapon_point, weaponType.Bomb, "Weapon", player ?? noone, destroyTime, true);
+    CreateInvisibleWeapon(x + xOffset, positionY, invisibleWeaponShapeType.Square, weaponType.Bomb, "Weapon", player ?? noone, destroyTime, true);
     xOffset += xOffsetIncrement; // Increment the x-offset for the next point
 }
 
@@ -51,7 +51,7 @@ xOffset = -345;
 //2. row
 for (var i = 0; i < numPoints; i++) {
 	var positionY =  y - 165;
-    CreateInvisibleWeaponPoint(x + xOffset, positionY, obj_weapon_invisible_weapon_point, weaponType.Bomb, "Weapon", player ?? noone, destroyTime, true);
+    CreateInvisibleWeapon(x + xOffset, positionY, invisibleWeaponShapeType.Square, weaponType.Bomb, "Weapon", player ?? noone, destroyTime, true);
     xOffset += xOffsetIncrement; // Increment the x-offset for the next point
 }
 
@@ -60,7 +60,7 @@ xOffset = -345;
 //3. row
 for (var i = 0; i < numPoints; i++) {
 	var positionY =  y - 135;
-    CreateInvisibleWeaponPoint(x + xOffset, positionY, obj_weapon_invisible_weapon_point, weaponType.Bomb, "Weapon", player ?? noone, destroyTime, true);
+    CreateInvisibleWeapon(x + xOffset, positionY, invisibleWeaponShapeType.Square, weaponType.Bomb, "Weapon", player ?? noone, destroyTime, true);
     xOffset += xOffsetIncrement; // Increment the x-offset for the next point
 }
 
@@ -69,7 +69,7 @@ xOffset = -345;
 //4. row
 for (var i = 0; i < numPoints; i++) {
 	var positionY =  y - 100;
-    CreateInvisibleWeaponPoint(x + xOffset, positionY, obj_weapon_invisible_weapon_point, weaponType.Bomb, "Weapon", player ?? noone, destroyTime, true);
+    CreateInvisibleWeapon(x + xOffset, positionY, invisibleWeaponShapeType.Square, weaponType.Bomb, "Weapon", player ?? noone, destroyTime, true);
     xOffset += xOffsetIncrement; // Increment the x-offset for the next point
 }
 
@@ -78,7 +78,7 @@ xOffset = -345;
 //5. row
 for (var i = 0; i < numPoints; i++) {
 	var positionY =  y - 70;
-    CreateInvisibleWeaponPoint(x + xOffset, positionY, obj_weapon_invisible_weapon_point, weaponType.Bomb, "Weapon", player ?? noone, destroyTime, true);
+    CreateInvisibleWeapon(x + xOffset, positionY, invisibleWeaponShapeType.Square, weaponType.Bomb, "Weapon", player ?? noone, destroyTime, true);
     xOffset += xOffsetIncrement; // Increment the x-offset for the next point
 }
 
@@ -87,7 +87,7 @@ xOffset = -345;
 //6. row
 for (var i = 0; i < numPoints; i++) {
 	var positionY =  y-35;
-    CreateInvisibleWeaponPoint(x + xOffset, positionY, obj_weapon_invisible_weapon_point, weaponType.Bomb, "Weapon", player ?? noone, destroyTime, true);
+    CreateInvisibleWeapon(x + xOffset, positionY, invisibleWeaponShapeType.Square, weaponType.Bomb, "Weapon", player ?? noone, destroyTime, true);
     xOffset += xOffsetIncrement; // Increment the x-offset for the next point
 }
 
@@ -96,7 +96,7 @@ xOffset = -345;
 //7. row
 for (var i = 0; i < numPoints; i++) {
 	var positionY =  y;
-    CreateInvisibleWeaponPoint(x + xOffset, positionY, obj_weapon_invisible_weapon_point, weaponType.Bomb, "Weapon", player ?? noone, destroyTime, true);
+    CreateInvisibleWeapon(x + xOffset, positionY, invisibleWeaponShapeType.Square, weaponType.Bomb, "Weapon", player ?? noone, destroyTime, true);
     xOffset += xOffsetIncrement; // Increment the x-offset for the next point
 }
 
@@ -105,7 +105,7 @@ xOffset = -345;
 //8. row
 for (var i = 0; i < numPoints; i++) {
 	var positionY =  y + 35;
-    CreateInvisibleWeaponPoint(x + xOffset, positionY, obj_weapon_invisible_weapon_point, weaponType.Bomb, "Weapon", player ?? noone, destroyTime, true);
+    CreateInvisibleWeapon(x + xOffset, positionY, invisibleWeaponShapeType.Square, weaponType.Bomb, "Weapon", player ?? noone, destroyTime, true);
     xOffset += xOffsetIncrement; // Increment the x-offset for the next point
 }
 
@@ -114,7 +114,7 @@ xOffset = -345;
 //9. row
 for (var i = 0; i < numPoints; i++) {
 	var positionY =  y + 70;
-    CreateInvisibleWeaponPoint(x + xOffset, positionY, obj_weapon_invisible_weapon_point, weaponType.Bomb, "Weapon", player ?? noone, destroyTime, true);
+    CreateInvisibleWeapon(x + xOffset, positionY, invisibleWeaponShapeType.Square, weaponType.Bomb, "Weapon", player ?? noone, destroyTime, true);
     xOffset += xOffsetIncrement; // Increment the x-offset for the next point
 }
 
@@ -123,7 +123,7 @@ xOffset = -345;
 //10. row
 for (var i = 0; i < numPoints; i++) {
 	var positionY =  y + 100;
-    CreateInvisibleWeaponPoint(x + xOffset, positionY, obj_weapon_invisible_weapon_point, weaponType.Bomb, "Weapon", player ?? noone, destroyTime, true);
+    CreateInvisibleWeapon(x + xOffset, positionY, invisibleWeaponShapeType.Square, weaponType.Bomb, "Weapon", player ?? noone, destroyTime, true);
     xOffset += xOffsetIncrement; // Increment the x-offset for the next point
 }
 
@@ -132,7 +132,7 @@ xOffset = -345;
 //11. row
 for (var i = 0; i < numPoints; i++) {
 	var positionY =  y + 135;
-    CreateInvisibleWeaponPoint(x + xOffset, positionY, obj_weapon_invisible_weapon_point, weaponType.Bomb, "Weapon", player ?? noone, destroyTime, true);
+    CreateInvisibleWeapon(x + xOffset, positionY, invisibleWeaponShapeType.Square, weaponType.Bomb, "Weapon", player ?? noone, destroyTime, true);
     xOffset += xOffsetIncrement; // Increment the x-offset for the next point
 }
 
@@ -141,7 +141,7 @@ xOffset = -345;
 //12. row
 for (var i = 0; i < numPoints; i++) {
 	var positionY =  y + 165;
-    CreateInvisibleWeaponPoint(x + xOffset, positionY, obj_weapon_invisible_weapon_point, weaponType.Bomb, "Weapon", player ?? noone, destroyTime, true);
+    CreateInvisibleWeapon(x + xOffset, positionY, invisibleWeaponShapeType.Square, weaponType.Bomb, "Weapon", player ?? noone, destroyTime, true);
     xOffset += xOffsetIncrement; // Increment the x-offset for the next point
 }
 
@@ -150,7 +150,7 @@ xOffset = -345;
 //13. row
 for (var i = 0; i < numPoints; i++) {
 	var positionY =  y + 195;
-    CreateInvisibleWeaponPoint(x + xOffset, positionY, obj_weapon_invisible_weapon_point, weaponType.Bomb, "Weapon", player ?? noone, destroyTime, true);
+    CreateInvisibleWeapon(x + xOffset, positionY, invisibleWeaponShapeType.Square, weaponType.Bomb, "Weapon", player ?? noone, destroyTime, true);
     xOffset += xOffsetIncrement; // Increment the x-offset for the next point
 }
 

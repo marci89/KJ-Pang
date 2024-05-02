@@ -1,11 +1,12 @@
 
-#region The creation of invisible weapon point
+#region The creation of invisible weapon 
 
-function CreateInvisibleWeaponPoint(xValue, yValue, objectType, weaponType, layerName, player, destroyTime, isWallBreaker){
+function CreateInvisibleWeapon(xValue, yValue, shapeType, weaponType, layerName, player, destroyTime, isWallBreaker){
 	
 	if (IsInstanceExists(player)) {
-		 var result = instance_create_layer(xValue, yValue, layerName, objectType);
+		 var result = instance_create_layer(xValue, yValue, layerName, obj_weapon_invisible_weapon);
 		 result.SetPlayer(player)
+		 result.shapeType = shapeType;
 		 result.SetWeaponValues(weaponType, destroyTime);
 		 result.isWallBreaker = isWallBreaker;
 	}
@@ -13,11 +14,12 @@ function CreateInvisibleWeaponPoint(xValue, yValue, objectType, weaponType, laye
 
 #endregion
 
-#region The creation of invisible weapon point with movement
+#region The creation of invisible weapon with movement
 
-function CreateInvisibleWeaponPointWithMovement(xValue, yValue, moveX, moveY, objectType, weaponType, layerName,  player, destroyTime, isWallBreaker){
-	 var result = instance_create_layer(xValue, yValue,layerName, objectType);
+function CreateInvisibleWeaponWithMovement(xValue, yValue, moveX, moveY, shapeType, weaponType, layerName,  player, destroyTime, isWallBreaker){
+	 var result = instance_create_layer(xValue, yValue, layerName, obj_weapon_invisible_weapon);
 	 result.SetPlayer(player);
+	 result.shapeType = shapeType;
 	 result.SetWeaponValues(weaponType, destroyTime);
 	 result.moveX = moveX;
 	 result.moveSpeed = moveY;

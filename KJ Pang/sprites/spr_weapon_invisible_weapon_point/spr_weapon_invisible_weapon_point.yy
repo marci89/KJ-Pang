@@ -2,9 +2,9 @@
   "$GMSprite":"",
   "%Name":"spr_weapon_invisible_weapon_point",
   "bboxMode":0,
-  "bbox_bottom":24,
+  "bbox_bottom":9,
   "bbox_left":0,
-  "bbox_right":24,
+  "bbox_right":9,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"042634e8-23ce-406d-9b5d-c3a24576ef6b","name":"042634e8-23ce-406d-9b5d-c3a24576ef6b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"09ac435f-9561-4672-abfd-3e4a21d410ff","name":"09ac435f-9561-4672-abfd-3e4a21d410ff","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":25,
+  "height":10,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"fe57c54b-871a-45da-9268-99835462dad0","blendMode":0,"displayName":"default","isLocked":false,"name":"fe57c54b-871a-45da-9268-99835462dad0","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"99f12daa-0a6c-4d61-90e3-d8960ea85c1d","blendMode":0,"displayName":"default","isLocked":false,"name":"99f12daa-0a6c-4d61-90e3-d8960ea85c1d","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_weapon_invisible_weapon_point",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"042634e8-23ce-406d-9b5d-c3a24576ef6b","path":"sprites/spr_weapon_invisible_weapon_point/spr_weapon_invisible_weapon_point.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"b1e21093-f1ac-40b5-a383-1c3da0b805f6","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"09ac435f-9561-4672-abfd-3e4a21d410ff","path":"sprites/spr_weapon_invisible_weapon_point/spr_weapon_invisible_weapon_point.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"c983300f-9067-4348-9e91-bbd31270d796","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":25,
+  "width":10,
 }

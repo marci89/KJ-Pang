@@ -20,10 +20,11 @@ global.playerOneLifePoint = 0; //player1 life points
 global.playerTwoLifePoint = 0; //player2 life points
 global.level = 1;
 global.playerOneFood = 50;
+global.playerTwoFood = 50;
 	
 global.levelTimeMax = 105;
 global.hasLevelTime = false;
-global.playerNumber = 2; 
+global.playerNumber = 1; 
 global.hasRoomWallFrame = true;
 
 
@@ -152,13 +153,13 @@ function CreateLevelTest() {
 	
 		//CreateItem(850, 200, obj_item_gravity_strong_reverse);
 		//CreateItem(850, 200, obj_item_machine_gun);
-	//	CreateItem(750, 200, obj_item_bomb);
-	//	CreateItem(690, 200, obj_item_tracking_rocket_launcher);
-	//	CreateItem(600, 200, obj_item_rocket_launcher);
-	//	CreateItem(500, 200, obj_item_shotgun);
-	//	CreateItem(400, 200, obj_item_land_mine);
-		CreateItem(350, 200, obj_item_pistol);
-		//CreateItem(700, 200, obj_item_rocket_launcher);
+		CreateItem(750, 200, obj_item_bomb);
+		CreateItem(690, 200, obj_item_tracking_rocket_launcher);
+		CreateItem(600, 200, obj_item_rocket_launcher);
+		CreateItem(500, 200, obj_item_shotgun);
+		CreateItem(400, 200, obj_item_land_mine);
+		CreateItem(350, 200, obj_item_flamethrower);
+		CreateItem(700, 200, obj_item_energy_shield);
 	
 	
 	
@@ -167,11 +168,11 @@ function CreateLevelTest() {
 	
 	CreateNormalBallGiant(300, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
-	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_1, true);
+	normalBallColorType.Red, normalBallGiantDropItemType.Nothing, true);
 	
 	CreateNormalBallGiant(200, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
-	normalBallColorType.Green, normalBallGiantDropItemType.DropQualityLevel_1, true);
+	normalBallColorType.Green, normalBallGiantDropItemType.Nothing, true);
 	
 	
 	

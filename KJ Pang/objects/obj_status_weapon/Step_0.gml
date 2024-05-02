@@ -57,6 +57,11 @@ if(player.weapon == weaponType.TrackingRocketLauncher) {
 	sprite_index = spr_status_tracking_rocket_launcher;
 }
 
+if(player.weapon == weaponType.FlameThrower) {
+	sprite_index = spr_status_flamethrower;
+}
+
+
 
 
 

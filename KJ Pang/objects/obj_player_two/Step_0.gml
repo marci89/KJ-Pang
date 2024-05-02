@@ -198,8 +198,17 @@ if (collision_circle(x, y-25, 28, obj_enemy_parent, true, true)) {
 		        if (!enemyInstance.isHarmless) {
 					if (!isDead && !isInvincible) {
 						
-					Death();
-					
+							//shield check
+						if(hasEnergyShield) {
+							PlaySound(snd_energy_shield_deactivate, false);
+							hasEnergyShield = false;
+							isDead = false;
+							isInvincible = true;
+							isBlinked = true;
+						} else {
+							
+							Death();
+						}
 					}
 				}
 			}

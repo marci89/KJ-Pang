@@ -46,7 +46,9 @@ enum specialAbilityType{
 	AntiGravity,
 	ReverseGravity,
 	StrongReverseGravity,
-	Magnet	
+	Magnet,
+	Dynamite,
+	EnergyShield
 };
 
 #endregion
@@ -94,7 +96,7 @@ enum wallType{
 
 #endregion
 
-#region  wall direction type if you want to generate many walls in a for loop
+#region wall direction type if you want to generate many walls in a for loop
 
 enum wallCreatorDirectionType{
     Left,
@@ -119,7 +121,17 @@ enum weaponType{
 	Bomb,
 	LandMine,
 	RocketLauncher,
-	TrackingRocketLauncher
+	TrackingRocketLauncher,
+	FlameThrower,
+};
+
+#endregion
+
+#region Invisible weapon shape
+
+enum invisibleWeaponShapeType{
+    Square,
+    Point
 };
 
 #endregion
