@@ -1,3 +1,5 @@
+ /// @desc Handle level effects
+
 //properties
 previousLevelEffect = noone; // previous level effet
 nextLevelEffect = noone; // previous level effet

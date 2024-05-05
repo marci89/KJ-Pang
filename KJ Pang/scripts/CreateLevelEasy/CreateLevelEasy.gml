@@ -8,23 +8,8 @@ function CreateLevelEasy(){
 SetLevelVariables()
 
 //Player
-global.playerOneName = "PLAYER-1" // player 1 display name
-global.playerTwoName = "PLAYER-2" // player 2 display name
-global.playerOneInputDeviceType = inputDeviceType.Keyboard;
-global.playerTwoInputDeviceType = inputDeviceType.Controller;
-global.playerOneScore = 0; //player1 score
-global.playerTwoScore = 0; //player2 score
-global.playerOneLife =  1; //player1 life
-global.playerTwoLife =  1; //player2 life
-global.playerOneLifePoint = 0; //player1 life points
-global.playerTwoLifePoint = 0; //player2 life points
-global.level = 1;
-global.playerOneFood = 50;
-global.playerTwoFood = 50;
 	
-global.levelTimeMax = 105;
-global.hasLevelTime = false;
-global.playerNumber = 1; 
+global.hasLevelTime = true;
 global.hasRoomWallFrame = true;
 
 
@@ -165,7 +150,7 @@ function CreateLevelTest() {
 	
 	//Enemy
 	
-	
+	/*
 	CreateNormalBallGiant(300, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
 	normalBallColorType.Red, normalBallGiantDropItemType.Nothing, true);
@@ -173,7 +158,10 @@ function CreateLevelTest() {
 	CreateNormalBallGiant(200, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
 	normalBallColorType.Green, normalBallGiantDropItemType.Nothing, true);
-	
+	*/
+		CreateNormalBallSmall(800, 670, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
+	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
+	normalBallColorType.Red,  true);
 	
 	
 	

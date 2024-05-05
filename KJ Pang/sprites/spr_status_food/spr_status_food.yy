@@ -38,7 +38,7 @@
   "origin":7,
   "parent":{
     "name":"Food",
-    "path":"folders/Sprites/Status/Food.yy",
+    "path":"folders/Sprites/UI/Status/Food.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

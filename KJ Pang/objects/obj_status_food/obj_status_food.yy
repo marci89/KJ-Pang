@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"SpecialAbility",
-    "path":"folders/Objects/Status/SpecialAbility.yy",
+    "path":"folders/Objects/UI/Status/SpecialAbility.yy",
   },
   "parentObjectId":null,
   "persistent":false,

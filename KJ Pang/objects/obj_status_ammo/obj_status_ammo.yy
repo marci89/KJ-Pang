@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Weapon",
-    "path":"folders/Objects/Status/Weapon.yy",
+    "path":"folders/Objects/UI/Status/Weapon.yy",
   },
   "parentObjectId":null,
   "persistent":false,

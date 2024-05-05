@@ -26,7 +26,7 @@
   "origin":1,
   "parent":{
     "name":"Sting",
-    "path":"folders/Sprites/Status/Weapon/Sting.yy",
+    "path":"folders/Sprites/UI/Status/Weapon/Sting.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

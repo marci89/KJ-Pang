@@ -4,7 +4,7 @@ function SetGameVariables(){
 
 	//Game
 	global.gameDifficult = gameDifficultType.Easy; // game difficult level
-	global.playerNumber = 1; // it can be 1 or 2. play alone or with your friend
+	global.playMode = playModeType.SinglePlayer; // play alone or with your friend
 
 	//Player
 	global.playerOneScore = 0; //player1 score

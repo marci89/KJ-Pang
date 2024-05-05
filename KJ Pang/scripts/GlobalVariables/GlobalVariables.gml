@@ -1,6 +1,6 @@
 	//Game
 	global.gameDifficult = gameDifficultType.Easy; // game difficult level
-	global.playerNumber = 1; // it can be 1 or 2. play alone or with your friend
+	global.playMode = playModeType.SinglePlayer; // play alone or with your friend
 
 	//Setting and basic things
 	global.soundEnable = false; // sound enable
@@ -35,6 +35,7 @@
 	global.isPaused = false; // paused or not
 	global.hasLevelTime = true; // the level has time management or not.
 	global.isLevelTimeUp = false; // The level time has expired and game over.
+	global.previousLevelTime = 0; // Previous level time to know the time bonus value in level summary
 
 	//manipulating
 	global.currentLevelEffect = noone;

@@ -26,7 +26,7 @@
   "origin":6,
   "parent":{
     "name":"Bullet",
-    "path":"folders/Sprites/Status/Weapon/Bullet.yy",
+    "path":"folders/Sprites/UI/Status/Weapon/Bullet.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

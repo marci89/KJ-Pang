@@ -1,4 +1,4 @@
-
+//game
 #region languages
 
 enum languageType {
@@ -20,6 +20,17 @@ enum gameDifficultType {
 
 #endregion
 
+#region Play mode
+
+enum playModeType{
+    SinglePlayer,
+    MultiPlayer	
+};
+
+#endregion
+
+
+//player
 #region input device type for player
 
 enum inputDeviceType{
@@ -38,6 +49,16 @@ enum PlayerGenderType{
 
 #endregion
 
+#region Player ID
+
+enum playerIDType{
+    Player1,
+    Player2	
+};
+
+#endregion
+
+//others
 #region special ability
 
 enum specialAbilityType{

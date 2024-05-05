@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":3.787755,
+  "duration":3.024,
   "name":"snd_energy_shield_activate",
   "parent":{
     "name":"Time",

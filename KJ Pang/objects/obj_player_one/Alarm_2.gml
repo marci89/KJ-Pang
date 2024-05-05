@@ -1,6 +1,6 @@
 /// @desc after death other player talk
 
-if(global.playerNumber == 2) {
+if(global.playMode == playModeType.MultiPlayer) {
 	if (IsInstanceExists(obj_player_two ?? noone)) {
 		
 		//If everybody died, not add voice

@@ -22,7 +22,7 @@ if(!IsInstanceExists(player)) return;
 draw_self();
 draw_set_color(c_white);
 
-if (global.playerNumber = 1) {
+if (global.playMode == playModeType.SinglePlayer) {
 	draw_set_font(ft_status_large_font);
 	draw_text(x + 25 , y, string(player.GetLife()));
 	draw_text(x + 10 , y + 8, "*");

@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Score",
-    "path":"folders/Objects/Status/Score.yy",
+    "path":"folders/Objects/UI/Status/Score.yy",
   },
   "parentObjectId":null,
   "persistent":false,

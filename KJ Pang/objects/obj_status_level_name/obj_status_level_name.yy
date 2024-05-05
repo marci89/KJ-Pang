@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"LevelName",
-    "path":"folders/Objects/Status/LevelName.yy",
+    "path":"folders/Objects/UI/Status/LevelName.yy",
   },
   "parentObjectId":null,
   "persistent":false,

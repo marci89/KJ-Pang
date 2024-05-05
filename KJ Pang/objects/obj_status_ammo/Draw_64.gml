@@ -8,7 +8,7 @@ if(!IsInstanceExists(player)) return;
 
 #region set positions
 
-if (global.playerNumber == 1) {
+if (global.playMode == playModeType.SinglePlayer) {
 	posX = x + 10;
 	posY = y -19;
 	
@@ -27,7 +27,7 @@ draw_set_color(c_white);
 
 //shotgun
 if(player.weapon == weaponType.ShotGun) {
-	if(global.playerNumber == 1) {
+	if(global.playMode == playModeType.SinglePlayer) {
 		draw_text(posX+5 , posY, "* " + string(player.shotgunAmmo));
 	} else {
 		draw_text(posX , posY, string(player.shotgunAmmo));
@@ -37,7 +37,7 @@ if(player.weapon == weaponType.ShotGun) {
 
 //machinegun
 else if(player.weapon == weaponType.MachineGun) {
-	if(global.playerNumber == 1) {
+	if(global.playMode == playModeType.SinglePlayer) {
 		draw_text(posX , posY, "* " + string(player.machineGunAmmo));
 	} else {
 		draw_text(posX-5 , posY, string(player.machineGunAmmo));
@@ -47,7 +47,7 @@ else if(player.weapon == weaponType.MachineGun) {
 
 //pistol
 else if(player.weapon == weaponType.Pistol) {
-	if(global.playerNumber == 1) {
+	if(global.playMode == playModeType.SinglePlayer) {
 		draw_text(posX , posY, "* " + string(player.pistolAmmo));
 	} else {
 		draw_text(posX-5 , posY, string(player.pistolAmmo));
@@ -57,7 +57,7 @@ else if(player.weapon == weaponType.Pistol) {
 
 //grenade
 else if(player.weapon == weaponType.Grenade) {
-	if(global.playerNumber == 1) {
+	if(global.playMode == playModeType.SinglePlayer) {
 		draw_text(posX + 43 , posY-25, "* " + string(player.grenadeAmmo));
 	} else {
 		draw_text(posX-30 , posY-10, "* " + string(player.grenadeAmmo));
@@ -67,7 +67,7 @@ else if(player.weapon == weaponType.Grenade) {
 
 //detonator
 else if(player.weapon == weaponType.Detonator) {
-	if(global.playerNumber == 1) {
+	if(global.playMode == playModeType.SinglePlayer) {
 		draw_text(posX + 45 , posY-37, "* " + string(player.detonatorAmmo));
 	} else {
 		draw_text(posX-30 , posY-15, "* " + string(player.detonatorAmmo));
@@ -77,7 +77,7 @@ else if(player.weapon == weaponType.Detonator) {
 
 //bomb
 else if(player.weapon == weaponType.Bomb) {
-	if(global.playerNumber == 1) {
+	if(global.playMode == playModeType.SinglePlayer) {
 		draw_text(posX + 45 , posY-30, "* " + string(player.bombAmmo));
 	} else {
 		draw_text(posX-30 , posY-10, "* " + string(player.bombAmmo));
@@ -87,7 +87,7 @@ else if(player.weapon == weaponType.Bomb) {
 
 //land mine
 else if(player.weapon == weaponType.LandMine) {
-	if(global.playerNumber == 1) {
+	if(global.playMode == playModeType.SinglePlayer) {
 		draw_text(posX + 52 , posY-37, "* " + string(player.landMineAmmo));
 	} else {
 		draw_text(posX-20 , posY-15, "* " + string(player.landMineAmmo));
@@ -97,7 +97,7 @@ else if(player.weapon == weaponType.LandMine) {
 
 //rocket launcher
 else if(player.weapon == weaponType.RocketLauncher) {
-	if(global.playerNumber == 1) {
+	if(global.playMode == playModeType.SinglePlayer) {
 		draw_text(posX + 12 , posY-4, "* " + string(player.rocketLauncherAmmo));
 	} else {
 		draw_text(posX+3 , posY, string(player.rocketLauncherAmmo));
@@ -107,7 +107,7 @@ else if(player.weapon == weaponType.RocketLauncher) {
 
 //tracking rocket launcher
 else if(player.weapon == weaponType.TrackingRocketLauncher) {
-	if(global.playerNumber == 1) {
+	if(global.playMode == playModeType.SinglePlayer) {
 		draw_text(posX + 12 , posY-4, "* " + string(player.trackingRocketLauncherAmmo));
 	} else {
 		draw_text(posX +3 , posY, string(player.trackingRocketLauncherAmmo));
@@ -117,7 +117,7 @@ else if(player.weapon == weaponType.TrackingRocketLauncher) {
 
 //flameThrower
 else if(player.weapon == weaponType.FlameThrower) {
-	if(global.playerNumber == 1) {
+	if(global.playMode == playModeType.SinglePlayer) {
 		draw_text(posX+ 5 , posY, "* " + string(player.flameThrowerAmmo));
 	} else {
 		draw_text(posX-5 , posY, string(player.flameThrowerAmmo));

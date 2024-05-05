@@ -173,6 +173,14 @@ function GetName() {
 
 #endregion
 
+#region Get player gender function
+
+function GetGender() {
+	return global.playerTwoGender;
+}
+
+#endregion
+
 #region Get player special ability function
 
 function GetSpecialAbility() {
@@ -222,7 +230,7 @@ function Death() {
 	if(global.isRestartLevelAfterDead) {
 		CreateRoomTransition(false); // room change animation
 		
-		if(global.playerNumber == 2) {
+		if(global.playMode == playModeType.MultiPlayer) {
 				DeactivateObjects(obj_enemy_parent);
 				DeactivateObjects(obj_item_parent);
 		}

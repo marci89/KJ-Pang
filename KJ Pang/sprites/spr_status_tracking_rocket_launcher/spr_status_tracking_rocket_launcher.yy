@@ -26,7 +26,7 @@
   "origin":1,
   "parent":{
     "name":"RocketLauncher",
-    "path":"folders/Sprites/Status/Weapon/RocketLauncher.yy",
+    "path":"folders/Sprites/UI/Status/Weapon/RocketLauncher.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

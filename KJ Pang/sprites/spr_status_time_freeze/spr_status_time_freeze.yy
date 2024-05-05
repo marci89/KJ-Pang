@@ -26,7 +26,7 @@
   "origin":1,
   "parent":{
     "name":"SpecialAbility",
-    "path":"folders/Sprites/Status/SpecialAbility.yy",
+    "path":"folders/Sprites/UI/Status/SpecialAbility.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

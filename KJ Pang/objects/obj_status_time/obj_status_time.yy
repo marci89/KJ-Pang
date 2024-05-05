@@ -12,7 +12,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Time",
-    "path":"folders/Objects/Status/Time.yy",
+    "path":"folders/Objects/UI/Status/Time.yy",
   },
   "parentObjectId":null,
   "persistent":false,

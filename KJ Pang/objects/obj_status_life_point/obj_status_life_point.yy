@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Life",
-    "path":"folders/Objects/Status/Life.yy",
+    "path":"folders/Objects/UI/Status/Life.yy",
   },
   "parentObjectId":null,
   "persistent":false,

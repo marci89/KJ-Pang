@@ -26,7 +26,7 @@
   "origin":1,
   "parent":{
     "name":"Special",
-    "path":"folders/Sprites/Status/Weapon/Special.yy",
+    "path":"folders/Sprites/UI/Status/Weapon/Special.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

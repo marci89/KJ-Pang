@@ -1,4 +1,5 @@
-
+ /// @desc Draw player status and time
+ 
 #region Variables
 
 startY = global.roomHeight + 5;
@@ -121,13 +122,13 @@ if (global.hasLevelTime) {
 }
 
 //Create status objects for single player
-if(global.playerNumber == 1) {
+if(global.playMode == playModeType.SinglePlayer) {
 	if(instance_exists(obj_player_one)) {
 		CreateSinglePlayerStatusPanel();
 	}	 
 }
 //Create status objects for multiplayer
-else if(global.playerNumber == 2) {
+else if(global.playMode == playModeType.MultiPlayer) {
 	
 	//level name
 	instance_create_layer(410, startY + 25,"Status", obj_status_level_name);

@@ -22,7 +22,7 @@ enemyScore = 0; // score value after enemy dead
 hitPoint = 1; //health
 isHarmless = false; // not hurt the player if it is true
 isDestroyed = false; // death or not
-
+isRequiredToKill = true; // required to destroy this enemy or not
 
 //Weapon
 isImmuneToWeapon = false // not hurts the weapon

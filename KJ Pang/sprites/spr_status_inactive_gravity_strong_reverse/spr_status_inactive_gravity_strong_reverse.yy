@@ -26,7 +26,7 @@
   "origin":1,
   "parent":{
     "name":"Inactive",
-    "path":"folders/Sprites/Status/SpecialAbility/Inactive.yy",
+    "path":"folders/Sprites/UI/Status/SpecialAbility/Inactive.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

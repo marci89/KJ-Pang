@@ -34,7 +34,7 @@
   "origin":1,
   "parent":{
     "name":"Life",
-    "path":"folders/Sprites/Status/Life.yy",
+    "path":"folders/Sprites/UI/Status/Life.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
