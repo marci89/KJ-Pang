@@ -4,6 +4,7 @@ player = noone; // actual player ID
 timeScoreText = GetLocalizedText("timeBonus"); //time score text
 lifeScoreText = GetLocalizedText("lifeBonus"); // life score text
 totalScoreText = GetLocalizedText("totalScore"); // total score text
+levelText =  GetLocalizedText("level"); // level translate
 
 frameWidth = 380; // Set the width of the frame
 frameHeight = 680; // Set the height of the frame
@@ -72,6 +73,9 @@ function Init() {
 		global.playerTwoScore += lifeScore;
 		totalScore = global.playerTwoScore;
 	}
+	
+	//set level
+	levelText += " - " + string(global.level -1); 
 }
 
 #endregion

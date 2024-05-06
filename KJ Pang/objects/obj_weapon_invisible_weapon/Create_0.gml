@@ -2,9 +2,10 @@
 //parent properties
 event_inherited()
 moveSpeed = 0; // move speed
+type = weaponType.Grenade; // weapon type
 
 //own properties
-type = weaponType.Grenade; // weapon type
+
 shapeType = invisibleWeaponShapeType.Square // shape type
 isWallBreaker = true;
 

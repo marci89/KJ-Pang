@@ -10,6 +10,7 @@ if (instance_exists(other)) { // check exists
 	
 		other.isDestroyed = true;
 		instance_destroy(other);
+		instance_destroy();
 		
 	// other walls
 	} else {

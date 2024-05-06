@@ -3,6 +3,7 @@
 event_inherited()
 decayItemOnGroundValue = 0.5;
 bounceDecay = 0.2; //bounce
+type = weaponType.Bomb; // weapon type
 
 
 // actual player

@@ -6,6 +6,7 @@ moveSpeed = 8; // move speed
 
 //basic
 damage = 1; // weapon damage value
+type = weaponType.SingleSting; // weapon type
 
 // actual player
 player = noone; 

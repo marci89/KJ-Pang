@@ -7,17 +7,18 @@ y += moveY ;
 
 #region trail effect
 
-var prevX = x;
-var prevY = y;
+if (isTrailEffectEnable) {
+	var prevX = x;
+	var prevY = y;
 
-// Store previous position in the array
-ds_list_add(trailPositions, [prevX, prevY]);
+	// Store previous position in the array
+	ds_list_add(trailPositions, [prevX, prevY]);
 
-// Limit the number of stored positions
-if ds_list_size(trailPositions) > maxTrailLength {
-    ds_list_delete(trailPositions, 0);
+	// Limit the number of stored positions
+	if ds_list_size(trailPositions) > maxTrailLength {
+	    ds_list_delete(trailPositions, 0);
+	}
 }
-
 #endregion
 
 #region Screen collision

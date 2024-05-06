@@ -1,7 +1,7 @@
 
 //movement
 moveX = 0; // X movement
-moveY = 4; // y movement
+moveY = 2; // y movement
 
 // actual player if this item give something to player or effectable for it
 player = noone; 
@@ -11,7 +11,7 @@ gravSpeed = 0.1; //gravity
 isGravityEnabled = true; //has gravity or not
 
 //bounce
-bounceDecay = 0.4; //bounce
+bounceDecay = 0.3; //bounce
 decayItemOnGroundValue = 0.8; //Decay item on ground
 
 isActive = true; // if it is active it can do everything (live) else deactive so freezed.

@@ -3,6 +3,7 @@
 event_inherited()
 moveSpeed = 8; // move speed
 damage = 5; // weapon damage value
+type = weaponType.PowerWire; // weapon type
 
 //item hooping values when shooting near them
 weaponReactionDistance = 0; // action zone (distance)

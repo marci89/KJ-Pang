@@ -3,6 +3,7 @@
 event_inherited()
 moveSpeed = 5; // move speed
 damage = 5; // weapon damage value
+type = weaponType.SingleSting; // weapon type
 
 //own properties
 bodyPartList = ds_list_create(); // list of body part objects

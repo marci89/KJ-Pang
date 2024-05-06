@@ -3,6 +3,7 @@
 event_inherited()
 moveSpeed = 8; // move speed
 damage = 10; // weapon damage value
+type = weaponType.ShotGun; // weapon type
 
 //item hooping values when shooting near them
 weaponReactionDistance = 120; // action zone (distance)
@@ -19,3 +20,6 @@ itemHoopingSpeedHeightMax = -6;
 //trail effect
 trailPositions = ds_list_create(); // trail position list
 maxTrailLength = 10;  // max trail number
+isTrailEffectEnable = false;
+
+alarm[0] = 3;

@@ -159,7 +159,7 @@ function updateFireAnimationPosition(posX, posY) {
 function createShotgunBullets(posX, posY) {
 	
 	var bulletX = posX;		
-	var bulletY = posY;
+	var bulletY = posY + 20;
 	var defaultMoveY = -12;
 		
 

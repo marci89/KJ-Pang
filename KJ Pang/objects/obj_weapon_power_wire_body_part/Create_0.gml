@@ -2,6 +2,7 @@
 //parent properties
 event_inherited()
 damage = 5; // weapon damage value
+type = weaponType.PowerWire; // weapon type
 
 //item hooping values when shooting near them
 weaponReactionDistance = 0; // action zone (distance)

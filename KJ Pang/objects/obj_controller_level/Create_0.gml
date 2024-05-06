@@ -11,7 +11,7 @@ audio_stop_all(); // stop every sounds before start
 CreateRoomTransition(true); // room start animation
 pausedText = GetLocalizedText("paused"); // translate text
 
-// get start values of the player
+// Get start values of the player
 playerOneStartFood = global.playerOneFood
 playerTwoStartFood = global.playerTwoFood
 playerOneStartLifePoint = global.playerOneLifePoint

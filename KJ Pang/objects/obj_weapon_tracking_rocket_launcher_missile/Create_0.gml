@@ -3,6 +3,7 @@
 event_inherited()
 moveSpeed = 5; // move speed
 damage = 8; // weapon damage value
+type = weaponType.TrackingRocketLauncher; // weapon type
 
 //own properties
 target = noone; // This will store the instance ID of the nearest enemy

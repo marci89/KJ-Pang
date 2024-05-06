@@ -5,6 +5,7 @@ decayItemOnGroundValue = 0.5;
 bounceDecay = 0; //bounce
 isAllowEffect = false;
 isAllowWeaponHopping = false;
+type = weaponType.LandMine; // weapon type
 
 
 // actual player
