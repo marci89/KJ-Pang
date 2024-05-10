@@ -1,6 +1,13 @@
 	//Game
 	global.gameDifficult = gameDifficultType.Easy; // game difficult level
 	global.playMode = playModeType.SinglePlayer; // play alone or with your friend
+	
+	//game difficult allowing
+	global.isNormalDifficultEnable = false;
+	global.isHardDifficultEnable = false;
+	global.isNightmareDifficultEnable = false;
+	global.isImpossibleDifficultEnable = false;
+	
 
 	//Setting and basic things
 	global.soundEnable = false; // sound enable

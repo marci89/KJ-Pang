@@ -11,8 +11,8 @@
   "name":"obj_controller_level",
   "overriddenProperties":[],
   "parent":{
-    "name":"Controller",
-    "path":"folders/Objects/Controller.yy",
+    "name":"Level",
+    "path":"folders/Objects/Controller/Level.yy",
   },
   "parentObjectId":null,
   "persistent":false,

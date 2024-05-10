@@ -12,8 +12,8 @@
   "duration":92.551834,
   "name":"snd_mtFuji",
   "parent":{
-    "name":"Music",
-    "path":"folders/Sounds/Music.yy",
+    "name":"PangMusic",
+    "path":"folders/Sounds/Music/PangMusic.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

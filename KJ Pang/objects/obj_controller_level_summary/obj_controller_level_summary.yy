@@ -12,8 +12,8 @@
   "name":"obj_controller_level_summary",
   "overriddenProperties":[],
   "parent":{
-    "name":"UI",
-    "path":"folders/Objects/Controller/UI.yy",
+    "name":"LevelSummary",
+    "path":"folders/Objects/Controller/UI/LevelSummary.yy",
   },
   "parentObjectId":null,
   "persistent":false,

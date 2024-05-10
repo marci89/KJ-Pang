@@ -29,8 +29,61 @@ enum playModeType{
 
 #endregion
 
+//information
+#region information type
+
+enum informationType{
+	
+	//items
+	Antigravity,
+	GravityReverse,
+	GravityStrongReverse,
+	Magnet,
+	EnergyShield,
+	TimeFreeze,
+	TimeSlow,
+	Dynamite,
+	
+	//weapons
+    SingleSting,
+    DoubleSting,
+    PowerWire,
+	MachineGun,
+	ShotGun,
+	Pistol,
+	Grenade,
+	Detonator,
+	Bomb,
+	LandMine,
+	RocketLauncher,
+	TrackingRocketLauncher,
+	FlameThrower,
+};
+
+#endregion
+
+
+//menu
+#region menu buttons select
+
+enum menuButtonSelectType{
+    Vertical,
+    Horizontal,
+	AllDirection
+};
+
+#endregion
 
 //player
+#region current player creating
+
+enum currentPlayerCreatingType{
+    First,
+    Second,
+};
+
+#endregion
+
 #region input device type for player
 
 enum inputDeviceType{

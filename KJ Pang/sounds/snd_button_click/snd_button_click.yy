@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_button_click",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.816009,
+  "name":"snd_button_click",
+  "parent":{
+    "name":"Menu",
+    "path":"folders/Sounds/Voice/Menu.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_button_click.wav",
+  "type":0,
+  "volume":0.13,
+}

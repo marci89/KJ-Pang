@@ -3,7 +3,6 @@
 #region Set important things
 
 audio_stop_all(); // stop every sounds before start
-CreateRoomTransition(true); // room start animation
 PlaySound(snd_next_level, false,1); // play sound
 global.level++; // increase the level
 

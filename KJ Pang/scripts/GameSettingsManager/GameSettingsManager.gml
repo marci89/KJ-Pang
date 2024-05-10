@@ -9,7 +9,14 @@ function SaveGameSettings(){
 		    ini_open(working_directory + filename)		
 			ini_write_string("Settings", "language", global.language);
 			ini_write_string("Settings", "soundEnable", global.soundEnable);
-			ini_write_string("Settings", "musicEnable", global.musicEnable);		
+			ini_write_string("Settings", "musicEnable", global.musicEnable);
+			
+			//difficult
+			ini_write_string("Difficult", "isNormalDifficultEnable", global.isNormalDifficultEnable);
+			ini_write_string("Difficult", "isHardDifficultEnable", global.isHardDifficultEnable);
+			ini_write_string("Difficult", "isNightmareDifficultEnable", global.isNightmareDifficultEnable);
+			ini_write_string("Difficult", "isImpossibleDifficultEnable", global.isImpossibleDifficultEnable);
+			
 			ini_close();		 
 			
 	  } else {
@@ -30,6 +37,12 @@ function LoadGameSettings(){
 	     	global.language = ini_read_real("Settings", "language", 0);
 			global.soundEnable =  ini_read_string("Settings", "soundEnable",false);
 			global.musicEnable =  ini_read_string("Settings", "musicEnable", false);
+			
+			//difficult
+			global.isNormalDifficultEnable =  ini_read_string("Difficult", "isNormalDifficultEnable", false);
+			global.isHardDifficultEnable =  ini_read_string("Difficult", "isHardDifficultEnable", false);
+			global.isNightmareDifficultEnable =  ini_read_string("Difficult", "isNightmareDifficultEnable", false);
+			global.isImpossibleDifficultEnable =  ini_read_string("Difficult", "isImpossibleDifficultEnable", false);
 			
 			ini_close();		 
 			

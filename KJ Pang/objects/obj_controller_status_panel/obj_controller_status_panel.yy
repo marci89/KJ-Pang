@@ -9,8 +9,8 @@
   "name":"obj_controller_status_panel",
   "overriddenProperties":[],
   "parent":{
-    "name":"UI",
-    "path":"folders/Objects/Controller/UI.yy",
+    "name":"Status",
+    "path":"folders/Objects/Controller/UI/Status.yy",
   },
   "parentObjectId":null,
   "persistent":false,
