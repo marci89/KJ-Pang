@@ -1,6 +1,6 @@
 event_inherited();
 
-text = GetLocalizedText("music"); // translate text
+text = GetLocalizedText("music");
 buttonId = 2; // button identifier
 
 //own properties
@@ -28,9 +28,10 @@ function Execute() {
 	
 	if (isMusicEnable) {
 		global.musicEnable = true;
+		PlayMusic(snd_main_menu, true);
 	} else {
-		audio_stop_all()
 		global.musicEnable = false;
+		audio_stop_all()
 	}
 	
 	//save data

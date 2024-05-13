@@ -13,7 +13,7 @@ draw_text(x + drawTitleTextX + 20 , y + 20, chooseControlText);
 //draw control pic
 if(currentSelectedButtonId == 0) {
 	draw_sprite(spr_control_picture_keyboard, 0, x+355, y+200);
-} else {
+} else if(currentSelectedButtonId == 1) {
 	draw_sprite(spr_control_picture_gamepad, 0, x+380, y+200);
 }
 

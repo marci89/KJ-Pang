@@ -17,6 +17,8 @@ buttonY = 500; // buttons y
 currentSelectedButtonId = 0;
 maxButtonId = 2;
 
+global.playerOneName = "";
+
 #endregion
 
 #region Create buttons

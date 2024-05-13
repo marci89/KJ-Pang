@@ -16,10 +16,12 @@ if (hasError) {
 #region text input handle
 
 if(isSelected) {
+	
+	hasError = false;
+		
 	if (keyboard_check(vk_anykey) && string_length(text) < 12) {
 		text += string(keyboard_string);
 		keyboard_string = "";
-		hasError = false;
 	}
 
 	if (keyboard_check(vk_backspace) && !keyboard_check_pressed(vk_backspace) && deleteTimer > 2) {
@@ -49,7 +51,11 @@ if(isSelected) {
 	
 	//Set player name
 	global.playerTwoName = text;
+	
+} else {
+	keyboard_string = "";
 }
+
 
 #endregion
 

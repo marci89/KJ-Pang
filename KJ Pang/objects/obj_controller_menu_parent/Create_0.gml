@@ -1,9 +1,10 @@
-currentSelectedButtonId = 0;
-maxButtonId = 2;
+currentSelectedButtonId = 0; // selected button's id
+maxButtonId = 2; // maximum buttons number
 
 //all direction variables
 maxItemPerRow = 5;
 
+//type
 selectType = menuButtonSelectType.Vertical;
 
 #region Set buttons selected value
@@ -83,12 +84,7 @@ function GamePadKeyPressCheckForVertical(slot) {
 	}
 	
 	//execute
-	if (gamepad_button_check_pressed(slot, gp_face1)
-	|| gamepad_button_check_pressed(slot, gp_face2)
-	|| gamepad_button_check_pressed(slot, gp_face3)
-	|| gamepad_button_check_pressed(slot, gp_face4)
-	) {
-		
+	if (gamepad_button_check_pressed(slot, gp_face1)) {	
 		ExecuteSelectedButton();
 	}
 }
@@ -126,8 +122,68 @@ function KeyboardKeyPressCheckForVertical() {
 
 #endregion
 
-// all direction
+// horizontal
+#region gamepad key press check for horizontal
 
+function GamePadKeyPressCheckForHorizontal(slot) {
+	
+	//left
+	if (gamepad_button_check_pressed(slot, gp_padl)) {
+		currentSelectedButtonId -= 1;
+			if (currentSelectedButtonId < 0) {
+				currentSelectedButtonId = maxButtonId;
+			}
+		}
+	
+	//right
+	if (gamepad_button_check_pressed(slot, gp_padr)) {
+		currentSelectedButtonId += 1;
+			if (currentSelectedButtonId > maxButtonId) {
+				currentSelectedButtonId = 0;
+			}
+	}
+	
+	//execute
+	if (gamepad_button_check_pressed(slot, gp_face1)) {	
+		
+		ExecuteSelectedButton();
+	}
+}
+
+#endregion
+
+#region keyboard key press check for horizontal
+
+function KeyboardKeyPressCheckForHorizontal() {
+	
+	//left
+	if (keyboard_check_pressed(vk_left)) {
+		currentSelectedButtonId -= 1;
+			if (currentSelectedButtonId < 0) {
+				currentSelectedButtonId = maxButtonId;
+			}
+		}
+	
+	//right
+	if (keyboard_check_pressed(vk_right)) {
+		currentSelectedButtonId += 1;
+			if (currentSelectedButtonId > maxButtonId) {
+				currentSelectedButtonId = 0;
+			}
+	}
+	
+	//execute
+	if (keyboard_check_pressed(vk_enter) 
+	|| keyboard_check_pressed(vk_space)
+	) {
+		
+		ExecuteSelectedButton();
+	}
+}
+
+#endregion
+
+// all direction
 #region gamepad key press check for all direction
 
 function GamePadKeyPressCheckForAllDirection(slot) {
@@ -166,11 +222,7 @@ function GamePadKeyPressCheckForAllDirection(slot) {
 		}
 	
 	//execute
-	if (gamepad_button_check_pressed(slot, gp_face1)
-	|| gamepad_button_check_pressed(slot, gp_face2)
-	|| gamepad_button_check_pressed(slot, gp_face3)
-	|| gamepad_button_check_pressed(slot, gp_face4)
-	) {
+	if (gamepad_button_check_pressed(slot, gp_face1)) {	
 		
 		ExecuteSelectedButton();
 	}

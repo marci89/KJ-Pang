@@ -13,7 +13,7 @@ draw_text(x + drawTitleTextX + 20 , y + 20, chooseCharacterText);
 //draw profile pic
 if (global.playerTwoGender == PlayerGenderType.Female) {
 	draw_sprite(spr_character_profile_picture_female, 0, x+355, y+100);
-} else {
+} else if (global.playerTwoGender == PlayerGenderType.Male) {
 	draw_sprite(spr_character_profile_picture_male, 0, x+355, y+100);
 }
 

@@ -50,7 +50,7 @@ if (isAllowToChoose) {
 	
  buttonY = 560;
  
- var nextButton = instance_create_layer(startX, buttonY,"Instances", obj_player2_control_choose_menu_next_button);
+ var nextButton = instance_create_layer(startX + 100, buttonY,"Instances", obj_player2_control_choose_menu_next_button);
  nextButton.buttonId = 0;
  
  buttonY += 120;

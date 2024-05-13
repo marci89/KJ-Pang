@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"LayerManager",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"LayerManager",
+  "parent":{
+    "name":"Game",
+    "path":"folders/Scripts/Game.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

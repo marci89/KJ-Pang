@@ -75,7 +75,7 @@ function Init() {
 	}
 	
 	//set level
-	levelText += " - " + string(global.level -1); 
+	levelText += "  " + string(global.level -1); 
 }
 
 #endregion

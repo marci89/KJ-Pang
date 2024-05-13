@@ -16,8 +16,8 @@ draw_set_font(ft_level_summary_font);
 
 #region Draw frame
 
-	draw_rectangle_color(x-frameSpace, y-frameSpace, x + frameWidth - frameSpace, frameHeight,
-	c_dkgray, c_silver, c_gray, c_dkgray, false);
+	//draw_rectangle_color(x-frameSpace, y-frameSpace, x + frameWidth - frameSpace, frameHeight,
+	//c_dkgray, c_silver, c_gray, c_dkgray, false);
 	
 #endregion
 

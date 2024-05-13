@@ -11,6 +11,17 @@ if(selectType == menuButtonSelectType.Vertical) {
 
 #endregion
 
+#region key checking with horizontal select
+
+if(selectType == menuButtonSelectType.Horizontal) {
+	
+	GamePadKeyPressCheckForHorizontal(0);
+	GamePadKeyPressCheckForHorizontal(1);
+	KeyboardKeyPressCheckForHorizontal();
+}
+
+#endregion
+
 #region key checking with all direction select
 
 if(selectType == menuButtonSelectType.AllDirection) {

@@ -1,10 +1,5 @@
  /// @desc Set level objects, basic things
 
-
-//SetGameVariables(); // ezt majd ki kell szedni!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-LoadGameSettings(); // ezt majd ki kell szedni!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-
 #region Init basic things
 
 audio_stop_all(); // stop every sounds before start
@@ -55,7 +50,14 @@ function SetPlayerStartValues() {
 
 #endregion
 
+#region Restart level
 
+function RestartLevel() {
+	
+	room_restart()
+}
+
+#endregion
 
 
 

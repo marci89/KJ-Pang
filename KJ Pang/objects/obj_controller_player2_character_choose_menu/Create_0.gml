@@ -27,7 +27,7 @@ maxButtonId = 1;
 
 #region Create buttons
 
- instance_create_layer(startX, buttonY,"Instances", obj_player2_character_choose_menu_next_button);
+ instance_create_layer(startX + 100, buttonY,"Instances", obj_player2_character_choose_menu_next_button);
  buttonY += 120;
  
  instance_create_layer(startX + 100, buttonY,"Instances", obj_player2_character_choose_menu_back_button);

@@ -1,40 +1,24 @@
 
-#region ESC key for exit
+#region level menu (paused)
 
-if (keyboard_check_pressed(vk_escape)) {
-    game_end();
+if (keyboard_check_pressed(vk_escape)
+|| gamepad_button_check_pressed(0, gp_shoulderr)
+|| gamepad_button_check_pressed(1, gp_shoulderr)
+|| gamepad_button_check_pressed(0, gp_shoulderl)
+|| gamepad_button_check_pressed(1, gp_shoulderl))
+{
+	
+	global.isPaused = !global.isPaused;
+	
+    var exitMenuObj = obj_controller_level_exit_menu;
+	
+	if(IsInstanceExists(exitMenuObj ?? noone)) {
+			instance_destroy(obj_controller_level_exit_menu)
+	} else {
+			instance_create_layer(x,y,"Controller", obj_controller_level_exit_menu);
+	}
+	
 }
-
-#endregion
-
-#region Paused
-
-if keyboard_check_pressed(ord("P")) {
-    global.isPaused = !global.isPaused;
-    if (global.isPaused == true) {
-		instance_deactivate_layer("TopLayer");	
-		instance_deactivate_layer("TopWeapon");
-		instance_deactivate_layer("Player");	
-		instance_deactivate_layer("Weapon");
-	    instance_deactivate_layer("Enemy");
-	    instance_deactivate_layer("Item");	
-        instance_deactivate_layer("Wall");
-		instance_deactivate_layer("Status");
-		instance_deactivate_layer("BackgroundBlack");
-        }
-		else
-		{
-		instance_activate_layer("TopLayer");
-        instance_activate_layer("TopWeapon");
-        instance_activate_layer("Player");
-        instance_activate_layer("Weapon");
-        instance_activate_layer("Enemy");
-        instance_activate_layer("Item");
-        instance_activate_layer("Wall");
-        instance_activate_layer("Status");
-        instance_activate_layer("BackgroundBlack");
-		}
-    }
 
 #endregion
 

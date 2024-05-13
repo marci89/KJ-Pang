@@ -10,7 +10,9 @@ LoadGameSettings();
 CreateRoomTransition(true); // room start animation
 
 // play music
-PlayMusic(snd_main_menu, true); 
+if (!audio_is_playing(snd_main_menu)) {
+	PlayMusic(snd_main_menu, true);
+}
 
 //button positions
 startX = 330; // buttons start x
