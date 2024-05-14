@@ -53,7 +53,9 @@ function CreateLevelEasy1() {
 	CreateLifePoint(110, 640, lifePointType.Red);
 	CreateLifePoint(150, 640, lifePointType.Red);
 	
-	CreateItem(190, 640, obj_item_food)
+
+	
+	CreateItem(190, 640, obj_item_machine_gun)
 	CreateItem(830, 640, obj_item_food)
 	
 	CreateLifePoint(870, 640, lifePointType.Red);

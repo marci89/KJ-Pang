@@ -18,6 +18,7 @@ currentSelectedButtonId = 0;
 maxButtonId = 2;
 
 global.playerOneName = "";
+keyboard_string = "";
 
 #endregion
 

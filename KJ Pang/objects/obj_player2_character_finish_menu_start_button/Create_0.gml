@@ -19,7 +19,7 @@ function Execute() {
 	
 	//execute	
 	PlaySound(snd_button_click, false);
-	room_goto(rm_level);
+	room_goto(rm_intro_start);
 }
 
 #endregion

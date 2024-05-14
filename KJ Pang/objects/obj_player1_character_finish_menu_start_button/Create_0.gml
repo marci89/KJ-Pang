@@ -28,7 +28,7 @@ function Execute() {
 	if(global.playMode == playModeType.SinglePlayer) {
 		
 		 PlaySound(snd_button_click, false);
-		 room_goto(rm_level);
+		 room_goto(rm_intro_start);
 	} else {
 		 PlaySound(snd_button_click, false);
 		 room_goto(rm_player2_character_choose_menu);

@@ -33,9 +33,13 @@ draw_text(drawPlayerNameX, drawPlayerNameY, playerName);
 
 #region Draw level
 
-var levelTextWidth = string_width(levelText);
-var drawLevelTextX = (sprite_width - levelTextWidth) / 2;
-draw_text(x + drawLevelTextX , y + 360, levelText);
+if(global.playMode == playModeType.SinglePlayer 
+||( global.playerTwoLife <= 0 && global.playMode == playModeType.MultiPlayer)) {
+	
+	var levelTextWidth = string_width(levelText);
+	var drawLevelTextX = (sprite_width - levelTextWidth) / 2;
+	draw_text(x + drawLevelTextX , y + 360, levelText);
+}
 
 #endregion
 

@@ -1,6 +1,8 @@
-#region Draw
 
 draw_self();
+
+#region Draw keyPress text
+
 draw_set_color(c_white);
 draw_set_font(ft_level_summary_small_font);
 
@@ -12,3 +14,19 @@ if(isKeyPressVisible && isKeyPressEnable) {
 }
 
 #endregion
+
+
+#region Draw level
+
+if (islevelTextShowEnabled) {
+	
+	draw_set_color(c_white);
+	draw_set_font(ft_level_summary_font);
+
+	var levelTextWidth = string_width(levelText);
+	var drawLevelTextX = (room_width - levelTextWidth) / 2;
+	draw_text(x + drawLevelTextX , y + 440, levelText);
+}
+
+#endregion
+

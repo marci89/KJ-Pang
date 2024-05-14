@@ -21,8 +21,12 @@ imageSize = 350; // character avatar image size
 roomWidth = 1022; // room width
 singlePlayerStartX = (roomWidth /2) - (imageSize / 2); // singleplayer default x position
 
+islevelTextShowEnabled = false;
+
+
 // translate text
 pressAnyKeyToContinueText= GetLocalizedText("pressAnyKeyToContinue");
+levelText = GetLocalizedText("level") + "  " + string(global.level -1); 
 
 #endregion
 
@@ -46,6 +50,10 @@ function CreateMultiPlayerLevelSummaryPanelForPlayerOne() {
 	
 	if(global.playerTwoLife <= 0) {
 		startX = singlePlayerStartX;
+	}
+	
+	if(global.playerTwoLife > 0) {
+		islevelTextShowEnabled = true;
 	}
 	
 	 var panelPlayerOne = instance_create_layer(startX, startY,"Instances", obj_level_summary_panel);
