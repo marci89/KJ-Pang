@@ -12,7 +12,7 @@
 	//Setting and basic things
 	global.soundEnable = false; // sound enable
 	global.musicEnable = false; // music enable
-	global.language = languageType.Hungarian; // selected language
+	global.language = languageType.English; // selected language
 	
 	
 	//Player
