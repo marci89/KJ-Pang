@@ -55,7 +55,7 @@ function CreateLevelEasy1() {
 	
 
 	
-	CreateItem(190, 640, obj_item_machine_gun)
+	CreateItem(190, 640, obj_item_time_slow)
 	CreateItem(830, 640, obj_item_food)
 	
 	CreateLifePoint(870, 640, lifePointType.Red);

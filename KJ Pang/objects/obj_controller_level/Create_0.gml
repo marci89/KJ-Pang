@@ -14,6 +14,10 @@ playerTwoStartLifePoint = global.playerTwoLifePoint
 playerOneStartScore = global.playerOneScore
 playerTwoStartScore = global.playerTwoScore
 
+//starter lives
+playerOneStartLife = global.playerOneLife
+playerTwoStartLife = global.playerTwoLife
+
 global.previousLevelTime = 0 // set 0 to refresh the value each start
 
 #endregion
@@ -50,10 +54,23 @@ function SetPlayerStartValues() {
 
 #endregion
 
+#region Set player start lives if game is restarted from menu
+
+function SetPlayerStartLives() {
+	
+ global.playerOneLife = playerOneStartLife;
+ global.playerTwoLife = playerTwoStartLife;
+ 
+}
+
+#endregion
+
 #region Restart level
 
 function RestartLevel() {
 	
+	SetPlayerStartValues()
+	SetPlayerStartLives();
 	room_restart()
 }
 

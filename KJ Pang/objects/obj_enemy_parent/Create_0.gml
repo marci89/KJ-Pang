@@ -68,8 +68,40 @@ function SetOriginalProperties() {
 #region Reset to original properties function
 
 function ResetToOriginalProperties () {
-	moveX = originalMoveX; //left and right movement
-	moveY = originalMoveY; //up and down movement
+	
+	var tempMoveX = moveX;
+	var tempMoveY = moveY;
+	
+	//update movement directions
+	if (moveX > 0 && originalMoveX < 0) {
+		moveX = abs(originalMoveX);
+	} else if (moveX < 0 && originalMoveX > 0) {
+		moveX = -abs(originalMoveX); 
+	} else {
+		moveX = originalMoveX;
+	}
+	
+	if (moveY > 0 && originalMoveY < 0) {
+		moveY = abs(originalMoveY);
+	} else if (moveY < 0 && originalMoveY > 0) {
+		moveY = -abs(originalMoveY); 
+	} else {
+		moveY = originalMoveY;
+	}
+
+
+	//check freezed objects
+	if(moveX == 0 ){
+		moveX = originalMoveX;
+	}
+	
+	if(moveY == 0 ){
+		moveY = originalMoveY;
+	}
+	
+
+	
+	
 	gravSpeedX = originalGravSpeedX; // x gavity speed
 	gravSpeedY = originalGravSpeedY; // y gavity speed
 	isGravityXEnabled = originalGravityXEnabled; // gravity x enabled or not

@@ -114,7 +114,6 @@ function SetPlayerInputs() {
 
 #endregion
 
-
 // get properties
 
 #region Get food function
@@ -180,7 +179,6 @@ function GetSpecialAbility() {
 }
 
 #endregion
-
 
 // functions
 

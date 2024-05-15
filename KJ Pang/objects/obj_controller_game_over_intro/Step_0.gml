@@ -14,6 +14,7 @@ if (currentFrameNumber == 2) {
 	text = GetLocalizedText("introGameOverFrame2Text");
 	image_speed = 0;
 	if(!isGameOverTextCreated) {
+		PlaySound(snd_game_over, false,1); 
 		alarm[0] =5;
 	}
 	
@@ -23,6 +24,7 @@ if (currentFrameNumber == 2) {
 }
 
 if (currentFrameNumber == 3) {
+	audio_stop_all()
 	room_goto(rm_main_menu);
 }
 

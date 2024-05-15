@@ -12,8 +12,8 @@
   "name":"obj_controller_game_over_intro",
   "overriddenProperties":[],
   "parent":{
-    "name":"GameOver",
-    "path":"folders/Objects/Controller/UI/Intro/GameOver.yy",
+    "name":"Intro",
+    "path":"folders/Objects/Controller/UI/Intro.yy",
   },
   "parentObjectId":{
     "name":"obj_controller_intro_parent",

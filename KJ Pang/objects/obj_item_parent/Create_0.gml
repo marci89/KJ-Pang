@@ -54,8 +54,49 @@ function SetOriginalProperties() {
 #region reset to original properties function
 
 function ResetToOriginalProperties () {
-	moveX = originalMoveX; //left and right movement
-	moveY = originalMoveY; //up and down movement
+	
+	var tempMoveX = moveX;
+	var tempMoveY = moveY;
+	
+	//update movement directions
+	if (moveX > 0 && originalMoveX < 0) {
+		moveX = abs(originalMoveX);
+	} else if (moveX < 0 && originalMoveX > 0) {
+		moveX = -abs(originalMoveX); 
+	} else {
+		moveX = originalMoveX;
+	}
+	
+	if (moveY > 0 && originalMoveY < 0) {
+		moveY = abs(originalMoveY);
+	} else if (moveY < 0 && originalMoveY > 0) {
+		moveY = -abs(originalMoveY); 
+	} else {
+		moveY = originalMoveY;
+	}
+
+
+	//check freezed objects
+	if(moveX == 0 ){
+		moveX = originalMoveX;
+	}
+	
+	if(moveY == 0 ){
+		moveY = originalMoveY;
+	}
+	
+	//checking slowed items which not moved before
+	if(tempMoveX > 0 && originalMoveX == 0) {
+		moveX = 2;
+	}
+	
+	if(tempMoveX < 0 && originalMoveX == 0) {
+		moveX = -2;
+	}
+	
+	
+	
+	
 	gravSpeed = originalGravSpeed; // gavity speed
 	isGravityEnabled = originalGravityEnabled; // gravity enabled or not
 	bounceDecay = originalBounceDecay; // bounce value

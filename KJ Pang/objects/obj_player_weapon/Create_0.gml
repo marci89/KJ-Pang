@@ -358,7 +358,7 @@ function handleMachineGun() {
 				var bulletY = weaponDirection == 1 ? y - sprite_width :  y + sprite_width;
 
 				createFireAnimation(bulletX, bulletY)
-				CreateWeapon(bulletX, bulletY, obj_weapon_machine_gun_bullet, "TopWeapon", player ?? noone);
+				CreateWeapon(bulletX, bulletY + 20, obj_weapon_machine_gun_bullet, "TopWeapon", player ?? noone);
 				
 				 player.machineGunAmmo --;
 				

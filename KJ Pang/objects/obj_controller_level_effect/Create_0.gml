@@ -26,7 +26,7 @@ function SettingsObjectsProperties (nextEffectType) {
 	} 
 	
 	//get original properties to start different effect
-	if (previousLevelEffect == global.currentLevelEffect) {
+	if (previousLevelEffect == global.currentLevelEffect && previousLevelEffect != noone) {
 		ResetAllEnemyValuesToOriginalProperties();
 		ResetAllItemValuesToOriginalProperties();
 	}
