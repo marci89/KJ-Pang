@@ -82,6 +82,7 @@ function GamePadKeyPressCheckForVertical(slot) {
 				currentSelectedButtonId = 0;
 			}
 	}
+			
 	
 	//execute
 	if (gamepad_button_check_pressed(slot, gp_face1)) {	
@@ -187,7 +188,7 @@ function KeyboardKeyPressCheckForHorizontal() {
 #region gamepad key press check for all direction
 
 function GamePadKeyPressCheckForAllDirection(slot) {
-	
+		
 	//up
 	if (gamepad_button_check_pressed(slot, gp_padu)) {
 		
@@ -205,7 +206,7 @@ function GamePadKeyPressCheckForAllDirection(slot) {
 			}	
 	}
 	
-	//up
+	//left
 	if (gamepad_button_check_pressed(slot, gp_padl)) {
 		currentSelectedButtonId -= 1;
 			if (currentSelectedButtonId < 0) {
@@ -213,13 +214,15 @@ function GamePadKeyPressCheckForAllDirection(slot) {
 			}
 	}
 		
-	//up
+	//right
 	if (gamepad_button_check_pressed(slot, gp_padr)) {
 		currentSelectedButtonId += 1;
 			if (currentSelectedButtonId > maxButtonId) {
 				currentSelectedButtonId = maxButtonId;
 			}
 		}
+		
+	
 	
 	//execute
 	if (gamepad_button_check_pressed(slot, gp_face1)) {	

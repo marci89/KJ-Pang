@@ -1,6 +1,10 @@
 
 isKeyPressEnable = false; // wait a little before go to next level if you press any key
+
 controllText = GetLocalizedText("control");
+menu = GetLocalizedText("menu");
+menuGamepad = GetLocalizedText("menuGamepad");
+
 left =  GetLocalizedText("left");
 leftKeyboard =  GetLocalizedText("leftKeyboard");
 leftGamepad =  GetLocalizedText("leftGamepad");
@@ -13,8 +17,10 @@ jumpKeyboard =  GetLocalizedText("jumpKeyboard");
 jumpGamepad =  GetLocalizedText("jumpGamepad");
 
 fire =  GetLocalizedText("fire");
+fireGamepad =  GetLocalizedText("fireGamepad");
 specialAbility =  GetLocalizedText("specialAbility");
 button = GetLocalizedText("button");
+orText = GetLocalizedText("or");
 
 scoreSystem = GetLocalizedText("scoreSystem");
 scoreSystemDesc = GetLocalizedText("scoreSystemDesc")
@@ -25,7 +31,7 @@ specialAbilityDesc= GetLocalizedText("specialAbilityDesc")
 
 
 //enable to key press check
-alarm[0] = 100;
+alarm[0] = 50;
 
 
 

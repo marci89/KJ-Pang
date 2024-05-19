@@ -105,9 +105,11 @@ function SetPlayerInputs() {
 		}
 		
 		// jump, fire
-	    inputJump = gamepad_button_check(0, gp_face1) || gamepad_button_check(0, gp_padu);
-		inputFirePressed = gamepad_button_check(0, gp_face3);
-		inputFire = gamepad_button_check(0, gp_face3);
+	    inputJump = gamepad_button_check(0, gp_face1);
+		inputFirePressed = gamepad_button_check_pressed(0, gp_face3)
+		|| gamepad_button_check_pressed(0, gp_shoulderrb);
+		inputFire = gamepad_button_check(0, gp_face3)
+		|| gamepad_button_check(0, gp_shoulderrb);
 		inputSpecialAbility = gamepad_button_check_pressed(0, gp_face2);
 	}
 }

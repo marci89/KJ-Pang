@@ -2,8 +2,6 @@
 #region level menu (paused)
 
 if (keyboard_check_pressed(vk_escape)
-|| gamepad_button_check_pressed(0, gp_shoulderr)
-|| gamepad_button_check_pressed(1, gp_shoulderr)
 || gamepad_button_check_pressed(0, gp_shoulderl)
 || gamepad_button_check_pressed(1, gp_shoulderl))
 {

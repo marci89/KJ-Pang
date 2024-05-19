@@ -3,7 +3,7 @@
 
 function LoadBackgroundImage(name){
 	
-	var folderPath = "Images/Backgrounds/";
+	var folderPath = working_directory + "Images/Backgrounds/";
 	var fullPath = folderPath + string(name) + ".png";
 	var imageindex = sprite_add(fullPath, false, false, 0, 0, 0);
 

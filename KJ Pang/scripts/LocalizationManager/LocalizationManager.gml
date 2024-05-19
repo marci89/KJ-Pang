@@ -6,6 +6,7 @@ function GetLocalizedText(key){
 	  var localizedText = key; 
 	  var language = (global.language == languageType.English) ? "English" : "Hungarian";
 	  var filename = "Data/localization.ini";
+	
 	  
 	  if file_exists(filename) {	
 		    ini_open(working_directory + filename)

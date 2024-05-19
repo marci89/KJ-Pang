@@ -17,8 +17,16 @@ draw_set_font(ft_information_desc_text_font);
 draw_sprite(spr_control_picture_small_keyboard, 1,  100, startY);
 draw_sprite(spr_control_picture_small_gamepad, 1,  700, startY);
 
-//left
+
+//menu
 startY += 130;
+draw_text(50, startY, string(menu) + ":");
+draw_text(150, startY,  "ESC");
+draw_text(600, startY, string(menu) + ":");
+draw_text(700, startY, string(menuGamepad));
+
+//left
+startY += 25;
 draw_text(50, startY, string(left) + ":");
 draw_text(150, startY, string(leftKeyboard));
 draw_text(600, startY, string(left) + ":");
@@ -36,17 +44,17 @@ startY += 25;
 draw_text(50, startY, string(jump) + ":");
 draw_text(150, startY, string(jumpKeyboard));
 draw_text(600, startY, string(jump) + ":");
-draw_text(700, startY, string(jumpGamepad) + " A " + string(button));
+draw_text(700, startY, "A " + string(button));
 
 //fire
 startY += 25;
 draw_text(50, startY, string(fire) + ":");
 draw_text(150, startY, "ctrl");
 draw_text(600, startY, string(fire) + ":");
-draw_text(700, startY, "X " + string(button));
+draw_text(700, startY, "X " + string(button) + " " + string(orText) + " " + string(fireGamepad) );
 
 //spec ability
-startY += 35;
+startY += 25;
 draw_text(50, startY, string(specialAbility) + ":    space" );
 draw_text(600, startY, string(specialAbility) + ":    B " + string(button));
 
