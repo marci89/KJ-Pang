@@ -6,7 +6,7 @@ event_inherited();
 
 //texts
 nameText = GetLocalizedText("name");
-nameErrorText = GetLocalizedText("nameError");
+nameErrorText = GetLocalizedText("nameExists");
 firstPlayerText = GetLocalizedText("firstPlayer");
 
 //button positions

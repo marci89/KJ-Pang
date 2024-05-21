@@ -17,6 +17,12 @@ if (hasError) {
 	draw_text(x , y + 60, errorMessage);
 }
 
+if (isNameExists) {
+	draw_set_color(c_red);
+	draw_set_font(ft_menu_small_text_font);
+	draw_text(x , y + 60, nameExistsText);
+}
+
 #endregion
 
 #region text value

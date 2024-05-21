@@ -2,6 +2,9 @@
 // If you start a new game, refresh all of global variables
 function SetGameVariables(){
 
+	//game
+	global.scores = ds_list_create();
+	
 	//Player
 	global.playerOneScore = 0; //player1 score
 	global.playerTwoScore = 0; //player2 score

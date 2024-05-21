@@ -16,3 +16,4 @@ alarm[1] = 200; // start auto frame change
 //set random image for city
 randomize();
 destroyedCityImageIndex = irandom_range(0, 2);
+

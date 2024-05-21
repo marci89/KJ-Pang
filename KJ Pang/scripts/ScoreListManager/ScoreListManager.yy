@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"ScoreListManager",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ScoreListManager",
+  "parent":{
+    "name":"FileManipulating",
+    "path":"folders/Scripts/FileManipulating.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

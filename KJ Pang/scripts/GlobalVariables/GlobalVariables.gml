@@ -1,6 +1,7 @@
 	//Game
 	global.gameDifficult = gameDifficultType.Easy; // game difficult level
 	global.playMode = playModeType.SinglePlayer; // play alone or with your friend
+	global.scores = ds_list_create(); // score list
 	
 	//game difficult allowing
 	global.isNormalDifficultEnable = false;

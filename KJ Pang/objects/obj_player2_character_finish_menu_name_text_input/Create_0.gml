@@ -6,7 +6,9 @@ buttonId = 0; // button identifier
 
 //error handling
 errorMessage = GetLocalizedText("nameError");
+nameExistsText = GetLocalizedText("nameExists");
 hasError = false;
+isNameExists = false;
 
 
 isLineVisible = false; // line visible set if text null

@@ -43,6 +43,18 @@ function NextLevel() {
 
 function SetPlayerStartValues() {
 	
+	//check end of the game for single palyer
+	if(global.playMode == playModeType.SinglePlayer
+	&& global.playerOneLife == 0) {
+		return;
+	}
+	
+	if(global.playMode == playModeType.MultiPlayer
+	&& global.playerOneLife == 0 
+	&& global.playerTwoLife == 0) {
+		return;
+	}
+	
  global.playerOneFood = playerOneStartFood;
  global.playerTwoFood = playerTwoStartFood;
  global.playerOneLifePoint = playerOneStartLifePoint;

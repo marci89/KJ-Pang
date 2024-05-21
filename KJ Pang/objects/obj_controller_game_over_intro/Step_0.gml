@@ -25,7 +25,7 @@ if (currentFrameNumber == 2) {
 
 if (currentFrameNumber == 3) {
 	audio_stop_all()
-	room_goto(rm_main_menu);
+	room_goto(rm_score_list_menu);
 }
 
 #endregion

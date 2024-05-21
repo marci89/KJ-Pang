@@ -7,7 +7,7 @@ if (isSelected) {
 	sprite_index = spr_text_input_inactive;
 }
 
-if (hasError) {
+if (hasError || isNameExists) {
 	sprite_index = spr_text_input_error;
 }
 
@@ -18,6 +18,7 @@ if (hasError) {
 if(isSelected) {
 	
 	hasError = false;
+	isNameExists = false;
 		
 	if (keyboard_check(vk_anykey) && string_length(text) < 12) {
 		text += string(keyboard_string);

@@ -15,6 +15,11 @@ function Execute() {
 			textInputObj.hasError = true;
 			return
 		}
+		
+		if(textInputObj.text == global.playerOneName) {
+			textInputObj.isNameExists = true;
+			return
+		}
 	}
 	
 	//execute	
