@@ -203,7 +203,15 @@
     {"$GMFolder":"","%Name":"Tile Sets","folderPath":"folders/Tile Sets.yy","name":"Tile Sets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
-  "IncludedFiles":[],
+  "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":"gameSettings.ini","CopyToMask":-1,"filePath":"datafiles/Data","name":"gameSettings.ini","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"localization.ini","CopyToMask":-1,"filePath":"datafiles/Data","name":"localization.ini","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"Backgrounds.png","CopyToMask":-1,"filePath":"datafiles/Images/Backgrounds","name":"Backgrounds.png","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"Backgrounds2.png","CopyToMask":-1,"filePath":"datafiles/Images/Backgrounds","name":"Backgrounds2.png","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"japan_morning.png","CopyToMask":-1,"filePath":"datafiles/Images/Backgrounds","name":"japan_morning.png","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"japan_night.png","CopyToMask":-1,"filePath":"datafiles/Images/Backgrounds","name":"japan_night.png","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"japan_twilight.png","CopyToMask":-1,"filePath":"datafiles/Images/Backgrounds","name":"japan_twilight.png","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+  ],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{

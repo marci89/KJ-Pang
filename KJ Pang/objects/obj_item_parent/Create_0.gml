@@ -60,7 +60,7 @@ function ResetToOriginalProperties () {
 	
 	//update movement directions
 	if (moveX > 0 && originalMoveX < 0) {
-		moveX = abs(originalMoveX);
+		moveX = abs(originalMoveX ?? 0);
 	} else if (moveX < 0 && originalMoveX > 0) {
 		moveX = -abs(originalMoveX); 
 	} else {

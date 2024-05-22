@@ -2,7 +2,7 @@
 #region Save score list
 
 function SaveScoreList(){
-	  var filename = "Data/scoreList.txt";
+	  var filename = working_directory + "Data/scoreList.txt";
 	  var file = file_text_open_write(filename);
 	  
 	if (file != -1) {
@@ -29,7 +29,7 @@ function SaveScoreList(){
 #region load score list
 
 function LoadScoreList(){
-	 var filename = "Data/scoreList.txt";
+	 var filename = working_directory + "Data/scoreList.txt";
 	  
 	 if (file_exists(filename)) {
 		var file = file_text_open_read(filename);
