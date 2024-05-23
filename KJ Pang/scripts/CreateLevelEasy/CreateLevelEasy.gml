@@ -10,7 +10,7 @@ SetLevelVariables()
 //Player
 	
 global.hasLevelTime = true;
-global.hasRoomWallFrame = true;
+global.hasRoomWallFrame = false;
 
 
 if(global.level == 1) CreateLevelEasy1();
@@ -57,7 +57,8 @@ function CreateLevelEasy1() {
 	
 
 	
-	CreateItem(190, 640, obj_item_pistol)
+	CreateItem(190, 640, obj_item_tracking_rocket_launcher)
+	CreateItem(120, 640, obj_item_grenade)
 	CreateItem(830, 640, obj_item_food)
 	
 	CreateLifePoint(870, 640, lifePointType.Red);

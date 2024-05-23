@@ -164,15 +164,11 @@ if(player.weapon == weaponType.FlameThrower) {
 	var animationX = weaponDirection == 1 ? x-10 : x+10;	
 	var animationY = weaponDirection == 1 ? y - sprite_width :  y + sprite_width;
 	
-	if(player.weapon == weaponType.Pistol
-	&& shootDirectionType == weaponDirectionType.Vertical) {
-		animationX = weaponDirection == 1 ? x-5 : x+5;	
-	}
 	
 	if(player.weapon == weaponType.Pistol
 	&& shootDirectionType == weaponDirectionType.Horizontal) {
-		animationX = weaponDirection == 1 ? x+30 : x-30;	
-		animationY = y- 15;	
+		animationX = weaponDirection == 1 ? x+35 : x-35;	
+		animationY = y - 10;	
 	}
 	
 	
@@ -189,7 +185,7 @@ if(player.weapon == weaponType.FlameThrower) {
 		animationX = weaponDirection == 1 ? x + (sprite_width) : x + (sprite_width);	
 	    animationY =  y-20;
 	}
-
+	
 				
 	
 	updateFireAnimationPosition(animationX, animationY);

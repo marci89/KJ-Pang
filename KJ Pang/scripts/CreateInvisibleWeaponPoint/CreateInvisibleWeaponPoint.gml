@@ -16,9 +16,10 @@ function CreateInvisibleWeapon(xValue, yValue, shapeType, weaponType, layerName,
 
 #region The creation of invisible weapon with movement
 
-function CreateInvisibleWeaponWithMovement(xValue, yValue, moveX, moveY, shapeType, weaponType, layerName,  player, destroyTime, isWallBreaker){
+function CreateInvisibleWeaponWithMovement(xValue, yValue, moveX, moveY, shapeType, weaponType, layerName,  player, destroyTime, isWallBreaker, directionType){
 	 var result = instance_create_layer(xValue, yValue, layerName, obj_weapon_invisible_weapon);
 	 result.SetPlayer(player);
+	 result.SetDirection(directionType);
 	 result.shapeType = shapeType;
 	 result.SetWeaponValues(weaponType, destroyTime);
 	 result.moveX = moveX;

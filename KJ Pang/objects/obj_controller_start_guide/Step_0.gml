@@ -10,7 +10,7 @@ if(isKeyPressEnable) {
   
 		//check keyboard key and gamepad
 	if (keyboard_check(vk_anykey) || gamePadPressed) {
-	   room_goto(rm_level);
+	   room_goto(rm_intro_weapon_guide);
 	}
 }
 

@@ -21,42 +21,54 @@ draw_sprite(spr_control_picture_small_gamepad, 1,  700, startY);
 //menu
 startY += 130;
 draw_text(50, startY, string(menu) + ":");
-draw_text(150, startY,  "ESC");
-draw_text(600, startY, string(menu) + ":");
+draw_text(250, startY,  "ESC");
+draw_text(500, startY, string(menu) + ":");
 draw_text(700, startY, string(menuGamepad));
 
 //left
 startY += 25;
 draw_text(50, startY, string(left) + ":");
-draw_text(150, startY, string(leftKeyboard));
-draw_text(600, startY, string(left) + ":");
+draw_text(250, startY, string(leftKeyboard));
+draw_text(500, startY, string(left) + ":");
 draw_text(700, startY, string(leftGamepad));
 
 //right
 startY += 25;
 draw_text(50, startY, string(right) + ":");
-draw_text(150, startY, string(rightKeyboard));
-draw_text(600, startY, string(right) + ":");
+draw_text(250, startY, string(rightKeyboard));
+draw_text(500, startY, string(right) + ":");
 draw_text(700, startY, string(rightGamepad));
 
 //jump
 startY += 25;
 draw_text(50, startY, string(jump) + ":");
-draw_text(150, startY, string(jumpKeyboard));
-draw_text(600, startY, string(jump) + ":");
+draw_text(250, startY, string(jumpKeyboard));
+draw_text(500, startY, string(jump) + ":");
 draw_text(700, startY, "A " + string(button));
 
-//fire
+//fire up
 startY += 25;
-draw_text(50, startY, string(fire) + ":");
-draw_text(150, startY, "ctrl");
-draw_text(600, startY, string(fire) + ":");
-draw_text(700, startY, "X " + string(button) + " " + string(orText) + " " + string(fireGamepad) );
+draw_text(50, startY, string(fireUp) + ":");
+draw_text(250, startY, "ctrl");
+draw_text(500, startY, string(fireUp) + ":");
+draw_text(700, startY, "X " + string(button) + " " + string(orText) + " " + string(fireGamepadUp) );
+
+//fire horizontal
+startY += 25;
+draw_text(50, startY, string(fireHorizontal) + ":");
+draw_text(250, startY, "alt");
+draw_text(500, startY, string(fireHorizontal) + ":");
+draw_text(700, startY, "B " + string(button) + " " + string(orText) + " " + string(fireGamepadHorizontal) );
+
 
 //spec ability
 startY += 25;
-draw_text(50, startY, string(specialAbility) + ":    space" );
-draw_text(600, startY, string(specialAbility) + ":    B " + string(button));
+
+draw_text(50, startY, string(specialAbility) + ":");
+draw_text(250, startY,  "space");
+draw_text(500, startY, string(specialAbility) + ":");
+draw_text(700, startY, "Y " + string(button));
+
 
 startY += 50;
 // Draw the line

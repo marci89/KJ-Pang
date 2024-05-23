@@ -5,9 +5,27 @@
  
  #endregion
 
+#region Set angle
+
+if (directionType == weaponDirectionType.Horizontal) {
+	  image_angle = moveX > 0 ? -90 : 90;
+}
+
+#endregion
+
 #region animation
 
-effect_create_above(ef_smoke, x+1, y+30, 0, c_orange);
+if (directionType == weaponDirectionType.Vertical) {
+	effect_create_above(ef_smoke, x+1, y+30, 0, c_orange);
+}
+
+if (directionType == weaponDirectionType.Horizontal) {
+	if(moveX > 0) {
+		effect_create_above(ef_smoke, x-30, y, 0, c_orange);
+	} else {
+		effect_create_above(ef_smoke, x+30, y, 0, c_orange);
+	}
+}
 	
 #endregion
 

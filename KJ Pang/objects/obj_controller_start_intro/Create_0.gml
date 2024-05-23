@@ -84,7 +84,7 @@ function UpdateFrameWithEasyMode() {
 	}
 
 	if (currentFrameNumber == 7) {
-		room_goto(rm_intro_stat_guide);
+		room_goto(rm_intro_start_guide);
 	}
 }
 

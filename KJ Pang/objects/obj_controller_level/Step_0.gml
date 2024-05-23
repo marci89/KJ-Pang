@@ -1,21 +1,35 @@
 
 #region level menu (paused)
 
+var isAllowToExit = true;
+
 if (keyboard_check_pressed(vk_escape)
 || gamepad_button_check_pressed(0, gp_shoulderl)
 || gamepad_button_check_pressed(1, gp_shoulderl))
 {
-	
-	global.isPaused = !global.isPaused;
-	
-    var exitMenuObj = obj_controller_level_exit_menu;
-	
-	if(IsInstanceExists(exitMenuObj ?? noone)) {
-			instance_destroy(obj_controller_level_exit_menu)
-	} else {
-			instance_create_layer(x,y,"Controller", obj_controller_level_exit_menu);
+	if(IsInstanceExists(obj_player_one ?? noone)) {
+		if (obj_player_one.isDead) {
+			isAllowToExit = false;
+		}
 	}
 	
+	if(IsInstanceExists(obj_player_two ?? noone)) {
+		if (obj_player_two.isDead) {
+			isAllowToExit = false;
+		}
+	}
+		
+	if (isAllowToExit) {
+		global.isPaused = !global.isPaused;
+	
+	    var exitMenuObj = obj_controller_level_exit_menu;
+	
+		if(IsInstanceExists(exitMenuObj ?? noone)) {
+				instance_destroy(obj_controller_level_exit_menu)
+		} else {
+				instance_create_layer(x,y,"Controller", obj_controller_level_exit_menu);
+		}
+	}
 }
 
 #endregion

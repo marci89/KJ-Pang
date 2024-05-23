@@ -27,3 +27,19 @@ xValue, yValue, moveX, moveY, type, layerName, player, directionType)
 }
 
 #endregion
+
+#region Create weapon which inherited from item parent object with movement
+
+function CreateItemInheritedWeaponWithMovement(
+xValue, yValue, moveX, moveY, type, layerName, player)
+{
+	 var result = instance_create_layer(xValue, yValue,layerName, type);
+	 
+	 result.SetPlayer(player);
+	 result.moveX = moveX;
+	 result.moveY = moveY;
+
+	 return result;
+}
+
+#endregion

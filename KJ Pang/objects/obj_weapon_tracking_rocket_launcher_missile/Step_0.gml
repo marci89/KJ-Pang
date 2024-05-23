@@ -1,7 +1,7 @@
 #region movement
 
 if(target == noone) {
-	 moveY = -moveSpeed;
+	 moveY = -moveX;
 	 y += moveY;
 }
 
@@ -24,7 +24,7 @@ if(target == noone) {
 if (IsInstanceExists(target)) {
 	
     var angle = point_direction(x, y, target.x, target.y);
-	move_towards_point(target.x, target.y, moveSpeed);
+	move_towards_point(target.x, target.y, moveX);
 	image_angle = angle-90;
 }
 

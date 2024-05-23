@@ -16,8 +16,11 @@ jump =  GetLocalizedText("jump");
 jumpKeyboard =  GetLocalizedText("jumpKeyboard");
 jumpGamepad =  GetLocalizedText("jumpGamepad");
 
-fire =  GetLocalizedText("fire");
-fireGamepad =  GetLocalizedText("fireGamepad");
+fireUp =  GetLocalizedText("fireUp");
+fireGamepadUp =  GetLocalizedText("fireGamepadUp");
+fireHorizontal= GetLocalizedText("fireHorizontal");
+fireGamepadHorizontal= GetLocalizedText("fireGamepadHorizontal");
+
 specialAbility =  GetLocalizedText("specialAbility");
 button = GetLocalizedText("button");
 orText = GetLocalizedText("or");

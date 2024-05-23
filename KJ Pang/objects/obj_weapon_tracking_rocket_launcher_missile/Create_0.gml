@@ -1,7 +1,6 @@
 
 //parent properties
 event_inherited()
-moveSpeed = 5; // move speed
 damage = 8; // weapon damage value
 type = weaponType.TrackingRocketLauncher; // weapon type
 
