@@ -43,6 +43,8 @@ function CreateLevelEasy1() {
 	CreatePlayer(400, 500); // create player
 	
 	//Enemy
+	
+	
 	CreateNormalBallGiant(550, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
 	normalBallColorType.Red, normalBallGiantDropItemType.Nothing, true);
@@ -55,7 +57,7 @@ function CreateLevelEasy1() {
 	
 
 	
-	CreateItem(190, 640, obj_item_machine_gun)
+	CreateItem(190, 640, obj_item_pistol)
 	CreateItem(830, 640, obj_item_food)
 	
 	CreateLifePoint(870, 640, lifePointType.Red);

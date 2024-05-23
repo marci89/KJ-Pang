@@ -215,7 +215,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.2.0.132",
+    "IDEVersion":"2024.4.1.152",
   },
   "name":"KJ Pang",
   "resources":[
@@ -228,8 +228,8 @@
     {"id":{"name":"ft_menu_kj_text_font","path":"fonts/ft_menu_kj_text_font/ft_menu_kj_text_font.yy",},},
     {"id":{"name":"ft_menu_pang_text_font","path":"fonts/ft_menu_pang_text_font/ft_menu_pang_text_font.yy",},},
     {"id":{"name":"ft_menu_player_number_text_font","path":"fonts/ft_menu_player_number_text_font/ft_menu_player_number_text_font.yy",},},
-    {"id":{"name":"ft_menu_small_text_font","path":"fonts/ft_menu_small_text_font/ft_menu_small_text_font.yy",},},
     {"id":{"name":"ft_menu_player_score_text_font","path":"fonts/ft_menu_player_score_text_font/ft_menu_player_score_text_font.yy",},},
+    {"id":{"name":"ft_menu_small_text_font","path":"fonts/ft_menu_small_text_font/ft_menu_small_text_font.yy",},},
     {"id":{"name":"ft_menu_smaller_button_text_font","path":"fonts/ft_menu_smaller_button_text_font/ft_menu_smaller_button_text_font.yy",},},
     {"id":{"name":"ft_menu_title_font","path":"fonts/ft_menu_title_font/ft_menu_title_font.yy",},},
     {"id":{"name":"ft_status_giant_font","path":"fonts/ft_status_giant_font/ft_status_giant_font.yy",},},

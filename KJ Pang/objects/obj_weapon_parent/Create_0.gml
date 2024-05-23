@@ -7,6 +7,7 @@ moveSpeed = 8; // move speed
 //basic
 damage = 1; // weapon damage value
 type = weaponType.SingleSting; // weapon type
+directionType = weaponDirectionType.Vertical; // direction
 
 // actual player
 player = noone; 
@@ -26,6 +27,15 @@ itemHoopingSpeedHeightMax = -3;
 function SetPlayer(playerRequest) {
 	
 	player = playerRequest;
+}
+
+#endregion
+
+#region Set direction
+
+function SetDirection(request) {
+	
+	directionType = request;
 }
 
 #endregion

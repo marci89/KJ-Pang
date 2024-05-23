@@ -1,13 +1,17 @@
 
 //parent properties
 event_inherited()
-moveSpeed = 5; // move speed
+
 damage = 5; // weapon damage value
 type = weaponType.SingleSting; // weapon type
 
 //own properties
+playerIsOnGround = false; // check player is on ground or not when this will be created.
+isCreated = false;
 bodyPartList = ds_list_create(); // list of body part objects
 
+
+alarm[0] = 20;
 #region delete this instance's all body part function
 
 function DeleteAllBodyPart() {
@@ -21,6 +25,17 @@ function DeleteAllBodyPart() {
 	
 	// Clear the list
     ds_list_clear(bodyPartList);
+}
+
+#endregion
+
+#region check player is on ground or not
+
+function CheckPlayerIsOnGround() {
+	
+	if(IsInstanceExists(player)){
+	    playerIsOnGround = player.sprite_index != player.spriteJump && player.isOnGround;
+	}
 }
 
 #endregion

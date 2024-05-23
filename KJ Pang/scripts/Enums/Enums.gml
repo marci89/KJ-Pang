@@ -140,7 +140,7 @@ enum levelEffectType{
 
 #endregion
 	
-#region life point colors
+#region life point types
 
 enum lifePointType{
     Red,
@@ -157,7 +157,7 @@ enum lifePointType{
 
 #endregion
 
-#region wall colors
+#region wall types
 
 enum wallType{
     Red,
@@ -197,6 +197,15 @@ enum weaponType{
 	RocketLauncher,
 	TrackingRocketLauncher,
 	FlameThrower,
+};
+
+#endregion
+
+#region weapon direction type
+
+enum weaponDirectionType{
+    Vertical,
+    Horizontal
 };
 
 #endregion

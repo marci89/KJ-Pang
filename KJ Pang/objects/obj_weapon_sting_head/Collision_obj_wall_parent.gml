@@ -13,9 +13,22 @@ if (instance_exists(other)) { // check exists
 		
 	// other walls
 	} else {
+		
+		if(!isCreated) {
+			return;
+		}
+		
 		CreateRandomStingHitWallSound();
-		var emberEffect = part_system_create(ps_effect_ember); // ember effect
-		part_system_position(emberEffect, x, y-30);
+		
+		//Ember effect
+		var emberEffect = part_system_create(ps_effect_ember);	
+		if(directionType == weaponDirectionType.Vertical) {
+			part_system_position(emberEffect, x, y-30);
+		} else {
+			var spaceX = moveX > 0 ? 30 : -30;
+			part_system_position(emberEffect, x + spaceX, y);
+		}
+		
 		instance_destroy();
 	}
 }

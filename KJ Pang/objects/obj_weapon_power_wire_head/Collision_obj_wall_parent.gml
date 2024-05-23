@@ -14,12 +14,33 @@ if (instance_exists(other)) { // check exists
 		
 	// other walls
 	} else {
-		if (!isConnectedtoWall) {
-			CreateRandomPowerWireSound();
-			alarm[0] = wallConnectionTime;
-			alarm[1] = wallConnectionTime-100;
+		
+		if(!isCreated) {
+			return;
 		}
+		
+		if(directionType == weaponDirectionType.Vertical) {
+			if (!isConnectedtoWall) {
+				CreateRandomPowerWireSound();
+				alarm[0] = wallConnectionTime;
+				alarm[1] = wallConnectionTime-100;
+			}
 
-		isConnectedtoWall = true;
+			isConnectedtoWall = true;
+			
+		} else {
+			CreateRandomStingHitWallSound();
+		
+			//Ember effect
+			var emberEffect = part_system_create(ps_effect_ember);	
+			if(directionType == weaponDirectionType.Vertical) {
+				part_system_position(emberEffect, x, y-30);
+			} else {
+				var spaceX = moveX > 0 ? 30 : -30;
+				part_system_position(emberEffect, x + spaceX, y);
+			}
+		
+			instance_destroy();
+		}
 	}
 }

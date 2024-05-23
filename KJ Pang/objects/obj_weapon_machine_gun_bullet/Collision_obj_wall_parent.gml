@@ -16,9 +16,11 @@ if (instance_exists(other)) { // check exists
 	} else {
 		
 		CreateRandomBulletHitWallSound();
-		var emberEffect = part_system_create(ps_effect_ember); // ember effect
+		
+		//Ember effect
+		var emberEffect = part_system_create(ps_effect_ember);	
 		part_system_position(emberEffect, x, y);
-
+			
 		instance_destroy();
 	}
 }

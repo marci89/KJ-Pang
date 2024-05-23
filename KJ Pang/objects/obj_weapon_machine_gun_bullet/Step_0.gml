@@ -1,9 +1,17 @@
 #region movement
 
- moveY = -moveSpeed;
  y += moveY;
+ x += moveX;
  
  #endregion
+
+#region Set angle
+
+if (directionType == weaponDirectionType.Horizontal) {
+	  image_angle = moveX > 0 ? -90 : 90;
+}
+
+#endregion
 
 #region Screen collision
 

@@ -1,8 +1,10 @@
 //inputs
 inputX = 0; // left and right key
 inputJump = 0; // jump key
-inputFirePressed = 0; // fire key pressed (shoot)
-inputFire = 0; // fire key (shoot)
+inputFirePressed = 0; // fire key pressed (shoot) vertical
+inputFire = 0; // fire key (shoot) vertical
+inputHorizontalFirePressed = 0; // fire key pressed (shoot) horizontal
+inputHorizontalFire = 0; // fire key (shoot) horizontal
 inputSpecialAbility = 0; // activate special ability
 
 // sound controll for character voice
@@ -80,6 +82,8 @@ function SetPlayerInputs() {
 		inputJump = keyboard_check_pressed(vk_up);
 		inputFirePressed = keyboard_check_pressed(vk_control);
 		inputFire = keyboard_check(vk_control);
+		inputHorizontalFirePressed = keyboard_check_pressed(vk_alt);
+		inputHorizontalFire = keyboard_check(vk_alt);
 		inputSpecialAbility = keyboard_check_pressed(vk_space);
 	}
 	

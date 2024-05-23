@@ -1,7 +1,6 @@
 
 //parent properties
 event_inherited()
-moveSpeed = 8; // move speed
 damage = 10; // weapon damage value
 type = weaponType.ShotGun; // weapon type
 

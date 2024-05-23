@@ -62,15 +62,15 @@ function ResetToOriginalProperties () {
 	if (moveX > 0 && originalMoveX < 0) {
 		moveX = abs(originalMoveX ?? 0);
 	} else if (moveX < 0 && originalMoveX > 0) {
-		moveX = -abs(originalMoveX); 
+		moveX = -abs(originalMoveX ?? 0); 
 	} else {
 		moveX = originalMoveX;
 	}
 	
 	if (moveY > 0 && originalMoveY < 0) {
-		moveY = abs(originalMoveY);
+		moveY = abs(originalMoveY ?? 0);
 	} else if (moveY < 0 && originalMoveY > 0) {
-		moveY = -abs(originalMoveY); 
+		moveY = -abs(originalMoveY ?? 0); 
 	} else {
 		moveY = originalMoveY;
 	}

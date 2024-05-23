@@ -3,7 +3,7 @@
 
 var halfSpriteWidth = sprite_width / 2;
 var halfSpriteHeight = sprite_height / 2;
-isOnGround = place_meeting(x, y + 1, obj_wall_parent); // Check if the object is on the ground
+isOnGround = place_meeting(x, y + 10, obj_wall_parent); // Check if the object is on the ground
 
 #endregion
 		

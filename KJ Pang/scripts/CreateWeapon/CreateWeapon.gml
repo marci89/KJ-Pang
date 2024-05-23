@@ -13,11 +13,16 @@ function CreateWeapon(xValue, yValue, type, layerName, player){
 
 #region Create weapon with movement
 
-function CreateWeaponWithMovement(xValue, yValue, moveX, moveY, type, layerName,  player){
+function CreateWeaponWithMovement(
+xValue, yValue, moveX, moveY, type, layerName, player, directionType)
+{
 	 var result = instance_create_layer(xValue, yValue,layerName, type);
+	 
 	 result.SetPlayer(player);
+	 result.SetDirection(directionType);
 	 result.moveX = moveX;
 	 result.moveY = moveY;
+
 	 return result;
 }
 

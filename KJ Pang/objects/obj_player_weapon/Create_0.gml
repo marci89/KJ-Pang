@@ -3,10 +3,12 @@
 weaponX = 0; // main variable for player's weapon x pos
 weaponY = 0; // main variable for player's weapon y pos
 
+//weapon direction type (up or left and right)
+shootDirectionType = weaponDirectionType.Vertical;
 //harpoon
 harpoonX = 5; // harpoon x position
 harpoonY = 39; // harpoon y position
-stingStartYPositionSpace = -6; // add plus space the sting when it will be created
+//stingStartYPositionSpace = -6; // add plus space the sting when it will be created
 powerWireStartYPositionSpace = -4; // add plus space the sting when it will be created
 
 //machinegun
@@ -75,6 +77,8 @@ isAllowFired = true; // allow to shoot or not
 //inputs
 inputFirePressed = 0; // fire key pressed
 inputFire = 0; // fire key
+inputHorizontalFirePressed = 0; // Horizontal fire key pressed
+inputHorizontalFire = 0; // Horizontal fire key
 
 //reloading times
 reloadingHarpoonTime = 15; // reload time
@@ -149,6 +153,10 @@ function updateFireAnimationPosition(posX, posY) {
 	if (instance_exists(fireAnimation) && isFired) {
 		fireAnimation.x = posX;
 		fireAnimation.y = posY;
+		
+		if(shootDirectionType == weaponDirectionType.Horizontal) {
+			fireAnimation.image_angle = weaponDirection == 1 ? -90 : 90;	
+		}
 	}
 }
 
@@ -158,34 +166,72 @@ function updateFireAnimationPosition(posX, posY) {
 
 function createShotgunBullets(posX, posY) {
 	
+	if(shootDirectionType == weaponDirectionType.Vertical) {
 	var bulletX = posX;		
 	var bulletY = posY + 20;
 	var defaultMoveY = -12;
 		
 
-	CreateWeaponWithMovement(bulletX, bulletY, -1, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, 1, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, -2, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, 2, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, -4, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, 4, defaultMoveY, obj_weapon_shotgun_bullet,"TopWeapon", player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, -6, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, 6, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, -8, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, 8, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, -10, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, 10, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, -12, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, 12, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, -16, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, 16, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, -20, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, 20, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, -24, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, 24, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, -30, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, 30, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
-	CreateWeaponWithMovement(bulletX, bulletY, 0, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone);
+	CreateWeaponWithMovement(bulletX, bulletY, -1, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, 1, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, -2, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, 2, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, -4, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, 4, defaultMoveY, obj_weapon_shotgun_bullet,"TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, -6, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, 6, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, -8, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, 8, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, -10, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, 10, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, -12, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone,weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, 12, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, -16, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone,weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, 16, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, -20, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, 20, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, -24, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, 24, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, -30, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, 30, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, 0, defaultMoveY, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	
+	}
+	
+	if(shootDirectionType == weaponDirectionType.Horizontal) {
+		
+	var directionValue = weaponDirection == 1 ? 12 : -12; // direction
+	
+	var bulletX = posX;		
+	var bulletY = posY;
+	var defaultMoveX = weaponDirection == 1 ? 12 : -12;
+		
+
+	CreateWeaponWithMovement(bulletX, bulletY, defaultMoveX, -1, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, defaultMoveX, 1, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, defaultMoveX, 0.5, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, defaultMoveX, -0.5, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, defaultMoveX, -2, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, defaultMoveX, 2, obj_weapon_shotgun_bullet,"TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, defaultMoveX, -4, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, defaultMoveX, 4, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, defaultMoveX, -6, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, defaultMoveX, 6, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, defaultMoveX, -10, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, defaultMoveX, 10, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, defaultMoveX, -1.5, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone,weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, defaultMoveX, 1.5, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, defaultMoveX, -2.5, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone,weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, defaultMoveX, -2.5, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, defaultMoveX, -3.5, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, defaultMoveX, 3.5, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, defaultMoveX, -5, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, defaultMoveX, 5, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, defaultMoveX, -8, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, defaultMoveX, 8, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	CreateWeaponWithMovement(bulletX, bulletY, defaultMoveX, -7.5, obj_weapon_shotgun_bullet, "TopWeapon", player ?? noone, weaponDirectionType.Vertical);
+	
+	}
 }
 
 #endregion
@@ -206,8 +252,11 @@ function handleSingleSting() {
 	x = weaponDirection == 1 ? player.x + weaponX : player.x - weaponX;
 	y = player.y - weaponY;
 
-	// shoot
+	// shoot up
     if ((inputFire || inputFirePressed) && isAllowFired && !player.isDead && !isWeaponReloading) {
+		
+		// set weapon direction
+		shootDirectionType = weaponDirectionType.Vertical;
 		
 		//Count player's sting number
 		var stingHeadCount = GetWeaponInstanceNumber(obj_weapon_sting_head, player ?? noone);
@@ -222,8 +271,38 @@ function handleSingleSting() {
 				alarm[1]  = reloadingHarpoonTime;
 			
 				PlaySound(snd_string_shoot, false, 2);
-				CreateWeapon(player.x, player.y + stingStartYPositionSpace, obj_weapon_sting_head, "Weapon", player ?? noone);
-
+				
+				//sting start pos
+				stingStartPositionY = player.y;
+	
+				var sting = CreateWeaponWithMovement(player.x, stingStartPositionY , 0, -5, obj_weapon_sting_head, "Weapon", player ?? noone, weaponDirectionType.Vertical);
+				sting.CheckPlayerIsOnGround();
+			}
+		}
+	}
+	
+	// shoot horizontal
+    if ((inputHorizontalFire || inputHorizontalFirePressed) && isAllowFired && !player.isDead && !isWeaponReloading) {
+		
+		// set weapon direction
+		shootDirectionType = weaponDirectionType.Horizontal;
+		
+		//Count player's sting number
+		var stingHeadCount = GetWeaponInstanceNumber(obj_weapon_sting_head, player ?? noone);
+		
+		if (stingHeadCount == 0) {
+			if(!isWeaponReloading) {
+				rotationDirection = weaponDirection;
+				isFired = true;
+				isWeaponReloading = true;
+			    image_angle = weaponDirection == 1 ? 90 : -90;
+				alarm[0]  = weaponFiredRotationSpeed;
+				alarm[1]  = reloadingHarpoonTime;
+				
+				var directionValue = weaponDirection == 1 ? 8 : -8; // direction
+			
+				PlaySound(snd_string_shoot, false, 2);
+				CreateWeaponWithMovement(player.x, y, directionValue, 0, obj_weapon_sting_head, "Weapon", player ?? noone, weaponDirectionType.Horizontal);
 			}
 		}
 	}
@@ -245,8 +324,11 @@ function handleDoubleSting() {
 	x = weaponDirection == 1 ? player.x + weaponX : player.x - weaponX;
 	y = player.y - weaponY;
 
-	// shoot
+	// shoot up
     if ((inputFire || inputFirePressed)  && isAllowFired && !player.isDead && !isWeaponReloading) {
+		
+		// set weapon direction
+		shootDirectionType = weaponDirectionType.Vertical;
 		
 		//Count player's sting number
 		var stingHeadCount = GetWeaponInstanceNumber(obj_weapon_sting_head, player ?? noone);
@@ -261,7 +343,38 @@ function handleDoubleSting() {
 				alarm[1]  = reloadingHarpoonTime;
 			
 				PlaySound(snd_string_shoot, false, 2);
-				CreateWeapon(player.x, player.y + stingStartYPositionSpace, obj_weapon_sting_head, "Weapon", player ?? noone);
+				
+				//sting start pos
+				stingStartPositionY = player.y;
+				
+				var sting = CreateWeaponWithMovement(player.x, stingStartPositionY , 0, -5, obj_weapon_sting_head, "Weapon", player ?? noone, weaponDirectionType.Vertical);
+				sting.CheckPlayerIsOnGround();
+			}
+		}
+	}
+	
+	// shoot horizontal
+    if ((inputHorizontalFire || inputHorizontalFirePressed) && isAllowFired && !player.isDead && !isWeaponReloading) {
+		
+		// set weapon direction
+		shootDirectionType = weaponDirectionType.Horizontal;
+		
+		//Count player's sting number
+		var stingHeadCount = GetWeaponInstanceNumber(obj_weapon_sting_head, player ?? noone);
+		
+		if (stingHeadCount <= 1) {
+			if(!isWeaponReloading) {
+				rotationDirection = weaponDirection;
+				isFired = true;
+				isWeaponReloading = true;
+			    image_angle = weaponDirection == 1 ? 90 : -90;
+				alarm[0]  = weaponFiredRotationSpeed;
+				alarm[1]  = reloadingHarpoonTime;
+				
+				var directionValue = weaponDirection == 1 ? 8 : -8; // direction
+			
+				PlaySound(snd_string_shoot, false, 2);
+				CreateWeaponWithMovement(player.x, y, directionValue, 0, obj_weapon_sting_head, "Weapon", player ?? noone, weaponDirectionType.Horizontal);
 			}
 		}
 	}
@@ -283,8 +396,11 @@ function handlePowerWire() {
 	x = weaponDirection == 1 ? player.x + weaponX : player.x - weaponX;
 	y = player.y - weaponY;
 
-	// shoot
-    if ((inputFire || inputFirePressed) && isAllowFired  && !player.isDead  && !isWeaponReloading) {
+	// shoot up
+    if ((inputFire || inputFirePressed) && isAllowFired  && !player.isDead  && !isWeaponReloading && player.isOnGround) {
+		
+		// set weapon direction
+		shootDirectionType = weaponDirectionType.Vertical;
 		
 		//Count player's power wire number
 		var powerWireHeadCount = GetWeaponInstanceNumber(obj_weapon_power_wire_head, player ?? noone);
@@ -298,8 +414,39 @@ function handlePowerWire() {
 				alarm[0]  = weaponFiredRotationSpeed;
 				alarm[1]  = reloadingHarpoonTime;
 			
+				//sting start pos
+				stingStartPositionY = player.y;
+				
 				PlaySound(snd_string_shoot, false, 2);
-				CreateWeapon(player.x, player.y + powerWireStartYPositionSpace, obj_weapon_power_wire_head, "Weapon", player ?? noone);
+				var powerWire = CreateWeaponWithMovement(player.x, stingStartPositionY , 0, -8, obj_weapon_power_wire_head, "Weapon", player ?? noone, weaponDirectionType.Vertical);
+				powerWire.CheckPlayerIsOnGround();
+
+			}
+		}
+	}
+	
+	// shoot horizontal
+    if ((inputHorizontalFire || inputHorizontalFirePressed) && isAllowFired  && !player.isDead  && !isWeaponReloading) {
+		
+		// set weapon direction
+		shootDirectionType = weaponDirectionType.Horizontal;
+		//Count player's power wire number
+		var powerWireHeadCount = GetWeaponInstanceNumber(obj_weapon_power_wire_head, player ?? noone);
+		
+		if (powerWireHeadCount == 0) {
+			if(!isWeaponReloading) {
+				rotationDirection = weaponDirection;
+				isFired = true;
+				isWeaponReloading = true;
+			    image_angle = weaponDirection == 1 ? 90 : -90;
+				alarm[0]  = weaponFiredRotationSpeed;
+				alarm[1]  = reloadingHarpoonTime;
+			
+				var directionValue = weaponDirection == 1 ? 8 : -8; // direction
+			
+				PlaySound(snd_string_shoot, false, 2);
+				CreateWeaponWithMovement(player.x, y, directionValue, 0, obj_weapon_power_wire_head, "Weapon", player ?? noone, weaponDirectionType.Horizontal);
+				
 			}
 		}
 	}
@@ -323,6 +470,7 @@ function handleMachineGun() {
 		
 	//While shooting change gun angle
 	if ((inputFire || inputFirePressed) && !player.isDead ) {
+		
 		image_angle = weaponDirection == 1 ? 90 : -90;	
 		isFired = true;
 		
@@ -336,7 +484,10 @@ function handleMachineGun() {
 		isFired = false;
 	}
 	
-	if (!player.isOnGround) isFired = false;
+	
+		if ((inputHorizontalFire || inputHorizontalFirePressed)) {
+			isFired = true;
+		}
 		setWeaponVisibility();
 
 
@@ -344,8 +495,12 @@ function handleMachineGun() {
 	x = weaponDirection == 1 ? player.x + weaponX : player.x - weaponX;
 	y = player.y - weaponY;
 
-	// shoot
+	// shoot up
     if ((inputFire || inputFirePressed) && isAllowFired && !player.isDead && !isWeaponReloading) {
+			
+		// set weapon direction
+		shootDirectionType = weaponDirectionType.Vertical;
+			
 			if(!isWeaponReloading) {
 				rotationDirection = weaponDirection;
 				isWeaponReloading = true;
@@ -358,9 +513,40 @@ function handleMachineGun() {
 				var bulletY = weaponDirection == 1 ? y - sprite_width :  y + sprite_width;
 
 				createFireAnimation(bulletX, bulletY)
-				CreateWeapon(bulletX, bulletY + 20, obj_weapon_machine_gun_bullet, "TopWeapon", player ?? noone);
-				
+				//CreateWeapon(bulletX, bulletY + 20, obj_weapon_machine_gun_bullet, "TopWeapon", player ?? noone);
+				CreateWeaponWithMovement(bulletX, bulletY + 20, 0, -12, obj_weapon_machine_gun_bullet, "Weapon", player ?? noone, weaponDirectionType.Vertical);
 				 player.machineGunAmmo --;
+				
+				// handle weapon change
+				if(player.machineGunAmmo == 0) {
+				    image_angle = 0;
+				}
+			}
+	}
+	
+	// shoot horizontal
+    if ((inputHorizontalFire || inputHorizontalFirePressed) && isAllowFired && !player.isDead && !isWeaponReloading) {
+			
+		// set weapon direction
+		shootDirectionType = weaponDirectionType.Horizontal;
+			
+			if(!isWeaponReloading) {
+				rotationDirection = weaponDirection;
+				isWeaponReloading = true;
+				alarm[0]  = weaponFiredRotationSpeed;
+				alarm[1]  = reloadingMachineGunTime;
+				PlaySound(snd_machine_gun_shoot, false);
+				
+				//bullet create
+				var bulletX = x + sprite_width;	
+				var bulletY = y- 10;
+
+				createFireAnimation(bulletX, bulletY)
+				
+				var directionValue = weaponDirection == 1 ? 12 : -12; // direction
+				
+				CreateWeaponWithMovement(bulletX, bulletY, directionValue, 0, obj_weapon_machine_gun_bullet, "Weapon", player ?? noone, weaponDirectionType.Horizontal);
+				player.machineGunAmmo --;
 				
 				// handle weapon change
 				if(player.machineGunAmmo == 0) {
@@ -401,13 +587,23 @@ function handleShotgun() {
 		weaponY = shotgunY; // set basic x pos
 		isFired = false;
 	}
+	
+	if ((inputHorizontalFire || inputHorizontalFirePressed)) {
+			isFired = true;
+		}
 
+	setWeaponVisibility();
+	
 	//Set the x and y position to character
 	x = weaponDirection == 1 ? player.x + weaponX : player.x - weaponX;
 	y = player.y - weaponY;
 
-	// shoot
+	// shoot up
     if ((inputFire || inputFirePressed) && isAllowFired && !player.isDead && !isWeaponReloading) {
+		
+		// set weapon direction
+		shootDirectionType = weaponDirectionType.Vertical;
+		
 			if(!isWeaponReloading) {
 				rotationDirection = weaponDirection;
 				isWeaponReloading = true;
@@ -418,6 +614,35 @@ function handleShotgun() {
 				//bullet create
 				var bulletX = weaponDirection == 1 ? x-10 : x+10;	
 				var bulletY = weaponDirection == 1 ? y - sprite_width :  y + sprite_width;
+				createFireAnimation(bulletX, bulletY);
+				createShotgunBullets(bulletX, bulletY);
+				player.shotgunAmmo -= 24;
+							
+				// handle weapon change
+				if(player.shotgunAmmo == 0) {
+					image_angle = 0;
+					alarm[1]  = reloadingHarpoonTime;
+				}
+			} 
+	}
+	
+	// shoot horizontal
+    if ((inputHorizontalFire || inputHorizontalFirePressed) && isAllowFired && !player.isDead && !isWeaponReloading) {
+			
+			// set weapon direction
+			shootDirectionType = weaponDirectionType.Horizontal;
+		
+			if(!isWeaponReloading) {
+				rotationDirection = weaponDirection;
+				isWeaponReloading = true;
+				alarm[0]  = weaponFiredRotationSpeed;
+				alarm[1]  = reloadingShotgunTime;	
+				PlaySound(snd_shotgun_shoot, false);
+				
+				//bullet create				
+				var bulletX = weaponDirection == 1 ? x + (sprite_width -40) : x + (sprite_width +40);	
+				var bulletY = y;
+				
 				createFireAnimation(bulletX, bulletY);
 				createShotgunBullets(bulletX, bulletY);
 				player.shotgunAmmo -= 24;
@@ -447,8 +672,11 @@ function handlePistol() {
 	x = weaponDirection == 1 ? player.x + weaponX : player.x - weaponX;
 	y = player.y - weaponY;
 
-	// shoot
+	// shoot up
     if ((inputFire || inputFirePressed) && isAllowFired && !player.isDead && !isWeaponReloading) {
+		
+		// set weapon direction
+		shootDirectionType = weaponDirectionType.Vertical;
 		
 		if(!isWeaponReloading) {
 			rotationDirection = weaponDirection;
@@ -464,9 +692,43 @@ function handlePistol() {
 			var bulletX = weaponDirection == 1 ? x-5 : x+5;	
 			var bulletY = weaponDirection == 1 ? y - sprite_width :  y + sprite_width;
 			createFireAnimation(bulletX, bulletY)
-			CreateWeapon(bulletX, bulletY, obj_weapon_pistol_bullet, "TopWeapon", player ?? noone);
+			CreateWeaponWithMovement(bulletX, bulletY + 20, 0, -12, obj_weapon_pistol_bullet, "Weapon", player ?? noone, weaponDirectionType.Vertical);
 				
 				player.pistolAmmo --;
+				
+			// handle weapon change
+			if(player.pistolAmmo == 0) {
+				image_angle = 0;
+			}
+		}
+	}
+	
+	// shoot horizontal
+    if ((inputHorizontalFire || inputHorizontalFirePressed) && isAllowFired && !player.isDead && !isWeaponReloading) {
+		
+		// set weapon direction
+		shootDirectionType = weaponDirectionType.Horizontal;
+		
+		if(!isWeaponReloading) {
+			rotationDirection = weaponDirection;
+			isFired = true;
+			isWeaponReloading = true;
+			image_angle = weaponDirection == 1 ? 90 : -90;
+			alarm[0]  = weaponFiredRotationSpeed;
+			alarm[1]  = reloadingPistolTime;
+			
+			PlaySound(snd_pistol_shoot, false, 1);
+				
+				//bullet create
+			var bulletX = weaponDirection == 1 ? x-5 : x+5;	
+		    var bulletY = y- 10;
+			createFireAnimation(bulletX, bulletY)
+			
+			var directionValue = weaponDirection == 1 ? 12 : -12; // direction
+				
+			CreateWeaponWithMovement(bulletX, bulletY, directionValue, 0, obj_weapon_pistol_bullet, "Weapon", player ?? noone, weaponDirectionType.Horizontal);
+				
+			player.pistolAmmo --;
 				
 			// handle weapon change
 			if(player.pistolAmmo == 0) {
@@ -498,6 +760,9 @@ function handleGrenade() {
 	// shoot
     if ((inputFire || inputFirePressed) && isAllowFired && !player.isDead && !isWeaponReloading) {
 		
+				// set weapon direction
+				shootDirectionType = weaponDirectionType.Horizontal;
+		
 			if(!isWeaponReloading) {
 				rotationDirection = weaponDirection;
 				isFired = true;
@@ -508,7 +773,7 @@ function handleGrenade() {
 				var directionValue = weaponDirection == 1 ? 4 : -4; // direction
 				
 				PlaySound(snd_throw, false, 2);
-				CreateWeaponWithMovement(player.x, player.y - grenadeY, directionValue, -4, obj_weapon_grenade, "Weapon", player ?? noone);
+				CreateWeaponWithMovement(player.x, player.y - grenadeY, directionValue, -4, obj_weapon_grenade, "Weapon", player ?? noone, weaponDirectionType.Horizontal);
 
 				player.grenadeAmmo --;
 				
@@ -549,6 +814,9 @@ function handleDetonator() {
 
 	// shoot
     if ((inputFire || inputFirePressed) && isAllowFired && !player.isDead && !isWeaponReloading) {
+		// set weapon direction
+		shootDirectionType = weaponDirectionType.Horizontal;
+				
 		if (detonatorCount == 0) {
 			if(!isWeaponReloading) {
 				rotationDirection = weaponDirection;
@@ -560,7 +828,7 @@ function handleDetonator() {
 				var directionValue = weaponDirection == 1 ? 9 : -9; // direction
 				
 				PlaySound(snd_throw, false, 2);
-				CreateWeaponWithMovement(player.x, player.y - detonatorY, directionValue, -9, obj_weapon_detonator, "Weapon", player ?? noone);
+				CreateWeaponWithMovement(player.x, player.y - detonatorY, directionValue, -9, obj_weapon_detonator, "Weapon", player ?? noone, weaponDirectionType.Horizontal);
 
 		
 				
@@ -609,6 +877,9 @@ function handleBomb() {
 	// shoot
     if ((inputFire || inputFirePressed) && isAllowFired && !player.isDead && !isWeaponReloading) {
 		
+			// set weapon direction
+			shootDirectionType = weaponDirectionType.Horizontal;
+			
 			if(!isWeaponReloading) {
 				rotationDirection = weaponDirection;
 				isFired = true;
@@ -619,7 +890,7 @@ function handleBomb() {
 				var directionValue = weaponDirection == 1 ? 1 : -1; // direction
 				
 				PlaySound(snd_throw, false, 2);
-				CreateWeaponWithMovement(player.x, player.y - grenadeY, directionValue, -3, obj_weapon_bomb, "Weapon", player ?? noone);
+				CreateWeaponWithMovement(player.x, player.y - grenadeY, directionValue, -3, obj_weapon_bomb, "Weapon", player ?? noone, weaponDirectionType.Horizontal);
 
 				player.bombAmmo --;
 				
@@ -651,6 +922,9 @@ function handleLandMine() {
 	// shoot
     if ((inputFire || inputFirePressed) && isAllowFired && !player.isDead && !isWeaponReloading) {
 		
+				// set weapon direction
+				shootDirectionType = weaponDirectionType.Horizontal;
+				
 			if(!isWeaponReloading) {
 				rotationDirection = weaponDirection;
 				isFired = true;
@@ -661,7 +935,7 @@ function handleLandMine() {
 				var directionValue = 0;
 				
 				PlaySound(snd_throw, false, 2);
-				CreateWeaponWithMovement(player.x, player.y - grenadeY, directionValue, -2, obj_weapon_land_mine, "Weapon", player ?? noone);
+				CreateWeaponWithMovement(player.x, player.y - grenadeY, directionValue, -2, obj_weapon_land_mine, "Weapon", player ?? noone, weaponDirectionType.Vertical);
 
 				player.landMineAmmo --;
 				
@@ -711,8 +985,12 @@ function handleRocketLauncher() {
 	x = weaponDirection == 1 ? player.x + weaponX : player.x - weaponX;
 	y = player.y - weaponY;
 
-	// shoot
+	// shoot up
     if ((inputFire || inputFirePressed) && isAllowFired && !player.isDead && !isWeaponReloading) {
+		
+				// set weapon direction
+				shootDirectionType = weaponDirectionType.Vertical;
+				
 			if(!isWeaponReloading) {
 				rotationDirection = weaponDirection;
 				isWeaponReloading = true;
@@ -773,6 +1051,10 @@ function handleTrackingRocketLauncher() {
 
 	// shoot
     if ((inputFire || inputFirePressed) && isAllowFired && !player.isDead && !isWeaponReloading) {
+		
+				// set weapon direction
+				shootDirectionType = weaponDirectionType.Horizontal;
+				
 			if(!isWeaponReloading) {
 				rotationDirection = weaponDirection;
 				isWeaponReloading = true;
@@ -835,8 +1117,12 @@ function handleFlameThrower() {
 	x = weaponDirection == 1 ? player.x + weaponX : player.x - weaponX;
 	y = player.y - weaponY;
 
-	// shoot
+	// shoot up
     if ((inputFire || inputFirePressed) && isAllowFired && !player.isDead && !isWeaponReloading) {
+		
+				// set weapon direction
+				shootDirectionType = weaponDirectionType.Vertical;
+				
 			if(!isWeaponReloading) {
 				rotationDirection = weaponDirection;
 				isWeaponReloading = true;

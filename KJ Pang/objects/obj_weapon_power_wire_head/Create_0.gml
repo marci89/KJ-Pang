@@ -1,7 +1,6 @@
 
 //parent properties
 event_inherited()
-moveSpeed = 8; // move speed
 damage = 5; // weapon damage value
 type = weaponType.PowerWire; // weapon type
 
@@ -16,12 +15,16 @@ itemHoopingSpeedHeightMax = 0;
 
 //own properties
 bodyPartList = ds_list_create(); // list of body part objects
-
+playerIsOnGround = false; // check player is on ground or not when this will be created.
+isCreated = false;
 //wall connecting
 isConnectedtoWall = false; // touched with wall or not
 wallConnectionTime = 350; // time to delete this item after touched the wall
 
-depth = 40;
+
+alarm[2] = 20;
+
+//epth = 40;
 
 #region delete this instance's all body part function
 
@@ -50,6 +53,17 @@ function blinkingAllBodyPart(alphaValue) {
         var element = ds_list_find_value(bodyPartList, i);
 	    element.image_alpha = alphaValue;
     }
+}
+
+#endregion
+
+#region check player is on ground or not
+
+function CheckPlayerIsOnGround() {
+	
+	if(IsInstanceExists(player)){
+	     playerIsOnGround = player.sprite_index != player.spriteJump && player.isOnGround;
+	}
 }
 
 #endregion
