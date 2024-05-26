@@ -30,8 +30,6 @@ startY += 170;
 draw_sprite(spr_intro_weapon_guide_3, 1,  100, startY);
 draw_sprite(spr_intro_weapon_guide_4, 1,  300, startY);
 draw_sprite(spr_intro_weapon_guide_5, 1,  490, startY);
-draw_sprite(spr_intro_weapon_guide_6, 1,  700, startY);
-draw_sprite(spr_intro_weapon_guide_7, 1,  880, startY);
 
 
 startY += 120;

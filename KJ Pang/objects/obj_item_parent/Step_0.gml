@@ -63,7 +63,7 @@ var nearestWeapon = instance_nearest(x, y, obj_weapon_parent);
 				moveX = random_range(hoopingSpeedRightMin, hoopingSpeedRightMax); // x direction
 			} else {
 				moveY = random_range(hoopingSpeedHeightMin, hoopingSpeedHeightMax); // y direction
-			    moveX = random_range(hoopingSpeedLeftMin, hoopingSpeedLeftMax); // x direction
+				moveX = random_range(hoopingSpeedLeftMin, hoopingSpeedLeftMax); // x direction
 			}
 		}
 	}

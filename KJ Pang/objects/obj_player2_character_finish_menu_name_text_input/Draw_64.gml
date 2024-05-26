@@ -9,6 +9,16 @@ draw_text(x , y -50, label);
 
 #endregion
 
+#region Information message
+
+	if (!hasError && !isNameExists) {
+		draw_set_color(c_yellow);
+		draw_set_font(ft_menu_small_text_font);
+		draw_text(x , y + 60, nameInformationText);
+}
+	
+#endregion
+
 #region Error message
 
 if (hasError) {

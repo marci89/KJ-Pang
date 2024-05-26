@@ -99,9 +99,6 @@ function ResetToOriginalProperties () {
 		moveY = originalMoveY;
 	}
 	
-
-	
-	
 	gravSpeedX = originalGravSpeedX; // x gavity speed
 	gravSpeedY = originalGravSpeedY; // y gavity speed
 	isGravityXEnabled = originalGravityXEnabled; // gravity x enabled or not

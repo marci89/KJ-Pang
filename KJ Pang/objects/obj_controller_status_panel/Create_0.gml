@@ -49,7 +49,7 @@ function CreateSinglePlayerStatusPanel() {
 function CreateMultiPlayerStatusPanelForPlayerOne() {
 	
 	 // player 1 name
-	 var namePlayerOne = instance_create_layer(0, startY + 20,"Status", obj_status_name_and_score);
+	 var namePlayerOne = instance_create_layer(-20, startY + 20,"Status", obj_status_name_and_score);
 	 namePlayerOne.SetPlayer(obj_player_one);
 	 	 
 	 // special ability
@@ -83,7 +83,7 @@ function CreateMultiPlayerStatusPanelForPlayerOne() {
 
 function CreateMultiPlayerStatusPanelForPlayerTwo() {
 	 // player 2 name
-	 var namePlayerTwo = instance_create_layer(688, startY + 20,"Status", obj_status_name_and_score);
+	 var namePlayerTwo = instance_create_layer(658, startY + 20,"Status", obj_status_name_and_score);
 	 namePlayerTwo.SetPlayer(obj_player_two);
 	 
 	 // special ability

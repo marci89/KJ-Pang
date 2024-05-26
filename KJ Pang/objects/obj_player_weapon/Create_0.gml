@@ -1209,11 +1209,11 @@ function handleFlameThrower() {
 				effect_create_above( ef_smokeup, bulletX, bulletY -50, 0, c_white);
 
 				//invisible bullets
-				CreateInvisibleWeaponWithMovement(bulletX, bulletY, -0.3, 5, invisibleWeaponShapeType.Point, weaponType.FlameThrower, "Weapon", player ?? noone, destroyTime, false, weaponDirectionType.Horizontal);
-				CreateInvisibleWeaponWithMovement(bulletX, bulletY, -0.6, 5, invisibleWeaponShapeType.Point, weaponType.FlameThrower, "Weapon", player ?? noone, destroyTime, false, weaponDirectionType.Horizontal);
-				CreateInvisibleWeaponWithMovement(bulletX, bulletY, 0.3, 5, invisibleWeaponShapeType.Point, weaponType.FlameThrower, "Weapon", player ?? noone, destroyTime, false, weaponDirectionType.Horizontal);
-				CreateInvisibleWeaponWithMovement(bulletX, bulletY, 0.6, 5, invisibleWeaponShapeType.Point, weaponType.FlameThrower, "Weapon", player ?? noone, destroyTime, false, weaponDirectionType.Horizontal);
-				CreateInvisibleWeaponWithMovement(bulletX, bulletY, 0, 5, invisibleWeaponShapeType.Point, weaponType.FlameThrower, "Weapon", player ?? noone, destroyTime, false, weaponDirectionType.Horizontal);
+				CreateInvisibleWeaponWithMovement(bulletX, bulletY, -0.3, -5, invisibleWeaponShapeType.Point, weaponType.FlameThrower, "Weapon", player ?? noone, destroyTime, false, weaponDirectionType.Horizontal);
+				CreateInvisibleWeaponWithMovement(bulletX, bulletY, -0.6, -5, invisibleWeaponShapeType.Point, weaponType.FlameThrower, "Weapon", player ?? noone, destroyTime, false, weaponDirectionType.Horizontal);
+				CreateInvisibleWeaponWithMovement(bulletX, bulletY, 0.3, -5, invisibleWeaponShapeType.Point, weaponType.FlameThrower, "Weapon", player ?? noone, destroyTime, false, weaponDirectionType.Horizontal);
+				CreateInvisibleWeaponWithMovement(bulletX, bulletY, 0.6, -5, invisibleWeaponShapeType.Point, weaponType.FlameThrower, "Weapon", player ?? noone, destroyTime, false, weaponDirectionType.Horizontal);
+				CreateInvisibleWeaponWithMovement(bulletX, bulletY, 0, -5, invisibleWeaponShapeType.Point, weaponType.FlameThrower, "Weapon", player ?? noone, destroyTime, false, weaponDirectionType.Horizontal);
 				
 				 player.flameThrowerAmmo -= 5;
 				
@@ -1244,7 +1244,7 @@ function handleFlameThrower() {
 			}
 						
 				//bullet create
-				var bulletX = x + sprite_width;	
+				var bulletX = x ;//+ sprite_width;	
 				var bulletY = y-20;
 				var destroyTime = 60;
 
@@ -1260,10 +1260,10 @@ function handleFlameThrower() {
 				var directionValue = weaponDirection == 1 ? 5 : -5; // direction
 				
 				//invisible bullets
-				CreateInvisibleWeaponWithMovement(bulletX, bulletY, directionValue, -0.5, invisibleWeaponShapeType.Point, weaponType.FlameThrower, "Weapon", player ?? noone, destroyTime, false, weaponDirectionType.Vertical);
-				CreateInvisibleWeaponWithMovement(bulletX, bulletY, directionValue, -1, invisibleWeaponShapeType.Point, weaponType.FlameThrower, "Weapon", player ?? noone, destroyTime, false, weaponDirectionType.Vertical);
-				CreateInvisibleWeaponWithMovement(bulletX, bulletY, directionValue, 0.5, invisibleWeaponShapeType.Point, weaponType.FlameThrower, "Weapon", player ?? noone, destroyTime, false,weaponDirectionType.Vertical);
-				CreateInvisibleWeaponWithMovement(bulletX, bulletY, directionValue, 1, invisibleWeaponShapeType.Point, weaponType.FlameThrower, "Weapon", player ?? noone, destroyTime, false, weaponDirectionType.Vertical);
+				CreateInvisibleWeaponWithMovement(bulletX, bulletY, directionValue, -0.2, invisibleWeaponShapeType.Point, weaponType.FlameThrower, "Weapon", player ?? noone, destroyTime, false, weaponDirectionType.Vertical);
+				CreateInvisibleWeaponWithMovement(bulletX, bulletY, directionValue, -0.7, invisibleWeaponShapeType.Point, weaponType.FlameThrower, "Weapon", player ?? noone, destroyTime, false, weaponDirectionType.Vertical);
+				CreateInvisibleWeaponWithMovement(bulletX, bulletY, directionValue, 0.2, invisibleWeaponShapeType.Point, weaponType.FlameThrower, "Weapon", player ?? noone, destroyTime, false,weaponDirectionType.Vertical);
+				CreateInvisibleWeaponWithMovement(bulletX, bulletY, directionValue, 0.7, invisibleWeaponShapeType.Point, weaponType.FlameThrower, "Weapon", player ?? noone, destroyTime, false, weaponDirectionType.Vertical);
 				CreateInvisibleWeaponWithMovement(bulletX, bulletY, directionValue, 0, invisibleWeaponShapeType.Point, weaponType.FlameThrower, "Weapon", player ?? noone, destroyTime, false, weaponDirectionType.Vertical);
 				
 				 player.flameThrowerAmmo -= 5;

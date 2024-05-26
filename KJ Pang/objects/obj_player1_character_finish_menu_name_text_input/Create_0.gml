@@ -4,6 +4,8 @@ label = GetLocalizedText("name"); // label
 text = ""; // input value
 buttonId = 0; // button identifier
 
+nameInformationText = GetLocalizedText("nameInformation");
+
 //error handling
 errorMessage = GetLocalizedText("nameError");
 hasError = false;

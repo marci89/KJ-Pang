@@ -23,7 +23,7 @@ function CreateInvisibleWeaponWithMovement(xValue, yValue, moveX, moveY, shapeTy
 	 result.shapeType = shapeType;
 	 result.SetWeaponValues(weaponType, destroyTime);
 	 result.moveX = moveX;
-	 result.moveSpeed = moveY;
+	 result.moveY = moveY;
 	 result.isWallBreaker = isWallBreaker;
 	 return result;
 }

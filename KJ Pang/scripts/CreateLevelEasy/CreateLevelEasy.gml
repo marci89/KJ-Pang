@@ -49,6 +49,10 @@ function CreateLevelEasy1() {
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
 	normalBallColorType.Red, normalBallGiantDropItemType.Nothing, true);
 	
+	CreateNormalBallSmall(800, 670, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
+	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
+	normalBallColorType.Red,  true);
+	
 	//items
 	CreateLifePoint(30, 640, lifePointType.Red);
 	CreateLifePoint(70, 640, lifePointType.Red);
@@ -57,8 +61,8 @@ function CreateLevelEasy1() {
 	
 
 	
-	CreateItem(190, 640, obj_item_tracking_rocket_launcher)
-	CreateItem(120, 640, obj_item_grenade)
+	CreateItem(190, 640, obj_item_rocket_launcher)
+	CreateItem(120, 640, obj_item_flamethrower)
 	CreateItem(830, 640, obj_item_food)
 	
 	CreateLifePoint(870, 640, lifePointType.Red);

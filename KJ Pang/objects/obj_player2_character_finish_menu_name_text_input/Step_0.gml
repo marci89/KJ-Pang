@@ -21,7 +21,7 @@ if(isSelected) {
 	isNameExists = false;
 		
 	if (keyboard_check(vk_anykey) && string_length(text) < 12) {
-		text += string(keyboard_string);
+		text += string_lower(keyboard_string);
 		keyboard_string = "";
 	}
 

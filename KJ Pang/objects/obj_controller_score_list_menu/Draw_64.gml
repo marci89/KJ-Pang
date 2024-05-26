@@ -20,22 +20,27 @@ if(isGameOverScoreList) {
 	draw_set_color(c_orange);
 	
 		if(player1Rank != 0) {
+				draw_set_color(c_lime);
+				
 				draw_text(100, startY, congratulationsText + " " + global.playerOneName + ", " +
 				+ inRankedListText + "" +  string(player1Rank));
 		} else {
 				draw_text(100, startY,global.playerOneName + ", " +
 				+ notInRankedListText + string(global.playerOneScore));
 		}
+		
+		draw_set_color(c_orange);
 	
-	if(global.playMode == playModeType.MultiPlayer) {
-		if(player2Rank != 0) {
-				draw_text(100, startY + 30, congratulationsText + " " + global.playerTwoName + ", " +
-				+ inRankedListText + "" +  string(player2Rank));
-		} else {
-				draw_text(100, startY + 30,global.playerTwoName + ", " +
-				+ notInRankedListText + string(global.playerTwoScore));
+		if(global.playMode == playModeType.MultiPlayer) {
+			if(player2Rank != 0) {
+					draw_set_color(c_lime);
+					draw_text(100, startY + 30, congratulationsText + " " + global.playerTwoName + ", " +
+					+ inRankedListText + "" +  string(player2Rank));
+			} else {
+					draw_text(100, startY + 30,global.playerTwoName + ", " +
+					+ notInRankedListText + string(global.playerTwoScore));
+			}
 		}
-	}
 }
 
 #endregion
