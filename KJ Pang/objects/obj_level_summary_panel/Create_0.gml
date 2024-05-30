@@ -4,7 +4,7 @@ player = noone; // actual player ID
 timeScoreText = GetLocalizedText("timeBonus"); //time score text
 lifeScoreText = GetLocalizedText("lifeBonus"); // life score text
 totalScoreText = GetLocalizedText("totalScore"); // total score text
-levelText =  GetLocalizedText("level"); // level translate
+levelText =  GetLocalizedText("level") + "  " + string(global.level -1) + ":   " + GetStageLevelName(global.level - 1); // level translate
 
 frameWidth = 380; // Set the width of the frame
 frameHeight = 680; // Set the height of the frame
@@ -17,6 +17,8 @@ totalScore = 0; // displayed total score
 
 playerGender = noone; // player gender
 playerLife = noone; // player life count
+playerLifePoint = noone; //player life point count
+playerFood = noone; //player food count
 
 maxSpriteIndex = 3; // depends on gender. Max sprite index value
 
@@ -38,11 +40,15 @@ function Init() {
 		playerName = global.playerOneName;
 		playerGender = global.playerOneGender;
 		playerLife = global.playerOneLife;
+		playerLifePoint = global.playerOneLifePoint;
+		playerFood = global.playerOneFood
 		
 	} else {
 		playerName = global.playerTwoName;
 		playerGender = global.playerTwoGender;
 		playerLife = global.playerTwoLife;
+		playerLifePoint = global.playerTwoLifePoint;
+		playerFood = global.playerTwoFood
 			
 	}
 		
@@ -73,9 +79,6 @@ function Init() {
 		global.playerTwoScore += lifeScore;
 		totalScore = global.playerTwoScore;
 	}
-	
-	//set level
-	levelText += "  " + string(global.level -1); 
 }
 
 #endregion

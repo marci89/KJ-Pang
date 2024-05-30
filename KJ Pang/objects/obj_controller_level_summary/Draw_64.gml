@@ -10,7 +10,7 @@ if(isKeyPressVisible && isKeyPressEnable) {
 	
 	var keyPressTextWidth = string_width(string(pressAnyKeyToContinueText));
 	var drawKeyPressTextX = (room_width - keyPressTextWidth) / 2;
-	draw_text(drawKeyPressTextX, y + 720, string(pressAnyKeyToContinueText));
+	draw_text(drawKeyPressTextX, y + 750, string(pressAnyKeyToContinueText));
 }
 
 #endregion
@@ -25,7 +25,7 @@ if (islevelTextShowEnabled) {
 
 	var levelTextWidth = string_width(levelText);
 	var drawLevelTextX = (room_width - levelTextWidth) / 2;
-	draw_text(x + drawLevelTextX , y + 440, levelText);
+	draw_text(x + drawLevelTextX , y + 430, levelText);
 }
 
 #endregion

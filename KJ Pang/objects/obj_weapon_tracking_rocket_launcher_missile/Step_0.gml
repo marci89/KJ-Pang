@@ -28,8 +28,6 @@ if (IsInstanceExists(target)) {
 	image_angle = angle-90;
 }
 
-
-
 #endregion
 
 #region Screen collision

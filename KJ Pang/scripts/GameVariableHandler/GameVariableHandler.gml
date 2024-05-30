@@ -18,6 +18,7 @@ function SetGameVariables(){
 
 	//level controller and room
 	global.level = 1; // level number
+	global.stageLevel = 1; // stage
 	global.isPaused = false; // paused or not
 
 	//manipulating

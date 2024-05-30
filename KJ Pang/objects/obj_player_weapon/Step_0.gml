@@ -42,70 +42,70 @@ inputHorizontalFire = player.inputHorizontalFire;
 //machinegun
 if(player.weapon == weaponType.MachineGun) {
 	if(player.machineGunAmmo <= 0) {
-		player.weapon = weaponType.SingleSting;
+		player.weapon = defaultPlayerWeapon;
 	}
 }
 
 //shotgun
 if(player.weapon == weaponType.ShotGun) {
 	if(player.shotgunAmmo <= 0) {
-		player.weapon = weaponType.SingleSting;
+		player.weapon = defaultPlayerWeapon;
 	}
 }
 
 //pistol
 if(player.weapon == weaponType.Pistol) {
 	if(player.pistolAmmo <= 0) {
-		player.weapon = weaponType.SingleSting;
+		player.weapon = defaultPlayerWeapon;
 	}
 }
 
 //grenade
 if(player.weapon == weaponType.Grenade) {
 	if(player.grenadeAmmo <= 0) {
-		player.weapon = weaponType.SingleSting;
+		player.weapon = defaultPlayerWeapon;
 	}
 }
 
 //detonator
 if(player.weapon == weaponType.Detonator) {
 	if(player.detonatorAmmo <= 0) {
-		player.weapon = weaponType.SingleSting;
+		player.weapon = defaultPlayerWeapon;
 	}
 }
 
 //bomb
 if(player.weapon == weaponType.Bomb) {
 	if(player.bombAmmo <= 0) {
-		player.weapon = weaponType.SingleSting;
+		player.weapon = defaultPlayerWeapon;
 	}
 }
 
 //land mine
 if(player.weapon == weaponType.LandMine) {
 	if(player.landMineAmmo <= 0) {
-		player.weapon = weaponType.SingleSting;
+		player.weapon = defaultPlayerWeapon;
 	}
 }
 
 //rocket launcher
 if(player.weapon == weaponType.RocketLauncher) {
 	if(player.rocketLauncherAmmo <= 0) {
-		player.weapon = weaponType.SingleSting;
+		player.weapon = defaultPlayerWeapon;
 	}
 }
 
 //tracking rocket launcher
 if(player.weapon == weaponType.TrackingRocketLauncher) {
 	if(player.trackingRocketLauncherAmmo <= 0) {
-		player.weapon = weaponType.SingleSting;
+		player.weapon = defaultPlayerWeapon;
 	}
 }
 
 //FlameThrower
 if(player.weapon == weaponType.FlameThrower) {
 	if(player.flameThrowerAmmo <= 0) {
-		player.weapon = weaponType.SingleSting;
+		player.weapon = defaultPlayerWeapon;
 	}
 }
 

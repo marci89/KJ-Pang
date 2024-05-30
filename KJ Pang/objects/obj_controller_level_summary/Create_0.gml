@@ -26,7 +26,7 @@ islevelTextShowEnabled = false;
 
 // translate text
 pressAnyKeyToContinueText= GetLocalizedText("pressAnyKeyToContinue");
-levelText = GetLocalizedText("level") + "  " + string(global.level -1); 
+levelText = GetLocalizedText("level") + "  " + string(global.level -1) + ":   " + GetStageLevelName(global.level - 1); 
 
 #endregion
 

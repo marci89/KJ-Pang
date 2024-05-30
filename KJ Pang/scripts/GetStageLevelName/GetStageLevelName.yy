@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"GetStageLevelName",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"GetStageLevelName",
+  "parent":{
+    "name":"Checker",
+    "path":"folders/Scripts/Checker.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

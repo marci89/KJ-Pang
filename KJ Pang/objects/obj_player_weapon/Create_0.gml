@@ -1,4 +1,6 @@
 
+defaultPlayerWeapon = weaponType.SingleSting;
+
 //weapon positions
 weaponX = 0; // main variable for player's weapon x pos
 weaponY = 0; // main variable for player's weapon y pos
@@ -106,6 +108,26 @@ fireAnimation = obj_weapon_animation_fire; // set default animation for shooting
 function SetPlayer(playerRequest) {
 	
 	player = playerRequest;
+}
+
+#endregion
+
+#region Set deafult weapon
+
+if(global.gameDifficult == gameDifficultType.Easy) {
+	defaultPlayerWeapon = weaponType.SingleSting;
+}
+else if (global.gameDifficult == gameDifficultType.Normal) {
+	defaultPlayerWeapon = weaponType.SingleSting;
+}
+else if (global.gameDifficult == gameDifficultType.Hard) {
+	defaultPlayerWeapon = weaponType.DoubleSting;
+}
+else if (global.gameDifficult == gameDifficultType.Nightmare) {
+	defaultPlayerWeapon = weaponType.DoubleSting;
+}
+else if (global.gameDifficult == gameDifficultType.Impossible) {
+	defaultPlayerWeapon = weaponType.DoubleSting;
 }
 
 #endregion
@@ -1251,10 +1273,10 @@ function handleFlameThrower() {
 				//animation
 				if ( weaponDirection == 1) {
 					var emberEffect = part_system_create(ps_effect_flame_right);	
-					part_system_position(emberEffect, bulletX, bulletY);
+					part_system_position(emberEffect, x+70, bulletY + 10);
 				} else {
 					var emberEffect = part_system_create(ps_effect_flame_left);	
-					part_system_position(emberEffect, bulletX, bulletY);
+					part_system_position(emberEffect, x-70, bulletY + 10);
 				}
 					
 				var directionValue = weaponDirection == 1 ? 5 : -5; // direction

@@ -338,6 +338,25 @@ function ActivateSpecialAbility() {
 
 #endregion
 
+#region Set deafult weapon
+
+if(global.gameDifficult == gameDifficultType.Easy) {
+	weapon = weaponType.SingleSting;
+}
+else if (global.gameDifficult == gameDifficultType.Normal) {
+	weapon = weaponType.SingleSting;
+}
+else if (global.gameDifficult == gameDifficultType.Hard) {
+	weapon = weaponType.DoubleSting;
+}
+else if (global.gameDifficult == gameDifficultType.Nightmare) {
+	weapon = weaponType.DoubleSting;
+}
+else if (global.gameDifficult == gameDifficultType.Impossible) {
+	weapon = weaponType.DoubleSting;
+}
+
+#endregion
 
 //set sprites depends on gender
 SetSprites();

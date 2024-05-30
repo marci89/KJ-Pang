@@ -39,7 +39,6 @@ function CreateLevelEasy1() {
 	LoadBackgroundImage("japan_morning"); //Load background with current level number
 	CreateWallFrame(spr_wall_ground); //wall frame creating
 	PlayMusic(snd_mtFuji, false); // play music
-    global.levelName = "japan"; // level name value for status panel
 	CreatePlayer(400, 500); // create player
 	
 	//Enemy
@@ -81,7 +80,6 @@ function CreateLevelEasy2() {
 	LoadBackgroundImage("japan_twilight"); //Load background with current level number
 	CreateWallFrame(spr_wall_ground); //wall frame creating
 	PlayMusic(snd_mtFuji, false); // play music
-    global.levelName = "japan"; // level name value for status panel
 	CreatePlayer(400, 500); // create player
 	
 	//Enemy
@@ -119,7 +117,6 @@ function CreateLevelEasy3() {
 	LoadBackgroundImage("japan_night"); //Load background with current level number
 	CreateWallFrame(spr_wall_ground); //wall frame creating
 	PlayMusic(snd_mtFuji, false); // play music
-    global.levelName = "japan"; // level name value for status panel
 	CreatePlayer(400, 500); // create player
 	
 	//Enemy
@@ -173,7 +170,6 @@ function CreateLevelEasy4() {
 	LoadBackgroundImage("japan_twilight"); //Load background with current level number
 	CreateWallFrame(spr_wall_ground); //wall frame creating
 	PlayMusic(snd_mtFuji, false); // play music
-    global.levelName = "japan"; // level name value for status panel
 	CreatePlayer(400, 500); // create player
 	
 	//Enemy
@@ -227,7 +223,6 @@ function CreateLevelEasy5() {
 	LoadBackgroundImage("japan_twilight"); //Load background with current level number
 	CreateWallFrame(spr_wall_ground); //wall frame creating
 	PlayMusic(snd_mtFuji, false); // play music
-    global.levelName = "japan"; // level name value for status panel
 	CreatePlayer(400, 500); // create player
 	
 	//Enemy
@@ -281,7 +276,6 @@ function CreateLevelEasy6() {
 	LoadBackgroundImage("japan_twilight"); //Load background with current level number
 	CreateWallFrame(spr_wall_ground); //wall frame creating
 	PlayMusic(snd_mtFuji, false); // play music
-    global.levelName = "japan"; // level name value for status panel
 	CreatePlayer(400, 500); // create player
 	
 	//Enemy
@@ -335,7 +329,6 @@ function CreateLevelEasy7() {
 	LoadBackgroundImage("japan_twilight"); //Load background with current level number
 	CreateWallFrame(spr_wall_ground); //wall frame creating
 	PlayMusic(snd_mtFuji, false); // play music
-    global.levelName = "japan"; // level name value for status panel
 	CreatePlayer(400, 500); // create player
 	
 	//Enemy
@@ -389,7 +382,6 @@ function CreateLevelEasy8() {
 	LoadBackgroundImage("japan_twilight"); //Load background with current level number
 	CreateWallFrame(spr_wall_ground); //wall frame creating
 	PlayMusic(snd_mtFuji, false); // play music
-    global.levelName = "japan"; // level name value for status panel
 	CreatePlayer(400, 500); // create player
 	
 	//Enemy
@@ -443,7 +435,6 @@ function CreateLevelEasy9() {
 	LoadBackgroundImage("japan_twilight"); //Load background with current level number
 	CreateWallFrame(spr_wall_ground); //wall frame creating
 	PlayMusic(snd_mtFuji, false); // play music
-    global.levelName = "japan"; // level name value for status panel
 	CreatePlayer(400, 500); // create player
 	
 	//Enemy
@@ -497,7 +488,6 @@ function CreateLevelEasy10() {
 	LoadBackgroundImage("japan_twilight"); //Load background with current level number
 	CreateWallFrame(spr_wall_ground); //wall frame creating
 	PlayMusic(snd_mtFuji, false); // play music
-    global.levelName = "japan"; // level name value for status panel
 	CreatePlayer(400, 500); // create player
 	
 	//Enemy
@@ -555,7 +545,6 @@ function CreateLevelEasy11() {
 	LoadBackgroundImage("japan_twilight"); //Load background with current level number
 	CreateWallFrame(spr_wall_ground); //wall frame creating
 	PlayMusic(snd_mtFuji, false); // play music
-    global.levelName = "japan"; // level name value for status panel
 	CreatePlayer(400, 500); // create player
 	
 	//Enemy
@@ -613,7 +602,6 @@ function CreateLevelEasy12() {
 	LoadBackgroundImage("japan_twilight"); //Load background with current level number
 	CreateWallFrame(spr_wall_ground); //wall frame creating
 	PlayMusic(snd_mtFuji, false); // play music
-    global.levelName = "japan"; // level name value for status panel
 	CreatePlayer(400, 500); // create player
 	
 	//Enemy
@@ -671,7 +659,6 @@ function CreateLevelEasy13() {
 	LoadBackgroundImage("japan_twilight"); //Load background with current level number
 	CreateWallFrame(spr_wall_ground); //wall frame creating
 	PlayMusic(snd_mtFuji, false); // play music
-    global.levelName = "japan"; // level name value for status panel
 	CreatePlayer(400, 500); // create player
 	
 	//Enemy
@@ -736,7 +723,6 @@ function CreateLevelTest() {
 	LoadBackgroundImage("japan_morning"); //Load background with current level number
 	CreateWallFrame(spr_wall_ground); //wall frame creating
 	PlayMusic(snd_mtFuji, false); // play music
-    global.levelName = "japan"; // level name value for status panel
 
 	CreatePlayer(900, 300); // create player
 	
