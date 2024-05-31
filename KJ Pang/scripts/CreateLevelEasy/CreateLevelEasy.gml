@@ -12,6 +12,9 @@ SetLevelVariables()
 global.hasLevelTime = true;
 global.hasRoomWallFrame = false;
 
+	CreateNormalBallLargeShield(200, 200, global.normalBallLargeMoveX, global.normalBallLargeMoveY,
+	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
+	normalBallColorType.Blue, normalBallGiantDropItemType.Nothing, true, 4);
 
 if(global.level == 1) CreateLevelEasy1();
 if(global.level == 2) CreateLevelEasy2();
@@ -27,6 +30,7 @@ if(global.level == 11) CreateLevelEasy11();
 if(global.level == 12) CreateLevelEasy12();
 if(global.level == 13) CreateLevelEasy13();
 
+	
 }
 
 #endregion
@@ -48,9 +52,14 @@ function CreateLevelEasy1() {
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
 	normalBallColorType.Red, normalBallGiantDropItemType.Nothing, true);
 	
+	/*
 	CreateNormalBallSmall(800, 670, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
 	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
 	normalBallColorType.Red,  true);
+	*/
+	
+	
+
 	
 	//items
 	CreateLifePoint(30, 640, lifePointType.Red);

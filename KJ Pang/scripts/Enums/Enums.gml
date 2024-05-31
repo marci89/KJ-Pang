@@ -263,3 +263,26 @@ enum normalBallLargeDropItemType {
 
 #endregion
 
+//enemy
+
+#region Enemy size
+
+enum enemySizeType{
+    Small,
+    Medium,
+    Large,
+	Giant,
+};
+
+#endregion
+
+#region Enemy type
+
+enum enemyRaceType{
+    Ball,
+    Larva,
+};
+
+#endregion
+
+

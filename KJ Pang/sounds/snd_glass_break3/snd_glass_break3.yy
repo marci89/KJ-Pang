@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_glass_break3",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.824,
+  "name":"snd_glass_break3",
+  "parent":{
+    "name":"Glass",
+    "path":"folders/Sounds/Voice/Other/Glass.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_glass_break3.mp3",
+  "type":0,
+  "volume":1.0,
+}

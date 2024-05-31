@@ -20,3 +20,6 @@ CreateNormalBallMedium(x+childPositionX, y, global.normalBallMediumMoveX, global
 	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
 	colorType, false);
 
+if(hasShield) {
+	DeleteAllShield();
+}

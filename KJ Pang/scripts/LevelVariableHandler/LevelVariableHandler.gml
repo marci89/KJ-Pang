@@ -28,7 +28,7 @@ function SetLevelVariables(){
 	global.normalBallGiantGravityY = 0.04;
 	global.normalBallGiantJumpHeightMax = -9;
 	//Large normal ball default properties
-	global.normalBallLargeMoveX = 0.5;
+	global.normalBallLargeMoveX = 1;
 	global.normalBallLargeMoveY = -1;
 	global.normalBallLargeGravityY = 0.04;
 	global.normalBallLargeJumpHeightMax = -6;

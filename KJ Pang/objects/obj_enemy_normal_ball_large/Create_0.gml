@@ -2,6 +2,10 @@
 //parent properties
 event_inherited()
 
+//types
+race = enemyRaceType.Ball;
+size = enemySizeType.Large;
+
 moveX = 0.5; // left and right movement
 moveY = 0; // up and down movement
 isGravityXEnabled = false; // gravity x enabled or not
@@ -17,6 +21,82 @@ colorType = normalBallColorType.Red;
 //drop item type. The enemy drop some items after dead
 dropItemType = normalBallLargeDropItemType.Nothing;
 
+//shield
+hasShield = false; // has shield or not
+shieldNumber = 0; // how many shields it has
+shieldList = ds_list_create(); // list of shields
+
+//shield functions
+
+#region Create shield
+
+function CreateShield(number) {
+	
+shieldNumber = number;
+hasShield = true;
+
+  // Ensure shieldList exists
+  if (!ds_exists(shieldList, ds_type_list)) {
+        shieldList = ds_list_create();
+  }
+
+ // Iterate up to the specified number to create shields
+    for (var i = 1; i <= number; i++) {
+        var result = instance_create_layer(x, y, "Enemy", obj_enemy_normal_ball_large_shield);
+        result.SetNormalBallParent(id, i);
+        ds_list_add(shieldList, result);
+    }
+}
+
+#endregion
+
+#region delete this instance's all shield function
+
+function DeleteAllShield() {
+
+    var listSize = ds_list_size(shieldList);
+    
+    for (var i = 0; i < listSize; i++) {
+        var element = ds_list_find_value(shieldList, i);
+	    instance_destroy(element);
+    }
+	
+	// Clear the list
+    ds_list_clear(shieldList);
+	shieldNumber = 0;
+}
+
+#endregion
+
+#region delete this instance's last shield function
+
+function DeleteLastShield() {
+
+    if (ds_list_size(shieldList) > 0) {
+        // Get the last element's index
+        var lastIndex = ds_list_size(shieldList) - 1;
+
+        // Find the last element
+        var lastElement = ds_list_find_value(shieldList, lastIndex);
+        
+       // Check if lastElement is valid
+        if (IsInstanceExists(lastElement)) {
+			
+            // Destroy the last element
+            instance_destroy(lastElement);
+            
+            // Remove the last element from the list
+            ds_list_delete(shieldList, lastIndex);
+			
+			//shield number decreased
+			shieldNumber--;
+        }
+    }
+}
+
+#endregion
+
+// basic functions
 #region Sprite set function
 
 function SetSprite() {
@@ -121,3 +201,5 @@ function GetLifePointColor() {
 }
 
 #endregion
+
+

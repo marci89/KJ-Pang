@@ -1,4 +1,8 @@
 
+//types
+race = enemyRaceType.Ball;
+size = enemySizeType.Large;
+
 //movement
 moveX = 0; // left and right movement
 moveY = 0; // up and down movement
@@ -31,7 +35,7 @@ isAllowWeaponPassThrough = false; // the weapon passes through it and not hurts
 //blinking
 isBlinkingStarted = false; // inactive for a while when created
 isBlinked = false; // after death you will blink for a while
-blinkDuration = 25; // Duration of the blinking animation in number
+blinkDuration = 15; // Duration of the blinking animation in number
 
 //effects
 isTimeFreezeEffectEnabled = true; // time freeze effect allowed

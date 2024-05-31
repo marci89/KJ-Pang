@@ -130,3 +130,52 @@ function CreateRandomPowerWireSound(){
 }
 
 #endregion
+
+#region Create random sound for glass break
+
+function CreateRandomGlassBreakSound(){
+	
+	var randomIndex = irandom_range(1, 3); 
+    switch (randomIndex) {
+        case 1:
+            PlaySound(snd_glass_break1, false);
+            break;
+        case 2:
+            PlaySound(snd_glass_break2, false);
+            break;
+	    case 3:
+            PlaySound(snd_glass_break3, false);
+            break;
+        default:
+            PlaySound(snd_glass_break1, false);
+            break;
+    }
+}
+
+#endregion
+
+#region Create random sound for glass piece break
+
+function CreateRandomGlassPieceBreakSound(){
+	
+	var randomIndex = irandom_range(1, 4); 
+    switch (randomIndex) {
+        case 1:
+            PlaySound(snd_glass_piece_break1, false);
+            break;
+        case 2:
+            PlaySound(snd_glass_piece_break2, false);
+            break;
+	    case 3:
+            PlaySound(snd_glass_piece_break3, false);
+            break;
+		case 4:
+            PlaySound(snd_glass_piece_break4, false);
+            break;
+        default:
+            PlaySound(snd_glass_piece_break1, false);
+            break;
+    }
+}
+
+#endregion

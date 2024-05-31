@@ -2,6 +2,10 @@
 //parent properties
 event_inherited()
 
+//types
+race = enemyRaceType.Ball;
+size = enemySizeType.Medium;
+
 moveX = 0.5; // left and right movement
 moveY = 0; // up and down movement
 isGravityXEnabled = false; // gravity x enabled or not

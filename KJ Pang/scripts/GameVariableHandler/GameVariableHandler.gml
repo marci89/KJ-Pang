@@ -12,7 +12,7 @@ function SetGameVariables(){
 	global.playerTwoLife =  100; //player2 life
 	global.playerOneLifePoint = 150; //player1 life points
 	global.playerTwoLifePoint = 150; //player2 life points
-	global.playerOneFood = 0; // food number for player 1 special ability
+	global.playerOneFood = 30; // food number for player 1 special ability
 	global.playerTwoFood = 0; // food number for player 2 special ability
 
 
