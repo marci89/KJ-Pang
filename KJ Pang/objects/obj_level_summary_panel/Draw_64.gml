@@ -48,14 +48,14 @@ if(global.playMode == playModeType.SinglePlayer
 
 draw_set_font(ft_level_summary_small_font);
 
-   draw_sprite(spr_item_life, 1, x+20, y + 430);
-   draw_text(x + 40 , y +420, " * " + string(playerLife));
+   draw_sprite(spr_item_life, 1, x+20, y + 450);
+   draw_text(x + 40 , y +440, " * " + string(playerLife));
    
-   draw_sprite(spr_item_life_point_red, 1, x + 140, y + 430);
-   draw_text(x + 155 , y + 420, " * " + string(playerLifePoint));
+   draw_sprite(spr_item_life_point_red, 1, x + 140, y + 450);
+   draw_text(x + 155 , y + 440, " * " + string(playerLifePoint));
    
-   draw_sprite(spr_item_food, 1, x+260, y +430);
-   draw_text(x + 275 , y + 420, " * " + string(playerFood));
+   draw_sprite(spr_item_food, 1, x+260, y +450);
+   draw_text(x + 275 , y + 440, " * " + string(playerFood));
 
 #endregion
 
@@ -64,26 +64,26 @@ draw_set_font(ft_level_summary_small_font);
 draw_set_font(ft_level_summary_font);
 
 if (timeScore > 0) {
-	draw_text(x, y + 460, timeScoreText + ":");
-	draw_text(x + 250, y + 460, "+ " + string(timeScore));
-	draw_text(x, y + 500, lifeScoreText + ":");
-	draw_text(x + 250, y + 500, "+ " + string(lifeScore));
+	draw_text(x, y + 480, timeScoreText + ":");
+	draw_text(x + 250, y + 480, "+ " + string(timeScore));
+	draw_text(x, y + 520, lifeScoreText + ":");
+	draw_text(x + 250, y + 520, "+ " + string(lifeScore));
 } else {
-	draw_text(x, y + 460, lifeScoreText + ":");
-	draw_text(x + 250, y + 460, "+ " + string(lifeScore));
+	draw_text(x, y + 480, lifeScoreText + ":");
+	draw_text(x + 250, y + 480, "+ " + string(lifeScore));
 }
 
 // Draw the line
-draw_line(x , y + 550, x + 350 , y + 550);
+draw_line(x , y + 570, x + 350 , y + 570);
 
 //Draw total score
 var totalScoreTextWidth = string_width(totalScoreText);
 var drawTotalScoreTextX = (sprite_width - totalScoreTextWidth) / 2;
-draw_text(x + drawTotalScoreTextX , y + 570, totalScoreText);
+draw_text(x + drawTotalScoreTextX , y + 590, totalScoreText);
 
 var totalScoreValueWidth = string_width(string(totalScore));
 var drawTotalScoreValueX = (sprite_width - totalScoreValueWidth) / 2;
-draw_text(x + drawTotalScoreValueX, y + 610, string(totalScore));
+draw_text(x + drawTotalScoreValueX, y + 630, string(totalScore));
 
 #endregion
 

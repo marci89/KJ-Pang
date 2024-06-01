@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.653061,
+  "duration":0.705306,
   "name":"snd_male_hurt2",
   "parent":{
     "name":"Player",
@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_male_hurt2.mp3",
   "type":0,
-  "volume":1.0,
+  "volume":0.48,
 }

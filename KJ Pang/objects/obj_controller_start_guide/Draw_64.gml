@@ -96,22 +96,27 @@ draw_line(x + 50 , startY, x + 970 , startY);
 
 #endregion
 
-#region life and spec ability
+#region life and spec ability and life bar
 
-startY += 30;
+startY += 20;
 
-draw_text(50, startY, string(extraLifeDesc));
+draw_text_ext(x + 50 , startY, extraLifeDesc, 25 , 500);
 
-startY += 60;
+//life bar
+draw_sprite(spr_intro_start_guide_life_bar, 1,  630, startY);
+draw_text_ext(x + 380 , startY + 70, lifeBarDesc, 25 , 600);
+
+startY += 50;
 
 draw_text(50, startY-10, string(global.lifePointMax));
 draw_sprite(spr_item_life_point_red, 1,  110, startY);
 draw_text(150, startY-10, "=");
 draw_sprite(spr_item_life, 1,  200, startY);
 
-startY += 50;
-draw_text(50, startY, string(specialAbilityDesc));
 startY += 60;
+
+draw_text_ext(x + 50 , startY, specialAbilityDesc, 25 , 300);
+startY += 80;
 
 draw_text(50, startY-10, string(global.foodMax));
 draw_sprite(spr_item_food, 1,  110, startY);

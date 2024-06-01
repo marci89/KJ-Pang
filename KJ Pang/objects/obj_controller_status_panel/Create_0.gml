@@ -33,6 +33,10 @@ function CreateSinglePlayerStatusPanel() {
 	 var singlePlayerScore = instance_create_layer(195, startY + 25,"Status", obj_status_score);
 	 singlePlayerScore.SetPlayer(obj_player_one);
 	 
+	 //life bar
+	 var singlePlayerLifeBar = instance_create_layer(770, startY,"Status", obj_status_life_bar);
+	 singlePlayerLifeBar.SetPlayer(obj_player_one);
+	 
 	 //life point
 	 var singlePlayerLifePoint = instance_create_layer(830, startY,"Status", obj_status_life_point);
 	 singlePlayerLifePoint.SetPlayer(obj_player_one);
@@ -75,6 +79,10 @@ function CreateMultiPlayerStatusPanelForPlayerOne() {
 	 //life
 	 var lifePlayerOne = instance_create_layer(267, startY +40,"Status", obj_status_life);
 	 lifePlayerOne.SetPlayer(obj_player_one);
+	 
+	 //life bar
+	 var LifeBarPlayerOne = instance_create_layer(385, startY,"Status", obj_status_life_bar);
+	 LifeBarPlayerOne.SetPlayer(obj_player_one);
 }
 	
 #endregion
@@ -82,6 +90,11 @@ function CreateMultiPlayerStatusPanelForPlayerOne() {
 #region Create multiplayer staus panel for player 2 function
 
 function CreateMultiPlayerStatusPanelForPlayerTwo() {
+	
+	 //life bar
+	 var LifeBarPlayerTwo = instance_create_layer(635, startY,"Status", obj_status_life_bar);
+	 LifeBarPlayerTwo.SetPlayer(obj_player_two);
+	 
 	 // player 2 name
 	 var namePlayerTwo = instance_create_layer(658, startY + 20,"Status", obj_status_name_and_score);
 	 namePlayerTwo.SetPlayer(obj_player_two);
@@ -131,7 +144,7 @@ if(global.playMode == playModeType.SinglePlayer) {
 else if(global.playMode == playModeType.MultiPlayer) {
 	
 	//level name
-	instance_create_layer(410, startY + 25,"Status", obj_status_level_name);
+	instance_create_layer(445, startY + 25,"Status", obj_status_level_name);
 	
 	//player 1
 	if(instance_exists(obj_player_one)) {

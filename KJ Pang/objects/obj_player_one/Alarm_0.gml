@@ -17,4 +17,5 @@ if(global.isRestartLevelAfterDead) {
 	isDead = false;
 	isInvincible = true;
 	isBlinked = true;
+	playerHealth = 3;
 }

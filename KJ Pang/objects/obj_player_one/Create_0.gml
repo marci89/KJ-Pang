@@ -10,6 +10,10 @@ inputSpecialAbility = 0; // activate special ability
 // sound controll for character voice
 isCharacterVoiceEnabled = true;
 
+//health
+playerHealth = 3;
+
+
 //Weapon
 weapon = weaponType.SingleSting; //Player current weapon type. 
 shotgunAmmo = 0; //shotgun ammo
@@ -201,9 +205,9 @@ function CreateDeathSound() {
 	
 	// death sound effect
 	if(global.playerOneGender == PlayerGenderType.Female) {
-		CreateRandomFemaleDeathSound();
+		  PlaySound(snd_female_death, false);
 	} else {
-		CreateRandomMaleDeathSound();
+		  PlaySound(snd_male_death, false);
 	}
 	
 	//other player talk
@@ -225,6 +229,7 @@ function Death() {
 	isDead = true;
 	global.playerOneLife -= 1;
 	moveX = 0;	
+	playerHealth = 0;
 	
 	// death sound
 	CreateDeathSound();

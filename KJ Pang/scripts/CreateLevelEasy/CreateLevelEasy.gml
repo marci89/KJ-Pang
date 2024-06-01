@@ -15,6 +15,8 @@ global.hasRoomWallFrame = false;
 	CreateNormalBallLargeShield(200, 200, global.normalBallLargeMoveX, global.normalBallLargeMoveY,
 	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
 	normalBallColorType.Blue, normalBallGiantDropItemType.Nothing, true, 4);
+	
+	instance_create_layer(30, 600,"Enemy", obj_enemy_bullet_spiky_ball_spike);
 
 if(global.level == 1) CreateLevelEasy1();
 if(global.level == 2) CreateLevelEasy2();

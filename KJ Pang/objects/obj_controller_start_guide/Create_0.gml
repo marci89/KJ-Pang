@@ -29,6 +29,7 @@ scoreSystem = GetLocalizedText("scoreSystem");
 scoreSystemDesc = GetLocalizedText("scoreSystemDesc")
 extraLifeDesc =GetLocalizedText("extraLifeDesc")
 specialAbilityDesc= GetLocalizedText("specialAbilityDesc")
+lifeBarDesc= GetLocalizedText("lifeBarDesc")
 
 
 

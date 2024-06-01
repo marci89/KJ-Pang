@@ -23,6 +23,7 @@ dropItemType = normalBallLargeDropItemType.Nothing;
 
 //shield
 hasShield = false; // has shield or not
+isLostShield = false;
 shieldNumber = 0; // how many shields it has
 shieldList = ds_list_create(); // list of shields
 

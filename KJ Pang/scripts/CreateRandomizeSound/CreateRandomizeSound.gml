@@ -1,7 +1,7 @@
 
-#region Create random sound for female death
+#region Create random sound for female hurt
 
-function CreateRandomFemaleDeathSound(){
+function CreateRandomFemaleHurtSound(){
 	
 	var randomIndex = irandom_range(1, 2); 
     switch (randomIndex) {
@@ -19,9 +19,9 @@ function CreateRandomFemaleDeathSound(){
 
 #endregion
 
-#region Create random sound for male death
+#region Create random sound for male hurt
 
-function CreateRandomMaleDeathSound(){
+function CreateRandomMaleHurtSound(){
 	
 	var randomIndex = irandom_range(1, 2); 
     switch (randomIndex) {

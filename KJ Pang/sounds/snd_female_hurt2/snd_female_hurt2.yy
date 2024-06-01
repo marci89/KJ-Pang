@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.149388,
+  "duration":0.626939,
   "name":"snd_female_hurt2",
   "parent":{
     "name":"Player",
@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_female_hurt2.mp3",
   "type":0,
-  "volume":0.46,
+  "volume":1.0,
 }

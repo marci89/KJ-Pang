@@ -189,11 +189,9 @@ if (!isDead) {
 #region Death
 
 // Collision with enemy
-if (collision_circle(x, y-25, 28, obj_enemy_parent, true, true)) {
-
+if (collision_rectangle(x-25, y-80, x+25, y, obj_enemy_parent, true, true)) {
 	if(global.currentLevelEffect != levelEffectType.TimeFreeze) {
-		// var enemyInstance = instance_place(x, y-25, obj_enemy_parent);
-			var enemyInstance = collision_circle(x, y-25, 28, obj_enemy_parent, true, true);
+		var enemyInstance = collision_rectangle(x-25, y-80, x+25, y, obj_enemy_parent, true, true);
 		    if (enemyInstance != noone) {
 		        if (!enemyInstance.isHarmless) {
 					if (!isDead && !isInvincible) {
@@ -212,6 +210,52 @@ if (collision_circle(x, y-25, 28, obj_enemy_parent, true, true)) {
 					}
 				}
 			}
+	}
+}
+	
+#endregion
+
+#region enemy bullet collide
+
+// Collision with enemy bullet
+if (collision_rectangle(x-25, y-80, x+25, y, obj_enemy_bullet_parent, true, true)) {
+	if(global.currentLevelEffect != levelEffectType.TimeFreeze) {
+		var enemyBulletInstance = collision_rectangle(x-25, y-80, x+25, y, obj_enemy_bullet_parent, true, true);
+		    if (enemyBulletInstance != noone) {
+		        if (!enemyBulletInstance.isHarmless) {
+					if (!isDead && !isInvincible) {
+						
+						//shield check
+						if(hasEnergyShield) {
+							PlaySound(snd_energy_shield_deactivate, false);
+							hasEnergyShield = false;
+							isDead = false;
+							isInvincible = true;
+							isBlinked = true;
+						} else {
+						
+						// hurt sound
+						if(global.playerTwoGender == PlayerGenderType.Female) {
+							CreateRandomFemaleHurtSound();
+						} else {
+							CreateRandomMaleHurtSound();
+						}
+						
+							
+						playerHealth -= 1;
+							
+						if(playerHealth < 1) {
+							Death();
+						} else {
+							isInvincible = true;
+							blinkDuration = 20;
+							isBlinked = true;
+						}
+					}
+					
+				}
+			}
+		}
 	}
 }
 	
