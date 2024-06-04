@@ -1,3 +1,6 @@
+
+
+
 //inputs
 inputX = 0; // left and right key
 inputJump = 0; // jump key
@@ -14,7 +17,7 @@ isCharacterVoiceEnabled = true;
 playerHealth = 3;
 
 //Weapon
-weapon = weaponType.SingleSting; //Player current weapon type. 
+weapon = global.playerTwoDefaultWeapon; //Player current weapon type. 
 shotgunAmmo = 0; //shotgun ammo
 machineGunAmmo = 0; //machineGun ammo
 pistolAmmo = 0; //pistol ammo
@@ -350,26 +353,6 @@ function ActivateSpecialAbility() {
 }
 		
 
-
-#endregion
-
-#region Set deafult weapon
-
-if(global.gameDifficult == gameDifficultType.Easy) {
-	weapon = weaponType.SingleSting;
-}
-else if (global.gameDifficult == gameDifficultType.Normal) {
-	weapon = weaponType.SingleSting;
-}
-else if (global.gameDifficult == gameDifficultType.Hard) {
-	weapon = weaponType.DoubleSting;
-}
-else if (global.gameDifficult == gameDifficultType.Nightmare) {
-	weapon = weaponType.DoubleSting;
-}
-else if (global.gameDifficult == gameDifficultType.Impossible) {
-	weapon = weaponType.DoubleSting;
-}
 
 #endregion
 

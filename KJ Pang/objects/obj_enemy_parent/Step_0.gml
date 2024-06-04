@@ -92,6 +92,7 @@ if (place_meeting(x, y + moveY, obj_wall_parent) ) {
 	//Bounce
 	moveY *= -bounceDecay;
 	isOnGround = true;
+	
 }
 
 #endregion

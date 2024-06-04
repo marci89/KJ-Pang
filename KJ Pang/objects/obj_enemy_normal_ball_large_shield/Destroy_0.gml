@@ -1,4 +1,6 @@
-
+if (global.isEnemyInformationMode) {
+	return;
+}
 
 
 //Create wall pieces

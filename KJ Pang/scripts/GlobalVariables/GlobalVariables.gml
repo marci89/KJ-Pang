@@ -3,6 +3,8 @@
 	global.playMode = playModeType.SinglePlayer; // play alone or with your friend
 	global.scores = ds_list_create(); // score list
 	
+	global.isEnemyInformationMode = false; // helper for enemy information
+	
 	//game difficult allowing
 	global.isNormalDifficultEnable = false;
 	global.isHardDifficultEnable = false;
@@ -33,6 +35,8 @@
 	global.playerTwoSpecialAbility = specialAbilityType.EnergyShield; // player 2's special ability
 	global.playerOneFood = 0; // food number for player 1 special ability
 	global.playerTwoFood = 0; // food number for player 2 special ability
+	global.playerOneDefaultWeapon = weaponType.SingleSting; // player 1 default weapon
+	global.playerTwoDefaultWeapon = weaponType.SingleSting; // player 2 default weapon
 
 
 	//level controller and room
@@ -51,25 +55,25 @@
 	
 	
 	//Giant normal ball default properties
-	global.normalBallGiantMoveX = 1;
-	global.normalBallGiantMoveY = 0;
-	global.normalBallGiantGravityY = 0.1;
-	global.normalBallGiantJumpHeightMax = -12;
+	global.normalBallGiantMoveX = 0.5;
+	global.normalBallGiantMoveY = -1;
+	global.normalBallGiantGravityY = 0.04;
+	global.normalBallGiantJumpHeightMax = -9;
 	//Large normal ball default properties
 	global.normalBallLargeMoveX = 1;
-	global.normalBallLargeMoveY = 0;
-	global.normalBallLargeGravityY = 0.1;
-	global.normalBallLargeJumpHeightMax = -12;
+	global.normalBallLargeMoveY = -1;
+	global.normalBallLargeGravityY = 0.04;
+	global.normalBallLargeJumpHeightMax = -6;
 	//Medium normal ball default properties
-	global.normalBallMediumMoveX = 1;
-	global.normalBallMediumMoveY = 0;
-	global.normalBallMediumGravityY = 0.1;
-	global.normalBallMediumJumpHeightMax = -12;
+	global.normalBallMediumMoveX = 0.5;
+	global.normalBallMediumMoveY = -1;
+	global.normalBallMediumGravityY = 0.04;
+	global.normalBallMediumJumpHeightMax = -5;
 	//Small normal ball default properties
-	global.normalBallSmallMoveX = 1;
-	global.normalBallSmallMoveY = 0;
-	global.normalBallSmallGravityY = 0.1;
-	global.normalBallSmallJumpHeightMax = -12;
+	global.normalBallSmallMoveX = 0.5;
+	global.normalBallSmallMoveY = -2;
+	global.normalBallSmallGravityY = 0.04;
+	global.normalBallSmallJumpHeightMax = -4;
 	
 
 

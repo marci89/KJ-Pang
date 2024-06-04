@@ -108,6 +108,10 @@ fireAnimation = obj_weapon_animation_fire; // set default animation for shooting
 function SetPlayer(playerRequest) {
 	
 	player = playerRequest;
+	
+	if(IsInstanceExists(player ?? noone)){	
+		defaultPlayerWeapon = player.weapon;
+	}	
 }
 
 #endregion

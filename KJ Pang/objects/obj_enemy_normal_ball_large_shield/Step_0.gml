@@ -28,10 +28,10 @@ CreateRandomGlassBreakSound();
 var weaponInstance = instance_place(x, y, obj_weapon_parent);
 	if (weaponInstance != noone) {	
 		if (weaponInstance.x < x) {
-			parentNormalBall.moveY = -2
+			parentNormalBall.moveY = -4
 			parentNormalBall.moveX = global.normalBallLargeMoveX; 
 		} else {
-			parentNormalBall.moveY = -2 
+			parentNormalBall.moveY = -4 
 			parentNormalBall.moveX = -global.normalBallLargeMoveX; 
 		}
 

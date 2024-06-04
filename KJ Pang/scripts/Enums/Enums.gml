@@ -58,6 +58,30 @@ enum informationType{
 	RocketLauncher,
 	TrackingRocketLauncher,
 	FlameThrower,
+	
+	//others
+	DestroyableWall
+};
+
+#endregion
+
+#region enemy information type
+
+enum enemyInformationType{
+	NormalBall,
+	YellowBall,
+	BlackBall,
+	ShieldedNormalBall
+};
+
+#endregion
+
+#region information frame size
+
+enum enemyInformationFrameSizeType{
+	Small,
+	Medium,
+	Large,
 };
 
 #endregion

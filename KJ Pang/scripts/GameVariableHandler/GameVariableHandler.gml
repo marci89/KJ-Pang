@@ -4,6 +4,7 @@ function SetGameVariables(){
 
 	//game
 	global.scores = ds_list_create();
+	global.isEnemyInformationMode = false; // helper for enemy information
 	
 	//Player
 	global.playerOneScore = 0; //player1 score
@@ -14,6 +15,8 @@ function SetGameVariables(){
 	global.playerTwoLifePoint = 0; //player2 life points
 	global.playerOneFood = 0; // food number for player 1 special ability
 	global.playerTwoFood = 0; // food number for player 2 special ability
+	global.playerOneDefaultWeapon = weaponType.SingleSting; // player 1 default weapon
+	global.playerTwoDefaultWeapon = weaponType.SingleSting; // player 2 default weapon
 
 
 	//level controller and room

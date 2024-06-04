@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"CheckRequiredDifficultLevel",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CheckRequiredDifficultLevel",
+  "parent":{
+    "name":"Checker",
+    "path":"folders/Scripts/Checker.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
