@@ -186,7 +186,7 @@ if (!isDead) {
 
 #endregion
 
-#region Death
+#region enemy  collide
 
 // Collision with enemy
 if (collision_rectangle(x-25, y-80, x+25, y, obj_enemy_parent, true, true)) {
@@ -204,12 +204,28 @@ if (collision_rectangle(x-25, y-80, x+25, y, obj_enemy_parent, true, true)) {
 							isInvincible = true;
 							isBlinked = true;
 						} else {
+						
+						// hurt sound
+						if(global.playerTwoGender == PlayerGenderType.Female) {
+							CreateRandomFemaleHurtSound();
+						} else {
+							CreateRandomMaleHurtSound();
+						}
+						
+						//hurting
+						global.playerTwoHealth -= enemyInstance.damage;
 							
+						if(global.playerTwoHealth < 1) {
 							Death();
+						} else {
+							isInvincible = true;
+							blinkDuration = 20;
+							isBlinked = true;
 						}
 					}
 				}
 			}
+		}
 	}
 }
 	
@@ -241,10 +257,10 @@ if (collision_rectangle(x-25, y-80, x+25, y, obj_enemy_bullet_parent, true, true
 							CreateRandomMaleHurtSound();
 						}
 						
+						//hurting	
+						global.playerTwoHealth -= enemyBulletInstance.damage;
 							
-						playerHealth -= 1;
-							
-						if(playerHealth < 1) {
+						if(global.playerTwoHealth < 1) {
 							Death();
 						} else {
 							isInvincible = true;
@@ -252,7 +268,6 @@ if (collision_rectangle(x-25, y-80, x+25, y, obj_enemy_bullet_parent, true, true
 							isBlinked = true;
 						}
 					}
-					
 				}
 			}
 		}

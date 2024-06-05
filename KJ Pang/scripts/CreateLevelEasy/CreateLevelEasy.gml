@@ -12,7 +12,7 @@ SetLevelVariables()
 global.hasLevelTime = true;
 global.hasRoomWallFrame = false;
 
-	CreateNormalBallLargeShield(200, 200, global.normalBallLargeMoveX, global.normalBallLargeMoveY,
+	CreateNormalBallLargeShield(100, -100, global.normalBallLargeMoveX, global.normalBallLargeMoveY,
 	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
 	normalBallColorType.Blue, normalBallGiantDropItemType.Nothing, true, 4);
 	
@@ -71,8 +71,8 @@ function CreateLevelEasy1() {
 	
 
 	
-	CreateItem(190, 640, obj_item_rocket_launcher)
-	CreateItem(120, 640, obj_item_flamethrower)
+	CreateItem(190, 640, obj_item_health_potion)
+	CreateItem(120, 640, obj_item_first_aid_kit)
 	CreateItem(830, 640, obj_item_food)
 	
 	CreateLifePoint(870, 640, lifePointType.Red);

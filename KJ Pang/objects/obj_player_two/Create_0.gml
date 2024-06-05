@@ -13,9 +13,6 @@ inputSpecialAbility = 0; // activate special ability
 // sound controll for character voice
 isCharacterVoiceEnabled = true;
 
-//health
-playerHealth = 3;
-
 //Weapon
 weapon = global.playerTwoDefaultWeapon; //Player current weapon type. 
 shotgunAmmo = 0; //shotgun ammo
@@ -208,6 +205,13 @@ function GetSpecialAbility() {
 
 #endregion
 
+#region Get Health function
+
+function GetHealth() {
+	return global.playerTwoHealth;
+}
+
+#endregion
 
 // functions
 
@@ -241,7 +245,7 @@ function Death() {
 	isDead = true;
 	global.playerTwoLife -= 1;
 	moveX = 0;
-	playerHealth = 0;
+	global.playerTwoHealth = 3;
 	
 	// death sound
 	CreateDeathSound();
@@ -249,6 +253,8 @@ function Death() {
 	//check dead type
 	if(global.isRestartLevelAfterDead) {
 		CreateRoomTransition(false); // room change animation
+		
+		global.isAllowToGoNextLevel = false; // when you died not allow
 		
 		if(global.playMode == playModeType.MultiPlayer) {
 				DeactivateObjects(obj_enemy_parent);

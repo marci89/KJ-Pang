@@ -24,7 +24,7 @@ isTimeSlowEffectEnabled = true; // time slow effect allowed
 isAntigravityEffectEnabled = true; // Antigravity effect allowed
 isReverseGravityEffectEnabled = true; // reverse gravity effect allowed
 isStrongReverseGravityEffectEnabled = true; // strong reverse gravity effect allowed
-
+damage = 1; // enemy's bullet damage
 
 // original properties
 originalMoveX = moveX;

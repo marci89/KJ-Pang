@@ -11,6 +11,7 @@ if (place_meeting(x, y, obj_player_one)) {
 	
 	if(!isPickedUp) {	
     global.playerOneLife++;
+	global.playerOneHealth = 3;	
 	PlaySound(snd_extra_life, false);
 	isPickedUp = true;
 	}
@@ -23,6 +24,7 @@ if (place_meeting(x, y, obj_player_two)) {
 	
 	if(!isPickedUp) {	
     global.playerTwoLife++;
+	global.playerTwoHealth = 3;	
 	PlaySound(snd_extra_life, false);
 	isPickedUp = true;
 	}

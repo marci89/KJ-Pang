@@ -27,6 +27,8 @@ hitPoint = 1; //health
 isHarmless = false; // not hurt the player if it is true
 isDestroyed = false; // death or not
 isRequiredToKill = true; // required to destroy this enemy or not
+isOutsideRoom = true; // it is inside the room or came from outside
+damage = 1; // enemy's damage
 
 //Weapon
 isImmuneToWeapon = false // not hurts the weapon
@@ -53,6 +55,10 @@ originalGravSpeedY = gravSpeedY;
 originalGravityXEnabled = gravSpeedX;
 originalGravityYEnabled = gravSpeedY;
 originalBounceDecay = bounceDecay;
+
+//helper originals
+originalIsAllowWeaponPassThrough = false; // outside helper prop
+originalIsImmuneToWeapon = false; //outside helper prop
 
 
 #region Set original properties function

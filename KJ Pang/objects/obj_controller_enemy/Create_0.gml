@@ -5,6 +5,8 @@
  enemyCountCheckTime = 50; // enemy number check time
  changeRoomTime = 300; // time to change the room
  
+ global.isAllowToGoNextLevel = true; // set allowing at start
+ 
  alarm[0] = enemyCountCheckTime // start to check enemy number
  
 #region Check enemy count function

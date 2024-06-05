@@ -1,7 +1,9 @@
  /// @desc change room
  
  if(enemyCount == 0) {
-	NextLevel();
+	 if(global.isAllowToGoNextLevel) {
+		NextLevel();
+	 }
  } else {
 	 isAllowToChangeRoom = true;
  }

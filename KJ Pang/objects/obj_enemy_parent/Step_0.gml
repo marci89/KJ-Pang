@@ -1,4 +1,16 @@
 
+#region Set immunite ouside the room
+
+if (isOutsideRoom) {
+    isAllowWeaponPassThrough = true;
+    isImmuneToWeapon = true;
+} else {
+    isAllowWeaponPassThrough = originalIsAllowWeaponPassThrough;
+    isImmuneToWeapon = originalIsImmuneToWeapon;
+}
+
+#endregion
+
 #region Weapon collide
 
 if (place_meeting(x, y, obj_weapon_parent)) {
@@ -99,31 +111,41 @@ if (place_meeting(x, y + moveY, obj_wall_parent) ) {
 
 #region Screen collision
 
+
+
 var halfSpriteWidth = sprite_width / 2;
 var halfSpriteHeight = sprite_height / 2;
 
-//Left
-if (CheckScreenCollisionLeftWithoutWallForObject(x, halfSpriteWidth)) {
-	   x = halfSpriteWidth;
-	   moveX *= -bounceDecay;
-}
+if (!isOutsideRoom) {
+	//Left
+	if (CheckScreenCollisionLeftWithoutWallForObject(x, halfSpriteWidth)) {
+		   x = halfSpriteWidth;
+		   moveX *= -bounceDecay;
+	}
 
-//Right
-if (CheckScreenCollisionRightWithoutWallForObject(x, halfSpriteWidth)) {
-	    x = global.roomWidth - halfSpriteWidth;
-        moveX *= -bounceDecay;
-}
+	//Right
+	if (CheckScreenCollisionRightWithoutWallForObject(x, halfSpriteWidth)) {
+		    x = global.roomWidth - halfSpriteWidth;
+	        moveX *= -bounceDecay;
+	}
 
-//Top
-if (CheckScreenCollisionTopWithoutWallForObject(y, halfSpriteHeight)) {
-	     y = halfSpriteHeight;
-        moveY *= -bounceDecay;
-}
+	//Top
+	if (CheckScreenCollisionTopWithoutWallForObject(y, halfSpriteHeight)) {
+		     y = halfSpriteHeight;
+	        moveY *= -bounceDecay;
+	}
 
-//Bottom
-if (CheckScreenCollisionBottomWithoutWallForObject(y, halfSpriteHeight)) {
-	    y = global.roomHeight - halfSpriteHeight;
-        moveY *= -bounceDecay;
+	//Bottom
+	if (CheckScreenCollisionBottomWithoutWallForObject(y, halfSpriteHeight)) {
+		    y = global.roomHeight - halfSpriteHeight;
+	        moveY *= -bounceDecay;
+	}
+	
+} else {
+    // Check if the object is now within the room boundaries
+    if (x - halfSpriteWidth > 0 && x + halfSpriteWidth < global.roomWidth && y - halfSpriteHeight > 0 && y + halfSpriteHeight < global.roomHeight) {
+        isOutsideRoom = false; // Object has entered the visible area
+    }
 }
 
 #endregion

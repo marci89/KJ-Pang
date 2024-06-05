@@ -118,6 +118,36 @@ function Init(type) {
 		descriptionText =  GetLocalizedText("destroyableWallDesc"); 
 		image = spr_wall_destroyable;
 	}
+	
+	if(type == informationType.LifePoint) {
+		titleText =  GetLocalizedText("lifePointTitle"); 
+		descriptionText =  GetLocalizedText("lifePointDesc"); 
+		image = spr_item_life_point_red;
+	}
+	
+	if(type == informationType.Food) {
+		titleText =  GetLocalizedText("foodTitle"); 
+		descriptionText =  GetLocalizedText("foodDesc"); 
+		image = spr_item_food;
+	}
+	
+	if(type == informationType.HealthPotion) {
+		titleText =  GetLocalizedText("healthPotionTitle"); 
+		descriptionText =  GetLocalizedText("healthPotionDesc"); 
+		image = spr_item_health_potion;
+	}
+	
+	if(type == informationType.FirstAidKit) {
+		titleText =  GetLocalizedText("firstAidKitTitle"); 
+		descriptionText =  GetLocalizedText("firstAidKitDesc"); 
+		image = spr_item_first_aid_kit;
+	}
+	
+	if(type == informationType.Life) {
+		titleText =  GetLocalizedText("lifeTitle"); 
+		descriptionText =  GetLocalizedText("lifeDesc"); 
+		image = spr_item_life;
+	}
 		
 
 }

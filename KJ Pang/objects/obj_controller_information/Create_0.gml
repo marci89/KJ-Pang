@@ -31,14 +31,20 @@ function CreateEasyLevelInformation() {
 	
 	if (global.stageLevel == 1) {
 
-	var enemyPanelObj = instance_create_layer(30, infoPanelStartY,"Instances", obj_information_enemy_panel);
-	enemyPanelObj.Init(enemyInformationType.NormalBall ?? noone);
+		var enemyPanelObj = instance_create_layer(30, infoPanelStartY-30 ?? 0,"Instances", obj_information_enemy_panel);
+		enemyPanelObj.Init(enemyInformationType.NormalBall ?? noone);
 	
-    var infoPanelObj1 = instance_create_layer(365, infoPanelStartY,"Instances", obj_information_panel);
-	infoPanelObj1.Init(informationType.DestroyableWall ?? noone);
+	    var infoPanelObj1 = instance_create_layer(365, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj1.Init(informationType.DestroyableWall ?? noone);
 	
-	var infoPanelObj2 = instance_create_layer(700, infoPanelStartY,"Instances", obj_information_panel);
-	infoPanelObj2.Init(informationType.DoubleSting ?? noone);
+		var infoPanelObj2 = instance_create_layer(700, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj2.Init(informationType.DoubleSting ?? noone);
+		
+		var infoPanelObj3 = instance_create_layer(365, infoPanelStartY + 280 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj3.Init(informationType.LifePoint ?? noone);
+	
+		var infoPanelObj4 = instance_create_layer(700, infoPanelStartY + 280 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj4.Init(informationType.Food ?? noone);
 	
 	}
 }

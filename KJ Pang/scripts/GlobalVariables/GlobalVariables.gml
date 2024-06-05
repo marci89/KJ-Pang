@@ -4,6 +4,7 @@
 	global.scores = ds_list_create(); // score list
 	
 	global.isEnemyInformationMode = false; // helper for enemy information
+	global.isAllowToGoNextLevel = true; // helper for next level. If you dead not allowed.
 	
 	//game difficult allowing
 	global.isNormalDifficultEnable = false;
@@ -37,6 +38,8 @@
 	global.playerTwoFood = 0; // food number for player 2 special ability
 	global.playerOneDefaultWeapon = weaponType.SingleSting; // player 1 default weapon
 	global.playerTwoDefaultWeapon = weaponType.SingleSting; // player 2 default weapon
+	global.playerOneHealth = 3; // player 1 health
+	global.playerTwoHealth = 3; // player 2 health
 
 
 	//level controller and room

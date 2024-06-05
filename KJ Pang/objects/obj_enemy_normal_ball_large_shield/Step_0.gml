@@ -21,7 +21,7 @@ y = parentNormalBall.y;
 
 #region Collide with bullet
 
-if (place_meeting(x, y, obj_weapon_parent)) {
+if (place_meeting(x, y, obj_weapon_parent) && !parentNormalBall.isOutsideRoom) {
 	
 CreateRandomGlassBreakSound();
 

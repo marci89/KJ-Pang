@@ -60,7 +60,12 @@ enum informationType{
 	FlameThrower,
 	
 	//others
-	DestroyableWall
+	DestroyableWall,
+	LifePoint,
+	Food,
+	HealthPotion,
+	FirstAidKit,
+	Life,
 };
 
 #endregion

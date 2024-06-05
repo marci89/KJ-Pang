@@ -7,16 +7,18 @@ CreateRoomTransition(true); // room start animation
 pausedText = GetLocalizedText("paused"); // translate text
 
 // Get start values of the player
-playerOneStartFood = global.playerOneFood
-playerTwoStartFood = global.playerTwoFood
-playerOneStartLifePoint = global.playerOneLifePoint
-playerTwoStartLifePoint = global.playerTwoLifePoint
-playerOneStartScore = global.playerOneScore
-playerTwoStartScore = global.playerTwoScore
+playerOneStartFood = global.playerOneFood;
+playerTwoStartFood = global.playerTwoFood;
+playerOneStartLifePoint = global.playerOneLifePoint;
+playerTwoStartLifePoint = global.playerTwoLifePoint;
+playerOneStartScore = global.playerOneScore;
+playerTwoStartScore = global.playerTwoScore;
+playerOneStartHealth = global.playerOneHealth;
+playerTwoStartHealth = global.playerTwoHealth;
 
 //starter lives
-playerOneStartLife = global.playerOneLife
-playerTwoStartLife = global.playerTwoLife
+playerOneStartLife = global.playerOneLife;
+playerTwoStartLife = global.playerTwoLife;
 
 global.previousLevelTime = 0 // set 0 to refresh the value each start
 
@@ -72,6 +74,8 @@ function SetPlayerStartLives() {
 	
  global.playerOneLife = playerOneStartLife;
  global.playerTwoLife = playerTwoStartLife;
+ global.playerOneHealth = playerOneStartHealth;
+ global.playerTwoHealth = playerTwoStartHealth;
  
 }
 
