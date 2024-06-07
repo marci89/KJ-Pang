@@ -1,6 +1,11 @@
 
-//Create wall pieces
+//if outside or info mode not add items,sounds, only death
+if (global.isEnemyInformationMode) {
+	return;
+}
 
+
+//Create wall pieces
 if (!isPickedUp) {
 	
 	if (isBlue) {

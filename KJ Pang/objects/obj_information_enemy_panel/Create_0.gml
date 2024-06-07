@@ -80,6 +80,67 @@ function Init(type) {
 		enemyType = type;
 	}
 	
+	if(type == enemyInformationType.BlackBall) {
+		
+		titleText =  GetLocalizedText("blackBallTitle"); 
+		descriptionText =  GetLocalizedText("blackBallDesc"); 
+		
+		layer_destroy_instances("Enemy");
+		
+		//enemies
+		CreateBlackBallSmall(x +240, y +450, -2, true, false );
+		CreateBlackBallMedium(x +170, y +430, -2, true, false );
+		CreateBlackBallLarge(x +100, y +400, true, false );
+		
+		enemyType = type;
+	}
+	
+	if(type == enemyInformationType.YellowBall) {
+		
+		titleText =  GetLocalizedText("yellowBallTitle"); 
+		descriptionText =  GetLocalizedText("yellowBallDesc"); 
+		
+		layer_destroy_instances("Enemy");
+		
+		//enemies
+		CreateYellowBallSmall(x +50, y +430, false);
+		CreateYellowBallSmall(x +140, y +440, false);
+		CreateYellowBallSmall(x +200, y +450, false);
+		CreateYellowBallGiant(x +160, y +445, true, false);
+		
+		enemyType = type;
+	}
+	
+	if(type == enemyInformationType.AntiGravityBall) {
+		
+		titleText =  GetLocalizedText("antigravityBallTitle"); 
+		descriptionText =  GetLocalizedText("antigravityBallDesc"); 
+		
+		layer_destroy_instances("Enemy");
+		
+		//enemies
+		CreateAntiGravityBallSmall(x +50, y +430, true, true, false);
+		CreateAntiGravityBallSmall(x +140, y +440, false, false, false);
+		CreateAntiGravityBallMedium(x +200, y +450, true, true, false);
+		
+		enemyType = type;
+	}
+	
+	if(type == enemyInformationType.HorizontalBall) {
+		
+		titleText =  GetLocalizedText("horizontalBallTitle"); 
+		descriptionText =  GetLocalizedText("horizontalBallDesc"); 
+		
+		layer_destroy_instances("Enemy");
+		
+		//enemies
+		CreateHorizontalBallSmall(x +50, y +430, true, true, false);
+		CreateHorizontalBallSmall(x +140, y +440, false, false, false);
+		CreateHorizontalBallMedium(x +200, y +450, true, true, false);
+		
+		enemyType = type;
+	}
+	
 	if(type == enemyInformationType.ShieldedNormalBall) {
 		
 		titleText =  GetLocalizedText("shieldedNormalBallTitle"); 
@@ -107,3 +168,11 @@ function Init(type) {
 }
 
 #endregion
+
+
+
+//CreateYellowBallGiant(100, 100, true, true );
+	//CreateBlackBallLarge(100, 100, true, true );
+	//CreateAntiGravityBallMedium(100, 100, true, true, true );
+	//CreateHorizontalBallsmall(100, 100, true, true, true );
+	//CreateHorizontalBallMedium(800, 100, false, true, true );

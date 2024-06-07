@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"CreateHorizontalBallSmall",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CreateHorizontalBallSmall",
+  "parent":{
+    "name":"HorizontalBall",
+    "path":"folders/Scripts/Creator/Enemy/Ball/HorizontalBall.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

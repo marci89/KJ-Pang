@@ -179,3 +179,25 @@ function CreateRandomGlassPieceBreakSound(){
 }
 
 #endregion
+
+
+
+#region Create random sound for ball hurt
+
+function CreateRandomBallHurtSound(){
+	
+	var randomIndex = irandom_range(1, 2); 
+    switch (randomIndex) {
+        case 1:
+            PlaySound(snd_ball_hurt_1, false, 1);
+            break;
+        case 2:
+            PlaySound(snd_ball_hurt_2, false, 1);
+            break;
+        default:
+            PlaySound(snd_ball_hurt_1, false, 1);
+            break;
+    }
+}
+
+#endregion

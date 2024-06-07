@@ -11,12 +11,16 @@ SetLevelVariables()
 	
 global.hasLevelTime = true;
 global.hasRoomWallFrame = false;
+//global.playerOneDefaultWeapon = weaponType.MachineGun;
+//global.gameDifficult = gameDifficultType.Impossible;
 
-	CreateNormalBallLargeShield(100, -100, global.normalBallLargeMoveX, global.normalBallLargeMoveY,
-	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
-	normalBallColorType.Blue, normalBallGiantDropItemType.Nothing, true, 4);
+
+	//CreateYellowBallGiant(100, 100, true, true );
+	//CreateBlackBallLarge(100, 100, true, true );
+	//CreateAntiGravityBallMedium(100, 100, true, true, true );
+	//CreateHorizontalBallsmall(100, 100, true, true, true );
+	//CreateHorizontalBallMedium(800, 100, false, true, true );
 	
-	instance_create_layer(30, 600,"Enemy", obj_enemy_bullet_spiky_ball_spike);
 
 if(global.level == 1) CreateLevelEasy1();
 if(global.level == 2) CreateLevelEasy2();
@@ -49,11 +53,11 @@ function CreateLevelEasy1() {
 	
 	//Enemy
 	
-	
+	/*
 	CreateNormalBallGiant(550, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
 	normalBallColorType.Red, normalBallGiantDropItemType.Nothing, true);
-	
+	*/
 	/*
 	CreateNormalBallSmall(800, 670, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
 	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
@@ -71,8 +75,8 @@ function CreateLevelEasy1() {
 	
 
 	
-	CreateItem(190, 640, obj_item_health_potion)
-	CreateItem(120, 640, obj_item_first_aid_kit)
+	CreateItem(190, 640, obj_item_gravity_reverse)
+	CreateItem(120, 640, obj_item_time_freeze)
 	CreateItem(830, 640, obj_item_food)
 	
 	CreateLifePoint(870, 640, lifePointType.Red);

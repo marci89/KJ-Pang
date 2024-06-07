@@ -76,6 +76,9 @@ enum enemyInformationType{
 	NormalBall,
 	YellowBall,
 	BlackBall,
+	AntiGravityBall,
+	HorizontalBall,
+	RedBossBall,
 	ShieldedNormalBall
 };
 

@@ -1,7 +1,7 @@
 
 //types
-race = enemyRaceType.Ball;
-size = enemySizeType.Large;
+race = enemyRaceType.Ball; // type for grouped things
+size = enemySizeType.Large; // size for shield sizes
 
 //movement
 moveX = 0; // left and right movement
@@ -28,6 +28,7 @@ isHarmless = false; // not hurt the player if it is true
 isDestroyed = false; // death or not
 isRequiredToKill = true; // required to destroy this enemy or not
 isOutsideRoom = true; // it is inside the room or came from outside
+isFarAwayFromScreen = false; // destroy without sounds, items if out of the screen
 damage = 1; // enemy's damage
 
 //Weapon
@@ -37,7 +38,7 @@ isAllowWeaponPassThrough = false; // the weapon passes through it and not hurts
 //blinking
 isBlinkingStarted = false; // inactive for a while when created
 isBlinked = false; // after death you will blink for a while
-blinkDuration = 15; // Duration of the blinking animation in number
+blinkDuration = 24; // Duration of the blinking animation in number
 
 //effects
 isTimeFreezeEffectEnabled = true; // time freeze effect allowed
@@ -134,6 +135,17 @@ function DestroyWeapon(weapon) {
 
 function TimeFreezeEffect() {
 	
+	//set smaller values
+	var isMoveYPositive = true;
+	if (moveY < 0) {
+		isMoveYPositive = false;
+	}
+	if(isMoveYPositive && moveY > 1) {
+		moveY =1; 
+	} else if (!isMoveYPositive && moveY < -1) {
+		moveY =-1;
+	}
+	
 	// set delay value
 	var slowFactorX = CalculateTimeFreezeEffectDecay(moveX ?? 0)
 	var slowFactorY = CalculateTimeFreezeEffectDecay(moveY ?? 0)
@@ -159,7 +171,20 @@ function TimeFreezeEffect() {
 
 function TimeSlowEffect() {
 	
+	//set smaller values
+	var isMoveYPositive = true;
+	if (moveY < 0) {
+		isMoveYPositive = false;
+	}
+	if(isMoveYPositive && moveY > 1) {
+		moveY =1; 
+	} else if (!isMoveYPositive && moveY < -1) {
+		moveY =-1;
+	}
+	
+
 	// set delay value
+		
 	var slowFactorX = CalculateTimeSlowEffectDecay(moveX ?? 0)
 	var slowFactorY = CalculateTimeSlowEffectDecay(moveY ?? 0)
 

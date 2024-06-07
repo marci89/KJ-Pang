@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"CreateAntiGravityBallMedium",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CreateAntiGravityBallMedium",
+  "parent":{
+    "name":"AntiGravityBall",
+    "path":"folders/Scripts/Creator/Enemy/Ball/AntiGravityBall.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

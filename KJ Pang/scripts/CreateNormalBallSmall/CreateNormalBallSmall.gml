@@ -13,6 +13,7 @@ function CreateNormalBallSmall(xValue, yValue, moveX, moveY, grav, jumpHeightMax
 	result.colorType = colorType;
 	
 	if(isCreatedOnLevelStart) {
+		result.blinkDuration = 15;
 		result.isBlinkingStarted = true;
 	}
 	

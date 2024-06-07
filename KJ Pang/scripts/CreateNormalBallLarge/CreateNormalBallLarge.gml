@@ -14,6 +14,7 @@ function CreateNormalBallLarge(xValue, yValue, moveX, moveY, grav, jumpHeightMax
 	result.dropItemType = dropItemType;
 	
 	if(isCreatedOnLevelStart) {
+		result.blinkDuration = 15;
 		result.isBlinkingStarted = true;
 	}
 	

@@ -22,15 +22,41 @@ function Init() {
 	
 	//Set value depends on button id
 	if(buttonId == 0) {
-		image = spr_enemy_normal_ball_medium_blue;
+		image = spr_enemy_normal_ball_small_red;
 		infoType = enemyInformationType.NormalBall;
 		requiredDifficult = gameDifficultType.Easy;
 	}
 	
 	if(buttonId == 1) {
+		image = spr_enemy_black_ball_small;
+		infoType = enemyInformationType.BlackBall;
+		requiredDifficult = gameDifficultType.Easy;
+	}
+	
+	if(buttonId == 2) {
+		image = spr_enemy_yellow_ball_small;
+		infoType = enemyInformationType.YellowBall;
+		requiredDifficult = gameDifficultType.Easy;
+	}
+	
+	if(buttonId == 3) {
+		image = spr_enemy_anti_gravity_ball_small;
+		infoType = enemyInformationType.AntiGravityBall;
+		requiredDifficult = gameDifficultType.Easy;
+	}
+	
+	if(buttonId == 4) {
+		image = spr_enemy_horizontal_ball_small;
+		infoType = enemyInformationType.HorizontalBall;
+		requiredDifficult = gameDifficultType.Easy;
+	}
+	
+	
+	
+	if(buttonId == 10) {
 		image = spr_enemy_normal_ball_medium_green;
 		infoType = enemyInformationType.ShieldedNormalBall;
-		requiredDifficult = gameDifficultType.Easy;
+		requiredDifficult = gameDifficultType.Normal;
 	}
 	
 	//set image

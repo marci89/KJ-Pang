@@ -13,6 +13,7 @@ function CreateNormalBallLargeShield(xValue, yValue, moveX, moveY, grav, jumpHei
 	result.dropItemType = dropItemType;
 	
 	if(isCreatedOnLevelStart) {
+		result.blinkDuration = 15;
 		result.isBlinkingStarted = true;
 	}
 	

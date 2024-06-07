@@ -6,7 +6,7 @@
   "name":"CreateNormalBallLarge",
   "parent":{
     "name":"NormalBall",
-    "path":"folders/Scripts/Creator/Enemy/NormalBall.yy",
+    "path":"folders/Scripts/Creator/Enemy/Ball/NormalBall.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

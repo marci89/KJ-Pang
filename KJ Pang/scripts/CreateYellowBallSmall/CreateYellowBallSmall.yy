@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"CreateYellowBallSmall",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CreateYellowBallSmall",
+  "parent":{
+    "name":"YellowBall",
+    "path":"folders/Scripts/Creator/Enemy/Ball/YellowBall.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

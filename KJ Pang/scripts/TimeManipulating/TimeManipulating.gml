@@ -12,6 +12,7 @@ function CalculateTimeSlowEffectDecay(value) {
 	if (value < 20) slowFactorValue =  0.12;
 	if (value < 10) slowFactorValue =  0.03;
 
+
 	return slowFactorValue;
 }
 
@@ -29,6 +30,7 @@ function CalculateTimeFreezeEffectDecay(value) {
 	if (value < 30) slowFactorValue =  0.36;
 	if (value < 20) slowFactorValue =  0.27;
 	if (value < 10) slowFactorValue =  0.06;
+	
 
 	return slowFactorValue;
 }

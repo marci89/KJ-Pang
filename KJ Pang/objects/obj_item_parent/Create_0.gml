@@ -110,6 +110,17 @@ function ResetToOriginalProperties () {
 
 function TimeFreezeEffect() {
 	
+	//set smaller values
+	var isMoveYPositive = true;
+	if (moveY < 0) {
+		isMoveYPositive = false;
+	}
+	if(isMoveYPositive && moveY > 1) {
+		moveY =1; 
+	} else if (!isMoveYPositive && moveY < -1) {
+		moveY =-1;
+	}
+	
 	// set delay value
 	var slowFactorX = CalculateTimeFreezeEffectDecay(moveX ?? 0)
 	var slowFactorY = CalculateTimeFreezeEffectDecay(moveY ?? 0)
@@ -133,6 +144,17 @@ function TimeFreezeEffect() {
 #region Time slow effect function
 
 function TimeSlowEffect() {
+	
+	//set smaller values
+	var isMoveYPositive = true;
+	if (moveY < 0) {
+		isMoveYPositive = false;
+	}
+	if(isMoveYPositive && moveY > 1) {
+		moveY =1; 
+	} else if (!isMoveYPositive && moveY < -1) {
+		moveY =-1;
+	}
 	
 	// set delay value
 	var slowFactorX = CalculateTimeSlowEffectDecay(moveX ?? 0)

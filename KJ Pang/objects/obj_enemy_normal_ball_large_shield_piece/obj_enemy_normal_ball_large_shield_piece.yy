@@ -13,7 +13,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"ShieldPiece",
-    "path":"folders/Objects/Enemy/NormalBall/Shield/ShieldPiece.yy",
+    "path":"folders/Objects/Enemy/Ball/NormalBall/Shield/ShieldPiece.yy",
   },
   "parentObjectId":{
     "name":"obj_item_parent",

@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Shield",
-    "path":"folders/Objects/Enemy/NormalBall/Shield.yy",
+    "path":"folders/Objects/Enemy/Ball/NormalBall/Shield.yy",
   },
   "parentObjectId":null,
   "persistent":false,

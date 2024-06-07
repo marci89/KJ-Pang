@@ -11,6 +11,16 @@ if (isOutsideRoom) {
 
 #endregion
 
+#region Destroy if it is far away from screen
+
+if (x > 3000 || x < -3000 || y > 3000 || y < -3000) {
+	
+	isFarAwayFromScreen = true;
+    instance_destroy();
+}
+
+#endregion
+
 #region Weapon collide
 
 if (place_meeting(x, y, obj_weapon_parent)) {
@@ -110,7 +120,6 @@ if (place_meeting(x, y + moveY, obj_wall_parent) ) {
 #endregion
 
 #region Screen collision
-
 
 
 var halfSpriteWidth = sprite_width / 2;

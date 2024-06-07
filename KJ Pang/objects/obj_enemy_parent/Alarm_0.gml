@@ -8,7 +8,7 @@ if (blinkDuration > 0){
 	blinkDuration--;
 	
 } else {
-	blinkDuration = 15;
+	blinkDuration = 24;
 	image_alpha = 1;
 	isActive = true; // activate the enemy
 }

@@ -1077,7 +1077,7 @@ function handleRocketLauncher() {
 				
 				//bullet create
 				var bulletX = x + sprite_width;	
-				var bulletY = y;
+				var bulletY = y-5;
 				
 				var directionValue = weaponDirection == 1 ? 9 : -9; // direction
 						

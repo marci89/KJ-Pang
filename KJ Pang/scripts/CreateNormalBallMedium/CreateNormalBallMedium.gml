@@ -13,6 +13,7 @@ function CreateNormalBallMedium(xValue, yValue, moveX, moveY, grav, jumpHeightMa
 	result.colorType = colorType;
 	
 	if(isCreatedOnLevelStart) {
+		result.blinkDuration = 15;
 		result.isBlinkingStarted = true;
 	}
 	
