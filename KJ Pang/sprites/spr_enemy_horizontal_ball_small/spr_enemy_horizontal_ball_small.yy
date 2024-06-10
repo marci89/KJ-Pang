@@ -45,7 +45,7 @@
   "origin":4,
   "parent":{
     "name":"HorizontalBall",
-    "path":"folders/Sprites/Enemy/HorizontalBall.yy",
+    "path":"folders/Sprites/Enemy/Ball/HorizontalBall.yy",
   },
   "preMultiplyAlpha":true,
   "resourceType":"GMSprite",

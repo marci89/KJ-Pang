@@ -206,6 +206,16 @@ function GetHealth() {
 
 // functions
 
+#region Hopping palyer
+
+function Hopping() {
+	if(isOnGround) {
+	 moveY = -5;
+	}
+}
+
+#endregion
+
 #region death sound function
 
 function CreateDeathSound() {

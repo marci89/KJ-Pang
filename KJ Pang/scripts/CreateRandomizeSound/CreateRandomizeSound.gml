@@ -181,7 +181,6 @@ function CreateRandomGlassPieceBreakSound(){
 #endregion
 
 
-
 #region Create random sound for ball hurt
 
 function CreateRandomBallHurtSound(){
@@ -196,6 +195,27 @@ function CreateRandomBallHurtSound(){
             break;
         default:
             PlaySound(snd_ball_hurt_1, false, 1);
+            break;
+    }
+}
+
+#endregion
+
+
+#region Create random sound for giant foot step
+
+function CreateRandomGiantFootStepSound(){
+	
+	var randomIndex = irandom_range(1, 2); 
+    switch (randomIndex) {
+        case 1:
+            PlaySound(snd_giant_foot_step_1, false, 3);
+            break;
+        case 2:
+            PlaySound(snd_giant_foot_step_2, false, 3);
+            break;
+        default:
+            PlaySound(snd_giant_foot_step_1, false, 3);
             break;
     }
 }

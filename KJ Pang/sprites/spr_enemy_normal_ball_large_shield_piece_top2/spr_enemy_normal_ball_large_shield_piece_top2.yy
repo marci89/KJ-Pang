@@ -45,7 +45,7 @@
   "origin":4,
   "parent":{
     "name":"ShieldPiece",
-    "path":"folders/Sprites/Enemy/NormalBall/Shield/ShieldPiece.yy",
+    "path":"folders/Sprites/Enemy/Ball/NormalBall/Shield/ShieldPiece.yy",
   },
   "preMultiplyAlpha":true,
   "resourceType":"GMSprite",

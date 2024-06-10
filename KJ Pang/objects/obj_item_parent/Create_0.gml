@@ -110,15 +110,18 @@ function ResetToOriginalProperties () {
 
 function TimeFreezeEffect() {
 	
-	//set smaller values
-	var isMoveYPositive = true;
-	if (moveY < 0) {
-		isMoveYPositive = false;
-	}
-	if(isMoveYPositive && moveY > 1) {
+	//suddenly slow y
+	if(moveY > 1) {
 		moveY =1; 
-	} else if (!isMoveYPositive && moveY < -1) {
+	} else if (moveY < -1) {
 		moveY =-1;
+	}
+	
+	//suddenly slow x
+	if(moveX > 1) {
+		moveX =1; 
+	} else if (moveX < -1) {
+		moveX =-1;
 	}
 	
 	// set delay value
@@ -145,15 +148,18 @@ function TimeFreezeEffect() {
 
 function TimeSlowEffect() {
 	
-	//set smaller values
-	var isMoveYPositive = true;
-	if (moveY < 0) {
-		isMoveYPositive = false;
-	}
-	if(isMoveYPositive && moveY > 1) {
+	//suddenly slow y
+	if(moveY > 1) {
 		moveY =1; 
-	} else if (!isMoveYPositive && moveY < -1) {
+	} else if (moveY < -1) {
 		moveY =-1;
+	}
+	
+	//suddenly slow x
+	if(moveX > 1) {
+		moveX =1; 
+	} else if (moveX < -1) {
+		moveX =-1;
 	}
 	
 	// set delay value

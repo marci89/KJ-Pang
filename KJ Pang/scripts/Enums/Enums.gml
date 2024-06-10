@@ -78,22 +78,11 @@ enum enemyInformationType{
 	BlackBall,
 	AntiGravityBall,
 	HorizontalBall,
-	RedBossBall,
+	RedBallBoss,
 	ShieldedNormalBall
 };
 
 #endregion
-
-#region information frame size
-
-enum enemyInformationFrameSizeType{
-	Small,
-	Medium,
-	Large,
-};
-
-#endregion
-
 
 //menu
 #region menu buttons select
@@ -313,6 +302,7 @@ enum enemySizeType{
 enum enemyRaceType{
     Ball,
     Larva,
+	Boss,
 };
 
 #endregion

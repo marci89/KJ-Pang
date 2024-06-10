@@ -7,6 +7,8 @@ event_inherited();
 SetGameVariables(); 
 LoadGameSettings();
 
+DeactivateFilters(); // deactive all of filters
+
 CreateRoomTransition(true); // room start animation
 
 // play music

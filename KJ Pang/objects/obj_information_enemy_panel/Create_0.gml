@@ -28,7 +28,6 @@ function CreateEnemyWallFrame() {
 
 #endregion
 
-CreateEnemyWallFrame();
 		
 #region Init data
 
@@ -47,9 +46,10 @@ function Init(type) {
 
 		titleText =  GetLocalizedText("normalBallTitle"); 
 		descriptionText =  GetLocalizedText("normalBallDesc"); 
-		//image = spr_status_antigravity;
+		image = noone;
 		
 		layer_destroy_instances("Enemy");
+		CreateEnemyWallFrame();
 		
 		//enemies
 		
@@ -83,9 +83,11 @@ function Init(type) {
 	if(type == enemyInformationType.BlackBall) {
 		
 		titleText =  GetLocalizedText("blackBallTitle"); 
-		descriptionText =  GetLocalizedText("blackBallDesc"); 
+		descriptionText =  GetLocalizedText("blackBallDesc");
+		image = noone;
 		
 		layer_destroy_instances("Enemy");
+		CreateEnemyWallFrame();
 		
 		//enemies
 		CreateBlackBallSmall(x +240, y +450, -2, true, false );
@@ -99,8 +101,10 @@ function Init(type) {
 		
 		titleText =  GetLocalizedText("yellowBallTitle"); 
 		descriptionText =  GetLocalizedText("yellowBallDesc"); 
+		image = noone;
 		
 		layer_destroy_instances("Enemy");
+		CreateEnemyWallFrame();
 		
 		//enemies
 		CreateYellowBallSmall(x +50, y +430, false);
@@ -115,8 +119,10 @@ function Init(type) {
 		
 		titleText =  GetLocalizedText("antigravityBallTitle"); 
 		descriptionText =  GetLocalizedText("antigravityBallDesc"); 
+		image = noone;
 		
 		layer_destroy_instances("Enemy");
+		CreateEnemyWallFrame();
 		
 		//enemies
 		CreateAntiGravityBallSmall(x +50, y +430, true, true, false);
@@ -129,9 +135,11 @@ function Init(type) {
 	if(type == enemyInformationType.HorizontalBall) {
 		
 		titleText =  GetLocalizedText("horizontalBallTitle"); 
-		descriptionText =  GetLocalizedText("horizontalBallDesc"); 
+		descriptionText =  GetLocalizedText("horizontalBallDesc");
+		image = noone;
 		
 		layer_destroy_instances("Enemy");
+		CreateEnemyWallFrame();
 		
 		//enemies
 		CreateHorizontalBallSmall(x +50, y +430, true, true, false);
@@ -145,8 +153,10 @@ function Init(type) {
 		
 		titleText =  GetLocalizedText("shieldedNormalBallTitle"); 
 		descriptionText =  GetLocalizedText("shieldedNormalBallDesc"); 
+		image = noone;
 		
 		layer_destroy_instances("Enemy");
+		CreateEnemyWallFrame();
 
 		
 		//enemies	
@@ -165,6 +175,21 @@ function Init(type) {
 		enemyType = type;
 		
 	}
+	
+	if(type == enemyInformationType.RedBallBoss) {
+		
+		titleText =  GetLocalizedText("redBossBallTitle"); 
+		descriptionText =  GetLocalizedText("redBossBallDesc"); 
+		
+		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		
+		image = spr_enemy_red_ball_boss_pic;
+		
+		enemyType = type;
+	}
+	
+		
 }
 
 #endregion

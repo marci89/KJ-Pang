@@ -45,7 +45,7 @@
   "origin":4,
   "parent":{
     "name":"BlackBall",
-    "path":"folders/Sprites/Enemy/BlackBall.yy",
+    "path":"folders/Sprites/Enemy/Ball/BlackBall.yy",
   },
   "preMultiplyAlpha":true,
   "resourceType":"GMSprite",

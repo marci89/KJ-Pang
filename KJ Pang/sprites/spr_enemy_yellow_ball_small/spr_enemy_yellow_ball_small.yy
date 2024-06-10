@@ -45,7 +45,7 @@
   "origin":4,
   "parent":{
     "name":"YellowBall",
-    "path":"folders/Sprites/Enemy/YellowBall.yy",
+    "path":"folders/Sprites/Enemy/Ball/YellowBall.yy",
   },
   "preMultiplyAlpha":true,
   "resourceType":"GMSprite",

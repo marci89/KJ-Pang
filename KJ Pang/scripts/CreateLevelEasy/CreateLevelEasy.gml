@@ -9,7 +9,7 @@ SetLevelVariables()
 
 //Player
 	
-global.hasLevelTime = true;
+global.hasLevelTime = false;
 global.hasRoomWallFrame = false;
 //global.playerOneDefaultWeapon = weaponType.MachineGun;
 //global.gameDifficult = gameDifficultType.Impossible;
@@ -20,6 +20,7 @@ global.hasRoomWallFrame = false;
 	//CreateAntiGravityBallMedium(100, 100, true, true, true );
 	//CreateHorizontalBallsmall(100, 100, true, true, true );
 	//CreateHorizontalBallMedium(800, 100, false, true, true );
+	CreateRedBallBoss(500,-1);
 	
 
 if(global.level == 1) CreateLevelEasy1();

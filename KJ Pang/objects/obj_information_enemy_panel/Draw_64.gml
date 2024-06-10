@@ -17,7 +17,9 @@ draw_text_ext(x + 10 , y + 10, titleText, 25 , 290);
 
 #region Draw image
 
-	//draw_sprite(image ?? noone, 0, x+150, y+80);
+	if(image != noone) {
+	draw_sprite(image ?? noone, 0, x+150, y+325);
+	}
 	
 #endregion
 

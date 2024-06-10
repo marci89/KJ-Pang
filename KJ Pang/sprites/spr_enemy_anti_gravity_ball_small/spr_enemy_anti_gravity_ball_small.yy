@@ -45,7 +45,7 @@
   "origin":4,
   "parent":{
     "name":"AntiGravityBall",
-    "path":"folders/Sprites/Enemy/AntiGravityBall.yy",
+    "path":"folders/Sprites/Enemy/Ball/AntiGravityBall.yy",
   },
   "preMultiplyAlpha":true,
   "resourceType":"GMSprite",

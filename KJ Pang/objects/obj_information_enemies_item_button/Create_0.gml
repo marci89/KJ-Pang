@@ -53,10 +53,10 @@ function Init() {
 	
 	
 	
-	if(buttonId == 10) {
-		image = spr_enemy_normal_ball_medium_green;
-		infoType = enemyInformationType.ShieldedNormalBall;
-		requiredDifficult = gameDifficultType.Normal;
+	if(buttonId == 5) {
+		image = spr_enemy_normal_ball_medium_red;
+		infoType = enemyInformationType.RedBallBoss;
+		requiredDifficult = gameDifficultType.Easy;
 	}
 	
 	//set image

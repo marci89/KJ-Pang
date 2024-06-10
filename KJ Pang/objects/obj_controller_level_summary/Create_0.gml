@@ -3,6 +3,7 @@
 #region Set important things
 
 audio_stop_all(); // stop every sounds before start
+DeactivateFilters(); // deactive all of filters
 PlaySound(snd_next_level, false,1); // play sound
 global.level++; // increase the level
 

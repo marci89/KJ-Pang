@@ -45,7 +45,7 @@
   "origin":4,
   "parent":{
     "name":"NormalBall",
-    "path":"folders/Sprites/Enemy/NormalBall.yy",
+    "path":"folders/Sprites/Enemy/Ball/NormalBall.yy",
   },
   "preMultiplyAlpha":true,
   "resourceType":"GMSprite",
