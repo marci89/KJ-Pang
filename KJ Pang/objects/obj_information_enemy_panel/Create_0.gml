@@ -49,6 +49,8 @@ function Init(type) {
 		image = noone;
 		
 		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
 		CreateEnemyWallFrame();
 		
 		//enemies
@@ -87,6 +89,8 @@ function Init(type) {
 		image = noone;
 		
 		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
 		CreateEnemyWallFrame();
 		
 		//enemies
@@ -104,6 +108,8 @@ function Init(type) {
 		image = noone;
 		
 		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
 		CreateEnemyWallFrame();
 		
 		//enemies
@@ -122,6 +128,8 @@ function Init(type) {
 		image = noone;
 		
 		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
 		CreateEnemyWallFrame();
 		
 		//enemies
@@ -139,6 +147,8 @@ function Init(type) {
 		image = noone;
 		
 		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
 		CreateEnemyWallFrame();
 		
 		//enemies
@@ -156,6 +166,8 @@ function Init(type) {
 		image = noone;
 		
 		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
 		CreateEnemyWallFrame();
 
 		
@@ -183,8 +195,26 @@ function Init(type) {
 		
 		layer_destroy_instances("Enemy");
 		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
 		
 		image = spr_enemy_red_ball_boss_pic;
+		
+		enemyType = type;
+	}
+	
+	if(type == enemyInformationType.SnakeBoss) {
+		
+		titleText =  GetLocalizedText("snakeBossTitle"); 
+		descriptionText =  GetLocalizedText("snakeBossDesc");
+		image = noone;
+		
+		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
+		CreateEnemyWallFrame();
+		
+		//enemies
+		CreateSnakeBossNest(x + 200, y + 450, 3,3, 15, 20, c_blue);
 		
 		enemyType = type;
 	}
@@ -193,11 +223,3 @@ function Init(type) {
 }
 
 #endregion
-
-
-
-//CreateYellowBallGiant(100, 100, true, true );
-	//CreateBlackBallLarge(100, 100, true, true );
-	//CreateAntiGravityBallMedium(100, 100, true, true, true );
-	//CreateHorizontalBallsmall(100, 100, true, true, true );
-	//CreateHorizontalBallMedium(800, 100, false, true, true );

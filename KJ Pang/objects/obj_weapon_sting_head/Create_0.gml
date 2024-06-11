@@ -12,6 +12,7 @@ bodyPartList = ds_list_create(); // list of body part objects
 
 
 alarm[0] = 20;
+
 #region delete this instance's all body part function
 
 function DeleteAllBodyPart() {

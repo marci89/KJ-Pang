@@ -79,7 +79,12 @@ enum enemyInformationType{
 	AntiGravityBall,
 	HorizontalBall,
 	RedBallBoss,
-	ShieldedNormalBall
+	SnakeBoss,
+	Cacodemon,
+	JuniorGuardian,
+	
+	ShieldedNormalBall,
+	
 };
 
 #endregion

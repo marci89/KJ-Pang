@@ -11,16 +11,17 @@ SetLevelVariables()
 	
 global.hasLevelTime = false;
 global.hasRoomWallFrame = false;
-//global.playerOneDefaultWeapon = weaponType.MachineGun;
-//global.gameDifficult = gameDifficultType.Impossible;
+global.playerOneDefaultWeapon = weaponType.MachineGun;
+global.gameDifficult = gameDifficultType.Impossible;
 
 
 	//CreateYellowBallGiant(100, 100, true, true );
-	//CreateBlackBallLarge(100, 100, true, true );
+	CreateBlackBallLarge(100, 100, true, true );
 	//CreateAntiGravityBallMedium(100, 100, true, true, true );
 	//CreateHorizontalBallsmall(100, 100, true, true, true );
 	//CreateHorizontalBallMedium(800, 100, false, true, true );
-	CreateRedBallBoss(500,-1);
+	//CreateRedBallBoss(500,-1);
+	//CreateSnakeBossNest(500,400, 4,4, 20, 100, c_gray);
 	
 
 if(global.level == 1) CreateLevelEasy1();

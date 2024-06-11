@@ -201,7 +201,6 @@ function CreateRandomBallHurtSound(){
 
 #endregion
 
-
 #region Create random sound for giant foot step
 
 function CreateRandomGiantFootStepSound(){
@@ -216,6 +215,26 @@ function CreateRandomGiantFootStepSound(){
             break;
         default:
             PlaySound(snd_giant_foot_step_1, false, 3);
+            break;
+    }
+}
+
+#endregion
+
+#region Create random sound for snake hurt
+
+function CreateRandomSnakeHurtSound(){
+	
+	var randomIndex = irandom_range(1, 2); 
+    switch (randomIndex) {
+        case 1:
+            PlaySound(snd_snake_hurt_1, false, 2);
+            break;
+        case 2:
+            PlaySound(snd_snake_hurt_2, false, 2);
+            break;
+        default:
+            PlaySound(snd_snake_hurt_1, false, 2);
             break;
     }
 }

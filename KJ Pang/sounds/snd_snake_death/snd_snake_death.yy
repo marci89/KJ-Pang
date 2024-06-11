@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_snake_death",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.17551,
+  "name":"snd_snake_death",
+  "parent":{
+    "name":"SnakeBoss",
+    "path":"folders/Sounds/Voice/Enemy/Boss/SnakeBoss.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_snake_death.mp3",
+  "type":0,
+  "volume":1.0,
+}

@@ -59,6 +59,12 @@ function Init() {
 		requiredDifficult = gameDifficultType.Easy;
 	}
 	
+	if(buttonId == 6) {
+		image = spr_enemy_snake_boss_pic;
+		infoType = enemyInformationType.SnakeBoss;
+		requiredDifficult = gameDifficultType.Easy;
+	}
+	
 	//set image
 	sprite_index = image;
 	
