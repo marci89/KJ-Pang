@@ -228,10 +228,10 @@ function CreateRandomSnakeHurtSound(){
 	var randomIndex = irandom_range(1, 2); 
     switch (randomIndex) {
         case 1:
-            PlaySound(snd_snake_hurt_1, false, 2);
+            PlaySound(snd_snake_hurt_1, false, 1);
             break;
         case 2:
-            PlaySound(snd_snake_hurt_2, false, 2);
+            PlaySound(snd_snake_hurt_2, false, 1);
             break;
         default:
             PlaySound(snd_snake_hurt_1, false, 2);
@@ -240,3 +240,89 @@ function CreateRandomSnakeHurtSound(){
 }
 
 #endregion
+
+
+#region Create random sound for cacodemon hurt
+
+function CreateRandomCacodemonHurtSound(){
+	
+	var randomIndex = irandom_range(1, 2); 
+    switch (randomIndex) {
+        case 1:
+            PlaySound(snd_cacodemon_hurt1, false, 1);
+            break;
+        case 2:
+            PlaySound(snd_cacodemon_hurt2, false, 1);
+            break;
+        default:
+            PlaySound(snd_cacodemon_hurt1, false, 1);
+            break;
+    }
+}
+
+#endregion
+
+#region Create random sound for small cacodemon death
+
+function CreateRandomCacodemonSmallDeathSound(){
+	
+	var randomIndex = irandom_range(1, 3); 
+    switch (randomIndex) {
+        case 1:
+            PlaySound(snd_cacodemon_small_death1, false, 1);
+            break;
+        case 2:
+            PlaySound(snd_cacodemon_small_death2, false, 1);
+            break;
+		case 3:
+            PlaySound(snd_cacodemon_small_death3, false, 1);
+            break;
+        default:
+            PlaySound(snd_cacodemon_small_death1, false, 1);
+            break;
+    }
+}
+
+#endregion
+
+
+#region Create random sound for guardian roar
+
+function CreateRandomGuardianRoarSound(){
+	
+	var randomIndex = irandom_range(1, 2); 
+    switch (randomIndex) {
+        case 1:
+            PlaySound(snd_guardian_roar1, false, 1);
+            break;
+        case 2:
+            PlaySound(snd_guardian_roar2, false, 1);
+            break;
+        default:
+            PlaySound(snd_guardian_roar1, false, 1);
+            break;
+    }
+}
+
+#endregion
+
+#region Create random sound for guardian hurt
+
+function CreateRandomGuardianHurtSound(){
+	
+	var randomIndex = irandom_range(1, 2); 
+    switch (randomIndex) {
+        case 1:
+            PlaySound(snd_guardian_hurt1, false, 1);
+            break;
+        case 2:
+            PlaySound(snd_guardian_hurt2, false, 1);
+            break;
+        default:
+            PlaySound(snd_guardian_hurt1, false, 1);
+            break;
+    }
+}
+
+#endregion
+

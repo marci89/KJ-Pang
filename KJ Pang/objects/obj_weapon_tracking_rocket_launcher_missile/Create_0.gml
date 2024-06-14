@@ -17,7 +17,7 @@ function GetNearestEnemy() {
 	var nearestEnemy = instance_nearest(x, y, obj_enemy_parent);
 	
 	if (instance_exists(nearestEnemy)) {
-		if(!nearestEnemy.isAllowWeaponPassThrough) {
+		if(!nearestEnemy.isAllowWeaponPassThrough && !nearestEnemy.isImmuneToWeapon) {
 		
 		  target = nearestEnemy;
 		}

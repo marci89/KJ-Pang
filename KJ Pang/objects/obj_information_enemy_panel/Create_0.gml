@@ -197,7 +197,8 @@ function Init(type) {
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
 		
-		image = spr_enemy_red_ball_boss_pic;
+		//image = spr_enemy_red_ball_boss_pic;
+		image = spr_enemy_red_ball_boss;
 		
 		enemyType = type;
 	}
@@ -215,6 +216,34 @@ function Init(type) {
 		
 		//enemies
 		CreateSnakeBossNest(x + 200, y + 450, 3,3, 15, 20, c_blue);
+		
+		enemyType = type;
+	}
+	
+	if(type == enemyInformationType.Cacodemon) {
+		
+		titleText =  GetLocalizedText("cacodemonTitle"); 
+		descriptionText =  GetLocalizedText("cacodemonDesc"); 
+		
+		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
+		
+		image = spr_enemy_cacodemon_pic;
+		
+		enemyType = type;
+	}
+	
+	if(type == enemyInformationType.JuniorGuardian) {
+		
+		titleText =  GetLocalizedText("juniorGuardianTitle"); 
+		descriptionText =  GetLocalizedText("juniorGuardianDesc"); 
+		
+		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
+		
+		image = spr_enemy_junior_guardian_pic;
 		
 		enemyType = type;
 	}

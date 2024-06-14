@@ -17,6 +17,7 @@ isOnGround  = true; // it is on ground or air
 hitPoint = 1; //health
 isHarmless = false; // not hurt the player if it is true
 isDestroyed = false; // death or not
+isDestroyableByPlayer = true; // destroy after hit player or not
 
 //effects
 isTimeFreezeEffectEnabled = true; // time freeze effect allowed
@@ -34,6 +35,8 @@ originalGravSpeedY = gravSpeedY;
 originalGravityXEnabled = gravSpeedX;
 originalGravityYEnabled = gravSpeedY;
 originalBounceDecay = bounceDecay;
+
+
 
 
 #region Set original properties function

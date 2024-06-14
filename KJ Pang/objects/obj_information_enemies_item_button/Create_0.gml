@@ -65,6 +65,18 @@ function Init() {
 		requiredDifficult = gameDifficultType.Easy;
 	}
 	
+	if(buttonId == 7) {
+		image = spr_enemy_cacodemon_pic_small;
+		infoType = enemyInformationType.Cacodemon;
+		requiredDifficult = gameDifficultType.Easy;
+	}
+	
+	if(buttonId == 8) {
+		image = spr_enemy_junior_guardian_pic_small;
+		infoType = enemyInformationType.JuniorGuardian;
+		requiredDifficult = gameDifficultType.Easy;
+	}
+	
 	//set image
 	sprite_index = image;
 	

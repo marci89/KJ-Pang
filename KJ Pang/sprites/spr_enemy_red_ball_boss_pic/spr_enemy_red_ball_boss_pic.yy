@@ -2,9 +2,9 @@
   "$GMSprite":"",
   "%Name":"spr_enemy_red_ball_boss_pic",
   "bboxMode":1,
-  "bbox_bottom":291,
+  "bbox_bottom":204,
   "bbox_left":0,
-  "bbox_right":306,
+  "bbox_right":203,
   "bbox_top":0,
   "collisionKind":2,
   "collisionTolerance":255,
@@ -12,14 +12,14 @@
   "edgeFiltering":true,
   "For3D":true,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"6878af28-13c1-4d73-a015-9e306e59007a","name":"6878af28-13c1-4d73-a015-9e306e59007a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"56951a72-3011-4c19-a715-679c3f89fd31","name":"56951a72-3011-4c19-a715-679c3f89fd31","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":292,
+  "height":205,
   "HTile":true,
   "layers":[
-    {"$GMImageLayer":"","%Name":"90665b35-03ae-4269-8e38-e78281790347","blendMode":0,"displayName":"default","isLocked":false,"name":"90665b35-03ae-4269-8e38-e78281790347","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"2cbb35fc-4913-4ecb-adf7-742713506612","blendMode":0,"displayName":"default","isLocked":false,"name":"2cbb35fc-4913-4ecb-adf7-742713506612","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_enemy_red_ball_boss_pic",
   "nineSlice":{
@@ -42,7 +42,7 @@
     ],
     "top":0,
   },
-  "origin":1,
+  "origin":4,
   "parent":{
     "name":"RedBallBoss",
     "path":"folders/Sprites/Enemy/Boss/RedBallBoss.yy",
@@ -88,14 +88,14 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6878af28-13c1-4d73-a015-9e306e59007a","path":"sprites/spr_enemy_red_ball_boss_pic/spr_enemy_red_ball_boss_pic.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"99f37f7a-41ad-4430-b2ae-d6522a4c453d","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"56951a72-3011-4c19-a715-679c3f89fd31","path":"sprites/spr_enemy_red_ball_boss_pic/spr_enemy_red_ball_boss_pic.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"68ab25b4-a60f-4d8f-9bcf-c9c6a12d1031","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":153,
-    "yorigin":0,
+    "xorigin":102,
+    "yorigin":102,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
@@ -105,5 +105,5 @@
   },
   "type":0,
   "VTile":true,
-  "width":307,
+  "width":204,
 }

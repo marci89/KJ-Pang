@@ -12,16 +12,25 @@ SetLevelVariables()
 global.hasLevelTime = false;
 global.hasRoomWallFrame = false;
 global.playerOneDefaultWeapon = weaponType.MachineGun;
-global.gameDifficult = gameDifficultType.Impossible;
+//global.gameDifficult = gameDifficultType.Impossible;
+
 
 
 	//CreateYellowBallGiant(100, 100, true, true );
-	CreateBlackBallLarge(100, 100, true, true );
+	//CreateBlackBallLarge(100, 100, true, true );
 	//CreateAntiGravityBallMedium(100, 100, true, true, true );
 	//CreateHorizontalBallsmall(100, 100, true, true, true );
 	//CreateHorizontalBallMedium(800, 100, false, true, true );
 	//CreateRedBallBoss(500,-1);
-	//CreateSnakeBossNest(500,400, 4,4, 20, 100, c_gray);
+	//CreateSnakeBossNest(500,200, 4,4, 20, 100, c_gray);
+	//var result = instance_create_layer(500, 400,"EnemyBehindWall", obj_enemy_junior_guardian);
+	//CreateGuardian(500,1000,obj_enemy_guardian_pokemon_ball,guardianType.Junior);
+	//CreateCacodemonChild(500, 200);
+	//CreateCacodemonChild(800, 300);
+	CreateCacodemon(-300, 300, enemyStartDirectionType.Left);
+	
+	
+	//CreateWallMany(global.wallFrameSize, 500, wallType.Red, wallCreatorDirectionType.Right, 45);
 	
 
 if(global.level == 1) CreateLevelEasy1();
@@ -51,7 +60,7 @@ function CreateLevelEasy1() {
 	LoadBackgroundImage("japan_morning"); //Load background with current level number
 	CreateWallFrame(spr_wall_ground); //wall frame creating
 	PlayMusic(snd_mtFuji, false); // play music
-	CreatePlayer(400, 500); // create player
+	CreatePlayer(400, 650); // create player
 	
 	//Enemy
 	

@@ -22,13 +22,15 @@ function SettingsObjectsProperties (nextEffectType) {
 	// if we have not active effect save the current object properties
 	if(previousLevelEffect == noone) {
 		SetAllEnemyOriginalProperties();
-		SetAllItemOriginalProperties();		
+		SetAllItemOriginalProperties();
+		SetAllBulletOriginalProperties();
 	} 
 	
 	//get original properties to start different effect
 	if (previousLevelEffect == global.currentLevelEffect && previousLevelEffect != noone) {
 		ResetAllEnemyValuesToOriginalProperties();
 		ResetAllItemValuesToOriginalProperties();
+		ResetAllBulletValuesToOriginalProperties();
 	}
 	
 }

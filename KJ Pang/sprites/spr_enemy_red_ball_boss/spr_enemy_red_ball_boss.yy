@@ -42,7 +42,7 @@
     ],
     "top":0,
   },
-  "origin":4,
+  "origin":1,
   "parent":{
     "name":"RedBallBoss",
     "path":"folders/Sprites/Enemy/Boss/RedBallBoss.yy",
@@ -95,7 +95,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":102,
-    "yorigin":102,
+    "yorigin":0,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

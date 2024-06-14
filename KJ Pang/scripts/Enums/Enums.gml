@@ -245,6 +245,31 @@ enum invisibleWeaponShapeType{
 
 #endregion
 
+
+
+//enemy
+#region Enemy size
+
+enum enemySizeType{
+    Small,
+    Medium,
+    Large,
+	Giant,
+};
+
+#endregion
+
+#region Enemy type
+
+enum enemyRaceType{
+    Ball,
+    Larva,
+	Boss,
+	Monster,
+};
+
+#endregion
+
 #region Normal ball colors
 
 enum normalBallColorType{
@@ -289,27 +314,55 @@ enum normalBallLargeDropItemType {
 
 #endregion
 
-//enemy
+#region Tentacle type
 
-#region Enemy size
-
-enum enemySizeType{
-    Small,
-    Medium,
-    Large,
-	Giant,
+enum tentacleType{
+    RedBallJuniorCreator,
+    BlueBallJuniorCreator,
+	GreenBallJuniorCreator,
 };
 
 #endregion
 
-#region Enemy type
+#region guardian type
 
-enum enemyRaceType{
-    Ball,
-    Larva,
-	Boss,
+enum guardianType{
+    Junior,
+    Medior,
+	Senior,
+	Robot,
+	Expert,
+};
+
+#endregion
+
+#region enemy Start Direction type
+
+enum enemyStartDirectionType{
+    Top,
+    Bottom,
+	Left,
+	Right
 };
 
 #endregion
 
 
+//bullet
+
+#region bullet direction type
+
+enum bulletDirectionType{
+    Top,
+    TopRight,
+	Right,
+	BottomRight,
+	Bottom,
+	BottomLeft,
+	Left,
+	TopLeft,
+	PlayerDirection,
+	Tracking
+};
+
+#endregion

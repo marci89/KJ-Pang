@@ -5,6 +5,7 @@
  if(global.currentLevelEffect == levelEffectType.TimeSlow) {
 	ResetAllEnemyValuesToOriginalProperties();
 	ResetAllItemValuesToOriginalProperties();
+	ResetAllBulletValuesToOriginalProperties();
 	
 	previousLevelEffect = noone;
 	global.currentLevelEffect = noone;
@@ -52,6 +53,7 @@
  if(global.currentLevelEffect == levelEffectType.TimeFreeze) {
 	ResetAllEnemyValuesToOriginalProperties();
 	ResetAllItemValuesToOriginalProperties();
+	ResetAllBulletValuesToOriginalProperties();
 	
 	previousLevelEffect = noone;
 	global.currentLevelEffect = noone;

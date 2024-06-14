@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"CreateNormalShoot",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CreateNormalShoot",
+  "parent":{
+    "name":"EnemyBullet",
+    "path":"folders/Scripts/Creator/EnemyBullet.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

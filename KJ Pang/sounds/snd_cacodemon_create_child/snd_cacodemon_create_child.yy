@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_cacodemon_create_child",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":5.616327,
+  "name":"snd_cacodemon_create_child",
+  "parent":{
+    "name":"Cacodemon",
+    "path":"folders/Sounds/Voice/Enemy/Boss/Cacodemon.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_cacodemon_create_child.mp3",
+  "type":0,
+  "volume":0.53,
+}
