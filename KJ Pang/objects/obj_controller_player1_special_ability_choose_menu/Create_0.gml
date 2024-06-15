@@ -26,6 +26,7 @@ nextRowStartId = 0; // increase value for button ids every row
 //button handle
 maxButtonId = 0; // maximum button id value
 maxItemPerRow = 7; // how many item are in a row
+itemNumber = 40; // number of items
 selectType = menuButtonSelectType.AllDirection; // keyboard or gamepad movement type
 
 #endregion
@@ -64,102 +65,36 @@ function RefreshInfoPanel() {
 
 #region Create items
 
-//easy difficult items
-for (var i = 0 ; i < maxItemPerRow; i++) {
+var currentMaxItemPerRow = maxItemPerRow;
+var currentXpos = 0;
+
+//create items
+for (var i = 0 ; i < itemNumber; i++) {
 	
-	var distance = 80 * i;
+	var distance = 80 * currentXpos;
     var result = instance_create_layer(startX + distance, buttonY,"TopLayer", obj_player1_special_ability_item_button);
 	result.buttonId = i;
 	result.Init();
-}
-
- nextRowStartId += maxItemPerRow;
- maxButtonId += maxItemPerRow - 1; 
- buttonY += 80;
-
-
-
-//medium difficult items
-for (var i = 0; i < maxItemPerRow; i++) {
-	var distance = 80 * i;
-    var result = instance_create_layer(startX + distance, buttonY,"TopLayer", obj_player1_special_ability_item_button);
+	currentXpos += 1;
 	
-	if(!global.isNormalDifficultEnable) {
-		result.buttonId = -1;
-		result.isLocked = true;
-	} else {
-		result.buttonId = i + nextRowStartId;
+	
+	if(currentMaxItemPerRow == i+1){
+		 nextRowStartId += maxItemPerRow;
+		 buttonY += 80;
+		 currentMaxItemPerRow += maxItemPerRow;
+		 currentXpos = 0;
 	}
 	
-	result.Init();
-}
-
- nextRowStartId += maxItemPerRow;
- if(global.isNormalDifficultEnable) {  maxButtonId += maxItemPerRow ; }
- buttonY += 80;
- 
- 
- 
- //hard difficult items
-for (var i = 0; i < maxItemPerRow; i++) {
-	var distance = 80 * i;
-    var result = instance_create_layer(startX + distance, buttonY,"TopLayer", obj_player1_special_ability_item_button);
-	
-	if(!global.isHardDifficultEnable) {
+	if(result.isLocked) {
 		result.buttonId = -1;
-		result.isLocked = true;
 	} else {
-		result.buttonId = i + nextRowStartId;
+			 maxButtonId++; 
+		result.buttonId = i;
 	}
-	
-	result.Init();
+		
 }
 
  nextRowStartId += maxItemPerRow;
- if(global.isHardDifficultEnable) {  maxButtonId += maxItemPerRow; }
- buttonY += 80;
- 
- 
- //Nightmare difficult items
-for (var i = 0; i < maxItemPerRow; i++) {
-	var distance = 80 * i;
-    var result = instance_create_layer(startX + distance, buttonY,"TopLayer", obj_player1_special_ability_item_button);
-	
-	if(!global.isNightmareDifficultEnable) {
-		result.buttonId = -1;
-		result.isLocked = true;
-	} else {
-		result.buttonId = i + nextRowStartId;
-	}
-	
-	result.Init();
-}
-
- nextRowStartId += maxItemPerRow;
- if(global.isNightmareDifficultEnable) {  maxButtonId += maxItemPerRow; }
- buttonY += 80;
-
-
-
-
-//impossible difficult items
-for (var i = 0; i < maxItemPerRow; i++) {
-	var distance = 80 * i;
-    var result = instance_create_layer(startX + distance, buttonY,"TopLayer", obj_player1_special_ability_item_button);
-	
-	if(!global.isImpossibleDifficultEnable) {
-		result.buttonId = -1;
-		result.isLocked = true;
-	} else {
-		result.buttonId = i + nextRowStartId;
-	} 
-	
-	result.Init();
-}
-
- nextRowStartId += maxItemPerRow;
- if(global.isImpossibleDifficultEnable) {  maxButtonId += maxItemPerRow; }
- maxButtonId +=1;
  buttonY += 80;
  
  

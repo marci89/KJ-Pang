@@ -25,7 +25,7 @@ nextRowStartId = 0; // increase value for button ids every row
 //button handle
 maxButtonId = 0; // maximum button id value
 maxItemPerRow = 7; // how many item are in a row
-itemNumber = 40;
+itemNumber = 40; // number of items
 selectType = menuButtonSelectType.AllDirection; // keyboard or gamepad movement type
 
 #endregion
@@ -67,7 +67,7 @@ function RefreshInfoPanel() {
 var currentMaxItemPerRow = maxItemPerRow;
 var currentXpos = 0;
 
-//easy difficult items
+//create items
 for (var i = 0 ; i < itemNumber; i++) {
 	
 	var distance = 80 * currentXpos;
