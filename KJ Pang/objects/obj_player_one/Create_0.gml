@@ -81,12 +81,20 @@ function SetPlayerInputs() {
 	
 	//Keyboard
 	if(global.playerOneInputDeviceType == inputDeviceType.Keyboard) {
-		inputX = keyboard_check(vk_right) - keyboard_check(vk_left);
-		inputJump = keyboard_check_pressed(vk_up);
-		inputFirePressed = keyboard_check_pressed(vk_control);
-		inputFire = keyboard_check(vk_control);
-		inputHorizontalFirePressed = keyboard_check_pressed(vk_alt);
-		inputHorizontalFire = keyboard_check(vk_alt);
+		
+		if (keyboard_check(vk_left)) {
+			inputX = -1; // Move left
+		} else if (keyboard_check(vk_right)) {
+			inputX = 1; // Move right
+		} else {
+			inputX = 0; // No horizontal movement
+		}
+		
+		inputJump = keyboard_check_pressed(vk_lcontrol);
+		inputFirePressed = keyboard_check_pressed(vk_up);
+		inputFire = keyboard_check(vk_up);
+		inputHorizontalFirePressed = keyboard_check_pressed(vk_down);
+		inputHorizontalFire = keyboard_check(vk_down);
 		inputSpecialAbility = keyboard_check_pressed(vk_space);
 	}
 	

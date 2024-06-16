@@ -13,8 +13,10 @@ rightKeyboard =  GetLocalizedText("rightKeyboard");
 rightGamepad =  GetLocalizedText("rightGamepad");
 
 jump =  GetLocalizedText("jump");
-jumpKeyboard =  GetLocalizedText("jumpKeyboard");
 jumpGamepad =  GetLocalizedText("jumpGamepad");
+
+upArrowKeyboard =  GetLocalizedText("upArrowKeyboard");
+downArrowKeyboard =  GetLocalizedText("downArrowKeyboard");
 
 fireUp =  GetLocalizedText("fireUp");
 fireGamepadUp =  GetLocalizedText("fireGamepadUp");

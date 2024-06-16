@@ -272,7 +272,7 @@ if (collision_rectangle(x-25, y-80, x+25, y, obj_enemy_bullet_parent, true, true
 				}
 			}
 			
-			if (enemyBulletInstance.isDestroyableByPlayer) {
+			if (enemyBulletInstance.isDestroyableByPlayer && !isInvincible) {
 				instance_destroy(enemyBulletInstance);
 			}
 		}
