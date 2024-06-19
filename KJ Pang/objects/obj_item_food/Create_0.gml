@@ -3,7 +3,7 @@
 event_inherited()
 
 //own properties
-itemScore = 2; // score of item
+itemScore = 35; // score of item
 
 //magnetable effect
 randomize();

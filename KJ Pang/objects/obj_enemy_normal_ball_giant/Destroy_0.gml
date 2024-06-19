@@ -21,11 +21,11 @@ var childPositionX = random_range(2, 10);
  
 CreateNormalBallLarge(x-childPositionX, y, -global.normalBallLargeMoveX, global.normalBallLargeMoveY,
 	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
-	colorType, normalBallLargeDropItemType.Nothing, false);
+	colorType, SetDropItemTypeForChild(), false);
 	
 CreateNormalBallLarge(x+childPositionX, y, global.normalBallLargeMoveX, global.normalBallLargeMoveY,
 	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
-	colorType, normalBallLargeDropItemType.Nothing, false);
+	colorType, SetDropItemTypeForChild(), false);
 
 
 

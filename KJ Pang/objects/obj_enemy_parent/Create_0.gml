@@ -29,7 +29,9 @@ isDestroyed = false; // death or not
 isRequiredToKill = true; // required to destroy this enemy or not
 isOutsideRoom = true; // it is inside the room or came from outside
 isFarAwayFromScreen = false; // destroy without sounds, items if out of the screen
+isWallBreaker = false; // it can destroy walls
 damage = 1; // enemy's damage
+
 
 //Weapon
 isImmuneToWeapon = false // not hurts the weapon

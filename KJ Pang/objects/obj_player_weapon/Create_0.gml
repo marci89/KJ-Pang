@@ -301,7 +301,7 @@ function handleSingleSting() {
 				//sting start pos
 				stingStartPositionY = player.y;
 	
-				var sting = CreateWeaponWithMovement(player.x, stingStartPositionY , 0, -9, obj_weapon_sting_head, "Weapon", player ?? noone, weaponDirectionType.Vertical);
+				var sting = CreateWeaponWithMovement(player.x, stingStartPositionY , 0, -8, obj_weapon_sting_head, "Weapon", player ?? noone, weaponDirectionType.Vertical);
 				sting.CheckPlayerIsOnGround();
 			}
 		}
@@ -376,7 +376,7 @@ function handleDoubleSting() {
 				//sting start pos
 				stingStartPositionY = player.y;
 				
-				var sting = CreateWeaponWithMovement(player.x, stingStartPositionY , 0, -9, obj_weapon_sting_head, "Weapon", player ?? noone, weaponDirectionType.Vertical);
+				var sting = CreateWeaponWithMovement(player.x, stingStartPositionY , 0, -8, obj_weapon_sting_head, "Weapon", player ?? noone, weaponDirectionType.Vertical);
 				sting.CheckPlayerIsOnGround();
 			}
 		}
@@ -471,7 +471,7 @@ function handlePowerWire() {
 				alarm[0]  = weaponFiredRotationSpeed;
 				alarm[1]  = reloadingHarpoonTime;
 			
-				var directionValue = weaponDirection == 1 ? 8 : -8; // direction
+				var directionValue = weaponDirection == 1 ? 9 : -9; // direction
 			
 				PlaySound(snd_string_shoot, false, 2);
 				CreateWeaponWithMovement(player.x, y, directionValue, 0, obj_weapon_power_wire_head, "Weapon", player ?? noone, weaponDirectionType.Horizontal);

@@ -12,6 +12,17 @@ draw_text(drawNewsTextX, 20, string(newsText));
 
 #endregion
 
+#region Draw title
+
+draw_set_color(c_white);
+draw_set_font(ft_information_desc_text_font);
+
+var textWidth = string_width(string(text));
+var drawTextX = (room_width - textWidth) / 2;
+draw_text(drawTextX, 80, string(text));
+
+#endregion
+
 #region Draw keyPress text
 
 draw_set_color(c_white);

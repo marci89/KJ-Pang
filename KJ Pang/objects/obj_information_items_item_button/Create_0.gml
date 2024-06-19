@@ -51,8 +51,8 @@ function Init() {
 	}
 	
 	if(buttonId == 5) {
-		image = spr_item_magnet;
-		infoType = informationType.Magnet;
+		image = spr_item_health_potion;
+		infoType = informationType.HealthPotion;
 		requiredDifficult = gameDifficultType.Easy;
 	}
 	
@@ -63,12 +63,25 @@ function Init() {
 	}
 	
 	if(buttonId == 7) {
+		image = spr_item_life;
+		infoType = informationType.Life;
+		requiredDifficult = gameDifficultType.Easy;
+	}
+	
+	if(buttonId == 8) {
+		image = spr_item_magnet;
+		infoType = informationType.Magnet;
+		requiredDifficult = gameDifficultType.Easy;
+	}
+	
+	
+	if(buttonId == 9) {
 		image = spr_item_gravity_reverse;
 		infoType = informationType.GravityReverse
 		requiredDifficult = gameDifficultType.Easy;
 	}
 	
-	if(buttonId == 8) {
+	if(buttonId == 10) {
 		image = spr_item_antigravity;
 		infoType = informationType.Antigravity;
 		requiredDifficult = gameDifficultType.Easy;

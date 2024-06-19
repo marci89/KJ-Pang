@@ -13,7 +13,7 @@ isGravityYEnabled = false; // gravity y enabled or not
 gravSpeedX = 0.01; // x gavity speed
 gravSpeedY = 0; // y gavity speed
 hitPoint = 1; //health
-enemyScore = 5 // score
+enemyScore = 4 // score
 jumpHeightMax = -20;
 
 //disabled effects

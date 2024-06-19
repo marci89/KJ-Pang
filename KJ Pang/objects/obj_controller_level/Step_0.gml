@@ -1,11 +1,17 @@
 
-#region level menu (paused)
 
+#region level menu (paused)
+var vk_LWIN = 91;
+var vk_RWIN = 92;
 var isAllowToExit = true;
 
 if (keyboard_check_pressed(vk_escape)
 || gamepad_button_check_pressed(0, gp_shoulderl)
-|| gamepad_button_check_pressed(1, gp_shoulderl))
+|| gamepad_button_check_pressed(1, gp_shoulderl)
+|| keyboard_check_pressed(ord("P"))
+// Check lost focus for example window key
+|| keyboard_check_pressed(vk_LWIN) || keyboard_check_pressed(vk_RWIN)
+)
 {
 	if(IsInstanceExists(obj_player_one ?? noone)) {
 		if (obj_player_one.isDead) {

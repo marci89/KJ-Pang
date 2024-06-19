@@ -120,17 +120,22 @@ function SetSprite() {
 function DropItem() {
 
 //set variables
+var timeFreezeDropChance = 0.1;
+var timeSlowDropChance = 0.1;
+var dynamitDropChance = 0.1;
+var energyShieldDropChance = 0.1;
 var antigravityDropChance = 0.1;
 var reverseGravityDropChance = 0.1;
 var strongReverseGravityDropChance = 0.1;
 var magnetDropChance = 0.1;
-var timeFreezeDropChance = 0.1;
-var timeSlowDropChance = 0.1;
+var healthPotionDropChance = 0.01;
+
 
 var doubleStingDropChance = 0.1;
 var powerWireDropChance = 0.1;
 var machinegunDropChance = 0.1;
 var shotgunDropChance = 0.1;
+var pistolDropChance = 0.1;
 
 var nothingDropChance = 0.8; 
 
@@ -140,21 +145,33 @@ var randomChance = random(1);
 	//drop level 1
 	if(dropItemType == normalBallLargeDropItemType.DropQualityLevel_1) {
 		
-		doubleStingDropChance = 0.2;
-		reverseGravityDropChance = 0.2
-		machinegunDropChance = 0.2;
-		nothingDropChance = 0.4; 
+		doubleStingDropChance = 0.05;
+		timeFreezeDropChance = 0.03
+		timeSlowDropChance = 0.02;
+		energyShieldDropChance = 0.03;
+		dynamitDropChance = 0.01;
+		healthPotionDropChance = 0.005;
+		nothingDropChance = 0.855; 
 
 		if (randomChance < doubleStingDropChance) {
 			CreateItem(x, y, obj_item_double_sting);
 		
-		} else if (randomChance < (doubleStingDropChance + reverseGravityDropChance)) {
-		    CreateItem(x, y, obj_item_gravity_reverse);
+		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance)) {
+		    CreateItem(x, y, obj_item_time_freeze);
 
-		} else if (randomChance < (doubleStingDropChance + reverseGravityDropChance + machinegunDropChance)) {
-		    CreateItem(x, y, obj_item_machine_gun);
+		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance)) {
+		    CreateItem(x, y, obj_item_time_slow);
 		
-		} else if (randomChance < (doubleStingDropChance + reverseGravityDropChance + machinegunDropChance + nothingDropChance)) {
+		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance)) {
+		    CreateItem(x, y, obj_item_energy_shield);
+			
+		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + dynamitDropChance)) {
+		    CreateItem(x, y, obj_item_dynamite);	
+		
+		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + dynamitDropChance + healthPotionDropChance)) {
+		    CreateItem(x, y, obj_item_health_potion);
+			
+		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + dynamitDropChance + healthPotionDropChance + nothingDropChance)) {
 		    show_debug_message("No item dropped.");
 		} else {
 		    show_debug_message("Invalid drop outcome.");

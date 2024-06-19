@@ -66,8 +66,8 @@ function Init() {
 	image_index = irandom_range(0, maxSpriteIndex);
 	
 	//generate score
-	timeScore = global.previousLevelTime * 1;
-	lifeScore = playerLife * 100
+	timeScore = global.previousLevelTime * 4;
+	lifeScore = playerLife * 300
 	
 	//Set score for player
 	if(player == playerIDType.Player1) {	

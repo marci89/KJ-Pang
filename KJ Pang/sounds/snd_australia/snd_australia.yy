@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_australia",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":107.96408,
+  "name":"snd_australia",
+  "parent":{
+    "name":"PangMusic",
+    "path":"folders/Sounds/Music/PangMusic.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_australia.mp3",
+  "type":0,
+  "volume":0.57,
+}

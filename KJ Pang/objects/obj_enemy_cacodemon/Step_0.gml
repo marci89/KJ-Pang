@@ -1,7 +1,6 @@
 
 #region check
 
-
 if (isHurtable) {
 	isImmuneToWeapon = false;
 	originalIsImmuneToWeapon = false;
@@ -12,6 +11,12 @@ if (isHurtable) {
 	originalIsImmuneToWeapon = true;
 	isAllowWeaponPassThrough = true;
 	originalIsAllowWeaponPassThrough = true;
+}
+
+if (isOutsideRoom) {
+	isWallBreaker = true;
+} else {
+	isWallBreaker = false;
 }
 
 #endregion

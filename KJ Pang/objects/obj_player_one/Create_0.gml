@@ -90,11 +90,11 @@ function SetPlayerInputs() {
 			inputX = 0; // No horizontal movement
 		}
 		
-		inputJump = keyboard_check_pressed(vk_lcontrol);
-		inputFirePressed = keyboard_check_pressed(vk_up);
-		inputFire = keyboard_check(vk_up);
-		inputHorizontalFirePressed = keyboard_check_pressed(vk_down);
-		inputHorizontalFire = keyboard_check(vk_down);
+		inputJump = keyboard_check_pressed(vk_up);
+		inputFirePressed = keyboard_check_pressed(vk_lcontrol) || keyboard_check_pressed(vk_rcontrol);
+		inputFire = keyboard_check(vk_lcontrol) || keyboard_check(vk_rcontrol);
+		inputHorizontalFirePressed = keyboard_check_pressed(vk_lshift) || keyboard_check_pressed(vk_rshift);
+		inputHorizontalFire = keyboard_check(vk_lshift) || keyboard_check(vk_rshift);
 		inputSpecialAbility = keyboard_check_pressed(vk_space);
 	}
 	

@@ -16,14 +16,30 @@ alarm[1] = 400;
 
 function SetColor() {
 	
-	if(type == wallType.Red)
+	if(type == wallType.Red) {
 		color = c_red
+	}
 	
-	if(type == wallType.Blue)
+	if(type == wallType.Blue) {
 			color =c_aqua;
+	}
 	
-	if(type == wallType.Green)
+	if(type == wallType.Green) {
 		color = c_lime;
 	}
+	
+	if(type == wallType.Yellow) {
+		color = c_white;
+	}
+	
+	if(type == wallType.Gray) {
+		color = c_white;
+	}
+	
+	if(type == wallType.Purple) {
+		color = c_white;
+	}
+}
+	
 
 #endregion

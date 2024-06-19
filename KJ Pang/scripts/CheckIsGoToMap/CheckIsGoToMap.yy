@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"CheckIsGoToMap",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CheckIsGoToMap",
+  "parent":{
+    "name":"Checker",
+    "path":"folders/Scripts/Checker.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

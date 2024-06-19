@@ -13,11 +13,8 @@ if (place_meeting(x, y, obj_player_one)) {
 	if(!isPickedUp) {
 		if(!obj_player_one.hasEnergyShield) {
 			CreatePlayerEnergyShield(obj_player_one.x, obj_player_one.y, obj_player_one ?? noone);
-		} else {
-			PlaySound(snd_energy_shield_activate, false);
-		}
-		
-	isPickedUp = true;
+			isPickedUp = true;
+		} 
 	}
 }
 
@@ -29,11 +26,8 @@ if (place_meeting(x, y, obj_player_two)) {
 	if(!isPickedUp) {
 		if(!obj_player_two.hasEnergyShield) {
 			CreatePlayerEnergyShield(obj_player_two.x, obj_player_two.y, obj_player_two ?? noone);
-		} else {
-			PlaySound(snd_energy_shield_activate, false);
-		}
-		  
-	isPickedUp = true;
+			isPickedUp = true;
+		} 
 	}
 }
 

@@ -5,90 +5,167 @@
 
 function CreateLevelEasy(){
 
-SetLevelVariables()
+global.isBossLevel = false;
+global.currentLevelEffect = noone; // clear effect type
+global.hasLevelTime = true; // level timer enabled
+global.hasRoomWallFrame = false; // no wall frames
+global.isRestartLevelAfterDead = true; //restart after death
+global.levelTimeMax = 150; // level's max time
+//global.playerOneDefaultWeapon = weaponType.RocketLauncher;
+global.level = 13;
 
-//Player
+	//Giant normal ball default properties
+	global.normalBallGiantMoveX = 0.5;
+	global.normalBallGiantMoveY = -1;
+	global.normalBallGiantGravityY = 0.04;
+	global.normalBallGiantJumpHeightMax = -9;
+	//Large normal ball default properties
+	global.normalBallLargeMoveX = 0.5;
+	global.normalBallLargeMoveY = -1;
+	global.normalBallLargeGravityY = 0.04;
+	global.normalBallLargeJumpHeightMax = -6;
+	//Medium normal ball default properties
+	global.normalBallMediumMoveX = 0.5;
+	global.normalBallMediumMoveY = -1;
+	global.normalBallMediumGravityY = 0.04;
+	global.normalBallMediumJumpHeightMax = -5;
+	//Small normal ball default properties
+	global.normalBallSmallMoveX = 0.5;
+	global.normalBallSmallMoveY = -2;
+	global.normalBallSmallGravityY = 0.04;
+	global.normalBallSmallJumpHeightMax = -4;
+
+//Create levels
+if(global.level == 1) {
+	CreateLevelEasy1();
+	return;
+}
+
+if(global.level == 2)  {
+	CreateLevelEasy2();
+	return;
+}
+
+if(global.level == 3) {
+	CreateLevelEasy3();
+	return;
+}
+
+	//Giant normal ball default properties
+	global.normalBallGiantMoveX = 0.75;
+	global.normalBallGiantMoveY = -1;
+	global.normalBallGiantGravityY = 0.06;
+	global.normalBallGiantJumpHeightMax = -10;
+	//Large normal ball default properties
+	global.normalBallLargeMoveX = 0.75;
+	global.normalBallLargeMoveY = -1.5;
+	global.normalBallLargeGravityY = 0.06;
+	global.normalBallLargeJumpHeightMax = -7;
+	//Medium normal ball default properties
+	global.normalBallMediumMoveX = 0.75;
+	global.normalBallMediumMoveY = -1;
+	global.normalBallMediumGravityY = 0.06;
+	global.normalBallMediumJumpHeightMax = -6;
+	//Small normal ball default properties
+	global.normalBallSmallMoveX = 0.75;
+	global.normalBallSmallMoveY = -2;
+	global.normalBallSmallGravityY = 0.06;
+	global.normalBallSmallJumpHeightMax = -5;
 	
-global.hasLevelTime = false;
-global.hasRoomWallFrame = false;
-global.playerOneDefaultWeapon = weaponType.MachineGun;
-//global.gameDifficult = gameDifficultType.Impossible;
+if(global.level == 4) {
+	CreateLevelEasy4();
+		return;
+}
 
+if(global.level == 5) {
+	CreateLevelEasy5();
+	return;
+}
 
+if(global.level == 6) {
+	CreateLevelEasy6();
+	return;
+}
 
-	//CreateYellowBallGiant(100, 100, true, true );
-	//CreateBlackBallLarge(100, 100, true, true );
-	//CreateAntiGravityBallMedium(100, 100, true, true, true );
-	//CreateHorizontalBallsmall(100, 100, true, true, true );
-	//CreateHorizontalBallMedium(800, 100, false, true, true );
-	//CreateRedBallBoss(500,-1);
-	//CreateSnakeBossNest(500,200, 4,4, 20, 100, c_gray);
-	//var result = instance_create_layer(500, 400,"EnemyBehindWall", obj_enemy_junior_guardian);
-	//CreateGuardian(500,1000,obj_enemy_guardian_pokemon_ball,guardianType.Junior);
-	//CreateCacodemonChild(500, 200);
-	//CreateCacodemonChild(800, 300);
-	CreateCacodemon(-300, 300, enemyStartDirectionType.Left);
+if(global.level == 7) {
+	CreateLevelEasy7();
+	return;
+}
+
+if(global.level == 8) {
+	CreateLevelEasy8();
+	return;
+}
+
+if(global.level == 9) {
+	CreateLevelEasy9();
+	return;
+}
+
+	//Giant normal ball default properties
+	global.normalBallGiantMoveX = 1.2;
+	global.normalBallGiantMoveY = -1;
+	global.normalBallGiantGravityY = 0.08;
+	global.normalBallGiantJumpHeightMax = -12;
+	//Large normal ball default properties
+	global.normalBallLargeMoveX = 0.9;
+	global.normalBallLargeMoveY = -1.7;
+	global.normalBallLargeGravityY = 0.08;
+	global.normalBallLargeJumpHeightMax = -8;
+	//Medium normal ball default properties
+	global.normalBallMediumMoveX = 0.9;
+	global.normalBallMediumMoveY = -1.4;
+	global.normalBallMediumGravityY = 0.08;
+	global.normalBallMediumJumpHeightMax = -7;
+	//Small normal ball default properties
+	global.normalBallSmallMoveX = 0.9;
+	global.normalBallSmallMoveY = -2;
+	global.normalBallSmallGravityY = 0.08;
+	global.normalBallSmallJumpHeightMax = -6;
 	
-	
-	//CreateWallMany(global.wallFrameSize, 500, wallType.Red, wallCreatorDirectionType.Right, 45);
-	
+if(global.level == 10) {
+	CreateLevelEasy10();
+	return;
+}
 
-if(global.level == 1) CreateLevelEasy1();
-if(global.level == 2) CreateLevelEasy2();
-if(global.level == 3) CreateLevelEasy3();
-if(global.level == 4) CreateLevelEasy4();
-if(global.level == 5) CreateLevelEasy5();
-if(global.level == 6) CreateLevelEasy6();
-if(global.level == 7) CreateLevelEasy7();
-if(global.level == 8) CreateLevelEasy8();
-if(global.level == 9) CreateLevelEasy9();
-if(global.level == 10) CreateLevelEasy10();
-if(global.level == 11) CreateLevelEasy11();
-if(global.level == 12) CreateLevelEasy12();
-if(global.level == 13) CreateLevelEasy13();
+if(global.level == 11) {
+	CreateLevelEasy11();
+	return;
+}
 
-	
+if(global.level == 12) {
+	CreateLevelEasy12();
+	return;
+}
+
+if(global.level == 13) {
+	CreateLevelEasy13();
+	return;
+}
 }
 
 #endregion
 
-#region Level 1 - Japan morning
+#region Level 1 - Japan morning (blue)
 
 function CreateLevelEasy1() {
 	
 	// init
-	LoadBackgroundImage("japan_morning"); //Load background with current level number
-	CreateWallFrame(spr_wall_ground); //wall frame creating
-	PlayMusic(snd_mtFuji, false); // play music
-	CreatePlayer(400, 650); // create player
+	LoadBackgroundImage("japan_morning"); //Load background 
+	CreateWallFrame(wallFrameType.Blue ?? noone); //wall frame creating
+	PlayMusic(snd_mtFuji, true); // play music
+	CreatePlayer(500, 500); // create player
 	
 	//Enemy
-	
-	/*
-	CreateNormalBallGiant(550, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
+	CreateNormalBallGiant(530, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
 	normalBallColorType.Red, normalBallGiantDropItemType.Nothing, true);
-	*/
-	/*
-	CreateNormalBallSmall(800, 670, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
-	normalBallColorType.Red,  true);
-	*/
-	
-	
-
 	
 	//items
 	CreateLifePoint(30, 640, lifePointType.Red);
 	CreateLifePoint(70, 640, lifePointType.Red);
 	CreateLifePoint(110, 640, lifePointType.Red);
 	CreateLifePoint(150, 640, lifePointType.Red);
-	
-
-	
-	CreateItem(190, 640, obj_item_gravity_reverse)
-	CreateItem(120, 640, obj_item_time_freeze)
-	CreateItem(830, 640, obj_item_food)
 	
 	CreateLifePoint(870, 640, lifePointType.Red);
 	CreateLifePoint(910, 640, lifePointType.Red);
@@ -98,638 +175,608 @@ function CreateLevelEasy1() {
 
 #endregion
 
-#region Level 2 - Japan twilight
+#region Level 2 - Japan twilight (blue)
 
 function CreateLevelEasy2() {
 	
 	// init
-	LoadBackgroundImage("japan_twilight"); //Load background with current level number
-	CreateWallFrame(spr_wall_ground); //wall frame creating
-	PlayMusic(snd_mtFuji, false); // play music
-	CreatePlayer(400, 500); // create player
+	LoadBackgroundImage("japan_twilight"); //Load background
+	CreateWallFrame(wallFrameType.Blue ?? noone); //wall frame creating
+	PlayMusic(snd_mtFuji, true); // play music
+	CreatePlayer(500, 500); // create player
 	
 	//Enemy
-	CreateNormalBallGiant(550, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
+	CreateNormalBallGiant(450, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
 	normalBallColorType.Blue, normalBallGiantDropItemType.Nothing, true);
 	
 	//wall
-	CreateWallDestroyableMany(440, 300, wallCreatorDirectionType.Right, 4);
+	CreateWallDestroyableMany(440, 200, wallCreatorDirectionType.Right, 4);
 	
 	//items
-	CreateItem(30, 640, obj_item_food)
-	CreateItem(70, 640, obj_item_food)
-	CreateItem(110, 640, obj_item_food)
+	CreateFoodByImageIndex(30, 640, 17)
+	CreateFoodByImageIndex(70, 640, 17)
+	CreateFoodByImageIndex(110, 640, 17)
+	CreateFoodByImageIndex(150, 640, 17)
 	
+	CreateFoodByImageIndex(870, 640, 17);
+	CreateFoodByImageIndex(910, 640, 17);
+	CreateFoodByImageIndex(950, 640, 17);
+	CreateFoodByImageIndex(990, 640, 17);
 	
-	CreateLifePoint(450, 250, lifePointType.Blue);
-	CreateLifePoint(470, 250, lifePointType.Blue);
-	CreateLifePoint(490, 250, lifePointType.Blue);
-	CreateLifePoint(510, 250, lifePointType.Blue);
-	CreateLifePoint(530, 250, lifePointType.Blue);
-	CreateLifePoint(550, 250, lifePointType.Blue);
-
-	CreateItem(800, 300, obj_item_double_sting)
+	CreateLifePoint(475, 100, lifePointType.Blue);
+	CreateLifePoint(505, 100, lifePointType.Blue);
+	CreateLifePoint(535, 100, lifePointType.Blue);
 
 }
 
 #endregion
 
-#region Level 3 - Japan night
+#region Level 3 - Japan night (blue)
 
 function CreateLevelEasy3() {
 	
 	// init
-	LoadBackgroundImage("japan_night"); //Load background with current level number
-	CreateWallFrame(spr_wall_ground); //wall frame creating
-	PlayMusic(snd_mtFuji, false); // play music
-	CreatePlayer(400, 500); // create player
+	LoadBackgroundImage("japan_night"); //Load background
+	CreateWallFrame(wallFrameType.Blue ?? noone); //wall frame creating
+	PlayMusic(snd_mtFuji, true); // play music
+	CreatePlayer(500, 650); // create player
 	
 	//Enemy
-	CreateNormalBallGiant(550, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
+	CreateNormalBallGiant(200, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
 	normalBallColorType.Green, normalBallGiantDropItemType.Nothing, true);
 	
-	//wall
-	CreateWallDestroyableMany(440, 300, wallCreatorDirectionType.Right, 4);
-	CreateWallDestroyableMany(440, 332, wallCreatorDirectionType.Right, 4);
+	CreateNormalBallMedium(500, 300, -global.normalBallMediumMoveX, global.normalBallMediumMoveY,
+	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
+	normalBallColorType.Green, true);
 	
-	CreateWallMany(global.wallFrameSize, 500, wallType.Red, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 532, wallType.Blue, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 564, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 596, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 629, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 661, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 690, wallType.Green, wallCreatorDirectionType.Right, 5);
+	//wall
+	CreateWallDestroyableMany(448, 200, wallCreatorDirectionType.Right, 4);
+	CreateWallDestroyableMany(448, 470, wallCreatorDirectionType.Right, 4);
+	
+	CreateWallMany(192, 200, wallType.Green, wallCreatorDirectionType.Right, 4);
+	CreateWallMany(704, 200, wallType.Green, wallCreatorDirectionType.Right, 4);
+
 	
 	//items
-	CreateItem(50, 303, obj_item_time_freeze)
-	CreateItem(100, 300, obj_item_energy_shield)
-	CreateItem(150, 300, obj_item_food)
+	CreateItem(513, 300, obj_item_double_sting)
 	
-	
-	CreateLifePoint(450, 250, lifePointType.Green);
-	CreateLifePoint(470, 250, lifePointType.Green);
-	CreateLifePoint(490, 250, lifePointType.Green);
-	CreateLifePoint(510, 250, lifePointType.Green);
-	CreateLifePoint(530, 250, lifePointType.Green);
-	CreateLifePoint(550, 250, lifePointType.Green);
-	
-	CreateItem(650, 300, obj_item_machine_gun)
-	CreateItem(660, 300, obj_item_machine_gun)
-	CreateItem(670, 300, obj_item_machine_gun)
-	CreateItem(690, 300, obj_item_machine_gun)
-	CreateItem(730, 300, obj_item_machine_gun)
-	
-	CreateItem(800, 300, obj_item_time_slow)
+	CreateLifePoint(473, 100, lifePointType.Green);
+	CreateLifePoint(493, 100, lifePointType.Green);
+	CreateLifePoint(513, 100, lifePointType.Green);
+	CreateLifePoint(533, 100, lifePointType.Green);
+	CreateLifePoint(553, 100, lifePointType.Green);
 
 
 }
 
 #endregion
 
-#region Level 4 - Japan night
+#region Level 4 - China morning (yellow)
 
 function CreateLevelEasy4() {
 	
 	// init
-	LoadBackgroundImage("japan_twilight"); //Load background with current level number
-	CreateWallFrame(spr_wall_ground); //wall frame creating
-	PlayMusic(snd_mtFuji, false); // play music
-	CreatePlayer(400, 500); // create player
+	LoadBackgroundImage("china_morning"); //Load background
+	CreateWallFrame(wallFrameType.Yellow ?? noone); //wall frame creating
+	PlayMusic(snd_mountKeirin, true); // play music
+	CreatePlayer(500, 400); // create player
 	
 	//Enemy
-	CreateNormalBallGiant(550, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
+	CreateNormalBallGiant(500, 100, 1, global.normalBallGiantMoveY,
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
-	normalBallColorType.Blue, normalBallGiantDropItemType.Nothing, true);
+	normalBallColorType.Red, normalBallGiantDropItemType.Nothing, true);
 	
-	//wall
-	CreateWallDestroyableMany(440, 300, wallCreatorDirectionType.Right, 4);
-	CreateWallDestroyableMany(440, 332, wallCreatorDirectionType.Right, 4);
+	CreateNormalBallLarge(520, 80, -1, global.normalBallLargeMoveY,
+	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
+	normalBallColorType.Red, normalBallGiantDropItemType.Nothing, true);
 	
-	CreateWallMany(global.wallFrameSize, 500, wallType.Red, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 532, wallType.Blue, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 564, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 596, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 629, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 661, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 690, wallType.Green, wallCreatorDirectionType.Right, 5);
+	//wall	
+	CreateWallMany(477, 550, wallType.Red, wallCreatorDirectionType.Bottom, 3);
+	CreateWallMany(509, 550, wallType.Red, wallCreatorDirectionType.Bottom, 3);
+
 	
 	//items
-	CreateItem(50, 303, obj_item_time_freeze)
-	CreateItem(100, 300, obj_item_energy_shield)
-	CreateItem(150, 300, obj_item_food)
+	CreateLifePoint(30, 640, lifePointType.Red);
+	CreateLifePoint(70, 640, lifePointType.Red);
+	CreateLifePoint(110, 640, lifePointType.Red);
 	
-	
-	CreateLifePoint(450, 250, lifePointType.Green);
-	CreateLifePoint(470, 250, lifePointType.Green);
-	CreateLifePoint(490, 250, lifePointType.Green);
-	CreateLifePoint(510, 250, lifePointType.Green);
-	CreateLifePoint(530, 250, lifePointType.Green);
-	CreateLifePoint(550, 250, lifePointType.Green);
-	
-	CreateItem(650, 300, obj_item_pistol)
-	CreateItem(660, 300, obj_item_pistol)
-	CreateItem(670, 300, obj_item_pistol)
-	CreateItem(690, 300, obj_item_pistol)
-	CreateItem(730, 300, obj_item_pistol)
-	
-	CreateItem(800, 300, obj_item_time_slow)
-
+	CreateFoodByImageIndex(910, 640, 28);
+	CreateFoodByImageIndex(950, 640, 28);
+	CreateFoodByImageIndex(990, 640, 28);
 
 }
 
 #endregion
 
-#region Level 5 - Japan night
+#region Level 5 - China twilight (yellow)
 
 function CreateLevelEasy5() {
 	
 	// init
-	LoadBackgroundImage("japan_twilight"); //Load background with current level number
-	CreateWallFrame(spr_wall_ground); //wall frame creating
-	PlayMusic(snd_mtFuji, false); // play music
+	LoadBackgroundImage("china_twilight"); //Load background
+	CreateWallFrame(wallFrameType.Yellow ?? noone); //wall frame creating
+	PlayMusic(snd_mountKeirin, true); // play music
 	CreatePlayer(400, 500); // create player
 	
 	//Enemy
-	CreateNormalBallGiant(550, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
-	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
+	CreateNormalBallLarge(122, 100, -global.normalBallLargeMoveX, global.normalBallLargeMoveY,
+	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
+	normalBallColorType.Blue, normalBallGiantDropItemType.Nothing, true);
+	
+	CreateNormalBallLarge(550, 100, global.normalBallLargeMoveX, global.normalBallLargeMoveY,
+	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
+	normalBallColorType.Blue, normalBallGiantDropItemType.Nothing, true);
+	
+	CreateNormalBallLarge(900, 100, global.normalBallLargeMoveX, global.normalBallLargeMoveY,
+	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
 	normalBallColorType.Blue, normalBallGiantDropItemType.Nothing, true);
 	
 	//wall
-	CreateWallDestroyableMany(440, 300, wallCreatorDirectionType.Right, 4);
-	CreateWallDestroyableMany(440, 332, wallCreatorDirectionType.Right, 4);
 	
-	CreateWallMany(global.wallFrameSize, 500, wallType.Red, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 532, wallType.Blue, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 564, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 596, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 629, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 661, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 690, wallType.Green, wallCreatorDirectionType.Right, 5);
-	
+	CreateWallDestroyableMany(232, 200, wallCreatorDirectionType.Bottom, 4);
+	CreateWallDestroyableMany(496, 200, wallCreatorDirectionType.Bottom, 8);
+	CreateWallDestroyableMany(760, 200, wallCreatorDirectionType.Bottom, 8);
+		
 	//items
-	CreateItem(50, 303, obj_item_time_freeze)
-	CreateItem(100, 300, obj_item_energy_shield)
-	CreateItem(150, 300, obj_item_food)
+	CreateItem(80, 600, obj_item_double_sting);
+	CreateItem(950, 600, obj_item_time_freeze);
 	
-	
-	CreateLifePoint(450, 250, lifePointType.Green);
-	CreateLifePoint(470, 250, lifePointType.Green);
-	CreateLifePoint(490, 250, lifePointType.Green);
-	CreateLifePoint(510, 250, lifePointType.Green);
-	CreateLifePoint(530, 250, lifePointType.Green);
-	CreateLifePoint(550, 250, lifePointType.Green);
-	
-	CreateItem(650, 300, obj_item_shotgun)
-	CreateItem(660, 300, obj_item_shotgun)
-	CreateItem(670, 300, obj_item_shotgun)
-	CreateItem(690, 300, obj_item_shotgun)
-	CreateItem(730, 300, obj_item_shotgun)
-	
-	CreateItem(800, 300, obj_item_time_slow)
+	CreateLifePoint(242, 100, lifePointType.Blue);
+	CreateLifePoint(252, 100, lifePointType.Blue);
+	CreateLifePoint(508, 100, lifePointType.Blue);
+	CreateLifePoint(518, 100, lifePointType.Blue);
+	CreateLifePoint(770, 100, lifePointType.Blue);
+	CreateLifePoint(780, 100, lifePointType.Blue);
 
-
+	
 }
 
 #endregion
 
-#region Level 6 - Japan night
+#region Level 6 - China night (yellow)
 
 function CreateLevelEasy6() {
 	
 	// init
-	LoadBackgroundImage("japan_twilight"); //Load background with current level number
-	CreateWallFrame(spr_wall_ground); //wall frame creating
-	PlayMusic(snd_mtFuji, false); // play music
-	CreatePlayer(400, 500); // create player
+	LoadBackgroundImage("china_night"); //Load background
+	CreateWallFrame(wallFrameType.Yellow ?? noone); //wall frame creating
+	PlayMusic(snd_mountKeirin, true); // play music
+	CreatePlayer(100, 500); // create player
 	
 	//Enemy
-	CreateNormalBallGiant(550, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
+	CreateNormalBallLarge(490, 80, -1, global.normalBallLargeMoveY,
+	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
+	normalBallColorType.Green, normalBallGiantDropItemType.Nothing, true);
+	
+	CreateNormalBallGiant(490, 80, 1, global.normalBallGiantMoveY,
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
-	normalBallColorType.Blue, normalBallGiantDropItemType.Nothing, true);
+	normalBallColorType.Green, normalBallGiantDropItemType.Nothing, true);
+	
 	
 	//wall
-	CreateWallDestroyableMany(440, 300, wallCreatorDirectionType.Right, 4);
-	CreateWallDestroyableMany(440, 332, wallCreatorDirectionType.Right, 4);
-	
-	CreateWallMany(global.wallFrameSize, 500, wallType.Red, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 532, wallType.Blue, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 564, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 596, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 629, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 661, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 690, wallType.Green, wallCreatorDirectionType.Right, 5);
-	
+	CreateWallMany(208, 150, wallType.Green, wallCreatorDirectionType.Right, 2);
+	CreateWallDestroyableMany(480, 150, wallCreatorDirectionType.Right,2);
+	CreateWallMany(752, 150, wallType.Green, wallCreatorDirectionType.Right, 2);
+		
 	//items
-	CreateItem(50, 303, obj_item_time_freeze)
-	CreateItem(100, 300, obj_item_energy_shield)
-	CreateItem(150, 300, obj_item_food)
+	CreateItem(510, 600, obj_item_time_slow);
 	
+	CreateLifePoint(225, 80, lifePointType.Green);
+	CreateLifePoint(255, 80, lifePointType.Green);
 	
-	CreateLifePoint(450, 250, lifePointType.Green);
-	CreateLifePoint(470, 250, lifePointType.Green);
-	CreateLifePoint(490, 250, lifePointType.Green);
-	CreateLifePoint(510, 250, lifePointType.Green);
-	CreateLifePoint(530, 250, lifePointType.Green);
-	CreateLifePoint(550, 250, lifePointType.Green);
+	CreateFoodByImageIndex(490, 80, 28);
+	CreateFoodByImageIndex(530, 80, 28);
 	
-	CreateItem(650, 300, obj_item_bomb)
-	CreateItem(660, 300, obj_item_bomb)
-	CreateItem(670, 300, obj_item_bomb)
-	CreateItem(690, 300, obj_item_bomb)
-	CreateItem(730, 300, obj_item_bomb)
-	
-	CreateItem(800, 300, obj_item_time_slow)
-
-
+	CreateLifePoint(769, 80, lifePointType.Green);
+	CreateLifePoint(799, 80, lifePointType.Green);
 }
 
 #endregion
 
-#region Level 7 - Japan night
+#region Level 7 - thailand morning (green)
 
 function CreateLevelEasy7() {
 	
 	// init
-	LoadBackgroundImage("japan_twilight"); //Load background with current level number
-	CreateWallFrame(spr_wall_ground); //wall frame creating
-	PlayMusic(snd_mtFuji, false); // play music
-	CreatePlayer(400, 500); // create player
+	LoadBackgroundImage("thailand_morning"); //Load background
+	CreateWallFrame(wallFrameType.Green ?? noone); //wall frame creating
+	PlayMusic(snd_thailand, true); // play music
+	CreatePlayer(500, 600); // create player
 	
 	//Enemy
-	CreateNormalBallGiant(550, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
+	CreateNormalBallLarge(490, 250, -global.normalBallLargeMoveX, global.normalBallLargeMoveY,
+	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
+	normalBallColorType.Red, normalBallGiantDropItemType.Nothing, true);
+	
+	CreateNormalBallGiant(450, 250, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
-	normalBallColorType.Blue, normalBallGiantDropItemType.Nothing, true);
+	normalBallColorType.Red, normalBallGiantDropItemType.Nothing, true);
 	
-	//wall
-	CreateWallDestroyableMany(440, 300, wallCreatorDirectionType.Right, 4);
-	CreateWallDestroyableMany(440, 332, wallCreatorDirectionType.Right, 4);
-	
-	CreateWallMany(global.wallFrameSize, 500, wallType.Red, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 532, wallType.Blue, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 564, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 596, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 629, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 661, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 690, wallType.Green, wallCreatorDirectionType.Right, 5);
-	
-	//items
-	CreateItem(50, 303, obj_item_time_freeze)
-	CreateItem(100, 300, obj_item_energy_shield)
-	CreateItem(150, 300, obj_item_food)
-	
-	
-	CreateLifePoint(450, 250, lifePointType.Green);
-	CreateLifePoint(470, 250, lifePointType.Green);
-	CreateLifePoint(490, 250, lifePointType.Green);
-	CreateLifePoint(510, 250, lifePointType.Green);
-	CreateLifePoint(530, 250, lifePointType.Green);
-	CreateLifePoint(550, 250, lifePointType.Green);
-	
-	CreateItem(650, 300, obj_item_grenade)
-	CreateItem(660, 300, obj_item_grenade)
-	CreateItem(670, 300, obj_item_grenade)
-	CreateItem(690, 300, obj_item_grenade)
-	CreateItem(730, 300, obj_item_grenade)
-	
-	CreateItem(800, 300, obj_item_time_slow)
 
+	//wall
+	CreateWallMany(128, 170, wallType.Red, wallCreatorDirectionType.Right, 1);
+	CreateWallMany(160, 204, wallType.Red, wallCreatorDirectionType.Right, 1);
+	CreateWallMany(192, 238, wallType.Red, wallCreatorDirectionType.Right, 1);
+	CreateWallMany(224, 340, wallType.Red, wallCreatorDirectionType.Top, 3);
+	CreateWallMany(256, 420, wallType.Red, wallCreatorDirectionType.Right, 1);
+	CreateWallMany(288, 500, wallType.Red, wallCreatorDirectionType.Right, 1);
+	CreateWallDestroyableMany(352, 500, wallCreatorDirectionType.Right, 2);
+	CreateWallDestroyableMany(448, 500, wallCreatorDirectionType.Right, 4);
+	CreateWallDestroyableMany(608, 500, wallCreatorDirectionType.Right, 2);
+	CreateWallMany(704, 500, wallType.Red, wallCreatorDirectionType.Right, 1);
+	CreateWallMany(736, 420, wallType.Red, wallCreatorDirectionType.Right, 1);
+	CreateWallMany(768, 340, wallType.Red, wallCreatorDirectionType.Top, 3);
+	CreateWallMany(800, 238, wallType.Red, wallCreatorDirectionType.Right, 1);
+	CreateWallMany(832, 204, wallType.Red, wallCreatorDirectionType.Right, 1);
+	CreateWallMany(864, 170, wallType.Red, wallCreatorDirectionType.Right, 1);
+
+
+	
+	//items	
+	CreateItem(505, 430, obj_item_health_potion);
+	CreateItem(950, 430, obj_item_dynamite);
+	
+	CreateFoodByImageIndex(309, 300, 5);
+	CreateFoodByImageIndex(278, 300, 5);
+	CreateFoodByImageIndex(719, 300, 5);
+	CreateFoodByImageIndex(750, 300, 5);
+
+	CreateLifePoint(143, 100, lifePointType.Red);
+	CreateLifePoint(178, 100, lifePointType.Red);
+	CreateLifePoint(213, 100, lifePointType.Red);
+	CreateLifePoint(242, 100, lifePointType.Red);
+	
+	CreateLifePoint(783, 100, lifePointType.Red);
+	CreateLifePoint(815, 100, lifePointType.Red);
+	CreateLifePoint(847, 100, lifePointType.Red);
+	CreateLifePoint(879, 100, lifePointType.Red);
 
 }
 
 #endregion
 
-#region Level 8 - Japan night
+#region Level 8 - Thailand twilight (green)
 
 function CreateLevelEasy8() {
 	
 	// init
-	LoadBackgroundImage("japan_twilight"); //Load background with current level number
-	CreateWallFrame(spr_wall_ground); //wall frame creating
-	PlayMusic(snd_mtFuji, false); // play music
-	CreatePlayer(400, 500); // create player
+	LoadBackgroundImage("thailand_twilight"); //Load background
+	CreateWallFrame(wallFrameType.Green ?? noone); //wall frame creating
+	PlayMusic(snd_thailand, true); // play music
+	CreatePlayer(100, 600); // create player
 	
 	//Enemy
-	CreateNormalBallGiant(550, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
-	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
+	CreateNormalBallLarge(555, 320, global.normalBallLargeMoveX, global.normalBallLargeMoveY,
+	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
 	normalBallColorType.Blue, normalBallGiantDropItemType.Nothing, true);
 	
-	//wall
-	CreateWallDestroyableMany(440, 300, wallCreatorDirectionType.Right, 4);
-	CreateWallDestroyableMany(440, 332, wallCreatorDirectionType.Right, 4);
+	CreateNormalBallLarge(470, 320, -global.normalBallLargeMoveX, global.normalBallLargeMoveY,
+	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
+	normalBallColorType.Blue, normalBallGiantDropItemType.Nothing, true);
 	
-	CreateWallMany(global.wallFrameSize, 500, wallType.Red, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 532, wallType.Blue, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 564, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 596, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 629, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 661, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 690, wallType.Green, wallCreatorDirectionType.Right, 5);
+	CreateNormalBallMedium(100, 100, global.normalBallMediumMoveX, global.normalBallMediumMoveY,
+	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
+	normalBallColorType.Blue, true);
+	
+	CreateNormalBallMedium(900, 100, -global.normalBallMediumMoveX, global.normalBallMediumMoveY,
+	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
+	normalBallColorType.Blue, true);
+	
+	//wall
+	CreateWallMany(480, 70, wallType.Blue, wallCreatorDirectionType.Bottom, 5);
+	CreateWallMany(512, 70, wallType.Blue, wallCreatorDirectionType.Bottom, 5);
+	
+	CreateWallMany(480, 400, wallType.Blue, wallCreatorDirectionType.Bottom, 5);
+	CreateWallMany(512, 400, wallType.Blue, wallCreatorDirectionType.Bottom, 5);
+	
+	CreateWallMany(448, 502, wallType.Blue, wallCreatorDirectionType.Left, 1);
+	CreateWallMany(544, 502, wallType.Blue, wallCreatorDirectionType.Right, 1);
+	
+	CreateWallMany(320, 280, wallType.Blue, wallCreatorDirectionType.Left, 8);
+	CreateWallMany(320, 314, wallType.Blue, wallCreatorDirectionType.Left, 8);
+	
+	CreateWallMany(672, 280, wallType.Blue, wallCreatorDirectionType.Right, 8);
+	CreateWallMany(672, 314, wallType.Blue, wallCreatorDirectionType.Right, 8);
 	
 	//items
-	CreateItem(50, 303, obj_item_time_freeze)
-	CreateItem(100, 300, obj_item_energy_shield)
-	CreateItem(150, 300, obj_item_food)
+	CreateLifePoint(130, 100, lifePointType.Blue);
+	CreateLifePoint(170, 100, lifePointType.Blue);
+	CreateLifePoint(210, 100, lifePointType.Blue);
+	CreateLifePoint(250, 100, lifePointType.Blue);
+	CreateLifePoint(290, 100, lifePointType.Blue);
+	CreateLifePoint(330, 100, lifePointType.Blue);
 	
+	CreateLifePoint(460, 400, lifePointType.Blue);
+	CreateLifePoint(565, 400, lifePointType.Blue);
 	
-	CreateLifePoint(450, 250, lifePointType.Green);
-	CreateLifePoint(470, 250, lifePointType.Green);
-	CreateLifePoint(490, 250, lifePointType.Green);
-	CreateLifePoint(510, 250, lifePointType.Green);
-	CreateLifePoint(530, 250, lifePointType.Green);
-	CreateLifePoint(550, 250, lifePointType.Green);
+	CreateFoodByImageIndex(700, 100, 5);
+	CreateFoodByImageIndex(740, 100, 5);
+	CreateFoodByImageIndex(780, 100, 5);
+	CreateFoodByImageIndex(820, 100, 5);
+	CreateFoodByImageIndex(860, 100, 5);
+	CreateFoodByImageIndex(900, 100, 5);
 	
-	CreateItem(650, 300, obj_item_detonator)
-	CreateItem(660, 300, obj_item_detonator)
-	CreateItem(670, 300, obj_item_detonator)
-	CreateItem(690, 300, obj_item_detonator)
-	CreateItem(730, 300, obj_item_detonator)
-	
-	CreateItem(800, 300, obj_item_time_slow)
+
 
 
 }
 
 #endregion
 
-#region Level 9 - Japan night
+#region Level 9 - Thailand night (green)
 
 function CreateLevelEasy9() {
 	
 	// init
-	LoadBackgroundImage("japan_twilight"); //Load background with current level number
-	CreateWallFrame(spr_wall_ground); //wall frame creating
-	PlayMusic(snd_mtFuji, false); // play music
-	CreatePlayer(400, 500); // create player
+	LoadBackgroundImage("thailand_night"); //Load background
+	CreateWallFrame(wallFrameType.Green ?? noone); //wall frame creating
+	PlayMusic(snd_thailand, true); // play music
+	CreatePlayer(200, 600); // create player
 	
 	//Enemy
-	CreateNormalBallGiant(550, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
+	CreateNormalBallSmall(40, 140, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
+	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
+	normalBallColorType.Green,  true);
+	
+	CreateNormalBallSmall(90, 180, -global.normalBallSmallMoveX, global.normalBallSmallMoveY,
+	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
+	normalBallColorType.Green,  true);
+	
+	CreateNormalBallSmall(150, 160, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
+	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
+	normalBallColorType.Green,  true);
+	
+	CreateNormalBallMedium(100, 150, global.normalBallMediumMoveX, global.normalBallMediumMoveY,
+	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
+	normalBallColorType.Green, true);
+	
+	
+	
+	CreateNormalBallGiant(600, 100, -global.normalBallGiantMoveX, global.normalBallGiantMoveY,
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
-	normalBallColorType.Blue, normalBallGiantDropItemType.Nothing, true);
+	normalBallColorType.Green, normalBallGiantDropItemType.Nothing, true);
+	
+	
+	
+	CreateNormalBallSmall(880, 550, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
+	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
+	normalBallColorType.Green,  true);
+	
+	CreateNormalBallSmall(930, 550, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
+	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
+	normalBallColorType.Green,  true);
+	
+	CreateNormalBallSmall(980, 550, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
+	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
+	normalBallColorType.Green,  true);
+
 	
 	//wall
-	CreateWallDestroyableMany(440, 300, wallCreatorDirectionType.Right, 4);
-	CreateWallDestroyableMany(440, 332, wallCreatorDirectionType.Right, 4);
+	CreateWallMany(650, 700 - global.wallHeight, wallType.Green, wallCreatorDirectionType.Top, 6);
 	
-	CreateWallMany(global.wallFrameSize, 500, wallType.Red, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 532, wallType.Blue, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 564, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 596, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 629, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 661, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 690, wallType.Green, wallCreatorDirectionType.Right, 5);
+	CreateWallMany(0, 250, wallType.Green, wallCreatorDirectionType.Right, 1);
+	CreateWallDestroyableMany(32, 250, wallCreatorDirectionType.Right, 3);
+	CreateWallMany(128, 250, wallType.Green, wallCreatorDirectionType.Right, 5);
+	CreateWallMany(288, 250, wallType.Green, wallCreatorDirectionType.Top, 6);
+	
+	CreateWallMany(288, 335, wallType.Green, wallCreatorDirectionType.Bottom, 1);
+	CreateWallMany(0, 475, wallType.Green, wallCreatorDirectionType.Right, 7);
+	
+	
 	
 	//items
-	CreateItem(50, 303, obj_item_time_freeze)
-	CreateItem(100, 300, obj_item_energy_shield)
-	CreateItem(150, 300, obj_item_food)
+	CreateItem(900, 600, obj_item_health_potion);
 	
+	CreateFoodByImageIndex(30, 300, 5);
+	CreateFoodByImageIndex(80, 300, 5);
+	CreateFoodByImageIndex(130, 300, 5);
+	CreateFoodByImageIndex(180, 300, 5);
 	
-	CreateLifePoint(450, 250, lifePointType.Green);
-	CreateLifePoint(470, 250, lifePointType.Green);
-	CreateLifePoint(490, 250, lifePointType.Green);
-	CreateLifePoint(510, 250, lifePointType.Green);
-	CreateLifePoint(530, 250, lifePointType.Green);
-	CreateLifePoint(550, 250, lifePointType.Green);
+	CreateFoodByImageIndex(665, 370, 5);
+
+	CreateLifePoint(170, 100, lifePointType.Green);
+	CreateLifePoint(200, 100, lifePointType.Green);
+	CreateLifePoint(230, 100, lifePointType.Green);
+	CreateLifePoint(260, 100, lifePointType.Green);
 	
-	CreateItem(650, 300, obj_item_dynamite)
-	CreateItem(660, 300, obj_item_land_mine)
-	CreateItem(670, 300, obj_item_land_mine)
-	CreateItem(690, 300, obj_item_land_mine)
-	CreateItem(730, 300, obj_item_land_mine)
-	
-	CreateItem(800, 300, obj_item_time_slow)
+
 
 
 }
 
 #endregion
 
-#region Level 10 - Japan night
+#region Level 10 - Cambodia morning (red)
 
 function CreateLevelEasy10() {
 	
 	// init
-	LoadBackgroundImage("japan_twilight"); //Load background with current level number
-	CreateWallFrame(spr_wall_ground); //wall frame creating
-	PlayMusic(snd_mtFuji, false); // play music
-	CreatePlayer(400, 500); // create player
+	LoadBackgroundImage("cambodia_morning"); //Load background with current level number
+	CreateWallFrame(wallFrameType.Red ?? noone); //wall frame creating
+	PlayMusic(snd_ankorWatt, true); // play music
+	CreatePlayer(480, 450); // create player
 	
 	//Enemy
-	CreateNormalBallGiant(550, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
+	CreateNormalBallGiant(540, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
-	normalBallColorType.Blue, normalBallGiantDropItemType.Nothing, true);
+	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_1, true);
 	
-			CreateNormalBallGiant(550, 100, -global.normalBallGiantMoveX, global.normalBallGiantMoveY,
+	CreateNormalBallGiant(520, 100, -global.normalBallGiantMoveX, global.normalBallGiantMoveY,
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
-	normalBallColorType.Blue, normalBallGiantDropItemType.Nothing, true);
+	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_1, true);
+	
 	
 	//wall
-	CreateWallDestroyableMany(440, 300, wallCreatorDirectionType.Right, 4);
-	CreateWallDestroyableMany(440, 332, wallCreatorDirectionType.Right, 4);
+	CreateWallMany(464, 700 - global.wallHeight, wallType.Red, wallCreatorDirectionType.Right, 3);
+	CreateWallMany(464, 700 - (global.wallHeight*2), wallType.Red, wallCreatorDirectionType.Right, 3);
 	
-	CreateWallMany(global.wallFrameSize, 500, wallType.Red, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 532, wallType.Blue, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 564, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 596, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 629, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 661, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 690, wallType.Green, wallCreatorDirectionType.Right, 5);
+	CreateWallMany(164, 700 - global.wallHeight, wallType.Red, wallCreatorDirectionType.Right, 3);
+	CreateWallMany(164, 700 - (global.wallHeight*2), wallType.Red, wallCreatorDirectionType.Right, 3);
+	
+	CreateWallMany(764, 700 - global.wallHeight, wallType.Red, wallCreatorDirectionType.Right, 3);
+	CreateWallMany(764, 700 - (global.wallHeight*2), wallType.Red, wallCreatorDirectionType.Right, 3);
+
 	
 	//items
-	CreateItem(50, 303, obj_item_time_freeze)
-	CreateItem(100, 300, obj_item_energy_shield)
-	CreateItem(150, 300, obj_item_food)
+	CreateItem(210, 300, obj_item_energy_shield)
+	CreateItem(810, 300, obj_item_health_potion)
 	
 	
-	CreateLifePoint(450, 250, lifePointType.Green);
-	CreateLifePoint(470, 250, lifePointType.Green);
-	CreateLifePoint(490, 250, lifePointType.Green);
-	CreateLifePoint(510, 250, lifePointType.Green);
-	CreateLifePoint(530, 250, lifePointType.Green);
-	CreateLifePoint(550, 250, lifePointType.Green);
+	CreateLifePoint(40, 250, lifePointType.Red);
+	CreateLifePoint(80, 250, lifePointType.Red);
+	CreateLifePoint(120, 250, lifePointType.Red);
 	
-	CreateItem(650, 300, obj_item_rocket_launcher)
-	CreateItem(660, 300, obj_item_rocket_launcher)
-	CreateItem(670, 300, obj_item_rocket_launcher)
-	CreateItem(690, 300, obj_item_rocket_launcher)
-	CreateItem(730, 300, obj_item_rocket_launcher)
-	
-	CreateItem(800, 300, obj_item_time_slow)
+	CreateFoodByImageIndex(320, 300, 34);
+	CreateFoodByImageIndex(360, 300, 34);
+	CreateFoodByImageIndex(400, 300, 34);
 
-
+	
+	CreateFoodByImageIndex(620, 300, 0);
+	CreateFoodByImageIndex(660, 300, 0);
+	CreateFoodByImageIndex(700, 300, 0);
+	
+	CreateLifePoint(900, 250, lifePointType.Red);
+	CreateLifePoint(940, 250, lifePointType.Red);
+	CreateLifePoint(980, 250, lifePointType.Red);
 }
 
 #endregion
 
-#region Level 11 - Japan night
+#region Level 11 - Camboide twilight (red)
 
 function CreateLevelEasy11() {
 	
 	// init
-	LoadBackgroundImage("japan_twilight"); //Load background with current level number
-	CreateWallFrame(spr_wall_ground); //wall frame creating
-	PlayMusic(snd_mtFuji, false); // play music
-	CreatePlayer(400, 500); // create player
+	LoadBackgroundImage("cambodia_twilight"); //Load background with current level number
+	CreateWallFrame(wallFrameType.Red ?? noone); //wall frame creating
+	PlayMusic(snd_ankorWatt, true); // play music
+	CreatePlayer(480, 450); // create player
 	
 	//Enemy
-	CreateNormalBallGiant(550, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
+	CreateNormalBallGiant(800, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
+	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_1, true);
+	
+	CreateNormalBallLarge(150, 100, -global.normalBallLargeMoveX, global.normalBallLargeMoveY,
+	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
 	normalBallColorType.Blue, normalBallGiantDropItemType.Nothing, true);
 	
-		CreateNormalBallGiant(550, 100, -global.normalBallGiantMoveX, global.normalBallGiantMoveY,
-	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
-	normalBallColorType.Blue, normalBallGiantDropItemType.Nothing, true);
 	
 	//wall
-	CreateWallDestroyableMany(440, 300, wallCreatorDirectionType.Right, 4);
-	CreateWallDestroyableMany(440, 332, wallCreatorDirectionType.Right, 4);
+	CreateWallDestroyableMany(150, 250, wallCreatorDirectionType.Right, 1);
+	CreateWallMany(300, 250, wallType.Blue, wallCreatorDirectionType.Right, 1);
+	CreateWallDestroyableMany(450, 250, wallCreatorDirectionType.Right, 1);
+	CreateWallMany(600, 250, wallType.Blue, wallCreatorDirectionType.Right, 1);
+	CreateWallDestroyableMany(750, 250, wallCreatorDirectionType.Right, 1);
+	CreateWallMany(900, 250, wallType.Blue, wallCreatorDirectionType.Right, 1);
 	
-	CreateWallMany(global.wallFrameSize, 500, wallType.Red, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 532, wallType.Blue, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 564, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 596, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 629, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 661, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 690, wallType.Green, wallCreatorDirectionType.Right, 5);
+	CreateWallDestroyableMany(75, 350, wallCreatorDirectionType.Right, 1);
+	CreateWallDestroyableMany(225, 350, wallCreatorDirectionType.Right, 1);
+	CreateWallMany(375, 350, wallType.Blue, wallCreatorDirectionType.Right, 1);
+	CreateWallDestroyableMany(525, 350, wallCreatorDirectionType.Right, 1);
+	CreateWallMany(675, 350, wallType.Blue, wallCreatorDirectionType.Right, 1);
+	CreateWallDestroyableMany(825, 350, wallCreatorDirectionType.Right, 1);
+
+	
+
 	
 	//items
-	CreateItem(50, 303, obj_item_time_freeze)
-	CreateItem(100, 300, obj_item_energy_shield)
-	CreateItem(150, 300, obj_item_food)
+	CreateLifePoint(165, 100, lifePointType.Blue);
+	CreateLifePoint(465, 100, lifePointType.Blue);
+	CreateLifePoint(765, 100, lifePointType.Blue);
 	
-	
-	CreateLifePoint(450, 250, lifePointType.Green);
-	CreateLifePoint(470, 250, lifePointType.Green);
-	CreateLifePoint(490, 250, lifePointType.Green);
-	CreateLifePoint(510, 250, lifePointType.Green);
-	CreateLifePoint(530, 250, lifePointType.Green);
-	CreateLifePoint(550, 250, lifePointType.Green);
-	
-	CreateItem(650, 300, obj_item_tracking_rocket_launcher)
-	CreateItem(660, 300, obj_item_tracking_rocket_launcher)
-	CreateItem(670, 300, obj_item_tracking_rocket_launcher)
-	CreateItem(690, 300, obj_item_tracking_rocket_launcher)
-	CreateItem(730, 300, obj_item_tracking_rocket_launcher)
-	
-	CreateItem(800, 300, obj_item_time_slow)
-
+	CreateFoodByImageIndex(90, 200, 34);
+	CreateFoodByImageIndex(240, 200, 34);
+	CreateFoodByImageIndex(540, 200, 34);
+	CreateFoodByImageIndex(840, 200, 34);
 
 }
 
 #endregion
 
-#region Level 12 - Japan night
+#region Level 12 - cambodia night (red)
 
 function CreateLevelEasy12() {
 	
 	// init
-	LoadBackgroundImage("japan_twilight"); //Load background with current level number
-	CreateWallFrame(spr_wall_ground); //wall frame creating
-	PlayMusic(snd_mtFuji, false); // play music
-	CreatePlayer(400, 500); // create player
+	LoadBackgroundImage("cambodia_night"); //Load background with current level number
+	CreateWallFrame(wallFrameType.Red ?? noone); //wall frame creating
+	PlayMusic(snd_ankorWatt, true); // play music
+	CreatePlayer(200, 560); // create player
 	
 	//Enemy
-	CreateNormalBallGiant(550, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
+	CreateNormalBallGiant(900, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
-	normalBallColorType.Blue, normalBallGiantDropItemType.Nothing, true);
+	normalBallColorType.Green, normalBallGiantDropItemType.DropQualityLevel_1, true);
 	
-		CreateNormalBallGiant(550, 100, -global.normalBallGiantMoveX, global.normalBallGiantMoveY,
-	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
-	normalBallColorType.Blue, normalBallGiantDropItemType.Nothing, true);
+	CreateNormalBallLarge(370, 100, -global.normalBallLargeMoveX, global.normalBallLargeMoveY,
+	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
+	normalBallColorType.Green, normalBallGiantDropItemType.Nothing, true);
+	
 	
 	//wall
-	CreateWallDestroyableMany(440, 300, wallCreatorDirectionType.Right, 4);
-	CreateWallDestroyableMany(440, 332, wallCreatorDirectionType.Right, 4);
+	CreateWallDestroyableMany(350, 500, wallCreatorDirectionType.Right, 2);
+	CreateWallDestroyableMany(250, 400, wallCreatorDirectionType.Right, 2);
+	CreateWallDestroyableMany(150, 300, wallCreatorDirectionType.Right, 2);
+	CreateWallDestroyableMany(50, 200, wallCreatorDirectionType.Right, 2);
 	
-	CreateWallMany(global.wallFrameSize, 500, wallType.Red, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 532, wallType.Blue, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 564, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 596, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 629, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 661, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 690, wallType.Green, wallCreatorDirectionType.Right, 5);
+	CreateWallDestroyableMany(400, 250, wallCreatorDirectionType.Right, 2);
+	CreateWallDestroyableMany(250, 150, wallCreatorDirectionType.Right, 2);
 	
+	CreateWallDestroyableMany(650, 500, wallCreatorDirectionType.Left, 2);
+	CreateWallDestroyableMany(750, 400, wallCreatorDirectionType.Left, 2);
+	CreateWallDestroyableMany(850, 300, wallCreatorDirectionType.Left, 2);
+	CreateWallDestroyableMany(950, 200, wallCreatorDirectionType.Left, 2);
+	
+	CreateWallDestroyableMany(600, 250, wallCreatorDirectionType.Left, 2);
+	CreateWallDestroyableMany(750, 150, wallCreatorDirectionType.Left, 2);
+	
+	
+	CreateWallDestroyableMany(480, 100, wallCreatorDirectionType.Right, 2);
+
 	//items
-	CreateItem(50, 303, obj_item_time_freeze)
-	CreateItem(100, 300, obj_item_energy_shield)
-	CreateItem(150, 300, obj_item_food)
+	CreateItem(510, 60, obj_item_health_potion);
+	CreateLifePoint(430, 200, lifePointType.Green);
+	CreateLifePoint(280, 100, lifePointType.Green);
+	CreateLifePoint(600, 200, lifePointType.Green);
+	CreateLifePoint(750, 100, lifePointType.Green);
 	
+	CreateFoodByImageIndex(380, 450, 34);
+	CreateFoodByImageIndex(280, 350, 34);
+	CreateFoodByImageIndex(180, 250, 34);
+	CreateFoodByImageIndex(80, 150, 34);
 	
-	CreateLifePoint(450, 250, lifePointType.Green);
-	CreateLifePoint(470, 250, lifePointType.Green);
-	CreateLifePoint(490, 250, lifePointType.Green);
-	CreateLifePoint(510, 250, lifePointType.Green);
-	CreateLifePoint(530, 250, lifePointType.Green);
-	CreateLifePoint(550, 250, lifePointType.Green);
+	CreateFoodByImageIndex(650, 450, 0);
+	CreateFoodByImageIndex(750, 350, 0);
+	CreateFoodByImageIndex(850, 250, 0);
+	CreateFoodByImageIndex(950, 150, 0);
 	
-	CreateItem(600, 300, obj_item_antigravity)
-	CreateItem(660, 300, obj_item_flamethrower)
-	CreateItem(670, 300, obj_item_flamethrower)
-	CreateItem(690, 300, obj_item_flamethrower)
-	CreateItem(730, 300, obj_item_flamethrower)
-	
-	CreateItem(800, 300, obj_item_time_slow)
-
-
+	CreateItem(540, 630, obj_item_double_sting);
 }
 
 #endregion
 
-#region Level 13 - Japan night
+#region Level 13 - First boss level
 
 function CreateLevelEasy13() {
 	
 	// init
-	LoadBackgroundImage("japan_twilight"); //Load background with current level number
-	CreateWallFrame(spr_wall_ground); //wall frame creating
-	PlayMusic(snd_mtFuji, false); // play music
-	CreatePlayer(400, 500); // create player
+	LoadBackgroundImage("waterFall_morning"); //Load background with current level number
+	CreateWallFrame(wallFrameType.Blue ?? noone); //wall frame creating
+	PlayMusic(snd_criminal_case, true); // play music
+	CreatePlayer(550, 500); // create player
+	global.isBossLevel = true;
+	global.isRestartLevelAfterDead = false;
+	global.levelTimeMax = 200; // level's max time
 	
 	//Enemy
-	CreateNormalBallGiant(550, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
-	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
-	normalBallColorType.Blue, normalBallGiantDropItemType.Nothing, true);
-	
-		CreateNormalBallGiant(550, 100, -global.normalBallGiantMoveX, global.normalBallGiantMoveY,
-	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
-	normalBallColorType.Blue, normalBallGiantDropItemType.Nothing, true);
+	CreateRedBallBoss(500,-1);
 	
 	//wall
-	CreateWallDestroyableMany(440, 300, wallCreatorDirectionType.Right, 4);
-	CreateWallDestroyableMany(440, 332, wallCreatorDirectionType.Right, 4);
-	
-	CreateWallMany(global.wallFrameSize, 500, wallType.Red, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 532, wallType.Blue, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 564, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 596, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 629, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 661, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 690, wallType.Green, wallCreatorDirectionType.Right, 5);
 	
 	//items
-	CreateItem(50, 303, obj_item_time_freeze)
-	CreateItem(100, 300, obj_item_energy_shield)
-	CreateItem(150, 300, obj_item_food)
-	
-	
-	CreateLifePoint(450, 250, lifePointType.Green);
-	CreateLifePoint(470, 250, lifePointType.Green);
-	CreateLifePoint(490, 250, lifePointType.Green);
-	CreateLifePoint(510, 250, lifePointType.Green);
-	CreateLifePoint(530, 250, lifePointType.Green);
-	CreateLifePoint(550, 250, lifePointType.Green);
-	
-	CreateItem(650, 300, obj_item_gravity_reverse)
-	CreateItem(670, 300, obj_item_gravity_strong_reverse)
-	CreateItem(700, 300, obj_item_flamethrower)
-	CreateItem(690, 300, obj_item_magnet)
-	CreateItem(730, 300, obj_item_power_wire)
-	
-	CreateItem(800, 300, obj_item_time_slow)
-
-
 }
 
 #endregion
@@ -747,7 +794,7 @@ function CreateLevelTest() {
 	
 	// init
 	LoadBackgroundImage("japan_morning"); //Load background with current level number
-	CreateWallFrame(spr_wall_ground); //wall frame creating
+	CreateWallFrame(spr_wall_ground_blue); //wall frame creating
 	PlayMusic(snd_mtFuji, false); // play music
 
 	CreatePlayer(900, 300); // create player

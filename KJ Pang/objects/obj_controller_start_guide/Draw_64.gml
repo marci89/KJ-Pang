@@ -42,21 +42,21 @@ draw_text(700, startY, string(rightGamepad));
 //jump
 startY += 25;
 draw_text(50, startY, string(jump) + ":");
-draw_text(250, startY,  "ctrl");
+draw_text(250, startY,  string(upArrowKeyboard));
 draw_text(500, startY, string(jump) + ":");
 draw_text(700, startY, "A " + string(button));
 
 //fire up
 startY += 25;
 draw_text(50, startY, string(fireUp) + ":");
-draw_text(250, startY, string(upArrowKeyboard));
+draw_text(250, startY, string(fireUpKeyboard));
 draw_text(500, startY, string(fireUp) + ":");
 draw_text(700, startY, "X " + string(button) + " " + string(orText) + " " + string(fireGamepadUp) );
 
 //fire horizontal
 startY += 25;
 draw_text(50, startY, string(fireHorizontal) + ":");
-draw_text(250, startY, string(downArrowKeyboard));
+draw_text(250, startY, string(fireHorizontalKeyboard));
 draw_text(500, startY, string(fireHorizontal) + ":");
 draw_text(700, startY, "B " + string(button) + " " + string(orText) + " " + string(fireGamepadHorizontal) );
 

@@ -19,8 +19,10 @@ upArrowKeyboard =  GetLocalizedText("upArrowKeyboard");
 downArrowKeyboard =  GetLocalizedText("downArrowKeyboard");
 
 fireUp =  GetLocalizedText("fireUp");
+fireUpKeyboard =  GetLocalizedText("fireUpKeyboard");
 fireGamepadUp =  GetLocalizedText("fireGamepadUp");
 fireHorizontal= GetLocalizedText("fireHorizontal");
+fireHorizontalKeyboard= GetLocalizedText("fireHorizontalKeyboard");
 fireGamepadHorizontal= GetLocalizedText("fireGamepadHorizontal");
 
 specialAbility =  GetLocalizedText("specialAbility");

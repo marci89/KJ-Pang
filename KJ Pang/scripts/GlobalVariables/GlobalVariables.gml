@@ -2,6 +2,7 @@
 	global.gameDifficult = gameDifficultType.Easy; // game difficult level
 	global.playMode = playModeType.SinglePlayer; // play alone or with your friend
 	global.scores = ds_list_create(); // score list
+	global.isBossLevel = false; // boss level or not.
 	
 	global.isEnemyInformationMode = false; // helper for enemy information
 	global.isAllowToGoNextLevel = true; // helper for next level. If you dead not allowed.
@@ -92,9 +93,9 @@
 	global.wallHeight = 34; // normal wall height
 
 	global.lifePointMax = 100; //  max life point capacity
-	global.foodMax = 20; // max food capacity
+	global.foodMax = 25; // max food capacity
 
-	global.levelTimeMax = 105; // level's max time
+	global.levelTimeMax = 150; // level's max time
 
-	global.timeManipulatingEffectDuration = 800; // time manipulation duration value
-	global.gravityEffectDuration = 1000; // gravity effect duration value
+	global.timeManipulatingEffectDuration = 600; // time manipulation duration value
+	global.gravityEffectDuration = 600; // gravity effect duration value

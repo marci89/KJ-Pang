@@ -43,16 +43,16 @@ function Init() {
 	}
 	
 	if(buttonId == 3) {
-		image = spr_item_magnet;
-		specialAbility = specialAbilityType.Magnet;
-		infoType = informationType.Magnet;
+		image = spr_item_energy_shield;
+		specialAbility = specialAbilityType.EnergyShield;
+		infoType = informationType.EnergyShield;
 		requiredDifficult = gameDifficultType.Easy;
 	}
 	
 	if(buttonId == 4) {
-		image = spr_item_energy_shield;
-		specialAbility = specialAbilityType.EnergyShield;
-		infoType = informationType.EnergyShield;
+		image = spr_item_magnet;
+		specialAbility = specialAbilityType.Magnet;
+		infoType = informationType.Magnet;
 		requiredDifficult = gameDifficultType.Easy;
 	}
 	

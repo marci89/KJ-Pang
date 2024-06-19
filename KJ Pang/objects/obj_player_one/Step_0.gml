@@ -80,7 +80,7 @@ if (!isDead){
 	
   // Y check
   if (CheckScreenCollisionTopWithoutWallForObject(y, sprite_height)) {
-     moveY += 1; 
+     //moveY += 1; 
 	}  
 }
 

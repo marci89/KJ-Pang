@@ -13,12 +13,12 @@ player = noone;
 
 //item hooping values when shooting near them
 weaponReactionDistance = 100; // action zone (distance)
-itemHoopingSpeedLeftMin = -1;
-itemHoopingSpeedRightMin = 1;
-itemHoopingSpeedLeftMax = -2;
-itemHoopingSpeedRightMax = 2;
+itemHoopingSpeedLeftMin = -0.5;
+itemHoopingSpeedRightMin = 0.5;
+itemHoopingSpeedLeftMax = -1;
+itemHoopingSpeedRightMax = 1;
 itemHoopingSpeedHeightMin = -1;
-itemHoopingSpeedHeightMax = -3;
+itemHoopingSpeedHeightMax = -2;
 
 
 #region Set player

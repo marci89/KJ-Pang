@@ -47,12 +47,18 @@ var nearestWeapon = instance_nearest(x, y, obj_weapon_parent);
 	
 		var distanceToWeapon = point_distance(x, y, nearestWeapon.x, nearestWeapon.y);
 		var isHoppingEnable  = false;
+		var minHorizontalDistance = -30;
+		var maxHorizontalDistance = 40;
 		
 		//check postions to set hopping effect or not
 		if(nearestWeapon.object_index == obj_weapon_invisible_weapon) {
 			isHoppingEnable = true;
-		} else if (y < nearestWeapon.player.y-40){
-			isHoppingEnable = true;
+		} else if (y < nearestWeapon.player.y - 40) {
+			var horizontalDistance = abs(x - nearestWeapon.x);
+			if (horizontalDistance > minHorizontalDistance && horizontalDistance < maxHorizontalDistance) {
+				isHoppingEnable = true;
+			
+			}
 		}
 
 		// React to Nearby Weapon

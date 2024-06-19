@@ -97,24 +97,49 @@ isOnGround = false;
 
 //Collide on x-axis
 if (place_meeting(x + moveX, y, obj_wall_parent)  ) {
-    while (!place_meeting(x + sign(moveX), y, obj_wall_parent)) {
-        x += sign(moveX);
-    }
-	//Bounce
-	moveX *= -bounceDecay;
-	isOnGround = true;
+	
+	// get the other object
+	var wall = instance_place(x + moveX, y, obj_wall_parent);
+	
+	if (IsInstanceExists(wall)) {	
+		if ((wall.object_index != obj_wall_indestructible
+		|| wall.object_index != obj_wall_ground))
+		&& isWallBreaker {
+			instance_destroy(wall);
+		
+		} else {
+			while (!place_meeting(x + sign(moveX), y, obj_wall_parent)) {
+		        x += sign(moveX);
+		    }
+			//Bounce
+			moveX *= -bounceDecay;
+			isOnGround = true;
+		}
+	}
 }
 
 
 //Collide on y-axis
 if (place_meeting(x, y + moveY, obj_wall_parent) ) {
-    while (!place_meeting(x, y + sign(moveY), obj_wall_parent)) {
-        y += sign(moveY);
-    }
-	//Bounce
-	moveY *= -bounceDecay;
-	isOnGround = true;
 	
+	// get the other object
+	var wall = instance_place(x, y + moveY, obj_wall_parent);
+	
+	if (IsInstanceExists(wall)) {	
+		if ((wall.object_index != obj_wall_indestructible
+		|| wall.object_index != obj_wall_ground))
+		&& isWallBreaker {
+			instance_destroy(wall);
+		
+		} else {
+		    while (!place_meeting(x, y + sign(moveY), obj_wall_parent)) {
+		        y += sign(moveY);
+		    }
+			//Bounce
+			moveY *= -bounceDecay;
+			isOnGround = true;
+		}
+	}
 }
 
 #endregion

@@ -11,7 +11,12 @@ if(isKeyPressEnable) {
   
 		//check keyboard key and gamepad
 	if (keyboard_check(vk_anykey) || gamePadPressed) {
-	   room_goto(rm_level);
+		
+		if(CheckIsGoToMap(global.level)) {
+			 room_goto(rm_map);
+		} else {
+			room_goto(rm_level);
+		}
 	}
 }
 

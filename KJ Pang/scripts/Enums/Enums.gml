@@ -186,12 +186,30 @@ enum lifePointType{
 #region wall types
 
 enum wallType{
-    Red,
+	Red,
     Blue,
     Green,
+	Yellow,
+	Gray,
+	Purple,
 	Destroyable,
 	Frame,
 	Indestructible
+};
+
+#endregion
+
+#region wall frame types
+
+enum wallFrameType{
+	
+    Red,
+    Blue,
+    Green,
+	Yellow,
+	Gray,
+	Purple,
+	Snow
 };
 
 #endregion
