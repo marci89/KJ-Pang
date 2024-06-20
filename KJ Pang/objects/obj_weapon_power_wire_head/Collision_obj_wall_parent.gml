@@ -4,7 +4,7 @@
 if (instance_exists(other)) { // check exists
 	
 	//destroybale wall
-	if ( other.object_index == obj_wall_destroyable) {
+	if ( other.object_index == obj_wall_destroyable  && isCreated) {
 		if(!other.isDestroyed) {
 			player.SetScore(other.wallScore);
 		}

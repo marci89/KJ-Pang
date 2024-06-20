@@ -15,6 +15,8 @@ DropItem();
 //create gems 
 CreateLifePointWithMovement(x,y,2,-3, lifePointType.Black);
 CreateLifePointWithMovement(x,y,-2,-3, lifePointType.Black);
+CreateLifePointWithMovement(x,y,4,-3, lifePointType.Black);
+CreateLifePointWithMovement(x,y,-4,-3, lifePointType.Black);
 
 
 //Create child balls

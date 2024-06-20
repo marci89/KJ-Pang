@@ -93,9 +93,9 @@
 	global.wallHeight = 34; // normal wall height
 
 	global.lifePointMax = 100; //  max life point capacity
-	global.foodMax = 25; // max food capacity
+	global.foodMax = 30; // max food capacity
 
 	global.levelTimeMax = 150; // level's max time
 
-	global.timeManipulatingEffectDuration = 600; // time manipulation duration value
-	global.gravityEffectDuration = 600; // gravity effect duration value
+	global.timeManipulatingEffectDuration = 500; // time manipulation duration value
+	global.gravityEffectDuration = 500; // gravity effect duration value

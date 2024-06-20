@@ -11,7 +11,7 @@ isCreated = false;
 bodyPartList = ds_list_create(); // list of body part objects
 
 
-alarm[0] = 20;
+alarm[0] = 10;
 
 #region delete this instance's all body part function
 

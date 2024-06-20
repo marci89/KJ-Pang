@@ -60,11 +60,8 @@ function CreateEasyLevelInformation() {
 	
 	if (global.stageLevel == 3) {
 
-	    var infoPanelObj1 = instance_create_layer(200, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+	    var infoPanelObj1 = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
 		infoPanelObj1.Init(informationType.HealthPotion ?? noone);
-	
-		var infoPanelObj2 = instance_create_layer(550, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
-		infoPanelObj2.Init(informationType.Dynamite ?? noone);
 	}
 	
 	if (global.stageLevel == 4) {
@@ -88,6 +85,13 @@ function CreateEasyLevelInformation() {
 
 	    var infoPanelObj1 = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
 		infoPanelObj1.Init(informationType.PowerWire ?? noone);
+	}
+	
+	if (global.stageLevel == 7) {
+
+	    var enemyPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_enemy_panel);
+		enemyPanelObj.Init(enemyInformationType.BlackBall ?? noone);
+	
 	}
 	
 	

@@ -4,7 +4,7 @@
     var y_pos = irandom_range(20, 450);
     
     // Random color
-    var colors = [c_red, c_blue, c_green, c_orange, c_aqua, c_lime,];
+    var colors = [c_red, c_blue, c_lime, c_orange];
     var color_index = irandom(array_length(colors) - 1);
     var random_color = colors[color_index];
     
@@ -16,4 +16,4 @@
     // Create the firework effect
     effect_create_above(ef_firework, x_pos, y_pos, size, random_color);
 	
-	alarm[2] = 5;
+	alarm[2] = 10;

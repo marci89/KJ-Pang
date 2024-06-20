@@ -13,7 +13,11 @@ effect_create_above( ef_firework, x, y-20, 2, c_red);
 PlaySound(snd_ball_destroy, false, 2);
 
 //drop item
-CreateItemWithMovement(x, y, 0, -4, obj_item_health_potion);
+var isDropped = irandom(1) == 1;
+
+if (isDropped) {
+   CreateItemWithMovement(x, y, 0, -4, obj_item_health_potion);
+} 
 
 //Create child balls
 randomize();

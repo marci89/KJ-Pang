@@ -300,7 +300,7 @@ function handleSingleSting() {
 				
 				//sting start pos
 				stingStartPositionY = player.y;
-	
+				
 				var sting = CreateWeaponWithMovement(player.x, stingStartPositionY , 0, -8, obj_weapon_sting_head, "Weapon", player ?? noone, weaponDirectionType.Vertical);
 				sting.CheckPlayerIsOnGround();
 			}

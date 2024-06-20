@@ -22,7 +22,7 @@ isConnectedtoWall = false; // touched with wall or not
 wallConnectionTime = 350; // time to delete this item after touched the wall
 
 
-alarm[2] = 20;
+alarm[2] = 10;
 
 //epth = 40;
 

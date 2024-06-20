@@ -146,12 +146,11 @@ var randomChance = random(1);
 	if(dropItemType == normalBallLargeDropItemType.DropQualityLevel_1) {
 		
 		doubleStingDropChance = 0.05;
-		timeFreezeDropChance = 0.03
-		timeSlowDropChance = 0.02;
+		timeFreezeDropChance = 0.05
+		timeSlowDropChance = 0.03;
 		energyShieldDropChance = 0.03;
-		dynamitDropChance = 0.01;
 		healthPotionDropChance = 0.005;
-		nothingDropChance = 0.855; 
+		nothingDropChance = 0.835; 
 
 		if (randomChance < doubleStingDropChance) {
 			CreateItem(x, y, obj_item_double_sting);
@@ -164,14 +163,11 @@ var randomChance = random(1);
 		
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance)) {
 		    CreateItem(x, y, obj_item_energy_shield);
-			
-		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + dynamitDropChance)) {
-		    CreateItem(x, y, obj_item_dynamite);	
 		
-		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + dynamitDropChance + healthPotionDropChance)) {
+		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance)) {
 		    CreateItem(x, y, obj_item_health_potion);
 			
-		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + dynamitDropChance + healthPotionDropChance + nothingDropChance)) {
+		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance + nothingDropChance)) {
 		    show_debug_message("No item dropped.");
 		} else {
 		    show_debug_message("Invalid drop outcome.");

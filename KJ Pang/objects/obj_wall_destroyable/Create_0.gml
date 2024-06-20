@@ -1,4 +1,4 @@
 
-wallScore = 15; // score
+wallScore = 0; // score
 isDestroyed = false; // destroyed or not
 

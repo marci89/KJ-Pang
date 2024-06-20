@@ -11,8 +11,8 @@ global.hasLevelTime = true; // level timer enabled
 global.hasRoomWallFrame = false; // no wall frames
 global.isRestartLevelAfterDead = true; //restart after death
 global.levelTimeMax = 150; // level's max time
-//global.playerOneDefaultWeapon = weaponType.RocketLauncher;
-global.level = 13;
+//global.playerOneDefaultWeapon = weaponType.MachineGun;
+global.level = 18;
 
 	//Giant normal ball default properties
 	global.normalBallGiantMoveX = 0.5;
@@ -36,112 +36,163 @@ global.level = 13;
 	global.normalBallSmallJumpHeightMax = -4;
 
 //Create levels
-if(global.level == 1) {
-	CreateLevelEasy1();
-	return;
-}
-
-if(global.level == 2)  {
-	CreateLevelEasy2();
-	return;
-}
-
-if(global.level == 3) {
-	CreateLevelEasy3();
-	return;
-}
-
-	//Giant normal ball default properties
-	global.normalBallGiantMoveX = 0.75;
-	global.normalBallGiantMoveY = -1;
-	global.normalBallGiantGravityY = 0.06;
-	global.normalBallGiantJumpHeightMax = -10;
-	//Large normal ball default properties
-	global.normalBallLargeMoveX = 0.75;
-	global.normalBallLargeMoveY = -1.5;
-	global.normalBallLargeGravityY = 0.06;
-	global.normalBallLargeJumpHeightMax = -7;
-	//Medium normal ball default properties
-	global.normalBallMediumMoveX = 0.75;
-	global.normalBallMediumMoveY = -1;
-	global.normalBallMediumGravityY = 0.06;
-	global.normalBallMediumJumpHeightMax = -6;
-	//Small normal ball default properties
-	global.normalBallSmallMoveX = 0.75;
-	global.normalBallSmallMoveY = -2;
-	global.normalBallSmallGravityY = 0.06;
-	global.normalBallSmallJumpHeightMax = -5;
-	
-if(global.level == 4) {
-	CreateLevelEasy4();
+	if(global.level == 1) {
+		CreateLevelEasy1();
 		return;
-}
+	}
 
-if(global.level == 5) {
-	CreateLevelEasy5();
-	return;
-}
+	if(global.level == 2)  {
+		CreateLevelEasy2();
+		return;
+	}
 
-if(global.level == 6) {
-	CreateLevelEasy6();
-	return;
-}
+	if(global.level == 3) {
+		CreateLevelEasy3();
+		return;
+	}
 
-if(global.level == 7) {
-	CreateLevelEasy7();
-	return;
-}
-
-if(global.level == 8) {
-	CreateLevelEasy8();
-	return;
-}
-
-if(global.level == 9) {
-	CreateLevelEasy9();
-	return;
-}
-
-	//Giant normal ball default properties
-	global.normalBallGiantMoveX = 1.2;
-	global.normalBallGiantMoveY = -1;
-	global.normalBallGiantGravityY = 0.08;
-	global.normalBallGiantJumpHeightMax = -12;
-	//Large normal ball default properties
-	global.normalBallLargeMoveX = 0.9;
-	global.normalBallLargeMoveY = -1.7;
-	global.normalBallLargeGravityY = 0.08;
-	global.normalBallLargeJumpHeightMax = -8;
-	//Medium normal ball default properties
-	global.normalBallMediumMoveX = 0.9;
-	global.normalBallMediumMoveY = -1.4;
-	global.normalBallMediumGravityY = 0.08;
-	global.normalBallMediumJumpHeightMax = -7;
-	//Small normal ball default properties
-	global.normalBallSmallMoveX = 0.9;
-	global.normalBallSmallMoveY = -2;
-	global.normalBallSmallGravityY = 0.08;
-	global.normalBallSmallJumpHeightMax = -6;
+		//Giant normal ball default properties
+		global.normalBallGiantMoveX = 0.75;
+		global.normalBallGiantMoveY = -1;
+		global.normalBallGiantGravityY = 0.06;
+		global.normalBallGiantJumpHeightMax = -10;
+		//Large normal ball default properties
+		global.normalBallLargeMoveX = 0.75;
+		global.normalBallLargeMoveY = -1.5;
+		global.normalBallLargeGravityY = 0.06;
+		global.normalBallLargeJumpHeightMax = -7;
+		//Medium normal ball default properties
+		global.normalBallMediumMoveX = 0.75;
+		global.normalBallMediumMoveY = -1;
+		global.normalBallMediumGravityY = 0.06;
+		global.normalBallMediumJumpHeightMax = -6;
+		//Small normal ball default properties
+		global.normalBallSmallMoveX = 0.75;
+		global.normalBallSmallMoveY = -2;
+		global.normalBallSmallGravityY = 0.06;
+		global.normalBallSmallJumpHeightMax = -5;
 	
-if(global.level == 10) {
-	CreateLevelEasy10();
-	return;
-}
+	if(global.level == 4) {
+		CreateLevelEasy4();
+			return;
+	}
 
-if(global.level == 11) {
-	CreateLevelEasy11();
-	return;
-}
+	if(global.level == 5) {
+		CreateLevelEasy5();
+		return;
+	}
 
-if(global.level == 12) {
-	CreateLevelEasy12();
-	return;
-}
+	if(global.level == 6) {
+		CreateLevelEasy6();
+		return;
+	}
 
-if(global.level == 13) {
-	CreateLevelEasy13();
-	return;
-}
+	if(global.level == 7) {
+		CreateLevelEasy7();
+		return;
+	}
+
+	if(global.level == 8) {
+		CreateLevelEasy8();
+		return;
+	}
+
+	if(global.level == 9) {
+		CreateLevelEasy9();
+		return;
+	}
+
+		//Giant normal ball default properties
+		global.normalBallGiantMoveX = 1.2;
+		global.normalBallGiantMoveY = -1;
+		global.normalBallGiantGravityY = 0.08;
+		global.normalBallGiantJumpHeightMax = -12;
+		//Large normal ball default properties
+		global.normalBallLargeMoveX = 0.9;
+		global.normalBallLargeMoveY = -1.7;
+		global.normalBallLargeGravityY = 0.08;
+		global.normalBallLargeJumpHeightMax = -8;
+		//Medium normal ball default properties
+		global.normalBallMediumMoveX = 0.9;
+		global.normalBallMediumMoveY = -1.4;
+		global.normalBallMediumGravityY = 0.08;
+		global.normalBallMediumJumpHeightMax = -6;
+		//Small normal ball default properties
+		global.normalBallSmallMoveX = 0.9;
+		global.normalBallSmallMoveY = -2;
+		global.normalBallSmallGravityY = 0.08;
+		global.normalBallSmallJumpHeightMax = -5;
+	
+	if(global.level == 10) {
+		CreateLevelEasy10();
+		return;
+	}
+
+	if(global.level == 11) {
+		CreateLevelEasy11();
+		return;
+	}
+
+	if(global.level == 12) {
+		CreateLevelEasy12();
+		return;
+	}
+
+	if(global.level == 13) {
+		CreateLevelEasy13();
+		return;
+	}
+
+	if(global.level == 14) {
+		CreateLevelEasy14();
+		return;
+	}
+	
+	if(global.level == 15) {
+		CreateLevelEasy15();
+		return;
+	}
+	
+	if(global.level == 16) {
+		CreateLevelEasy16();
+		return;
+	}
+	
+		//Giant normal ball default properties
+		global.normalBallGiantMoveX = 1.5;
+		global.normalBallGiantMoveY = -4;
+		global.normalBallGiantGravityY = 0.1;
+		global.normalBallGiantJumpHeightMax = -14;
+		//Large normal ball default properties
+		global.normalBallLargeMoveX = 1;
+		global.normalBallLargeMoveY = -3;
+		global.normalBallLargeGravityY = 0.08;
+		global.normalBallLargeJumpHeightMax = -8;
+		//Medium normal ball default properties
+		global.normalBallMediumMoveX = 1;
+		global.normalBallMediumMoveY = -2;
+		global.normalBallMediumGravityY = 0.1;
+		global.normalBallMediumJumpHeightMax = -8;
+		//Small normal ball default properties
+		global.normalBallSmallMoveX = 1;
+		global.normalBallSmallMoveY = -2.2;
+		global.normalBallSmallGravityY = 0.09;
+		global.normalBallSmallJumpHeightMax = -6;
+	
+	if(global.level == 17) {
+		CreateLevelEasy17();
+		return;
+	}
+	
+	if(global.level == 18) {
+		CreateLevelEasy18();
+		return;
+	}
+	
+	if(global.level == 19) {
+		CreateLevelEasy19();
+		return;
+	}
 }
 
 #endregion
@@ -416,7 +467,6 @@ function CreateLevelEasy7() {
 	
 	//items	
 	CreateItem(505, 430, obj_item_health_potion);
-	CreateItem(950, 430, obj_item_dynamite);
 	
 	CreateFoodByImageIndex(309, 300, 5);
 	CreateFoodByImageIndex(278, 300, 5);
@@ -593,7 +643,7 @@ function CreateLevelEasy9() {
 function CreateLevelEasy10() {
 	
 	// init
-	LoadBackgroundImage("cambodia_morning"); //Load background with current level number
+	LoadBackgroundImage("cambodia_morning"); //Load background
 	CreateWallFrame(wallFrameType.Red ?? noone); //wall frame creating
 	PlayMusic(snd_ankorWatt, true); // play music
 	CreatePlayer(480, 450); // create player
@@ -649,7 +699,7 @@ function CreateLevelEasy10() {
 function CreateLevelEasy11() {
 	
 	// init
-	LoadBackgroundImage("cambodia_twilight"); //Load background with current level number
+	LoadBackgroundImage("cambodia_twilight"); //Load background
 	CreateWallFrame(wallFrameType.Red ?? noone); //wall frame creating
 	PlayMusic(snd_ankorWatt, true); // play music
 	CreatePlayer(480, 450); // create player
@@ -661,7 +711,7 @@ function CreateLevelEasy11() {
 	
 	CreateNormalBallLarge(150, 100, -global.normalBallLargeMoveX, global.normalBallLargeMoveY,
 	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
-	normalBallColorType.Blue, normalBallGiantDropItemType.Nothing, true);
+	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_1, true);
 	
 	
 	//wall
@@ -701,7 +751,7 @@ function CreateLevelEasy11() {
 function CreateLevelEasy12() {
 	
 	// init
-	LoadBackgroundImage("cambodia_night"); //Load background with current level number
+	LoadBackgroundImage("cambodia_night"); //Load background 
 	CreateWallFrame(wallFrameType.Red ?? noone); //wall frame creating
 	PlayMusic(snd_ankorWatt, true); // play music
 	CreatePlayer(200, 560); // create player
@@ -713,7 +763,7 @@ function CreateLevelEasy12() {
 	
 	CreateNormalBallLarge(370, 100, -global.normalBallLargeMoveX, global.normalBallLargeMoveY,
 	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
-	normalBallColorType.Green, normalBallGiantDropItemType.Nothing, true);
+	normalBallColorType.Green, normalBallGiantDropItemType.DropQualityLevel_1, true);
 	
 	
 	//wall
@@ -763,7 +813,7 @@ function CreateLevelEasy12() {
 function CreateLevelEasy13() {
 	
 	// init
-	LoadBackgroundImage("waterFall_morning"); //Load background with current level number
+	LoadBackgroundImage("waterFall_morning"); //Load background
 	CreateWallFrame(wallFrameType.Blue ?? noone); //wall frame creating
 	PlayMusic(snd_criminal_case, true); // play music
 	CreatePlayer(550, 500); // create player
@@ -781,123 +831,389 @@ function CreateLevelEasy13() {
 
 #endregion
 
+#region Level 14 - Australia morning (red)
 
-
-
-
-
-
-
-#region Level test
-
-function CreateLevelTest() {
+function CreateLevelEasy14() {
 	
 	// init
-	LoadBackgroundImage("japan_morning"); //Load background with current level number
-	CreateWallFrame(spr_wall_ground_blue); //wall frame creating
-	PlayMusic(snd_mtFuji, false); // play music
-
-	CreatePlayer(900, 300); // create player
-	
-	//Wall
-	CreateWall(50, 50, wallType.Blue);
-	//CreateWall(950, 30, wallColorType.Green);
-	
-	CreateWallMany(global.wallFrameSize, 500, wallType.Red, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 532, wallType.Blue, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 564, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 596, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 629, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 661, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallFrameSize, 690, wallType.Green, wallCreatorDirectionType.Right, 5);
-	
-	//CreateWallMany(500, 300, wallType.Red, wallCreatorDirectionType.Left, 5);
-	//CreateWallMany(500, 300, wallType.Blue, wallCreatorDirectionType.Right, 5);
-	//CreateWallMany(500, 300, wallType.Blue, wallCreatorDirectionType.Top, 5);
-	//CreateWallMany(500, 300, wallType.Green, wallCreatorDirectionType.Bottom, 5);
-	CreateWallDestroyableMany(500, 332, wallCreatorDirectionType.Left, 3);
-	CreateWallDestroyableMany(500, 364, wallCreatorDirectionType.Left, 3);
-	CreateWallDestroyableMany(500, 300, wallCreatorDirectionType.Left, 3);
-	
-	//item
-//	CreateItem(100, 200,  obj_item_shotgun)
-	CreateItem(100, 650,obj_item_double_sting)
-	CreateItem(200, 650,obj_item_power_wire)
-//	CreateItem(80, 200, obj_item_life)
-	CreateItem(120, 200, obj_item_grenade)
-	CreateItem(160, 200, obj_item_life)
-	CreateItem(200, 200, obj_item_food)
-	
-	
-	CreateLifePoint(400,200,lifePointType.Red);
-		//CreateItem(400, 200, obj_item_life_point)
-	CreateFoodByImageIndex(32,30,1);
-	CreateFoodByImageIndex(32,30,2);
-	CreateFoodByImageIndex(32,30,3);
-	CreateFoodByImageIndex(32,30,4);
-	CreateFoodByImageIndex(32,30,0);
-	CreateFoodByImageIndex(32,30,5);
-	CreateFoodByImageIndex(32,30,6);
-	CreateFoodByImageIndex(32,30,7);
-	CreateFoodByImageIndex(32,30,8);
-	CreateFoodByImageIndex(32,30,9);
-	CreateFoodByImageIndex(32,30,10);
-	CreateFoodByImageIndex(32,30,11);
-	CreateFoodByImageIndex(32,30,12);
-	CreateFoodByImageIndex(32,30,13);
-	CreateFoodByImageIndex(32,30,14);
-	CreateFoodByImageIndex(32,30,15);
-	CreateFoodByImageIndex(32,30,16);
-	CreateFoodByImageIndex(32,30,17);
-	CreateFoodByImageIndex(32,30,18);
-	CreateFoodByImageIndex(32,30,1);
-	CreateFoodByImageIndex(32,30,1);
-	CreateFoodByImageIndex(32,30,1);
-	CreateFoodByImageIndex(32,30,1);
-	CreateFoodByImageIndex(32,30,1);
-	CreateFoodByImageIndex(32,30,1);
-	CreateFoodByImageIndex(32,30,1);
-	CreateFoodByImageIndex(32,30,1);
-	
-		//CreateItem(850, 200, obj_item_gravity_strong_reverse);
-		//CreateItem(850, 200, obj_item_machine_gun);
-		CreateItem(750, 200, obj_item_bomb);
-		CreateItem(690, 200, obj_item_tracking_rocket_launcher);
-		CreateItem(600, 200, obj_item_rocket_launcher);
-		CreateItem(500, 200, obj_item_shotgun);
-		CreateItem(400, 200, obj_item_land_mine);
-		CreateItem(350, 200, obj_item_flamethrower);
-		CreateItem(700, 200, obj_item_energy_shield);
-	
-	
+	LoadBackgroundImage("australia_morning"); //Load background
+	CreateWallFrame(wallFrameType.Red ?? noone); //wall frame creating
+	PlayMusic(snd_australia, true); // play music
+	CreatePlayer(100, 600); // create player
 	
 	//Enemy
-	
-	
-	CreateNormalBallGiant(300, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
-	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
-	normalBallColorType.Red, normalBallGiantDropItemType.Nothing, true);
-	
-	CreateNormalBallGiant(200, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
-	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
-	normalBallColorType.Green, normalBallGiantDropItemType.Nothing, true);
-	
-	
-	CreateNormalBallLarge(500, 100, global.normalBallLargeMoveX, global.normalBallLargeMoveY,
-	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
-	normalBallColorType.Red, normalBallGiantDropItemType.Nothing, true);
-	
-	CreateNormalBallMedium(700, 100, global.normalBallMediumMoveX, global.normalBallMediumMoveY,
+	CreateNormalBallMedium(900, 100, global.normalBallMediumMoveX, global.normalBallMediumMoveY,
 	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
 	normalBallColorType.Red, true);
 	
-	CreateNormalBallSmall(800, 100, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
+	CreateNormalBallMedium(940, 65, -global.normalBallMediumMoveX, global.normalBallMediumMoveY,
+	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
+	normalBallColorType.Red, true);
+	
+	CreateNormalBallMedium(900, 60, global.normalBallMediumMoveX, global.normalBallMediumMoveY,
+	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
+	normalBallColorType.Red, true);
+
+	
+	CreateNormalBallSmall(980, 130, -global.normalBallSmallMoveX, global.normalBallSmallMoveY,
 	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
 	normalBallColorType.Red,  true);
 	
-		CreateNormalBallSmall(800, 670, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
+	CreateNormalBallSmall(950, 126, -global.normalBallSmallMoveX, global.normalBallSmallMoveY,
 	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
 	normalBallColorType.Red,  true);
+	
+	CreateNormalBallSmall(990, 40, -global.normalBallSmallMoveX, global.normalBallSmallMoveY,
+	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
+	normalBallColorType.Red,  true);
+	
+	CreateNormalBallSmall(960, 60, -global.normalBallSmallMoveX, global.normalBallSmallMoveY,
+	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
+	normalBallColorType.Red,  true);
+	
+	CreateNormalBallSmall(950, 60, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
+	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
+	normalBallColorType.Red,  true);
+	
+	CreateNormalBallSmall(920, 86, -global.normalBallSmallMoveX, global.normalBallSmallMoveY,
+	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
+	normalBallColorType.Red,  true);
+	
+	CreateNormalBallSmall(960, 125, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
+	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
+	normalBallColorType.Red,  true);
+	
+	CreateNormalBallSmall(990, 101, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
+	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
+	normalBallColorType.Red,  true);
+	
+	//wall
+	
+	//first row
+	CreateWallMany(288, 150, wallType.Red, wallCreatorDirectionType.Right, 16);
+	CreateWallDestroyableMany(1024 - (global.wallWidth*3), 150, wallCreatorDirectionType.Left, 5);
+	CreateWallMany(1024-32, 150, wallType.Red, wallCreatorDirectionType.Left, 2);
+	
+	//secondrow
+	CreateWallMany(0, 380, wallType.Red, wallCreatorDirectionType.Right, 2);
+	CreateWallDestroyableMany(64, 380, wallCreatorDirectionType.Right, 5);
+	CreateWallMany(224, 380, wallType.Red, wallCreatorDirectionType.Right, 18);
+	
+	//last row
+	CreateWallMany(0, 550, wallType.Red, wallCreatorDirectionType.Right, 2);
+	CreateWallDestroyableMany(224, 550, wallCreatorDirectionType.Right, 5);
+	CreateWallMany(384, 550, wallType.Red, wallCreatorDirectionType.Right, 8);
+	CreateWallDestroyableMany(640, 550, wallCreatorDirectionType.Right, 10);
+	CreateWallMany(960, 550, wallType.Red, wallCreatorDirectionType.Right, 2);
+
+	
+	//items
+	CreateItem(520, 490, obj_item_power_wire)
+
+	CreateLifePoint(240, 320, lifePointType.Red);
+	CreateLifePoint(320, 320, lifePointType.Red);
+	CreateLifePoint(400, 320, lifePointType.Red);
+	CreateLifePoint(480, 320, lifePointType.Red);
+	CreateLifePoint(560, 320, lifePointType.Red);
+	CreateLifePoint(640, 320, lifePointType.Red);
+	CreateLifePoint(720, 320, lifePointType.Red);
+	
+	CreateLifePoint(990, 100, lifePointType.Red);
+	CreateLifePoint(910, 100, lifePointType.Red);
+	CreateLifePoint(830, 100, lifePointType.Red);
+	CreateLifePoint(750, 100, lifePointType.Red);
+	CreateLifePoint(670, 100, lifePointType.Red);
+	CreateLifePoint(590, 100, lifePointType.Red);
+	CreateLifePoint(510, 100, lifePointType.Red);
+	CreateLifePoint(430, 100, lifePointType.Red);
+	CreateLifePoint(350, 100, lifePointType.Red);
+
+	
+
+}
+
+#endregion
+
+#region Level 15 - Australia twilight (red)
+
+function CreateLevelEasy15() {
+	
+	// init
+	LoadBackgroundImage("australia_twilight"); //Load background
+	CreateWallFrame(wallFrameType.Red ?? noone); //wall frame creating
+	PlayMusic(snd_australia, true); // play music
+	CreatePlayer(480, 50); // create player
+	
+	//Enemy
+	CreateNormalBallGiant(100, 100, -global.normalBallGiantMoveX, global.normalBallGiantMoveY,
+	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
+	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_1, true);
+	
+	CreateNormalBallGiant(900, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
+	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
+	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_1, true);
+	
+	//wall
+	CreateWallMany(416, 150, wallType.Blue, wallCreatorDirectionType.Right, 6);
+	CreateWallMany(200, 550, wallType.Blue, wallCreatorDirectionType.Right, 2);
+	CreateWallMany(824, 550, wallType.Blue, wallCreatorDirectionType.Left, 2);
+	
+	//items
+	CreateFoodByImageIndex(30, 640, 32)
+	CreateFoodByImageIndex(70, 640, 32)
+	CreateFoodByImageIndex(110, 640, 32)
+	CreateFoodByImageIndex(150, 640, 32)
+	
+	CreateFoodByImageIndex(870, 640,31);
+	CreateFoodByImageIndex(910, 640, 31);
+	CreateFoodByImageIndex(950, 640, 31);
+	CreateFoodByImageIndex(990, 640, 31);
+	
+	CreateLifePoint(215, 450, lifePointType.Blue);
+	CreateLifePoint(245, 450, lifePointType.Blue);
+	CreateLifePoint(805, 450, lifePointType.Blue);
+	CreateLifePoint(835, 450, lifePointType.Blue);
+
+}
+
+#endregion
+
+#region Level 16 - Australia night (red)
+
+function CreateLevelEasy16() {
+	
+	// init
+	LoadBackgroundImage("australia_night"); //Load background
+	CreateWallFrame(wallFrameType.Red ?? noone); //wall frame creating
+	PlayMusic(snd_australia, true); // play music
+	CreatePlayer(500, 600); // create player
+	
+	//Enemy
+	CreateNormalBallGiant(500, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
+	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
+	normalBallColorType.Green, normalBallGiantDropItemType.DropQualityLevel_1, true);
+	
+	CreateNormalBallLarge(200, 200, -global.normalBallLargeMoveX, global.normalBallLargeMoveY,
+	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
+	normalBallColorType.Green, normalBallGiantDropItemType.DropQualityLevel_1, true);
+	
+	
+	
+	//wall	
+	CreateWallDestroyableMany(200, 350, wallCreatorDirectionType.Right, 2);
+	CreateWallDestroyableMany(400, 200, wallCreatorDirectionType.Right, 2);
+	
+	CreateWallDestroyableMany(800, 350, wallCreatorDirectionType.Left, 2);
+	CreateWallDestroyableMany(600, 200, wallCreatorDirectionType.Left, 2);
+	
+	
+	
+	CreateWallMany(0, 550, wallType.Green, wallCreatorDirectionType.Right, 1);
+	CreateWallMany(64, 550, wallType.Green, wallCreatorDirectionType.Right, 1);
+	CreateWallMany(128, 550, wallType.Green, wallCreatorDirectionType.Right, 1);
+	CreateWallMany(192, 550, wallType.Green, wallCreatorDirectionType.Right, 1);
+	CreateWallMany(256, 550, wallType.Green, wallCreatorDirectionType.Right, 1);
+	CreateWallMany(320, 550, wallType.Green, wallCreatorDirectionType.Right, 1);
+	CreateWallMany(384, 550, wallType.Green, wallCreatorDirectionType.Right, 1);
+	CreateWallMany(448, 550, wallType.Green, wallCreatorDirectionType.Right, 2);
+	
+	CreateWallMany(992, 550, wallType.Green, wallCreatorDirectionType.Left, 1);
+	CreateWallMany(928, 550, wallType.Green, wallCreatorDirectionType.Left, 1);
+	CreateWallMany(864, 550, wallType.Green, wallCreatorDirectionType.Left, 1);
+	CreateWallMany(800, 550, wallType.Green, wallCreatorDirectionType.Left, 1);
+	CreateWallMany(736, 550, wallType.Green, wallCreatorDirectionType.Left, 1);
+	CreateWallMany(672, 550, wallType.Green, wallCreatorDirectionType.Left, 2);
+
+	//items
+
+	
+	CreateFoodByImageIndex(215, 100, 31);
+	CreateFoodByImageIndex(245, 100, 31);
+	CreateFoodByImageIndex(415, 100, 31);
+	CreateFoodByImageIndex(445, 100, 31);
+	
+	CreateFoodByImageIndex(785, 100, 31);
+	CreateFoodByImageIndex(815, 100, 31);
+	CreateFoodByImageIndex(585, 100, 31);
+	CreateFoodByImageIndex(615, 100, 31);
+	
+	
+	CreateItem(900, 630, obj_item_power_wire);
+	CreateItem(100, 630, obj_item_health_potion);
+}
+
+#endregion
+
+#region Level 17 - India morning (gray)
+
+function CreateLevelEasy17() {
+	
+	// init
+	LoadBackgroundImage("india_morning"); //Load background
+	CreateWallFrame(wallFrameType.Gray ?? noone); //wall frame creating
+	PlayMusic(snd_taj_mahal, true); // play music
+	CreatePlayer(600, 50); // create player
+	
+	//Enemy
+	CreateNormalBallGiant(150, 400, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
+	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
+	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_1, true);
+	
+	CreateNormalBallGiant(300, 400, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
+	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
+	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_1, true);
+	
+	CreateNormalBallLarge(100, 70, global.normalBallLargeMoveX, global.normalBallLargeMoveY,
+	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
+	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_1, true);
+
+	//wall
+	var firstRowWallX = 40;
+	
+	for (var i = 0; i < 11; i++) {
+		CreateWallMany(firstRowWallX, 150, wallType.Red, wallCreatorDirectionType.Right, 1);
+		firstRowWallX += 64;
+	}
+
+	
+	//items
+	CreateItem(950, 500, obj_item_health_potion)
+	
+	CreateFoodByImageIndex(30, 640, 23)
+	CreateFoodByImageIndex(70, 640, 30)
+	CreateFoodByImageIndex(110, 640, 23 )
+	CreateFoodByImageIndex(150, 640, 30)
+	
+	CreateLifePoint(215, 640, lifePointType.Red);
+	CreateLifePoint(245, 640, lifePointType.Red);
+	CreateLifePoint(275, 640, lifePointType.Red);
+	CreateLifePoint(305, 640, lifePointType.Red);
+
+}
+
+#endregion
+
+#region Level 18 - India twilight (gray)
+
+function CreateLevelEasy18() {
+	
+	// init
+	LoadBackgroundImage("india_twilight"); //Load background
+	CreateWallFrame(wallFrameType.Gray ?? noone); //wall frame creating
+	PlayMusic(snd_taj_mahal, true); // play music
+	CreatePlayer(200, 600); // create player
+	
+	//Enemy
+	CreateNormalBallGiant(100, 100, -global.normalBallGiantMoveX, global.normalBallGiantMoveY,
+	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
+	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_1, true);
+	
+	CreateNormalBallMedium(300, 300, global.normalBallMediumMoveX, global.normalBallMediumMoveY,
+	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
+	normalBallColorType.Blue, true);
+	
+	CreateNormalBallMedium(950, 100, -global.normalBallMediumMoveX, global.normalBallMediumMoveY,
+	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
+	normalBallColorType.Blue, true);
+	
+	CreateBlackBallLarge(500, 100, false, true );
+	
+	//wall
+	CreateWallMany(50, 200, wallType.Blue, wallCreatorDirectionType.Right, 6);
+	CreateWallMany(900, 200, wallType.Blue, wallCreatorDirectionType.Left, 11);
+	
+	CreateWallMany(242, 400, wallType.Blue, wallCreatorDirectionType.Right, 15);
+	CreateWallMany(992, 550, wallType.Blue, wallCreatorDirectionType.Left, 5);
+	
+	CreateWallDestroyableMany(242, 50, wallCreatorDirectionType.Bottom, 4);
+	CreateWallDestroyableMany(210, 250, wallCreatorDirectionType.Bottom, 4);
+	
+	
+	
+	//items
+	CreateFoodByImageIndex(260, 300, 23)
+	CreateFoodByImageIndex(320, 300, 23)
+	CreateFoodByImageIndex(380, 300, 23)
+	CreateFoodByImageIndex(440, 300, 23)
+	CreateFoodByImageIndex(500, 300,30);
+	CreateFoodByImageIndex(560, 300, 30);
+	CreateFoodByImageIndex(620, 300, 30);
+	CreateFoodByImageIndex(680, 300, 30);
+	
+	CreateLifePoint(70, 100, lifePointType.Blue);
+	CreateLifePoint(120, 100, lifePointType.Blue);
+	CreateLifePoint(170, 100, lifePointType.Blue);
+	CreateLifePoint(220, 100, lifePointType.Blue);
+	
+	CreateLifePoint(610, 100, lifePointType.Blue);
+	CreateLifePoint(660, 100, lifePointType.Blue);
+	CreateLifePoint(710, 100, lifePointType.Blue);
+	CreateLifePoint(760, 100, lifePointType.Blue);
+	CreateLifePoint(810, 100, lifePointType.Blue);
+	CreateLifePoint(860, 100, lifePointType.Blue);
+	CreateLifePoint(910, 100, lifePointType.Blue);
+
+}
+
+#endregion
+
+#region Level 19 - India night (gray)
+
+function CreateLevelEasy19() {
+	
+	// init
+	LoadBackgroundImage("india_night"); //Load background
+	CreateWallFrame(wallFrameType.Gray ?? noone); //wall frame creating
+	PlayMusic(snd_taj_mahal, true); // play music
+	CreatePlayer(600, 600); // create player
+	
+	//Enemy
+	CreateNormalBallMedium(500, 470, global.normalBallMediumMoveX, global.normalBallMediumMoveY,
+	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
+	normalBallColorType.Green, true);
+	
+	CreateNormalBallMedium(600, 470, global.normalBallMediumMoveX, global.normalBallMediumMoveY,
+	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
+	normalBallColorType.Green, true);
+	
+	CreateBlackBallLarge(230, 350, true, true );
+		
+	CreateBlackBallLarge(500, 100, false, true );
+	
+	
+	//wall
+	var firstRowWallX = 60;
+	
+	for (var i = 0; i < 3; i++) {
+		CreateWallMany(firstRowWallX, 250, wallType.Green, wallCreatorDirectionType.Right, 1);
+		firstRowWallX += 80;
+	}
+	
+	CreateWallMany(350, 500, wallType.Green, wallCreatorDirectionType.Right, 5);
+	CreateWallDestroyableMany(510, 500, wallCreatorDirectionType.Right, 4);
+	CreateWallMany(638, 500, wallType.Green, wallCreatorDirectionType.Right, 4);
+	
+	CreateWallMany(350, 468, wallType.Green, wallCreatorDirectionType.Top, 5);
+	CreateWallMany(734, 468, wallType.Green, wallCreatorDirectionType.Top, 5);
+
+
+	//items
+	CreateFoodByImageIndex(55, 100, 23);
+	CreateFoodByImageIndex(85, 100, 23);
+	CreateFoodByImageIndex(140, 100, 23);
+	CreateFoodByImageIndex(160, 100, 23);
+	CreateFoodByImageIndex(220, 100, 23);
+	CreateFoodByImageIndex(240, 100, 23);
+	
+	CreateLifePoint(410, 100, lifePointType.Green);
+	CreateLifePoint(450, 100, lifePointType.Green);
+	CreateLifePoint(490, 100, lifePointType.Green);
+	CreateLifePoint(530, 100, lifePointType.Green);
+	CreateLifePoint(570, 100, lifePointType.Green);
+	CreateLifePoint(610, 100, lifePointType.Green);
+	CreateLifePoint(650, 100, lifePointType.Green);
+	CreateLifePoint(690, 100, lifePointType.Green);
+
 	
 }
 
