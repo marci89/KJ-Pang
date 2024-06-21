@@ -45,20 +45,20 @@ function Init() {
 	}
 	
 	if(buttonId == 4) {
-		image = spr_item_dynamite;
-		infoType = informationType.Dynamite;
-		requiredDifficult = gameDifficultType.Easy;
-	}
-	
-	if(buttonId == 5) {
 		image = spr_item_health_potion;
 		infoType = informationType.HealthPotion;
 		requiredDifficult = gameDifficultType.Easy;
 	}
 	
-	if(buttonId == 6) {
+	if(buttonId == 5) {
 		image = spr_item_energy_shield;
 		infoType = informationType.EnergyShield;
+		requiredDifficult = gameDifficultType.Easy;
+	}
+	
+	if(buttonId == 6) {
+		image = spr_item_dynamite;
+		infoType = informationType.Dynamite;
 		requiredDifficult = gameDifficultType.Easy;
 	}
 	
@@ -84,6 +84,12 @@ function Init() {
 	if(buttonId == 10) {
 		image = spr_item_antigravity;
 		infoType = informationType.Antigravity;
+		requiredDifficult = gameDifficultType.Easy;
+	}
+	
+	if(buttonId == 11) {
+		image = spr_item_first_aid_kit;
+		infoType = informationType.FirstAidKit;
 		requiredDifficult = gameDifficultType.Easy;
 	}
 	

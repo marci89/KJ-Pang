@@ -13,10 +13,10 @@ PlaySound(snd_ball_destroy, false, 3);
 DropItem();
 
 //create gems 
+CreateLifePointWithMovement(x,y,1,-3, lifePointType.Black);
+CreateLifePointWithMovement(x,y,-1,-3, lifePointType.Black);
 CreateLifePointWithMovement(x,y,2,-3, lifePointType.Black);
 CreateLifePointWithMovement(x,y,-2,-3, lifePointType.Black);
-CreateLifePointWithMovement(x,y,4,-3, lifePointType.Black);
-CreateLifePointWithMovement(x,y,-4,-3, lifePointType.Black);
 
 
 //Create child balls

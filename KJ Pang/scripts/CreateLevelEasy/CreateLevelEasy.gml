@@ -12,7 +12,7 @@ global.hasRoomWallFrame = false; // no wall frames
 global.isRestartLevelAfterDead = true; //restart after death
 global.levelTimeMax = 150; // level's max time
 //global.playerOneDefaultWeapon = weaponType.MachineGun;
-global.level = 18;
+global.level = 20;
 
 	//Giant normal ball default properties
 	global.normalBallGiantMoveX = 0.5;
@@ -160,7 +160,7 @@ global.level = 18;
 	
 		//Giant normal ball default properties
 		global.normalBallGiantMoveX = 1.5;
-		global.normalBallGiantMoveY = -4;
+		global.normalBallGiantMoveY = -3;
 		global.normalBallGiantGravityY = 0.1;
 		global.normalBallGiantJumpHeightMax = -14;
 		//Large normal ball default properties
@@ -170,12 +170,12 @@ global.level = 18;
 		global.normalBallLargeJumpHeightMax = -8;
 		//Medium normal ball default properties
 		global.normalBallMediumMoveX = 1;
-		global.normalBallMediumMoveY = -2;
+		global.normalBallMediumMoveY = -3;
 		global.normalBallMediumGravityY = 0.1;
 		global.normalBallMediumJumpHeightMax = -8;
 		//Small normal ball default properties
 		global.normalBallSmallMoveX = 1;
-		global.normalBallSmallMoveY = -2.2;
+		global.normalBallSmallMoveY = -3;
 		global.normalBallSmallGravityY = 0.09;
 		global.normalBallSmallJumpHeightMax = -6;
 	
@@ -191,6 +191,21 @@ global.level = 18;
 	
 	if(global.level == 19) {
 		CreateLevelEasy19();
+		return;
+	}
+	
+	if(global.level == 20) {
+		CreateLevelEasy20();
+		return;
+	}
+	
+	if(global.level == 21) {
+		CreateLevelEasy21();
+		return;
+	}
+	
+	if(global.level == 22) {
+		CreateLevelEasy22();
 		return;
 	}
 }
@@ -1213,6 +1228,149 @@ function CreateLevelEasy19() {
 	CreateLifePoint(610, 100, lifePointType.Green);
 	CreateLifePoint(650, 100, lifePointType.Green);
 	CreateLifePoint(690, 100, lifePointType.Green);
+
+	
+}
+
+#endregion
+
+#region Level 20 - Leningrad morning (blue)
+
+function CreateLevelEasy20() {
+	
+	// init
+	LoadBackgroundImage("leningrad_morning"); //Load background
+	CreateWallFrame(wallFrameType.Snow ?? noone); //wall frame creating
+	PlayMusic(snd_leningrad, true); // play music
+	CreatePlayer(500, 600); // create player
+	
+	//Enemy
+	CreateNormalBallGiant(400, 200, -global.normalBallGiantMoveX, global.normalBallGiantMoveY,
+	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
+	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_1, true);
+	
+	CreateNormalBallLarge(550, 200, global.normalBallLargeMoveX, global.normalBallLargeMoveY,
+	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
+	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_1, true);
+	
+	//wall
+
+	//items
+	CreateItem(950, 500, obj_item_health_potion)
+	CreateItem(70, 500, obj_item_energy_shield)
+
+}
+
+#endregion
+
+#region Level 21 - Leningrad twilight (blue)
+
+function CreateLevelEasy21() {
+	
+	// init
+	LoadBackgroundImage("leningrad_twilight"); //Load background
+	CreateWallFrame(wallFrameType.Snow ?? noone); //wall frame creating
+	PlayMusic(snd_leningrad, true); // play music
+	CreatePlayer(500, 600); // create player
+	
+	//Enemy
+	CreateNormalBallLarge(150, 500, global.normalBallLargeMoveX, global.normalBallLargeMoveY,
+	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
+	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_1, true);
+	
+	CreateNormalBallLarge(900, 500, -global.normalBallLargeMoveX, global.normalBallLargeMoveY,
+	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
+	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_1, true);
+	
+	CreateNormalBallLarge(250, 200, global.normalBallLargeMoveX, global.normalBallLargeMoveY,
+	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
+	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_1, true);
+	
+	CreateNormalBallLarge(750, 200, -global.normalBallLargeMoveX, global.normalBallLargeMoveY,
+	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
+	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_1, true);
+	
+	
+	
+	//wall
+	CreateWallMany(0, 500, wallType.Blue, wallCreatorDirectionType.Right, 2);
+	CreateWallMany(992, 500, wallType.Blue, wallCreatorDirectionType.Left, 2);
+	
+	CreateWallSnowMany(115, 300, wallCreatorDirectionType.Right, 25);
+
+	
+	//items
+	CreateFoodByImageIndex(50, 580, 1)
+	CreateFoodByImageIndex(100, 580, 1)
+	CreateFoodByImageIndex(150, 580, 1)
+	CreateFoodByImageIndex(200, 580, 1)
+	CreateFoodByImageIndex(970, 580,12);
+	CreateFoodByImageIndex(920, 580, 12);
+	CreateFoodByImageIndex(870, 580, 12);
+	CreateFoodByImageIndex(820, 580, 12);
+	
+	CreateLifePoint(140, 100, lifePointType.Blue);
+	CreateLifePoint(190, 100, lifePointType.Blue);
+	CreateLifePoint(240, 100, lifePointType.Blue);
+	CreateLifePoint(290, 100, lifePointType.Blue);
+	CreateLifePoint(340, 100, lifePointType.Blue);
+	CreateLifePoint(390, 100, lifePointType.Blue);
+	CreateLifePoint(440, 100, lifePointType.Blue);
+	CreateLifePoint(490, 100, lifePointType.Blue);
+	CreateLifePoint(540, 100, lifePointType.Blue);
+	CreateLifePoint(590, 100, lifePointType.Blue);
+	CreateLifePoint(640, 100, lifePointType.Blue);
+	CreateLifePoint(690, 100, lifePointType.Blue);
+	CreateLifePoint(740, 100, lifePointType.Blue);
+	CreateLifePoint(790, 100, lifePointType.Blue);
+	CreateLifePoint(840, 100, lifePointType.Blue);
+	CreateLifePoint(890, 100, lifePointType.Blue);
+	
+	CreateItem(400, 600, obj_item_energy_shield)
+
+}
+
+#endregion
+
+#region Level 22 - Leningrad night (blue)
+
+function CreateLevelEasy22() {
+	
+	// init
+	LoadBackgroundImage("leningrad_night"); //Load background
+	CreateWallFrame(wallFrameType.Blue ?? noone); //wall frame creating
+	PlayMusic(snd_leningrad, true); // play music
+	CreatePlayer(100, 600); // create player
+	
+	//Enemy
+	CreateNormalBallGiant(500, 200, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
+	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
+	normalBallColorType.Green, normalBallGiantDropItemType.DropQualityLevel_1, true);
+	
+	
+	
+	//wall
+	CreateWallMany(200, 670, wallType.Green, wallCreatorDirectionType.Right, 6);
+	CreateWallMany(424, 670, wallType.Green, wallCreatorDirectionType.Right, 4);
+	CreateWallMany(584, 670, wallType.Green, wallCreatorDirectionType.Right, 7);
+	
+	CreateWallMany(200, 590, wallType.Green, wallCreatorDirectionType.Right, 4);
+	CreateWallMany(360, 590, wallType.Green, wallCreatorDirectionType.Right, 5);
+	CreateWallMany(552, 590, wallType.Green, wallCreatorDirectionType.Right, 3);
+	CreateWallMany(680, 590, wallType.Green, wallCreatorDirectionType.Right, 4);
+
+	
+	CreateWallSnowMany(200, 500,  wallCreatorDirectionType.Right, 3);
+	CreateWallSnowMany(328, 500, wallCreatorDirectionType.Right, 4);
+	CreateWallSnowMany(488, 500, wallCreatorDirectionType.Right, 4);
+	CreateWallSnowMany(646, 500, wallCreatorDirectionType.Right, 2);
+	CreateWallSnowMany(742, 500, wallCreatorDirectionType.Right, 2);
+
+	//items
+	CreateFoodByImageIndex(840, 580, 1)
+	CreateFoodByImageIndex(890, 580, 1)
+	CreateFoodByImageIndex(940, 580, 1)
+	CreateItem(990, 580, obj_item_health_potion);
 
 	
 }

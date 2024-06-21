@@ -34,6 +34,10 @@ jumpSpeed = 15; // jump height
 gravSpeed = 0.5; // player gravity
 isOnGround  = false; // it is on ground or air
 
+//snow
+isOnSnow = false; // To check if the player is on snow
+slideDeceleration = 0.11; // Deceleration rate for sliding
+
 //blinking
 isBlinked = false; // after death you will blink for a while
 blinkDuration = 51; // Duration of the blinking animation in number

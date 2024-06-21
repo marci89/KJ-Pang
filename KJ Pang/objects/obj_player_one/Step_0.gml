@@ -6,7 +6,7 @@ var halfSpriteHeight = sprite_height / 2;
 isOnGround = place_meeting(x, y + 10, obj_wall_parent); // Check if the object is on the ground
 
 #endregion
-		
+	
 #region Player inputs
 
 SetPlayerInputs();
@@ -19,8 +19,27 @@ if (!isDead) {
 
   // Horizontal movement
   if (!place_meeting(x, y - 1, obj_wall_parent) ) {
-        moveX = inputX * moveSpeed;				
-  }
+	  
+      // If moving, use input
+      if (inputX != 0) {
+          moveX = inputX * moveSpeed;
+      }
+	  
+	  // If stopped and on snow, decelerate
+      else if (isOnSnow) {
+          if (moveX > 0) {
+              moveX = max(0, moveX - slideDeceleration);
+          } else if (moveX < 0) {
+              moveX = min(0, moveX + slideDeceleration);
+          }
+	  }
+	  
+	  // If stopped and not on snow, stop immediately
+      else {
+          moveX = 0;
+      }
+  } 
+
   
   // Jump
   if (inputJump && (place_meeting(x, y + 1, obj_wall_parent) )) {
@@ -43,7 +62,30 @@ var _finalMoveY = moveY;
 
 #endregion
 
+#region Wall snow collision
+
+// Check if the player is on snow
+if (place_meeting(x, y + 1, obj_wall_parent)) {
+	
+	var wallInstance = instance_place(x, y+1, obj_wall_parent);
+	
+	if (wallInstance != noone) {
+		
+		//snow wall and snowy ground
+		if (wallInstance.object_index == obj_wall_snow
+		|| wallInstance.sprite_index == spr_wall_ground_snow) {
+			isOnSnow = true;
+		} else {
+			isOnSnow = false;
+		}
+	}
+}
+
+#endregion
+
 #region Wall collisions
+
+
 
 // X
 if (place_meeting(x + _finalMoveX, y, obj_wall_parent)) {

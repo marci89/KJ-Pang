@@ -55,6 +55,9 @@ function CreateWallGround(frameType) {
 		
 		if(i == 72){
 			wall.sprite_index = GetLastWallFrameTypeImage(frameType);
+			if (frameType == wallFrameType.Snow) {
+				wall.sprite_index = spr_wall_ground_snow;
+			}
 		}
     }
 }
@@ -88,6 +91,10 @@ function GetWallFrameTypeImage(frameType) {
 	if (frameType == wallFrameType.Purple) {
 		return spr_wall_ground_purple;
 	}
+	
+	if (frameType == wallFrameType.Snow) {
+		return spr_wall_ground_snow;
+	}
 }
 
 #endregion
@@ -118,6 +125,10 @@ function GetLastWallFrameTypeImage(frameType) {
 	
 	if (frameType == wallFrameType.Purple) {
 		return spr_wall_ground_last_purple;
+	}
+	
+	if (frameType == wallFrameType.Snow) {
+		return spr_wall_ground_last_blue;
 	}
 }
 

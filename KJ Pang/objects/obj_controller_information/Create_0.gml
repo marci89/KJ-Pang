@@ -91,7 +91,18 @@ function CreateEasyLevelInformation() {
 
 	    var enemyPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_enemy_panel);
 		enemyPanelObj.Init(enemyInformationType.BlackBall ?? noone);
+	}
 	
+	if (global.stageLevel == 8) {
+
+	    var infoPanelObj1 = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj1.Init(informationType.SnowWall ?? noone);
+	}
+	
+	if (global.stageLevel == 9) {
+
+	    var infoPanelObj1 = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj1.Init(informationType.Pistol ?? noone);
 	}
 	
 	

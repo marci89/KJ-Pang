@@ -66,6 +66,7 @@ enum informationType{
 	HealthPotion,
 	FirstAidKit,
 	Life,
+	SnowWall,
 };
 
 #endregion
@@ -194,7 +195,8 @@ enum wallType{
 	Purple,
 	Destroyable,
 	Frame,
-	Indestructible
+	Indestructible,
+	Snow
 };
 
 #endregion

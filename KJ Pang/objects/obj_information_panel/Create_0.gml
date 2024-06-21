@@ -53,16 +53,16 @@ function Init(type) {
 		image = spr_status_time_slow;
 	}
 	
-	if(type == informationType.Dynamite) {
-		titleText =  GetLocalizedText("dynamiteTitle"); 
-		descriptionText =  GetLocalizedText("dynamiteDesc"); 
-		image = spr_status_dynamite;
-	}
-	
 	if(type == informationType.EnergyShield) {
 		titleText =  GetLocalizedText("energyShieldTitle"); 
 		descriptionText =  GetLocalizedText("energyShieldDesc"); 
 		image = spr_status_energy_shield;
+	}
+	
+	if(type == informationType.Dynamite) {
+		titleText =  GetLocalizedText("dynamiteTitle"); 
+		descriptionText =  GetLocalizedText("dynamiteDesc"); 
+		image = spr_status_dynamite;
 	}
 	
 	if(type == informationType.Magnet) {
@@ -148,7 +148,12 @@ function Init(type) {
 		descriptionText =  GetLocalizedText("lifeDesc"); 
 		image = spr_item_life;
 	}
-		
+	
+	if(type == informationType.SnowWall) {
+		titleText =  GetLocalizedText("snowWallTitle"); 
+		descriptionText =  GetLocalizedText("snowWallDesc"); 
+		image = spr_wall_snow;
+	}
 
 }
 
