@@ -12,7 +12,7 @@ global.hasRoomWallFrame = false; // no wall frames
 global.isRestartLevelAfterDead = true; //restart after death
 global.levelTimeMax = 150; // level's max time
 //global.playerOneDefaultWeapon = weaponType.MachineGun;
-global.level = 20;
+global.level = 26;
 
 	//Giant normal ball default properties
 	global.normalBallGiantMoveX = 0.5;
@@ -206,6 +206,26 @@ global.level = 20;
 	
 	if(global.level == 22) {
 		CreateLevelEasy22();
+		return;
+	}
+	
+	if(global.level == 23) {
+		CreateLevelEasy23();
+		return;
+	}
+	
+	if(global.level == 24) {
+		CreateLevelEasy24();
+		return;
+	}
+	
+	if(global.level == 25) {
+		CreateLevelEasy25();
+		return;
+	}
+	
+	if(global.level == 26) {
+		CreateLevelEasy26();
 		return;
 	}
 }
@@ -1234,7 +1254,7 @@ function CreateLevelEasy19() {
 
 #endregion
 
-#region Level 20 - Leningrad morning (blue)
+#region Level 20 - Leningrad morning (snow)
 
 function CreateLevelEasy20() {
 	
@@ -1263,7 +1283,7 @@ function CreateLevelEasy20() {
 
 #endregion
 
-#region Level 21 - Leningrad twilight (blue)
+#region Level 21 - Leningrad twilight (snow)
 
 function CreateLevelEasy21() {
 	
@@ -1332,7 +1352,7 @@ function CreateLevelEasy21() {
 
 #endregion
 
-#region Level 22 - Leningrad night (blue)
+#region Level 22 - Leningrad night (snow)
 
 function CreateLevelEasy22() {
 	
@@ -1373,6 +1393,207 @@ function CreateLevelEasy22() {
 	CreateItem(990, 580, obj_item_health_potion);
 
 	
+}
+
+#endregion
+
+#region Level 23 - Paris morning (purple)
+
+function CreateLevelEasy23() {
+	
+	// init
+	LoadBackgroundImage("paris_morning"); //Load background
+	CreateWallFrame(wallFrameType.Purple ?? noone); //wall frame creating
+	PlayMusic(snd_paris, true); // play music
+	CreatePlayer(470, 600); // create player
+	
+	//Enemy
+	CreateNormalBallGiant(400, 100, -global.normalBallGiantMoveX, global.normalBallGiantMoveY,
+	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
+	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_1, true);
+	
+	CreateNormalBallGiant(850, 100, -global.normalBallGiantMoveX, global.normalBallGiantMoveY,
+	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
+	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_1, true);
+	
+	CreateBlackBallLarge(100, 100, false, true );
+	
+
+	
+	//wall
+	CreateWallMany(440, 490, wallType.Red, wallCreatorDirectionType.Right, 5);
+	CreateWallDestroyableMany(200, 250, wallCreatorDirectionType.Right, 2);
+	CreateWallDestroyableMany(824, 250, wallCreatorDirectionType.Left, 2);
+		
+
+	//items
+	CreateItem(640, 550, obj_item_pistol)
+	
+	CreateLifePoint(450, 320, lifePointType.Red);
+	CreateLifePoint(470, 320, lifePointType.Red);
+	CreateLifePoint(490, 320, lifePointType.Red);
+	CreateLifePoint(510, 320, lifePointType.Red);
+	CreateLifePoint(530, 320, lifePointType.Red);
+	CreateLifePoint(550, 320, lifePointType.Red);
+	CreateLifePoint(570, 320, lifePointType.Red);
+	CreateLifePoint(590, 320, lifePointType.Red);
+	
+	CreateLifePoint(800, 100, lifePointType.Red);
+	CreateLifePoint(815, 100, lifePointType.Red);
+	CreateLifePoint(825, 100, lifePointType.Red);
+	CreateLifePoint(835, 100, lifePointType.Red);
+	CreateLifePoint(845, 100, lifePointType.Red);
+
+	
+
+	CreateLifePoint(215, 100, lifePointType.Red);
+	CreateLifePoint(225, 100, lifePointType.Red);
+	CreateLifePoint(235, 100, lifePointType.Red);
+	CreateLifePoint(245, 100, lifePointType.Red);
+	CreateLifePoint(255, 100, lifePointType.Red);
+	
+	CreateFoodByImageIndex(30, 640, 29)
+	CreateFoodByImageIndex(70, 640, 29)
+	CreateFoodByImageIndex(110, 640, 29)
+	CreateFoodByImageIndex(150, 640, 29)
+	CreateFoodByImageIndex(190, 640, 29)
+	CreateFoodByImageIndex(230, 640, 29)
+	CreateFoodByImageIndex(270, 640, 29)
+	
+	CreateFoodByImageIndex(750, 640, 29);
+	CreateFoodByImageIndex(790, 640, 29);
+	CreateFoodByImageIndex(830, 640, 29);
+	CreateFoodByImageIndex(870, 640, 29);
+	CreateFoodByImageIndex(910, 640, 29);
+	CreateFoodByImageIndex(950, 640, 29);
+	CreateFoodByImageIndex(990, 640, 29);
+
+
+}
+
+#endregion
+
+#region Level 24 - Paris twilight (purple)
+
+function CreateLevelEasy24() {
+	
+	// init
+	LoadBackgroundImage("paris_twilight"); //Load background
+	CreateWallFrame(wallFrameType.Purple ?? noone); //wall frame creating
+	PlayMusic(snd_paris, true); // play music
+	CreatePlayer(500, 600); // create player
+	
+	//Enemy
+	CreateNormalBallGiant(150, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
+	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
+	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_1, true);
+	
+	CreateNormalBallGiant(850, 400, -global.normalBallGiantMoveX, global.normalBallGiantMoveY,
+	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
+	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_1, true);
+	
+	
+	
+	
+	//wall
+	CreateWallDestroyableMany(464, 490, wallCreatorDirectionType.Right, 3);
+	CreateWallMany(150, 300,wallType.Blue, wallCreatorDirectionType.Right, 1);
+	CreateWallMany(874, 300,wallType.Blue, wallCreatorDirectionType.Left, 1);
+	CreateWallMany(480, 200,wallType.Blue, wallCreatorDirectionType.Right, 2);
+		
+
+	//items
+	CreateItem(490, 300, obj_item_pistol)
+	CreateItem(520, 300, obj_item_health_potion)
+	CreateItem(550, 300, obj_item_pistol)
+
+	
+	CreateLifePoint(30, 640, lifePointType.Blue);
+	CreateLifePoint(70, 640, lifePointType.Blue);
+	CreateLifePoint(110, 640, lifePointType.Blue);
+	CreateLifePoint(150, 640, lifePointType.Blue);
+	CreateLifePoint(190, 640, lifePointType.Blue);
+	
+	CreateFoodByImageIndex(830, 640, 29);
+	CreateFoodByImageIndex(870, 640, 29);
+	CreateFoodByImageIndex(910, 640, 29);
+	CreateFoodByImageIndex(950, 640, 29);
+	CreateFoodByImageIndex(990, 640, 29);
+
+}
+
+#endregion
+
+#region Level 25 - Paris night (purple)
+
+function CreateLevelEasy25() {
+	
+	// init
+	LoadBackgroundImage("paris_night"); //Load background
+	CreateWallFrame(wallFrameType.Purple ?? noone); //wall frame creating
+	PlayMusic(snd_paris, true); // play music
+	CreatePlayer(500, 600); // create player
+	
+	//Enemy
+	CreateNormalBallMedium(500, 440, -global.normalBallMediumMoveX, global.normalBallMediumMoveY,
+	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
+	normalBallColorType.Green, true);
+	CreateNormalBallMedium(500, 440, global.normalBallMediumMoveX, global.normalBallMediumMoveY,
+	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
+	normalBallColorType.Green, true);
+	
+	CreateBlackBallLarge(100, 100, false, true );
+	CreateBlackBallLarge(500, 100, true, true );
+	CreateBlackBallLarge(900, 100, true, true );
+	
+	
+	
+	//wall
+	CreateWallMany(200, 500,wallType.Green, wallCreatorDirectionType.Right, 20);
+
+	//items
+	CreateFoodByImageIndex(270, 200, 29);
+	CreateFoodByImageIndex(370, 200, 29);
+	CreateFoodByImageIndex(470, 200, 29);
+	CreateFoodByImageIndex(570, 200, 29);
+	CreateFoodByImageIndex(670, 200, 29);
+	CreateFoodByImageIndex(770, 200, 29);
+
+	
+	CreateLifePoint(30, 640, lifePointType.Green);
+	CreateLifePoint(70, 640, lifePointType.Green);
+	CreateLifePoint(110, 640, lifePointType.Green);
+	CreateLifePoint(910, 640, lifePointType.Green);
+	CreateLifePoint(950, 640, lifePointType.Green);
+	CreateLifePoint(990, 640, lifePointType.Green);
+
+	
+}
+
+#endregion
+
+#region Level 26 - Second boss level
+
+function CreateLevelEasy26() {
+	
+	// init
+	LoadBackgroundImage("snake_cave"); //Load background
+	CreateWallFrame(wallFrameType.Blue ?? noone); //wall frame creating
+	PlaySound(snd_snake_cave, false,2); // play music
+	CreatePlayer(550, 500); // create player
+	global.isBossLevel = true;
+	global.isRestartLevelAfterDead = false;
+	global.levelTimeMax = 200; // level's max time
+	
+	//Enemy
+	CreateSnakeBossNest(50,50, 5,5, 25, 1000, c_gray);
+	
+	//wall
+	
+	//items
+	CreateItem(74, 550, obj_item_health_potion);
+	CreateItem(130, 550, obj_item_energy_shield);
+	CreateItem(950, 550, obj_item_health_potion);
 }
 
 #endregion

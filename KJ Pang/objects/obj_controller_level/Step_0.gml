@@ -63,4 +63,31 @@ if(global.isLevelTimeUp) {
 }
 
 #endregion
+
+#region Death management for not restart
+
+if (global.isRestartLevelAfterDead == false && !isGameOver) {
+	
+	//single player
+	if (global.playMode == playModeType.SinglePlayer) {
+		if(global.playerOneLife <= 0) {
+			isGameOver = true;
+			CreateRoomTransition(false); // room change animation
+			// restart room		
+			alarm[0] = 170;
+		}
+	}
+
+	//multiplayer
+	if (global.playMode == playModeType.MultiPlayer) {
+		if(global.playerOneLife <= 0 && global.playerTwoLife <= 0) {
+			isGameOver = true;
+			CreateRoomTransition(false); // room change animation
+			// restart room		
+			alarm[0] = 170
+		}
+	}
+}
+
+#endregion
  

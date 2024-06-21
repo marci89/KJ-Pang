@@ -13,9 +13,9 @@ isGravityYEnabled = false; // gravity y enabled or not
 gravSpeedX = 0; // x gavity speed
 gravSpeedY = 0; // y gavity speed
 hitPoint = 1; //health
-enemyScore = 8; // score
+enemyScore = 13; // score
 isImmuneToWeapon = true;
-jumpHeightMax = -6;
+jumpHeightMax = -8;
 
 //helper originals
 originalIsAllowWeaponPassThrough = false; // outside helper prop
@@ -73,7 +73,7 @@ function Disconnected() {
 		moveX = random_range(1,2);
 	}
 	
-	moveY = -1;
+	moveY = -4;
 	isGravityYEnabled = true;
 	gravSpeedY = 0.07;
 	

@@ -8,7 +8,7 @@ if (hitPoint <= 0) {
 
 if (place_meeting(x, y, obj_weapon_parent) && !isOutsideRoom) {
 	
-CreateRandomBallHurtSound();
+//CreateRandomSnakeHurtSound();
 
 var weaponInstance = instance_place(x, y, obj_weapon_parent);
 	if (weaponInstance != noone) {	

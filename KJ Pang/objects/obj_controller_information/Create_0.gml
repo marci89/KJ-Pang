@@ -71,13 +71,10 @@ function CreateEasyLevelInformation() {
 	}
 	
 	if (global.stageLevel == 5) {
-
-		text= GetLocalizedText("BossLevelDesc");
+		newsText = GetLocalizedText("bossLevel");
+		text= GetLocalizedText("notRestartTheLevelAfterDeathDesc");
 		
-	    var enemyPanelObj = instance_create_layer(200, infoPanelStartY ?? 0,"Instances", obj_information_enemy_panel);
-		enemyPanelObj.Init(enemyInformationType.RedBallBoss ?? noone);
-	
-		var infoPanelObj2 = instance_create_layer(550, infoPanelStartY ?? 0,"Instances", obj_information_panel);
+		var infoPanelObj2 = instance_create_layer(362, infoPanelStartY ?? 0,"Instances", obj_information_panel);
 		infoPanelObj2.Init(informationType.Life ?? noone);
 	}
 	
@@ -103,6 +100,11 @@ function CreateEasyLevelInformation() {
 
 	    var infoPanelObj1 = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
 		infoPanelObj1.Init(informationType.Pistol ?? noone);
+	}
+	
+	if (global.stageLevel == 10) {
+		newsText = GetLocalizedText("bossLevel");
+		text = GetLocalizedText("snakeBossShortDesc");
 	}
 	
 	

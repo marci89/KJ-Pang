@@ -15,7 +15,7 @@ gravSpeedX = 0; // x gavity speed
 gravSpeedY = 0.01; // y gavity speed
 hitPoint = 25; //health
 enemyScore = 45; // score
-jumpHeightMax = -8;
+jumpHeightMax = -10;
 
 
 //own properties

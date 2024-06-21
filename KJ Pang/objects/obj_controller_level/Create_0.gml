@@ -6,6 +6,7 @@ audio_stop_all(); // stop every sounds before start
 DeactivateFilters(); // deactive all of filters
 CreateRoomTransition(true); // room start animation
 pausedText = GetLocalizedText("paused"); // translate text
+isGameOver = false;
 
 // Get start values of the player
 playerOneStartFood = global.playerOneFood;

@@ -14,8 +14,11 @@ if(global.isRestartLevelAfterDead) {
 	room_restart();
 	
 } else {
-	isDead = false;
-	isInvincible = true;
-	isBlinked = true;
-	global.playerTwoHealth = 3;
+	
+	if (global.playerTwoLife > 0) {
+		isDead = false;
+		isInvincible = true;
+		isBlinked = true;
+		global.playerTwoHealth = 3;
+	}
 }

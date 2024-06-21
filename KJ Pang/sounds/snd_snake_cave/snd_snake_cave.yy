@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_snake_cave",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":26.073229,
+  "name":"snd_snake_cave",
+  "parent":{
+    "name":"SnakeBoss",
+    "path":"folders/Sounds/Voice/Enemy/Boss/SnakeBoss.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_snake_cave.wav",
+  "type":0,
+  "volume":1.0,
+}
