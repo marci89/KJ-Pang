@@ -3,6 +3,7 @@
 #region Set important things
 
 audio_stop_all(); // stop every sounds before start
+global.currentLevelEffect = noone;
 
 //enable to key press check
 alarm[1] = 150;
@@ -60,8 +61,8 @@ function CreateEasyLevelInformation() {
 	
 	if (global.stageLevel == 3) {
 
-	    var infoPanelObj1 = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
-		infoPanelObj1.Init(informationType.HealthPotion ?? noone);
+	    var infoPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj.Init(informationType.HealthPotion ?? noone);
 	}
 	
 	if (global.stageLevel == 4) {
@@ -74,14 +75,14 @@ function CreateEasyLevelInformation() {
 		newsText = GetLocalizedText("bossLevel");
 		text= GetLocalizedText("notRestartTheLevelAfterDeathDesc");
 		
-		var infoPanelObj2 = instance_create_layer(362, infoPanelStartY ?? 0,"Instances", obj_information_panel);
-		infoPanelObj2.Init(informationType.Life ?? noone);
+		var infoPanelObj = instance_create_layer(362, infoPanelStartY ?? 0,"Instances", obj_information_panel);
+		infoPanelObj.Init(informationType.Life ?? noone);
 	}
 	
 	if (global.stageLevel == 6) {
 
-	    var infoPanelObj1 = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
-		infoPanelObj1.Init(informationType.PowerWire ?? noone);
+	    var infoPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj.Init(informationType.PowerWire ?? noone);
 	}
 	
 	if (global.stageLevel == 7) {
@@ -92,20 +93,77 @@ function CreateEasyLevelInformation() {
 	
 	if (global.stageLevel == 8) {
 
-	    var infoPanelObj1 = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
-		infoPanelObj1.Init(informationType.SnowWall ?? noone);
+	    var infoPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj.Init(informationType.SnowWall ?? noone);
 	}
 	
 	if (global.stageLevel == 9) {
 
-	    var infoPanelObj1 = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
-		infoPanelObj1.Init(informationType.Pistol ?? noone);
+	    var infoPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj.Init(informationType.Pistol ?? noone);
 	}
 	
 	if (global.stageLevel == 10) {
 		newsText = GetLocalizedText("bossLevel");
 		text = GetLocalizedText("snakeBossShortDesc");
 	}
+	
+	if (global.stageLevel == 11) {
+		 var infoPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj.Init(informationType.MachineGun ?? noone);
+	}
+	
+	if (global.stageLevel == 12) {
+		 var infoPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj.Init(informationType.ShotGun ?? noone);
+	}
+	
+	if (global.stageLevel == 13) {
+		var enemyPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_enemy_panel);
+		enemyPanelObj.Init(enemyInformationType.YellowBall ?? noone);
+	}
+	
+	if (global.stageLevel == 14) {
+		 var infoPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj.Init(informationType.Dynamite ?? noone);
+	}
+	
+	if (global.stageLevel == 15) {
+		var enemyPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_enemy_panel);
+		enemyPanelObj.Init(enemyInformationType.HorizontalBall ?? noone);
+	}
+	
+	if (global.stageLevel == 16) {
+		newsText = GetLocalizedText("bossLevel");
+		text = GetLocalizedText("cacodemonShortDesc");
+	}
+	
+	if (global.stageLevel == 17) {
+		 var infoPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj.Init(informationType.Antigravity ?? noone);
+	}
+	
+	if (global.stageLevel == 18) {
+		var enemyPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_enemy_panel);
+		enemyPanelObj.Init(enemyInformationType.AntiGravityBall ?? noone);
+	}
+	
+	if (global.stageLevel == 19) {
+		 var infoPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj.Init(informationType.GravityReverse ?? noone);
+	}
+	
+	if (global.stageLevel == 20) {
+		 var infoPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj.Init(informationType.Magnet ?? noone);
+	}
+	
+	if (global.stageLevel == 21) {
+		newsText = GetLocalizedText("bossLevel");
+		text = GetLocalizedText("easyFinalBattleShortDesc");
+	}
+	
+	
 	
 	
 }

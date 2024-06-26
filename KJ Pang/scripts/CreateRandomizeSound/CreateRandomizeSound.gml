@@ -262,6 +262,26 @@ function CreateRandomCacodemonHurtSound(){
 
 #endregion
 
+#region Create random sound for cacodemon child hurt
+
+function CreateRandomCacodemonChildHurtSound(){
+	
+	var randomIndex = irandom_range(1, 2); 
+    switch (randomIndex) {
+        case 1:
+            PlaySound(snd_cacodemon_child_hurt1, false, 1);
+            break;
+        case 2:
+            PlaySound(snd_cacodemon_child_hurt2, false, 1);
+            break;
+        default:
+            PlaySound(snd_cacodemon_child_hurt1, false, 1);
+            break;
+    }
+}
+
+#endregion
+
 #region Create random sound for small cacodemon death
 
 function CreateRandomCacodemonSmallDeathSound(){

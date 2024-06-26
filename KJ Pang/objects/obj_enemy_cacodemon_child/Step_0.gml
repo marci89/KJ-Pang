@@ -28,7 +28,7 @@ if (place_meeting(x, y, obj_weapon_parent) && !isOutsideRoom && isHurtable) {
 var weaponInstance = instance_place(x, y, obj_weapon_parent);
 	if (weaponInstance != noone) {
 			if ((hitPoint - weaponInstance.damage) > 0) {
-				CreateRandomCacodemonHurtSound();		
+				CreateRandomCacodemonChildHurtSound();		
 		
 				// Set hurt state and change image_blend
 				isHurt = true;

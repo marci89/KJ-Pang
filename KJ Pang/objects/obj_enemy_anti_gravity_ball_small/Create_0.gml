@@ -28,15 +28,15 @@ function Init(isDirectionLeft, isDirectionUp) {
 	if(global.gameDifficult == gameDifficultType.Easy) {		
 		
 		if(isDirectionLeft) {
-			moveX = -1.5;
+			moveX = -1.7;
 		} else {
-			moveX = 1.5;
+			moveX = 1.7;
 		}
 		
 		if(isDirectionUp) {
-			moveY = -1.5;
+			moveY = -1.7;
 		} else {
-			moveY = 1.5;
+			moveY = 1.7;
 		}
 	}
 	else if(global.gameDifficult == gameDifficultType.Normal) {		
@@ -67,32 +67,18 @@ function Init(isDirectionLeft, isDirectionUp) {
 			moveY = 3;
 		}
 	}
-	else if(global.gameDifficult == gameDifficultType.Nightmare) {		
+	else if(global.gameDifficult == gameDifficultType.Impossible) {		
 		
 		if(isDirectionLeft) {
-			moveX = -4;
+			moveX = -3.5;
 		} else {
-			moveX = 4;
+			moveX = 3.5;
 		}
 		
 		if(isDirectionUp) {
-			moveY = -4;
+			moveY = -3.5;
 		} else {
-			moveY = 4;
-		}
-	}
-		else if(global.gameDifficult == gameDifficultType.Impossible) {		
-		
-		if(isDirectionLeft) {
-			moveX = -4.5;
-		} else {
-			moveX = 4.5;
-		}
-		
-		if(isDirectionUp) {
-			moveY = -4.5;
-		} else {
-			moveY = 4.5;
+			moveY = 3.5;
 		}
 	}
 }

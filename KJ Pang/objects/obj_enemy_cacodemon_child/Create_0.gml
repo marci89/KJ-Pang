@@ -87,7 +87,7 @@ function Init() {
 
 function StartUnhurtable() {
 	isHurtable = false;
-	blinkDuration = 25;
+	blinkDuration = 10;
 	alarm[3] = 1;
 }
 #endregion

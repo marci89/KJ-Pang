@@ -28,60 +28,46 @@ function Init(isDirectionLeft, isDirectionUp) {
 	if(global.gameDifficult == gameDifficultType.Easy) {		
 		
 		if(isDirectionLeft) {
-			moveX = -1.5;
+			moveX = -1.7;
 		} else {
-			moveX = 1.5;
+			moveX = 1.7;
 		}
 		
 		if(isDirectionUp) {
-			moveY = -1.5;
+			moveY = -1.7;
 		} else {
-			moveY = 1.5;
+			moveY = 1.7;
 		}
 	}
 	else if(global.gameDifficult == gameDifficultType.Normal) {		
 		
 		if(isDirectionLeft) {
-			moveX = -2;
+			moveX = -2.2;
 		} else {
-			moveX = 2;
+			moveX = 2.2;
 		}
 		
 		if(isDirectionUp) {
-			moveY = -2;
+			moveY = -2.2;
 		} else {
-			moveY = 2;
+			moveY = 2.2;
 		}
 	}
 	else if(global.gameDifficult == gameDifficultType.Hard) {		
 		
 		if(isDirectionLeft) {
-			moveX = -2.5;
+			moveX = -3;
 		} else {
-			moveX = 2.5;
+			moveX = 3;
 		}
 		
 		if(isDirectionUp) {
-			moveY = -2.5;
+			moveY = -3;
 		} else {
-			moveY = 2.5;
+			moveY = 3;
 		}
 	}
-	else if(global.gameDifficult == gameDifficultType.Nightmare) {		
-		
-		if(isDirectionLeft) {
-			moveX = -2.7;
-		} else {
-			moveX = 2.7;
-		}
-		
-		if(isDirectionUp) {
-			moveY = -2.7;
-		} else {
-			moveY = 2.7;
-		}
-	}
-		else if(global.gameDifficult == gameDifficultType.Impossible) {		
+	else if(global.gameDifficult == gameDifficultType.Impossible) {		
 		
 		if(isDirectionLeft) {
 			moveX = -3.5;
@@ -107,8 +93,8 @@ function DropItem() {
 //randomize chance
 var randomChance = random(1);
 	
-		var antiGravitydDropChance = 0.2;
-		var nothingDropChance = 0.8; 
+		var antiGravitydDropChance = 0.1;
+		var nothingDropChance = 0.9; 
 
 		if (randomChance < antiGravitydDropChance) {
 			CreateItemWithMovement(x, y, 2, -4, obj_item_antigravity);

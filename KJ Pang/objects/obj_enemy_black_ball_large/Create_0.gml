@@ -43,6 +43,7 @@ function DropItem() {
 
 
 //randomize chance
+randomize();
 var randomChance = random(1);
 	
 		var energyShieldDropChance = 0.2;

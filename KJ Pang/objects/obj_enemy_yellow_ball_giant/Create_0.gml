@@ -63,27 +63,24 @@ function DropItem() {
 
 
 //randomize chance
+randomize();
 var randomChance = random(1);
 	
-		var pistolDropChance = 0.2;
-		var shotgunDropChance = 0.2
-		var machinegunDropChance = 0.2;
-		var healthPotionDropChance = 0.2;
+		var shotgunDropChance = 0.3
+		var machinegunDropChance = 0.4;
+		var healthPotionDropChance = 0.1;
 		var nothingDropChance = 0.2; 
 
-		if (randomChance < pistolDropChance) {
-			CreateItemWithMovement(x, y, 0, -4, obj_item_pistol);
+		if (randomChance < shotgunDropChance) {
+			CreateItemWithMovement(x, y, 0, -4, obj_item_shotgun);
 		
-		} else if (randomChance < (pistolDropChance + shotgunDropChance)) {
-		   CreateItemWithMovement(x, y, 0, -4, obj_item_shotgun);
+		} else if (randomChance < (shotgunDropChance + machinegunDropChance)) {
+		   CreateItemWithMovement(x, y, 0, -4, obj_item_machine_gun);
 
-		} else if (randomChance < (pistolDropChance + pistolDropChance + machinegunDropChance)) {
-		    CreateItemWithMovement(x, y, 0, -4, obj_item_machine_gun);
-			
-		} else if (randomChance < (pistolDropChance + pistolDropChance + machinegunDropChance + healthPotionDropChance)) {
-		   CreateItemWithMovement(x, y, 0, -4, obj_item_health_potion);
+		} else if (randomChance < (shotgunDropChance + machinegunDropChance + healthPotionDropChance)) {
+		    CreateItemWithMovement(x, y, 0, -4, obj_item_health_potion);
 		
-		} else if (randomChance < (pistolDropChance + pistolDropChance + machinegunDropChance + healthPotionDropChance + nothingDropChance)) {
+		} else if (randomChance < (shotgunDropChance + machinegunDropChance + healthPotionDropChance + nothingDropChance)) {
 		    show_debug_message("No item dropped.");
 		} else {
 		    show_debug_message("Invalid drop outcome.");

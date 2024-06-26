@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"snd_cacodemon_small_death1",
+  "%Name":"snd_cacodemon_child_hurt2",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,8 +9,8 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.227755,
-  "name":"snd_cacodemon_small_death1",
+  "duration":0.966531,
+  "name":"snd_cacodemon_child_hurt2",
   "parent":{
     "name":"Cacodemon",
     "path":"folders/Sounds/Voice/Enemy/Boss/Cacodemon.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_cacodemon_small_death1.mp3",
+  "soundFile":"snd_cacodemon_child_hurt2.mp3",
   "type":0,
-  "volume":0.46,
+  "volume":0.36,
 }

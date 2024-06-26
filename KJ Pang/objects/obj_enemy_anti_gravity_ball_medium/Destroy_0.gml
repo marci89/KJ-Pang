@@ -14,7 +14,7 @@ PlaySound(snd_pang, false, 2);
 DropItem();
 
 //create gems 
-CreateLifePointWithMovement(x,y,0,-5, lifePointType.Purple);
+CreateLifePointWithMovement(x,y,0,-2, lifePointType.Purple);
 
 
 //Create child balls
