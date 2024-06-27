@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_thailand.mp3",
   "type":0,
-  "volume":0.43,
+  "volume":0.54,
 }

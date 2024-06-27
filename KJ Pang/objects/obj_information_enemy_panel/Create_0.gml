@@ -171,7 +171,11 @@ function Init(type) {
 		CreateEnemyWallFrame();
 
 		
-		//enemies	
+		//enemies
+		CreateNormalBallMediumShield(x + 180, y + 400, -global.normalBallMediumMoveX, global.normalBallMediumMoveY,
+		global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
+		normalBallColorType.Green, false,2);
+		
 		CreateNormalBallLargeShield(x + 100, y + 400, global.normalBallLargeMoveX, global.normalBallLargeMoveY,
 		global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
 		normalBallColorType.Red, normalBallGiantDropItemType.Nothing, false, 1);
@@ -184,6 +188,7 @@ function Init(type) {
 		global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
 		normalBallColorType.Green, normalBallGiantDropItemType.Nothing, false, 3);
 	
+		
 		enemyType = type;
 		
 	}
@@ -247,6 +252,7 @@ function Init(type) {
 		
 		enemyType = type;
 	}
+	
 	
 		
 }

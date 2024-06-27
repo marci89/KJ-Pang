@@ -3,7 +3,7 @@
  enemyCount = 0; // number of enemies
  isAllowToChangeRoom = true; // ready to go to next level or not
  enemyCountCheckTime = 50; // enemy number check time
- changeRoomTime = 450; // time to change the room
+ changeRoomTime = 350; // time to change the room
  
  global.isAllowToGoNextLevel = true; // set allowing at start
  

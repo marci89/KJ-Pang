@@ -9,6 +9,8 @@ rotateAngle = 1; //rotation
 image = spr_enemy_normal_ball_large_shield_piece_bottom1; // default image
 
 isBlue = false; // is blue color or pink
-
+isSmall = false;
 alarm[1] = 400;
+
+
 

@@ -69,11 +69,10 @@ function Init() {
 	}
 	
 	if(buttonId == 8) {
-		image = spr_item_magnet;
-		infoType = informationType.Magnet;
+		image = spr_item_antigravity;
+		infoType = informationType.Antigravity;
 		requiredDifficult = gameDifficultType.Easy;
 	}
-	
 	
 	if(buttonId == 9) {
 		image = spr_item_gravity_reverse;
@@ -81,16 +80,23 @@ function Init() {
 		requiredDifficult = gameDifficultType.Easy;
 	}
 	
+
 	if(buttonId == 10) {
-		image = spr_item_antigravity;
-		infoType = informationType.Antigravity;
+		image = spr_item_magnet;
+		infoType = informationType.Magnet;
 		requiredDifficult = gameDifficultType.Easy;
 	}
 	
 	if(buttonId == 11) {
 		image = spr_item_first_aid_kit;
 		infoType = informationType.FirstAidKit;
-		requiredDifficult = gameDifficultType.Easy;
+		requiredDifficult = gameDifficultType.Normal;
+	}
+	
+	if(buttonId == 12) {
+		image = spr_item_gravity_strong_reverse;
+		infoType = informationType.GravityStrongReverse;
+		requiredDifficult = gameDifficultType.Normal;
 	}
 	
 	

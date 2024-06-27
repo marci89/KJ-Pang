@@ -72,22 +72,6 @@ function Init(isDirectionLeft, isDirectionUp) {
 			moveY = random_range(1, 2.3);
 		}
 	}
-	else if(global.gameDifficult == gameDifficultType.Nightmare) {		
-		
-		if(isDirectionLeft) {
-			gravSpeedX = -0.15
-			moveX = 4;
-		} else {
-			gravSpeedX = 0.1
-			moveX = -4;
-		}
-		
-		if(isDirectionUp) {
-			moveY = random_range(-2.7, -1);
-		} else {
-			moveY = random_range(1, 2.7);
-		}
-	}
 		else if(global.gameDifficult == gameDifficultType.Impossible) {		
 		
 		if(isDirectionLeft) {

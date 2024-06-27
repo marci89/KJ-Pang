@@ -51,12 +51,11 @@ function Init() {
 	}
 	
 	if(buttonId == 4) {
-		image = spr_item_magnet;
-		specialAbility = specialAbilityType.Magnet;
-		infoType = informationType.Magnet;
+		image = spr_item_antigravity;
+		specialAbility = specialAbilityType.AntiGravity;
+		infoType = informationType.Antigravity;
 		requiredDifficult = gameDifficultType.Easy;
 	}
-	
 	
 	if(buttonId == 5) {
 		image = spr_item_gravity_reverse;
@@ -66,10 +65,17 @@ function Init() {
 	}
 	
 	if(buttonId == 6) {
-		image = spr_item_antigravity;
-		specialAbility = specialAbilityType.AntiGravity;
-		infoType = informationType.Antigravity;
+		image = spr_item_magnet;
+		specialAbility = specialAbilityType.Magnet;
+		infoType = informationType.Magnet;
 		requiredDifficult = gameDifficultType.Easy;
+	}
+	
+	if(buttonId == 7) {
+		image = spr_item_gravity_strong_reverse;
+		specialAbility = specialAbilityType.StrongReverseGravity;
+		infoType = informationType.GravityStrongReverse;
+		requiredDifficult = gameDifficultType.Normal;
 	}
 	
 	

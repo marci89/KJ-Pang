@@ -18,6 +18,7 @@ function DeactivateLayers() {
 		
 		// Set FX layer visibility to false
 		layer_set_visible(layer_get_id("Shake"), false);
+		layer_set_visible(layer_get_id("Weather"), false);
 		
 		
 }
@@ -43,6 +44,7 @@ function ActivateLayers() {
 		
 		// Set FX layer visibility to true
 		layer_set_visible(layer_get_id("Shake"), true);
+		layer_set_visible(layer_get_id("Weather"), true);
 }
 
 #endregion

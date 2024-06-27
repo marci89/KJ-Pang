@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":107.96408,
+  "duration":93.701225,
   "name":"snd_australia",
   "parent":{
     "name":"PangMusic",
@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_australia.mp3",
   "type":0,
-  "volume":0.57,
+  "volume":0.82,
 }

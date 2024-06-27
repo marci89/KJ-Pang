@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_pang_ending.mp3",
   "type":0,
-  "volume":0.58,
+  "volume":0.64,
 }

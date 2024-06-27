@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":101.51183,
+  "duration":80.32653,
   "name":"snd_barcelona",
   "parent":{
     "name":"PangMusic",
@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_barcelona.mp3",
   "type":0,
-  "volume":0.39,
+  "volume":0.59,
 }

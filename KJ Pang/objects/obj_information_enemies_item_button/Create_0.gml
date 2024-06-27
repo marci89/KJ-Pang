@@ -24,31 +24,31 @@ function Init() {
 	if(buttonId == 0) {
 		image = spr_enemy_normal_ball_small_red;
 		infoType = enemyInformationType.NormalBall;
-		requiredDifficult = gameDifficultType.Easy;
+		requiredDifficult = gameDifficultType.Normal;
 	}
 	
 	if(buttonId == 1) {
 		image = spr_enemy_black_ball_small;
 		infoType = enemyInformationType.BlackBall;
-		requiredDifficult = gameDifficultType.Easy;
+		requiredDifficult = gameDifficultType.Normal;
 	}
 	
 	if(buttonId == 2) {
 		image = spr_enemy_yellow_ball_small;
 		infoType = enemyInformationType.YellowBall;
-		requiredDifficult = gameDifficultType.Easy;
+		requiredDifficult = gameDifficultType.Normal;
 	}
 	
 	if(buttonId == 3) {
 		image = spr_enemy_anti_gravity_ball_small;
 		infoType = enemyInformationType.AntiGravityBall;
-		requiredDifficult = gameDifficultType.Easy;
+		requiredDifficult = gameDifficultType.Normal;
 	}
 	
 	if(buttonId == 4) {
 		image = spr_enemy_horizontal_ball_small;
 		infoType = enemyInformationType.HorizontalBall;
-		requiredDifficult = gameDifficultType.Easy;
+		requiredDifficult = gameDifficultType.Normal;
 	}
 	
 	
@@ -56,25 +56,31 @@ function Init() {
 	if(buttonId == 5) {
 		image = spr_enemy_normal_ball_medium_red;
 		infoType = enemyInformationType.RedBallBoss;
-		requiredDifficult = gameDifficultType.Easy;
+		requiredDifficult = gameDifficultType.Normal;
 	}
 	
 	if(buttonId == 6) {
 		image = spr_enemy_snake_boss_pic;
 		infoType = enemyInformationType.SnakeBoss;
-		requiredDifficult = gameDifficultType.Easy;
+		requiredDifficult = gameDifficultType.Normal;
 	}
 	
 	if(buttonId == 7) {
 		image = spr_enemy_cacodemon_pic_small;
 		infoType = enemyInformationType.Cacodemon;
-		requiredDifficult = gameDifficultType.Easy;
+		requiredDifficult = gameDifficultType.Normal;
 	}
 	
 	if(buttonId == 8) {
 		image = spr_enemy_junior_guardian_pic_small;
 		infoType = enemyInformationType.JuniorGuardian;
-		requiredDifficult = gameDifficultType.Easy;
+		requiredDifficult = gameDifficultType.Normal;
+	}
+	
+	if(buttonId == 9) {
+		image = spr_enemy_normal_ball_small_blue;
+		infoType = enemyInformationType.ShieldedNormalBall;
+		requiredDifficult = gameDifficultType.Hard;
 	}
 	
 	//set image

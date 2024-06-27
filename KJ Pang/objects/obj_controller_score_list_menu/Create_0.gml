@@ -12,8 +12,6 @@ function GetDifficultyText(difficulty) {
             return "normal";
         case gameDifficultType.Hard:
             return "hard";
-        case gameDifficultType.Nightmare:
-            return "nightmare";
         case gameDifficultType.Impossible:
             return "impossible";
         default:

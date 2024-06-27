@@ -41,14 +41,22 @@ function Init() {
 		playerGender = global.playerOneGender;
 		playerLife = global.playerOneLife;
 		playerLifePoint = global.playerOneLifePoint;
-		playerFood = global.playerOneFood
+		playerFood = global.playerOneFood;
+		
+		if(global.playerOneFood >= global.foodMax) {
+			playerFood = "Max";
+		}
 		
 	} else {
 		playerName = global.playerTwoName;
 		playerGender = global.playerTwoGender;
 		playerLife = global.playerTwoLife;
 		playerLifePoint = global.playerTwoLifePoint;
-		playerFood = global.playerTwoFood
+		playerFood = global.playerTwoFood;
+		
+		if(global.playerTwoFood >= global.foodMax) {
+			playerFood = "Max";
+		}
 			
 	}
 		

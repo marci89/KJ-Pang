@@ -14,7 +14,7 @@ global.hasRoomWallFrame = false; // no wall frames
 global.isRestartLevelAfterDead = true; //restart after death
 global.levelTimeMax = 150; // level's max time
 //global.playerOneDefaultWeapon = weaponType.MachineGun;
-global.level = 54
+//global.level = 20
 
 	//Giant normal ball default properties
 	global.normalBallGiantMoveX = 0.5;
@@ -457,6 +457,7 @@ function CreateLevelEasy2() {
 	CreateFoodByImageIndex(910, 640, 17);
 	CreateFoodByImageIndex(950, 640, 17);
 	CreateFoodByImageIndex(990, 640, 17);
+	
 	
 	CreateLifePoint(475, 100, lifePointType.Blue);
 	CreateLifePoint(505, 100, lifePointType.Blue);

@@ -19,7 +19,7 @@ function ExecuteDynamiteEffect(player, objectType){
 			var instance = instance_find(objectType, i); 
 			if(IsInstanceExists(instance)) {
 				
-				if(objectType == obj_enemy_normal_ball_large) {
+				if(objectType == obj_enemy_normal_ball_large || objectType == obj_enemy_normal_ball_medium) {
 					if (instance.hasShield) {
 						instance.DeleteLastShield();
 					} else {

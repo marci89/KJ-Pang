@@ -1,6 +1,9 @@
 
 event_inherited()
 
+#region shield things
+
+
 if(shieldNumber > 0) {
 	hasShield = true;
 	isImmuneToWeapon = true;
@@ -12,3 +15,5 @@ if(shieldNumber > 0) {
 		isLostShield = true;
 	}
 }
+
+#endregion

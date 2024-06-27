@@ -2,9 +2,9 @@
 
 #region Create normal ball shield piece with movement
 
-function CreateNormalBallShieldPiece(xValue, yValue, moveX, moveY, imageType, isBlue){
+function CreateNormalBallShieldPiece(xValue, yValue, moveX, moveY, imageType, isBlue, isSmall){
 	
-	var result = instance_create_layer(xValue, yValue,"Item", obj_enemy_normal_ball_large_shield_piece);
+	var result = instance_create_layer(xValue, yValue,"Item", obj_enemy_normal_ball_shield_piece);
   
 	
 	result.moveX = moveX;
@@ -12,6 +12,7 @@ function CreateNormalBallShieldPiece(xValue, yValue, moveX, moveY, imageType, is
 	result.sprite_index = imageType;
 	result.image = imageType;
 	result.isBlue = isBlue;
+	result.isSmall = isSmall;
 	result.SetOriginalProperties();
 }
 

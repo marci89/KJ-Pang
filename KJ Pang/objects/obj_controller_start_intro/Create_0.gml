@@ -19,19 +19,43 @@ function SetHeroText() {
 			text = GetLocalizedText("introStartSinglePalyerHeroEasyMode");
 		}
 		
+		if (global.gameDifficult == gameDifficultType.Normal) {
+			text = GetLocalizedText("introStartSinglePalyerHeroNormalMode");
+		}
+		
+		if (global.gameDifficult == gameDifficultType.Hard) {
+			text = GetLocalizedText("introStartSinglePalyerHeroHardMode");
+		}
+		
+		if (global.gameDifficult == gameDifficultType.Impossible) {
+			text = GetLocalizedText("introStartSinglePalyerHeroImpossibleMode");
+		}
+		
 	} else {
 		
 		if (global.gameDifficult == gameDifficultType.Easy) {
 			text = GetLocalizedText("introStartMultiPalyerHeroEasyMode");
+		}
+		
+		if (global.gameDifficult == gameDifficultType.Normal) {
+			text = GetLocalizedText("introStartMultiPalyerHeroNormalMode");
+		}
+		
+		if (global.gameDifficult == gameDifficultType.Hard) {
+			text = GetLocalizedText("introStartMultiPalyerHeroHardMode");
+		}
+		
+		if (global.gameDifficult == gameDifficultType.Impossible) {
+			text = GetLocalizedText("introStartMultiPalyerHeroImpossibleMode");
 		}
 	}
 }
 
 #endregion
 
-#region easy mode
+#region update frame
 
-function UpdateFrameWithEasyMode() {
+function UpdateFrame() {
 	
 	if (currentFrameNumber == 1) {
 		sprite_index = spr_intro_start_space;

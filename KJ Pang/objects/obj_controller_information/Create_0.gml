@@ -162,13 +162,24 @@ function CreateEasyLevelInformation() {
 		newsText = GetLocalizedText("bossLevel");
 		text = GetLocalizedText("finalBattleShortDesc");
 	}
+}
+
 	
+#endregion
+
+#region Normal level
+
+function CreateNormalLevelInformation() {
+	
+	if (global.stageLevel == 1) {
+		var enemyPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_enemy_panel);
+		enemyPanelObj.Init(enemyInformationType.ShieldedNormalBall ?? noone);
+	}
 	
 	
 	
 }
 
-	
 #endregion
 
 #region CreateInformation
@@ -177,6 +188,10 @@ function CreateIformation() {
 	
 	if(global.gameDifficult == gameDifficultType.Easy) {
 		CreateEasyLevelInformation();
+	}
+	
+	if(global.gameDifficult == gameDifficultType.Normal) {
+		CreateNormalLevelInformation();
 	}
 	
 }

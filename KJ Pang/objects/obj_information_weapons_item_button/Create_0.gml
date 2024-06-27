@@ -34,14 +34,14 @@ function Init() {
 	}
 	
 	if(buttonId == 2) {
-		image = spr_item_pistol;
-		infoType = informationType.Pistol;
+		image = spr_item_power_wire;
+		infoType = informationType.PowerWire;
 		requiredDifficult = gameDifficultType.Easy;
 	}
 	
 	if(buttonId == 3) {
-		image = spr_item_power_wire;
-		infoType = informationType.PowerWire;
+		image = spr_item_pistol;
+		infoType = informationType.Pistol;
 		requiredDifficult = gameDifficultType.Easy;
 	}
 	

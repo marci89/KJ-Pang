@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":80.32653,
+  "duration":107.96408,
   "name":"snd_leningrad",
   "parent":{
     "name":"PangMusic",
@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_leningrad.mp3",
   "type":0,
-  "volume":0.5,
+  "volume":0.58,
 }

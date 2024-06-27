@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":93.701225,
+  "duration":98.19428,
   "name":"snd_taj_mahal",
   "parent":{
     "name":"PangMusic",
@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_taj_mahal.mp3",
   "type":0,
-  "volume":0.47,
+  "volume":0.53,
 }

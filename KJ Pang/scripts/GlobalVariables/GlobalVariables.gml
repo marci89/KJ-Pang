@@ -12,7 +12,6 @@
 	//game difficult allowing
 	global.isNormalDifficultEnable = false;
 	global.isHardDifficultEnable = false;
-	global.isNightmareDifficultEnable = false;
 	global.isImpossibleDifficultEnable = false;
 	
 

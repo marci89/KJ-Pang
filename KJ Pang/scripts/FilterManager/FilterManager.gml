@@ -12,6 +12,7 @@ layer_set_fx("Shake", shakeFilter);
 #endregion
 
 
+
 #region deactivate a filter by name
 
 function DeactivateFilterByName(name) {

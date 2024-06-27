@@ -2,6 +2,11 @@
 //parent properties
 event_inherited()
 
+if (isSmall) {
+	image_xscale = 0.5; 
+	image_yscale = 0.5;
+}
+
 #region wall collide
 
 //Collide on x-axis
