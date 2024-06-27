@@ -66,10 +66,10 @@ function DropItem() {
 randomize();
 var randomChance = random(1);
 	
-		var shotgunDropChance = 0.3
+		var shotgunDropChance = 0.45
 		var machinegunDropChance = 0.4;
 		var healthPotionDropChance = 0.1;
-		var nothingDropChance = 0.2; 
+		var nothingDropChance = 0.05; 
 
 		if (randomChance < shotgunDropChance) {
 			CreateItemWithMovement(x, y, 0, -4, obj_item_shotgun);

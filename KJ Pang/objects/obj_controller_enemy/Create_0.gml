@@ -34,6 +34,14 @@ function CheckEnemyCount() {
 
 function NextLevel() {
 	
+		//sense the final level
+		if (global.level == 55) 
+		{
+			room_goto(rm_intro_end);
+			return;
+
+		}
+	 
 	//level controller object
 	var controllerObj = obj_controller_level;
 	

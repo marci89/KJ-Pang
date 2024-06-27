@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_small_missile_explosion.mp3",
   "type":0,
-  "volume":0.46,
+  "volume":0.4,
 }

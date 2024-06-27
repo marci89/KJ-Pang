@@ -3,6 +3,8 @@
 	global.playMode = playModeType.SinglePlayer; // play alone or with your friend
 	global.scores = ds_list_create(); // score list
 	global.isBossLevel = false; // boss level or not.
+	global.isFinalBattleLevel = false; // final battle level or not.
+	global.isAfterFinalBattleLevel = false; // after final battle level or not.
 	
 	global.isEnemyInformationMode = false; // helper for enemy information
 	global.isAllowToGoNextLevel = true; // helper for next level. If you dead not allowed.

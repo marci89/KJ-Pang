@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_big_rocket_start",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":23.784,
+  "name":"snd_big_rocket_start",
+  "parent":{
+    "name":"FinalBattle",
+    "path":"folders/Sounds/Voice/FinalBattle.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_big_rocket_start.mp3",
+  "type":0,
+  "volume":1.0,
+}

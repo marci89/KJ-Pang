@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_dept_boom",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":3.288,
+  "name":"snd_dept_boom",
+  "parent":{
+    "name":"Bomb",
+    "path":"folders/Sounds/Voice/Weapon/Bomb.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_dept_boom.mp3",
+  "type":0,
+  "volume":1.0,
+}

@@ -6,10 +6,13 @@ function SetGameVariables(){
 	global.scores = ds_list_create();
 	global.isEnemyInformationMode = false; // helper for enemy information
 	global.isAllowToGoNextLevel = true; // helper for next level. If you dead not allowed.
+	global.isBossLevel = false; // boss level or not.
+	global.isFinalBattleLevel = false; // final battle level or not.
+	global.isAfterFinalBattleLevel = false; // after final battle level or not.
 	
 	//Player
-	global.playerOneScore = 0; //player1 score
-	global.playerTwoScore = 0; //player2 score
+	global.playerOneScore = 200; //player1 score
+	global.playerTwoScore = 3; //player2 score
 	global.playerOneLife =  3; //player1 life
 	global.playerTwoLife =  1; //player2 life
 	global.playerOneLifePoint = 0; //player1 life points

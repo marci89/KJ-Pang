@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_criminal_case.mp3",
   "type":0,
-  "volume":0.56,
+  "volume":0.72,
 }

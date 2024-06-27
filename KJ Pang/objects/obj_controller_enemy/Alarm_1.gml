@@ -4,6 +4,7 @@
 	 if(global.isAllowToGoNextLevel) {
 		NextLevel();
 	 }
+	 	 
  } else {
 	 isAllowToChangeRoom = true;
  }

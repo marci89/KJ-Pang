@@ -13,11 +13,9 @@ effect_create_above( ef_firework, x, y-10, 2, c_blue);
 PlaySound(snd_snake_death, false, 2);
 
 //drop item
-var isDropped = irandom(1) == 1;
 
-if (isDropped) {
-   CreateItemWithMovement(x, y, 0, -4, obj_item_energy_shield);
-}
+CreateItemWithMovement(x, y, 0, -4, obj_item_energy_shield);
+
 
 
 //create gem

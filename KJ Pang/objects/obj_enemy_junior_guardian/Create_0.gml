@@ -119,27 +119,21 @@ function DropItem() {
 //randomize chance
 var randomChance = random(1);
 	
-		var stingDropChance = 0.35;
-		var energyShieldDropChance = 0.25
-		var machinegunDropChance = 0.25;
-		var healthPotionDropChance = 0.14;
-		var nothingDropChance = 0.01; 
+		var pistolDropChance = 0.3;
+		var energyShieldDropChance = 0.3
+		var machinegunDropChance = 0.3;
+		var nothingDropChance = 0.1; 
 
-		if (randomChance < stingDropChance) {
-			if (global.gameDifficult < gameDifficultType.Nightmare) {
-				CreateItemWithMovement(x, y, 0, -4, obj_item_double_sting);
-			}
+		if (randomChance < pistolDropChance) {
+			CreateItemWithMovement(x, y, 0, -4, obj_item_pistol);
 		
-		} else if (randomChance < (stingDropChance + energyShieldDropChance)) {
+		} else if (randomChance < (pistolDropChance + energyShieldDropChance)) {
 		   CreateItemWithMovement(x, y, 0, -4, obj_item_energy_shield);
 
-		} else if (randomChance < (stingDropChance + energyShieldDropChance + machinegunDropChance)) {
+		} else if (randomChance < (pistolDropChance + energyShieldDropChance + machinegunDropChance)) {
 		    CreateItemWithMovement(x, y, 0, -4, obj_item_machine_gun);
 			
-		} else if (randomChance < (stingDropChance + energyShieldDropChance + machinegunDropChance + healthPotionDropChance)) {
-		   CreateItemWithMovement(x, y, 0, -4, obj_item_health_potion);
-		
-		} else if (randomChance < (stingDropChance + energyShieldDropChance + machinegunDropChance + healthPotionDropChance + nothingDropChance)) {
+		} else if (randomChance < (pistolDropChance + energyShieldDropChance + machinegunDropChance  + nothingDropChance)) {
 		    show_debug_message("No item dropped.");
 		} else {
 		    show_debug_message("Invalid drop outcome.");

@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_guardian_roar2.mp3",
   "type":0,
-  "volume":0.41,
+  "volume":0.3,
 }

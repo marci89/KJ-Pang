@@ -6,13 +6,15 @@
 function CreateLevelEasy(){
 
 global.isBossLevel = false;
+global.isFinalBattleLevel = false;
+global.isAfterFinalBattleLevel = false; // after final battle level or not.
 global.currentLevelEffect = noone; // clear effect type
 global.hasLevelTime = true; // level timer enabled
 global.hasRoomWallFrame = false; // no wall frames
 global.isRestartLevelAfterDead = true; //restart after death
 global.levelTimeMax = 150; // level's max time
 //global.playerOneDefaultWeapon = weaponType.MachineGun;
-global.level = 53;
+global.level = 54
 
 	//Giant normal ball default properties
 	global.normalBallGiantMoveX = 0.5;
@@ -387,6 +389,11 @@ global.level = 53;
 	
 	if(global.level == 54) {
 		CreateLevelEasy54();
+		return;
+	}
+	
+	if(global.level == 55) {
+		CreateLevelEasy55();
 		return;
 	}
 }
@@ -1009,7 +1016,7 @@ function CreateLevelEasy12() {
 function CreateLevelEasy13() {
 	
 	// init
-	LoadBackgroundImage("waterFall_morning"); //Load background
+	LoadBackgroundImage("red_ball_boss_place"); //Load background
 	CreateWallFrame(wallFrameType.Blue ?? noone); //wall frame creating
 	PlayMusic(snd_criminal_case, true); // play music
 	CreatePlayer(550, 500); // create player
@@ -3432,23 +3439,55 @@ function CreateLevelEasy53() {
 function CreateLevelEasy54() {
 	
 	// init
-	LoadBackgroundImage("cacodemon_place"); //Load background
+	LoadBackgroundImage("easy_finalBattle_place"); //Load background
 	CreateWallFrame(wallFrameType.Gray ?? noone); //wall frame creating
-	PlayMusic(snd_criminal_case, false); // play music
+	PlayMusic(snd_rada, true); // play music
 	CreatePlayer(550, 500); // create player
 	global.isBossLevel = true;
 	global.isRestartLevelAfterDead = false;
-	global.levelTimeMax = 200; // level's max time
+	global.hasLevelTime = false; // level timer enabled
+	global.isFinalBattleLevel = true;
 	
 	//Enemy
-	CreateCacodemon(-300, 300, enemyStartDirectionType.Left);
+	CreateFinalBossTimerCreator(10800);
+	
+	CreateNormalBallGiant(500, 200, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
+	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
+	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_3, true);
 	
 	//wall
 	
 	//items
 	CreateItem(74, 550, obj_item_health_potion);
-	CreateItem(130, 550, obj_item_energy_shield);
+	CreateItem(160, 550, obj_item_energy_shield);
 	CreateItem(950, 550, obj_item_health_potion);
+	CreateItem(890, 550, obj_item_double_sting);
 }
 
 #endregion
+
+#region Level 55 - After Final battle
+
+function CreateLevelEasy55() {
+	
+	// init
+	LoadBackgroundImage("rocket_field_place"); //Load background
+	CreateWallFrame(wallFrameType.Gray ?? noone); //wall frame creating
+	global.isBossLevel = true;
+	global.isRestartLevelAfterDead = false;
+	global.hasLevelTime = false; // level timer enabled
+	global.isFinalBattleLevel = true;
+	global.isAfterFinalBattleLevel = true;
+	
+	instance_create_layer(500, 700,"EnemyBehindWall", obj_final_battle_giant_rocket);
+	instance_create_layer(550, 230,"EnemyBehindWall", obj_final_battle_decorated_ufo);
+	
+
+
+}
+
+#endregion
+
+
+
+

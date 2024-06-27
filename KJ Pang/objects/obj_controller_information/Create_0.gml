@@ -160,7 +160,7 @@ function CreateEasyLevelInformation() {
 	
 	if (global.stageLevel == 21) {
 		newsText = GetLocalizedText("bossLevel");
-		text = GetLocalizedText("easyFinalBattleShortDesc");
+		text = GetLocalizedText("finalBattleShortDesc");
 	}
 	
 	

@@ -299,6 +299,10 @@ function AntiGravityEffect() {
 
 function HandleEffect() {
 	
+	if (isOutsideRoom) {
+		return;
+	}
+	
 	if(global.currentLevelEffect == levelEffectType.TimeFreeze
 	&& isTimeFreezeEffectEnabled) {
 		TimeFreezeEffect();

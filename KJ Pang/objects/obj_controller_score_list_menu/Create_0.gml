@@ -186,7 +186,7 @@ currentSelectedButtonId = 0;
 maxButtonId = 0;
 
 //check is ending or only show score list
-if(global.playerOneLife == 0 || global.playerTwoLife == 0) {
+if(global.playerOneLife == 0 || global.playerTwoLife == 0 || global.isFinalBattleLevel) {
 	isGameOverScoreList = true;
 }
 

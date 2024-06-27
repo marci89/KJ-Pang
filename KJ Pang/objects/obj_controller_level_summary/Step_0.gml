@@ -15,6 +15,7 @@ if(isKeyPressEnable) {
 		if(CheckIsGoToMap(global.level)) {
 			 room_goto(rm_map);
 		} else {
+			
 			room_goto(rm_level);
 		}
 	}

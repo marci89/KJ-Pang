@@ -46,10 +46,10 @@ function DropItem() {
 randomize();
 var randomChance = random(1);
 	
-		var energyShieldDropChance = 0.2;
+		var energyShieldDropChance = 0.3;
 		var timeFreezeDropChance = 0.1
-		var healthPotionDropChance = 0.2;
-		var nothingDropChance = 0.5; 
+		var healthPotionDropChance = 0.3;
+		var nothingDropChance = 0.3; 
 
 		if (randomChance < energyShieldDropChance) {
 			CreateItemWithMovement(x, y, 0, -4, obj_item_energy_shield);
