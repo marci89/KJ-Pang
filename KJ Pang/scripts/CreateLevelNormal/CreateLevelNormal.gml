@@ -347,7 +347,7 @@ function CreateLevelNormal1() {
 	// init
 	LoadBackgroundImage("japan_morning"); //Load background 
 	CreateWallFrame(wallFrameType.Blue ?? noone); //wall frame creating
-	PlayMusic(snd_mtFuji, true); // play music
+	PlayMusic(snd_drakan_1, true); // play music
 	CreatePlayer(500, 500); // create player
 	
 	//Enemy
@@ -381,7 +381,7 @@ function CreateLevelNormal2() {
 	// init
 	LoadBackgroundImage("japan_twilight"); //Load background
 	CreateWallFrame(wallFrameType.Blue ?? noone); //wall frame creating
-	PlayMusic(snd_mtFuji, true); // play music
+	PlayMusic(snd_drakan_1, true); // play music
 	CreatePlayer(500, 500); // create player
 	
 	//Enemy
@@ -432,7 +432,7 @@ function CreateLevelNormal3() {
 	// init
 	LoadBackgroundImage("japan_night"); //Load background
 	CreateWallFrame(wallFrameType.Blue ?? noone); //wall frame creating
-	PlayMusic(snd_mtFuji, true); // play music
+	PlayMusic(snd_drakan_1, true); // play music
 	CreatePlayer(500, 650); // create player
 	
 	//Enemy

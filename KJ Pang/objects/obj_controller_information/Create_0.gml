@@ -176,6 +176,11 @@ function CreateNormalLevelInformation() {
 		enemyPanelObj.Init(enemyInformationType.ShieldedNormalBall ?? noone);
 	}
 	
+	if (global.stageLevel == 2) {
+		  var infoPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj.Init(informationType.FirstAidKit ?? noone);
+	}
+	
 	
 	
 }

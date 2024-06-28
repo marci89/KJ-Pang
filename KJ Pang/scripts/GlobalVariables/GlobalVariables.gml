@@ -55,7 +55,7 @@
 	global.previousLevelTime = 0; // Previous level time to know the time bonus value in level summary
 
 	//manipulating
-	global.currentLevelEffect = noone;
+	global.currentLevelEffect = noone; // current level effect
 	
 	
 	

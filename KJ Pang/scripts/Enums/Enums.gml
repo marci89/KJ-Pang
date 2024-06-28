@@ -165,6 +165,15 @@ enum levelEffectType{
 };
 
 #endregion
+
+#region Weather effect type
+
+enum weatherEffectType{
+    Snow,
+    Rain,
+};
+
+#endregion
 	
 #region life point types
 

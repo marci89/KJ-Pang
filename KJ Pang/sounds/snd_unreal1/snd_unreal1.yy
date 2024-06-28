@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_unreal1",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":220.10776,
+  "name":"snd_unreal1",
+  "parent":{
+    "name":"Unreal",
+    "path":"folders/Sounds/Music/Unreal.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_unreal1.mp3",
+  "type":0,
+  "volume":1.0,
+}
