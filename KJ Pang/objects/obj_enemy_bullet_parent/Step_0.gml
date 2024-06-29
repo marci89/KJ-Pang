@@ -21,6 +21,7 @@ if (isGravityXEnabled) {
 
 #endregion
 
+if (isSensitiveCollisions) {
 #region Wall collision
 
 isOnGround = false;
@@ -78,6 +79,8 @@ if (CheckScreenCollisionBottomWithoutWallForObject(y, halfSpriteHeight)) {
 }
 
 #endregion
+
+}
 
 #region Update movement position
 

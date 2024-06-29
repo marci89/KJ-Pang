@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"CreateTongueWormBullet",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CreateTongueWormBullet",
+  "parent":{
+    "name":"EnemyBullet",
+    "path":"folders/Scripts/Creator/EnemyBullet.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

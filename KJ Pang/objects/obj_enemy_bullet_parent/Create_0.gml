@@ -26,6 +26,7 @@ isAntigravityEffectEnabled = true; // Antigravity effect allowed
 isReverseGravityEffectEnabled = true; // reverse gravity effect allowed
 isStrongReverseGravityEffectEnabled = true; // strong reverse gravity effect allowed
 damage = 1; // enemy's bullet damage
+isSensitiveCollisions = true;
 
 // original properties
 originalMoveX = moveX;

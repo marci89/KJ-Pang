@@ -1,6 +1,5 @@
 
 
-
 //inputs
 inputX = 0; // left and right key
 inputJump = 0; // jump key

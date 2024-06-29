@@ -291,7 +291,7 @@ enum enemySizeType{
 
 enum enemyRaceType{
     Ball,
-    Larva,
+    LandWalker,
 	Boss,
 	Monster,
 };

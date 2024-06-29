@@ -58,6 +58,7 @@ if (isBlinkingStarted) {
 		isBlinked = true;
 		isBlinkingStarted = false;
 		isActive = false;
+		isOnGround = false;
 			
 		alarm[0] = 7;
 }
@@ -149,6 +150,10 @@ if (place_meeting(x, y + moveY, obj_wall_parent) ) {
 
 var halfSpriteWidth = sprite_width / 2;
 var halfSpriteHeight = sprite_height / 2;
+
+if(race == enemyRaceType.LandWalker) {
+	halfSpriteWidth = 0;
+}
 
 if (!isOutsideRoom) {
 	//Left

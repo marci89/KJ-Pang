@@ -13,8 +13,8 @@ global.hasLevelTime = true; // level timer enabled
 global.hasRoomWallFrame = false; // no wall frames
 global.isRestartLevelAfterDead = true; //restart after death
 global.levelTimeMax = 150; // level's max time
-//global.playerOneDefaultWeapon = weaponType.MachineGun;
-//global.level = 3
+global.playerOneDefaultWeapon = weaponType.Pistol;
+global.level = 4
 
 		//Giant normal ball default properties
 		global.normalBallGiantMoveX = 1.5;
@@ -480,18 +480,15 @@ function CreateLevelNormal4() {
 	CreatePlayer(500, 400); // create player
 	
 	//Enemy
-	CreateNormalBallGiant(500, 100, 1, global.normalBallGiantMoveY,
-	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
-	normalBallColorType.Red, normalBallGiantDropItemType.Nothing, true);
-	
-	CreateNormalBallLarge(520, 80, -1, global.normalBallLargeMoveY,
-	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
-	normalBallColorType.Red, normalBallGiantDropItemType.Nothing, true);
+	//CreateWorm(600,300, -1, 0, true);
+	CreateTongueWorm (850,300, 1, 0, true);
+
 	
 	//wall	
-	CreateWallMany(477, 550, wallType.Red, wallCreatorDirectionType.Bottom, 3);
-	CreateWallMany(509, 550, wallType.Red, wallCreatorDirectionType.Bottom, 3);
 
+	CreateItem(80, 600, obj_item_antigravity);
+	CreateItem(140, 600, obj_item_time_slow);
+	CreateItem(200, 600, obj_item_time_freeze);
 	
 	//items
 	CreateLifePoint(30, 640, lifePointType.Red);
