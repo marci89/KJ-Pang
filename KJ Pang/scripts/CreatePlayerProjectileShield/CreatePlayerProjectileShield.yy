@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"CreatePlayerProjectileShield",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CreatePlayerProjectileShield",
+  "parent":{
+    "name":"Player",
+    "path":"folders/Scripts/Creator/Player.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

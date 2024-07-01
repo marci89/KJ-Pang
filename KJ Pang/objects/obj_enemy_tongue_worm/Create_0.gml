@@ -13,7 +13,7 @@ isGravityXEnabled = false; // gravity x enabled or not
 isGravityYEnabled = true; // gravity y enabled or not
 gravSpeedX = 0; // x gavity speed
 gravSpeedY = 0.1; // y gavity speed
-hitPoint = 25; //health
+hitPoint = 20; //health
 enemyScore = 12; // score
 image_speed = 0;
 

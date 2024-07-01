@@ -24,7 +24,6 @@ isTimeFreezeEffectEnabled = true; // time freeze effect allowed
 isTimeSlowEffectEnabled = true; // time slow effect allowed
 isAntigravityEffectEnabled = true; // Antigravity effect allowed
 isReverseGravityEffectEnabled = true; // reverse gravity effect allowed
-isStrongReverseGravityEffectEnabled = true; // strong reverse gravity effect allowed
 damage = 1; // enemy's bullet damage
 isSensitiveCollisions = true;
 
@@ -202,25 +201,6 @@ function ReverseGravityEffect() {
 
 #endregion
 
-#region Strong reverse gravity effect function
-
-function StrongReverseGravityEffect() {
-	
-	// set delay value
-	var slowFactorX = CalculateTimeSlowEffectDecay(moveX ?? 0)
-	
-	//delay x movement
-	if (moveX > 0.2)  moveX -= slowFactorX; 
-	else if (moveX < -0.2) moveX += slowFactorX;
-	else moveX = 0;
-	
-	isGravityYEnabled = true;
-	gravSpeedY = -0.5;
-	bounceDecay = 0;
-}
-
-#endregion
-
 #region Antigravity effect function
 
 function AntiGravityEffect() {
@@ -276,11 +256,6 @@ function HandleEffect() {
 	if(global.currentLevelEffect == levelEffectType.ReverseGravity
 	&& isReverseGravityEffectEnabled) {
 		ReverseGravityEffect();
-	}
-	
-	if(global.currentLevelEffect == levelEffectType.StrongReverseGravity
-	&& isStrongReverseGravityEffectEnabled) {
-		StrongReverseGravityEffect();
 	}
 	
 	if(global.currentLevelEffect == levelEffectType.AntiGravity

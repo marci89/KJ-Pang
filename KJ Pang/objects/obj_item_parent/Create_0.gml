@@ -185,25 +185,6 @@ function TimeSlowEffect() {
 
 #endregion
 
-#region Strong reverse gravity effect function
-
-function StrongReverseGravityEffect() {
-	
-	// set delay value
-	var slowFactorX = CalculateTimeSlowEffectDecay(moveX ?? 0)
-	
-	//delay x movement
-	if (moveX > 0.2)  moveX -= slowFactorX; 
-	else if (moveX < -0.2) moveX += slowFactorX;
-	else moveX = 0;
-	
-	isGravityEnabled = true;
-	gravSpeed = -0.5;
-	bounceDecay = 0;
-}
-
-#endregion
-
 #region Antigravity effect function
 
 function AntiGravityEffect() {
@@ -253,10 +234,6 @@ function HandleEffect() {
 	
 	if(global.currentLevelEffect == levelEffectType.TimeSlow) {
 		TimeSlowEffect();
-	}
-	
-	if(global.currentLevelEffect == levelEffectType.StrongReverseGravity) {
-		StrongReverseGravityEffect();
 	}
 	
 	if(global.currentLevelEffect == levelEffectType.AntiGravity) {

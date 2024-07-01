@@ -57,6 +57,10 @@ isActive = true; // if it is active it can do everything (live) else deactive so
 isDead = false; // death or alive
 isInvincible = false; // if this is true, nothing hurts you.
 hasEnergyShield = false; // energy shield
+hasProjectileShield = false; // projectile shield
+playerProjectileShield = noone;
+
+hasinvulnerabilityPotionEffect = false;
 
 //Settings
 
@@ -326,12 +330,6 @@ function ActivateSpecialAbility() {
 		}
 	}
 	
-	//activate StrongReverseGravity
-	if (specialAbility == specialAbilityType.StrongReverseGravity) {
-		if(IsInstanceExists(effectControllerObj ?? noone)) {
-			effectControllerObj.ExecuteStrongReverseGravityEffect();
-		}
-	}
 	
 	//activate Magnet
 	if (specialAbility == specialAbilityType.Magnet) {
@@ -361,16 +359,65 @@ function ActivateSpecialAbility() {
 	
 	//activate energy shield
 	if (specialAbility == specialAbilityType.EnergyShield) {
-			if(!hasEnergyShield) {
+			if(!hasEnergyShield && !hasProjectileShield) {
 				CreatePlayerEnergyShield(x, y, obj_player_one ?? noone)
 			} else {
 			PlaySound(snd_energy_shield_activate, false);
 		}
 	}
 	
+	//activate BouncingPearls
+	if (specialAbility == specialAbilityType.BouncingPearls) {
+				var instance = instance_create_layer(x, y,"Item", obj_item_bounced_pearls);
+				instance.image_alpha = 0;
+		}
+	
+	
+	//activate ProjectileShield
+	if (specialAbility == specialAbilityType.ProjectileShield) {
+			if(!hasEnergyShield && !hasProjectileShield) {
+				CreatePlayerProjectileShield(x, y, obj_player_one ?? noone)
+			} else {
+			PlaySound(snd_energy_shield_activate, false);
+			}
+		
+	}
+	
+	//activate ProtectiveRing
+	if (specialAbility == specialAbilityType.ProtectiveRing) {
+				var instance = instance_create_layer(x, y,"Item", obj_item_protecting_ring);
+				instance.image_alpha = 0;
+		
+	}
+	
+	//activate InvulnerabilityPotion
+	if (specialAbility == specialAbilityType.InvulnerabilityPotion) {
+				var instance = instance_create_layer(x, y,"Item", obj_item_invulnerability_potion);
+				instance.image_alpha = 0;
+	}
+	
+	
+	//activate bomb
+	if (specialAbility == specialAbilityType.Bomb) {
+			PlaySound(snd_throw, false, 2);
+			CreateItemInheritedWeaponWithMovement(x,y-30, 1, -3, obj_weapon_bomb, "Weapon", id ?? noone);
+	}
+	
+	
 }
 		
 
+
+#endregion
+
+#region Set invulnerabilityPotionEffect
+
+function SetInvulnerabilityPotionEffect() {
+	isInvincible = true;	
+	hasinvulnerabilityPotionEffect = true;
+	image_blend = c_fuchsia;
+	alarm[4] = 700;
+}
 
 #endregion
 

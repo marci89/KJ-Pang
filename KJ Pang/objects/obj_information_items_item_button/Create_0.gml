@@ -94,10 +94,35 @@ function Init() {
 	}
 	
 	if(buttonId == 12) {
-		image = spr_item_gravity_strong_reverse;
-		infoType = informationType.GravityStrongReverse;
+		image = spr_item_bounced_pearl;
+		infoType = informationType.BouncingPearl;
 		requiredDifficult = gameDifficultType.Normal;
 	}
+	
+	if(buttonId == 13) {
+		image = spr_item_bounced_pearls;
+		infoType = informationType.BouncingPearls;
+		requiredDifficult = gameDifficultType.Normal;
+	}
+	
+	if(buttonId == 14) {
+		image = spr_item_projectile_shield;
+		infoType = informationType.ProjectileShield;
+		requiredDifficult = gameDifficultType.Normal;
+	}
+	
+	if(buttonId == 15) {
+		image = spr_item_protecting_ring;
+		infoType = informationType.ProtectiveRing;
+		requiredDifficult = gameDifficultType.Hard;
+	}
+	
+	if(buttonId == 16) {
+		image = spr_item_invulnerability_potion;
+		infoType = informationType.InvulnerabilityPotion;
+		requiredDifficult = gameDifficultType.Hard;
+	}
+	
 	
 	
 	//set image

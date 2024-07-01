@@ -11,9 +11,9 @@ global.isAfterFinalBattleLevel = false; // after final battle level or not.
 global.currentLevelEffect = noone; // clear effect type
 global.hasLevelTime = true; // level timer enabled
 global.hasRoomWallFrame = false; // no wall frames
-global.isRestartLevelAfterDead = true; //restart after death
+global.isRestartLevelAfterDead = false; //restart after death
 global.levelTimeMax = 150; // level's max time
-global.playerOneDefaultWeapon = weaponType.Pistol;
+//global.playerOneDefaultWeapon = weaponType.Pistol;
 global.level = 4
 
 		//Giant normal ball default properties
@@ -481,14 +481,24 @@ function CreateLevelNormal4() {
 	
 	//Enemy
 	//CreateWorm(600,300, -1, 0, true);
-	CreateTongueWorm (850,300, 1, 0, true);
-
+	//CreateTongueWorm (850,300, 1, 0, true);
 	
+	CreateCacodemonChild(100, 300);
+CreateCacodemonChild(300, 300);
+	CreateCacodemonChild(500, 300);
+	CreateCacodemonChild(700, 300);
+	//CreateCacodemonChild(800, 300);
+	
+
 	//wall	
 
-	CreateItem(80, 600, obj_item_antigravity);
+	CreateItem(80, 600, obj_item_energy_shield);
 	CreateItem(140, 600, obj_item_time_slow);
 	CreateItem(200, 600, obj_item_time_freeze);
+	//CreateItem(250, 600, obj_item_projectile_shield);
+	//CreateItem(270, 600, obj_item_invulnerability_potion);
+//	CreateItem(320, 600, obj_item_bounced_pearls);
+	CreateItem(360, 600, obj_item_double_power_wire);
 	
 	//items
 	CreateLifePoint(30, 640, lifePointType.Red);

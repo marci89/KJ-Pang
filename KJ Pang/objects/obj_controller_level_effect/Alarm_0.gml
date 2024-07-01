@@ -36,18 +36,6 @@
  
  #endregion
  
- #region strong reverse gravity end
- 
- if(global.currentLevelEffect == levelEffectType.StrongReverseGravity) {
-	ResetAllEnemyValuesToOriginalProperties();
-	ResetAllItemValuesToOriginalProperties();
-	
-	previousLevelEffect = noone;
-	global.currentLevelEffect = noone;
- }
- 
- #endregion
- 
  #region TimeFreeze effect end
  
  if(global.currentLevelEffect == levelEffectType.TimeFreeze) {
@@ -71,11 +59,6 @@
 		
 	if(nextLevelEffect == levelEffectType.ReverseGravity) {
 		ExecuteReverseGravityEffect();
-		nextLevelEffect = noone;
-	}
-	
-	if(nextLevelEffect == levelEffectType.StrongReverseGravity) {
-		ExecuteStrongReverseGravityEffect();
 		nextLevelEffect = noone;
 	}
  }

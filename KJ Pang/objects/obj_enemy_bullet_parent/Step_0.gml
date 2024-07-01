@@ -22,6 +22,7 @@ if (isGravityXEnabled) {
 #endregion
 
 if (isSensitiveCollisions) {
+	
 #region Wall collision
 
 isOnGround = false;
@@ -87,5 +88,35 @@ if (CheckScreenCollisionBottomWithoutWallForObject(y, halfSpriteHeight)) {
 //update movement position
 x += moveX;
 y += moveY;
+
+#endregion
+
+#region player protection ring collision
+
+
+//Collide on x-axis
+if (place_meeting(x + moveX, y, obj_weapon_protecting_ring_bullet)  ) {
+	
+   	var ringInstance = instance_place(x + moveX, y, obj_weapon_protecting_ring_bullet);
+	
+		if (IsInstanceExists(ringInstance)) {
+			   instance_destroy(ringInstance);
+		}
+		
+   instance_destroy();
+}
+
+
+//Collide on y-axis
+if (place_meeting(x, y + moveY, obj_weapon_protecting_ring_bullet) ) {
+	
+	 	var ringInstance = instance_place(x, y + moveY, obj_weapon_protecting_ring_bullet);
+	
+		if (IsInstanceExists(ringInstance)) {
+			   instance_destroy(ringInstance);
+		}
+		
+     instance_destroy();
+}
 
 #endregion

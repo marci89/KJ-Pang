@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_spec_bullet_destroy",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.017914,
+  "name":"snd_spec_bullet_destroy",
+  "parent":{
+    "name":"Weapon",
+    "path":"folders/Sounds/Voice/Weapon.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_spec_bullet_destroy.wav",
+  "type":0,
+  "volume":0.32,
+}

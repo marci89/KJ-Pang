@@ -25,7 +25,7 @@ nextRowStartId = 0; // increase value for button ids every row
 //button handle
 maxButtonId = 0; // maximum button id value
 maxItemPerRow = 7; // how many item are in a row
-itemNumber = 40; // number of items
+itemNumber = 17; // number of items
 selectType = menuButtonSelectType.AllDirection; // keyboard or gamepad movement type
 
 #endregion

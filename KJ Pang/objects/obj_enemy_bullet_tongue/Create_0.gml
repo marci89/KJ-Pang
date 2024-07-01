@@ -13,7 +13,6 @@ isMaxSized = false; // is picked up or not
 
 //disabled effects
 isReverseGravityEffectEnabled = false;
-isStrongReverseGravityEffectEnabled = false;
 isAntigravityEffectEnabled = false;
 isTimeFreezeEffectEnabled = false;
 isTimeSlowEffectEnabled = false;

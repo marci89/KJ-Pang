@@ -13,7 +13,7 @@ if (place_meeting(x, y, obj_player_one)) {
 		if(global.playerOneHealth < 3) {
 
 			global.playerOneHealth = 3;	
-			PlaySound(snd_first_aid_kit, false,2);
+			PlaySound(snd_first_aid_kit, false,1);
 			isPickedUp = true;
 		}
 	}
@@ -28,7 +28,7 @@ if (place_meeting(x, y, obj_player_two)) {
 		if(global.playerTwoHealth < 3) {
 
 			global.playerTwoHealth = 3;	
-			PlaySound(snd_first_aid_kit, false,2);
+			PlaySound(snd_first_aid_kit, false,1);
 			isPickedUp = true;
 		}
 	}

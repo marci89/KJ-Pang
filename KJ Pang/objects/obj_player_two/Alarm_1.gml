@@ -9,6 +9,8 @@ if (blinkDuration > 0){
 } else {
 	blinkDuration = 51;
 	image_alpha = 1;
-	isInvincible = false;		
+	if(!hasinvulnerabilityPotionEffect) {
+		isInvincible = false;		
+	}	
 }
 		

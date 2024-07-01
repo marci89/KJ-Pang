@@ -35,12 +35,6 @@ function Init(type) {
 		image = spr_status_gravity_reverse;
 	}
 	
-	if(type == informationType.GravityStrongReverse) {
-		titleText =  GetLocalizedText("gravityStrongReverseTitle"); 
-		descriptionText =  GetLocalizedText("gravityStrongReverseDesc"); 
-		image = spr_status_gravity_strong_reverse;
-	}
-	
 	if(type == informationType.TimeFreeze) {
 		titleText =  GetLocalizedText("timeFreezeTitle"); 
 		descriptionText =  GetLocalizedText("timeFreezeDesc"); 
@@ -69,6 +63,36 @@ function Init(type) {
 		titleText =  GetLocalizedText("magnetTitle"); 
 		descriptionText =  GetLocalizedText("magnetDesc"); 
 		image = spr_status_magnet;
+	}
+	
+	if(type == informationType.BouncingPearl) {
+		titleText =  GetLocalizedText("bouncingPearlTitle"); 
+		descriptionText =  GetLocalizedText("bouncingPearlDesc"); 
+		image = spr_item_bounced_pearl;
+	}
+	
+	if(type == informationType.BouncingPearls) {
+		titleText =  GetLocalizedText("bouncingPearlsTitle"); 
+		descriptionText =  GetLocalizedText("bouncingPearlsDesc"); 
+		image = spr_status_bounced_pearls;
+	}
+	
+	if(type == informationType.ProjectileShield) {
+		titleText =  GetLocalizedText("projectileShieldTitle"); 
+		descriptionText =  GetLocalizedText("projectileShieldDesc"); 
+		image = spr_status_projectile_shield;
+	}
+	
+	if(type == informationType.ProtectiveRing) {
+		titleText =  GetLocalizedText("protectiveRingTitle"); 
+		descriptionText =  GetLocalizedText("protectiveRingDesc"); 
+		image = spr_status_protecting_ring;
+	}
+	
+	if(type == informationType.InvulnerabilityPotion) {
+		titleText =  GetLocalizedText("invulnerabilityPotionTitle"); 
+		descriptionText =  GetLocalizedText("invulnerabilityPotionDesc"); 
+		image = spr_status_invulnerability_potion;
 	}
 	
 	
@@ -109,6 +133,67 @@ function Init(type) {
 		descriptionText =  GetLocalizedText("shotGunDesc"); 
 		image = spr_item_shotgun;
 	}
+	
+	if(type == informationType.Grenade) {
+		titleText =  GetLocalizedText("grenadeTitle"); 
+		descriptionText =  GetLocalizedText("grenadeDesc"); 
+		image = spr_item_grenade;
+	}
+	
+	if(type == informationType.LandMine) {
+		titleText =  GetLocalizedText("landMineTitle"); 
+		descriptionText =  GetLocalizedText("landMineDesc"); 
+		image = spr_item_land_mine;
+	}
+	
+	if(type == informationType.FlameThrower) {
+		titleText =  GetLocalizedText("flameThrowerTitle"); 
+		descriptionText =  GetLocalizedText("flameThrowerDesc"); 
+		image = spr_status_flamethrower;
+	}
+	
+	if(type == informationType.TrackingRocketLauncher) {
+		titleText =  GetLocalizedText("trackingRocketLauncherTitle"); 
+		descriptionText =  GetLocalizedText("trackingRocketLauncherDesc"); 
+		image = spr_status_tracking_rocket_launcher;
+	}
+	
+	if(type == informationType.TrackingRocketLauncher) {
+		titleText =  GetLocalizedText("trackingRocketLauncherTitle"); 
+		descriptionText =  GetLocalizedText("trackingRocketLauncherDesc"); 
+		image = spr_status_tracking_rocket_launcher;
+	}
+	
+	if(type == informationType.TripleSting) {
+		titleText =  GetLocalizedText("tripleStingTitle"); 
+		descriptionText =  GetLocalizedText("tripleStingDesc"); 
+		image = spr_item_triple_sting;
+	}
+	
+	if(type == informationType.DoublePowerWire) {
+		titleText =  GetLocalizedText("doublePowerWireTitle"); 
+		descriptionText =  GetLocalizedText("doublePowerWireDesc"); 
+		image = spr_item_double_power_wire;
+	}
+	
+	if(type == informationType.Detonator) {
+		titleText =  GetLocalizedText("detonatorTitle"); 
+		descriptionText =  GetLocalizedText("detonatorDesc"); 
+		image = spr_item_detonator;
+	}
+	
+	if(type == informationType.Bomb) {
+		titleText =  GetLocalizedText("bombTitle"); 
+		descriptionText =  GetLocalizedText("bombDesc"); 
+		image = spr_item_bomb;
+	}
+	
+	if(type == informationType.RocketLauncher) {
+		titleText =  GetLocalizedText("rocketLauncherTitle"); 
+		descriptionText =  GetLocalizedText("rocketLauncherDesc"); 
+		image = spr_status_rocket_launcher;
+	}
+	
 	
 	
 	

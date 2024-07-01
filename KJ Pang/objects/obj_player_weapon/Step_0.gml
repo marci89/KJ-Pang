@@ -152,6 +152,10 @@ if(player.weapon == weaponType.FlameThrower) {
 			
 		} else if(player.weapon == weaponType.FlameThrower) {
 			handleFlameThrower();		
+		} else if(player.weapon == weaponType.TripleSting) {
+			handleTripleSting();		
+		} else if(player.weapon == weaponType.DoublePowerWire) {
+			handleDoublePowerWire();		
 		}
 		
 		

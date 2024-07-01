@@ -28,7 +28,7 @@ global.previousLevelTime = 0 // set 0 to refresh the value each start
 
 #region create current level
 
-global.gameDifficult = gameDifficultType.Normal;
+//global.gameDifficult = gameDifficultType.Normal;
 
 
 if(global.gameDifficult == gameDifficultType.Easy) {

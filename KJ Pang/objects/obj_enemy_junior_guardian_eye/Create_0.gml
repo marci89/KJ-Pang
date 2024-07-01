@@ -21,7 +21,6 @@ jumpHeightMax = -20;
 
 //disabled effects
 isReverseGravityEffectEnabled = false;
-isStrongReverseGravityEffectEnabled = false;
 isAntigravityEffectEnabled = false;
 isTimeFreezeEffectEnabled = false;
 isTimeSlowEffectEnabled = false;

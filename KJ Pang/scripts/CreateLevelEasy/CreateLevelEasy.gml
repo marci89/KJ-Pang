@@ -14,7 +14,7 @@ global.hasRoomWallFrame = false; // no wall frames
 global.isRestartLevelAfterDead = true; //restart after death
 global.levelTimeMax = 150; // level's max time
 //global.playerOneDefaultWeapon = weaponType.MachineGun;
-//global.level = 20
+global.level = 26
 
 	//Giant normal ball default properties
 	global.normalBallGiantMoveX = 0.5;

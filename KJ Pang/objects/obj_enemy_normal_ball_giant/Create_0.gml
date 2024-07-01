@@ -50,7 +50,6 @@ var dynamitDropChance = 0.1;
 var energyShieldDropChance = 0.1;
 var antigravityDropChance = 0.1;
 var reverseGravityDropChance = 0.1;
-var strongReverseGravityDropChance = 0.1;
 var magnetDropChance = 0.1;
 var healthPotionDropChance = 0.01;
 

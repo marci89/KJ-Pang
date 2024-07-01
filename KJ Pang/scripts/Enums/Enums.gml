@@ -36,12 +36,18 @@ enum informationType{
 	//items
 	Antigravity,
 	GravityReverse,
-	GravityStrongReverse,
 	Magnet,
 	EnergyShield,
 	TimeFreeze,
 	TimeSlow,
 	Dynamite,
+	
+	BouncingPearl,
+	BouncingPearls,
+	ProjectileShield,
+	
+	ProtectiveRing,
+	InvulnerabilityPotion,
 	
 	//weapons
     SingleSting,
@@ -50,13 +56,18 @@ enum informationType{
 	MachineGun,
 	ShotGun,
 	Pistol,
+	
 	Grenade,
+	LandMine,
+	FlameThrower,
+	TrackingRocketLauncher,
+	
+	TripleSting,
+	DoublePowerWire,
 	Detonator,
 	Bomb,
-	LandMine,
 	RocketLauncher,
-	TrackingRocketLauncher,
-	FlameThrower,
+
 	
 	//others
 	DestroyableWall,
@@ -145,10 +156,17 @@ enum specialAbilityType{
 	TimeFreeze,
 	AntiGravity,
 	ReverseGravity,
-	StrongReverseGravity,
 	Magnet,
 	Dynamite,
-	EnergyShield
+	EnergyShield,
+	
+	BouncingPearls,
+	ProjectileShield,
+	
+	ProtectiveRing,
+	Bomb,
+	InvulnerabilityPotion
+	
 };
 
 #endregion
@@ -251,6 +269,8 @@ enum weaponType{
 	RocketLauncher,
 	TrackingRocketLauncher,
 	FlameThrower,
+	TripleSting,
+	DoublePowerWire,
 };
 
 #endregion

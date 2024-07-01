@@ -42,7 +42,6 @@ isOnGround = false;
 //Collide on x-axis
 if (place_meeting(x + moveX, y, obj_wall_parent)  ) {
    if (!isBounced) {
-	   	PlaySound(snd_energy_shoot_destroy, false, 1);
 			
 		var wallInstance = instance_place(x + moveX, y, obj_wall_parent);
 	
@@ -74,7 +73,6 @@ if (place_meeting(x + moveX, y, obj_wall_parent)  ) {
 //Collide on y-axis
 if (place_meeting(x, y + moveY, obj_wall_parent) ) {
    if (!isBounced) {
-	   	PlaySound(snd_energy_shoot_destroy, false, 1);
 			
 		var wallInstance = instance_place(x, y + moveY, obj_wall_parent);
 	

@@ -63,6 +63,54 @@ function Init() {
 		requiredDifficult = gameDifficultType.Normal;
 	}
 	
+	if(buttonId == 7) {
+		image = spr_item_land_mine;
+		infoType = informationType.LandMine;
+		requiredDifficult = gameDifficultType.Normal;
+	}
+	
+	if(buttonId == 8) {
+		image = spr_status_flamethrower_small;
+		infoType = informationType.FlameThrower;
+		requiredDifficult = gameDifficultType.Normal;
+	}
+	
+	if(buttonId == 9) {
+		image = spr_status_tracking_rocket_launcher_small;
+		infoType = informationType.TrackingRocketLauncher;
+		requiredDifficult = gameDifficultType.Normal;
+	}
+	
+	if(buttonId == 10) {
+		image = spr_item_triple_sting;
+		infoType = informationType.TripleSting;
+		requiredDifficult = gameDifficultType.Hard;
+	}
+	
+	if(buttonId == 11) {
+		image = spr_item_double_power_wire;
+		infoType = informationType.DoublePowerWire;
+		requiredDifficult = gameDifficultType.Hard;
+	}
+	
+	if(buttonId == 12) {
+		image = spr_item_detonator;
+		infoType = informationType.Detonator;
+		requiredDifficult = gameDifficultType.Hard;
+	}
+	
+	if(buttonId == 13) {
+		image = spr_item_bomb;
+		infoType = informationType.Bomb;
+		requiredDifficult = gameDifficultType.Hard;
+	}
+	
+	if(buttonId == 14) {
+		image = spr_status_rocket_launcher_small;
+		infoType = informationType.RocketLauncher;
+		requiredDifficult = gameDifficultType.Hard;
+	}
+	
 	//set image
 	sprite_index = image;
 	

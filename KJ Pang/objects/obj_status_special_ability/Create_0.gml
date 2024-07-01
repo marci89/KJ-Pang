@@ -21,10 +21,6 @@ function SetSprite(specialAbility) {
 		inactiveImage = spr_status_inactive_gravity_reverse;
 	}
 	
-	if (specialAbility == specialAbilityType.StrongReverseGravity) {
-		activeImage = spr_status_gravity_strong_reverse;
-		inactiveImage = spr_status_inactive_gravity_strong_reverse;
-	}
 	
 	if (specialAbility == specialAbilityType.TimeFreeze) {
 		activeImage = spr_status_time_freeze;
@@ -44,7 +40,32 @@ function SetSprite(specialAbility) {
 	if (specialAbility == specialAbilityType.EnergyShield) {
 		activeImage = spr_status_energy_shield;
 		inactiveImage = spr_status_inactive_energy_shield;
-	}	
+	}
+	
+	if (specialAbility == specialAbilityType.BouncingPearls) {
+		activeImage = spr_status_bounced_pearls;
+		inactiveImage = spr_status_inactive_bounced_pearls;
+	}
+	
+	if (specialAbility == specialAbilityType.ProjectileShield) {
+		activeImage = spr_status_projectile_shield;
+		inactiveImage = spr_status_inactive_energy_shield;
+	}
+	
+	if (specialAbility == specialAbilityType.ProtectiveRing) {
+		activeImage = spr_status_protecting_ring;
+		inactiveImage = spr_status_inactive_protecting_ring;
+	}
+	
+	if (specialAbility == specialAbilityType.InvulnerabilityPotion) {
+		activeImage = spr_status_invulnerability_potion;
+		inactiveImage = spr_status_inactive_invulnerability_potion;
+	}
+	
+	if (specialAbility == specialAbilityType.Bomb) {
+		activeImage = spr_status_bomb;
+		inactiveImage = spr_status_inactive_bomb;
+	}
 }
 
 #endregion

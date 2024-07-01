@@ -125,10 +125,10 @@ else if (global.gameDifficult == gameDifficultType.Normal) {
 	defaultPlayerWeapon = weaponType.SingleSting;
 }
 else if (global.gameDifficult == gameDifficultType.Hard) {
-	defaultPlayerWeapon = weaponType.DoubleSting;
+	defaultPlayerWeapon = weaponType.SingleSting;
 }
 else if (global.gameDifficult == gameDifficultType.Impossible) {
-	defaultPlayerWeapon = weaponType.DoubleSting;
+	defaultPlayerWeapon = weaponType.SingleSting;
 }
 
 #endregion
@@ -408,6 +408,81 @@ function handleDoubleSting() {
 
 #endregion
 
+#region triple sting function
+
+function handleTripleSting() {
+	
+	// set this default if use
+	defaultPlayerWeapon = weaponType.TripleSting;
+	
+	weaponX = harpoonX;
+	weaponY = harpoonY;
+	sprite_index = spr_player_weapon_harpoon; // set the weapon image
+	
+	setWeaponVisibility();
+	
+	//Set the x and y position to character
+	x = weaponDirection == 1 ? player.x + weaponX : player.x - weaponX;
+	y = player.y - weaponY;
+
+	// shoot up
+    if ((inputFire || inputFirePressed)  && isAllowFired && !player.isDead && !isWeaponReloading) {
+		
+		// set weapon direction
+		shootDirectionType = weaponDirectionType.Vertical;
+		
+		//Count player's sting number
+		var stingHeadCount = GetWeaponInstanceNumber(obj_weapon_sting_head, player ?? noone);
+		
+		if (stingHeadCount <= 2) {
+			if(!isWeaponReloading) {
+				rotationDirection = weaponDirection;
+				isFired = true;
+				isWeaponReloading = true;
+			    image_angle = weaponDirection == 1 ? 90 : -90;
+				alarm[0]  = weaponFiredRotationSpeed;
+				alarm[1]  = reloadingHarpoonTime;
+			
+				PlaySound(snd_string_shoot, false, 2);
+				
+				//sting start pos
+				stingStartPositionY = player.y;
+				
+				var sting = CreateWeaponWithMovement(player.x, stingStartPositionY , 0, -8, obj_weapon_sting_head, "Weapon", player ?? noone, weaponDirectionType.Vertical);
+				sting.CheckPlayerIsOnGround();
+			}
+		}
+	}
+	
+	// shoot horizontal
+    if ((inputHorizontalFire || inputHorizontalFirePressed) && isAllowFired && !player.isDead && !isWeaponReloading) {
+		
+		// set weapon direction
+		shootDirectionType = weaponDirectionType.Horizontal;
+		
+		//Count player's sting number
+		var stingHeadCount = GetWeaponInstanceNumber(obj_weapon_sting_head, player ?? noone);
+		
+		if (stingHeadCount <= 2) {
+			if(!isWeaponReloading) {
+				rotationDirection = weaponDirection;
+				isFired = true;
+				isWeaponReloading = true;
+			    image_angle = weaponDirection == 1 ? 90 : -90;
+				alarm[0]  = weaponFiredRotationSpeed;
+				alarm[1]  = reloadingHarpoonTime;
+				
+				var directionValue = weaponDirection == 1 ? 9 : -9; // direction
+			
+				PlaySound(snd_string_shoot, false, 2);
+				CreateWeaponWithMovement(player.x, y, directionValue, 0, obj_weapon_sting_head, "Weapon", player ?? noone, weaponDirectionType.Horizontal);
+			}
+		}
+	}
+}
+
+#endregion
+
 #region power wire function
 
 function handlePowerWire() {
@@ -460,6 +535,78 @@ function handlePowerWire() {
 		var powerWireHeadCount = GetWeaponInstanceNumber(obj_weapon_power_wire_head, player ?? noone);
 		
 		if (powerWireHeadCount == 0) {
+			if(!isWeaponReloading) {
+				rotationDirection = weaponDirection;
+				isFired = true;
+				isWeaponReloading = true;
+			    image_angle = weaponDirection == 1 ? 90 : -90;
+				alarm[0]  = weaponFiredRotationSpeed;
+				alarm[1]  = reloadingHarpoonTime;
+			
+				var directionValue = weaponDirection == 1 ? 9 : -9; // direction
+			
+				PlaySound(snd_string_shoot, false, 2);
+				CreateWeaponWithMovement(player.x, y, directionValue, 0, obj_weapon_power_wire_head, "Weapon", player ?? noone, weaponDirectionType.Horizontal);
+				
+			}
+		}
+	}
+}
+
+#endregion
+
+#region double power wire function
+
+function handleDoublePowerWire() {
+	
+	weaponX = harpoonX;
+	weaponY = harpoonY;
+	sprite_index = spr_player_weapon_harpoon; // set the weapon image
+	
+	setWeaponVisibility();
+	
+	//Set the x and y position to character
+	x = weaponDirection == 1 ? player.x + weaponX : player.x - weaponX;
+	y = player.y - weaponY;
+
+	// shoot up
+    if ((inputFire || inputFirePressed) && isAllowFired  && !player.isDead  && !isWeaponReloading && player.isOnGround) {
+		
+		// set weapon direction
+		shootDirectionType = weaponDirectionType.Vertical;
+		
+		//Count player's power wire number
+		var powerWireHeadCount = GetWeaponInstanceNumber(obj_weapon_power_wire_head, player ?? noone);
+		
+		if (powerWireHeadCount  <= 1) {
+			if(!isWeaponReloading) {
+				rotationDirection = weaponDirection;
+				isFired = true;
+				isWeaponReloading = true;
+			    image_angle = weaponDirection == 1 ? 90 : -90;
+				alarm[0]  = weaponFiredRotationSpeed;
+				alarm[1]  = reloadingHarpoonTime;
+			
+				//sting start pos
+				stingStartPositionY = player.y;
+				
+				PlaySound(snd_string_shoot, false, 2);
+				var powerWire = CreateWeaponWithMovement(player.x, stingStartPositionY , 0, -8, obj_weapon_power_wire_head, "Weapon", player ?? noone, weaponDirectionType.Vertical);
+				powerWire.CheckPlayerIsOnGround();
+
+			}
+		}
+	}
+	
+	// shoot horizontal
+    if ((inputHorizontalFire || inputHorizontalFirePressed) && isAllowFired  && !player.isDead  && !isWeaponReloading) {
+		
+		// set weapon direction
+		shootDirectionType = weaponDirectionType.Horizontal;
+		//Count player's power wire number
+		var powerWireHeadCount = GetWeaponInstanceNumber(obj_weapon_power_wire_head, player ?? noone);
+		
+		if (powerWireHeadCount  <= 1) {
 			if(!isWeaponReloading) {
 				rotationDirection = weaponDirection;
 				isFired = true;

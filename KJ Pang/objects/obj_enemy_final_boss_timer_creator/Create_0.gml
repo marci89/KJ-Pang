@@ -23,7 +23,6 @@ isHarmless = true;
 
 //disabled effects
 isReverseGravityEffectEnabled = false;
-isStrongReverseGravityEffectEnabled = false;
 isAntigravityEffectEnabled = false;
 isTimeFreezeEffectEnabled = false;
 isTimeSlowEffectEnabled = false;

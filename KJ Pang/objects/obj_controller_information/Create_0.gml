@@ -75,7 +75,7 @@ function CreateEasyLevelInformation() {
 		newsText = GetLocalizedText("bossLevel");
 		text= GetLocalizedText("notRestartTheLevelAfterDeathDesc");
 		
-		var infoPanelObj = instance_create_layer(362, infoPanelStartY ?? 0,"Instances", obj_information_panel);
+		var infoPanelObj = instance_create_layer(362, infoPanelStartY + 70 ?? 0,"Instances", obj_information_panel);
 		infoPanelObj.Init(informationType.Life ?? noone);
 	}
 	

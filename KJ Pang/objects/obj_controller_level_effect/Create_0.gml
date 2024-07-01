@@ -136,30 +136,6 @@ function ExecuteReverseGravityEffect() {
 
 #endregion
 
-#region Strong reverse gravity effect function
-
-function ExecuteStrongReverseGravityEffect() {
-	
-	// Set current values
-	SettingsObjectsProperties(levelEffectType.StrongReverseGravity);
-	
-	//Set next effect
-	nextLevelEffect = levelEffectType.StrongReverseGravity;
-	
-	//check time freeze situation
-	if (isTimeFreezed)
-		return;
-		
-	alarm[0] = global.gravityEffectDuration; // effect end
-	PlaySound(snd_strong_reverse_gravity, false, 1);
-	
-	// set effect
-	global.currentLevelEffect = levelEffectType.StrongReverseGravity;
-	previousLevelEffect = levelEffectType.StrongReverseGravity;
-}
-
-#endregion
-
 
 
 

@@ -24,7 +24,6 @@ originalIsImmuneToWeapon = true; //outside helper prop
 
 //disabled effects
 isReverseGravityEffectEnabled = false;
-isStrongReverseGravityEffectEnabled = false;
 isAntigravityEffectEnabled = false;
 isTimeFreezeEffectEnabled = false;
 isTimeSlowEffectEnabled = false;
@@ -61,7 +60,6 @@ function HurtBlending() {
 
 function Disconnected() {
 	isReverseGravityEffectEnabled = true;
-	isStrongReverseGravityEffectEnabled = true;
 	isAntigravityEffectEnabled = true;
 	isTimeFreezeEffectEnabled = true;
 	isTimeSlowEffectEnabled = true;

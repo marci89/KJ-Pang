@@ -237,13 +237,20 @@ if (collision_rectangle(x-25, y-80, x+25, y, obj_enemy_parent, true, true)) {
 		        if (!enemyInstance.isHarmless) {
 					if (!isDead && !isInvincible) {
 						
-							//shield check
+						//shield check
 						if(hasEnergyShield) {
 							PlaySound(snd_energy_shield_deactivate, false);
 							hasEnergyShield = false;
 							isDead = false;
 							isInvincible = true;
 							isBlinked = true;
+						} else if (hasProjectileShield) {
+								PlaySound(snd_energy_shield_deactivate, false);
+								hasProjectileShield = false;
+								playerProjectileShield = noone;
+								isDead = false;
+								isInvincible = true;
+								isBlinked = true;
 						} else {
 						
 						// hurt sound
@@ -282,13 +289,28 @@ if (collision_rectangle(x-25, y-80, x+25, y, obj_enemy_bullet_parent, true, true
 		        if (!enemyBulletInstance.isHarmless) {
 					if (!isDead && !isInvincible) {
 						
-						//shield check
+							//shield check
 						if(hasEnergyShield) {
 							PlaySound(snd_energy_shield_deactivate, false);
 							hasEnergyShield = false;
 							isDead = false;
 							isInvincible = true;
 							isBlinked = true;
+						} else if(hasProjectileShield) {
+								if(IsInstanceExists(playerProjectileShield)) {
+									
+									playerProjectileShield.Hurt();
+									
+										if(playerProjectileShield.shieldHealth <= 0) {
+											PlaySound(snd_energy_shield_deactivate, false);
+											hasProjectileShield = false;
+											playerProjectileShield = noone;
+											isDead = false;
+											isInvincible = true;
+											isBlinked = true;
+										}
+								}
+	
 						} else {
 						
 						// hurt sound

@@ -27,8 +27,6 @@ if (global.currentLevelEffect == levelEffectType.TimeFreeze) {
 	image_speed = 0;
 } else if (global.currentLevelEffect == levelEffectType.ReverseGravity) {
 	image_speed = 0;
-} else if (global.currentLevelEffect == levelEffectType.StrongReverseGravity) {
-	image_speed = 0;
 } else if (global.currentLevelEffect == levelEffectType.TimeSlow) {
 	image_speed = 0.05;
 } 
