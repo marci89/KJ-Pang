@@ -346,3 +346,122 @@ function CreateRandomGuardianHurtSound(){
 
 #endregion
 
+#region Create random sound for frog hurt
+
+function CreateRandomFrogHurtSound(){
+	
+	var randomIndex = irandom_range(1, 2); 
+    switch (randomIndex) {
+        case 1:
+            PlaySound(snd_frog_hurt1, false, 1);
+            break;
+        case 2:
+            PlaySound(snd_frog_hurt2, false, 1);
+            break;
+        default:
+            PlaySound(snd_frog_hurt1, false, 1);
+            break;
+    }
+}
+
+#endregion
+
+#region Create random sound for frog birth
+
+function CreateRandomFrogBirthSound(){
+	
+	var randomIndex = irandom_range(1, 2); 
+    switch (randomIndex) {
+        case 1:
+            PlaySound(snd_frog_birth1, false, 1);
+            break;
+        case 2:
+            PlaySound(snd_frog_birth2, false, 1);
+            break;
+        default:
+            PlaySound(snd_frog_birth1, false, 1);
+            break;
+    }
+}
+
+#endregion
+
+#region Create random sound for succubus hurt
+
+function CreateRandomSuccubusHurtSound(){
+	
+	var randomIndex = irandom_range(1, 2); 
+    switch (randomIndex) {
+        case 1:
+            PlaySound(snd_succubus_hurt1, false, 1);
+            break;
+        case 2:
+            PlaySound(snd_succubus_hurt2, false, 1);
+            break;
+        default:
+            PlaySound(snd_succubus_hurt1, false, 1);
+            break;
+    }
+}
+
+#endregion
+
+#region Create random sound for diablo hurt
+
+function CreateRandomDiabloHurtSound(){
+	
+	var randomIndex = irandom_range(1, 2); 
+    switch (randomIndex) {
+        case 1:
+            PlaySound(snd_diablo_hurt1, false, 1);
+            break;
+        case 2:
+            PlaySound(snd_diablo_hurt2, false, 1);
+            break;
+        default:
+            PlaySound(snd_diablo_hurt1, false, 1);
+            break;
+    }
+}
+
+#endregion
+
+#region Create random sound for bat hurt
+
+function CreateRandomBatHurtSound(){
+	
+	var randomIndex = irandom_range(1, 2); 
+    switch (randomIndex) {
+        case 1:
+            PlaySound(snd_bat_hurt1, false, 1);
+            break;
+        case 2:
+            PlaySound(snd_bat_hurt2, false, 1);
+            break;
+        default:
+            PlaySound(snd_bat_hurt1, false, 1);
+            break;
+    }
+}
+
+#endregion
+
+#region Create random sound for bat death
+
+function CreateRandomBatDeathSound(){
+	
+	var randomIndex = irandom_range(1, 2); 
+    switch (randomIndex) {
+        case 1:
+            PlaySound(snd_bat_death1, false, 1);
+            break;
+        case 2:
+            PlaySound(snd_bat_death2, false, 1);
+            break;
+        default:
+            PlaySound(snd_bat_death1, false, 1);
+            break;
+    }
+}
+
+#endregion

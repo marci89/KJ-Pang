@@ -241,7 +241,7 @@ function Hopping() {
 
 function BigHopping() {
 	if(isOnGround) {
-	 moveY = -9;
+	 moveY = -13;
 	}
 }
 

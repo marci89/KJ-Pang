@@ -15,6 +15,7 @@ gravSpeedY = 0.1; // y gavity speed
 
 //bounce
 bounceDecay = 1; // Bounce decay
+isBounceYEnabled = true;
 
 //jump height
 jumpHeightMax = -12; // moveY controll to set maximum jumping height

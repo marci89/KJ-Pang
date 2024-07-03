@@ -14,7 +14,7 @@ global.hasRoomWallFrame = false; // no wall frames
 global.isRestartLevelAfterDead = true; //restart after death
 global.levelTimeMax = 200; // level's max time
 //global.playerOneDefaultWeapon = weaponType.FlameThrower;
-global.level = 13;
+global.level = 26;
 //global.gameDifficult = gameDifficultType.Impossible;
 
 
@@ -1855,21 +1855,25 @@ function CreateLevelNormal26() {
 	// init
 	LoadBackgroundImage("huge_frog_place"); //Load background
 	CreateWallFrame(wallFrameType.Blue ?? noone); //wall frame creating
-	PlaySound(snd_snake_cave, false,2); // play music
+	PlaySound(snd_frog_croak_background, false,2); // play music
 	CreatePlayer(550, 500); // create player
 	global.isBossLevel = true;
 	global.isRestartLevelAfterDead = false;
 	global.levelTimeMax = 400; // level's max time
+
 	
 	//Enemy
-	CreateSnakeBossNest(50,50, 5,5, 25, 1000, c_gray);
+	CreateFrogBossNest(120,-100, enemyStartDirectionType.Right, 650);
 	
 	//wall
+	CreateWallMany(0,500, wallType.Green,wallCreatorDirectionType.Right,5);
+	
+	CreateWallMany(992,500, wallType.Green,wallCreatorDirectionType.Left,5);
 	
 	//items
-	CreateItem(74, 550, obj_item_health_potion);
-	CreateItem(130, 550, obj_item_energy_shield);
-	CreateItem(950, 550, obj_item_health_potion);
+	CreateItem(950, 650, obj_item_machine_gun);
+	CreateItem(950, 300, obj_item_energy_shield);
+	CreateItem(990, 300, obj_item_health_potion);
 }
 
 #endregion

@@ -137,7 +137,11 @@ if (place_meeting(x, y + moveY, obj_wall_parent) ) {
 		        y += sign(moveY);
 		    }
 			//Bounce
-			moveY *= -bounceDecay;
+			if(isBounceYEnabled) {
+				moveY *= -bounceDecay;
+			} else {
+				moveY = 0;
+			}
 			isOnGround = true;
 		}
 	}

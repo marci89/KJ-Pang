@@ -18,3 +18,22 @@ if(global.gameDifficult == gameDifficultType.Easy) {
 		actionNumber--;
 	}
 }
+
+//Normal
+
+if(global.gameDifficult == gameDifficultType.Normal) {
+	//frog boss
+	if (global.level == 26) {
+		
+		if(actionNumber == 2) {
+			PlaySound(snd_frog_croak, false,5); // play music
+			alarm[0] = 200;
+		}
+		
+		if(actionNumber == 1) {
+			PlayMusic(snd_unreal_shared_dig_attack2, true); // play music
+		}
+		actionNumber--;
+	}
+}
+
