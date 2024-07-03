@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"CreateLevelHard",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CreateLevelHard",
+  "parent":{
+    "name":"Level",
+    "path":"folders/Scripts/Level.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

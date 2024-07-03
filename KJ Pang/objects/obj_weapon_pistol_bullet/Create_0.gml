@@ -1,5 +1,5 @@
 
 //parent properties
 event_inherited()
-damage = 6; // weapon damage value
+damage = 2.5; // weapon damage value
 type = weaponType.Pistol; // weapon type

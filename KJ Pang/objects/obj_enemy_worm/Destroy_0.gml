@@ -8,6 +8,15 @@ effect_create_above( ef_smoke, x, y, 2, c_red);
 
 
  PlaySound(snd_worm_death, false, 3);
+ 
+ 
+//drop item
+var isDropped = irandom(99) < 28;
+
+if (isDropped) {
+   CreateItemWithMovement(x, y, 0, -4, obj_item_bounced_pearl);
+}
+
 
 //left side
 CreateMeatChunk(x -40 ,y-20, random_range(-0.5,-2),  random_range(-0.5,-2), c_white);

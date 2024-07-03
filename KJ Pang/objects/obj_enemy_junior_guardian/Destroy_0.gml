@@ -12,12 +12,9 @@ effect_create_above( ef_firework, x, y-40, 2, c_lime);
 
 PlaySound(snd_guardian_death, false, 2);
 
-//drop item
-var isDropped = irandom(1) == 1;
 
-if (isDropped) {
-   CreateItemWithMovement(x, y, 0, -4, obj_item_health_potion);
-} 
+ CreateItemWithMovement(x, y, 0, -4, obj_item_health_potion);
+ 
 
 
 //create gem

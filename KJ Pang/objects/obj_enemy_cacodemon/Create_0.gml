@@ -13,7 +13,7 @@ isGravityXEnabled = false; // gravity x enabled or not
 isGravityYEnabled = false; // gravity y enabled or not
 gravSpeedX = 0; // x gavity speed
 gravSpeedY = 0; // y gavity speed
-hitPoint = 110; //health
+hitPoint = 90; //health
 enemyScore = 300; // score
 jumpHeightMax = -11;
 isWallBreaker = true;
@@ -34,8 +34,8 @@ hasActiveAction = false;
 actionNumber = 1; // help different attack actions
 
 //child
-childNumber = 5;
-maxChildNumber = 5;
+childNumber = 4;
+maxChildNumber = 4;
 childCreateTime = 60;
 
 //start values

@@ -158,3 +158,16 @@ else if(global.playMode == playModeType.MultiPlayer) {
 }
 
 #endregion
+
+#region CreateLevelTime
+
+function CreateLevelTime() {
+	
+	// set timer if allowed
+	if (global.hasLevelTime) {
+		var timeTextSpace = global.hasRoomWallFrame ? global.wallFrameSize : 0;
+		instance_create_layer(800 - timeTextSpace, 2 + timeTextSpace,"Status", obj_status_time);
+	}
+}
+
+#endregion

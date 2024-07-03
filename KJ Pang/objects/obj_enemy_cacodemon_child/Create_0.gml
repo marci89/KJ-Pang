@@ -14,7 +14,7 @@ isGravityYEnabled = true; // gravity y enabled or not
 gravSpeedX = 0; // x gavity speed
 gravSpeedY = -0.1; // y gavity speed
 hitPoint = 5; //health
-enemyScore = 6; // score
+enemyScore = 2; // score
 jumpHeightMax = 5;
 
 //disabled effects
@@ -40,7 +40,6 @@ function Init() {
 
 	var rangeChoice = irandom(1);
 	
-	if(global.gameDifficult == gameDifficultType.Easy) {
 		gravSpeedY = random_range(-0.005, -0.01);
 		
 		if (rangeChoice == 0) {
@@ -54,31 +53,6 @@ function Init() {
 		
 		bulletShootTime = 500;
 		bulletSpeed = 3;
-	}
-	else if(global.gameDifficult == gameDifficultType.Normal) {
-		gravSpeedY = random_range(-0.1, -0.15);
-		
-		if (rangeChoice == 0) {
-			moveX = random_range(-1.7, -1);
-		} else {
-			moveX = random_range(1, 1.7);
-		}
-		
-		moveY = random_range(2, 4);
-		jumpHeightMax = -7;
-	}
-	else {
-		gravSpeedY = random_range(-0.16, -0.3);
-		
-		if (rangeChoice == 0) {
-			moveX = random_range(-2.5, -1.2);
-		} else {
-			moveX = random_range(1.2, 2.5);
-		}
-		
-		moveY = random_range(2, 6);
-		jumpHeightMax = -10;
-	}
 }
 
 #endregion

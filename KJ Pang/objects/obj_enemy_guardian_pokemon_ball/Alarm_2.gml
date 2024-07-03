@@ -1,4 +1,16 @@
 /// @description play sound
 
+global.levelTimeMax = 400;
+global.hasLevelTime = true;
 
-PlaySound(snd_guardian_pokemon_ball_floating, false, 2);
+	//controller object
+	var controllerObj = obj_controller_status_panel;
+	
+		if(IsInstanceExists(controllerObj ?? noone)) {
+			controllerObj.CreateLevelTime();
+		}
+		
+
+	
+
+PlayMusic(snd_final_boss_music, true); // play music

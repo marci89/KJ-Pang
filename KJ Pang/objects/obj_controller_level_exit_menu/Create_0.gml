@@ -22,8 +22,10 @@ maxButtonId = 2;
 
 #region Create buttons
 
+
  instance_create_layer(startX, buttonY,"ControllerTop", obj_level_exit_menu_restart_level_button);
  buttonY += 80;
+ 
  
  instance_create_layer(startX, buttonY,"ControllerTop", obj_level_exit_menu_back_to_main_menu_button);
  buttonY += 120;

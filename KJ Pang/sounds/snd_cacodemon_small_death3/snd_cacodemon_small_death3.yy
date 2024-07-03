@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_cacodemon_small_death3.mp3",
   "type":0,
-  "volume":0.44,
+  "volume":0.29,
 }

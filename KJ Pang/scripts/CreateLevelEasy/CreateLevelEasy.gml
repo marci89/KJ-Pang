@@ -14,7 +14,7 @@ global.hasRoomWallFrame = false; // no wall frames
 global.isRestartLevelAfterDead = true; //restart after death
 global.levelTimeMax = 150; // level's max time
 //global.playerOneDefaultWeapon = weaponType.MachineGun;
-global.level = 26
+//global.level = 13;
 
 	//Giant normal ball default properties
 	global.normalBallGiantMoveX = 0.5;
@@ -1019,11 +1019,11 @@ function CreateLevelEasy13() {
 	// init
 	LoadBackgroundImage("red_ball_boss_place"); //Load background
 	CreateWallFrame(wallFrameType.Blue ?? noone); //wall frame creating
-	PlayMusic(snd_criminal_case, true); // play music
+	PlayMusic(snd_rodland_boss, true); // play music
 	CreatePlayer(550, 500); // create player
 	global.isBossLevel = true;
 	global.isRestartLevelAfterDead = false;
-	global.levelTimeMax = 200; // level's max time
+	global.levelTimeMax = 400; // level's max time
 	
 	//Enemy
 	CreateRedBallBoss(500,-1);
@@ -1753,7 +1753,7 @@ function CreateLevelEasy26() {
 	CreatePlayer(550, 500); // create player
 	global.isBossLevel = true;
 	global.isRestartLevelAfterDead = false;
-	global.levelTimeMax = 200; // level's max time
+	global.levelTimeMax = 400; // level's max time
 	
 	//Enemy
 	CreateSnakeBossNest(50,50, 5,5, 25, 1000, c_gray);
@@ -2743,11 +2743,11 @@ function CreateLevelEasy42() {
 	// init
 	LoadBackgroundImage("cacodemon_place"); //Load background
 	CreateWallFrame(wallFrameType.Blue ?? noone); //wall frame creating
-	PlayMusic(snd_criminal_case, false); // play music
+	PlayMusic(snd_TheDarkKnightRises, true); // play music
 	CreatePlayer(550, 500); // create player
 	global.isBossLevel = true;
 	global.isRestartLevelAfterDead = false;
-	global.levelTimeMax = 200; // level's max time
+	global.levelTimeMax = 400; // level's max time
 	
 	//Enemy
 	CreateCacodemon(-300, 300, enemyStartDirectionType.Left);

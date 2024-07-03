@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"CreateMalwrath",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CreateMalwrath",
+  "parent":{
+    "name":"Boss",
+    "path":"folders/Scripts/Creator/Enemy/Boss.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

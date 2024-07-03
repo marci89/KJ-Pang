@@ -8,7 +8,7 @@ function GetHurtableEnemyHoopingYByWeapon(type){
 	|| type == weaponType.PowerWire 
 	|| type == weaponType.TrackingRocketLauncher
 	) {
-		return -3;
+		return -5;
 	} else if (
 	type == weaponType.Bomb 
 	|| type == weaponType.LandMine
@@ -17,9 +17,9 @@ function GetHurtableEnemyHoopingYByWeapon(type){
 	|| type == weaponType.RocketLauncher
 	|| type == weaponType.ShotGun	
 	) {
-		return -6;
+		return -7;
 	} else {
-		return -4;
+		return -5;
 	}
 
 }

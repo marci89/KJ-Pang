@@ -12,6 +12,7 @@ if (keyboard_check_pressed(vk_escape)
 || keyboard_check_pressed(vk_LWIN) || keyboard_check_pressed(vk_RWIN)
 )
 {
+	/*
 	if(IsInstanceExists(obj_player_one ?? noone)) {
 		if (obj_player_one.isDead) {
 			isAllowToExit = false;
@@ -23,6 +24,7 @@ if (keyboard_check_pressed(vk_escape)
 			isAllowToExit = false;
 		}
 	}
+	*/
 		
 	if (isAllowToExit) {
 		global.isPaused = !global.isPaused;

@@ -55,7 +55,7 @@ function SetWeaponValues(type, destroyTime) {
 	//FlameThrower
 	if(type == weaponType.FlameThrower) {
 		
-		damage = 3; // damage
+		damage = 0.7; // damage
 		
 		//item hooping values when shooting near them
 		weaponReactionDistance = 0;

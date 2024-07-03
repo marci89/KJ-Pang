@@ -230,6 +230,12 @@ function Hopping() {
 	}
 }
 
+function BigHopping() {
+	if(isOnGround) {
+	 moveY = -13;
+	}
+}
+
 #endregion
 
 #region death sound function
@@ -289,6 +295,10 @@ function Death() {
 
 function ActivateSpecialAbility() {
 	
+	if (isDead) {
+		return;
+	}
+	
 	//variables
 	var specialAbility = global.playerOneSpecialAbility;
 	var effectControllerObj = obj_controller_level_effect;
@@ -313,7 +323,31 @@ function ActivateSpecialAbility() {
 	return;
 		
 	} else {
+		
+			if (specialAbility == specialAbilityType.ProjectileShield
+			|| specialAbility == specialAbilityType.EnergyShield) {
+					if(hasEnergyShield || hasProjectileShield) {
+							if(global.playerOneGender == PlayerGenderType.Female
+							&& isCharacterVoiceEnabled) {
+			
+								PlaySound(snd_female_not_use_yet, false);
+			
+							} else if(global.playerOneGender == PlayerGenderType.Male
+							&& isCharacterVoiceEnabled) {
+			
+								PlaySound(snd_male_not_use_yet, false, 3);
+							}
+		
+						isCharacterVoiceEnabled = false;
+						alarm[3] = 100;
+			
+						return;
+					}
+			}
+					
+			
 		global.playerOneFood = 0;
+			
 	}
 	
 	//activate AntiGravity

@@ -14,7 +14,7 @@ if (global.isBossLevel == false) {
 	
 		  if(!global.isAfterFinalBattleLevel) {
 			audio_stop_all();
-			PlayMusic(snd_boss_end_music, true); // play music
+			PlaySound(snd_boss_end_music, true); // play music
 			alarm[1] = (changeRoomTime*2) + 200;
 			alarm[2] = 1;
 		  } else {

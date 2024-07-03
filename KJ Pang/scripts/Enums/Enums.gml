@@ -77,6 +77,7 @@ enum informationType{
 	FirstAidKit,
 	Life,
 	SnowWall,
+	HorizontalShoot,
 };
 
 #endregion
@@ -95,6 +96,17 @@ enum enemyInformationType{
 	JuniorGuardian,
 	
 	ShieldedNormalBall,
+	Worm,
+	TongueWorm,
+	Frog,
+	
+	
+	Malwrath,
+	HugeFrog,
+	
+	
+	
+	
 	
 };
 
@@ -338,11 +350,6 @@ enum normalBallGiantDropItemType {
 	DropQualityLevel_3,
 	DropQualityLevel_4,
 	DropQualityLevel_5,
-	DropQualityLevel_6,
-	DropQualityLevel_7,
-	DropQualityLevel_8,
-	DropQualityLevel_9,
-	DropQualityLevel_10,
 };
 
 //normal large ball drop rate
@@ -353,11 +360,6 @@ enum normalBallLargeDropItemType {
 	DropQualityLevel_3,
 	DropQualityLevel_4,
 	DropQualityLevel_5,
-	DropQualityLevel_6,
-	DropQualityLevel_7,
-	DropQualityLevel_8,
-	DropQualityLevel_9,
-	DropQualityLevel_10,
 };
 
 #endregion

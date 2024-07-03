@@ -83,6 +83,18 @@ function Init() {
 		requiredDifficult = gameDifficultType.Hard;
 	}
 	
+	if(buttonId == 10) {
+		image = spr_enemy_worm;
+		infoType = enemyInformationType.Worm;
+		requiredDifficult = gameDifficultType.Hard;
+	}
+	
+	if(buttonId == 11) {
+		image = spr_enemy_worm_tongue_walk;
+		infoType = enemyInformationType.TongueWorm;
+		requiredDifficult = gameDifficultType.Hard;
+	}
+	
 	//set image
 	sprite_index = image;
 	

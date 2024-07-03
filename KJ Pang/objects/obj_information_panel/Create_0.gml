@@ -239,6 +239,12 @@ function Init(type) {
 		descriptionText =  GetLocalizedText("snowWallDesc"); 
 		image = spr_wall_snow;
 	}
+	
+	if(type == informationType.HorizontalShoot) {
+		titleText =  GetLocalizedText("horizontalShootTitle"); 
+		descriptionText =  GetLocalizedText("horizontalShootDesc"); 
+		image = spr_invisible_pic;
+	}
 
 }
 

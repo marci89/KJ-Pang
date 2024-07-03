@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":2.194286,
+  "duration":0.658776,
   "name":"snd_health_potion",
   "parent":{
     "name":"Life",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_health_potion.mp3",
+  "soundFile":"snd_health_potion.wav",
   "type":0,
-  "volume":1.0,
+  "volume":0.61,
 }

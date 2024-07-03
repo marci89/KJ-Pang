@@ -75,7 +75,7 @@ function Init() {
 	
 	//generate score
 	timeScore = global.previousLevelTime * 4;
-	lifeScore = playerLife * 300
+	lifeScore = playerLife * 800
 	
 	//Set score for player
 	if(player == playerIDType.Player1) {	

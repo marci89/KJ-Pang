@@ -1,7 +1,7 @@
 
 //parent properties
 event_inherited()
-damage = 7; // weapon damage value
+damage = 5; // weapon damage value
 type = weaponType.ShotGun; // weapon type
 
 //item hooping values when shooting near them

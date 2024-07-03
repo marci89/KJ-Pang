@@ -1,5 +1,5 @@
 
-event_inherited();
+
 
 //effect_create_above( effectType, x, y, size, color);
 effect_create_layer("TopLayer", effectType, x, y, size, color);
@@ -115,3 +115,4 @@ if (bulletDirection == bulletDirectionType.PlayerDirection) {
 
 #endregion
 
+event_inherited();

@@ -3,7 +3,7 @@
 event_inherited()
 
 //types
-race = enemyRaceType.Boss;
+race = enemyRaceType.Ball;
 size = enemySizeType.Medium;
 
 moveX = 3; // left and right movement

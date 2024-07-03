@@ -9,12 +9,9 @@ effect_create_above( ef_explosion, x, y, 2, c_red);
 
 PlaySound(snd_guardian_big_hurt, false, 1);
 
-//drop item
-var isDropped = irandom(1) == 1;
 
-if (isDropped) {
-   CreateItemWithMovement(x, y, 0, -4, obj_item_health_potion);
-} 
+ CreateItemWithMovement(x, y, 0, -4, obj_item_machine_gun);
+ 
 
 
 //create gem

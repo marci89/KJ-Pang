@@ -51,6 +51,7 @@ function Init(type) {
 		layer_destroy_instances("Enemy");
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
+		layer_destroy_instances("Weapon");
 		CreateEnemyWallFrame();
 		
 		//enemies
@@ -91,6 +92,7 @@ function Init(type) {
 		layer_destroy_instances("Enemy");
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
+		layer_destroy_instances("Weapon");
 		CreateEnemyWallFrame();
 		
 		//enemies
@@ -110,6 +112,7 @@ function Init(type) {
 		layer_destroy_instances("Enemy");
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
+		layer_destroy_instances("Weapon");
 		CreateEnemyWallFrame();
 		
 		//enemies
@@ -130,6 +133,7 @@ function Init(type) {
 		layer_destroy_instances("Enemy");
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
+		layer_destroy_instances("Weapon");
 		CreateEnemyWallFrame();
 		
 		//enemies
@@ -149,6 +153,7 @@ function Init(type) {
 		layer_destroy_instances("Enemy");
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
+		layer_destroy_instances("Weapon");
 		CreateEnemyWallFrame();
 		
 		//enemies
@@ -159,6 +164,78 @@ function Init(type) {
 		enemyType = type;
 	}
 	
+	
+	
+	if(type == enemyInformationType.RedBallBoss) {
+		
+		titleText =  GetLocalizedText("redBossBallTitle"); 
+		descriptionText =  GetLocalizedText("redBossBallDesc"); 
+		
+		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
+		layer_destroy_instances("Weapon");
+		
+		//image = spr_enemy_red_ball_boss_pic;
+		image = spr_enemy_red_ball_boss;
+		
+		enemyType = type;
+	}
+	
+	if(type == enemyInformationType.SnakeBoss) {
+		
+		titleText =  GetLocalizedText("snakeBossTitle"); 
+		descriptionText =  GetLocalizedText("snakeBossDesc");
+		image = noone;
+		
+		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
+		layer_destroy_instances("Weapon");
+		CreateEnemyWallFrame();
+		
+		//enemies
+		CreateSnakeBossNest(x + 200, y + 450, 3,3, 15, 20, c_blue);
+		
+		enemyType = type;
+	}
+	
+	if(type == enemyInformationType.Cacodemon) {
+		
+		titleText =  GetLocalizedText("cacodemonTitle"); 
+		descriptionText =  GetLocalizedText("cacodemonDesc"); 
+		
+		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
+		layer_destroy_instances("Weapon");
+		
+		image = spr_enemy_cacodemon_pic;
+		
+		enemyType = type;
+	}
+	
+	if(type == enemyInformationType.JuniorGuardian) {
+		
+		titleText =  GetLocalizedText("juniorGuardianTitle"); 
+		descriptionText =  GetLocalizedText("juniorGuardianDesc"); 
+		
+		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
+		layer_destroy_instances("Weapon");
+		
+		image = spr_enemy_junior_guardian_pic;
+		
+		enemyType = type;
+	}
+	
+	
+	
+	
+	
+	
+	
 	if(type == enemyInformationType.ShieldedNormalBall) {
 		
 		titleText =  GetLocalizedText("shieldedNormalBallTitle"); 
@@ -168,6 +245,7 @@ function Init(type) {
 		layer_destroy_instances("Enemy");
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
+		layer_destroy_instances("Weapon");
 		CreateEnemyWallFrame();
 
 		
@@ -193,62 +271,41 @@ function Init(type) {
 		
 	}
 	
-	if(type == enemyInformationType.RedBallBoss) {
-		
-		titleText =  GetLocalizedText("redBossBallTitle"); 
-		descriptionText =  GetLocalizedText("redBossBallDesc"); 
-		
-		layer_destroy_instances("Enemy");
-		layer_destroy_instances("Wall");
-		layer_destroy_instances("Item");
-		
-		//image = spr_enemy_red_ball_boss_pic;
-		image = spr_enemy_red_ball_boss;
-		
-		enemyType = type;
-	}
 	
-	if(type == enemyInformationType.SnakeBoss) {
+	if(type == enemyInformationType.Worm) {
 		
-		titleText =  GetLocalizedText("snakeBossTitle"); 
-		descriptionText =  GetLocalizedText("snakeBossDesc");
+		titleText =  GetLocalizedText("wormTitle"); 
+		descriptionText =  GetLocalizedText("wormDesc");
 		image = noone;
 		
 		layer_destroy_instances("Enemy");
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
+		layer_destroy_instances("Weapon");
 		CreateEnemyWallFrame();
 		
 		//enemies
-		CreateSnakeBossNest(x + 200, y + 450, 3,3, 15, 20, c_blue);
+		CreateWorm(x + 200, y + 450, -1, 0, false);
+
 		
 		enemyType = type;
 	}
 	
-	if(type == enemyInformationType.Cacodemon) {
+	if(type == enemyInformationType.TongueWorm) {
 		
-		titleText =  GetLocalizedText("cacodemonTitle"); 
-		descriptionText =  GetLocalizedText("cacodemonDesc"); 
-		
-		layer_destroy_instances("Enemy");
-		layer_destroy_instances("Wall");
-		layer_destroy_instances("Item");
-		
-		image = spr_enemy_cacodemon_pic;
-		
-		enemyType = type;
-	}
-	
-	if(type == enemyInformationType.JuniorGuardian) {
-		
-		titleText =  GetLocalizedText("juniorGuardianTitle"); 
-		descriptionText =  GetLocalizedText("juniorGuardianDesc"); 
+		titleText =  GetLocalizedText("tongueWormTitle"); 
+		descriptionText =  GetLocalizedText("tongueWormDesc");
+		image = noone;
 		
 		layer_destroy_instances("Enemy");
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
+		layer_destroy_instances("Weapon");
+		CreateEnemyWallFrame();
 		
-		image = spr_enemy_junior_guardian_pic;
+		//enemies
+		CreateTongueWorm(x + 200, y + 450, -1, 0, false);
+
 		
 		enemyType = type;
 	}
