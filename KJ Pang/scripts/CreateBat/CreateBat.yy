@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"CreateBat",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CreateBat",
+  "parent":{
+    "name":"LandWalker",
+    "path":"folders/Scripts/Creator/Enemy/LandWalker.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

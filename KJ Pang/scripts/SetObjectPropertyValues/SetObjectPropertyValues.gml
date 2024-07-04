@@ -7,7 +7,23 @@ function SetAllEnemyOriginalProperties() {
 	for (var i = 0; i < enemyCount; i++) {
 		var enemy = instance_find(obj_enemy_parent, i);
 		if (enemy.race != enemyRaceType.Boss) {
+			
+			
+			if(global.currentLevelEffect == levelEffectType.TimeFreeze && enemy.isTimeFreezeEffectEnabled) {
 			enemy.SetOriginalProperties();
+			}
+			
+			if(global.currentLevelEffect == levelEffectType.TimeSlow && enemy.isTimeSlowEffectEnabled) {
+			enemy.SetOriginalProperties();
+			}
+			
+			if(global.currentLevelEffect == levelEffectType.AntiGravity && enemy.isAntigravityEffectEnabled) {
+			enemy.SetOriginalProperties();
+			}
+			
+			if(global.currentLevelEffect == levelEffectType.ReverseGravity && enemy.isReverseGravityEffectEnabled) {
+			enemy.SetOriginalProperties();
+			}
 		}
 	}
 }
@@ -48,7 +64,22 @@ function ResetAllEnemyValuesToOriginalProperties() {
 	for (var i = 0; i < enemyCount; i++) {
 		var enemy = instance_find(obj_enemy_parent, i);
 		if (enemy.race != enemyRaceType.Boss) {
+			
+			if(global.currentLevelEffect == levelEffectType.TimeFreeze && enemy.isTimeFreezeEffectEnabled) {
 			enemy.ResetToOriginalProperties();
+			}
+			
+			if(global.currentLevelEffect == levelEffectType.TimeSlow && enemy.isTimeSlowEffectEnabled) {
+			enemy.ResetToOriginalProperties();
+			}
+			
+			if(global.currentLevelEffect == levelEffectType.AntiGravity && enemy.isAntigravityEffectEnabled) {
+			enemy.ResetToOriginalProperties();
+			}
+			
+			if(global.currentLevelEffect == levelEffectType.ReverseGravity && enemy.isReverseGravityEffectEnabled) {
+			enemy.ResetToOriginalProperties();
+			}
 		}
 	}
 }

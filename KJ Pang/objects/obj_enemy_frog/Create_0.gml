@@ -33,7 +33,7 @@ currentXscale = 1;
 
 function Jump() {
 	if(isOnGround) {
-	 moveY = irandom_range(-6, -19);;
+	 moveY = irandom_range(-6, -19);
 	}
 }
 

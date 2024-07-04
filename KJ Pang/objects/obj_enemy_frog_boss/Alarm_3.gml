@@ -1,5 +1,5 @@
 /// @desc roaring
 
-PlaySound(snd_frog_croak, false, 1);
+PlaySound(snd_frog_croak, false, 3);
 
-alarm[1] = 400;
+alarm[3] = 600;

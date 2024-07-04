@@ -14,7 +14,7 @@ global.hasRoomWallFrame = false; // no wall frames
 global.isRestartLevelAfterDead = true; //restart after death
 global.levelTimeMax = 200; // level's max time
 //global.playerOneDefaultWeapon = weaponType.FlameThrower;
-global.level = 26;
+global.level = 42;
 //global.gameDifficult = gameDifficultType.Impossible;
 
 
@@ -2851,22 +2851,24 @@ function CreateLevelNormal41() {
 function CreateLevelNormal42() {
 	
 	// init
-	LoadBackgroundImage("cacodemon_place"); //Load background
-	CreateWallFrame(wallFrameType.Blue ?? noone); //wall frame creating
-	PlayMusic(snd_criminal_case, false); // play music
+	LoadBackgroundImage("dungeon_place"); //Load background
+	CreateWallFrame(wallFrameType.Gray ?? noone); //wall frame creating
+	PlayMusic(snd_WorkCamp, false); // play music
 	CreatePlayer(550, 500); // create player
 	global.isBossLevel = true;
 	global.isRestartLevelAfterDead = false;
 	global.levelTimeMax = 400; // level's max time
 	
 	//Enemy
-	CreateCacodemon(-300, 300, enemyStartDirectionType.Left);
+	CreateManananggal(-300, 300, enemyStartDirectionType.Left);
+	//CreateManananggal(1200, 300, enemyStartDirectionType.Right);
+
 	
 	//wall
 	
 	//items
 	CreateItem(74, 550, obj_item_health_potion);
-	CreateItem(130, 550, obj_item_energy_shield);
+	CreateItem(130, 550, obj_item_projectile_shield);
 	CreateItem(950, 550, obj_item_health_potion);
 }
 

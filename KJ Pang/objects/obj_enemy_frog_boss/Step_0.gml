@@ -28,6 +28,7 @@ if (isOutsideRoom) {
 	sprite_index = spr_enemy_frog_boss_attack;
 } else  {
 	sprite_index = spr_enemy_frog_boss_idle;
+
 }
 
 #endregion

@@ -137,6 +137,7 @@ function CreateChild() {
 
 
 #region attack
+
 function MoveToPlayer(newMoveX) {
 
     var closestPlayer = noone;
