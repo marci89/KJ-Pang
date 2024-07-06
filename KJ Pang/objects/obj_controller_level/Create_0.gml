@@ -39,6 +39,14 @@ if(global.gameDifficult == gameDifficultType.Normal) {
 	CreateLevelNormal();
 }
 
+if(global.gameDifficult == gameDifficultType.Hard) {
+	CreateLevelHard();
+}
+
+if(global.gameDifficult == gameDifficultType.Impossible) {
+	CreateLevelNormal();
+}
+
 
 #endregion
 

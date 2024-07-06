@@ -19,6 +19,8 @@ function CreateNormalBallMedium(xValue, yValue, moveX, moveY, grav, jumpHeightMa
 	
 	result.SetOriginalProperties();
 	result.SetSprite();
+	
+	return result;
 }
 
 #endregion

@@ -11,6 +11,12 @@ if(enemyGuardianType == guardianType.Junior) {
 	junior.Init();
 }
 
+if(enemyGuardianType == guardianType.Medior) {
+	var medior = instance_create_layer(x, y,"Enemy_level1", obj_enemy_medior_guardian);
+	medior.Init();
+}
+
+
 //create poke ball parts
 
 var top = instance_create_layer(x, y,"EnemyBehindWall", obj_enemy_guardian_pokemon_ball_part);

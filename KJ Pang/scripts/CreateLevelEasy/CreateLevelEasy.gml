@@ -14,7 +14,7 @@ global.hasRoomWallFrame = false; // no wall frames
 global.isRestartLevelAfterDead = true; //restart after death
 global.levelTimeMax = 150; // level's max time
 //global.playerOneDefaultWeapon = weaponType.MachineGun;
-//global.level = 13;
+//global.level = 42;
 
 	//Giant normal ball default properties
 	global.normalBallGiantMoveX = 0.5;
@@ -1756,7 +1756,7 @@ function CreateLevelEasy26() {
 	global.levelTimeMax = 400; // level's max time
 	
 	//Enemy
-	CreateSnakeBossNest(50,50, 5,5, 25, 1000, c_gray);
+	CreateSnakeBossNest(50,50, 5,5, 25, 1000, c_gray, 150);
 	
 	//wall
 	

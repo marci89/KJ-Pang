@@ -370,6 +370,22 @@ enum tentacleType{
     RedBallJuniorCreator,
     BlueBallJuniorCreator,
 	GreenBallJuniorCreator,
+	
+	BlueBallMediorCreator,
+    YellowBallMediorCreator,
+	ShieldBallMediorCreator,
+	
+	RedBallSeniorCreator,
+    ShieldBallSeniorCreator,
+	SuperBallSeniorCreator,
+	BlackBallSeniorCreator,
+	
+	ShieldBallExpertCreator,
+	SuperBallExpertCreator,
+	BlackBallExpertCreator,
+	HorizontalBallExpertCreator,
+	AntiGravityBallExpertCreator,
+
 };
 
 #endregion

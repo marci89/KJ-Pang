@@ -14,7 +14,7 @@ global.hasRoomWallFrame = false; // no wall frames
 global.isRestartLevelAfterDead = true; //restart after death
 global.levelTimeMax = 250; // level's max time
 //global.playerOneDefaultWeapon = weaponType.MachineGun;
-//global.level = 13;
+global.level = 42;
 
 	//Giant normal ball default properties
 	global.normalBallGiantMoveX = 0.5;
@@ -1016,21 +1016,24 @@ function CreateLevelHard12() {
 
 function CreateLevelHard13() {
 	
-	// init
-	LoadBackgroundImage("red_ball_boss_place"); //Load background
+		// init
+	LoadBackgroundImage("wretched_place"); //Load background
 	CreateWallFrame(wallFrameType.Blue ?? noone); //wall frame creating
-	PlayMusic(snd_rodland_boss, true); // play music
-	CreatePlayer(550, 500); // create player
+	PlayMusic(snd_TheDarkKnightRises, true); // play music
+	CreatePlayer(340, 500); // create player
 	global.isBossLevel = true;
 	global.isRestartLevelAfterDead = false;
 	global.levelTimeMax = 400; // level's max time
 	
 	//Enemy
-	CreateRedBallBoss(500,-1);
+	CreateWretched(500, -200, enemyStartDirectionType.Top);
 	
 	//wall
 	
 	//items
+	CreateItem(74, 550, obj_item_health_potion);
+	CreateItem(130, 550, obj_item_projectile_shield);
+	CreateItem(950, 550, obj_item_first_aid_kit);
 }
 
 #endregion
@@ -1746,24 +1749,24 @@ function CreateLevelHard25() {
 
 function CreateLevelHard26() {
 	
-	// init
-	LoadBackgroundImage("snake_cave"); //Load background
-	CreateWallFrame(wallFrameType.Blue ?? noone); //wall frame creating
-	PlaySound(snd_snake_cave, false,2); // play music
-	CreatePlayer(550, 500); // create player
+		// init
+	LoadBackgroundImage("snowy_place"); //Load background
+	CreateWallFrame(wallFrameType.Snow ?? noone); //wall frame creating
+	CreatePlayer(340, 500); // create player
 	global.isBossLevel = true;
 	global.isRestartLevelAfterDead = false;
 	global.levelTimeMax = 400; // level's max time
 	
 	//Enemy
-	CreateSnakeBossNest(50,50, 5,5, 25, 1000, c_gray);
+	CreatePropeDroid(-300, 330, enemyStartDirectionType.Left);
 	
 	//wall
 	
 	//items
 	CreateItem(74, 550, obj_item_health_potion);
-	CreateItem(130, 550, obj_item_energy_shield);
-	CreateItem(950, 550, obj_item_health_potion);
+	CreateItem(130, 550, obj_item_projectile_shield);
+	CreateItem(950, 550, obj_item_first_aid_kit);
+
 }
 
 #endregion
@@ -2741,22 +2744,23 @@ function CreateLevelHard41() {
 function CreateLevelHard42() {
 	
 	// init
-	LoadBackgroundImage("cacodemon_place"); //Load background
-	CreateWallFrame(wallFrameType.Blue ?? noone); //wall frame creating
-	PlayMusic(snd_TheDarkKnightRises, true); // play music
+	LoadBackgroundImage("dungeon_place"); //Load background
+	CreateWallFrame(wallFrameType.Gray ?? noone); //wall frame creating
+	PlayMusic(snd_WorkCamp, false); // play music
 	CreatePlayer(550, 500); // create player
 	global.isBossLevel = true;
 	global.isRestartLevelAfterDead = false;
 	global.levelTimeMax = 400; // level's max time
 	
 	//Enemy
-	CreateCacodemon(-300, 300, enemyStartDirectionType.Left);
+	CreateManananggal(-300, 300, enemyStartDirectionType.Left);
+
 	
 	//wall
 	
 	//items
 	CreateItem(74, 550, obj_item_health_potion);
-	CreateItem(130, 550, obj_item_energy_shield);
+	CreateItem(130, 550, obj_item_projectile_shield);
 	CreateItem(950, 550, obj_item_health_potion);
 }
 
@@ -3442,7 +3446,7 @@ function CreateLevelHard54() {
 	// init
 	LoadBackgroundImage("hard_finalBattle_place"); //Load background
 	CreateWallFrame(wallFrameType.Gray ?? noone); //wall frame creating
-	PlayMusic(snd_rada, true); // play music
+	PlayMusic(snd_TheDesireInMyHeart, true); // play music
 	CreatePlayer(550, 500); // create player
 	global.isBossLevel = true;
 	global.isRestartLevelAfterDead = false;
@@ -3450,11 +3454,9 @@ function CreateLevelHard54() {
 	global.isFinalBattleLevel = true;
 	
 	//Enemy
-	CreateFinalBossTimerCreator(10800);
+	CreateFinalBossTimerCreator(100);
 	
-	CreateNormalBallGiant(500, 200, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
-	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
-	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_3, true);
+
 	
 	//wall
 	

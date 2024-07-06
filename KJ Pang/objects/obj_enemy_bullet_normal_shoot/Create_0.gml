@@ -1,8 +1,7 @@
 
 event_inherited();
 
-//sound
-PlaySound(snd_energy_shoot, false, 2);
+
 
 bulletSpeed = 5;
 isBounced = false;
@@ -11,6 +10,7 @@ size = 0;
 effectType = ef_spark;
 bulletDirection = bulletDirectionType.Bottom;
 isWallBreaker = false;
+hasStartSound = true;
 
 #region Start move to player
 
@@ -123,6 +123,12 @@ isWallBreakerRequest) {
 	} else if (bulletDirection == bulletDirectionType.PlayerDirection) {
 		CreatePlayerDirection();
 	} 
+	
+	if(hasStartSound) {
+		//sound
+		PlaySound(snd_energy_shoot, false, 2);
+	}
+	
 }
 
 #endregion

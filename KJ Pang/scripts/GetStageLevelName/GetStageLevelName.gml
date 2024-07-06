@@ -84,15 +84,11 @@ function GetStageLevelName(level) {
 		return GetLocalizedText("antarctica") + " - " + GetLocalizedText("antarcticaDesc"); 
 	}
 	
-	
-	
-	if(global.gameDifficult == gameDifficultType.Easy) {
+
 		if (level == 54 ) {
 			global.stageLevel = 21;
 			return GetLocalizedText("finalBattle"); 
-		}
-	}
-		
+		}	
 }
 
 #endregion

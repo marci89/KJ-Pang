@@ -2,7 +2,7 @@
 
 #region Create snake boss nest
 
-function CreateSnakeBossNest(xValue, yValue, snakeMoveX, snakeMoveY, bodyPartNumber, time, wallColor){
+function CreateSnakeBossNest(xValue, yValue, snakeMoveX, snakeMoveY, bodyPartNumber, time, wallColor, hitPointRequest){
 	
 	var result = instance_create_layer(xValue, yValue,"Wall", obj_enemy_snake_boss_nest);
 		
@@ -10,6 +10,7 @@ function CreateSnakeBossNest(xValue, yValue, snakeMoveX, snakeMoveY, bodyPartNum
 	result.snakeMoveY = snakeMoveY;
 	result.bodyPartNumber = bodyPartNumber;
 	result.wallColor = wallColor;
+	result.hitPoint = hitPointRequest;
 	result.Init(time);
 	result.SetOriginalProperties();
 }

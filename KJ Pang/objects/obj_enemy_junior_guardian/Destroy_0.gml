@@ -13,23 +13,8 @@ effect_create_above( ef_firework, x, y-40, 2, c_lime);
 PlaySound(snd_guardian_death, false, 2);
 
 
- CreateItemWithMovement(x, y, 0, -4, obj_item_health_potion);
- 
 
 
-//create gem
-CreateLifePointWithMovement(x,y,1,-4, lifePointType.Green);
-CreateLifePointWithMovement(x,y,-1,-4, lifePointType.Green);
-CreateLifePointWithMovement(x,y,1.5,-4, lifePointType.Green);
-CreateLifePointWithMovement(x,y,-1.5,-4, lifePointType.Green);
-CreateLifePointWithMovement(x,y,1.8,-4, lifePointType.Green);
-CreateLifePointWithMovement(x,y,-1.8,-4, lifePointType.Green);
-CreateLifePointWithMovement(x,y,2.2,-4, lifePointType.Green);
-CreateLifePointWithMovement(x,y,-2.2,-4, lifePointType.Green);
-CreateLifePointWithMovement(x,y,2.7,-4, lifePointType.Green);
-CreateLifePointWithMovement(x,y,-2.7,-4, lifePointType.Green);
-CreateLifePointWithMovement(x,y,3.4,-4, lifePointType.Green);
-CreateLifePointWithMovement(x,y,-3.4,-4, lifePointType.Green);
 
 //Create child balls
 

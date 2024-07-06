@@ -18,7 +18,7 @@ hitPoint = 1; //health
 isHarmless = false; // not hurt the player if it is true
 isDestroyed = false; // death or not
 isDestroyableByPlayer = true; // destroy after hit player or not
-
+isOutSide = false;
 //effects
 isTimeFreezeEffectEnabled = true; // time freeze effect allowed
 isTimeSlowEffectEnabled = true; // time slow effect allowed

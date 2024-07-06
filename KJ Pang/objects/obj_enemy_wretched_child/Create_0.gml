@@ -54,7 +54,7 @@ function Init() {
 			bulletShootTime = 275;
 			bulletSpeed = 12;
 		} else {
-			bulletShootTime = 300;
+			bulletShootTime = 370;
 			bulletSpeed = 10;
 		}
 			

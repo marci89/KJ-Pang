@@ -13,8 +13,8 @@ global.hasLevelTime = true; // level timer enabled
 global.hasRoomWallFrame = false; // no wall frames
 global.isRestartLevelAfterDead = true; //restart after death
 global.levelTimeMax = 200; // level's max time
-//global.playerOneDefaultWeapon = weaponType.FlameThrower;
-global.level = 42;
+//global.playerOneDefaultWeapon = weaponType.MachineGun;
+global.level = 54;
 //global.gameDifficult = gameDifficultType.Impossible;
 
 
@@ -2851,17 +2851,17 @@ function CreateLevelNormal41() {
 function CreateLevelNormal42() {
 	
 	// init
-	LoadBackgroundImage("dungeon_place"); //Load background
+	LoadBackgroundImage("diablo_place"); //Load background
 	CreateWallFrame(wallFrameType.Gray ?? noone); //wall frame creating
-	PlayMusic(snd_WorkCamp, false); // play music
+	PlayMusic(snd_diablo1, false); // play music
 	CreatePlayer(550, 500); // create player
 	global.isBossLevel = true;
 	global.isRestartLevelAfterDead = false;
 	global.levelTimeMax = 400; // level's max time
 	
 	//Enemy
-	CreateManananggal(-300, 300, enemyStartDirectionType.Left);
-	//CreateManananggal(1200, 300, enemyStartDirectionType.Right);
+	CreateDiablo(500, -100, enemyStartDirectionType.Top);
+
 
 	
 	//wall
@@ -2869,7 +2869,7 @@ function CreateLevelNormal42() {
 	//items
 	CreateItem(74, 550, obj_item_health_potion);
 	CreateItem(130, 550, obj_item_projectile_shield);
-	CreateItem(950, 550, obj_item_health_potion);
+	CreateItem(950, 550, obj_item_first_aid_kit);
 }
 
 #endregion
@@ -3552,9 +3552,9 @@ function CreateLevelNormal53() {
 function CreateLevelNormal54() {
 	
 	// init
-	LoadBackgroundImage("easy_finalBattle_place"); //Load background
+	LoadBackgroundImage("normal_finalBattle_place"); //Load background
 	CreateWallFrame(wallFrameType.Gray ?? noone); //wall frame creating
-	PlayMusic(snd_rada, true); // play music
+	PlayMusic(snd_TheDesireInMyHeart, true); // play music
 	CreatePlayer(550, 500); // create player
 	global.isBossLevel = true;
 	global.isRestartLevelAfterDead = false;
@@ -3562,11 +3562,14 @@ function CreateLevelNormal54() {
 	global.isFinalBattleLevel = true;
 	
 	//Enemy
-	CreateFinalBossTimerCreator(10800);
-	
+	//CreateFinalBossTimerCreator(10800);
+		CreateFinalBossTimerCreator(100);
+		
+		/*
 	CreateNormalBallGiant(500, 200, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
 	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_3, true);
+	*/
 	
 	//wall
 	
@@ -3600,7 +3603,3 @@ function CreateLevelNormal55() {
 }
 
 #endregion
-
-
-
-

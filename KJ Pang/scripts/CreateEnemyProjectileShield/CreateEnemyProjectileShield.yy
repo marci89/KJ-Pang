@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"CreateEnemyProjectileShield",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CreateEnemyProjectileShield",
+  "parent":{
+    "name":"Enemy",
+    "path":"folders/Scripts/Creator/Enemy.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

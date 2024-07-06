@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_glass_piece_break2.mp3",
   "type":0,
-  "volume":0.64,
+  "volume":0.3,
 }

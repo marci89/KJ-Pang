@@ -56,27 +56,31 @@ var halfSpriteWidth = sprite_width / 2;
 var halfSpriteHeight = sprite_height / 2;
 
 //Left
-if (CheckScreenCollisionLeftWithoutWallForObject(x, halfSpriteWidth)) {
-	   x = halfSpriteWidth;
-	   moveX *= -bounceDecay;
+if (CheckScreenCollisionLeftWithoutWallForObject(x+400, halfSpriteWidth)) {
+
+	   isOutSide = true;
+	   	instance_destroy();
 }
 
 //Right
-if (CheckScreenCollisionRightWithoutWallForObject(x, halfSpriteWidth)) {
-	    x = global.roomWidth - halfSpriteWidth;
-        moveX *= -bounceDecay;
+if (CheckScreenCollisionRightWithoutWallForObject(x-400, halfSpriteWidth)) {
+	     isOutSide = true;
+	   
+	   	instance_destroy();
 }
 
 //Top
-if (CheckScreenCollisionTopWithoutWallForObject(y, halfSpriteHeight)) {
-	     y = halfSpriteHeight;
-        moveY *= -bounceDecay;
+if (CheckScreenCollisionTopWithoutWallForObject(y+400, halfSpriteHeight)) {
+	    isOutSide = true;
+	   
+	   	instance_destroy();
 }
 
 //Bottom
-if (CheckScreenCollisionBottomWithoutWallForObject(y, halfSpriteHeight)) {
-	    y = global.roomHeight - halfSpriteHeight;
-        moveY *= -bounceDecay;
+if (CheckScreenCollisionBottomWithoutWallForObject(y-200, halfSpriteHeight )) {
+	     isOutSide = true;
+		
+			instance_destroy();
 }
 
 #endregion

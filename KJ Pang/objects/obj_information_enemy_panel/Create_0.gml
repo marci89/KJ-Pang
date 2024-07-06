@@ -195,7 +195,7 @@ function Init(type) {
 		CreateEnemyWallFrame();
 		
 		//enemies
-		CreateSnakeBossNest(x + 200, y + 450, 3,3, 15, 20, c_blue);
+		CreateSnakeBossNest(x + 200, y + 450, 3,3, 15, 20, c_blue, 150);
 		
 		enemyType = type;
 	}

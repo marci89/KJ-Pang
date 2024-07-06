@@ -4,36 +4,7 @@
 //effect_create_above( effectType, x, y, size, color);
 effect_create_layer("TopLayer", effectType, x, y, size, color);
 
-if (!isBounced) {
-	
-#region Screen collision
 
-var halfSpriteWidth = sprite_width / 2;
-var halfSpriteHeight = sprite_height / 2;
-
-//Left
-if (CheckScreenCollisionLeftWithoutWallForObject(x, halfSpriteWidth)) {
-	instance_destroy();
-}
-
-//Right
-if (CheckScreenCollisionRightWithoutWallForObject(x, halfSpriteWidth)) {
-	instance_destroy();
-}
-
-//Top
-if (CheckScreenCollisionTopWithoutWallForObject(y, halfSpriteHeight)) {
-	instance_destroy();
-}
-
-//Bottom
-if (CheckScreenCollisionBottomWithoutWallForObject(y, halfSpriteHeight)) {
-	instance_destroy();
-}
-
-#endregion
-
-}
 
 #region Wall collision
 
