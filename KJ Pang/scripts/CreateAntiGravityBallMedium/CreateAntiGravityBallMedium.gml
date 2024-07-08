@@ -13,6 +13,7 @@ function CreateAntiGravityBallMedium(xValue, yValue, isDirectionLeft, isDirectio
 	
 	result.Init(isDirectionLeft, isDirectionUp);
 	result.SetOriginalProperties();
+	return result;
 }
 
 #endregion

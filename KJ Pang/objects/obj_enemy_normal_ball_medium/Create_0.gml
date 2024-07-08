@@ -25,6 +25,7 @@ shieldNumber = 0; // how many shields it has
 shieldList = ds_list_create(); // list of shields
 
 isCreatedFromAnotherEnemy = false;
+
 //shield functions
 
 #region Create shield

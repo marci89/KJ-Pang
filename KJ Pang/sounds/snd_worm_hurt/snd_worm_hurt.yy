@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_worm_hurt.mp3",
   "type":0,
-  "volume":0.32,
+  "volume":0.62,
 }

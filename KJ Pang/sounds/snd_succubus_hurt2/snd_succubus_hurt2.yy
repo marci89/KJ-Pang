@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_succubus_hurt2.mp3",
   "type":0,
-  "volume":0.96,
+  "volume":1.0,
 }

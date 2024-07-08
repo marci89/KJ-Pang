@@ -185,18 +185,20 @@ function CreateRandomGlassPieceBreakSound(){
 
 function CreateRandomBallHurtSound(){
 	
-	var randomIndex = irandom_range(1, 2); 
-    switch (randomIndex) {
-        case 1:
-            PlaySound(snd_ball_hurt_1, false, 1);
-            break;
-        case 2:
-            PlaySound(snd_ball_hurt_2, false, 1);
-            break;
-        default:
-            PlaySound(snd_ball_hurt_1, false, 1);
-            break;
-    }
+	 if (!audio_is_playing(snd_ball_hurt_1) && !audio_is_playing(snd_ball_hurt_2)) {
+		var randomIndex = irandom_range(1, 2); 
+	    switch (randomIndex) {
+	        case 1:
+	            PlaySound(snd_ball_hurt_1, false, 1);
+	            break;
+	        case 2:
+	            PlaySound(snd_ball_hurt_2, false, 1);
+	            break;
+	        default:
+	            PlaySound(snd_ball_hurt_1, false, 1);
+	            break;
+	    }
+	 }
 }
 
 #endregion
@@ -225,18 +227,20 @@ function CreateRandomGiantFootStepSound(){
 
 function CreateRandomSnakeHurtSound(){
 	
-	var randomIndex = irandom_range(1, 2); 
-    switch (randomIndex) {
-        case 1:
-            PlaySound(snd_snake_hurt_1, false, 1);
-            break;
-        case 2:
-            PlaySound(snd_snake_hurt_2, false, 1);
-            break;
-        default:
-            PlaySound(snd_snake_hurt_1, false, 2);
-            break;
-    }
+	 if (!audio_is_playing(snd_snake_hurt_1) && !audio_is_playing(snd_snake_hurt_2)) {
+		var randomIndex = irandom_range(1, 2); 
+	    switch (randomIndex) {
+	        case 1:
+	            PlaySound(snd_snake_hurt_1, false, 1);
+	            break;
+	        case 2:
+	            PlaySound(snd_snake_hurt_2, false, 1);
+	            break;
+	        default:
+	            PlaySound(snd_snake_hurt_1, false, 2);
+	            break;
+	    }
+	 }
 }
 
 #endregion
@@ -246,18 +250,20 @@ function CreateRandomSnakeHurtSound(){
 
 function CreateRandomCacodemonHurtSound(){
 	
-	var randomIndex = irandom_range(1, 2); 
-    switch (randomIndex) {
-        case 1:
-            PlaySound(snd_cacodemon_hurt1, false, 1);
-            break;
-        case 2:
-            PlaySound(snd_cacodemon_hurt2, false, 1);
-            break;
-        default:
-            PlaySound(snd_cacodemon_hurt1, false, 1);
-            break;
-    }
+	if (!audio_is_playing(snd_cacodemon_hurt1) && !audio_is_playing(snd_cacodemon_hurt2)) {
+		var randomIndex = irandom_range(1, 2); 
+	    switch (randomIndex) {
+	        case 1:
+	            PlaySound(snd_cacodemon_hurt1, false, 1);
+	            break;
+	        case 2:
+	            PlaySound(snd_cacodemon_hurt2, false, 1);
+	            break;
+	        default:
+	            PlaySound(snd_cacodemon_hurt1, false, 1);
+	            break;
+	    }
+	}
 }
 
 #endregion
@@ -266,18 +272,20 @@ function CreateRandomCacodemonHurtSound(){
 
 function CreateRandomCacodemonChildHurtSound(){
 	
-	var randomIndex = irandom_range(1, 2); 
-    switch (randomIndex) {
-        case 1:
-            PlaySound(snd_cacodemon_child_hurt1, false, 1);
-            break;
-        case 2:
-            PlaySound(snd_cacodemon_child_hurt2, false, 1);
-            break;
-        default:
-            PlaySound(snd_cacodemon_child_hurt1, false, 1);
-            break;
-    }
+	if (!audio_is_playing(snd_cacodemon_child_hurt1) && !audio_is_playing(snd_cacodemon_child_hurt2)) {
+		var randomIndex = irandom_range(1, 2); 
+	    switch (randomIndex) {
+	        case 1:
+	            PlaySound(snd_cacodemon_child_hurt1, false, 1);
+	            break;
+	        case 2:
+	            PlaySound(snd_cacodemon_child_hurt2, false, 1);
+	            break;
+	        default:
+	            PlaySound(snd_cacodemon_child_hurt1, false, 1);
+	            break;
+	    }
+	}
 }
 
 #endregion
@@ -330,18 +338,20 @@ function CreateRandomGuardianRoarSound(){
 
 function CreateRandomGuardianHurtSound(){
 	
-	var randomIndex = irandom_range(1, 2); 
-    switch (randomIndex) {
-        case 1:
-            PlaySound(snd_guardian_hurt1, false, 1);
-            break;
-        case 2:
-            PlaySound(snd_guardian_hurt2, false, 1);
-            break;
-        default:
-            PlaySound(snd_guardian_hurt1, false, 1);
-            break;
-    }
+	 if (!audio_is_playing(snd_guardian_hurt1) && !audio_is_playing(snd_guardian_hurt2)) {
+		var randomIndex = irandom_range(1, 2); 
+	    switch (randomIndex) {
+	        case 1:
+	            PlaySound(snd_guardian_hurt1, false, 1);
+	            break;
+	        case 2:
+	            PlaySound(snd_guardian_hurt2, false, 1);
+	            break;
+	        default:
+	            PlaySound(snd_guardian_hurt1, false, 1);
+	            break;
+	    }
+	 }
 }
 
 #endregion
@@ -350,18 +360,20 @@ function CreateRandomGuardianHurtSound(){
 
 function CreateRandomFrogHurtSound(){
 	
-	var randomIndex = irandom_range(1, 2); 
-    switch (randomIndex) {
-        case 1:
-            PlaySound(snd_frog_hurt1, false, 1);
-            break;
-        case 2:
-            PlaySound(snd_frog_hurt2, false, 1);
-            break;
-        default:
-            PlaySound(snd_frog_hurt1, false, 1);
-            break;
-    }
+	if (!audio_is_playing(snd_frog_hurt1) && !audio_is_playing(snd_frog_hurt2)) {
+		var randomIndex = irandom_range(1, 2); 
+	    switch (randomIndex) {
+	        case 1:
+	            PlaySound(snd_frog_hurt1, false, 1);
+	            break;
+	        case 2:
+	            PlaySound(snd_frog_hurt2, false, 1);
+	            break;
+	        default:
+	            PlaySound(snd_frog_hurt1, false, 1);
+	            break;
+	    }
+	}
 }
 
 #endregion
@@ -390,18 +402,21 @@ function CreateRandomFrogBirthSound(){
 
 function CreateRandomSuccubusHurtSound(){
 	
-	var randomIndex = irandom_range(1, 2); 
-    switch (randomIndex) {
-        case 1:
-            PlaySound(snd_succubus_hurt1, false, 1);
-            break;
-        case 2:
-            PlaySound(snd_succubus_hurt2, false, 1);
-            break;
-        default:
-            PlaySound(snd_succubus_hurt1, false, 1);
-            break;
-    }
+	if (!audio_is_playing(snd_succubus_hurt1) && !audio_is_playing(snd_succubus_hurt2)) {
+		
+		var randomIndex = irandom_range(1, 2); 
+	    switch (randomIndex) {
+	        case 1:
+	            PlaySound(snd_succubus_hurt1, false, 1);
+	            break;
+	        case 2:
+	            PlaySound(snd_succubus_hurt2, false, 1);
+	            break;
+	        default:
+	            PlaySound(snd_succubus_hurt1, false, 1);
+	            break;
+	    }
+	}
 }
 
 #endregion
@@ -410,18 +425,20 @@ function CreateRandomSuccubusHurtSound(){
 
 function CreateRandomDiabloHurtSound(){
 	
-	var randomIndex = irandom_range(1, 2); 
-    switch (randomIndex) {
-        case 1:
-            PlaySound(snd_diablo_hurt1, false, 1);
-            break;
-        case 2:
-            PlaySound(snd_diablo_hurt2, false, 1);
-            break;
-        default:
-            PlaySound(snd_diablo_hurt1, false, 1);
-            break;
-    }
+	if (!audio_is_playing(snd_diablo_hurt1) && !audio_is_playing(snd_diablo_hurt2)) {
+		var randomIndex = irandom_range(1, 2); 
+	    switch (randomIndex) {
+	        case 1:
+	            PlaySound(snd_diablo_hurt1, false, 1);
+	            break;
+	        case 2:
+	            PlaySound(snd_diablo_hurt2, false, 1);
+	            break;
+	        default:
+	            PlaySound(snd_diablo_hurt1, false, 1);
+	            break;
+	    }
+	}
 }
 
 #endregion
@@ -430,18 +447,20 @@ function CreateRandomDiabloHurtSound(){
 
 function CreateRandomBatHurtSound(){
 	
-	var randomIndex = irandom_range(1, 2); 
-    switch (randomIndex) {
-        case 1:
-            PlaySound(snd_bat_hurt1, false, 1);
-            break;
-        case 2:
-            PlaySound(snd_bat_hurt2, false, 1);
-            break;
-        default:
-            PlaySound(snd_bat_hurt1, false, 1);
-            break;
-    }
+	if (!audio_is_playing(snd_bat_hurt1) && !audio_is_playing(snd_bat_hurt2)) {
+		var randomIndex = irandom_range(1, 2); 
+	    switch (randomIndex) {
+	        case 1:
+	            PlaySound(snd_bat_hurt1, false, 1);
+	            break;
+	        case 2:
+	            PlaySound(snd_bat_hurt2, false, 1);
+	            break;
+	        default:
+	            PlaySound(snd_bat_hurt1, false, 1);
+	            break;
+	    }
+	}
 }
 
 #endregion

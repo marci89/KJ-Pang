@@ -13,9 +13,10 @@ PlaySound(snd_pang, false, 2);
 //drop item
 DropItem();
 
+if(!isCreatedFromAnotherEnemy) {
 //create gems 
 CreateLifePointWithMovement(x,y,0,-2, lifePointType.Purple);
-
+}
 
 //Create child balls
 randomize();

@@ -13,8 +13,9 @@ global.hasLevelTime = true; // level timer enabled
 global.hasRoomWallFrame = false; // no wall frames
 global.isRestartLevelAfterDead = true; //restart after death
 global.levelTimeMax = 250; // level's max time
-//global.playerOneDefaultWeapon = weaponType.MachineGun;
-global.level = 42;
+//global.playerOneDefaultWeapon = weaponType.ShotGun;
+//global.gameDifficult = gameDifficultType.Impossible;
+global.level = 54;
 
 	//Giant normal ball default properties
 	global.normalBallGiantMoveX = 0.5;
@@ -3446,7 +3447,7 @@ function CreateLevelHard54() {
 	// init
 	LoadBackgroundImage("hard_finalBattle_place"); //Load background
 	CreateWallFrame(wallFrameType.Gray ?? noone); //wall frame creating
-	PlayMusic(snd_TheDesireInMyHeart, true); // play music
+	PlayMusic(snd_TwoStepsFromHell, true); // play music
 	CreatePlayer(550, 500); // create player
 	global.isBossLevel = true;
 	global.isRestartLevelAfterDead = false;
@@ -3456,13 +3457,27 @@ function CreateLevelHard54() {
 	//Enemy
 	CreateFinalBossTimerCreator(100);
 	
+	/*
+		CreateSuperBallGiant(600, 100, 2, -5,
+	normalBallColorType.Green, normalBallGiantDropItemType.DropQualityLevel_2, true);
+	*/
+	
+	/*
+			CreateSuperBallLarge(600, 100, 2, -5,
+	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_2, true);
+			CreateSuperBallMedium(600, 100, 2, -5,
+	normalBallColorType.Red, true);
+			CreateSuperBallSmall(600, 100, 2, -5,
+	normalBallColorType.Red, true);
+	*/
+	
 
 	
 	//wall
 	
 	//items
 	CreateItem(74, 550, obj_item_health_potion);
-	CreateItem(160, 550, obj_item_energy_shield);
+	CreateItem(160, 550, obj_item_projectile_shield);
 	CreateItem(950, 550, obj_item_health_potion);
 	CreateItem(890, 550, obj_item_double_sting);
 }

@@ -41,7 +41,10 @@ if (place_meeting(x, y, obj_weapon_parent) && !isOutsideRoom) {
 var weaponInstance = instance_place(x, y, obj_weapon_parent);
 	if (weaponInstance != noone) {
 			if ((hitPoint - weaponInstance.damage) > 0) {
-				 PlaySound(snd_worm_hurt, false, 3);	
+				
+					 if (!audio_is_playing(snd_worm_hurt)) {
+					PlaySound(snd_worm_hurt, false, 3);
+				 }
 		
 				// Set hurt state and change image_blend
 				isHurt = true;

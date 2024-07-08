@@ -75,4 +75,5 @@ if (place_meeting(x, y +20, obj_wall_parent) ) {
 }
 
 #endregion
+
 event_inherited()

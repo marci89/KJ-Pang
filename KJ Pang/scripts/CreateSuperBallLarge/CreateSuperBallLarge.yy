@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"CreateSuperBallLarge",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CreateSuperBallLarge",
+  "parent":{
+    "name":"SuperBall",
+    "path":"folders/Scripts/Creator/Enemy/Ball/SuperBall.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

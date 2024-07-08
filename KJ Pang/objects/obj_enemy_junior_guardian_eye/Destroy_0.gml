@@ -3,3 +3,6 @@ if (global.isEnemyInformationMode) {
 	return;
 }
 
+global.playerOneScore += enemyScore;
+global.playerTwoScore += enemyScore;
+

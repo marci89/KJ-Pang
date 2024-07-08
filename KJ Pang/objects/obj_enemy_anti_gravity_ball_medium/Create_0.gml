@@ -20,6 +20,8 @@ jumpHeightMax = -20;
 isReverseGravityEffectEnabled = false;
 isAntigravityEffectEnabled = false;
 
+isCreatedFromAnotherEnemy = false;
+
 #region Init
 
 function Init(isDirectionLeft, isDirectionUp) {

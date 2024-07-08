@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_energy_shoot_destroy.mp3",
   "type":0,
-  "volume":0.31,
+  "volume":0.53,
 }

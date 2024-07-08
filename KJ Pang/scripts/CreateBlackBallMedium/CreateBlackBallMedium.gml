@@ -14,6 +14,8 @@ function CreateBlackBallMedium(xValue, yValue, moveY, isDirectionLeft, isCreated
 	result.moveY = moveY;
 	result.Init(isDirectionLeft);
 	result.SetOriginalProperties();
+	
+	return result;
 }
 
 #endregion

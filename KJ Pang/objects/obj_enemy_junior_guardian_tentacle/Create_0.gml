@@ -28,7 +28,7 @@ parentGuardian = noone; // parent
 ishurt = false;
 isHurtable = true; // hurtable or not
 isLeftSide = true;
-maxHealt = 50;
+maxHealt = 55;
 creatorType = tentacleType.RedBallJuniorCreator;
 creatingTime = 900;
 

@@ -18,6 +18,7 @@ jumpHeightMax = -8;
 
 //own properties
 isHurt = false;
+isCreatedFromAnotherEnemy = false;
 
 
 #region Init

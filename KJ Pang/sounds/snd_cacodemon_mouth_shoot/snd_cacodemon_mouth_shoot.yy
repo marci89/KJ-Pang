@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_cacodemon_mouth_shoot.mp3",
   "type":0,
-  "volume":0.52,
+  "volume":0.22,
 }

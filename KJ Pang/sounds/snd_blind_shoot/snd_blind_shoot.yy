@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_blind_shoot.mp3",
   "type":0,
-  "volume":0.61,
+  "volume":0.74,
 }

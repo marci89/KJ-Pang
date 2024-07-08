@@ -33,6 +33,7 @@ centerX = 0;
 centerY = 0;
 angle = 0;
 
+
 parentEnemy = noone;
 
 #region Set parent

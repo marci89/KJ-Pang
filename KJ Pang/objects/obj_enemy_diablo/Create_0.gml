@@ -80,7 +80,7 @@ function CreateDiabloProtectingRing() {
 	 var num_balls = 18;
 	 var angle_step = 360 / num_balls;
 		 for (var i = 0; i < num_balls; i++) {
-			CreateEnemyProtectingRing(x, y, id ?? noone, (i * angle_step) );
+			CreateEnemyProtectingRing(x, y, id ?? noone, (i * angle_step));
 		}
 }
 

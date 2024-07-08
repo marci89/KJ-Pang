@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_bomb_burned.mp3",
   "type":0,
-  "volume":0.31,
+  "volume":0.19,
 }

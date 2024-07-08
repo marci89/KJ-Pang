@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_ball_hurt_2.mp3",
   "type":0,
-  "volume":0.49,
+  "volume":0.56,
 }

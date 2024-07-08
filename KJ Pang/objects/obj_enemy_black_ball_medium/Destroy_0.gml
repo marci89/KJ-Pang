@@ -10,9 +10,10 @@ effect_create_above( ef_firework, x, y, 1, c_black);
 PlaySound(snd_ball_destroy, false, 3);
 
 
+if(!isCreatedFromAnotherEnemy) {
 //create gems 
 CreateLifePointWithMovement(x,y,0,-5, lifePointType.Black);
-
+}
 
 //Create child balls
 randomize();

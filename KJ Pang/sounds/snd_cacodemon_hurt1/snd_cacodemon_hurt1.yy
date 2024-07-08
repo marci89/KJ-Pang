@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_cacodemon_hurt1.mp3",
   "type":0,
-  "volume":0.28,
+  "volume":0.34,
 }

@@ -12,8 +12,8 @@
   "name":"obj_enemy_guardian_wing",
   "overriddenProperties":[],
   "parent":{
-    "name":"Medior",
-    "path":"folders/Objects/Enemy/Boss/GuardianBoss/Medior.yy",
+    "name":"GuardianBoss",
+    "path":"folders/Objects/Enemy/Boss/GuardianBoss.yy",
   },
   "parentObjectId":{
     "name":"obj_enemy_parent",

@@ -378,13 +378,16 @@ enum tentacleType{
 	RedBallSeniorCreator,
     ShieldBallSeniorCreator,
 	SuperBallSeniorCreator,
-	BlackBallSeniorCreator,
+	AntiGravityBallSeniorCreator,
 	
-	ShieldBallExpertCreator,
-	SuperBallExpertCreator,
-	BlackBallExpertCreator,
-	HorizontalBallExpertCreator,
-	AntiGravityBallExpertCreator,
+	ExpertGuardianShieldBallCreator,
+	ExpertGuardianSuperBallCreator,
+	ExpertGuardianHorizontalBallCreator,
+	ExpertGuardianYellowBallCreator,
+	ExpertGuardianAntiGravityBallCreator,
+	ExpertGuardianNormalBallCreator,
+	
+
 
 };
 
