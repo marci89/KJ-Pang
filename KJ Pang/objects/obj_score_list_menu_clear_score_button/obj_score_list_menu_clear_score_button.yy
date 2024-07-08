@@ -1,20 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"obj_item_triple_sting",
+  "%Name":"obj_score_list_menu_clear_score_button",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_item_triple_sting",
+  "name":"obj_score_list_menu_clear_score_button",
   "overriddenProperties":[],
   "parent":{
-    "name":"Sting",
-    "path":"folders/Objects/Item/Weapon/Sting.yy",
+    "name":"ScoreMenu",
+    "path":"folders/Objects/UI/Menu/MainMenu/ScoreMenu.yy",
   },
   "parentObjectId":{
-    "name":"obj_item_parent",
-    "path":"objects/obj_item_parent/obj_item_parent.yy",
+    "name":"obj_button_parent",
+    "path":"objects/obj_button_parent/obj_button_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_item_triple_sting",
-    "path":"sprites/spr_item_triple_sting/spr_item_triple_sting.yy",
+    "name":"spr_button_normal_inactive",
+    "path":"sprites/spr_button_normal_inactive/spr_button_normal_inactive.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -164,12 +164,6 @@ function Init(type) {
 		image = spr_status_tracking_rocket_launcher;
 	}
 	
-	if(type == informationType.TripleSting) {
-		titleText =  GetLocalizedText("tripleStingTitle"); 
-		descriptionText =  GetLocalizedText("tripleStingDesc"); 
-		image = spr_item_triple_sting;
-	}
-	
 	if(type == informationType.DoublePowerWire) {
 		titleText =  GetLocalizedText("doublePowerWireTitle"); 
 		descriptionText =  GetLocalizedText("doublePowerWireDesc"); 

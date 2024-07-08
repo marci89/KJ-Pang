@@ -62,6 +62,10 @@ playerProjectileShield = noone;
 
 hasinvulnerabilityPotionEffect = false;
 
+canActivateSpecAbility = false;
+
+alarm[5] = 100;
+
 //Settings
 
 #region Set sprites
@@ -307,7 +311,11 @@ function ActivateSpecialAbility() {
 	
 		if (isDead) {
 		return;
-	}
+		}
+		
+		if(!canActivateSpecAbility) {
+		return;
+		}
 	
 	//variables
 	var specialAbility = global.playerTwoSpecialAbility;

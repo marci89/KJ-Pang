@@ -62,11 +62,6 @@ if(player.weapon == weaponType.FlameThrower) {
 }
 
 
-if(player.weapon == weaponType.TripleSting) {
-	sprite_index = spr_status_triple_sting;
-}
-
-
 if(player.weapon == weaponType.DoublePowerWire) {
 	sprite_index = spr_status_double_power_wire;
 }

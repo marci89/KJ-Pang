@@ -58,3 +58,19 @@ function LoadScoreList(){
 }
 
 #endregion
+
+
+#region Clear score list
+
+function ClearScoreList(){
+    // Clear the ds_list containing the scores
+    ds_list_clear(global.scores);
+    
+    // Optionally, you might want to delete the score file as well
+    var filename = working_directory + "Data/scoreList.txt";
+    if (file_exists(filename)) {
+        file_delete(filename);
+    }
+}
+
+#endregion

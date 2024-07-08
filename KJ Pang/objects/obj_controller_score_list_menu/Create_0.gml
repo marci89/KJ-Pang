@@ -182,6 +182,8 @@ buttonY = 650; // buttons y
 //selection
 currentSelectedButtonId = 0;
 maxButtonId = 0;
+selectType = menuButtonSelectType.Horizontal;
+
 
 //check is ending or only show score list
 if(global.playerOneLife == 0 || global.playerTwoLife == 0 || global.isFinalBattleLevel) {
@@ -198,10 +200,14 @@ if(isGameOverScoreList) {
 
 #region Create buttons
 
- var backButton = instance_create_layer(startX , buttonY,"Instances", obj_score_list_menu_back_button);
- 
+
  if(isGameOverScoreList){
+	 var backButton = instance_create_layer(startX , buttonY,"Instances", obj_score_list_menu_back_button);
 	 backButton.ChangeText("Ok");
+ } else {
+	 maxButtonId = 1;
+	  instance_create_layer(startX-200 , buttonY,"Instances", obj_score_list_menu_back_button);
+	  instance_create_layer(startX+100 , buttonY,"Instances", obj_score_list_menu_clear_score_button);
  }
  
 #endregion

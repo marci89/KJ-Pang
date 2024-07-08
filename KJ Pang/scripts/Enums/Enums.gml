@@ -62,7 +62,6 @@ enum informationType{
 	FlameThrower,
 	TrackingRocketLauncher,
 	
-	TripleSting,
 	DoublePowerWire,
 	Detonator,
 	Bomb,
@@ -281,7 +280,6 @@ enum weaponType{
 	RocketLauncher,
 	TrackingRocketLauncher,
 	FlameThrower,
-	TripleSting,
 	DoublePowerWire,
 };
 
