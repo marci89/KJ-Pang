@@ -239,6 +239,30 @@ function Init(type) {
 		descriptionText =  GetLocalizedText("horizontalShootDesc"); 
 		image = spr_invisible_pic;
 	}
+	
+	if(type == informationType.IndestructibleWall) {
+		titleText =  GetLocalizedText("indestructibleWallTitle"); 
+		descriptionText =  GetLocalizedText("indestructibleWallDesc"); 
+		image = spr_wall_indestructible;
+	}
+	
+	if(type == informationType.Snowing) {
+		titleText =  GetLocalizedText("snowingTitle"); 
+		descriptionText =  GetLocalizedText("snowingDesc"); 
+		image = spr_invisible_pic;
+	}
+	
+	if(type == informationType.Raining) {
+		titleText =  GetLocalizedText("rainingTitle"); 
+		descriptionText =  GetLocalizedText("rainingDesc"); 
+		image = spr_invisible_pic;
+	}
+	
+	if(type == informationType.Mist) {
+		titleText =  GetLocalizedText("mistTitle"); 
+		descriptionText =  GetLocalizedText("mistDesc"); 
+		image = spr_invisible_pic;
+	}
 
 }
 

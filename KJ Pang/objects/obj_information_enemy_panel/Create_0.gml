@@ -291,6 +291,45 @@ function Init(type) {
 		enemyType = type;
 	}
 	
+		
+	if(type == enemyInformationType.Sentinel_T_800) {
+		
+		titleText =  GetLocalizedText("sentinelT800Title"); 
+		descriptionText =  GetLocalizedText("sentinelT800Desc");
+		image = noone;
+		
+		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
+		layer_destroy_instances("Weapon");
+		CreateEnemyWallFrame();
+		
+		//enemies
+		CreateSentinel_T_800(x +100, y +400,1,1,c_yellow, false);
+
+		
+		enemyType = type;
+	}
+	
+	if(type == enemyInformationType.Frog) {
+		
+		titleText =  GetLocalizedText("frogTitle"); 
+		descriptionText =  GetLocalizedText("frogDesc");
+		image = noone;
+		
+		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
+		layer_destroy_instances("Weapon");
+		CreateEnemyWallFrame();
+		
+		//enemies
+		CreateFrog(x + 200, y + 450, -1, 0, false);
+
+		
+		enemyType = type;
+	}
+	
 	if(type == enemyInformationType.TongueWorm) {
 		
 		titleText =  GetLocalizedText("tongueWormTitle"); 
@@ -309,6 +348,257 @@ function Init(type) {
 		
 		enemyType = type;
 	}
+	
+	if(type == enemyInformationType.SmogBall) {
+		
+		titleText =  GetLocalizedText("smogBallTitle"); 
+		descriptionText =  GetLocalizedText("smogBallDesc");
+		image = noone;
+		
+		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
+		layer_destroy_instances("Weapon");
+		CreateEnemyWallFrame();
+		
+		//enemies
+		CreateSmogBall(x + 100, y + 400,1,1, false );
+
+		
+		enemyType = type;
+	}
+	
+	if(type == enemyInformationType.Malwrath) {
+		
+		titleText =  GetLocalizedText("malwrathTitle"); 
+		descriptionText =  GetLocalizedText("malwrathDesc"); 
+		
+		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
+		layer_destroy_instances("Weapon");
+		
+		image = spr_enemy_malwrath_pic;
+		
+		enemyType = type;
+	}
+	
+	if(type == enemyInformationType.FrogBoss) {
+		
+		titleText =  GetLocalizedText("frogBossTitle"); 
+		descriptionText =  GetLocalizedText("frogBossDesc"); 
+		
+		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
+		layer_destroy_instances("Weapon");
+		
+		image = spr_enemy_frog_boss_pic;
+		
+		enemyType = type;
+	}
+	
+	if(type == enemyInformationType.Diablo) {
+		
+		titleText =  GetLocalizedText("diabloTitle"); 
+		descriptionText =  GetLocalizedText("diabloDesc"); 
+		
+		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
+		layer_destroy_instances("Weapon");
+		
+		image = spr_enemy_diablo_pic;
+		
+		enemyType = type;
+	}
+	
+	if(type == enemyInformationType.MediorGuardian) {
+		
+		titleText =  GetLocalizedText("mediorGuardianTitle"); 
+		descriptionText =  GetLocalizedText("mediorGuardianDesc"); 
+		
+		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
+		layer_destroy_instances("Weapon");
+		
+		image = spr_enemy_medior_guardian_pic;
+		
+		enemyType = type;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	if(type == enemyInformationType.Wretched) {
+		
+		titleText =  GetLocalizedText("wretchedTitle"); 
+		descriptionText =  GetLocalizedText("wretchedDesc"); 
+		
+		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
+		layer_destroy_instances("Weapon");
+		
+		image = spr_enemy_wretched_pic;
+		
+		enemyType = type;
+	}
+	
+	if(type == enemyInformationType.ProbeDroid) {
+		
+		titleText =  GetLocalizedText("probeDroidTitle"); 
+		descriptionText =  GetLocalizedText("probeDroidDesc"); 
+		
+		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
+		layer_destroy_instances("Weapon");
+		
+		image = spr_enemy_prope_droid_pic;
+		
+		enemyType = type;
+	}
+	
+	if(type == enemyInformationType.Manananggal) {
+		
+		titleText =  GetLocalizedText("manananggalTitle"); 
+		descriptionText =  GetLocalizedText("manananggalDesc"); 
+		
+		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
+		layer_destroy_instances("Weapon");
+		
+		image = spr_enemy_manananggal_pic;
+		
+		enemyType = type;
+	}
+	
+	if(type == enemyInformationType.Bat) {
+		
+		titleText =  GetLocalizedText("batTitle"); 
+		descriptionText =  GetLocalizedText("batDesc");
+		image = noone;
+		
+		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
+		layer_destroy_instances("Weapon");
+		CreateEnemyWallFrame();
+		
+		//enemies
+		CreateBat(x + 200, y + 450, false);
+
+		
+		enemyType = type;
+	}
+	
+	
+	
+		if(type == enemyInformationType.SeniorGuardian) {
+		
+		titleText =  GetLocalizedText("seniorGuardianTitle"); 
+		descriptionText =  GetLocalizedText("seniorGuardianDesc"); 
+		
+		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
+		layer_destroy_instances("Weapon");
+		
+		image = spr_enemy_senior_guardian_pic;
+		
+		enemyType = type;
+	}
+	
+	
+		if(type == enemyInformationType.ExpertGuardian) {
+		
+		titleText =  GetLocalizedText("expertGuardianTitle"); 
+		descriptionText =  GetLocalizedText("expertGuardianDesc"); 
+		
+		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
+		layer_destroy_instances("Weapon");
+		
+		image = spr_enemy_expert_guardian_pic;
+		
+		enemyType = type;
+	}
+	
+	
+		if(type == enemyInformationType.SuperBall) {
+
+		titleText =  GetLocalizedText("superBallTitle"); 
+		descriptionText =  GetLocalizedText("superBallDesc"); 
+		image = noone;
+		
+		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
+		layer_destroy_instances("Weapon");
+		CreateEnemyWallFrame();
+		
+		//enemies
+		
+		
+
+	
+		CreateSuperBallSmall(x+60, y + 490, 2, -5,
+	normalBallColorType.Red, false);
+		
+		CreateSuperBallMedium(x+250, y + 500, 2, -5,
+	normalBallColorType.Red, false);
+			
+		CreateSuperBallLarge(x + 200, y + 480, 2, -5,
+	normalBallColorType.Green, normalBallGiantDropItemType.DropQualityLevel_2, false);
+	
+		CreateSuperBallGiant(x + 125, y + 490, 2, -1,
+	normalBallColorType.Blue, normalBallGiantDropItemType.Nothing, false);
+	
+		enemyType = type;
+	}
+	
+	
+	if(type == enemyInformationType.ShieldedSuperBall) {
+
+		titleText =  GetLocalizedText("shieldedSuperBallTitle"); 
+		descriptionText =  GetLocalizedText("shieldedSuperBallDesc"); 
+		image = noone;
+		
+		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
+		layer_destroy_instances("Weapon");
+		CreateEnemyWallFrame();
+		
+		//enemies
+		
+		
+
+	
+
+				CreateSuperBallMediumShield(x+250, y + 480, 2, -5,
+	normalBallColorType.Blue, false,1);
+	
+		CreateSuperBallMediumShield(x+200, y + 500, 2, -5,
+	normalBallColorType.Red, false,2);
+			
+		CreateSuperBallLargeShield(x + 125, y + 490, 2, -5,
+	normalBallColorType.Green, normalBallGiantDropItemType.DropQualityLevel_2, false,3);
+	
+		
+	
+		enemyType = type;
+	}
+	
 	
 	
 		

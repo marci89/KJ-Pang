@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"CreateSentinel",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CreateSentinel",
+  "parent":{
+    "name":"Sentinel",
+    "path":"folders/Scripts/Creator/Enemy/Ball/Sentinel.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

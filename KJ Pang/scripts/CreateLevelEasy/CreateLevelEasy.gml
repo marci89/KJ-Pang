@@ -14,7 +14,7 @@ global.hasRoomWallFrame = false; // no wall frames
 global.isRestartLevelAfterDead = true; //restart after death
 global.levelTimeMax = 150; // level's max time
 //global.playerOneDefaultWeapon = weaponType.MachineGun;
-//global.level = 42;
+//global.level = 35;
 
 	//Giant normal ball default properties
 	global.normalBallGiantMoveX = 0.5;
@@ -1995,7 +1995,7 @@ function CreateLevelEasy31() {
 	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
 	normalBallColorType.Blue, true);
 	
-	CreateNormalBallMedium(950, 300, global.normalBallMediumMoveX, global.normalBallMediumMoveY,
+	CreateNormalBallMedium(950, 270, global.normalBallMediumMoveX, global.normalBallMediumMoveY,
 	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
 	normalBallColorType.Blue, true);
 	
@@ -2023,7 +2023,7 @@ function CreateLevelEasy31() {
 		
 	//first row
 	CreateWallMany(160, 150, wallType.Blue, wallCreatorDirectionType.Right, 8);
-	CreateWallMany(512, 150, wallType.Blue, wallCreatorDirectionType.Right, 5);
+	CreateWallMany(608, 150, wallType.Blue, wallCreatorDirectionType.Right, 2);
 	
 	//bottom walls
 	CreateWallMany(128, 150, wallType.Blue, wallCreatorDirectionType.Bottom, 11);
@@ -2066,8 +2066,8 @@ function CreateLevelEasy31() {
 	CreateLifePoint(250, 100, lifePointType.Blue);
 	CreateLifePoint(310, 100, lifePointType.Blue);
 	CreateLifePoint(370, 100, lifePointType.Blue);
-	CreateLifePoint(550, 100, lifePointType.Blue);
 	CreateLifePoint(620, 100, lifePointType.Blue);
+	CreateLifePoint(650, 100, lifePointType.Blue);
 	
 
 	

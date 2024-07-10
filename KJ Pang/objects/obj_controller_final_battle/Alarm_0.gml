@@ -7,3 +7,18 @@ if(global.gameDifficult == gameDifficultType.Easy
 	actionNumber++;
 	HandleEasyFinalBattleAction();
 }
+
+//normal
+if(global.gameDifficult == gameDifficultType.Normal
+&& global.level == 54) {
+	actionNumber++;
+	HandleNormalFinalBattleAction();
+}
+
+//hard
+if(global.gameDifficult == gameDifficultType.Hard
+&& global.level == 54) {
+	actionNumber++;
+	HandleHardFinalBattleAction();
+}
+

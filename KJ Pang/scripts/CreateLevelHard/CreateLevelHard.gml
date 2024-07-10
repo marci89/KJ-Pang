@@ -12,31 +12,31 @@ global.currentLevelEffect = noone; // clear effect type
 global.hasLevelTime = true; // level timer enabled
 global.hasRoomWallFrame = false; // no wall frames
 global.isRestartLevelAfterDead = true; //restart after death
-global.levelTimeMax = 250; // level's max time
+global.levelTimeMax = 350; // level's max time
 //global.playerOneDefaultWeapon = weaponType.ShotGun;
 //global.gameDifficult = gameDifficultType.Impossible;
-global.level = 54;
+//global.level = 54;
 
 	//Giant normal ball default properties
-	global.normalBallGiantMoveX = 0.5;
-	global.normalBallGiantMoveY = -1;
-	global.normalBallGiantGravityY = 0.04;
-	global.normalBallGiantJumpHeightMax = -9;
-	//Large normal ball default properties
-	global.normalBallLargeMoveX = 0.5;
-	global.normalBallLargeMoveY = -1;
-	global.normalBallLargeGravityY = 0.04;
-	global.normalBallLargeJumpHeightMax = -6;
-	//Medium normal ball default properties
-	global.normalBallMediumMoveX = 0.5;
-	global.normalBallMediumMoveY = -1;
-	global.normalBallMediumGravityY = 0.04;
-	global.normalBallMediumJumpHeightMax = -5;
-	//Small normal ball default properties
-	global.normalBallSmallMoveX = 0.5;
-	global.normalBallSmallMoveY = -2;
-	global.normalBallSmallGravityY = 0.04;
-	global.normalBallSmallJumpHeightMax = -4;
+		global.normalBallGiantMoveX = 1.5;
+		global.normalBallGiantMoveY = -4;
+		global.normalBallGiantGravityY = 0.12;
+		global.normalBallGiantJumpHeightMax = -10;
+		//Large normal ball default properties
+		global.normalBallLargeMoveX = 1.7;
+		global.normalBallLargeMoveY = -4;
+		global.normalBallLargeGravityY = 0.12;
+		global.normalBallLargeJumpHeightMax = -8;
+		//Medium normal ball default properties
+		global.normalBallMediumMoveX = 1.8;
+		global.normalBallMediumMoveY = -4;
+		global.normalBallMediumGravityY = 0.12;
+		global.normalBallMediumJumpHeightMax = -9;
+		//Small normal ball default properties
+		global.normalBallSmallMoveX = 1.7;
+		global.normalBallSmallMoveY = -4;
+		global.normalBallSmallGravityY = 0.11;
+		global.normalBallSmallJumpHeightMax = -6;
 
 //Create levels
 	if(global.level == 1) {
@@ -54,26 +54,6 @@ global.level = 54;
 		return;
 	}
 
-		//Giant normal ball default properties
-		global.normalBallGiantMoveX = 0.75;
-		global.normalBallGiantMoveY = -1;
-		global.normalBallGiantGravityY = 0.06;
-		global.normalBallGiantJumpHeightMax = -10;
-		//Large normal ball default properties
-		global.normalBallLargeMoveX = 0.75;
-		global.normalBallLargeMoveY = -1.5;
-		global.normalBallLargeGravityY = 0.06;
-		global.normalBallLargeJumpHeightMax = -7;
-		//Medium normal ball default properties
-		global.normalBallMediumMoveX = 0.75;
-		global.normalBallMediumMoveY = -1;
-		global.normalBallMediumGravityY = 0.06;
-		global.normalBallMediumJumpHeightMax = -6;
-		//Small normal ball default properties
-		global.normalBallSmallMoveX = 0.75;
-		global.normalBallSmallMoveY = -2;
-		global.normalBallSmallGravityY = 0.06;
-		global.normalBallSmallJumpHeightMax = -5;
 	
 	if(global.level == 4) {
 		CreateLevelHard4();
@@ -105,26 +85,6 @@ global.level = 54;
 		return;
 	}
 
-		//Giant normal ball default properties
-		global.normalBallGiantMoveX = 1.2;
-		global.normalBallGiantMoveY = -1;
-		global.normalBallGiantGravityY = 0.08;
-		global.normalBallGiantJumpHeightMax = -12;
-		//Large normal ball default properties
-		global.normalBallLargeMoveX = 0.9;
-		global.normalBallLargeMoveY = -1.7;
-		global.normalBallLargeGravityY = 0.08;
-		global.normalBallLargeJumpHeightMax = -8;
-		//Medium normal ball default properties
-		global.normalBallMediumMoveX = 0.9;
-		global.normalBallMediumMoveY = -1.4;
-		global.normalBallMediumGravityY = 0.08;
-		global.normalBallMediumJumpHeightMax = -6;
-		//Small normal ball default properties
-		global.normalBallSmallMoveX = 0.9;
-		global.normalBallSmallMoveY = -2;
-		global.normalBallSmallGravityY = 0.08;
-		global.normalBallSmallJumpHeightMax = -5;
 	
 	if(global.level == 10) {
 		CreateLevelHard10();
@@ -161,26 +121,7 @@ global.level = 54;
 		return;
 	}
 	
-		//Giant normal ball default properties
-		global.normalBallGiantMoveX = 1.5;
-		global.normalBallGiantMoveY = -3;
-		global.normalBallGiantGravityY = 0.1;
-		global.normalBallGiantJumpHeightMax = -14;
-		//Large normal ball default properties
-		global.normalBallLargeMoveX = 1;
-		global.normalBallLargeMoveY = -3;
-		global.normalBallLargeGravityY = 0.08;
-		global.normalBallLargeJumpHeightMax = -8;
-		//Medium normal ball default properties
-		global.normalBallMediumMoveX = 1;
-		global.normalBallMediumMoveY = -3;
-		global.normalBallMediumGravityY = 0.1;
-		global.normalBallMediumJumpHeightMax = -8;
-		//Small normal ball default properties
-		global.normalBallSmallMoveX = 1;
-		global.normalBallSmallMoveY = -3;
-		global.normalBallSmallGravityY = 0.09;
-		global.normalBallSmallJumpHeightMax = -6;
+
 	
 	if(global.level == 17) {
 		CreateLevelHard17();
@@ -292,26 +233,7 @@ global.level = 54;
 		return;
 	}
 	
-		//Giant normal ball default properties
-		global.normalBallGiantMoveX = 1.5;
-		global.normalBallGiantMoveY = -4;
-		global.normalBallGiantGravityY = 0.11;
-		global.normalBallGiantJumpHeightMax = -10;
-		//Large normal ball default properties
-		global.normalBallLargeMoveX = 1.5;
-		global.normalBallLargeMoveY = -3;
-		global.normalBallLargeGravityY = 0.1;
-		global.normalBallLargeJumpHeightMax = -8;
-		//Medium normal ball default properties
-		global.normalBallMediumMoveX = 1.5;
-		global.normalBallMediumMoveY = -3;
-		global.normalBallMediumGravityY = 0.1;
-		global.normalBallMediumJumpHeightMax = -9;
-		//Small normal ball default properties
-		global.normalBallSmallMoveX = 1.4;
-		global.normalBallSmallMoveY = -3;
-		global.normalBallSmallGravityY = 0.1;
-		global.normalBallSmallJumpHeightMax = -6;
+	
 	
 	if(global.level == 39) {
 		CreateLevelHard39();
@@ -408,13 +330,15 @@ function CreateLevelHard1() {
 	// init
 	LoadBackgroundImage("japan_morning"); //Load background 
 	CreateWallFrame(wallFrameType.Blue ?? noone); //wall frame creating
-	PlayMusic(snd_mtFuji, true); // play music
+	PlayMusic(snd_deathValley_music, true); // play music
 	CreatePlayer(500, 500); // create player
 	
 	//Enemy
-	CreateNormalBallGiant(530, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
-	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
+			
+	CreateSuperBallLarge(500, 300, 3, -5,
 	normalBallColorType.Red, normalBallGiantDropItemType.Nothing, true);
+	
+
 	
 	//items
 	CreateLifePoint(30, 640, lifePointType.Red);
@@ -437,16 +361,14 @@ function CreateLevelHard2() {
 	// init
 	LoadBackgroundImage("japan_twilight"); //Load background
 	CreateWallFrame(wallFrameType.Blue ?? noone); //wall frame creating
-	PlayMusic(snd_mtFuji, true); // play music
+	PlayMusic(snd_deathValley_music, true); // play music
 	CreatePlayer(500, 500); // create player
 	
 	//Enemy
-	CreateNormalBallGiant(450, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
-	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
+	CreateSuperBallGiant(500, 300, 3, -5,
 	normalBallColorType.Blue, normalBallGiantDropItemType.Nothing, true);
 	
-	//wall
-	CreateWallDestroyableMany(440, 200, wallCreatorDirectionType.Right, 4);
+
 	
 	//items
 	CreateFoodByImageIndex(30, 640, 17)
@@ -458,11 +380,6 @@ function CreateLevelHard2() {
 	CreateFoodByImageIndex(910, 640, 17);
 	CreateFoodByImageIndex(950, 640, 17);
 	CreateFoodByImageIndex(990, 640, 17);
-	
-	
-	CreateLifePoint(475, 100, lifePointType.Blue);
-	CreateLifePoint(505, 100, lifePointType.Blue);
-	CreateLifePoint(535, 100, lifePointType.Blue);
 
 }
 
@@ -475,34 +392,30 @@ function CreateLevelHard3() {
 	// init
 	LoadBackgroundImage("japan_night"); //Load background
 	CreateWallFrame(wallFrameType.Blue ?? noone); //wall frame creating
-	PlayMusic(snd_mtFuji, true); // play music
+	PlayMusic(snd_deathValley_music, true); // play music
 	CreatePlayer(500, 650); // create player
 	
 	//Enemy
-	CreateNormalBallGiant(200, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
-	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
+	CreateSuperBallGiant(500, 300, 3, -5,
 	normalBallColorType.Green, normalBallGiantDropItemType.Nothing, true);
 	
-	CreateNormalBallMedium(500, 300, -global.normalBallMediumMoveX, global.normalBallMediumMoveY,
-	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
-	normalBallColorType.Green, true);
+	CreateSuperBallLarge(500, 300, -3, -5,
+	normalBallColorType.Green, normalBallGiantDropItemType.Nothing, true);
 	
 	//wall
-	CreateWallDestroyableMany(448, 200, wallCreatorDirectionType.Right, 4);
-	CreateWallDestroyableMany(448, 470, wallCreatorDirectionType.Right, 4);
-	
-	CreateWallMany(192, 200, wallType.Green, wallCreatorDirectionType.Right, 4);
-	CreateWallMany(704, 200, wallType.Green, wallCreatorDirectionType.Right, 4);
+
+	//items
 
 	
-	//items
-	CreateItem(513, 300, obj_item_double_sting)
+	CreateItem(80, 600, obj_item_health_potion);
+	CreateItem(180, 600, obj_item_health_potion);
 	
-	CreateLifePoint(473, 100, lifePointType.Green);
-	CreateLifePoint(493, 100, lifePointType.Green);
-	CreateLifePoint(513, 100, lifePointType.Green);
-	CreateLifePoint(533, 100, lifePointType.Green);
-	CreateLifePoint(553, 100, lifePointType.Green);
+	
+	CreateLifePoint(870, 100, lifePointType.Pink);
+	CreateLifePoint(910, 100, lifePointType.Pink);
+	CreateLifePoint(950, 100, lifePointType.Pink);
+	CreateLifePoint(990, 100, lifePointType.Pink);
+
 
 
 }

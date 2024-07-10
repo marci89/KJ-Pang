@@ -12,8 +12,8 @@
   "duration":2.847344,
   "name":"snd_small_boom",
   "parent":{
-    "name":"Sting",
-    "path":"folders/Sounds/Voice/Weapon/Sting.yy",
+    "name":"Bomb",
+    "path":"folders/Sounds/Voice/Weapon/Bomb.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_small_boom.mp3",
   "type":0,
-  "volume":1.0,
+  "volume":0.28,
 }

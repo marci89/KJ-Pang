@@ -94,8 +94,8 @@ function DropItem() {
 //randomize chance
 var randomChance = random(1);
 	
-		var antiGravitydDropChance = 0.1;
-		var nothingDropChance = 0.9; 
+		var antiGravitydDropChance = 0.15;
+		var nothingDropChance = 0.85; 
 
 		if (randomChance < antiGravitydDropChance) {
 			CreateItemWithMovement(x, y, 2, -4, obj_item_antigravity);

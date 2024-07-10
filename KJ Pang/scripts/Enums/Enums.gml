@@ -77,6 +77,10 @@ enum informationType{
 	Life,
 	SnowWall,
 	HorizontalShoot,
+	IndestructibleWall,
+	Snowing,
+	Raining,
+	Mist,
 };
 
 #endregion
@@ -96,12 +100,34 @@ enum enemyInformationType{
 	
 	ShieldedNormalBall,
 	Worm,
-	TongueWorm,
+	Sentinel_T_800,
 	Frog,
-	
-	
+	TongueWorm,
+	SmogBall,
 	Malwrath,
-	HugeFrog,
+	FrogBoss,
+	Diablo,
+	MediorGuardian,
+	
+	SuperBall,
+	Eye,
+	ShieldedSuperBall,
+	Sentinel_T_X,
+	CapriciousBall,
+	ColorfulBall,
+	SpaceDistorterBall,
+	
+	
+	
+	
+	Wretched,
+	ProbeDroid,
+	Manananggal,
+	Bat,
+	SeniorGuardian,
+	
+	ExpertGuardian,
+	
 	
 	
 	

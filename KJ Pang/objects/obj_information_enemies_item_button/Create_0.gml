@@ -89,10 +89,121 @@ function Init() {
 		requiredDifficult = gameDifficultType.Hard;
 	}
 	
+		
 	if(buttonId == 11) {
+		image = spr_enemy_sentinel_T_800_pic;
+		infoType = enemyInformationType.Sentinel_T_800;
+		requiredDifficult = gameDifficultType.Hard;
+	}
+	
+	if(buttonId == 12) {
+		image = spr_enemy_frog_pic;
+		infoType = enemyInformationType.Frog;
+		requiredDifficult = gameDifficultType.Hard;
+	}
+	
+	if(buttonId == 13) {
 		image = spr_enemy_worm_tongue_walk;
 		infoType = enemyInformationType.TongueWorm;
 		requiredDifficult = gameDifficultType.Hard;
+	}
+	
+	if(buttonId == 14) {
+		image = spr_enemy_smog_ball_pic;
+		infoType = enemyInformationType.SmogBall;
+		requiredDifficult = gameDifficultType.Hard;
+	}
+	
+	if(buttonId == 15) {
+		image = spr_enemy_malwrath_pic_small;
+		infoType = enemyInformationType.Malwrath;
+		requiredDifficult = gameDifficultType.Hard;
+	}
+	
+	if(buttonId == 16) {
+		image = spr_enemy_frog_boss_pic_small;
+		infoType = enemyInformationType.FrogBoss;
+		requiredDifficult = gameDifficultType.Hard;
+	}
+	
+	if(buttonId == 17) {
+		image = spr_enemy_diablo_pic_small;
+		infoType = enemyInformationType.Diablo;
+		requiredDifficult = gameDifficultType.Hard;
+	}
+	
+	if(buttonId == 18) {
+		image = spr_enemy_medior_guardian_pic_small;
+		infoType = enemyInformationType.MediorGuardian;
+		requiredDifficult = gameDifficultType.Hard;
+	}
+	
+	
+	
+	
+	
+	if(buttonId == 19) {
+		image = spr_enemy_super_ball_small_blue;
+		infoType = enemyInformationType.SuperBall;
+		requiredDifficult = gameDifficultType.Impossible;
+	}
+	
+	if(buttonId == 20) {
+		image = spr_enemy_super_ball_small_blue;
+		infoType = enemyInformationType.Eye;
+		requiredDifficult = gameDifficultType.Impossible;
+	}
+	
+	if(buttonId == 21) {
+		image = spr_enemy_super_ball_small_green;
+		infoType = enemyInformationType.ShieldedSuperBall;
+		requiredDifficult = gameDifficultType.Impossible;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	if(buttonId == 25) {
+		image = spr_enemy_wretched_pic_small;
+		infoType = enemyInformationType.Wretched;
+		requiredDifficult = gameDifficultType.Impossible;
+	}
+	
+	if(buttonId == 26) {
+		image = spr_enemy_prope_droid_pic_small;
+		infoType = enemyInformationType.ProbeDroid;
+		requiredDifficult = gameDifficultType.Impossible;
+	}
+	
+	if(buttonId == 27) {
+		image = spr_enemy_manananggal_pic_small;
+		infoType = enemyInformationType.Manananggal;
+		requiredDifficult = gameDifficultType.Impossible;
+	}
+	
+	if(buttonId == 28) {
+		image = spr_enemy_bat_pic_small;
+		infoType = enemyInformationType.Bat;
+		requiredDifficult = gameDifficultType.Impossible;
+	}
+	
+	if(buttonId == 29) {
+		image = spr_enemy_senior_guardian_pic_small;
+		infoType = enemyInformationType.SeniorGuardian;
+		requiredDifficult = gameDifficultType.Impossible;
+	}
+	
+	if(buttonId == 30) {
+		image = spr_enemy_expert_guardian_pic_small;
+		infoType = enemyInformationType.ExpertGuardian;
+		requiredDifficult = gameDifficultType.Impossible;
 	}
 	
 	//set image

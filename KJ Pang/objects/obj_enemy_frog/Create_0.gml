@@ -24,6 +24,7 @@ alarm[2] = irandom_range(50, 200);
 
 
 
+
 //own properties
 isHurt = false;
 currentXscale = 1;

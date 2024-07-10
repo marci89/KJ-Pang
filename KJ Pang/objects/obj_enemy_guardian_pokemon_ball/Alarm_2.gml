@@ -1,6 +1,6 @@
 /// @description play sound
 
-global.levelTimeMax = 400;
+global.levelTimeMax = 600;
 global.hasLevelTime = true;
 
 	//controller object

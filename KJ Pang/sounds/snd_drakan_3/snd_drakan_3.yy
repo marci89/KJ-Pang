@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":216.42448,
   "name":"snd_drakan_3",
   "parent":{
     "name":"Drakan",
@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_drakan_3.mp3",
   "type":0,
-  "volume":0.67,
+  "volume":0.86,
 }

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"CreateSmogBall",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CreateSmogBall",
+  "parent":{
+    "name":"SmogBall",
+    "path":"folders/Scripts/Creator/Enemy/Ball/SmogBall.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

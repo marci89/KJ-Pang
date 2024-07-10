@@ -1,8 +1,8 @@
 
 //parent properties
 event_inherited()
-decayItemOnGroundValue = 0.5;
-bounceDecay = 0.4; //bounce
+decayItemOnGroundValue = 0.6;
+bounceDecay = 0.6; //bounce
 type = weaponType.Grenade; // weapon type
 
 //own properties

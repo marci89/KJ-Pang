@@ -116,16 +116,18 @@ function MoveToPlayer() {
         // Check if bat's x is within ±50 units of closest player's x
         if (abs(x - closestPlayer.x) <= 50) {
 			if(!closestPlayer.isDead) {
-            // Stop horizontal movement and start falling
-            PlaySound(snd_bat_attack, false, 1);
-            moveX = 0;
-            moveY = 4;
+				if(closestPlayer.y > y + 30) {
+		            // Stop horizontal movement and start falling
+		            PlaySound(snd_bat_attack, false, 1);
+		            moveX = 0;
+		            moveY = 4;
 			
-			isCanAttack = false;
+					isCanAttack = false;
 		 
-			SetOriginalProperties();
+					SetOriginalProperties();
 		 
-			alarm[4] = 10;
+					alarm[4] = 10;
+				}
 			}
        
         }

@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":273.26694,
+  "duration":273.29306,
   "name":"snd_unreal5",
   "parent":{
     "name":"Unreal",
@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_unreal5.mp3",
   "type":0,
-  "volume":1.0,
+  "volume":0.76,
 }

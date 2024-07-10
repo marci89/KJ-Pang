@@ -106,12 +106,15 @@ function Init(isDirectionLeft, isDirectionUp) {
 
 function DropItem() {
 
+if(global.gameDifficult == gameDifficultType.Easy) {
+	return;
+}
 
 //randomize chance
 var randomChance = random(1);
 	
-		var reverseGravitydDropChance = 0.1;
-		var nothingDropChance = 0.9; 
+		var reverseGravitydDropChance = 0.18;
+		var nothingDropChance = 0.82; 
 
 		if (randomChance < reverseGravitydDropChance) {
 			CreateItemWithMovement(x, y, 2, -4, obj_item_gravity_reverse);

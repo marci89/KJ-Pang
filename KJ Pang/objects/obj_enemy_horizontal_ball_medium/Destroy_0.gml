@@ -11,6 +11,9 @@ PlaySound(snd_pang, false, 2);
 //create gems 
 CreateLifePointWithMovement(x,y,0,-5, lifePointType.Light);
 
+//dropping
+DropItem();
+
 
 //Create child balls
 randomize();

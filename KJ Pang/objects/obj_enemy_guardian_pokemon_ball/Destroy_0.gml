@@ -25,7 +25,7 @@ if(enemyGuardianType == guardianType.Medior) {
 }
 
 if(enemyGuardianType == guardianType.Senior) {
-	var senior = instance_create_layer(x, y,"Enemy_level1", obj_enemy_senior_guardian);
+	var senior = instance_create_layer(x, y,"Enemy_level1", obj_enemy_expert_guardian);
 	senior.Init();
 	
 	CreateItem(500, 100, obj_item_first_aid_kit);

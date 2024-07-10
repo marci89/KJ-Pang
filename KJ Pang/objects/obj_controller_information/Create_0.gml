@@ -208,6 +208,220 @@ function CreateNormalLevelInformation() {
 		infoPanelObj.Init(informationType.Grenade ?? noone);
 	}
 	
+	if (global.stageLevel == 7) {
+		 var infoPanelObj1 = instance_create_layer(200, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj1.Init(informationType.LandMine ?? noone);
+		
+		 var infoPanelObj = instance_create_layer(550, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj.Init(informationType.IndestructibleWall ?? noone);
+	}
+	
+	if (global.stageLevel == 8) {
+		 var infoPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj.Init(informationType.Snowing ?? noone);
+	}
+	
+	if (global.stageLevel == 9) {
+		var enemyPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_enemy_panel);
+		enemyPanelObj.Init(enemyInformationType.Sentinel_T_800 ?? noone);
+	}
+	
+	if (global.stageLevel == 10) {
+		newsText = GetLocalizedText("bossLevel");
+		text = GetLocalizedText("frogBossShortDesc");
+	}
+	
+	if (global.stageLevel == 11) {
+		 var infoPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj.Init(informationType.Raining ?? noone);
+	}
+	
+	if (global.stageLevel == 12) {
+		 var infoPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj.Init(informationType.FlameThrower ?? noone);
+	}
+	
+	if (global.stageLevel == 13) {
+		var enemyPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_enemy_panel);
+		enemyPanelObj.Init(enemyInformationType.TongueWorm ?? noone);
+	}
+	
+	if (global.stageLevel == 14) {
+			 var infoPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj.Init(informationType.ProjectileShield ?? noone);
+	}
+	
+	if (global.stageLevel == 15) {
+		   room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 16) {
+		newsText = GetLocalizedText("bossLevel");
+		text = GetLocalizedText("diabloShortDesc");
+	}
+	
+	if (global.stageLevel == 17) {
+			var enemyPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_enemy_panel);
+		enemyPanelObj.Init(enemyInformationType.SmogBall ?? noone);
+	}
+	
+	if (global.stageLevel == 18) {
+		   room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 19) {
+			 var infoPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj.Init(informationType.TrackingRocketLauncher ?? noone);
+	}
+	
+	if (global.stageLevel == 20) {
+		   room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 21) {
+		newsText = GetLocalizedText("bossLevel");
+		text = GetLocalizedText("finalBattleShortDesc");
+	}
+	
+	
+}
+
+#endregion
+
+#region Hard level
+
+function CreateHardLevelInformation() {
+	
+	if (global.stageLevel == 1) {
+		var enemyPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_enemy_panel);
+		enemyPanelObj.Init(enemyInformationType.SuperBall ?? noone);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	if (global.stageLevel == 2) {
+		 var infoPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj.Init(informationType.FirstAidKit ?? noone);
+	}
+	
+	if (global.stageLevel == 3) {
+		var infoPanelObj1 = instance_create_layer(200, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj1.Init(informationType.BouncingPearl ?? noone);
+	
+		var infoPanelObj2 = instance_create_layer(550, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj2.Init(informationType.BouncingPearls ?? noone);
+	}
+	
+	if (global.stageLevel == 4) {
+		
+		var enemyPanelObj = instance_create_layer(200, infoPanelStartY-30 ?? 0,"Instances", obj_information_enemy_panel);
+		enemyPanelObj.Init(enemyInformationType.Worm ?? noone);
+		
+		var infoPanelObj = instance_create_layer(550, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj.Init(informationType.HorizontalShoot ?? noone);
+	}
+	
+	if (global.stageLevel == 5) {
+		newsText = GetLocalizedText("bossLevel");
+		text= GetLocalizedText("malwrathShortDesc");
+	}
+	
+	if (global.stageLevel == 6) {
+		 var infoPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj.Init(informationType.Grenade ?? noone);
+	}
+	
+	if (global.stageLevel == 7) {
+		 var infoPanelObj1 = instance_create_layer(200, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj1.Init(informationType.LandMine ?? noone);
+		
+		 var infoPanelObj = instance_create_layer(550, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj.Init(informationType.IndestructibleWall ?? noone);
+	}
+	
+	if (global.stageLevel == 8) {
+		 var infoPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj.Init(informationType.Snowing ?? noone);
+	}
+	
+	if (global.stageLevel == 9) {
+		var enemyPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_enemy_panel);
+		enemyPanelObj.Init(enemyInformationType.Sentinel_T_800 ?? noone);
+	}
+	
+	if (global.stageLevel == 10) {
+		newsText = GetLocalizedText("bossLevel");
+		text = GetLocalizedText("frogBossShortDesc");
+	}
+	
+	if (global.stageLevel == 11) {
+		 var infoPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj.Init(informationType.Raining ?? noone);
+	}
+	
+	if (global.stageLevel == 12) {
+		 var infoPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj.Init(informationType.FlameThrower ?? noone);
+	}
+	
+	if (global.stageLevel == 13) {
+		var enemyPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_enemy_panel);
+		enemyPanelObj.Init(enemyInformationType.TongueWorm ?? noone);
+	}
+	
+	if (global.stageLevel == 14) {
+			 var infoPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj.Init(informationType.ProjectileShield ?? noone);
+	}
+	
+	if (global.stageLevel == 15) {
+		   room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 16) {
+		newsText = GetLocalizedText("bossLevel");
+		text = GetLocalizedText("diabloShortDesc");
+	}
+	
+	if (global.stageLevel == 17) {
+			var enemyPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_enemy_panel);
+		enemyPanelObj.Init(enemyInformationType.SmogBall ?? noone);
+	}
+	
+	if (global.stageLevel == 18) {
+		   room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 19) {
+			 var infoPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj.Init(informationType.TrackingRocketLauncher ?? noone);
+	}
+	
+	if (global.stageLevel == 20) {
+		   room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 21) {
+		newsText = GetLocalizedText("bossLevel");
+		text = GetLocalizedText("finalBattleShortDesc");
+	}
+	
 	
 }
 
@@ -223,6 +437,10 @@ function CreateIformation() {
 	
 	if(global.gameDifficult == gameDifficultType.Normal) {
 		CreateNormalLevelInformation();
+	}
+	
+		if(global.gameDifficult == gameDifficultType.Hard) {
+		CreateHardLevelInformation();
 	}
 	
 }

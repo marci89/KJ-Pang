@@ -111,13 +111,13 @@ function CreateLocations() {
 	 locationAntarctica.Init(20)
 	 array_push(locations, locationAntarctica);
 	 
-	 if (global.gameDifficult == gameDifficultType.Easy) {
+	 //if (global.gameDifficult == gameDifficultType.Easy) {
 		 
 		 var locationFinalBattle = instance_create_layer(300, 400,"Location", obj_map_location);
 		 locationFinalBattle.Init(21)
 		 locationFinalBattle.SetUfoLocation();
 		 array_push(locations, locationFinalBattle);
-	 }
+	// }
 
 }
 
