@@ -149,14 +149,32 @@ function Init() {
 	}
 	
 	if(buttonId == 20) {
-		image = spr_enemy_super_ball_small_blue;
-		infoType = enemyInformationType.Eye;
+		image = spr_enemy_space_distorter_ball_pic;
+		infoType = enemyInformationType.SpaceDistorterBall;
 		requiredDifficult = gameDifficultType.Impossible;
 	}
 	
 	if(buttonId == 21) {
 		image = spr_enemy_super_ball_small_green;
 		infoType = enemyInformationType.ShieldedSuperBall;
+		requiredDifficult = gameDifficultType.Impossible;
+	}
+	
+	if(buttonId == 22) {
+		image = spr_enemy_sentinel_T_X_pic;
+		infoType = enemyInformationType.Sentinel_T_X;
+		requiredDifficult = gameDifficultType.Impossible;
+	}
+	
+	if(buttonId == 23) {
+		image = spr_enemy_colorful_ball;
+		infoType = enemyInformationType.ColorfulBall;
+		requiredDifficult = gameDifficultType.Impossible;
+	}
+	
+		if(buttonId == 24) {
+		image = spr_enemy_sentinel_T_3000_pic;
+		infoType = enemyInformationType.Sentinel_T_3000;
 		requiredDifficult = gameDifficultType.Impossible;
 	}
 	

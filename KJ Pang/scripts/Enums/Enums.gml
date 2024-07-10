@@ -110,12 +110,12 @@ enum enemyInformationType{
 	MediorGuardian,
 	
 	SuperBall,
-	Eye,
+	SpaceDistorterBall,
 	ShieldedSuperBall,
 	Sentinel_T_X,
-	CapriciousBall,
 	ColorfulBall,
-	SpaceDistorterBall,
+	Sentinel_T_3000,
+
 	
 	
 	

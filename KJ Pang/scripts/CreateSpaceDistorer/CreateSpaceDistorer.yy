@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"CreateSpaceDistorer",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CreateSpaceDistorer",
+  "parent":{
+    "name":"spaceDistorterBall",
+    "path":"folders/Scripts/Creator/Enemy/Ball/spaceDistorterBall.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

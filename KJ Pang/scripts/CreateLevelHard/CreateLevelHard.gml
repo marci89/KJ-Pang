@@ -15,7 +15,7 @@ global.isRestartLevelAfterDead = true; //restart after death
 global.levelTimeMax = 350; // level's max time
 //global.playerOneDefaultWeapon = weaponType.ShotGun;
 //global.gameDifficult = gameDifficultType.Impossible;
-//global.level = 54;
+global.level = 4;
 
 	//Giant normal ball default properties
 		global.normalBallGiantMoveX = 1.5;
@@ -429,17 +429,16 @@ function CreateLevelHard4() {
 	// init
 	LoadBackgroundImage("china_morning"); //Load background
 	CreateWallFrame(wallFrameType.Yellow ?? noone); //wall frame creating
-	PlayMusic(snd_mountKeirin, true); // play music
+	PlayMusic(snd_unreal2, true); // play music
 	CreatePlayer(500, 400); // create player
 	
 	//Enemy
-	CreateNormalBallGiant(500, 100, 1, global.normalBallGiantMoveY,
-	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
-	normalBallColorType.Red, normalBallGiantDropItemType.Nothing, true);
-	
-	CreateNormalBallLarge(520, 80, -1, global.normalBallLargeMoveY,
-	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
-	normalBallColorType.Red, normalBallGiantDropItemType.Nothing, true);
+
+		//CreateSentinel_T_X(500, 100,2,2,c_yellow, true );
+		//CreateSentinel_T_3000(800, 100,2,2,c_yellow, true );
+		//CreateColorfulBall(100, 100, true, true );
+		CreateSpaceDistorer(100, 100, true, true );
+		CreateSpaceDistorer(800, 100, true, true );
 	
 	//wall	
 	CreateWallMany(477, 550, wallType.Red, wallCreatorDirectionType.Bottom, 3);

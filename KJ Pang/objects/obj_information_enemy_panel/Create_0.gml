@@ -599,6 +599,83 @@ function Init(type) {
 		enemyType = type;
 	}
 	
+	if(type == enemyInformationType.SpaceDistorterBall) {
+		
+		titleText =  GetLocalizedText("spaceDistorterBallTitle"); 
+		descriptionText =  GetLocalizedText("spaceDistorterBallDesc");
+		image = noone;
+		
+		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
+		layer_destroy_instances("Weapon");
+		CreateEnemyWallFrame();
+		
+		//enemies
+		CreateSpaceDistorer(x +125, y +490, true, false );
+
+		
+		enemyType = type;
+	}
+	
+		if(type == enemyInformationType.Sentinel_T_X) {
+		
+		titleText =  GetLocalizedText("sentinelTXTitle"); 
+		descriptionText =  GetLocalizedText("sentinelTXDesc");
+		image = noone;
+		
+		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
+		layer_destroy_instances("Weapon");
+		CreateEnemyWallFrame();
+		
+		//enemies
+		CreateSentinel_T_X(x +100, y +400,1,3,c_yellow, false);
+
+		
+		enemyType = type;
+	}
+	
+	if(type == enemyInformationType.Sentinel_T_3000) {
+		
+		titleText =  GetLocalizedText("sentinelT3000Title"); 
+		descriptionText =  GetLocalizedText("sentinelT3000Desc");
+		image = noone;
+		
+		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
+		layer_destroy_instances("Weapon");
+		CreateEnemyWallFrame();
+		
+		//enemies
+		CreateSentinel_T_3000(x +100, y +400,1,2,c_yellow, false);
+
+		
+		enemyType = type;
+	}
+	
+	if(type == enemyInformationType.ColorfulBall) {
+		
+		titleText =  GetLocalizedText("colorfulBallTitle"); 
+		descriptionText =  GetLocalizedText("colorfulBallDesc");
+		image = noone;
+		
+		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
+		layer_destroy_instances("Weapon");
+		CreateEnemyWallFrame();
+		
+		
+		//enemies
+		CreateColorfulBall(x +100, y +400, true, false );
+
+		
+		enemyType = type;
+	}
+	
 	
 	
 		
