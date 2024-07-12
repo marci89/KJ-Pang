@@ -44,7 +44,7 @@ if(global.gameDifficult == gameDifficultType.Hard) {
 }
 
 if(global.gameDifficult == gameDifficultType.Impossible) {
-	CreateLevelNormal();
+	CreateLevelImpossible();
 }
 
 

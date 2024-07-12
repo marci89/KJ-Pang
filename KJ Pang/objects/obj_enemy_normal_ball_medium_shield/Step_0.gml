@@ -29,10 +29,19 @@ var weaponInstance = instance_place(x, y, obj_weapon_parent);
 	if (weaponInstance != noone) {	
 		if (weaponInstance.x < x) {
 			parentNormalBall.moveY = -6
-			parentNormalBall.moveX = global.normalBallLargeMoveX; 
+			parentNormalBall.moveX = global.normalBallLargeMoveX;
+			
+				if(parentNormalBall.object_index == obj_enemy_super_ball_medium) {
+					parentNormalBall.moveY = -14
+			}
+			
 		} else {
 			parentNormalBall.moveY = -6
 			parentNormalBall.moveX = -global.normalBallLargeMoveX; 
+			
+				if(parentNormalBall.object_index == obj_enemy_super_ball_medium) {
+					parentNormalBall.moveY = -14
+			}
 		}
 
 	// Destroy the weapon instance

@@ -15,7 +15,7 @@ isGravityYEnabled = false; // gravity y enabled or not
 gravSpeedX = 0; // x gavity speed
 gravSpeedY = 0; // y gavity speed
 hitPoint = 85; //health
-enemyScore = 1989; // score
+enemyScore = 20000; // score
 jumpHeightMax = -20;
 
 

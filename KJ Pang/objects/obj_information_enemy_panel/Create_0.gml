@@ -612,7 +612,7 @@ function Init(type) {
 		CreateEnemyWallFrame();
 		
 		//enemies
-		CreateSpaceDistorer(x +125, y +490, true, false );
+		CreateSpaceDistorer(x +175, y +490, true, false );
 
 		
 		enemyType = type;

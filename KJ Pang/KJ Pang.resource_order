@@ -536,6 +536,7 @@
     {"name":"CreateInvisibleWeaponPoint","order":3,"path":"scripts/CreateInvisibleWeaponPoint/CreateInvisibleWeaponPoint.yy",},
     {"name":"CreateItem","order":1,"path":"scripts/CreateItem/CreateItem.yy",},
     {"name":"CreateLevelHard","order":2,"path":"scripts/CreateLevelHard/CreateLevelHard.yy",},
+    {"name":"CreateLevelImpossible","order":3,"path":"scripts/CreateLevelImpossible/CreateLevelImpossible.yy",},
     {"name":"CreateLevelNormal","order":1,"path":"scripts/CreateLevelNormal/CreateLevelNormal.yy",},
     {"name":"CreateMalwrath","order":5,"path":"scripts/CreateMalwrath/CreateMalwrath.yy",},
     {"name":"CreateManananggal","order":8,"path":"scripts/CreateManananggal/CreateManananggal.yy",},

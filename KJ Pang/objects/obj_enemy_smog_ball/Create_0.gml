@@ -12,13 +12,13 @@ isGravityXEnabled = false; // gravity x enabled or not
 isGravityYEnabled = true; // gravity y enabled or not
 gravSpeedX = 0; // x gavity speed
 gravSpeedY = 0.08; // y gavity speed
-hitPoint = 100; //health
-enemyScore = 31 // score
+hitPoint = 1; //health
+enemyScore = 50 // score
 jumpHeightMax = -12;
 
 isDead = false;
 deathSmokeAmount = 1;
-//alarm[1] = 20;
+
 
 
 

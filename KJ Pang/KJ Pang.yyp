@@ -751,6 +751,7 @@
     {"id":{"name":"CreateItem","path":"scripts/CreateItem/CreateItem.yy",},},
     {"id":{"name":"CreateLevelEasy","path":"scripts/CreateLevelEasy/CreateLevelEasy.yy",},},
     {"id":{"name":"CreateLevelHard","path":"scripts/CreateLevelHard/CreateLevelHard.yy",},},
+    {"id":{"name":"CreateLevelImpossible","path":"scripts/CreateLevelImpossible/CreateLevelImpossible.yy",},},
     {"id":{"name":"CreateLevelNormal","path":"scripts/CreateLevelNormal/CreateLevelNormal.yy",},},
     {"id":{"name":"CreateLifePoint","path":"scripts/CreateLifePoint/CreateLifePoint.yy",},},
     {"id":{"name":"CreateMalwrath","path":"scripts/CreateMalwrath/CreateMalwrath.yy",},},

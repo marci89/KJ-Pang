@@ -19,6 +19,15 @@ if(global.gameDifficult == gameDifficultType.Normal
 if(global.gameDifficult == gameDifficultType.Hard
 && global.level == 54) {
 	actionNumber++;
-	HandleHardFinalBattleAction();
+	HandleHardFinalBattleAction()();
 }
+
+//impossible
+if(global.gameDifficult == gameDifficultType.Impossible
+&& global.level == 54) {
+	actionNumber++;
+	HandleImpossibleFinalBattleAction();
+}
+
+
 

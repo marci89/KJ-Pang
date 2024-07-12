@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":259.5004,
+  "duration":235.83347,
   "name":"snd_antarctica_music",
   "parent":{
     "name":"PangAdventures",
@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_antarctica_music.mp3",
   "type":0,
-  "volume":0.65,
+  "volume":0.88,
 }

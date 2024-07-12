@@ -298,96 +298,73 @@ function CreateHardLevelInformation() {
 	}
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	if (global.stageLevel == 2) {
 		 var infoPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
-		infoPanelObj.Init(informationType.FirstAidKit ?? noone);
+		infoPanelObj.Init(informationType.ProtectiveRing ?? noone);
 	}
 	
 	if (global.stageLevel == 3) {
-		var infoPanelObj1 = instance_create_layer(200, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
-		infoPanelObj1.Init(informationType.BouncingPearl ?? noone);
-	
-		var infoPanelObj2 = instance_create_layer(550, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
-		infoPanelObj2.Init(informationType.BouncingPearls ?? noone);
+		var enemyPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_enemy_panel);
+		enemyPanelObj.Init(enemyInformationType.SpaceDistorterBall ?? noone);
 	}
 	
 	if (global.stageLevel == 4) {
 		
-		var enemyPanelObj = instance_create_layer(200, infoPanelStartY-30 ?? 0,"Instances", obj_information_enemy_panel);
-		enemyPanelObj.Init(enemyInformationType.Worm ?? noone);
-		
-		var infoPanelObj = instance_create_layer(550, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
-		infoPanelObj.Init(informationType.HorizontalShoot ?? noone);
+		 var infoPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj.Init(informationType.Mist ?? noone);
 	}
 	
 	if (global.stageLevel == 5) {
 		newsText = GetLocalizedText("bossLevel");
-		text= GetLocalizedText("malwrathShortDesc");
+		text= GetLocalizedText("wretchedShortDesc");
+		
+	
 	}
 	
 	if (global.stageLevel == 6) {
 		 var infoPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
-		infoPanelObj.Init(informationType.Grenade ?? noone);
+		infoPanelObj.Init(informationType.DoublePowerWire ?? noone);
 	}
 	
+	
 	if (global.stageLevel == 7) {
-		 var infoPanelObj1 = instance_create_layer(200, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
-		infoPanelObj1.Init(informationType.LandMine ?? noone);
-		
-		 var infoPanelObj = instance_create_layer(550, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
-		infoPanelObj.Init(informationType.IndestructibleWall ?? noone);
+		 var infoPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj.Init(informationType.InvulnerabilityPotion ?? noone);
 	}
 	
 	if (global.stageLevel == 8) {
 		 var infoPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
-		infoPanelObj.Init(informationType.Snowing ?? noone);
+		infoPanelObj.Init(informationType.Detonator?? noone);
 	}
 	
 	if (global.stageLevel == 9) {
 		var enemyPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_enemy_panel);
-		enemyPanelObj.Init(enemyInformationType.Sentinel_T_800 ?? noone);
+		enemyPanelObj.Init(enemyInformationType.ShieldedSuperBall ?? noone);
 	}
 	
 	if (global.stageLevel == 10) {
 		newsText = GetLocalizedText("bossLevel");
-		text = GetLocalizedText("frogBossShortDesc");
+		text = GetLocalizedText("probeDroidShortDesc");
 	}
 	
 	if (global.stageLevel == 11) {
 		 var infoPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
-		infoPanelObj.Init(informationType.Raining ?? noone);
+		infoPanelObj.Init(informationType.Bomb ?? noone);
 	}
 	
 	if (global.stageLevel == 12) {
-		 var infoPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
-		infoPanelObj.Init(informationType.FlameThrower ?? noone);
+		var enemyPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_enemy_panel);
+		enemyPanelObj.Init(enemyInformationType.Sentinel_T_X ?? noone);
 	}
 	
 	if (global.stageLevel == 13) {
-		var enemyPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_enemy_panel);
-		enemyPanelObj.Init(enemyInformationType.TongueWorm ?? noone);
+		 var infoPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
+		infoPanelObj.Init(informationType.RocketLauncher ?? noone);
 	}
 	
 	if (global.stageLevel == 14) {
-			 var infoPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
-		infoPanelObj.Init(informationType.ProjectileShield ?? noone);
+			var enemyPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_enemy_panel);
+		enemyPanelObj.Init(enemyInformationType.ColorfulBall ?? noone);
 	}
 	
 	if (global.stageLevel == 15) {
@@ -396,12 +373,12 @@ function CreateHardLevelInformation() {
 	
 	if (global.stageLevel == 16) {
 		newsText = GetLocalizedText("bossLevel");
-		text = GetLocalizedText("diabloShortDesc");
+		text = GetLocalizedText("manananggalShortDesc");
 	}
 	
 	if (global.stageLevel == 17) {
 			var enemyPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_enemy_panel);
-		enemyPanelObj.Init(enemyInformationType.SmogBall ?? noone);
+		enemyPanelObj.Init(enemyInformationType.Sentinel_T_3000 ?? noone);
 	}
 	
 	if (global.stageLevel == 18) {
@@ -409,8 +386,102 @@ function CreateHardLevelInformation() {
 	}
 	
 	if (global.stageLevel == 19) {
-			 var infoPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_panel);
-		infoPanelObj.Init(informationType.TrackingRocketLauncher ?? noone);
+		   room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 20) {
+		   room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 21) {
+		newsText = GetLocalizedText("bossLevel");
+		text = GetLocalizedText("finalBattleShortDesc");
+	}
+	
+	
+}
+
+#endregion
+
+#region Impossible level
+
+function CreateImpossibleLevelInformation() {
+	
+	if (global.stageLevel == 1) {
+		text = GetLocalizedText("impossibleInfoDesc");
+	}
+	
+	if (global.stageLevel == 2) {
+		room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 3) {
+		room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 4) {
+		
+		room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 5) {
+		room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 6) {
+		room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 7) {
+		room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 8) {
+		room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 9) {
+		room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 10) {
+		room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 11) {
+		room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 12) {
+		room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 13) {
+		room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 14) {
+		 room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 15) {
+		   room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 16) {
+		room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 17) {
+	   room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 18) {
+		   room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 19) {
+	   room_goto(rm_level);
 	}
 	
 	if (global.stageLevel == 20) {
@@ -441,6 +512,10 @@ function CreateIformation() {
 	
 		if(global.gameDifficult == gameDifficultType.Hard) {
 		CreateHardLevelInformation();
+	}
+	
+		if(global.gameDifficult == gameDifficultType.Impossible) {
+		CreateImpossibleLevelInformation();
 	}
 	
 }

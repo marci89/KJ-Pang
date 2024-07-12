@@ -3,6 +3,30 @@ weatherIntensityTime = 5; // time to create snow or rain
 weatherType = noone;
 
 
+
+#region mist
+
+function CreateMist() {
+	
+	var mistFilter = fx_create("_filter_fractal_noise");
+layer_set_fx("Weather", mistFilter);
+}
+
+
+
+
+if(global.gameDifficult == gameDifficultType.Hard) {
+	if (global.level == 10 || global.level == 39) {
+		CreateMist();
+	}
+}
+
+
+
+
+#endregion
+ 
+ 
 #region Snow
 
 function CreateSnow(intensity) {
