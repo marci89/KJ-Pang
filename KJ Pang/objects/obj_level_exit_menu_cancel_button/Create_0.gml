@@ -1,7 +1,7 @@
 event_inherited();
 
-text = GetLocalizedText("cancel"); // translate text
-buttonId = 2; // button identifier
+text = GetLocalizedText("continue"); // translate text
+buttonId = 0; // button identifier
 
 #region execute function
 

@@ -11,14 +11,14 @@ function SetGameVariables(){
 	global.isAfterFinalBattleLevel = false; // after final battle level or not.
 	
 	//Player
-	global.playerOneScore = 200; //player1 score
-	global.playerTwoScore = 3; //player2 score
+	global.playerOneScore = 0; //player1 score
+	global.playerTwoScore = 0; //player2 score
 	global.playerOneLife =  3; //player1 life
-	global.playerTwoLife =  1; //player2 life
+	global.playerTwoLife =  3; //player2 life
 	global.playerOneLifePoint = 0; //player1 life points
 	global.playerTwoLifePoint = 0; //player2 life points
-	global.playerOneFood = 60; // food number for player 1 special ability
-	global.playerTwoFood = 60; // food number for player 2 special ability
+	global.playerOneFood = 0; // food number for player 1 special ability
+	global.playerTwoFood = 0; // food number for player 2 special ability
 	global.playerOneDefaultWeapon = weaponType.SingleSting; // player 1 default weapon
 	global.playerTwoDefaultWeapon = weaponType.SingleSting; // player 2 default weapon
 	global.playerOneHealth = 3; // player 1 health

@@ -13,7 +13,7 @@ buttonY = 150; // buttons y
 
 //selection
 currentSelectedButtonId = 0;
-maxButtonId = 5;
+maxButtonId = 4;
 
 #endregion
 

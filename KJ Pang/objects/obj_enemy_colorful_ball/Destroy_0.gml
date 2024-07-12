@@ -33,7 +33,6 @@ CreateItemWithMovement(x,y,0,-4, obj_item_food);
 	normalBallColorType.Green, false);
 	
 	CreateYellowBallSmall(x, y,false);
-	CreateBlackBallSmall(x, y,-6, true, false );
 	CreateAntiGravityBallSmall(x, y, false, true, false );
 	CreateHorizontalBallSmall(x, y, true, true, false );
 	

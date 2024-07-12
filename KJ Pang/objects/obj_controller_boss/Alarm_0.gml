@@ -51,3 +51,17 @@ if(global.gameDifficult == gameDifficultType.Hard) {
 	}
 }
 
+if(global.gameDifficult == gameDifficultType.Impossible) {
+	//droid boss
+	if (global.level == 26) {
+		
+		if(actionNumber == 2) {
+			PlayMusic(snd_SnowspeederRescue, true); // play music
+		}
+		
+		actionNumber--;
+	}
+}
+
+
+

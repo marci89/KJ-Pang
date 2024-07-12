@@ -10,7 +10,7 @@ effect_create_above( ef_explosion, x, y, 2, c_red);
 PlaySound(snd_succubus_death, false, 2);
 
 
- CreateItemWithMovement(x, y, 0, -4, obj_item_rocket_launcher);
+ CreateItemWithMovement(x, y, 0, -4, obj_item_invulnerability_potion);
  
 
 

@@ -80,9 +80,6 @@ else {
 	childPositionX = random_range(2, 10);
 	CreateYellowBallSmall(x-childPositionX, y, false);
 	CreateYellowBallSmall(x+childPositionX, y, false);
-	childPositionX = random_range(2, 10);
-	CreateYellowBallSmall(x-childPositionX, y, false);
-	CreateYellowBallSmall(x+childPositionX, y, false);
 }
 
 

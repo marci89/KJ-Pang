@@ -297,7 +297,7 @@ function HandleHardFinalBattleAction() {
 		
 		CreateSmogBall(100, 100, 4,-2, true );
 		
-		CreateSmogBall(900, 100, -4,-2, true, true );
+		CreateSmogBall(900, 100, -4,-2, true );
 		alarm[0] = 1300
 	}
 	
@@ -496,7 +496,7 @@ function HandleImpossibleFinalBattleAction() {
 		
 		CreateSmogBall(100, 100, 4,-2, true );
 		
-		CreateSmogBall(900, 100, -4,-2, true, true );
+		CreateSmogBall(900, 100, -4,-2, true );
 		alarm[0] = 1300
 	}
 	
