@@ -502,7 +502,7 @@ function HandleImpossibleFinalBattleAction() {
 	
 	if(actionNumber == 3) {
 		
-		CreateItem(400, 550, obj_item_invulnerability_potion);
+		CreateItem(400, 100, obj_item_invulnerability_potion);
 		
 		CreateSentinel_T_X(100, 100,3,4,c_aqua, true );
 		CreateSentinel_T_X(500, 100,2,4,c_lime, true );
@@ -513,7 +513,7 @@ function HandleImpossibleFinalBattleAction() {
 	
 	if(actionNumber == 4) {
 		
-		CreateItem(880, 550, obj_item_shotgun);
+		CreateItem(880, 100, obj_item_shotgun);
 		
 		CreateSentinel_T_800(500, 100,2,5,c_yellow, true );
 				
@@ -537,7 +537,7 @@ function HandleImpossibleFinalBattleAction() {
 	}
 	
 	if(actionNumber == 5) {
-			CreateItem(880, 550, obj_item_protecting_ring);
+			CreateItem(880, 100, obj_item_protecting_ring);
 		CreateAntiGravityBallMedium(-100, 500, false, true, true );
 		CreateYellowBallGiant(1124, 350, true, true );
 		alarm[0] = 100
@@ -704,7 +704,7 @@ function HandleImpossibleFinalBattleAction() {
 	
 	if(actionNumber == 21) {
 		
-			CreateItem(130, 550, obj_item_first_aid_kit);
+			CreateItem(130, 100, obj_item_first_aid_kit);
 	CreateItem(880, 550, obj_item_invulnerability_potion);
 
 	
@@ -728,9 +728,9 @@ function HandleImpossibleFinalBattleAction() {
 	//Enemy
 	CreateManananggal(-300, 300, enemyStartDirectionType.Left);
 
-	CreateItem(130, 550, obj_item_projectile_shield);
-	CreateItem(880, 550, obj_item_projectile_shield);
-	CreateItem(950, 550, obj_item_first_aid_kit);
+	CreateItem(130, 100, obj_item_projectile_shield);
+	CreateItem(880, 100, obj_item_projectile_shield);
+	CreateItem(950, 100, obj_item_first_aid_kit);
 
 		
 		alarm[0] = 600;

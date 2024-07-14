@@ -70,11 +70,23 @@ draw_text(500, startY, string(specialAbility) + ":");
 draw_text(700, startY, "Y " + string(button));
 
 
-startY += 50;
+
+
+draw_set_color(c_yellow);
+startY += 40;
+var fullScreenTextWidth = string_width(string(fullScreenDesc));
+var drawFullScreenTextX = (room_width - fullScreenTextWidth) / 2;
+draw_text(drawFullScreenTextX, startY, string(fullScreenDesc));
+
+draw_set_color(c_white);
+
+startY += 30;
 // Draw the line
 draw_line(x + 50 , startY, x + 970 , startY);
 
 #endregion
+
+
 
 #region Score
 

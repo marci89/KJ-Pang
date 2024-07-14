@@ -12,7 +12,7 @@ if (place_meeting(x, y, obj_player_one)) {
 	//controller object
 	var controllerObj = obj_controller_level_effect;
 	
-	if(!isPickedUp) {
+	if(!isPickedUp  && !obj_player_one.isDead) {
 		if(IsInstanceExists(controllerObj ?? noone)) {
 			controllerObj.ExecuteAntigravityEffect();
 		}
@@ -29,7 +29,7 @@ if (place_meeting(x, y, obj_player_two)) {
 	//controller object
 	var controllerObj = obj_controller_level_effect;
 	
-	if(!isPickedUp) {
+	if(!isPickedUp  && !obj_player_two.isDead) {
 		if(IsInstanceExists(controllerObj ?? noone)) {
 			controllerObj.ExecuteAntigravityEffect();
 		}

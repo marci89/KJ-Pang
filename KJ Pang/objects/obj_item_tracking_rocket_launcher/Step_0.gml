@@ -8,7 +8,7 @@ if (place_meeting(x, y, obj_player_one)) {
 	
 	bounceDecay = 0; // if collected not bounce
 	
-	if(!isPickedUp) {
+	if(!isPickedUp && !obj_player_one.isDead) {
 		obj_player_one.trackingRocketLauncherAmmo  += ammoCapacity;
 	    obj_player_one.weapon = weaponType.TrackingRocketLauncher;
 		PlaySound(snd_gun_pickup2, false);
@@ -21,7 +21,7 @@ if (place_meeting(x, y, obj_player_two)) {
 	
 	bounceDecay = 0; // if collected not bounce
 	
-	if(!isPickedUp) {
+	if(!isPickedUp && !obj_player_two.isDead) {
 		obj_player_two.trackingRocketLauncherAmmo  += ammoCapacity;
 	    obj_player_two.weapon = weaponType.TrackingRocketLauncher;
 		PlaySound(snd_gun_pickup2, false);	

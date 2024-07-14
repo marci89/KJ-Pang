@@ -35,6 +35,8 @@ extraLifeDesc =GetLocalizedText("extraLifeDesc")
 specialAbilityDesc= GetLocalizedText("specialAbilityDesc")
 lifeBarDesc= GetLocalizedText("lifeBarDesc")
 
+fullScreenDesc= GetLocalizedText("fullScreenDesc")
+
 
 
 

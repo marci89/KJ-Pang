@@ -20,7 +20,7 @@ if (place_meeting(x, y, obj_player_one)) {
 	}
 		
 	
-	if(!isPickedUp) {
+	if(!isPickedUp && !obj_player_one.isDead) {
 	PlaySound(snd_bounced_pearl, false);
 	CreateWeaponWithMovement(x, y-8, weaponX, -6, obj_weapon_bounced_pearl_bullet, "Weapon", obj_player_one, weaponDirectionType.Horizontal )
 		
@@ -43,7 +43,7 @@ if (place_meeting(x, y, obj_player_two)) {
 	}
 		
 	
-	if(!isPickedUp) {
+	if(!isPickedUp && !obj_player_two.isDead) {
 	PlaySound(snd_bounced_pearl, false);
 	CreateWeaponWithMovement(x, y-8, weaponX, -6, obj_weapon_bounced_pearl_bullet, "Weapon", obj_player_two, weaponDirectionType.Horizontal )
 		

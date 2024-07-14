@@ -11,7 +11,7 @@ if (place_meeting(x, y, obj_player_one)) {
 	PlaySound(snd_protective_ring, false);
 	bounceDecay = 0; // if collected not bounce
 	
-	if(!isPickedUp) {
+	if(!isPickedUp  && !obj_player_one.isDead) {
 	 var num_balls = 20;
 	 var angle_step = 360 / num_balls;
 		 for (var i = 0; i < num_balls; i++) {
@@ -28,7 +28,7 @@ if (place_meeting(x, y, obj_player_two)) {
 	PlaySound(snd_protective_ring, false);
 	bounceDecay = 0; // if collected not bounce
 	
-	if(!isPickedUp) {
+	if(!isPickedUp  && !obj_player_two.isDead) {
 	 var num_balls = 20;
 	 var angle_step = 360 / num_balls;
 		 for (var i = 0; i < num_balls; i++) {

@@ -9,7 +9,7 @@ if (place_meeting(x, y, obj_player_one)) {
 	
 	bounceDecay = 0; // if collected not bounce
 	
-	if(!isPickedUp) {
+	if(!isPickedUp  && !obj_player_one.isDead) {
 		if(global.playerOneHealth < 3) {
 
 			global.playerOneHealth = 3;	
@@ -24,7 +24,7 @@ if (place_meeting(x, y, obj_player_two)) {
 	
 	bounceDecay = 0; // if collected not bounce
 	
-	if(!isPickedUp) {
+	if(!isPickedUp  && !obj_player_two.isDead) {
 		if(global.playerTwoHealth < 3) {
 
 			global.playerTwoHealth = 3;	

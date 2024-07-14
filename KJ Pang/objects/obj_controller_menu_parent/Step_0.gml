@@ -40,3 +40,7 @@ SetButtonsSelectedValue();
 #endregion
 
 
+if (keyboard_check_pressed(vk_f11)) {
+    // Toggle fullscreen mode
+    window_set_fullscreen(!window_get_fullscreen());
+}

@@ -64,25 +64,27 @@ event_inherited()
 // Check for attack conditions for player one
 var playerInstance = obj_player_one; 
 if (IsInstanceExists(playerInstance ?? noone)) {
-	var distanceX = abs(x - playerInstance.x);
-	var distanceY = abs(y - playerInstance.y);
+	if(!obj_player_one.isDead) {
+		var distanceX = abs(x - playerInstance.x);
+		var distanceY = abs(y - playerInstance.y);
 	
-	if (distanceX <= 220 && distanceY <= 50) { // Adjust the Y range as needed
-		if (!isAttackActivated && isOnGround) {
-			isAttackActivated = true;
+		if (distanceX <= 220 && distanceY <= 50) { // Adjust the Y range as needed
+			if (!isAttackActivated && isOnGround) {
+				isAttackActivated = true;
 
 
-			// Change direction to face the player
-			if (x < playerInstance.x) {
-				image_xscale = 1; // Face right
-				currentXscale = -1;
-			} else {
-				image_xscale = -1; // Face left
-				currentXscale = 1;
-			}
+				// Change direction to face the player
+				if (x < playerInstance.x) {
+					image_xscale = 1; // Face right
+					currentXscale = -1;
+				} else {
+					image_xscale = -1; // Face left
+					currentXscale = 1;
+				}
 			
-			tongueAttack();
-			alarm[2] = attackIntervalTime; // Set an interval for the next attack
+				tongueAttack();
+				alarm[2] = attackIntervalTime; // Set an interval for the next attack
+			}
 		}
 	}
 }
@@ -92,25 +94,28 @@ if (IsInstanceExists(playerInstance ?? noone)) {
 // Check for attack conditions for player two
 var playerInstanceTwo = obj_player_two; 
 if (IsInstanceExists(playerInstanceTwo ?? noone)) {
-	var distanceX = abs(x - playerInstanceTwo.x);
-	var distanceY = abs(y - playerInstanceTwo.y);
 	
-	if (distanceX <= 220 && distanceY <= 50) { // Adjust the Y range as needed
-		if (!isAttackActivated && isOnGround) {
-			isAttackActivated = true;
+	if(!obj_player_two.isDead) {
+		var distanceX = abs(x - playerInstanceTwo.x);
+		var distanceY = abs(y - playerInstanceTwo.y);
+	
+		if (distanceX <= 220 && distanceY <= 50) { // Adjust the Y range as needed
+			if (!isAttackActivated && isOnGround) {
+				isAttackActivated = true;
 
 
-			// Change direction to face the player
-			if (x < playerInstanceTwo.x) {
-				image_xscale = 1; // Face right
-				currentXscale = -1;
-			} else {
-				image_xscale = -1; // Face left
-				currentXscale = 1;
-			}
+				// Change direction to face the player
+				if (x < playerInstanceTwo.x) {
+					image_xscale = 1; // Face right
+					currentXscale = -1;
+				} else {
+					image_xscale = -1; // Face left
+					currentXscale = 1;
+				}
 			
-			tongueAttack();
-			alarm[2] = attackIntervalTime; // Set an interval for the next attack
+				tongueAttack();
+				alarm[2] = attackIntervalTime; // Set an interval for the next attack
+			}
 		}
 	}
 }

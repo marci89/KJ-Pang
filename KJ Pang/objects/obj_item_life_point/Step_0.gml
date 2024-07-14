@@ -13,9 +13,11 @@ if(hasActiveMagnetEffect) {
 		player.x,
 		player.y - playerHalfHeight);
     
+		if(!player.isDead) {
 		// Set moveX and moveY based on direction
 		moveX = lengthdir_x(magnetFieldSpeed, followDirection);
 		moveY = lengthdir_y(magnetFieldSpeed, followDirection);
+		}
 	}
 }
 
@@ -28,7 +30,7 @@ if (place_meeting(x, y, obj_player_one)) {
 	
 	bounceDecay = 0; // if collected not bounce
 	
-	if(!isPickedUp) {
+	if(!isPickedUp  && !obj_player_one.isDead) {
 	global.playerOneScore += itemScore;
     global.playerOneLifePoint++;
 	
@@ -49,7 +51,7 @@ if (place_meeting(x, y, obj_player_two)) {
 	
 	bounceDecay = 0; // if collected not bounce
 	
-	if(!isPickedUp) {
+	if(!isPickedUp  && !obj_player_two.isDead) {
 	global.playerTwoScore += itemScore;
     global.playerTwoLifePoint++;
 	
