@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CreateWall",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"MagnetEffect",
   "isCompatibility":false,
   "isDnD":false,

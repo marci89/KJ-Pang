@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CreateInvisibleWeaponPoint",
   "isCompatibility":false,
   "isDnD":false,

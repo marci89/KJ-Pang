@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CreateSmogBall",
   "isCompatibility":false,
   "isDnD":false,

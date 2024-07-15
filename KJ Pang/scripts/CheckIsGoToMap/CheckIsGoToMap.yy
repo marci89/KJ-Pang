@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CheckIsGoToMap",
   "isCompatibility":false,
   "isDnD":false,

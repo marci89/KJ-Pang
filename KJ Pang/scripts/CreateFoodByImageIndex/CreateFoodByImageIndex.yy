@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CreateFoodByImageIndex",
   "isCompatibility":false,
   "isDnD":false,

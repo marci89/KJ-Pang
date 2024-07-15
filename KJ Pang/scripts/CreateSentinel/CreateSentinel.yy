@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CreateSentinel",
   "isCompatibility":false,
   "isDnD":false,

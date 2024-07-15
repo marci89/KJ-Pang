@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CreatePowerWireBodyPart",
   "isCompatibility":false,
   "isDnD":false,

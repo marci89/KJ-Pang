@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CheckGamePadAnyKey",
   "isCompatibility":false,
   "isDnD":false,

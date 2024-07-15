@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CheckRequiredDifficultLevel",
   "isCompatibility":false,
   "isDnD":false,

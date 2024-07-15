@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CreateWretched",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CreateBlackBallSmall",
   "isCompatibility":false,
   "isDnD":false,

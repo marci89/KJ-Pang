@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CreateAntiGravityBallMedium",
   "isCompatibility":false,
   "isDnD":false,

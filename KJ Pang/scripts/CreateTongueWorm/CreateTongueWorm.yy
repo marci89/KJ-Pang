@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CreateTongueWorm",
   "isCompatibility":false,
   "isDnD":false,

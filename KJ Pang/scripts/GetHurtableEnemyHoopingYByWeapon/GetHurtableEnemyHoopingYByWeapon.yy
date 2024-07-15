@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"GetHurtableEnemyHoopingYByWeapon",
   "isCompatibility":false,
   "isDnD":false,

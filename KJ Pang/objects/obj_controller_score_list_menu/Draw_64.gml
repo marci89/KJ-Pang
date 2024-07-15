@@ -79,7 +79,7 @@ for (var i = 0; i < list_size; i++) {
 		draw_text(180, startY + i * textHeight, string(scoreItem.scorePoint));
 		draw_text(320, startY + i * textHeight, string(scoreItem.playername));
 		draw_text(520, startY + i * textHeight, string(scoreItem.date));
-		draw_text(750, startY + i * textHeight,string(GetLocalizedText(GetDifficultyText(global.gameDifficult))));
+		draw_text(750, startY + i * textHeight,string(GetLocalizedText(GetDifficultyText(scoreItem.difficulty))));
 	}
 		draw_set_color(c_white);
 }

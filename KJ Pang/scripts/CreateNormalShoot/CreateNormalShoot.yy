@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CreateNormalShoot",
   "isCompatibility":false,
   "isDnD":false,

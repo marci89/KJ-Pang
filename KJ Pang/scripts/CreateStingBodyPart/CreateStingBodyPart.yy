@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CreateStingBodyPart",
   "isCompatibility":false,
   "isDnD":false,

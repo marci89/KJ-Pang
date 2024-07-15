@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CreateRandomizeSound",
   "isCompatibility":false,
   "isDnD":false,

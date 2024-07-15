@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"DynamiteEffect",
   "isCompatibility":false,
   "isDnD":false,

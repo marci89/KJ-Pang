@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CreateSnakeBoss",
   "isCompatibility":false,
   "isDnD":false,

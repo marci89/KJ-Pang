@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CreateNormalBallShieldPiece",
   "isCompatibility":false,
   "isDnD":false,

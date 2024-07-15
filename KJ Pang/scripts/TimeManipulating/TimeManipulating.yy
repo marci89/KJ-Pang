@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"TimeManipulating",
   "isCompatibility":false,
   "isDnD":false,

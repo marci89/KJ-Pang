@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"ScoreListManager",
   "isCompatibility":false,
   "isDnD":false,

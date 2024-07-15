@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CreateCacodemon",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"ItemHoppingEffect",
   "isCompatibility":false,
   "isDnD":false,

@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CreateHorizontalBallSmall",
   "isCompatibility":false,
   "isDnD":false,

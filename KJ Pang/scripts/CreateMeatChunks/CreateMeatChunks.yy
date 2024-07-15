@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CreateMeatChunks",
   "isCompatibility":false,
   "isDnD":false,

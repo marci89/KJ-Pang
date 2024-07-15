@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"GetWeaponInstanceNumber",
   "isCompatibility":false,
   "isDnD":false,

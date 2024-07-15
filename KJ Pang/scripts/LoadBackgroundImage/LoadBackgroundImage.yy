@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"LoadBackgroundImage",
   "isCompatibility":false,
   "isDnD":false,

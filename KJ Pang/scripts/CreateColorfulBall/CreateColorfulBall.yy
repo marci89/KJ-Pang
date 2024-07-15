@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CreateColorfulBall",
   "isCompatibility":false,
   "isDnD":false,

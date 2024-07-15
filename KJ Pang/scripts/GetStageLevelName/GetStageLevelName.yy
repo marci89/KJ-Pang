@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"GetStageLevelName",
   "isCompatibility":false,
   "isDnD":false,

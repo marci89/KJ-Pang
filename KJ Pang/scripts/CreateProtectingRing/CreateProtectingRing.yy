@@ -1,5 +1,5 @@
 {
-  "$GMScript":"",
+  "$GMScript":"v1",
   "%Name":"CreateProtectingRing",
   "isCompatibility":false,
   "isDnD":false,
