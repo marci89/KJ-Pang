@@ -14,7 +14,7 @@ isGravityYEnabled = true; // gravity y enabled or not
 gravSpeedX = 0; // x gavity speed
 gravSpeedY = 0.01; // y gavity speed
 hitPoint = 25; //health
-enemyScore = 45; // score
+enemyScore = 75; // score
 jumpHeightMax = -10;
 
 
@@ -46,10 +46,9 @@ function DropItem() {
 randomize();
 var randomChance = random(1);
 	
-		var energyShieldDropChance = 0.3;
-		var timeFreezeDropChance = 0.1
-		var healthPotionDropChance = 0.3;
-		var nothingDropChance = 0.3; 
+		var energyShieldDropChance = 0.4;
+		var timeFreezeDropChance = 0.2
+		var healthPotionDropChance = 0.4; 
 
 		if (randomChance < energyShieldDropChance) {
 			CreateItemWithMovement(x, y, 0, -4, obj_item_energy_shield);
@@ -59,9 +58,6 @@ var randomChance = random(1);
 
 		} else if (randomChance < (energyShieldDropChance + timeFreezeDropChance + healthPotionDropChance)) {
 			   CreateItemWithMovement(x, y, 0, -4, obj_item_health_potion);
-			
-		} else if (randomChance < (energyShieldDropChance + timeFreezeDropChance + healthPotionDropChance + nothingDropChance)) {
-		    show_debug_message("No item dropped.");
 		} else {
 		    show_debug_message("Invalid drop outcome.");
 		}

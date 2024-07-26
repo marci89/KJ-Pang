@@ -44,7 +44,9 @@ if (!isDead) {
   // Jump
   if (inputJump && (place_meeting(x, y + 1, obj_wall_parent) )) {
 	
+		if(canActivateSpecAbility) {
 		 moveY = -jumpSpeed; 
+		}
     }
 }
 

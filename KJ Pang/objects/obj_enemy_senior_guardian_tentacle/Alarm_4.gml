@@ -13,10 +13,10 @@ if (isLeftSide) {
 	
 if (creatorType == tentacleType.RedBallSeniorCreator && enemyCreationTimeLevel == 3) {
 	
-	var shieldedChild1 = CreateNormalBallMedium(x, y, moveX, moveY,
+	var Child1 = CreateNormalBallMedium(x, y, moveX, moveY,
 	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
 	normalBallColorType.Red, false);
-	shieldedChild1.isCreatedFromAnotherEnemy = true;
+	Child1.isCreatedFromAnotherEnemy = true;
 	
 } else if (creatorType == tentacleType.AntiGravityBallSeniorCreator && enemyCreationTimeLevel == 2) {
 	antiMoveLeft = false;

@@ -26,6 +26,11 @@ CreateLifePointWithMovement(x,y,-1.8,-4, lifePointType.Purple);
 CreateLifePointWithMovement(x,y,2.2,-4, lifePointType.Purple);
 CreateLifePointWithMovement(x,y,-2.2,-4, lifePointType.Purple);
 
+CreateItemWithMovement(x,y,-0.5,-5, obj_item_food);
+CreateItemWithMovement(x,y,0.5,-5, obj_item_food);
+CreateItemWithMovement(x,y,-1.3,-5, obj_item_food);
+CreateItemWithMovement(x,y,1.3,-5, obj_item_food);
+
 
 //left side
 

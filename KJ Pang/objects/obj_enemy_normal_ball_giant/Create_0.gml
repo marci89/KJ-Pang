@@ -13,7 +13,7 @@ isGravityYEnabled = true; // gravity y enabled or not
 gravSpeedX = 0; // x gavity speed
 gravSpeedY = 0.02; // y gavity speed
 hitPoint = 1; //health
-enemyScore = 20; // score
+enemyScore = 50; // score
 
 
 //Color
@@ -63,9 +63,7 @@ var grenadeDropChance = 0.1;
 
 var nothingDropChance = 0.8; 
 
-//randomize chance
-randomize();
-var randomChance = random(1);
+
 
 	//drop level 1
 	if(dropItemType == normalBallGiantDropItemType.DropQualityLevel_1) {
@@ -76,21 +74,25 @@ var randomChance = random(1);
 		energyShieldDropChance = 0.06;
 		healthPotionDropChance = 0.01;
 		nothingDropChance = 0.69;
+		
+		//randomize chance
+		randomize();
+		var randomChance = random(1);
 
 		if (randomChance < doubleStingDropChance) {
-			CreateItem(x, y, obj_item_double_sting);
+			CreateItemWithMovement(x, y,0,-4, obj_item_double_sting);
 		
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance)) {
-		    CreateItem(x, y, obj_item_time_freeze);
+		    CreateItemWithMovement(x, y,0,-4, obj_item_time_freeze);
 
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance)) {
-		    CreateItem(x, y, obj_item_time_slow);
+		  CreateItemWithMovement(x, y,0,-4, obj_item_time_slow);
 		
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance)) {
-		    CreateItem(x, y, obj_item_energy_shield);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_energy_shield);
 		
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance)) {
-		    CreateItem(x, y, obj_item_health_potion);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_health_potion);
 			
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance + nothingDropChance)) {
 		    show_debug_message("No item dropped.");
@@ -112,33 +114,37 @@ var randomChance = random(1);
 		pistolDropChance = 0.05;
 		shotgunDropChance = 0.03;
 		nothingDropChance = 0.5;
+		
+		//randomize chance
+		randomize();
+		var randomChance = random(1);
 
 		if (randomChance < doubleStingDropChance) {
-			CreateItem(x, y, obj_item_double_sting);
+			CreateItemWithMovement(x, y,0,-4, obj_item_double_sting);
 		
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance)) {
-		    CreateItem(x, y, obj_item_time_freeze);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_time_freeze);
 
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance)) {
-		    CreateItem(x, y, obj_item_time_slow);
+		  CreateItemWithMovement(x, y,0,-4, obj_item_time_slow);
 		
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance)) {
-		    CreateItem(x, y, obj_item_energy_shield);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_energy_shield);
 		
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance)) {
-		    CreateItem(x, y, obj_item_health_potion);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_health_potion);
 			
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance + machinegunDropChance)) {
-		    CreateItem(x, y, obj_item_machine_gun);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_machine_gun);
 			
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance + machinegunDropChance + powerWireDropChance)) {
-		    CreateItem(x, y, obj_item_power_wire);
+		  CreateItemWithMovement(x, y,0,-4, obj_item_power_wire);
 			
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance + machinegunDropChance + powerWireDropChance + pistolDropChance)) {
-		    CreateItem(x, y, obj_item_pistol);
+		    CreateItemWithMovement(x, y,0,-4, obj_item_pistol);
 			
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance + machinegunDropChance + powerWireDropChance + pistolDropChance + shotgunDropChance)) {
-		    CreateItem(x, y, obj_item_shotgun);
+		    CreateItemWithMovement(x, y,0,-4, obj_item_shotgun);
 			
 		
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance + machinegunDropChance + powerWireDropChance + pistolDropChance + shotgunDropChance + nothingDropChance)) {
@@ -161,29 +167,33 @@ var randomChance = random(1);
 		shotgunDropChance = 0.03;
 		nothingDropChance = 0.54;
 
+		//randomize chance
+		randomize();
+		var randomChance = random(1);
+		
 		if (randomChance < doubleStingDropChance) {
-			CreateItem(x, y, obj_item_double_sting);
+			CreateItemWithMovement(x, y,0,-4, obj_item_double_sting);
 		
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance)) {
-		    CreateItem(x, y, obj_item_time_freeze);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_time_freeze);
 
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance)) {
-		    CreateItem(x, y, obj_item_time_slow);
+		    CreateItemWithMovement(x, y,0,-4, obj_item_time_slow);
 		
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance)) {
-		    CreateItem(x, y, obj_item_energy_shield);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_energy_shield);
 		
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance)) {
-		    CreateItem(x, y, obj_item_health_potion);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_health_potion);
 			
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance + machinegunDropChance)) {
-		    CreateItem(x, y, obj_item_machine_gun);
+		    CreateItemWithMovement(x, y,0,-4, obj_item_machine_gun);
 			
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance + machinegunDropChance + pistolDropChance)) {
-		    CreateItem(x, y, obj_item_pistol);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_pistol);
 			
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance + machinegunDropChance  + pistolDropChance + shotgunDropChance)) {
-		    CreateItem(x, y, obj_item_shotgun);
+		    CreateItemWithMovement(x, y,0,-4, obj_item_shotgun);
 			
 		
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance + machinegunDropChance  + pistolDropChance + shotgunDropChance + nothingDropChance)) {
@@ -214,41 +224,45 @@ var randomChance = random(1);
 		
 		nothingDropChance = 0.30;
 
+		//randomize chance
+		randomize();
+		var randomChance = random(1);
+		
 		if (randomChance < doubleStingDropChance) {
-			CreateItem(x, y, obj_item_double_sting);
+		CreateItemWithMovement(x, y,0,-4, obj_item_double_sting);
 		
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance)) {
-		    CreateItem(x, y, obj_item_time_freeze);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_time_freeze);
 
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance)) {
-		    CreateItem(x, y, obj_item_time_slow);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_time_slow);
 		
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance)) {
-		    CreateItem(x, y, obj_item_energy_shield);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_energy_shield);
 		
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance)) {
-		    CreateItem(x, y, obj_item_health_potion);
+		    CreateItemWithMovement(x, y,0,-4, obj_item_health_potion);
 			
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance + machinegunDropChance)) {
-		    CreateItem(x, y, obj_item_machine_gun);
+		    CreateItemWithMovement(x, y,0,-4, obj_item_machine_gun);
 			
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance + machinegunDropChance + powerWireDropChance)) {
-		    CreateItem(x, y, obj_item_power_wire);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_power_wire);
 			
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance + machinegunDropChance + powerWireDropChance + pistolDropChance)) {
-		    CreateItem(x, y, obj_item_pistol);
+		    CreateItemWithMovement(x, y,0,-4, obj_item_pistol);
 			
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance + machinegunDropChance + powerWireDropChance + pistolDropChance + shotgunDropChance)) {
-		    CreateItem(x, y, obj_item_shotgun);
+		    CreateItemWithMovement(x, y,0,-4, obj_item_shotgun);
 			
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance + machinegunDropChance + powerWireDropChance + pistolDropChance + shotgunDropChance + dynamitDropChance)) {
-		    CreateItem(x, y, obj_item_dynamite);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_dynamite);
 			
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance + machinegunDropChance + powerWireDropChance + pistolDropChance + shotgunDropChance + dynamitDropChance + magnetDropChance)) {
-		    CreateItem(x, y, obj_item_magnet);
+		    CreateItemWithMovement(x, y,0,-4, obj_item_magnet);
 			
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance + machinegunDropChance + powerWireDropChance + pistolDropChance + shotgunDropChance + dynamitDropChance + magnetDropChance + grenadeDropChance)) {
-		    CreateItem(x, y, obj_item_grenade);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_grenade);
 			
 		
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance + machinegunDropChance + powerWireDropChance + pistolDropChance + shotgunDropChance + dynamitDropChance + magnetDropChance + grenadeDropChance + nothingDropChance)) {
@@ -278,38 +292,42 @@ var randomChance = random(1);
 		
 		nothingDropChance = 0.35;
 
+		//randomize chance
+		randomize();
+		var randomChance = random(1);
+		
 		if (randomChance < doubleStingDropChance) {
-			CreateItem(x, y, obj_item_double_sting);
+			CreateItemWithMovement(x, y,0,-4, obj_item_double_sting);
 		
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance)) {
-		    CreateItem(x, y, obj_item_time_freeze);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_time_freeze);
 
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance)) {
-		    CreateItem(x, y, obj_item_time_slow);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_time_slow);
 		
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance)) {
-		    CreateItem(x, y, obj_item_energy_shield);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_energy_shield);
 		
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance)) {
-		    CreateItem(x, y, obj_item_health_potion);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_health_potion);
 			
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance + machinegunDropChance)) {
-		    CreateItem(x, y, obj_item_machine_gun);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_machine_gun);
 			
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance + machinegunDropChance + pistolDropChance)) {
-		    CreateItem(x, y, obj_item_pistol);
+		    CreateItemWithMovement(x, y,0,-4, obj_item_pistol);
 			
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance + machinegunDropChance + pistolDropChance + shotgunDropChance)) {
-		    CreateItem(x, y, obj_item_shotgun);
+		    CreateItemWithMovement(x, y,0,-4, obj_item_shotgun);
 			
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance + machinegunDropChance + pistolDropChance + shotgunDropChance + dynamitDropChance)) {
-		    CreateItem(x, y, obj_item_dynamite);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_dynamite);
 			
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance + machinegunDropChance + pistolDropChance + shotgunDropChance + dynamitDropChance + magnetDropChance)) {
-		    CreateItem(x, y, obj_item_magnet);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_magnet);
 			
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance + machinegunDropChance + pistolDropChance + shotgunDropChance + dynamitDropChance + magnetDropChance + grenadeDropChance)) {
-		    CreateItem(x, y, obj_item_grenade);
+		    CreateItemWithMovement(x, y,0,-4, obj_item_grenade);
 		
 		
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance + machinegunDropChance + pistolDropChance + shotgunDropChance + dynamitDropChance + magnetDropChance + grenadeDropChance + nothingDropChance)) {

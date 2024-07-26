@@ -11,10 +11,16 @@ PlaySound(snd_ball_destroy, false, 3);
 
 	CreateItemWithMovement(x,y,0.5,-1, obj_item_food);
 	CreateItemWithMovement(x,y,-0.5,-1, obj_item_food);
-	CreateItemWithMovement(x,y,1,-1.5, obj_item_food);
-	CreateItemWithMovement(x,y,-1,-1.5, obj_item_food);
-	CreateItemWithMovement(x,y,1.5,-2, obj_item_food);
-	CreateItemWithMovement(x,y,-1.5,-2, obj_item_food);
+	CreateItemWithMovement(x,y,0.7,-1.5, obj_item_food);
+	CreateItemWithMovement(x,y,-0.7,-1.5, obj_item_food);
+	CreateItemWithMovement(x,y,1,-2, obj_item_food);
+	CreateItemWithMovement(x,y,-1,-2, obj_item_food);
+	
+	CreateLifePointWithMovement(x,y,0,-4, lifePointType.Pink);
+	CreateLifePointWithMovement(x,y,0,-5, lifePointType.Purple);
+	CreateLifePointWithMovement(x,y,0,-6, lifePointType.White);
+
+
 	
 if(GetSpaceDistorerNumber() == 1) {
 DeactivateFilterByName("Distort");

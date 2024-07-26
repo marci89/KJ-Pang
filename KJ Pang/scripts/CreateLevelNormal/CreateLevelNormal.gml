@@ -14,7 +14,7 @@ global.hasRoomWallFrame = false; // no wall frames
 global.isRestartLevelAfterDead = true; //restart after death
 global.levelTimeMax = 250; // level's max time
 //global.playerOneDefaultWeapon = weaponType.MachineGun;
-//global.level = 55;
+//global.level = 43;
 //global.gameDifficult = gameDifficultType.Impossible;
 
 
@@ -1449,7 +1449,8 @@ function CreateLevelNormal17() {
 	var firstRowWallX = 40;
 	
 	for (var i = 0; i < 11; i++) {
-		CreateWallMany(firstRowWallX, 500, wallType.Red, wallCreatorDirectionType.Right, 1);
+		//CreateWallMany(firstRowWallX, 500, wallType.Red, wallCreatorDirectionType.Right, 1);
+		CreateWallIndestructibleMany(firstRowWallX, 500, wallCreatorDirectionType.Right, 1)
 		firstRowWallX += 64;
 	}
 
@@ -2323,6 +2324,7 @@ function CreateLevelNormal32() {
 	//items
 	CreateItem(520, 600, obj_item_energy_shield);
 	CreateItem(510, 100, obj_item_time_freeze);
+	CreateItem(950, 600, obj_item_health_potion);
 	
 	CreateLifePoint(250, 400, lifePointType.Green);
 	CreateLifePoint(300, 400, lifePointType.Green);
@@ -3076,6 +3078,8 @@ function CreateLevelNormal43() {
 	CreateFoodByImageIndex(900, 500, 3);
 	CreateFoodByImageIndex(950, 500, 3);
 	CreateFoodByImageIndex(990, 500, 3);
+	
+		CreateItem(100, 600, obj_item_health_potion);
 }
 
 #endregion

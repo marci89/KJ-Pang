@@ -13,7 +13,7 @@ isGravityYEnabled = true; // gravity y enabled or not
 gravSpeedX = 0; // x gavity speed
 gravSpeedY = 0.01; // y gavity speed
 hitPoint = 1; //health
-enemyScore = 30; // score
+enemyScore = 95; // score
 jumpHeightMax = -6;
 
 
@@ -66,10 +66,9 @@ function DropItem() {
 randomize();
 var randomChance = random(1);
 	
-		var shotgunDropChance = 0.45
-		var machinegunDropChance = 0.4;
+		var shotgunDropChance = 0.6
+		var machinegunDropChance = 0.3;
 		var healthPotionDropChance = 0.1;
-		var nothingDropChance = 0.05; 
 
 		if (randomChance < shotgunDropChance) {
 			CreateItemWithMovement(x, y, 0, -4, obj_item_shotgun);
@@ -80,8 +79,6 @@ var randomChance = random(1);
 		} else if (randomChance < (shotgunDropChance + machinegunDropChance + healthPotionDropChance)) {
 		    CreateItemWithMovement(x, y, 0, -4, obj_item_health_potion);
 		
-		} else if (randomChance < (shotgunDropChance + machinegunDropChance + healthPotionDropChance + nothingDropChance)) {
-		    show_debug_message("No item dropped.");
 		} else {
 		    show_debug_message("Invalid drop outcome.");
 		}

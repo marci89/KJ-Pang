@@ -12,6 +12,7 @@
 	//game difficult allowing
 	global.isNormalDifficultEnable = false;
 	global.isHardDifficultEnable = false;
+	global.isNightmareDifficultEnable = false;
 	global.isImpossibleDifficultEnable = false;
 	
 
@@ -94,7 +95,7 @@
 	global.wallHeight = 34; // normal wall height
 
 	global.lifePointMax = 100; //  max life point capacity
-	global.foodMax = 30; // max food capacity
+	global.foodMax = 25; // max food capacity
 
 	global.levelTimeMax = 150; // level's max time
 

@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_health_potion.wav",
   "type":0,
-  "volume":0.61,
+  "volume":1.0,
 }

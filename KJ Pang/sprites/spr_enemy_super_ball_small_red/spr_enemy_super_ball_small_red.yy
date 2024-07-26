@@ -2,9 +2,9 @@
   "$GMSprite":"",
   "%Name":"spr_enemy_super_ball_small_red",
   "bboxMode":1,
-  "bbox_bottom":29,
+  "bbox_bottom":24,
   "bbox_left":0,
-  "bbox_right":29,
+  "bbox_right":24,
   "bbox_top":0,
   "collisionKind":2,
   "collisionTolerance":255,
@@ -12,14 +12,14 @@
   "edgeFiltering":true,
   "For3D":true,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"55d4d52a-4959-45d4-ad74-47cea7475882","name":"55d4d52a-4959-45d4-ad74-47cea7475882","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"986173af-0af7-44be-8267-b60a0f56b890","name":"986173af-0af7-44be-8267-b60a0f56b890","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":30,
+  "height":25,
   "HTile":true,
   "layers":[
-    {"$GMImageLayer":"","%Name":"063d857e-e9db-4837-b452-7cda5d50a05c","blendMode":0,"displayName":"default","isLocked":false,"name":"063d857e-e9db-4837-b452-7cda5d50a05c","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"8c31c439-96ea-4513-bdd3-12dad7fbc8ba","blendMode":0,"displayName":"default","isLocked":false,"name":"8c31c439-96ea-4513-bdd3-12dad7fbc8ba","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_enemy_super_ball_small_red",
   "nineSlice":{
@@ -88,14 +88,14 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"55d4d52a-4959-45d4-ad74-47cea7475882","path":"sprites/spr_enemy_super_ball_small_red/spr_enemy_super_ball_small_red.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e4c10c59-088d-4f67-92ce-9c597490a470","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"986173af-0af7-44be-8267-b60a0f56b890","path":"sprites/spr_enemy_super_ball_small_red/spr_enemy_super_ball_small_red.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"cdc62e61-2a8c-4207-8be8-548fb9f67321","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":15,
-    "yorigin":15,
+    "xorigin":12,
+    "yorigin":12,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
@@ -105,5 +105,5 @@
   },
   "type":0,
   "VTile":true,
-  "width":30,
+  "width":25,
 }

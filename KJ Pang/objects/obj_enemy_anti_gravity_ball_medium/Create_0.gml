@@ -13,7 +13,7 @@ isGravityYEnabled = false; // gravity y enabled or not
 gravSpeedX = 0; // x gavity speed
 gravSpeedY = 0; // y gavity speed
 hitPoint = 1; //health
-enemyScore = 8; // score
+enemyScore = 48; // score
 jumpHeightMax = -20;
 
 //disabled effects
@@ -94,11 +94,11 @@ function DropItem() {
 //randomize chance
 var randomChance = random(1);
 	
-		var antiGravitydDropChance = 0.15;
-		var nothingDropChance = 0.85; 
+		var antiGravitydDropChance = 0.2;
+		var nothingDropChance = 0.8; 
 
 		if (randomChance < antiGravitydDropChance) {
-			CreateItemWithMovement(x, y, 2, -4, obj_item_antigravity);
+			CreateItemWithMovement(x, y, 0, -4, obj_item_antigravity);
 			
 		} else if (randomChance < (antiGravitydDropChance + nothingDropChance)) {	
 		  show_debug_message("No item dropped.");

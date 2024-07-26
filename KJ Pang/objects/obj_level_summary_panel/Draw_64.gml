@@ -68,22 +68,27 @@ if (timeScore > 0) {
 	draw_text(x + 250, y + 480, "+ " + string(timeScore));
 	draw_text(x, y + 520, lifeScoreText + ":");
 	draw_text(x + 250, y + 520, "+ " + string(lifeScore));
+	draw_text(x, y + 560, levelBonusText + ":");
+	draw_text(x + 250, y + 560, "+ " + string(levelBonus));
 } else {
 	draw_text(x, y + 480, lifeScoreText + ":");
 	draw_text(x + 250, y + 480, "+ " + string(lifeScore));
+	
+	draw_text(x, y + 520, levelBonusText + ":");
+	draw_text(x + 250, y + 520, "+ " + string(levelBonus));
 }
 
 // Draw the line
-draw_line(x , y + 570, x + 350 , y + 570);
+draw_line(x , y + 610, x + 350 , y + 610);
 
 //Draw total score
 var totalScoreTextWidth = string_width(totalScoreText);
 var drawTotalScoreTextX = (sprite_width - totalScoreTextWidth) / 2;
-draw_text(x + drawTotalScoreTextX , y + 590, totalScoreText);
+draw_text(x + drawTotalScoreTextX , y + 620, totalScoreText);
 
 var totalScoreValueWidth = string_width(string(totalScore));
 var drawTotalScoreValueX = (sprite_width - totalScoreValueWidth) / 2;
-draw_text(x + drawTotalScoreValueX, y + 630, string(totalScore));
+draw_text(x + drawTotalScoreValueX, y + 655, string(totalScore));
 
 #endregion
 

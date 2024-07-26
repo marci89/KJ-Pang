@@ -14,9 +14,9 @@ DropItem();
 
 //create gems 
 CreateLifePointWithMovement(x,y,-1,-3, lifePointType.Yellow);
-CreateLifePointWithMovement(x,y,-2,-3, lifePointType.Yellow);
+CreateLifePointWithMovement(x,y,-1.5,-3, lifePointType.Yellow);
 CreateLifePointWithMovement(x,y, 1,-3, lifePointType.Yellow);
-CreateLifePointWithMovement(x,y, 2,-3, lifePointType.Yellow);
+CreateLifePointWithMovement(x,y, 1.5,-3, lifePointType.Yellow);
 
 //Create child balls
 randomize();

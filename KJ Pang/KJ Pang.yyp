@@ -415,7 +415,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.4.1.152",
+    "IDEVersion":"2024.6.2.162",
   },
   "name":"KJ Pang",
   "resources":[
@@ -941,7 +941,6 @@
     {"id":{"name":"snd_mountKeirin","path":"sounds/snd_mountKeirin/snd_mountKeirin.yy",},},
     {"id":{"name":"snd_mtFuji","path":"sounds/snd_mtFuji/snd_mtFuji.yy",},},
     {"id":{"name":"snd_next_level","path":"sounds/snd_next_level/snd_next_level.yy",},},
-    {"id":{"name":"snd_pang_adventures_final_music","path":"sounds/snd_pang_adventures_final_music/snd_pang_adventures_final_music.yy",},},
     {"id":{"name":"snd_pang_ending","path":"sounds/snd_pang_ending/snd_pang_ending.yy",},},
     {"id":{"name":"snd_pang","path":"sounds/snd_pang/snd_pang.yy",},},
     {"id":{"name":"snd_paris","path":"sounds/snd_paris/snd_paris.yy",},},
@@ -997,7 +996,6 @@
     {"id":{"name":"snd_TwoStepsFromHell","path":"sounds/snd_TwoStepsFromHell/snd_TwoStepsFromHell.yy",},},
     {"id":{"name":"snd_unreal_remake1","path":"sounds/snd_unreal_remake1/snd_unreal_remake1.yy",},},
     {"id":{"name":"snd_unreal_remake2","path":"sounds/snd_unreal_remake2/snd_unreal_remake2.yy",},},
-    {"id":{"name":"snd_unreal_remake3","path":"sounds/snd_unreal_remake3/snd_unreal_remake3.yy",},},
     {"id":{"name":"snd_unreal_remake4","path":"sounds/snd_unreal_remake4/snd_unreal_remake4.yy",},},
     {"id":{"name":"snd_unreal_remake5","path":"sounds/snd_unreal_remake5/snd_unreal_remake5.yy",},},
     {"id":{"name":"snd_unreal_shared_dig_attack","path":"sounds/snd_unreal_shared_dig_attack/snd_unreal_shared_dig_attack.yy",},},

@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":108.721634,
+  "duration":325.82532,
   "name":"snd_unreal8",
   "parent":{
     "name":"Unreal",

@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_drakan_3.mp3",
   "type":0,
-  "volume":0.86,
+  "volume":1.0,
 }

@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_rodland1.mp3",
   "type":0,
-  "volume":0.29,
+  "volume":0.52,
 }

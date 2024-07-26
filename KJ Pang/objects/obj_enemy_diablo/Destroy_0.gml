@@ -15,12 +15,17 @@ effect_create_above( ef_explosion, x, y, 2, c_orange);
 //create gem
 CreateLifePointWithMovement(x,y,1,-4, lifePointType.Red);
 CreateLifePointWithMovement(x,y,-1,-4, lifePointType.Red);
-CreateLifePointWithMovement(x,y,1.5,-4, lifePointType.Red);
-CreateLifePointWithMovement(x,y,-1.5,-4, lifePointType.Red);
-CreateLifePointWithMovement(x,y,1.8,-4, lifePointType.Red);
-CreateLifePointWithMovement(x,y,-1.8,-4, lifePointType.Red);
+CreateLifePointWithMovement(x,y,1.5,-4, lifePointType.Orange);
+CreateLifePointWithMovement(x,y,-1.5,-4, lifePointType.Orange);
+CreateLifePointWithMovement(x,y,1.8,-4, lifePointType.Yellow);
+CreateLifePointWithMovement(x,y,-1.8,-4, lifePointType.Yellow);
 CreateLifePointWithMovement(x,y,2.2,-4, lifePointType.Red);
 CreateLifePointWithMovement(x,y,-2.2,-4, lifePointType.Red);
+
+CreateItemWithMovement(x,y,-0.5,-5, obj_item_food);
+CreateItemWithMovement(x,y,0.5,-5, obj_item_food);
+CreateItemWithMovement(x,y,-1.3,-5, obj_item_food);
+CreateItemWithMovement(x,y,1.3,-5, obj_item_food);
 
 
 //left side

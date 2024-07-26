@@ -5,7 +5,7 @@ timeScoreText = GetLocalizedText("timeBonus"); //time score text
 lifeScoreText = GetLocalizedText("lifeBonus"); // life score text
 totalScoreText = GetLocalizedText("totalScore"); // total score text
 levelText =  GetLocalizedText("level") + "  " + string(global.level -1) + ":   " + GetStageLevelName(global.level - 1); // level translate
-
+levelBonusText = GetLocalizedText("levelBonus"); // levelBonus text
 frameWidth = 380; // Set the width of the frame
 frameHeight = 680; // Set the height of the frame
 frameSpace = 15; // frame space. Size round of the image
@@ -14,6 +14,7 @@ playerName = ""; //displayed player name
 timeScore = 0; // displayed time score
 lifeScore = 0; // displayed life score
 totalScore = 0; // displayed total score
+levelBonus = 1000;
 
 playerGender = noone; // player gender
 playerLife = noone; // player life count
@@ -59,6 +60,19 @@ function Init() {
 		}
 			
 	}
+	
+	//set level bonus
+	if(global.gameDifficult == gameDifficultType.Easy) {
+		levelBonus = 1000;
+	} else if(global.gameDifficult == gameDifficultType.Normal) {
+		levelBonus = 2000;
+	} else if(global.gameDifficult == gameDifficultType.Hard) {
+		levelBonus = 3000;
+	} else if(global.gameDifficult == gameDifficultType.Nightmare) {
+		levelBonus = 4000;
+	} else if(global.gameDifficult == gameDifficultType.Impossible) {
+		levelBonus = 5000;
+	} 
 		
 	//set sprite
 	if(playerGender == PlayerGenderType.Female) {
@@ -74,7 +88,7 @@ function Init() {
 	image_index = irandom_range(0, maxSpriteIndex);
 	
 	//generate score
-	timeScore = global.previousLevelTime * 4;
+	timeScore = global.previousLevelTime * 15;
 	lifeScore = playerLife * 800
 	
 	//Set score for player

@@ -14,6 +14,7 @@ function SaveGameSettings(){
 			//difficult
 			ini_write_string("Difficult", "isNormalDifficultEnable", global.isNormalDifficultEnable);
 			ini_write_string("Difficult", "isHardDifficultEnable", global.isHardDifficultEnable);
+			ini_write_string("Difficult", "isNightmareDifficultEnable", global.isNightmareDifficultEnable);
 			ini_write_string("Difficult", "isImpossibleDifficultEnable", global.isImpossibleDifficultEnable);
 			
 			ini_close();		 
@@ -40,6 +41,7 @@ function LoadGameSettings(){
 			//difficult
 			global.isNormalDifficultEnable =  ini_read_string("Difficult", "isNormalDifficultEnable", false);
 			global.isHardDifficultEnable =  ini_read_string("Difficult", "isHardDifficultEnable", false);
+			global.isNightmareDifficultEnable =  ini_read_string("Difficult", "isNightmareDifficultEnable", false);
 			global.isImpossibleDifficultEnable =  ini_read_string("Difficult", "isImpossibleDifficultEnable", false);
 			
 			ini_close();		 

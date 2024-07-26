@@ -10,7 +10,8 @@ effect_create_above( ef_explosion, x, y, 2, c_red);
 PlaySound(snd_succubus_death, false, 2);
 
 
- CreateItemWithMovement(x, y, 0, -4, obj_item_invulnerability_potion);
+ CreateItemWithMovement(x, y, 0.5, -4, obj_item_invulnerability_potion);
+ CreateItemWithMovement(x, y, -0.5, -4, obj_item_health_potion);
  
 
 
@@ -23,6 +24,12 @@ CreateLifePointWithMovement(x,y,1.8,-4, lifePointType.Green);
 CreateLifePointWithMovement(x,y,-1.8,-4, lifePointType.Light);
 CreateLifePointWithMovement(x,y,2.2,-4, lifePointType.Orange);
 CreateLifePointWithMovement(x,y,-2.2,-4, lifePointType.Pink);
+
+
+CreateItemWithMovement(x,y,-0.5,-5, obj_item_food);
+CreateItemWithMovement(x,y,0.5,-5, obj_item_food);
+CreateItemWithMovement(x,y,-1.3,-5, obj_item_food);
+CreateItemWithMovement(x,y,1.3,-5, obj_item_food);
 
 
 //left side

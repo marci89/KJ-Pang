@@ -6,7 +6,7 @@ if (global.isEnemyInformationMode || isFarAwayFromScreen) {
 }
 
 
-effect_create_above( ef_firework, x, y, 1, GetFireworkColor());
+effect_create_above( ef_firework, x, y-20, 1, GetFireworkColor());
 PlaySound(snd_pang, false, 2);
 
 

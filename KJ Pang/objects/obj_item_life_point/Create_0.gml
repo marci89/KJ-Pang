@@ -5,7 +5,7 @@ decayItemOnGroundValue = 0.99;
 bounceDecay = 0.5; //bounce
 
 //own properties
-itemScore = 5; // score of item
+itemScore = 25; // score of item
 rotateAngle = 1; //rotation
 
 //magnetable effect

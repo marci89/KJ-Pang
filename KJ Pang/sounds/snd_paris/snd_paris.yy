@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_paris.mp3",
   "type":0,
-  "volume":0.73,
+  "volume":0.77,
 }

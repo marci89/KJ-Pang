@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_unreal_shared_dig_attack.mp3",
   "type":0,
-  "volume":0.57,
+  "volume":0.76,
 }

@@ -13,7 +13,7 @@ isGravityYEnabled = true; // gravity y enabled or not
 gravSpeedX = 0; // x gavity speed
 gravSpeedY = 0.7; // y gavity speed
 hitPoint = 1; //health
-enemyScore = 50; // score
+enemyScore = 125; // score
 
 jumpHeightMax = -25;
 
@@ -76,37 +76,37 @@ var rocketLauncherDropChance = 0.1;
 
 var nothingDropChance = 0.8; 
 
-//randomize chance
-randomize();
-var randomChance = random(1);
+
 
 	//drop level 1
 	if(dropItemType == normalBallGiantDropItemType.DropQualityLevel_1) {
 		
-		doubleStingDropChance = 0.05;
+		doubleStingDropChance = 0.1;
 		flameThrowerDropChance = 0.2;
-		trackingRocketLauncherDropChance = 0.2;
-		projectileShieldDropChance = 0.2;
-		healthPotionDropChance = 0.05;
-		nothingDropChance = 0.3;
+		trackingRocketLauncherDropChance = 0.3;
+		projectileShieldDropChance = 0.3;
+		healthPotionDropChance = 0.1;
 
+
+		//randomize chance
+		randomize();
+		var randomChance = random(1);
+		
 		if (randomChance < doubleStingDropChance) {
-			CreateItem(x, y, obj_item_double_sting);
+			CreateItemWithMovement(x, y,0,-4, obj_item_double_sting);
 		
 		} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance)) {
-		    CreateItem(x, y, obj_item_flamethrower);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_flamethrower);
 
 		} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance + trackingRocketLauncherDropChance)) {
-		    CreateItem(x, y, obj_item_tracking_rocket_launcher);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_tracking_rocket_launcher);
 		
 		} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance + trackingRocketLauncherDropChance + projectileShieldDropChance)) {
-		    CreateItem(x, y, obj_item_projectile_shield);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_projectile_shield);
 		
 		} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance + trackingRocketLauncherDropChance + projectileShieldDropChance + healthPotionDropChance)) {
-		    CreateItem(x, y, obj_item_health_potion);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_health_potion);
 			
-		} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance + trackingRocketLauncherDropChance + projectileShieldDropChance + healthPotionDropChance + nothingDropChance)) {
-		    show_debug_message("No item dropped.");
 		} else {
 		    show_debug_message("Invalid drop outcome.");
 		}
@@ -116,9 +116,9 @@ var randomChance = random(1);
 	if(dropItemType == normalBallGiantDropItemType.DropQualityLevel_2) {
 		
 		
-		doubleStingDropChance = 0.1;
+		doubleStingDropChance = 0.05;
 		flameThrowerDropChance = 0.1;
-		trackingRocketLauncherDropChance = 0.1;
+		trackingRocketLauncherDropChance = 0.2;
 		projectileShieldDropChance = 0.1;
 		healthPotionDropChance = 0.05;
 		
@@ -126,44 +126,46 @@ var randomChance = random(1);
 		doublePowerWireDropChance = 0.1;
 		invulnerabilityPotionDropChance = 0.1;
 		rocketLauncherDropChance = 0.1;
-		bombDropChance = 0.05;
+		bombDropChance = 0.1;
 
- 		nothingDropChance = 0.1;
 		
 
+		//randomize chance
+		randomize();
+		var randomChance = random(1);
+		
 		if (randomChance < doubleStingDropChance) {
-			CreateItem(x, y, obj_item_double_sting);
+		CreateItemWithMovement(x, y,0,-4, obj_item_double_sting);
 		
 		} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance)) {
-		    CreateItem(x, y, obj_item_flamethrower);
+		  CreateItemWithMovement(x, y,0,-4, obj_item_flamethrower);
 
 		} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance + trackingRocketLauncherDropChance)) {
-		    CreateItem(x, y, obj_item_tracking_rocket_launcher);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_tracking_rocket_launcher);
 		
 		} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance + trackingRocketLauncherDropChance + projectileShieldDropChance)) {
-		    CreateItem(x, y, obj_item_projectile_shield);
+		  CreateItemWithMovement(x, y,0,-4, obj_item_projectile_shield);
 		
 		} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance + trackingRocketLauncherDropChance + projectileShieldDropChance + healthPotionDropChance)) {
-		    CreateItem(x, y, obj_item_health_potion);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_health_potion);
 			
 		} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance + trackingRocketLauncherDropChance + projectileShieldDropChance + healthPotionDropChance + protectiveRingDropChance)) {
-		    CreateItem(x, y, obj_item_protecting_ring);
+		    CreateItemWithMovement(x, y,0,-4, obj_item_protecting_ring);
 			
 		} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance + trackingRocketLauncherDropChance + projectileShieldDropChance + healthPotionDropChance + protectiveRingDropChance + doublePowerWireDropChance)) {
-		    CreateItem(x, y, obj_item_double_power_wire);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_double_power_wire);
 			
 		} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance + trackingRocketLauncherDropChance + projectileShieldDropChance + healthPotionDropChance + protectiveRingDropChance + doublePowerWireDropChance + invulnerabilityPotionDropChance)) {
-		    CreateItem(x, y, obj_item_invulnerability_potion);
+		  CreateItemWithMovement(x, y,0,-4, obj_item_invulnerability_potion);
 			
 		} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance + trackingRocketLauncherDropChance + projectileShieldDropChance + healthPotionDropChance + protectiveRingDropChance + doublePowerWireDropChance + invulnerabilityPotionDropChance + rocketLauncherDropChance)) {
-		    CreateItem(x, y, obj_item_rocket_launcher);
+		 CreateItemWithMovement(x, y,0,-4, obj_item_rocket_launcher);
 			
 			} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance + trackingRocketLauncherDropChance + projectileShieldDropChance + healthPotionDropChance + protectiveRingDropChance + doublePowerWireDropChance + invulnerabilityPotionDropChance + rocketLauncherDropChance + bombDropChance)) {
-		    CreateItem(x, y, obj_item_bomb);
+		    CreateItemWithMovement(x, y,0,-4, obj_item_bomb);
 			
 		
-		} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance + trackingRocketLauncherDropChance + projectileShieldDropChance + healthPotionDropChance + protectiveRingDropChance + doublePowerWireDropChance + invulnerabilityPotionDropChance + rocketLauncherDropChance + bombDropChance  + nothingDropChance)) {
-		    show_debug_message("No item dropped.");
+	
 		} else {
 		    show_debug_message("Invalid drop outcome.");
 		}
@@ -172,51 +174,51 @@ var randomChance = random(1);
 	//drop level 3
 	if(dropItemType == normalBallGiantDropItemType.DropQualityLevel_3) {
 		
-		doubleStingDropChance = 0.1;
-		flameThrowerDropChance = 0.1;
-		trackingRocketLauncherDropChance = 0.1;
+		doubleStingDropChance = 0.05;
+		flameThrowerDropChance = 0.15;
+		trackingRocketLauncherDropChance = 0.15;
 		projectileShieldDropChance = 0.1;
 		healthPotionDropChance = 0.05;
 		
 		protectiveRingDropChance = 0.1;
 		invulnerabilityPotionDropChance = 0.1;
-		rocketLauncherDropChance = 0.1;
-		bombDropChance = 0.05;
+		rocketLauncherDropChance = 0.2;
+		bombDropChance = 0.1;
 
- 		nothingDropChance = 0.2;
 		
-
+		//randomize chance
+		randomize();
+		var randomChance = random(1);
+		
 		if (randomChance < doubleStingDropChance) {
-			CreateItem(x, y, obj_item_double_sting);
+			CreateItemWithMovement(x, y,0,-4, obj_item_double_sting);
 		
 		} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance)) {
-		    CreateItem(x, y, obj_item_flamethrower);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_flamethrower);
 
 		} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance + trackingRocketLauncherDropChance)) {
-		    CreateItem(x, y, obj_item_tracking_rocket_launcher);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_tracking_rocket_launcher);
 		
 		} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance + trackingRocketLauncherDropChance + projectileShieldDropChance)) {
-		    CreateItem(x, y, obj_item_projectile_shield);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_projectile_shield);
 		
 		} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance + trackingRocketLauncherDropChance + projectileShieldDropChance + healthPotionDropChance)) {
-		    CreateItem(x, y, obj_item_health_potion);
+		    CreateItemWithMovement(x, y,0,-4, obj_item_health_potion);
 			
 		} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance + trackingRocketLauncherDropChance + projectileShieldDropChance + healthPotionDropChance + protectiveRingDropChance)) {
-		    CreateItem(x, y, obj_item_protecting_ring);
+		    CreateItemWithMovement(x, y,0,-4, obj_item_protecting_ring);
 			
 			
 		} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance + trackingRocketLauncherDropChance + projectileShieldDropChance + healthPotionDropChance + protectiveRingDropChance  + invulnerabilityPotionDropChance)) {
-		    CreateItem(x, y, obj_item_invulnerability_potion);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_invulnerability_potion);
 			
 		} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance + trackingRocketLauncherDropChance + projectileShieldDropChance + healthPotionDropChance + protectiveRingDropChance  + invulnerabilityPotionDropChance + rocketLauncherDropChance)) {
-		    CreateItem(x, y, obj_item_rocket_launcher);
+		    CreateItemWithMovement(x, y,0,-4, obj_item_rocket_launcher);
 			
 			} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance + trackingRocketLauncherDropChance + projectileShieldDropChance + healthPotionDropChance + protectiveRingDropChance  + invulnerabilityPotionDropChance + rocketLauncherDropChance + bombDropChance)) {
-		    CreateItem(x, y, obj_item_bomb);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_bomb);
 			
-		
-		} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance + trackingRocketLauncherDropChance + projectileShieldDropChance + healthPotionDropChance + protectiveRingDropChance + doublePowerWireDropChance + invulnerabilityPotionDropChance + rocketLauncherDropChance + bombDropChance  + nothingDropChance)) {
-		    show_debug_message("No item dropped.");
+	
 		} else {
 		    show_debug_message("Invalid drop outcome.");
 		}

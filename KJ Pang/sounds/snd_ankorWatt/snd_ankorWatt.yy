@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_ankorWatt.mp3",
   "type":0,
-  "volume":0.53,
+  "volume":0.6,
 }

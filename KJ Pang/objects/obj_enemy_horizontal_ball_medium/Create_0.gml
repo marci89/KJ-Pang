@@ -13,7 +13,7 @@ isGravityYEnabled = false; // gravity y enabled or not
 gravSpeedX = 0.01; // x gavity speed
 gravSpeedY = 0; // y gavity speed
 hitPoint = 1; //health
-enemyScore = 11 // score
+enemyScore = 69 // score
 jumpHeightMax = -20;
 
 //disabled effects
@@ -113,11 +113,11 @@ if(global.gameDifficult == gameDifficultType.Easy) {
 //randomize chance
 var randomChance = random(1);
 	
-		var reverseGravitydDropChance = 0.18;
-		var nothingDropChance = 0.82; 
+		var reverseGravitydDropChance = 0.25;
+		var nothingDropChance = 0.75; 
 
 		if (randomChance < reverseGravitydDropChance) {
-			CreateItemWithMovement(x, y, 2, -4, obj_item_gravity_reverse);
+			CreateItemWithMovement(x, y, 0, -4, obj_item_gravity_reverse);
 			
 		} else if (randomChance < (reverseGravitydDropChance + nothingDropChance)) {	
 		  show_debug_message("No item dropped.");

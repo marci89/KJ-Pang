@@ -15,7 +15,7 @@ DropItem();
 
 if(!isCreatedFromAnotherEnemy) {
 //create gems 
-CreateLifePointWithMovement(x,y,0,-2, lifePointType.Purple);
+CreateLifePointWithMovement(x,y,0,-4, lifePointType.Purple);
 }
 
 //Create child balls

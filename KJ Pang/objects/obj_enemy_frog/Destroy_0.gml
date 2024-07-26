@@ -11,7 +11,7 @@ effect_create_above( ef_smoke, x, y, 2, c_lime);
  
  
 //drop item
-var isDropped = irandom(99) < 10;
+var isDropped = irandom(99) < 30;
 
 if (isDropped) {
    CreateItemWithMovement(x, y, 0, -4, obj_item_bounced_pearl);

@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_galaxy_network.mp3",
   "type":0,
-  "volume":0.78,
+  "volume":0.92,
 }

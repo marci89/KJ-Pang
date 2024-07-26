@@ -14,6 +14,10 @@ PlaySound(snd_ball_destroy, false, 3);
 
 
 CreateItemWithMovement(x,y,0,-4, obj_item_food);
+CreateItemWithMovement(x,y,0.5,-4, obj_item_food);
+CreateItemWithMovement(x,y,-0.5,-4, obj_item_food);
+CreateItemWithMovement(x,y,1,-4, obj_item_food);
+CreateItemWithMovement(x,y,-1,-4, obj_item_food);
 
 
 //Create child balls

@@ -14,7 +14,7 @@ effect_create_above( ef_explosion, x, y, 0, c_white);
 
 
  CreateItemWithMovement(x, y, 0, -4, obj_item_projectile_shield);
- CreateItemWithMovement(x, y, 2, -5, obj_item_first_aid_kit);
+ CreateItemWithMovement(x, y, 2, -5, obj_item_health_potion);
  
 
 
@@ -27,6 +27,14 @@ CreateLifePointWithMovement(x,y,1.8,-4, lifePointType.White);
 CreateLifePointWithMovement(x,y,-1.8,-4, lifePointType.White);
 CreateLifePointWithMovement(x,y,2.2,-4, lifePointType.White);
 CreateLifePointWithMovement(x,y,-2.2,-4, lifePointType.White);
+CreateLifePointWithMovement(x,y,2.7,-4, lifePointType.White);
+CreateLifePointWithMovement(x,y,-2.7,-4, lifePointType.White);
+
+
+CreateItemWithMovement(x,y,-0.5,-5, obj_item_food);
+CreateItemWithMovement(x,y,0.5,-5, obj_item_food);
+CreateItemWithMovement(x,y,-1.3,-5, obj_item_food);
+CreateItemWithMovement(x,y,1.3,-5, obj_item_food);
 
 
 

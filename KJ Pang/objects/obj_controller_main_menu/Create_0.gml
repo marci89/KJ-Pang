@@ -6,6 +6,7 @@ event_inherited();
 //reset variables and get settings from data
 SetGameVariables(); 
 LoadGameSettings();
+SaveGameSettings();
 
 DeactivateFilters(); // deactive all of filters
 

@@ -12,7 +12,7 @@ PlaySound(snd_ball_destroy, false, 3);
 
 if(!isCreatedFromAnotherEnemy) {
 //create gems 
-CreateLifePointWithMovement(x,y,0,-5, lifePointType.Black);
+CreateLifePointWithMovement(x,y,0,-4, lifePointType.Black);
 }
 
 //Create child balls

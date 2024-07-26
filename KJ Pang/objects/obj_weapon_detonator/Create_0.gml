@@ -4,6 +4,7 @@ event_inherited()
 decayItemOnGroundValue = 0.9;
 bounceDecay = 0.6; //bounce
 type = weaponType.Detonator; // weapon type
+isAllowEffect = false;
 
 //own properties
 rotateAngle = 1; //rotation

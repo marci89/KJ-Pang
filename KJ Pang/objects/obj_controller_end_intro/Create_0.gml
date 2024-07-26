@@ -19,6 +19,10 @@ if (global.gameDifficult == gameDifficultType.Normal) {
 }
 
 if (global.gameDifficult == gameDifficultType.Hard) {
+	 global.isNightmareDifficultEnable = true;
+}
+
+if (global.gameDifficult == gameDifficultType.Nightmare) {
 	 global.isImpossibleDifficultEnable = true;
 }
 

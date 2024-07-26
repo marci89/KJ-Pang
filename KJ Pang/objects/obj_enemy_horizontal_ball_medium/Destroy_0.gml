@@ -9,7 +9,8 @@ effect_create_above( ef_firework, x, y, 2, c_aqua);
 PlaySound(snd_pang, false, 2);
 
 //create gems 
-CreateLifePointWithMovement(x,y,0,-5, lifePointType.Light);
+CreateLifePointWithMovement(x,y,1,-5, lifePointType.Light);
+CreateLifePointWithMovement(x,y,-1,-5, lifePointType.Light);
 
 //dropping
 DropItem();

@@ -25,7 +25,7 @@ CreateLifePointWithMovement(x,y,2,-4, lifePointType.Blue);
 CreateLifePointWithMovement(x,y,-2,-4, lifePointType.Blue);
 CreateLifePointWithMovement(x,y,3,-4, lifePointType.Blue);
 CreateLifePointWithMovement(x,y,-3,-4, lifePointType.Blue);
-CreateLifePointWithMovement(x,y,4,-4, lifePointType.Blue);
-CreateLifePointWithMovement(x,y,-4,-4, lifePointType.Blue);
+CreateLifePointWithMovement(x,y,3.5,-4, lifePointType.Blue);
+CreateLifePointWithMovement(x,y,-3.5,-4, lifePointType.Blue);
 
 

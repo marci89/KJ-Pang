@@ -14,6 +14,7 @@ enum gameDifficultType {
 	Easy,
     Normal,
     Hard,
+	Nightmare,
 	Impossible
 };
 

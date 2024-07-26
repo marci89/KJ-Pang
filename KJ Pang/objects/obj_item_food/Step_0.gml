@@ -37,7 +37,7 @@ if (place_meeting(x, y, obj_player_one)) {
 	isPickedUp = true;
 	
 		if(global.playerOneFood == global.foodMax) {
-			PlaySound(snd_special_ability_ready, false);
+			PlaySound(snd_special_ability_ready, false,2);
 		} else PlaySound(snd_food_pickup, false);
 	}
 }
@@ -54,7 +54,7 @@ if (place_meeting(x, y, obj_player_two)) {
 	isPickedUp = true;
 	
 		if(global.playerTwoFood == global.foodMax) {
-			PlaySound(snd_special_ability_ready, false);
+			PlaySound(snd_special_ability_ready, false,2);
 		} else PlaySound(snd_food_pickup, false);
 	}
 }

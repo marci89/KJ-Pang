@@ -11,18 +11,26 @@ PlaySound(snd_guardian_big_hurt, false, 1);
 
 
  CreateItemWithMovement(x, y, 0, -4, obj_item_shotgun);
+ CreateItemWithMovement(x, y, 1, -4, obj_item_health_potion);
  
 
 
 //create gem
-CreateLifePointWithMovement(x,y,1,-4, lifePointType.Orange);
-CreateLifePointWithMovement(x,y,-1,-4, lifePointType.Orange);
-CreateLifePointWithMovement(x,y,1.5,-4, lifePointType.Orange);
-CreateLifePointWithMovement(x,y,-1.5,-4, lifePointType.Orange);
-CreateLifePointWithMovement(x,y,1.8,-4, lifePointType.Orange);
-CreateLifePointWithMovement(x,y,-1.8,-4, lifePointType.Orange);
-CreateLifePointWithMovement(x,y,2.2,-4, lifePointType.Orange);
-CreateLifePointWithMovement(x,y,-2.2,-4, lifePointType.Orange);
+CreateLifePointWithMovement(x,y,1,-4, lifePointType.Blue);
+CreateLifePointWithMovement(x,y,-1,-4, lifePointType.Blue);
+CreateLifePointWithMovement(x,y,1.5,-4, lifePointType.Light);
+CreateLifePointWithMovement(x,y,-1.5,-4, lifePointType.Light);
+CreateLifePointWithMovement(x,y,1.8,-4, lifePointType.Blue);
+CreateLifePointWithMovement(x,y,-1.8,-4, lifePointType.Blue);
+CreateLifePointWithMovement(x,y,2.2,-4, lifePointType.Light);
+CreateLifePointWithMovement(x,y,-2.2,-4, lifePointType.Light);
+
+
+CreateItemWithMovement(x,y,-0.5,-5, obj_item_food);
+CreateItemWithMovement(x,y,0.5,-5, obj_item_food);
+CreateItemWithMovement(x,y,-1.3,-5, obj_item_food);
+CreateItemWithMovement(x,y,1.3,-5, obj_item_food);
+CreateItemWithMovement(x,y,1.8,-5, obj_item_food);
 
 
 //left side

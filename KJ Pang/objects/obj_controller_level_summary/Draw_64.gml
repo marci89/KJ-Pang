@@ -10,7 +10,7 @@ if(isKeyPressVisible && isKeyPressEnable) {
 	
 	var keyPressTextWidth = string_width(string(pressAnyKeyToContinueText));
 	var drawKeyPressTextX = (room_width - keyPressTextWidth) / 2;
-	draw_text(drawKeyPressTextX, y + 750, string(pressAnyKeyToContinueText));
+	draw_text(drawKeyPressTextX, y + 768, string(pressAnyKeyToContinueText));
 }
 
 #endregion

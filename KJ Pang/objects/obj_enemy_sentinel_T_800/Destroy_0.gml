@@ -19,10 +19,10 @@ DropItem();
 
 //create gem
 
-CreateLifePointWithMovement(x,y,1.5,-1, lifePointType.Orange);
-CreateLifePointWithMovement(x,y,-1.5,-1, lifePointType.Orange);
-CreateLifePointWithMovement(x,y,2.5,-2, lifePointType.Orange);
-CreateLifePointWithMovement(x,y,2.5,-2, lifePointType.Orange);
+CreateLifePointWithMovement(x,y,1,-1, lifePointType.Orange);
+CreateLifePointWithMovement(x,y,-1,-1, lifePointType.Orange);
+CreateLifePointWithMovement(x,y,0.5,-2, lifePointType.Orange);
+CreateLifePointWithMovement(x,y,-0.5,-2, lifePointType.Orange);
 
 
 

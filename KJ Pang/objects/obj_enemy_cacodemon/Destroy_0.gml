@@ -10,7 +10,7 @@ effect_create_above( ef_explosion, x, y, 2, c_red);
 PlaySound(snd_guardian_big_hurt, false, 1);
 
 
- CreateItemWithMovement(x, y, 0, -4, obj_item_machine_gun);
+ CreateItemWithMovement(x, y, 0, -5, obj_item_machine_gun);
  
 
 
@@ -23,6 +23,11 @@ CreateLifePointWithMovement(x,y,1.8,-4, lifePointType.Red);
 CreateLifePointWithMovement(x,y,-1.8,-4, lifePointType.Red);
 CreateLifePointWithMovement(x,y,2.2,-4, lifePointType.Red);
 CreateLifePointWithMovement(x,y,-2.2,-4, lifePointType.Red);
+
+CreateItemWithMovement(x,y,1.2,-6, obj_item_food);
+CreateItemWithMovement(x,y,-1.2,-6, obj_item_food);
+
+
 
 
 //left side

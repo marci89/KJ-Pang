@@ -13,7 +13,7 @@ isGravityYEnabled = true; // gravity y enabled or not
 gravSpeedX = 0; // x gavity speed
 gravSpeedY = 0.02; // y gavity speed
 hitPoint = 1; //health
-enemyScore = 2; // score
+enemyScore = 10; // score
 
 //Color
 colorType = normalBallColorType.Red;
