@@ -1,5 +1,5 @@
 
-effect_create_above( ef_smoke, x+7, y+7, 1, c_aqua);
+//effect_create_above( ef_smoke, x+7, y+7, 1, c_aqua);
 PlaySound(snd_wall_destroy2, false, 1);
 
 var topImage = spr_wall_frame_piece_top;

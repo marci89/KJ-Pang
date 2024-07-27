@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_TheDarkKnightRises.mp3",
   "type":0,
-  "volume":0.9,
+  "volume":1.0,
 }

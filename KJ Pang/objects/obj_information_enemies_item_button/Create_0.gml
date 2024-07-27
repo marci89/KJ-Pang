@@ -145,37 +145,37 @@ function Init() {
 	if(buttonId == 19) {
 		image = spr_enemy_super_ball_small_blue;
 		infoType = enemyInformationType.SuperBall;
-		requiredDifficult = gameDifficultType.Impossible;
+		requiredDifficult = gameDifficultType.Nightmare;
 	}
 	
 	if(buttonId == 20) {
 		image = spr_enemy_space_distorter_ball_pic;
 		infoType = enemyInformationType.SpaceDistorterBall;
-		requiredDifficult = gameDifficultType.Impossible;
+		requiredDifficult = gameDifficultType.Nightmare;
 	}
 	
 	if(buttonId == 21) {
 		image = spr_enemy_super_ball_small_green;
 		infoType = enemyInformationType.ShieldedSuperBall;
-		requiredDifficult = gameDifficultType.Impossible;
+		requiredDifficult = gameDifficultType.Nightmare;
 	}
 	
 	if(buttonId == 22) {
 		image = spr_enemy_sentinel_T_X_pic;
 		infoType = enemyInformationType.Sentinel_T_X;
-		requiredDifficult = gameDifficultType.Impossible;
+		requiredDifficult = gameDifficultType.Nightmare;
 	}
 	
 	if(buttonId == 23) {
 		image = spr_enemy_colorful_ball;
 		infoType = enemyInformationType.ColorfulBall;
-		requiredDifficult = gameDifficultType.Impossible;
+		requiredDifficult = gameDifficultType.Nightmare;
 	}
 	
 		if(buttonId == 24) {
 		image = spr_enemy_sentinel_T_3000_pic;
 		infoType = enemyInformationType.Sentinel_T_3000;
-		requiredDifficult = gameDifficultType.Impossible;
+		requiredDifficult = gameDifficultType.Nightmare;
 	}
 	
 	
@@ -191,37 +191,37 @@ function Init() {
 	if(buttonId == 25) {
 		image = spr_enemy_wretched_pic_small;
 		infoType = enemyInformationType.Wretched;
-		requiredDifficult = gameDifficultType.Impossible;
+		requiredDifficult = gameDifficultType.Nightmare;
 	}
 	
 	if(buttonId == 26) {
 		image = spr_enemy_prope_droid_pic_small;
 		infoType = enemyInformationType.ProbeDroid;
-		requiredDifficult = gameDifficultType.Impossible;
+		requiredDifficult = gameDifficultType.Nightmare;
 	}
 	
 	if(buttonId == 27) {
 		image = spr_enemy_manananggal_pic_small;
 		infoType = enemyInformationType.Manananggal;
-		requiredDifficult = gameDifficultType.Impossible;
+		requiredDifficult = gameDifficultType.Nightmare;
 	}
 	
 	if(buttonId == 28) {
 		image = spr_enemy_bat_pic_small;
 		infoType = enemyInformationType.Bat;
-		requiredDifficult = gameDifficultType.Impossible;
+		requiredDifficult = gameDifficultType.Nightmare;
 	}
 	
 	if(buttonId == 29) {
 		image = spr_enemy_senior_guardian_pic_small;
 		infoType = enemyInformationType.SeniorGuardian;
-		requiredDifficult = gameDifficultType.Impossible;
+		requiredDifficult = gameDifficultType.Nightmare;
 	}
 	
 	if(buttonId == 30) {
 		image = spr_enemy_expert_guardian_pic_small;
 		infoType = enemyInformationType.ExpertGuardian;
-		requiredDifficult = gameDifficultType.Impossible;
+		requiredDifficult = gameDifficultType.Nightmare;
 	}
 	
 	//set image

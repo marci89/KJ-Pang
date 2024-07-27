@@ -127,6 +127,9 @@ else if (global.gameDifficult == gameDifficultType.Normal) {
 else if (global.gameDifficult == gameDifficultType.Hard) {
 	defaultPlayerWeapon = weaponType.SingleSting;
 }
+else if (global.gameDifficult == gameDifficultType.Nightmare) {
+	defaultPlayerWeapon = weaponType.SingleSting;
+}
 else if (global.gameDifficult == gameDifficultType.Impossible) {
 	defaultPlayerWeapon = weaponType.SingleSting;
 }

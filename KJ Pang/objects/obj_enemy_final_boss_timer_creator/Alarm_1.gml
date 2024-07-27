@@ -16,6 +16,10 @@ if (global.gameDifficult == gameDifficultType.Hard) {
 	CreateGuardian(500,1000,obj_enemy_guardian_pokemon_ball,guardianType.Senior);
 }
 
+if (global.gameDifficult == gameDifficultType.Nightmare) {
+	CreateGuardian(500,1000,obj_enemy_guardian_pokemon_ball,guardianType.Expert);
+}
+
 if (global.gameDifficult == gameDifficultType.Impossible) {
 	CreateGuardian(500,1000,obj_enemy_guardian_pokemon_ball,guardianType.Expert);
 }

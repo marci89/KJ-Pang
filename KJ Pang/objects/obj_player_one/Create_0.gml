@@ -64,7 +64,7 @@ hasinvulnerabilityPotionEffect = false;
 
 canActivateSpecAbility = false;
 
-alarm[5] = 100;
+alarm[5] = 50;
 
 //Settings
 

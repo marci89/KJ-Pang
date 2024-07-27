@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":214.02122,
+  "duration":213.96898,
   "name":"snd_drakan_5",
   "parent":{
     "name":"Drakan",

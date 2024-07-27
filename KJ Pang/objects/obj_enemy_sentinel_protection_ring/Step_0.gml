@@ -1,4 +1,5 @@
 
+
 if (IsInstanceExists(parentEnemy)) {
     centerX = parentEnemy.x;
     centerY = parentEnemy.y;
@@ -10,6 +11,9 @@ if (IsInstanceExists(parentEnemy)) {
     instance_destroy(); // Destroy if player doesn't exist
 }
 
-
 event_inherited();
+
+
+
+
 

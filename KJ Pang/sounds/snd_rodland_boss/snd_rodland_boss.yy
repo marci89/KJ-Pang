@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_rodland_boss.mp3",
   "type":0,
-  "volume":0.34,
+  "volume":0.4,
 }

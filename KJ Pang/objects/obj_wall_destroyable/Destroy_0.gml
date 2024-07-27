@@ -1,5 +1,5 @@
 
-effect_create_above( ef_smoke, x+10, y+6, 1, c_aqua);
+//effect_create_above( ef_smoke, x+10, y+6, 1, c_aqua);
 CreateRandomWallBreakSound();
 
 

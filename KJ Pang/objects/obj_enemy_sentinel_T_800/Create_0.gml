@@ -13,7 +13,7 @@ isGravityXEnabled = false; // gravity x enabled or not
 isGravityYEnabled = true; // gravity y enabled or not
 gravSpeedX = 0; // x gavity speed
 gravSpeedY = -0.04; // y gavity speed
-hitPoint = 20; //health
+hitPoint = 25; //health
 enemyScore = 170; // score
 jumpHeightMax = -10;
 
@@ -38,8 +38,8 @@ randomize();
 var randomChance = random(1);
 	
 		var landMineDropChance = 0.3;
-		var healthPotionDropChance = 0.3;
-		var nothingDropChance = 0.4; 
+		var healthPotionDropChance = 0.2;
+		var nothingDropChance = 0.5; 
 
 		if (randomChance < landMineDropChance) {
 			CreateItemWithMovement(x, y, 0, -4, obj_item_land_mine);

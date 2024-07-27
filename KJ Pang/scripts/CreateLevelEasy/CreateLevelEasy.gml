@@ -13,8 +13,9 @@ global.hasLevelTime = true; // level timer enabled
 global.hasRoomWallFrame = false; // no wall frames
 global.isRestartLevelAfterDead = true; //restart after death
 global.levelTimeMax = 150; // level's max time
-//global.playerOneDefaultWeapon = weaponType.Pistol;
-//global.level = 54;
+
+//global.playerOneDefaultWeapon = weaponType.RocketLauncher;
+//global.level = 21;
 //global.playerOneSpecialAbility = specialAbilityType.ProtectiveRing; // player 1's special ability
 
 	//Giant normal ball default properties

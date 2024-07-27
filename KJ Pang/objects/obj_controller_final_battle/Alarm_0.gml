@@ -22,6 +22,13 @@ if(global.gameDifficult == gameDifficultType.Hard
 	HandleHardFinalBattleAction();
 }
 
+//nightmare
+if(global.gameDifficult == gameDifficultType.Nightmare
+&& global.level == 54) {
+	actionNumber++;
+	HandleNightmareFinalBattleAction();
+}
+
 //impossible
 if(global.gameDifficult == gameDifficultType.Impossible
 && global.level == 54) {

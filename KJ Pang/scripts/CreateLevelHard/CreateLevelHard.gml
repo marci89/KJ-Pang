@@ -1518,7 +1518,9 @@ function CreateLevelHard17() {
 	
 	//items
 	CreateItem(100, 500, obj_item_invulnerability_potion)
+	CreateItem(160, 500, obj_item_double_sting)
 	CreateItem(924, 500, obj_item_invulnerability_potion)
+	CreateItem(864, 500, obj_item_double_sting)
 	
 }
 

@@ -4,6 +4,11 @@
 
 
 
+
+// Set the game to run at a fixed frame rate
+game_set_speed(60, gamespeed_fps);
+
+
 audio_stop_all(); // stop every sounds before start
 DeactivateFilters(); // deactive all of filters
 CreateRoomTransition(true); // room start animation
@@ -43,6 +48,10 @@ if(global.gameDifficult == gameDifficultType.Normal) {
 
 if(global.gameDifficult == gameDifficultType.Hard) {
 	CreateLevelHard();
+}
+
+if(global.gameDifficult == gameDifficultType.Nightmare) {
+	CreateLevelNightmare();
 }
 
 if(global.gameDifficult == gameDifficultType.Impossible) {

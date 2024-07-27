@@ -1,5 +1,5 @@
 
-effect_create_above( ef_smoke, x+10, y+6, 1, color);
+//effect_create_above( ef_smoke, x+10, y+6, 1, color);
 PlaySound(snd_wall_destroy2, false, 1);
 
 

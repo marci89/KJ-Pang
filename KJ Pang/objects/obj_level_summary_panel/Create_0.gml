@@ -95,10 +95,12 @@ function Init() {
 	if(player == playerIDType.Player1) {	
 		global.playerOneScore += timeScore;
 		global.playerOneScore += lifeScore;
+		global.playerOneScore += levelBonus;
 		totalScore = global.playerOneScore;
 	} else {
 		global.playerTwoScore += timeScore;
 		global.playerTwoScore += lifeScore;
+		global.playerTwoScore += levelBonus;
 		totalScore = global.playerTwoScore;
 	}
 }

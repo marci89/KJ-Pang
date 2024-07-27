@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_australia.mp3",
   "type":0,
-  "volume":0.82,
+  "volume":1.0,
 }
