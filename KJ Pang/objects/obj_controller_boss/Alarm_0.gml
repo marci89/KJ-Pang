@@ -51,7 +51,7 @@ if(global.gameDifficult == gameDifficultType.Hard) {
 	}
 }
 
-if(global.gameDifficult == gameDifficultType.Impossible) {
+if(global.gameDifficult == gameDifficultType.Nightmare) {
 	//droid boss
 	if (global.level == 26) {
 		

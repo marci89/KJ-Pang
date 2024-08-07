@@ -11,3 +11,13 @@ function CreateManananggal(xValue, yValue, enemyStartDirectionType){
 
 #endregion
 
+#region Create manananggal child
+
+function CreateManananggalChild(xValue, yValue){
+	
+	var result = instance_create_layer(xValue, yValue,"Enemy_level2", obj_enemy_manananggal_child);
+	result.SetOriginalProperties();
+}
+
+#endregion
+

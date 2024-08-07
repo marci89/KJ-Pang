@@ -163,7 +163,7 @@ var nothingDropChance = 0.8;
 		var randomChance = random(1);
 		
 		if (randomChance < bouncingPearlDropChance) {
-		CreateItemWithMovement(x, y,0,-4, obj_item_bounced_pearl);
+		CreateItemWithMovement(x, y,0,-4, obj_item_land_mine);
 		
 		} else if (randomChance < (bouncingPearlDropChance + timeFreezeDropChance)) {
 		   CreateItemWithMovement(x, y,0,-4, obj_item_time_freeze);
@@ -175,7 +175,7 @@ var nothingDropChance = 0.8;
 		   CreateItemWithMovement(x, y,0,-4, obj_item_projectile_shield);
 		
 		} else if (randomChance < (bouncingPearlDropChance + timeFreezeDropChance + timeSlowDropChance + projectileShieldDropChance + antiGravDropChance)) {
-		   CreateItemWithMovement(x, y,0,-4, obj_item_antigravity);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_bounced_pearls);
 			
 		} else if (randomChance < (bouncingPearlDropChance + timeFreezeDropChance + timeSlowDropChance + projectileShieldDropChance + antiGravDropChance + nothingDropChance)) {
 		    show_debug_message("No item dropped.");
@@ -199,7 +199,7 @@ var nothingDropChance = 0.8;
 		var randomChance = random(1);
 
 		if (randomChance < bouncingPearlDropChance) {
-			CreateItemWithMovement(x, y,0,-4, obj_item_bounced_pearl);
+			CreateItemWithMovement(x, y,0,-4, obj_item_land_mine);
 		
 		} else if (randomChance < (bouncingPearlDropChance + timeFreezeDropChance)) {
 		    CreateItemWithMovement(x, y,0,-4, obj_item_time_freeze);
@@ -236,7 +236,7 @@ var nothingDropChance = 0.8;
 		var randomChance = random(1);
 		
 		if (randomChance < bouncingPearlDropChance) {
-		CreateItemWithMovement(x, y,0,-4, obj_item_bounced_pearl);
+		CreateItemWithMovement(x, y,0,-4, obj_item_land_mine);
 		
 		} else if (randomChance < (bouncingPearlDropChance + timeFreezeDropChance)) {
 		   CreateItemWithMovement(x, y,0,-4, obj_item_time_freeze);

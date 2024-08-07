@@ -20,6 +20,7 @@ function DeactivateLayers() {
 		layer_set_visible(layer_get_id("Shake"), false);
 		layer_set_visible(layer_get_id("Weather"), false);
 		layer_set_visible(layer_get_id("Distort"), false);
+		layer_set_visible(layer_get_id("Blind"), false);
 		
 		
 }
@@ -47,6 +48,7 @@ function ActivateLayers() {
 		layer_set_visible(layer_get_id("Shake"), true);
 		layer_set_visible(layer_get_id("Weather"), true);
 		layer_set_visible(layer_get_id("Distort"), true);
+		layer_set_visible(layer_get_id("Blind"), true);
 }
 
 #endregion

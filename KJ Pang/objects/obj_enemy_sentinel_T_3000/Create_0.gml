@@ -99,7 +99,7 @@ function CreateRing() {
 	 var num_balls = 10;
 	 var angle_step = 360 / num_balls;
 		 for (var i = 0; i < num_balls; i++) {
-			CreateSentinelProtectingRing(x, y, id ?? noone, (i * angle_step));
+			CreateSentinelProtectingRing(x, y, id ?? noone, (i * angle_step), true);
 		}
 }
 

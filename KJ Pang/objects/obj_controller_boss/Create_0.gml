@@ -23,7 +23,7 @@ if(global.gameDifficult == gameDifficultType.Hard) {
 	}
 }
 
-if(global.gameDifficult == gameDifficultType.Impossible) {
+if(global.gameDifficult == gameDifficultType.Nightmare) {
 	if (global.level == 26) {
 		actionNumber = 2;
 		alarm[0] = 400;

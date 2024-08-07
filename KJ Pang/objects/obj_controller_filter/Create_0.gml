@@ -21,11 +21,16 @@ if(global.gameDifficult == gameDifficultType.Hard) {
 	}
 }
 
+if(global.gameDifficult == gameDifficultType.Nightmare) {
+	if (global.level == 1 || global.level == 4 || global.level == 10 || global.level == 39) {
+		CreateMist();
+	}
+}
+
 
 
 
 #endregion
- 
  
 #region Snow
 
@@ -100,6 +105,21 @@ if(global.gameDifficult == gameDifficultType.Impossible) {
 	if (global.level == 27 || global.level == 28 || global.level == 29) {
 		CreateRain(2);
 	}
+}
+
+#endregion
+
+#region blinding
+
+function CreateBlindFilter() {
+
+PlaySound(snd_blind_shoot, false, 2);
+
+var blindFilter = fx_create("_filter_large_blur");
+fx_set_parameter(blindFilter, "g_Radius", 16);
+layer_set_fx("Blind", blindFilter);
+alarm[1] = 300;
+
 }
 
 #endregion

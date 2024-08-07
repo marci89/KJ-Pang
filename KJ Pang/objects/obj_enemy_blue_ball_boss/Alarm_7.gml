@@ -1,0 +1,1 @@
+isShrinking = false;

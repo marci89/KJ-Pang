@@ -42,7 +42,7 @@ var randomChance = random(1);
 		var nothingDropChance = 0.5; 
 
 		if (randomChance < landMineDropChance) {
-			CreateItemWithMovement(x, y, 0, -4, obj_item_land_mine);
+			CreateItemWithMovement(x, y, 0, -4, obj_item_time_slow);
 		
 		} else if (randomChance < (landMineDropChance + healthPotionDropChance)) {
 			   CreateItemWithMovement(x, y, 0, -4, obj_item_health_potion);

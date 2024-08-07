@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CreateEyeBall",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CreateEyeBall",
+  "parent":{
+    "name":"EyeBall",
+    "path":"folders/Scripts/Creator/Enemy/Ball/EyeBall.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

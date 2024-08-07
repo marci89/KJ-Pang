@@ -11,22 +11,22 @@ var halfSpriteWidth = sprite_width / 2;
 var halfSpriteHeight = sprite_height / 2;
 
 //Left
-if (CheckScreenCollisionLeftWithoutWallForObject(x, halfSpriteWidth)) {
+if (CheckScreenCollisionLeftWithoutWallForObject(x+150, halfSpriteWidth)) {
 	instance_destroy();
 }
 
 //Right
-if (CheckScreenCollisionRightWithoutWallForObject(x, halfSpriteWidth)) {
+if (CheckScreenCollisionRightWithoutWallForObject(x-150, halfSpriteWidth)) {
 	instance_destroy();
 }
 
 //Top
-if (CheckScreenCollisionTopWithoutWallForObject(y, halfSpriteHeight)) {
+if (CheckScreenCollisionTopWithoutWallForObject(y+150, halfSpriteHeight)) {
 	instance_destroy();
 }
 
 //Bottom
-if (CheckScreenCollisionBottomWithoutWallForObject(y, halfSpriteHeight)) {
+if (CheckScreenCollisionBottomWithoutWallForObject(y-150, halfSpriteHeight)) {
 	instance_destroy();
 }
 
@@ -105,13 +105,16 @@ if (place_meeting(x, y + moveY, obj_wall_parent) ) {
 if (bulletDirection == bulletDirectionType.PlayerDirection) {
 	if (global.currentLevelEffect == levelEffectType.TimeFreeze) {
 		speed = 0;
+		image_speed = 0;
 	} else if (global.currentLevelEffect == levelEffectType.TimeSlow) {
 		speed = 0.2;
 	} else  {
 		speed = bulletSpeed;
+		image_speed = 1;
 	}
 }
 
 #endregion
 
 event_inherited();
+

@@ -14,3 +14,5 @@ isWallBreaker = false;
 moveY += bulletSpeed;
 moveX = 0;
 
+SetOriginalProperties();
+

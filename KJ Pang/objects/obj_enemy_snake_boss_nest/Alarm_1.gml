@@ -14,6 +14,7 @@ if(bodyPartNumber > 0) {
 		snakeHead.moveX = snakeMoveX;
 		snakeHead.moveY = snakeMoveY;
 		snakeHead.SetOriginalProperties();
+		snakeHead.hitPoint = hitPoint;
 	}
 	
    var snakePart = instance_create_layer(x, y, "Enemy", obj_enemy_snake_boss_part);

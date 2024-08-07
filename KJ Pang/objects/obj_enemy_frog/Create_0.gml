@@ -20,6 +20,9 @@ image_speed = 0;
 bounceDecay = 1;
 isBounceYEnabled = false;
 
+isReverseGravityEffectEnabled = false;
+
+
 alarm[2] = irandom_range(50, 200);
 
 

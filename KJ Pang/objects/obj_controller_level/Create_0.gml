@@ -5,9 +5,6 @@
 
 
 
-// Set the game to run at a fixed frame rate
-game_set_speed(60, gamespeed_fps);
-
 
 audio_stop_all(); // stop every sounds before start
 DeactivateFilters(); // deactive all of filters

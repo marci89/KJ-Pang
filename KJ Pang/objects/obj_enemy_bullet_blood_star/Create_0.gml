@@ -8,7 +8,7 @@ bulletSpeed = 10;
 isBounced = false;
 color = c_red;
 size = 0;
-isWallBreaker = false;
+isWallBreaker = true;
 
 bulletDirection = bulletDirectionType.PlayerDirection;
 

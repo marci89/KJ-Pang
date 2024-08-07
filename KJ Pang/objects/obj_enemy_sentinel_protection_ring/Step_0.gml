@@ -11,7 +11,17 @@ if (IsInstanceExists(parentEnemy)) {
     instance_destroy(); // Destroy if player doesn't exist
 }
 
+
+
+if(isRed) {
+	sprite_index = spr_enemy_normal_ball_small_red;
+} else {
+	sprite_index = spr_enemy_normal_ball_small_green;
+}
+
 event_inherited();
+
+
 
 
 

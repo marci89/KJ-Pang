@@ -72,7 +72,7 @@ function Init(isDirectionLeft, isDirectionUp) {
 			moveY = random_range(1, 2.3);
 		}
 	}
-		else if(global.gameDifficult == gameDifficultType.Impossible) {		
+		else {		
 		
 		if(isDirectionLeft) {
 			gravSpeedX = -0.2

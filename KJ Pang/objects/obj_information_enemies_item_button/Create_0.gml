@@ -167,7 +167,7 @@ function Init() {
 	}
 	
 	if(buttonId == 23) {
-		image = spr_enemy_colorful_ball;
+		image = spr_enemy_colorful_ball_pic;
 		infoType = enemyInformationType.ColorfulBall;
 		requiredDifficult = gameDifficultType.Nightmare;
 	}
@@ -218,7 +218,38 @@ function Init() {
 		requiredDifficult = gameDifficultType.Nightmare;
 	}
 	
+	
+	
+	
+	
+	
+	
 	if(buttonId == 30) {
+		image = spr_enemy_eye_ball_pic;
+		infoType = enemyInformationType.EyeBall;
+		requiredDifficult = gameDifficultType.Impossible;
+	}
+	
+	if(buttonId == 31) {
+		image = spr_enemy_manananggal_pic_small;
+		infoType = enemyInformationType.ManananggalChild;
+		requiredDifficult = gameDifficultType.Impossible;
+	}
+	
+	if(buttonId == 32) {
+		image = spr_enemy_normal_ball_medium_blue;
+		infoType = enemyInformationType.BlueBallBoss;
+		requiredDifficult = gameDifficultType.Impossible;
+	}
+	
+		if(buttonId == 33) {
+		image = spr_enemy_sentinel_T_Pro_pic;
+		infoType = enemyInformationType.Sentinel_T_pro;
+		requiredDifficult = gameDifficultType.Impossible;
+	}
+	
+	
+	if(buttonId == 34) {
 		image = spr_enemy_expert_guardian_pic_small;
 		infoType = enemyInformationType.ExpertGuardian;
 		requiredDifficult = gameDifficultType.Nightmare;

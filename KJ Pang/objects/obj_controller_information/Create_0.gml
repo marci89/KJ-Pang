@@ -408,15 +408,17 @@ function CreateHardLevelInformation() {
 function CreateNightmareLevelInformation() {
 	
 	if (global.stageLevel == 1) {
-		text = GetLocalizedText("impossibleInfoDesc");
+			room_goto(rm_level);
 	}
 	
 	if (global.stageLevel == 2) {
-		room_goto(rm_level);
+		var enemyPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_enemy_panel);
+		enemyPanelObj.Init(enemyInformationType.EyeBall ?? noone);
 	}
 	
 	if (global.stageLevel == 3) {
-		room_goto(rm_level);
+		var enemyPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_enemy_panel);
+		enemyPanelObj.Init(enemyInformationType.ManananggalChild ?? noone);
 	}
 	
 	if (global.stageLevel == 4) {
@@ -433,7 +435,8 @@ function CreateNightmareLevelInformation() {
 	}
 	
 	if (global.stageLevel == 7) {
-		room_goto(rm_level);
+		var enemyPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_enemy_panel);
+		enemyPanelObj.Init(enemyInformationType.BlueBallBoss ?? noone);
 	}
 	
 	if (global.stageLevel == 8) {
@@ -441,7 +444,8 @@ function CreateNightmareLevelInformation() {
 	}
 	
 	if (global.stageLevel == 9) {
-		room_goto(rm_level);
+		var enemyPanelObj = instance_create_layer(362, infoPanelStartY-30 ?? 0,"Instances", obj_information_enemy_panel);
+		enemyPanelObj.Init(enemyInformationType.Sentinel_T_pro ?? noone);
 	}
 	
 	if (global.stageLevel == 10) {

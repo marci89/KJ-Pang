@@ -127,6 +127,12 @@ enum enemyInformationType{
 	Bat,
 	SeniorGuardian,
 	
+	EyeBall,
+	ManananggalChild,
+	BlueBallBoss,
+	Sentinel_T_pro,
+	
+	
 	ExpertGuardian,
 	
 	

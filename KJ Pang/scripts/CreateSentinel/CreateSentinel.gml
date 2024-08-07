@@ -50,4 +50,20 @@ function CreateSentinel_T_3000(xValue, yValue, moveX, moveY, colorRequest, isCre
 	result.SetOriginalProperties();
 }
 
+function CreateSentinel_T_Pro(xValue, yValue, moveX, moveY, colorRequest, isCreatedOnLevelStart){
+	
+	var result = instance_create_layer(xValue, yValue,"Enemy", obj_enemy_sentinel_T_Pro);
+		
+	if(isCreatedOnLevelStart) {
+		result.blinkDuration = 15;
+		result.isBlinkingStarted = true;
+	}
+	
+	result.moveX = moveX;
+	result.moveY = moveY;
+	result.bulletColor = colorRequest;
+	result.SetOriginalProperties();
+}
+
+
 

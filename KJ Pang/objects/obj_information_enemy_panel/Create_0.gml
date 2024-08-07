@@ -52,6 +52,7 @@ function Init(type) {
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
 		layer_destroy_instances("Weapon");
+		layer_destroy_instances("Enemy_level2");
 		CreateEnemyWallFrame();
 		
 		//enemies
@@ -93,6 +94,7 @@ function Init(type) {
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
 		layer_destroy_instances("Weapon");
+		layer_destroy_instances("Enemy_level2");
 		CreateEnemyWallFrame();
 		
 		//enemies
@@ -113,6 +115,7 @@ function Init(type) {
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
 		layer_destroy_instances("Weapon");
+		layer_destroy_instances("Enemy_level2");
 		CreateEnemyWallFrame();
 		
 		//enemies
@@ -134,6 +137,7 @@ function Init(type) {
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
 		layer_destroy_instances("Weapon");
+		layer_destroy_instances("Enemy_level2");
 		CreateEnemyWallFrame();
 		
 		//enemies
@@ -154,6 +158,7 @@ function Init(type) {
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
 		layer_destroy_instances("Weapon");
+		layer_destroy_instances("Enemy_level2");
 		CreateEnemyWallFrame();
 		
 		//enemies
@@ -175,6 +180,7 @@ function Init(type) {
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
 		layer_destroy_instances("Weapon");
+		layer_destroy_instances("Enemy_level2");
 		
 		//image = spr_enemy_red_ball_boss_pic;
 		image = spr_enemy_red_ball_boss;
@@ -192,6 +198,7 @@ function Init(type) {
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
 		layer_destroy_instances("Weapon");
+		layer_destroy_instances("Enemy_level2");
 		CreateEnemyWallFrame();
 		
 		//enemies
@@ -209,6 +216,7 @@ function Init(type) {
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
 		layer_destroy_instances("Weapon");
+		layer_destroy_instances("Enemy_level2");
 		
 		image = spr_enemy_cacodemon_pic;
 		
@@ -224,6 +232,7 @@ function Init(type) {
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
 		layer_destroy_instances("Weapon");
+		layer_destroy_instances("Enemy_level2");
 		
 		image = spr_enemy_junior_guardian_pic;
 		
@@ -246,6 +255,7 @@ function Init(type) {
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
 		layer_destroy_instances("Weapon");
+		layer_destroy_instances("Enemy_level2");
 		CreateEnemyWallFrame();
 
 		
@@ -282,6 +292,7 @@ function Init(type) {
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
 		layer_destroy_instances("Weapon");
+		layer_destroy_instances("Enemy_level2");
 		CreateEnemyWallFrame();
 		
 		//enemies
@@ -302,6 +313,7 @@ function Init(type) {
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
 		layer_destroy_instances("Weapon");
+		layer_destroy_instances("Enemy_level2");
 		CreateEnemyWallFrame();
 		
 		//enemies
@@ -321,6 +333,7 @@ function Init(type) {
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
 		layer_destroy_instances("Weapon");
+		layer_destroy_instances("Enemy_level2");
 		CreateEnemyWallFrame();
 		
 		//enemies
@@ -340,6 +353,7 @@ function Init(type) {
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
 		layer_destroy_instances("Weapon");
+		layer_destroy_instances("Enemy_level2");
 		CreateEnemyWallFrame();
 		
 		//enemies
@@ -359,6 +373,7 @@ function Init(type) {
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
 		layer_destroy_instances("Weapon");
+		layer_destroy_instances("Enemy_level2");
 		CreateEnemyWallFrame();
 		
 		//enemies
@@ -377,6 +392,7 @@ function Init(type) {
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
 		layer_destroy_instances("Weapon");
+		layer_destroy_instances("Enemy_level2");
 		
 		image = spr_enemy_malwrath_pic;
 		
@@ -392,6 +408,7 @@ function Init(type) {
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
 		layer_destroy_instances("Weapon");
+		layer_destroy_instances("Enemy_level2");
 		
 		image = spr_enemy_frog_boss_pic;
 		
@@ -407,6 +424,7 @@ function Init(type) {
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
 		layer_destroy_instances("Weapon");
+		layer_destroy_instances("Enemy_level2");
 		
 		image = spr_enemy_diablo_pic;
 		
@@ -422,6 +440,7 @@ function Init(type) {
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
 		layer_destroy_instances("Weapon");
+		layer_destroy_instances("Enemy_level2");
 		
 		image = spr_enemy_medior_guardian_pic;
 		
@@ -445,6 +464,7 @@ function Init(type) {
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
 		layer_destroy_instances("Weapon");
+		layer_destroy_instances("Enemy_level2");
 		
 		image = spr_enemy_wretched_pic;
 		
@@ -460,6 +480,7 @@ function Init(type) {
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
 		layer_destroy_instances("Weapon");
+		layer_destroy_instances("Enemy_level2");
 		
 		image = spr_enemy_prope_droid_pic;
 		
@@ -475,6 +496,7 @@ function Init(type) {
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
 		layer_destroy_instances("Weapon");
+		layer_destroy_instances("Enemy_level2");
 		
 		image = spr_enemy_manananggal_pic;
 		
@@ -491,6 +513,7 @@ function Init(type) {
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
 		layer_destroy_instances("Weapon");
+		layer_destroy_instances("Enemy_level2");
 		CreateEnemyWallFrame();
 		
 		//enemies
@@ -511,6 +534,7 @@ function Init(type) {
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
 		layer_destroy_instances("Weapon");
+		layer_destroy_instances("Enemy_level2");
 		
 		image = spr_enemy_senior_guardian_pic;
 		
@@ -527,6 +551,7 @@ function Init(type) {
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
 		layer_destroy_instances("Weapon");
+		layer_destroy_instances("Enemy_level2");
 		
 		image = spr_enemy_expert_guardian_pic;
 		
@@ -544,6 +569,7 @@ function Init(type) {
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
 		layer_destroy_instances("Weapon");
+		layer_destroy_instances("Enemy_level2");
 		CreateEnemyWallFrame();
 		
 		//enemies
@@ -577,6 +603,7 @@ function Init(type) {
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
 		layer_destroy_instances("Weapon");
+		layer_destroy_instances("Enemy_level2");
 		CreateEnemyWallFrame();
 		
 		//enemies
@@ -609,6 +636,7 @@ function Init(type) {
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
 		layer_destroy_instances("Weapon");
+		layer_destroy_instances("Enemy_level2");
 		CreateEnemyWallFrame();
 		
 		//enemies
@@ -628,6 +656,7 @@ function Init(type) {
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
 		layer_destroy_instances("Weapon");
+		layer_destroy_instances("Enemy_level2");
 		CreateEnemyWallFrame();
 		
 		//enemies
@@ -647,6 +676,7 @@ function Init(type) {
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
 		layer_destroy_instances("Weapon");
+		layer_destroy_instances("Enemy_level2");
 		CreateEnemyWallFrame();
 		
 		//enemies
@@ -666,12 +696,94 @@ function Init(type) {
 		layer_destroy_instances("Wall");
 		layer_destroy_instances("Item");
 		layer_destroy_instances("Weapon");
+		layer_destroy_instances("Enemy_level2");
 		CreateEnemyWallFrame();
 		
 		
 		//enemies
 		CreateColorfulBall(x +100, y +400, true, false );
 
+		
+		enemyType = type;
+	}
+	
+	
+	if(type == enemyInformationType.EyeBall) {
+		
+		titleText =  GetLocalizedText("eyeBallTitle"); 
+		descriptionText =  GetLocalizedText("eyeBallDesc");
+		image = noone;
+		
+		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
+		layer_destroy_instances("Weapon");
+		layer_destroy_instances("Enemy_level2");
+		CreateEnemyWallFrame();
+		
+		
+		//enemies
+		CreateEyeBall(x +100, y +400);
+
+		
+		enemyType = type;
+	}
+	
+	if(type == enemyInformationType.ManananggalChild) {
+		
+		titleText =  GetLocalizedText("manananggalChildTitle"); 
+		descriptionText =  GetLocalizedText("manananggalChildDesc");
+		image = noone;
+		
+		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
+		layer_destroy_instances("Weapon");
+		layer_destroy_instances("Enemy_level2");
+		CreateEnemyWallFrame();
+		
+		
+		//enemies
+		CreateManananggalChild(x +100, y +400);
+
+		
+		enemyType = type;
+	}
+	
+	if(type == enemyInformationType.Sentinel_T_pro) {
+		
+		titleText =  GetLocalizedText("sentinelTproTitle"); 
+		descriptionText =  GetLocalizedText("sentinelTproDesc");
+		image = noone;
+		
+		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
+		layer_destroy_instances("Weapon");
+		layer_destroy_instances("Enemy_level2");
+		CreateEnemyWallFrame();
+		
+		
+		//enemies
+		CreateSentinel_T_Pro(x +100, y +400,1,2,c_yellow, false);
+
+		
+		enemyType = type;
+	}
+	
+	if(type == enemyInformationType.BlueBallBoss) {
+		
+		titleText =  GetLocalizedText("blueBossBallTitle"); 
+		descriptionText =  GetLocalizedText("blueBossBallDesc"); 
+		
+		layer_destroy_instances("Enemy");
+		layer_destroy_instances("Wall");
+		layer_destroy_instances("Item");
+		layer_destroy_instances("Weapon");
+		layer_destroy_instances("Enemy_level2");
+		
+		//image = spr_enemy_red_ball_boss_pic;
+		image = spr_enemy_blue_ball_boss;
 		
 		enemyType = type;
 	}

@@ -26,6 +26,7 @@ isTimeSlowEffectEnabled = false;
 isRequiredToKill = false;
 
 //own properties
+isRed = true;
 direction = 0;
 speed = 0;
 radius = 85; // Distance from the player
