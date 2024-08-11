@@ -14,7 +14,7 @@ global.hasRoomWallFrame = false; // no wall frames
 global.isRestartLevelAfterDead = true; //restart after death
 global.levelTimeMax = 420; // level's max time
 //global.playerOneDefaultWeapon = weaponType.MachineGun;
-global.level = 27;
+//global.level = 55;
 
 	//Giant normal ball default properties
 		global.normalBallGiantMoveX = 1.5;
@@ -1766,51 +1766,50 @@ function CreateLevelNightmare27() {
 	LoadBackgroundImage("london_morning"); //Load background
 	CreateWallFrame(wallFrameType.Gray ?? noone); //wall frame creating
 	PlayMusic(snd_drakan_3, true); // play music
-	CreatePlayer(50, 600); // create player
+	CreatePlayer(500, 400); // create player
 	
 	//Enemy
 	
-
-CreateTongueWorm (900,300, -1, 0, true);
-
-	CreateHorizontalBallMedium(950, 100, false, true, true );
-	CreateColorfulBall(510, 300, true, true );
-	CreateColorfulBall(510, 300, false, true );
-	CreateColorfulBall(510, 400, true, true );
+	
 	CreateNormalBallGiant(510, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
-	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_1, true);
+	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_4, true);
 	
-	CreateNormalBallLargeShield(290, 100, -global.normalBallLargeMoveY, global.normalBallLargeMoveY,
-	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
-	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_1, true,2);
+	CreateSuperBallGiant(450, 100, -4, -4,
+	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_2, true);
 	
-	CreateNormalBallLargeShield(740, 100, global.normalBallLargeMoveY, global.normalBallLargeMoveY,
-	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
-	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_1, true, 3);
+		
+	CreateManananggalChild(100, 100);
+	CreateManananggalChild(500, 100);
+	CreateManananggalChild(900, 100);
+
 	
-	//wall	
-	CreateWallMany(146,100, wallType.Red,wallCreatorDirectionType.Bottom,14);
-	CreateWallDestroyableMany(378,100,wallCreatorDirectionType.Bottom,14);
-	CreateWallDestroyableMany(610,100,wallCreatorDirectionType.Bottom,14);
-	CreateWallMany(842,100, wallType.Red,wallCreatorDirectionType.Bottom,14);
+
+	
+	//wall
+	CreateWallMany(0, 700 - (global.wallHeight* 1), wallType.Red, wallCreatorDirectionType.Right, 32);
+	CreateWallMany(0, 700 - (global.wallHeight* 2), wallType.Red, wallCreatorDirectionType.Right, 32);
+	CreateWallMany(0, 700 - (global.wallHeight* 3), wallType.Red, wallCreatorDirectionType.Right, 32);
+
 
 	
 	//items
 	
-	CreateItem(260, 600, obj_item_double_sting);
-	CreateItem(500, 600, obj_item_health_potion);
-	CreateItem(550, 600, obj_item_health_potion);
-	
-	CreateLifePoint(830, 640, lifePointType.Red);
-	CreateLifePoint(870, 640, lifePointType.Red);
-	CreateLifePoint(910, 640, lifePointType.Red);
-	CreateLifePoint(950, 640, lifePointType.Red);
-	CreateLifePoint(990, 640, lifePointType.Red);
-	
+	CreateItem(700, 400, obj_item_projectile_shield);
 
-
+	
+	CreateFoodByImageIndex(30, 400, 8)
+	CreateFoodByImageIndex(70, 400, 8)
+	CreateFoodByImageIndex(110, 400, 8)
+	CreateFoodByImageIndex(150, 400, 8)
+	
+	CreateFoodByImageIndex(870, 400, 10);
+	CreateFoodByImageIndex(910, 400, 10);
+	CreateFoodByImageIndex(950, 400, 10);
+	CreateFoodByImageIndex(990, 400, 10);
 }
+	
+
 
 #endregion
 
@@ -1822,62 +1821,45 @@ function CreateLevelNightmare28() {
 	LoadBackgroundImage("london_twilight"); //Load background
 	CreateWallFrame(wallFrameType.Gray ?? noone); //wall frame creating
 	PlayMusic(snd_drakan_3, true); // play music
-	CreatePlayer(100, 600); // create player
+	CreatePlayer(500, 600); // create player
 	
-	//Enemy
+		CreateNormalBallGiant(510, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
+	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
+	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_4, true);
 	
-	CreateWretchedChild(100, 100);
-	CreateWretchedChild(200, 100);
-	CreateWretchedChild(300, 100);
-	CreateWretchedChild(400, 100);
-	CreateWretchedChild(500, 100);
-	CreateWretchedChild(600, 100);
-	CreateWretchedChild(700, 100);
-	CreateWretchedChild(800, 100);
-	CreateWretchedChild(900, 100);
+	CreateSuperBallGiant(450, 100, -4, -4,
+	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_2, true);
+	
+		
+	CreateEyeBall(300,100);
+	CreateEyeBall(700,100);
+	CreateSpaceDistorer(500, 100, true, true );
 
-	CreateNormalBallMedium(140, 400, global.normalBallMediumMoveX, global.normalBallMediumMoveY,
-	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
-	normalBallColorType.Blue, true);
-	
-	CreateNormalBallMedium(850, 400, -global.normalBallMediumMoveX, global.normalBallMediumMoveY,
-	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
-	normalBallColorType.Blue, true);
-	
 
+	
 
 	
 	//wall
-	//CreateWallMany(100, 470, wallType.Blue, wallCreatorDirectionType.Right, 25);
-	CreateWallMany(100, 470, wallType.Blue, wallCreatorDirectionType.Right, 3);
-	CreateWallDestroyableMany(196, 470, wallCreatorDirectionType.Right, 4);
-	CreateWallMany(324, 470, wallType.Blue, wallCreatorDirectionType.Right, 11);
-	CreateWallDestroyableMany(676, 470, wallCreatorDirectionType.Right, 4);
-	CreateWallMany(804, 470, wallType.Blue, wallCreatorDirectionType.Right, 3);
+	CreateWallMany(0, 700 - (global.wallHeight* 1), wallType.Blue, wallCreatorDirectionType.Right, 32);
+	CreateWallMany(0, 700 - (global.wallHeight* 2), wallType.Blue, wallCreatorDirectionType.Right, 32);
+	CreateWallMany(0, 700 - (global.wallHeight* 3), wallType.Blue, wallCreatorDirectionType.Right, 32);
 	
-	CreateWallMany(164, 230, wallType.Blue, wallCreatorDirectionType.Right, 21);
+	CreateWallMany(0, 700 - (global.wallHeight* 4), wallType.Blue, wallCreatorDirectionType.Top, 18);
+	CreateWallMany(32, 700 - (global.wallHeight* 4), wallType.Blue, wallCreatorDirectionType.Top, 18);
+	CreateWallMany(64, 700 - (global.wallHeight* 4), wallType.Blue, wallCreatorDirectionType.Top, 18);
 	
+	CreateWallMany(992, 700 - (global.wallHeight* 4), wallType.Blue, wallCreatorDirectionType.Top, 18);
+	CreateWallMany(960, 700 - (global.wallHeight* 4), wallType.Blue, wallCreatorDirectionType.Top, 18);
+	CreateWallMany(928, 700 - (global.wallHeight* 4), wallType.Blue, wallCreatorDirectionType.Top, 18);
 
-		
+
+	
 	//items
-	CreateItem(450, 600, obj_item_machine_gun);
-	CreateItem(350, 600, obj_item_machine_gun);
-	CreateItem(580, 600, obj_item_energy_shield);
 	
-	CreateFoodByImageIndex(200, 400, 8);
-	CreateFoodByImageIndex(300, 400, 10);
-	CreateFoodByImageIndex(400, 400, 8);
-	CreateFoodByImageIndex(500, 400, 10);
-	CreateFoodByImageIndex(600, 400, 8);
-	CreateFoodByImageIndex(700, 400, 10);
-	CreateFoodByImageIndex(800, 400, 8);
+	CreateItem(700, 400, obj_item_energy_shield);
+	CreateItem(300, 400, obj_item_energy_shield);
+
 	
-	CreateLifePoint(380, 100, lifePointType.Blue);
-	CreateLifePoint(430, 100, lifePointType.Blue);
-	CreateLifePoint(480, 100, lifePointType.Blue);
-	CreateLifePoint(530, 100, lifePointType.Blue);
-	CreateLifePoint(580, 100, lifePointType.Blue);
-	CreateLifePoint(630, 100, lifePointType.Blue);
 
 	
 }
@@ -1892,43 +1874,47 @@ function CreateLevelNightmare29() {
 	LoadBackgroundImage("london_night"); //Load background
 	CreateWallFrame(wallFrameType.Gray ?? noone); //wall frame creating
 	PlayMusic(snd_drakan_3, true); // play music
-	CreatePlayer(480, 600); // create player
+	CreatePlayer(500, 600); // create player
 	
-	//Enemy
-	
-	
-	
-	CreateNormalBallGiant(450, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
+		CreateNormalBallGiant(510, 200, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
 	normalBallColorType.Green, normalBallGiantDropItemType.DropQualityLevel_4, true);
 	
-	CreateNormalBallGiant(600, 100, -global.normalBallGiantMoveX, global.normalBallGiantMoveY,
-	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
-	normalBallColorType.Green, normalBallGiantDropItemType.DropQualityLevel_4, true);
+	CreateSuperBallGiant(450, 200, -4, -4,
+	normalBallColorType.Green, normalBallGiantDropItemType.DropQualityLevel_2, true);
 	
-	CreateYellowBallGiant(500, 300, false, true );
+
 	
+	CreateSentinel_T_X(300, 200,2,3,c_yellow, true );
+	CreateSentinel_T_X(700, 200,-2,3,c_yellow, true );
+
+
+	
+
 	
 	//wall
-	CreateWallMany(432, 470, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(224, 200, wallType.Green, wallCreatorDirectionType.Right, 1);
-	CreateWallMany(800, 200, wallType.Green, wallCreatorDirectionType.Left, 1);
+	CreateWallMany(0, 700 - (global.wallHeight* 1), wallType.Green, wallCreatorDirectionType.Right, 32);
+	CreateWallMany(0, 700 - (global.wallHeight* 2), wallType.Green, wallCreatorDirectionType.Right, 32);
+	CreateWallMany(0, 700 - (global.wallHeight* 3), wallType.Green, wallCreatorDirectionType.Right, 32);
 	
-	CreateWallMany(0, 700-global.wallWidth, wallType.Green, wallCreatorDirectionType.Right, 12);
-	CreateWallMany(992, 700-global.wallWidth, wallType.Green, wallCreatorDirectionType.Left, 12);
-		
+	CreateWallMany(0, 700 - (global.wallHeight* 4), wallType.Green, wallCreatorDirectionType.Top, 18);
+	CreateWallMany(32, 700 - (global.wallHeight* 4), wallType.Green, wallCreatorDirectionType.Top, 18);
+	CreateWallMany(64, 700 - (global.wallHeight* 4), wallType.Green, wallCreatorDirectionType.Top, 18);
+	
+	CreateWallMany(992, 700 - (global.wallHeight* 4), wallType.Green, wallCreatorDirectionType.Top, 18);
+	CreateWallMany(960, 700 - (global.wallHeight* 4), wallType.Green, wallCreatorDirectionType.Top, 18);
+	CreateWallMany(928, 700 - (global.wallHeight* 4), wallType.Green, wallCreatorDirectionType.Top, 18);
+	
+	CreateWallMany(96, 0 + (global.wallHeight* 0), wallType.Green, wallCreatorDirectionType.Right, 26);
+	CreateWallMany(96, 0 + (global.wallHeight* 1), wallType.Green, wallCreatorDirectionType.Right, 26);
+	CreateWallMany(96, 0 + (global.wallHeight* 2), wallType.Green, wallCreatorDirectionType.Right, 26);
+
+
+	
 	//items
-	CreateItem(510, 400, obj_item_first_aid_kit);
 	
-	CreateLifePoint(30, 640, lifePointType.Green);
-	CreateLifePoint(70, 640, lifePointType.Green);
-	CreateLifePoint(110, 640, lifePointType.Green);
-	CreateLifePoint(150, 640, lifePointType.Green);
-	
-	CreateFoodByImageIndex(870, 640, 10);
-	CreateFoodByImageIndex(910, 640, 10);
-	CreateFoodByImageIndex(950, 640, 10);
-	CreateFoodByImageIndex(990, 640, 10);
+	CreateItem(300, 400, obj_item_health_potion);
+	CreateItem(700, 400, obj_item_projectile_shield);
 }
 
 #endregion
@@ -1944,43 +1930,49 @@ function CreateLevelNightmare30() {
 	CreatePlayer(150, 600); // create player
 	
 	//Enemy
-	CreateSuperBallGiant(80, 100, 3, -5,
+	CreateSuperBallGiant(80, 50, 3, -5,
 	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_2, true);
 	
-	CreateNormalBallGiant(900, 100, -global.normalBallGiantMoveX, global.normalBallGiantMoveY,
+	CreateNormalBallGiant(900, 50, -global.normalBallGiantMoveX, global.normalBallGiantMoveY,
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
 	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_4, true);
 
 
 
 
-CreateAntiGravityBallMedium(600, 100, true, true, true );
-CreateAntiGravityBallMedium(600, 100, false, true, true );
+CreateAntiGravityBallMedium(300, 400, true, true, true );
+CreateAntiGravityBallMedium(600, 400, false, true, true );
 CreateAntiGravityBallMedium(750, 100, false, true, true );
+
+	CreateTongueWorm(100,100, 1, 0, true);
+	CreateTongueWorm(900,100, 1, 0, true);
 	
 	//wall
-	CreateWallMany(142 ,380 , wallType.Red, wallCreatorDirectionType.Right, 1);
-	CreateWallMany(882 ,380 , wallType.Red, wallCreatorDirectionType.Left, 1);
-	
-	CreateWallDestroyableMany(256, 204, wallCreatorDirectionType.Right, 17);
-	CreateWallMany(256 ,0 , wallType.Red, wallCreatorDirectionType.Bottom, 6);
-	CreateWallMany(768 ,0 , wallType.Red, wallCreatorDirectionType.Bottom, 6);
-
-	
+CreateWallMany(128, 150, wallType.Red, wallCreatorDirectionType.Right, 5);  // Horizontal wall at the top left
+CreateWallMany(288, 200, wallType.Red, wallCreatorDirectionType.Bottom, 3); // Vertical wall extending downwards
+CreateWallDestroyableMany(480, 280, wallCreatorDirectionType.Right, 3);     // Horizontal destroyable wall
+CreateWallMany(448, 280, wallType.Red, wallCreatorDirectionType.Right, 1);    // Vertical wall extending upwards
+CreateWallMany(640, 250, wallType.Red, wallCreatorDirectionType.Top, 3);    // Vertical wall extending upwards
+CreateWallMany(704, 150, wallType.Red, wallCreatorDirectionType.Right, 5);  // Horizontal wall at the top right
+CreateWallDestroyableMany(750, 350, wallCreatorDirectionType.Right, 3);     // Horizontal destroyable wall near bottom right
+CreateWallMany(768, 550, wallType.Red, wallCreatorDirectionType.Right, 3);  // Horizontal wall near the bottom middle
+CreateWallMany(512, 600, wallType.Red, wallCreatorDirectionType.Top, 4);    // Vertical wall in the middle of the screen
+CreateWallDestroyableMany(320, 500, wallCreatorDirectionType.Right, 2);     // Horizontal destroyable wall near bottom left
+CreateWallMany(128, 600, wallType.Red, wallCreatorDirectionType.Right, 5);
 	//items
-	CreateItem(500, 600, obj_item_health_potion);
+	CreateItem(900, 600, obj_item_first_aid_kit);
 
 	
 
-	CreateLifePoint(320, 50, lifePointType.Red);
-	CreateFoodByImageIndex(370, 50, 6);
-	CreateLifePoint(420, 50, lifePointType.Red);
-	CreateFoodByImageIndex(470, 50, 6);
-	CreateLifePoint(520, 50, lifePointType.Red);
-	CreateFoodByImageIndex(570, 50, 6);
-	CreateLifePoint(620, 50, lifePointType.Red);
-	CreateFoodByImageIndex(670, 50, 6);
 	CreateLifePoint(720, 50, lifePointType.Red);
+	CreateFoodByImageIndex(140, 50, 6);
+	CreateLifePoint(760, 50, lifePointType.Red);
+	CreateFoodByImageIndex(180, 50, 6);
+	CreateLifePoint(800, 50, lifePointType.Red);
+	CreateFoodByImageIndex(220, 50, 6);
+	CreateLifePoint(840, 50, lifePointType.Red);
+	CreateFoodByImageIndex(260, 50, 6);
+
 
 
 }
@@ -1995,13 +1987,13 @@ function CreateLevelNightmare31() {
 	LoadBackgroundImage("barcelona_twilight"); //Load background
 	CreateWallFrame(wallFrameType.Purple ?? noone); //wall frame creating
 	PlayMusic(snd_unreal4, true); // play music
-	CreatePlayer(800, 600); // create player
+	CreatePlayer(100, 600); // create player
 	
 	
-		CreateMalwrath(1350, 300, enemyStartDirectionType.Right);
+		CreateCacodemon(1350, 300, enemyStartDirectionType.Right);
 		
 	//Enemy
-	CreateNormalBallLarge(930, 70, -global.normalBallLargeMoveX, global.normalBallLargeMoveY,
+	CreateNormalBallLarge(930, 50, -global.normalBallLargeMoveX, global.normalBallLargeMoveY,
 	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
 	normalBallColorType.Blue, normalBallGiantDropItemType.Nothing, true);
 	
@@ -2032,23 +2024,26 @@ function CreateLevelNightmare31() {
 	
 
 	
-
+//wall
+CreateWallMany(100, 100, wallType.Blue, wallCreatorDirectionType.Right, 6);  // Horizontal wall at the top left
+CreateWallMany(100, 100, wallType.Blue, wallCreatorDirectionType.Bottom, 5); // Vertical wall extending downwards
+CreateWallDestroyableMany(300, 200, wallCreatorDirectionType.Right, 3);     // Horizontal destroyable wall
+CreateWallMany(450, 150, wallType.Blue, wallCreatorDirectionType.Bottom, 4); // Vertical wall in the middle
+CreateWallMany(550, 400, wallType.Blue, wallCreatorDirectionType.Right, 5);  // Horizontal wall in the middle-right
+CreateWallMany(550, 400, wallType.Blue, wallCreatorDirectionType.Top, 3);    // Vertical wall extending upwards from the middle-right
+CreateWallDestroyableMany(700, 250, wallCreatorDirectionType.Right, 3);     // Horizontal destroyable wall near the center
+CreateWallMany(850, 100, wallType.Blue, wallCreatorDirectionType.Right, 3);  // Horizontal wall at the top-right
+CreateWallMany(850, 550, wallType.Blue, wallCreatorDirectionType.Left, 4);   // Horizontal wall at the bottom-right extending left
+CreateWallDestroyableMany(650,550, wallCreatorDirectionType.Top, 4);       // Vertical destroyable wall near bottom-middle
+CreateWallMany(300, 500, wallType.Blue, wallCreatorDirectionType.Right, 4);  // Horizontal wall near bottom-left
+CreateWallDestroyableMany(300, 534, wallCreatorDirectionType.Top, 2); 
 	
 	
 		
 	//items
 
-	CreateItem(590, 300, obj_item_health_potion);
+	CreateItem(150, 50, obj_item_health_potion);
 	
-
-	
-	
-	CreateLifePoint(190, 100, lifePointType.Blue);
-	CreateLifePoint(250, 100, lifePointType.Blue);
-	CreateLifePoint(310, 100, lifePointType.Blue);
-	CreateLifePoint(370, 100, lifePointType.Blue);
-	CreateLifePoint(620, 100, lifePointType.Blue);
-	CreateLifePoint(650, 100, lifePointType.Blue);
 	
 
 	
@@ -2064,60 +2059,48 @@ function CreateLevelNightmare32() {
 	LoadBackgroundImage("barcelona_night"); //Load background
 	CreateWallFrame(wallFrameType.Purple ?? noone); //wall frame creating
 	PlayMusic(snd_unreal4, true); // play music
-	CreatePlayer(300, 600); // create player
+	CreatePlayer(100, 400); // create player
 	
 	//Enemy
-	
-	CreateNormalBallGiant(100, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
-	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
-	normalBallColorType.Green, normalBallGiantDropItemType.DropQualityLevel_4, true);
 	
 	CreateNormalBallGiant(924, 100, -global.normalBallGiantMoveX, global.normalBallGiantMoveY,
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
 	normalBallColorType.Green, normalBallGiantDropItemType.DropQualityLevel_4, true);
 	
-CreateSentinel_T_X(500, 100,-2,6,c_yellow, true );
-CreateSentinel_T_X(500, 100,2,6,c_yellow, true );
+CreateSentinel_T_Pro(500, 50,-2,6,c_lime, true );
+
+
+
+	CreateWorm(100,10, 1, 0, true);
+	CreateWorm(150,10, 2, 0, true);
 	
 	
 	//wall
 
-	//up
-	CreateWallDestroyableMany(124, 200, wallCreatorDirectionType.Left, 1);
-	CreateWallDestroyableMany(900, 200, wallCreatorDirectionType.Right, 1);
+	CreateWallMany(50, 50, wallType.Green, wallCreatorDirectionType.Right, 8);     // Long horizontal wall at the top-left
+CreateWallMany(50, 50, wallType.Green, wallCreatorDirectionType.Bottom, 6);    // Long vertical wall at the top-left
 
-	//left
-	CreateWallMany(224, 500, wallType.Green, wallCreatorDirectionType.Right, 1);
-	CreateWallDestroyableMany(256, 500, wallCreatorDirectionType.Right, 3);
-	CreateWallMany(352, 500, wallType.Green, wallCreatorDirectionType.Right, 3);
-	CreateWallMany(192, 534, wallType.Green, wallCreatorDirectionType.Right, 1);
-	
-	//right
-	CreateWallMany(768, 500, wallType.Green, wallCreatorDirectionType.Left, 1);
-	CreateWallDestroyableMany(736, 500, wallCreatorDirectionType.Left, 3);
-	CreateWallMany(736 - (global.wallWidth *3), 500, wallType.Green, wallCreatorDirectionType.Left, 3);
-	CreateWallMany(800, 534, wallType.Green, wallCreatorDirectionType.Left, 1);
-	
-	//bottom
-	CreateWallMany(736 - (global.wallWidth *6), 466, wallType.Green, wallCreatorDirectionType.Top, 4);
-	CreateWallMany(352 + (global.wallWidth *3), 466, wallType.Green, wallCreatorDirectionType.Top, 4);
-	
-	CreateWallDestroyableMany(352 + (global.wallWidth *4), 398, wallCreatorDirectionType.Right, 2);
-	CreateWallDestroyableMany(352 + (global.wallWidth *4), 364, wallCreatorDirectionType.Right, 2);
-		
+CreateWallDestroyableMany(350, 50, wallCreatorDirectionType.Bottom, 4);      // Vertical destroyable wall near the top-middle
+CreateWallMany(400, 150, wallType.Green, wallCreatorDirectionType.Right, 4);   // Horizontal wall in the middle-left
+
+CreateWallMany(600, 300, wallType.Green, wallCreatorDirectionType.Top, 3);     // Vertical wall in the middle of the screen
+CreateWallDestroyableMany(600, 300, wallCreatorDirectionType.Right, 3);      // Horizontal destroyable wall extending from the middle wall
+
+CreateWallMany(800, 200, wallType.Green, wallCreatorDirectionType.Bottom, 5);  // Vertical wall in the middle-right
+CreateWallDestroyableMany(700, 450, wallCreatorDirectionType.Right, 4);      // Horizontal destroyable wall near the bottom-middle
+
+CreateWallMany(50, 500, wallType.Green, wallCreatorDirectionType.Right, 8);    // Long horizontal wall at the bottom-left
+CreateWallMany(400, 500, wallType.Green, wallCreatorDirectionType.Top, 2);     // Short vertical wall near bottom-left
+CreateWallDestroyableMany(500, 500, wallCreatorDirectionType.Right, 3);      // Horizontal destroyable wall near bottom-left
+
+CreateWallMany(920, 600, wallType.Green, wallCreatorDirectionType.Right, 3); 
+
+
 	//items
-	CreateItem(520, 600, obj_item_projectile_shield);
-	CreateItem(510, 100, obj_item_first_aid_kit);
-	
-	CreateLifePoint(250, 400, lifePointType.Green);
-	CreateLifePoint(300, 400, lifePointType.Green);
-	CreateLifePoint(350, 400, lifePointType.Green);
-	CreateLifePoint(400, 400, lifePointType.Green);
-	
-	CreateFoodByImageIndex(620, 400, 6);
-	CreateFoodByImageIndex(670, 400, 6);
-	CreateFoodByImageIndex(720, 400, 6);
-	CreateFoodByImageIndex(770, 400, 6);
+	CreateItem(250, 400, obj_item_projectile_shield);
+	CreateItem(300, 400, obj_item_double_sting);
+	CreateItem(940, 400, obj_item_first_aid_kit);
+
 }
 
 #endregion
@@ -2129,57 +2112,72 @@ function CreateLevelNightmare33() {
 	// init
 	LoadBackgroundImage("athens_morning"); //Load background
 	CreateWallFrame(wallFrameType.Green ?? noone); //wall frame creating
-	PlayMusic(snd_unreal5, true); // play music
+	PlayMusic(snd_in_my_dreams, true); // play music
 	CreatePlayer(20, 600); // create player
 	
 	//Enemy
-CreateSentinel_T_800(200, 100,2,4,c_yellow, true );
-CreateSentinel_T_X(400, 100,2,5,c_yellow, true );
-CreateSentinel_T_X(600, 100,2,5,c_yellow, true );
-CreateSentinel_T_3000(800, 100,2,5,c_yellow, true );
+	CreateTongueWorm(170,200, 2, 0, true);
+	CreateTongueWorm(250,200, 2, 0, true);
+	
+	CreateTongueWorm(700,200, 2, 0, true);
+	CreateTongueWorm(780,200, 2, 0, true);
+	
+	CreateBlackBallLarge(500, 300, true, true );
+	CreateYellowBallGiant(600, 400, false, true );
+	
+		CreateNormalBallGiant(250, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
+	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
+	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_5, true);
+	
+			CreateNormalBallGiant(750, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
+	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
+	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_5, true);
+	
+	
+	CreateHorizontalBallMedium(900, 500, false, true, true );
+	
+		CreateAntiGravityBallMedium(500, 500, true, true, true );
+		
+	CreateNormalBallMediumShield(900, 500, -global.normalBallMediumMoveX, global.normalBallMediumMoveY,
+	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
+	normalBallColorType.Red, true,4);
 
 	
 	//wall
-	var firstRowWallX = 32;
 	
-	for (var i = 0; i < 8; i++) {
-		CreateWallMany(firstRowWallX,240 , wallType.Red, wallCreatorDirectionType.Right, 1);
-		firstRowWallX += 64;
-	}
-	
-	
+		CreateWallMany(150, 250, wallType.Red, wallCreatorDirectionType.Right, 9);
+		CreateWallMany(874, 250, wallType.Red, wallCreatorDirectionType.Left, 9);
+		
+		CreateWallMany(268, 284, wallType.Red, wallCreatorDirectionType.Bottom, 8);
+		CreateWallMany(756, 284, wallType.Red, wallCreatorDirectionType.Bottom, 8);
+
+
 	
 	//items
-	CreateItem(290, 600, obj_item_first_aid_kit);
-	CreateItem(160, 600, obj_item_projectile_shield);
+	CreateItem(980, 600, obj_item_magnet);
+
 	
 	CreateFoodByImageIndex(210, 640, 4);
 	CreateFoodByImageIndex(240, 640, 4);
 	CreateFoodByImageIndex(340, 640, 4);
 	CreateFoodByImageIndex(370, 640, 4);
-	CreateLifePoint(390, 640, lifePointType.Red);
-	CreateLifePoint(430, 640, lifePointType.Red);
+
 	
 	CreateFoodByImageIndex(470, 640, 4);
 	CreateFoodByImageIndex(490, 640, 4);
-	CreateLifePoint(520, 640, lifePointType.Red);
-	CreateLifePoint(560, 640, lifePointType.Red);
+
 
 	CreateFoodByImageIndex(600, 640, 4);
 	CreateFoodByImageIndex(625, 640, 4);
-	CreateLifePoint(650, 640, lifePointType.Red);
-	CreateLifePoint(690, 640, lifePointType.Red);
+
 	
 	CreateFoodByImageIndex(720, 640, 4);
 	CreateFoodByImageIndex(750, 640, 4);
-	CreateLifePoint(780, 640, lifePointType.Red);
-	CreateLifePoint(820, 640, lifePointType.Red);
+
 	CreateFoodByImageIndex(850, 640, 4);
 	CreateFoodByImageIndex(880, 640, 4);
-	CreateLifePoint(910, 640, lifePointType.Red);
-	CreateLifePoint(950, 640, lifePointType.Red);
-	CreateFoodByImageIndex(980, 640, 4);
-	CreateFoodByImageIndex(1010, 640, 4);
+
+
 
 }
 
@@ -2192,53 +2190,37 @@ function CreateLevelNightmare34() {
 	// init
 	LoadBackgroundImage("athens_twilight"); //Load background
 	CreateWallFrame(wallFrameType.Green ?? noone); //wall frame creating
-	PlayMusic(snd_unreal5, true); // play music
+	PlayMusic(snd_in_my_dreams, true); // play music
 	CreatePlayer(500, 600); // create player
 	
 	//Enemy
-	CreateNormalBallGiant(500, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
-	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
-	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_2, true);
-	
-	CreateYellowBallGiant(100, 100, false, true );
-	CreateYellowBallGiant(900, 100, true, true );
+CreateRedBallBoss(150,0);
+CreateBlueBallBoss(500,-3);
+
+		CreateNormalBallLargeShield(850, 200,  global.normalBallLargeMoveX, global.normalBallLargeMoveY,
+	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
+	normalBallColorType.Green, normalBallGiantDropItemType.DropQualityLevel_5, true,4);
+
 	
 
 
 	
 	//wall
-	CreateWallDestroyableMany(384, 216, wallCreatorDirectionType.Right, 1);
-	CreateWallDestroyableMany(384 + (global.wallWidth *7), 216, wallCreatorDirectionType.Right, 1);
-	
-	CreateWallDestroyableMany(352, 166, wallCreatorDirectionType.Right, 2);
-	CreateWallDestroyableMany(352 + (global.wallWidth *8), 166, wallCreatorDirectionType.Right, 2);
-	
-	CreateWallDestroyableMany(320, 116, wallCreatorDirectionType.Right, 3);
-	CreateWallDestroyableMany(320 + (global.wallWidth *9), 116, wallCreatorDirectionType.Right, 3);
-	
-	CreateWallDestroyableMany(288, 66, wallCreatorDirectionType.Right, 4);
-	CreateWallDestroyableMany(288 + (global.wallWidth *10), 66, wallCreatorDirectionType.Right, 4);
-		
-	//first row
-	CreateWallMany(416, 250, wallType.Blue, wallCreatorDirectionType.Right, 6);
-		
-	//secondrow
-	CreateWallMany(224, 480, wallType.Blue, wallCreatorDirectionType.Right, 2);
-	CreateWallMany(800, 480, wallType.Blue, wallCreatorDirectionType.Left, 2);
 
-	
-	//last row
-	CreateWallDestroyableMany(480, 550, wallCreatorDirectionType.Right, 2);
+		
+
+	CreateWallMany(300, 450, wallType.Red, wallCreatorDirectionType.Right, 1);
+	CreateWallMany(400, 450, wallType.Blue, wallCreatorDirectionType.Right, 1);
+	CreateWallMany(500, 450, wallType.Green, wallCreatorDirectionType.Right, 1);
+	CreateWallMany(600, 450, wallType.Red, wallCreatorDirectionType.Right, 1);
+		
+
 		
 	//items
-	CreateFoodByImageIndex(240, 250, 4);
-	CreateFoodByImageIndex(280, 250, 4);
-	CreateFoodByImageIndex(820, 250, 4);
-	CreateFoodByImageIndex(780, 250, 4);
+	CreateItem(900, 600, obj_item_first_aid_kit);
+	CreateItem(850, 600, obj_item_double_sting);
+	CreateItem(50, 600, obj_item_energy_shield);
 	
-	CreateFoodByImageIndex(460, 100, 4);
-	CreateFoodByImageIndex(510, 100, 4);
-	CreateFoodByImageIndex(560, 100, 4);
 }
 
 #endregion
@@ -2250,70 +2232,47 @@ function CreateLevelNightmare35() {
 	// init
 	LoadBackgroundImage("athens_night"); //Load background
 	CreateWallFrame(wallFrameType.Green ?? noone); //wall frame creating
-	PlayMusic(snd_unreal5, true); // play music
-	CreatePlayer(300, 600); // create player
+	PlayMusic(snd_in_my_dreams, true); // play music
+	CreatePlayer(50, 600); // create player
 	
 	//Enemy
 	
 
 	
-	CreateNormalBallSmall(40, 40, -global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
-	normalBallColorType.Green,  true);
+
 	
 		
-	CreateNormalBallMedium(500, 350, -global.normalBallMediumMoveX, global.normalBallMediumMoveY,
+	CreateNormalBallMediumShield(500, 350, -global.normalBallMediumMoveX, global.normalBallMediumMoveY,
 	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
-	normalBallColorType.Red, true);
+	normalBallColorType.Green, true,4);
 	
-	CreateNormalBallMedium(500, 350, global.normalBallMediumMoveX, global.normalBallMediumMoveY,
+	CreateNormalBallMediumShield(500, 350, global.normalBallMediumMoveX, global.normalBallMediumMoveY,
 	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
-	normalBallColorType.Red, true);
+	normalBallColorType.Green, true,4);
 	
-	CreateYellowBallGiant(900, 500, false, true );
-	CreateYellowBallGiant(400, 100, true, true );
+	CreateBlueBallBoss(500,3);
+	
+			CreateAntiGravityBallMedium(100, 100, false, false, true );
+					CreateAntiGravityBallMedium(900, 100, true, false, true );
+	
+	
 	
 	
 	
 	
 	//wall
-	CreateWallDestroyableMany(0, 68, wallCreatorDirectionType.Right, 3);
-	CreateWallMany(96, 34, wallType.Green, wallCreatorDirectionType.Top, 2);
-	
-	CreateWallMany(0, 400, wallType.Green, wallCreatorDirectionType.Right, 3);
-	
-	
-	CreateWallMany(100, 410, wallType.Green, wallCreatorDirectionType.Bottom, 4);
-	
-	CreateWallMany(350, 550, wallType.Green, wallCreatorDirectionType.Right, 6);
-	CreateWallMany(350 + (global.wallWidth*6), 550, wallType.Green, wallCreatorDirectionType.Top, 6);
-
-
-	CreateWallMany(1024 -global.wallWidth, 700-global.wallHeight, wallType.Green, wallCreatorDirectionType.Left, 9);
-	CreateWallMany(1024 - (global.wallWidth*4), 200, wallType.Green, wallCreatorDirectionType.Left, 5);
-	CreateWallMany(1024 - (global.wallWidth*9), 200, wallType.Green, wallCreatorDirectionType.Bottom, 5);
-	
-	CreateWallMany(1024 - (global.wallWidth*21), 220, wallType.Green, wallCreatorDirectionType.Left, 10);
-	
-
+		CreateWallMany(150, 550, wallType.Red, wallCreatorDirectionType.Right, 9);
+		CreateWallMany(874, 550, wallType.Red, wallCreatorDirectionType.Left, 9);
+		
+		CreateWallMany(280, 516, wallType.Red, wallCreatorDirectionType.Top, 8);
+		CreateWallMany(746, 516, wallType.Red, wallCreatorDirectionType.Top, 8);
 
 
 
 		
 	//items
-	CreateItem(50, 600, obj_item_health_potion);
+
 	
-	CreateLifePoint(750, 150, lifePointType.Red);
-	CreateLifePoint(800, 150, lifePointType.Green);
-	CreateLifePoint(850, 150, lifePointType.Yellow);
-	CreateLifePoint(900, 150, lifePointType.Blue);
-	
-	CreateFoodByImageIndex(100, 150, 4);
-	CreateFoodByImageIndex(150, 150, 4);
-	CreateFoodByImageIndex(200, 150, 4);
-	CreateFoodByImageIndex(250, 150, 4);
-	CreateFoodByImageIndex(300, 150, 4);
-	CreateFoodByImageIndex(350, 150, 4);
 }
 
 #endregion
@@ -2330,75 +2289,74 @@ function CreateLevelNightmare36() {
 	
 	//Enemy
 
-	CreateColorfulBall(350, 250, true, true );
-	CreateColorfulBall(700, 250, true, true );
-	CreateColorfulBall(700, 400, false, true );
-	CreateSmogBall(550, 50, 2, -1, true);
-
+	CreateSmogBall(200, 100, 2, -1, true);
+	CreateSmogBall(500, 100, 4, -2, true);
+	CreateSmogBall(800, 100, 5, -3, true);
+	CreateSmogBall(200, 250, 2, -1, true);
+	CreateSmogBall(500, 250, 1, -3, true);
+	CreateSmogBall(800, 250, 2.5, -1, true);
 	
+		CreateWorm(500,500, 1, 0, true);
+		CreateWorm(500,500, 2, 0, true);
+		CreateWorm(500,500, -1, 0, true);
+		CreateWorm(500,500, -1.5, 0, true);
+		
+		CreateBlackBallLarge(600, 300, true, true );
+		
+				CreateRedBallBoss(600,2);
 
-	
-		CreateNormalBallLargeShield(300, 200,  -global.normalBallLargeMoveX, global.normalBallLargeMoveY,
-	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
-	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_2, true,4);
-	
-		CreateNormalBallLargeShield(750, 200,  -global.normalBallLargeMoveX, global.normalBallLargeMoveY,
-	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
-	normalBallColorType.Green, normalBallGiantDropItemType.DropQualityLevel_2, true,4);
 
-CreateYellowBallGiant(530, 100, true, true );
+
 	
 
 	
 	//wall
-	
-	//left
-	CreateWallMany(174,68 , wallType.Red, wallCreatorDirectionType.Right, 8);
-	CreateWallMany(850,68 , wallType.Red, wallCreatorDirectionType.Left, 8);
-	
-	CreateWallMany(174,476 , wallType.Red, wallCreatorDirectionType.Top, 1);
-	CreateWallMany(174,476 - (global.wallHeight*3) , wallType.Red, wallCreatorDirectionType.Top, 1);
-	CreateWallMany(174,476 - (global.wallHeight*7) , wallType.Red, wallCreatorDirectionType.Top, 1);
-	CreateWallMany(174,476 - (global.wallHeight*10) , wallType.Red, wallCreatorDirectionType.Top, 1);
-	
-	CreateWallMany(174 + (global.wallWidth * 7),476 - (global.wallHeight*6) , wallType.Red, wallCreatorDirectionType.Top, 1);
-	CreateWallMany(174 + (global.wallWidth * 7),476 - (global.wallHeight*8) , wallType.Red, wallCreatorDirectionType.Top, 1);
-	CreateWallMany(174 + (global.wallWidth * 7),476 - (global.wallHeight*10) , wallType.Red, wallCreatorDirectionType.Top, 1);
-	
-	//right
-	CreateWallMany(174,510 , wallType.Red, wallCreatorDirectionType.Right, 8);
-	CreateWallMany(850,510 , wallType.Red, wallCreatorDirectionType.Left, 8);
-	
-	CreateWallMany(850,476 , wallType.Red, wallCreatorDirectionType.Top, 1);
-	CreateWallMany(850,476 - (global.wallHeight*3) , wallType.Red, wallCreatorDirectionType.Top, 1);
-	CreateWallMany(850,476 - (global.wallHeight*7) , wallType.Red, wallCreatorDirectionType.Top, 1);
-	CreateWallMany(850,476 - (global.wallHeight*10) , wallType.Red, wallCreatorDirectionType.Top, 1);
-	
-	CreateWallMany(850 - (global.wallWidth * 7),476 - (global.wallHeight*6) , wallType.Red, wallCreatorDirectionType.Top, 1);
-	CreateWallMany(850 - (global.wallWidth * 7),476 - (global.wallHeight*8) , wallType.Red, wallCreatorDirectionType.Top, 1);
-	CreateWallMany(850 - (global.wallWidth * 7),476 - (global.wallHeight*10) , wallType.Red, wallCreatorDirectionType.Top, 1);
 
-	//center
-	CreateWallDestroyableMany(174 + (global.wallWidth * 9), 510 , wallCreatorDirectionType.Right, 4);
-	CreateWallDestroyableMany(174 + (global.wallWidth * 9), 510  - (global.wallHeight* 2), wallCreatorDirectionType.Right, 4);
-	CreateWallDestroyableMany(174 + (global.wallWidth * 9), 510 - (global.wallHeight* 4), wallCreatorDirectionType.Right, 4);
-	
-	
-	
+var startX = 224;
+var startY = 700;
+
+var levels = 5;
+
+// Loop through each level of the pyramid
+for (var i = 0; i < levels; i++) {
+    // Calculate the number of walls for this level
+    var wallsInLevel = levels - i;
+    
+    // Calculate the starting X position for this level to center the pyramid
+    var levelStartX = 200 + (i * 32 / 2);
+    
+    // Create a row of walls for this level
+    CreateWallMany(levelStartX, startY - (i * 34), wallType.Red, wallCreatorDirectionType.Right, wallsInLevel);
+}
+
+
+for (var i = 0; i < levels; i++) {
+    // Calculate the number of walls for this level
+    var wallsInLevel = levels - i;
+    
+    // Calculate the starting X position for this level to center the pyramid
+    var levelStartX = 750 + (i * 32 / 2);
+    
+    // Create a row of walls for this level
+    CreateWallMany(levelStartX, startY - (i * 34), wallType.Red, wallCreatorDirectionType.Right, wallsInLevel);
+}
 	
 	//items
-	CreateItem(400, 600, obj_item_protecting_ring);
+	CreateItem(280, 300, obj_item_energy_shield);
+	CreateItem(830, 300, obj_item_invulnerability_potion);
 
 	
-	CreateFoodByImageIndex(225, 300, 34);
-	CreateFoodByImageIndex(275, 300, 34);
-	CreateFoodByImageIndex(325, 300, 34);
-	CreateFoodByImageIndex(375, 300, 34);
+
+	CreateFoodByImageIndex(380, 300, 34);
+	CreateFoodByImageIndex(430, 300, 34);
+	CreateFoodByImageIndex(480, 300, 34);
+	CreateFoodByImageIndex(530, 300, 34);
+	CreateFoodByImageIndex(580, 300, 34);
+	CreateFoodByImageIndex(630, 300, 34);
+	CreateFoodByImageIndex(680, 300, 34);
+	CreateFoodByImageIndex(730, 300, 34);
 	
-	CreateLifePoint(675, 300, lifePointType.Pink);
-	CreateLifePoint(725, 300, lifePointType.Pink);
-	CreateLifePoint(775, 300, lifePointType.Pink);
-	CreateLifePoint(825, 300, lifePointType.Pink);
+
 
 
 
@@ -2414,60 +2372,65 @@ function CreateLevelNightmare37() {
 	LoadBackgroundImage("egypt_twilight"); //Load background
 	CreateWallFrame(wallFrameType.Yellow ?? noone); //wall frame creating
 	PlayMusic(snd_space_music, true); // play music
-	CreatePlayer(500, 600); // create player
+	CreatePlayer(50, 500); // create player
 	
 	//Enemy
 	CreateNormalBallGiant(924, 100, -global.normalBallGiantMoveX, global.normalBallGiantMoveY,
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
-	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_2, true);
+	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_5, true);
 	
 	CreateNormalBallGiant(100, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
-	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_2, true);
+	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_5, true);
 	
-	CreateNormalBallSmall(410, 250, -global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
-	normalBallColorType.Blue,  true);
+		CreateNormalBallGiant(500, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
+	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
+	normalBallColorType.Green, normalBallGiantDropItemType.DropQualityLevel_5, true);
 	
-	CreateNormalBallSmall(600, 250, -global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
-	normalBallColorType.Blue,  true);
+
+	CreateWretchedChild(924, 200);
 	
-	CreateSentinel_T_X(800, 100,5,8,c_yellow, true );
+
+	CreateMalwrathChild(500, 200);
+	
+
+	CreateCacodemonChild(100, 200);
+	
+
+	
+
+	CreateColorfulBall(800, 250, true, true );
+	CreateColorfulBall(900, 400, true, true );
 	
 
 	
 	//wall
-	CreateWallMany(96, 200, wallType.Blue, wallCreatorDirectionType.Right, 7);
-	CreateWallDestroyableMany(896, 200, wallCreatorDirectionType.Left, 7);
-	
-	CreateWallMany(96 + (global.wallWidth*8), 200, wallType.Blue, wallCreatorDirectionType.Bottom, 3);
-	CreateWallDestroyableMany(96 + (global.wallWidth*11), 200, wallCreatorDirectionType.Bottom, 3);
-	CreateWallMany(96 + (global.wallWidth*9), 268, wallType.Blue, wallCreatorDirectionType.Right, 2);
-	
-	CreateWallDestroyableMany(96 + (global.wallWidth*14), 200, wallCreatorDirectionType.Bottom, 3);
-	CreateWallDestroyableMany(96 + (global.wallWidth*17), 200, wallCreatorDirectionType.Bottom, 3);
-	CreateWallDestroyableMany(96 + (global.wallWidth*15), 268, wallCreatorDirectionType.Right, 2);
-	
-	CreateWallMany(96 + (global.wallWidth*11), 490,wallType.Blue, wallCreatorDirectionType.Bottom, 1);
-	CreateWallMany(96 + (global.wallWidth*12), 490,wallType.Blue, wallCreatorDirectionType.Bottom, 1);
+var startX = 340;
+var startY = 700;
+
+var levels = 11;
+
+// Loop through each level of the pyramid
+for (var i = 0; i < levels; i++) {
+    // Calculate the number of walls for this level
+    var wallsInLevel = levels - i;
+    
+    // Calculate the starting X position for this level to center the pyramid
+    var levelStartX = startX + (i * 32 / 2);
+    
+    // Create a row of walls for this level
+    CreateWallMany(levelStartX, startY - (i * 34), wallType.Blue, wallCreatorDirectionType.Right, wallsInLevel);
+}
+
 
 
 	
 		
 	//items
-	CreateItem(950, 600, obj_item_energy_shield);
-	CreateItem(250, 600, obj_item_first_aid_kit);
+	CreateItem(517, 50, obj_item_health_potion);
+
 	
-	CreateFoodByImageIndex(50, 500, 34);
-	CreateFoodByImageIndex(90, 500, 34);
-	CreateFoodByImageIndex(130, 500, 34);
-	CreateFoodByImageIndex(170, 500, 34);
-	
-	CreateLifePoint(750, 100, lifePointType.Blue);
-	CreateLifePoint(800, 100, lifePointType.Blue);
-	CreateLifePoint(850, 100, lifePointType.Blue);
-	CreateLifePoint(900, 100, lifePointType.Blue);
+
 	
 }
 
@@ -2485,41 +2448,54 @@ function CreateLevelNightmare38() {
 	
 	//Enemy
 	
-	CreateNormalBallGiant(500, 350, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
+	CreateNormalBallGiant(200, 350, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
 	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
-	normalBallColorType.Green, normalBallGiantDropItemType.DropQualityLevel_2, true);
+	normalBallColorType.Green, normalBallGiantDropItemType.DropQualityLevel_5, true);
 	
-	CreateNormalBallGiant(500, 350, -global.normalBallGiantMoveX, global.normalBallGiantMoveY,
-	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
-	normalBallColorType.Green, normalBallGiantDropItemType.DropQualityLevel_2, true);
+
 	
-	CreateSentinel_T_800(100, 100,2,7,c_yellow, true );
-	CreateSentinel_T_800(900, 100,2,7,c_yellow, true );
+	CreateSentinel_T_Pro(900, 290,3,7,c_lime, true );
+	
+	CreateManananggalChild(100, 100);
+	CreateManananggalChild(900, 100);
+
 
 	//wall
-	var firstWallX = 170;
-	
-	for (var i = 0; i < 6; i++) {
-		CreateWallMany(firstWallX, 280, wallType.Green, wallCreatorDirectionType.Bottom, 3);
-		
-		if (i == 2) {
-			firstWallX += 250;
-		} else {
-			firstWallX += 100;
-		}
-	}
-	
-	CreateWallMany(464, 100, wallType.Green, wallCreatorDirectionType.Right, 3);
-	CreateWallMany(464, 500, wallType.Green, wallCreatorDirectionType.Right, 3);
+var startX = 250;
+var startY = 0;
+
+var levels = 16;
+
+// Loop through each level of the pyramid
+for (var i = 0; i < levels; i++) {
+    // Calculate the number of walls for this level
+    var wallsInLevel = levels - i;
+    
+    // Calculate the starting X position for this level to center the pyramid
+    var levelStartX = startX + (i * 32 / 2);
+    
+    // Create a row of walls for this level
+    CreateWallMany(levelStartX, startY + (i * 34), wallType.Green, wallCreatorDirectionType.Right, wallsInLevel);
+}
+
 	
 	
 	//items
-	CreateItem(800, 600, obj_item_dynamite);
+	CreateItem(650, 600, obj_item_projectile_shield);
+	CreateItem(400, 600, obj_item_projectile_shield);
+	CreateItem(350, 600, obj_item_first_aid_kit);
+	CreateItem(700, 600, obj_item_protecting_ring);
 
 	CreateFoodByImageIndex(30, 640, 0)
 	CreateFoodByImageIndex(70, 640, 0)
 	CreateFoodByImageIndex(110, 640, 0)
 	CreateFoodByImageIndex(150, 640, 0)
+	
+	
+	CreateFoodByImageIndex(1000, 640, 0)
+	CreateFoodByImageIndex(960, 640, 0)
+	CreateFoodByImageIndex(920, 640, 0)
+	CreateFoodByImageIndex(880, 640, 0)
 }
 
 #endregion
@@ -2532,88 +2508,77 @@ function CreateLevelNightmare39() {
 	// init
 	LoadBackgroundImage("kenya_morning"); //Load background
 	CreateWallFrame(wallFrameType.Blue ?? noone); //wall frame creating
-	PlayMusic(snd_unreal1, true); // play music
-	CreatePlayer(500, 600); // create player
+	PlayMusic(snd_rodland1, true); // play music
+	CreatePlayer(50, 200); // create player
 	
 	//Enemy
 	
-	CreateTongueWorm(100,100, 0.5, 0, true);
-	CreateTongueWorm(900,100, -0.5, 0, true);
-	
-	CreateSentinel_T_X(500, 100,2,2,c_yellow, true );
-	
-	CreateNormalBallLargeShield(500, 100, global.normalBallLargeMoveX, global.normalBallLargeMoveY,
-	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
-	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_4, true,3);
-	
-	CreateNormalBallLargeShield(550, 100, -global.normalBallLargeMoveX, global.normalBallLargeMoveY,
-	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
-	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_4, true,3);
-	
+	CreateFrog(50,620, 1, 0, true);
+	CreateFrog(75,620, 1, 0, true);
+	CreateFrog(100,620, 2, 0, true);
+	CreateFrog(125,620, 1, 0, true);
+	CreateFrog(150,620, 3, 0, true);
+	CreateFrog(175,620, 1, 0, true);
+	CreateFrog(200,620, 1, 0, true);
+	CreateFrog(225,620, 2, 0, true);
+	CreateFrog(250,620, 1, 0, true);
+	CreateFrog(275,620, 1, 0, true);
+	CreateFrog(300,620, 1, 0, true);
+	CreateFrog(325,620, 2, 0, true);
+	CreateFrog(350,620, 1, 0, true);
+	CreateFrog(375,620, 1, 0, true);
+	CreateFrog(400,620, 2, 0, true);
+	CreateFrog(425,620, 1, 0, true);
+	CreateFrog(450,620, 1, 0, true);
+	CreateFrog(475,620, 1, 0, true);
+	CreateFrog(500,620, 1, 0, true);
+	CreateFrog(625,620, 1, 0, true);
+	CreateFrog(650,620, 1, 0, true);
+	CreateFrog(675,620, 2, 0, true);
+	CreateFrog(700,620, 1, 0, true);
+	CreateFrog(725,620, 1, 0, true);
+	CreateFrog(750,620, 2, 0, true);
+	CreateFrog(775,620, 1, 0, true);
+	CreateFrog(800,620, 1, 0, true);
+	CreateFrog(825,620, 1, 0, true);
+	CreateFrog(850,620, 2, 0, true);
+	CreateFrog(875,620, 1, 0, true);
+	CreateFrog(900,620, 1, 0, true);
 
-	CreateHorizontalBallMedium(100, 500, true, true, true );
-
-		CreateRedBallBoss(500,-2);
+	
+	
+	CreateNormalBallLargeShield(200, 100, global.normalBallLargeMoveX, global.normalBallLargeMoveY,
+	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
+	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_4, true,3);
+	
+	CreateNormalBallLargeShield(800, 100, -global.normalBallLargeMoveX, global.normalBallLargeMoveY,
+	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
+	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_4, true,3);
+	
+	CreateNormalBallGiant(500, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
+	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
+	normalBallColorType.Green, normalBallGiantDropItemType.DropQualityLevel_5, true);
 
 	
 	//wall
 	
-	//left
-	CreateWallMany(78,170 , wallType.Green, wallCreatorDirectionType.Right, 1);
-	CreateWallMany(78 + (global.wallWidth * 1),170 + (global.wallHeight * 1) , wallType.Green, wallCreatorDirectionType.Right, 1);
-	CreateWallMany(78 + (global.wallWidth * 2),170 + (global.wallHeight * 2) , wallType.Green, wallCreatorDirectionType.Right, 1);
-	CreateWallMany(78 + (global.wallWidth * 3),170 + (global.wallHeight * 3) , wallType.Green, wallCreatorDirectionType.Right, 1);
-	CreateWallMany(78 + (global.wallWidth * 4),170 + (global.wallHeight * 4) , wallType.Green, wallCreatorDirectionType.Right, 1);
-	CreateWallMany(78 + (global.wallWidth * 5),170 + (global.wallHeight * 5) , wallType.Green, wallCreatorDirectionType.Right, 1);
-	
-	CreateWallDestroyableMany(78 + (global.wallWidth * 6),170 + (global.wallHeight * 6) , wallCreatorDirectionType.Right, 3);
-	
-	CreateWallMany(78 + (global.wallWidth * 9),170 + (global.wallHeight * 7) , wallType.Green, wallCreatorDirectionType.Right, 1);
-	CreateWallMany(78 + (global.wallWidth * 10),170 + (global.wallHeight * 8) , wallType.Green, wallCreatorDirectionType.Right, 1);
-	CreateWallMany(78 + (global.wallWidth * 11),170 + (global.wallHeight * 9) , wallType.Green, wallCreatorDirectionType.Right, 1);
-	
-	//right
-	CreateWallMany(914,170 , wallType.Green, wallCreatorDirectionType.Left, 1);
-	CreateWallMany(914 - (global.wallWidth * 1), 170 + (global.wallHeight * 1) , wallType.Green, wallCreatorDirectionType.Left, 1);
-	CreateWallMany(914 - (global.wallWidth * 2), 170 + (global.wallHeight * 2) , wallType.Green, wallCreatorDirectionType.Left, 1);
-	CreateWallMany(914 - (global.wallWidth * 3), 170 + (global.wallHeight * 3) , wallType.Green, wallCreatorDirectionType.Left, 1);
-	CreateWallMany(914 - (global.wallWidth * 4), 170 + (global.wallHeight * 4) , wallType.Green, wallCreatorDirectionType.Left, 1);
-	CreateWallMany(914 - (global.wallWidth * 5), 170 + (global.wallHeight * 5) , wallType.Green, wallCreatorDirectionType.Left, 1);
-	
-	CreateWallDestroyableMany(914 - (global.wallWidth * 6),170 + (global.wallHeight * 6) , wallCreatorDirectionType.Left, 3);
-	
-	CreateWallMany(914 - (global.wallWidth * 9),170 + (global.wallHeight * 7) , wallType.Green, wallCreatorDirectionType.Left, 1);
-	CreateWallMany(914 - (global.wallWidth * 10),170 + (global.wallHeight * 8) , wallType.Green, wallCreatorDirectionType.Left, 1);
-	CreateWallMany(914 - (global.wallWidth * 11),170 + (global.wallHeight * 9) , wallType.Green, wallCreatorDirectionType.Left, 1);
-
+	CreateWallMany(0,500 , wallType.Red, wallCreatorDirectionType.Right, 5);
+	CreateWallMany(300,500 , wallType.Red, wallCreatorDirectionType.Right, 5);
+	CreateWallMany(600,500 , wallType.Red, wallCreatorDirectionType.Right, 4);
+	CreateWallMany(980,500 , wallType.Red, wallCreatorDirectionType.Left, 2);
 	
 	
 	
 	
 	//items
 	
-
-	CreateFoodByImageIndex(290, 50, 20);
-	CreateFoodByImageIndex(325, 50, 20);
-	CreateFoodByImageIndex(355, 50, 20);
 	
-	CreateFoodByImageIndex(390, 50, 20);
-	CreateFoodByImageIndex(420, 50, 20);
-	CreateFoodByImageIndex(450, 50, 20);
-
-	
-
-	CreateLifePoint(570, 50, lifePointType.Green);
-	CreateLifePoint(610, 50, lifePointType.Green);
-	CreateLifePoint(640, 50, lifePointType.Green);
-	
-	CreateLifePoint(675, 50, lifePointType.Green);
-	CreateLifePoint(705, 50, lifePointType.Green);
-	CreateLifePoint(735, 50, lifePointType.Green);
-	
-	CreateItem(100, 600, obj_item_health_potion);
-	CreateItem(900, 600, obj_item_health_potion);
-	CreateItem(500, 400, obj_item_energy_shield);
+	CreateItem(400, 400, obj_item_first_aid_kit);
+	CreateItem(350, 400, obj_item_energy_shield);
+	CreateItem(150, 400, obj_item_double_sting);
+	CreateItem(100, 600, obj_item_protecting_ring);
+	CreateItem(650, 400, obj_item_grenade);
+	CreateItem(700, 400, obj_item_grenade);
 
 
 }
@@ -2627,88 +2592,46 @@ function CreateLevelNightmare40() {
 	// init
 	LoadBackgroundImage("kenya_twilight"); //Load background
 	CreateWallFrame(wallFrameType.Blue ?? noone); //wall frame creating
-	PlayMusic(snd_unreal1, true); // play music
-	CreatePlayer(500, 600); // create player
+	PlayMusic(snd_rodland2, true); // play music
+	CreatePlayer(50, 200); // create player
+
 	
 		//Enemy
 	
-	CreateTongueWorm(100,100, 0.5, 0, true);
-	CreateTongueWorm(900,100, -0.5, 0, true);
+	CreateWorm(100,600, 0.5, 0, true);
+	CreateWorm(200,600, 1, 0, true);
+	CreateWorm(300,600, 0.5, 0, true);
+	CreateWorm(400,600, 1, 0, true);
+	CreateWorm(500,600, 0.5, 0, true);
+	CreateWorm(600,600, 1.5, 0, true);
+
 	
-	CreateSentinel_T_3000(500, 100,2,2,c_yellow, true );
+	CreateSentinel_T_Pro(500, 600,2,2,c_lime, true );
 	
-	CreateNormalBallLargeShield(500, 100, global.normalBallLargeMoveX, global.normalBallLargeMoveY,
-	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
-	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_4, true,3);
-	
-	CreateNormalBallLargeShield(550, 100, -global.normalBallLargeMoveX, global.normalBallLargeMoveY,
-	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
-	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_4, true,3);
+		CreateSuperBallGiant(500, 100, 4, -5,
+	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_2, true);
+			CreateSuperBallGiant(500, 100, -1, -5,
+	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_2, true);
 	
 
-	CreateHorizontalBallMedium(100, 500, true, true, true );
-
-		CreateRedBallBoss(500,-2);
 
 	
 	//wall
 	
-	//left
-	CreateWallMany(78,170 , wallType.Green, wallCreatorDirectionType.Right, 1);
-	CreateWallMany(78 + (global.wallWidth * 1),170 + (global.wallHeight * 1) , wallType.Green, wallCreatorDirectionType.Right, 1);
-	CreateWallMany(78 + (global.wallWidth * 2),170 + (global.wallHeight * 2) , wallType.Green, wallCreatorDirectionType.Right, 1);
-	CreateWallMany(78 + (global.wallWidth * 3),170 + (global.wallHeight * 3) , wallType.Green, wallCreatorDirectionType.Right, 1);
-	CreateWallMany(78 + (global.wallWidth * 4),170 + (global.wallHeight * 4) , wallType.Green, wallCreatorDirectionType.Right, 1);
-	CreateWallMany(78 + (global.wallWidth * 5),170 + (global.wallHeight * 5) , wallType.Green, wallCreatorDirectionType.Right, 1);
-	
-	CreateWallDestroyableMany(78 + (global.wallWidth * 6),170 + (global.wallHeight * 6) , wallCreatorDirectionType.Right, 3);
-	
-	CreateWallMany(78 + (global.wallWidth * 9),170 + (global.wallHeight * 7) , wallType.Green, wallCreatorDirectionType.Right, 1);
-	CreateWallMany(78 + (global.wallWidth * 10),170 + (global.wallHeight * 8) , wallType.Green, wallCreatorDirectionType.Right, 1);
-	CreateWallMany(78 + (global.wallWidth * 11),170 + (global.wallHeight * 9) , wallType.Green, wallCreatorDirectionType.Right, 1);
-	
-	//right
-	CreateWallMany(914,170 , wallType.Green, wallCreatorDirectionType.Left, 1);
-	CreateWallMany(914 - (global.wallWidth * 1), 170 + (global.wallHeight * 1) , wallType.Green, wallCreatorDirectionType.Left, 1);
-	CreateWallMany(914 - (global.wallWidth * 2), 170 + (global.wallHeight * 2) , wallType.Green, wallCreatorDirectionType.Left, 1);
-	CreateWallMany(914 - (global.wallWidth * 3), 170 + (global.wallHeight * 3) , wallType.Green, wallCreatorDirectionType.Left, 1);
-	CreateWallMany(914 - (global.wallWidth * 4), 170 + (global.wallHeight * 4) , wallType.Green, wallCreatorDirectionType.Left, 1);
-	CreateWallMany(914 - (global.wallWidth * 5), 170 + (global.wallHeight * 5) , wallType.Green, wallCreatorDirectionType.Left, 1);
-	
-	CreateWallDestroyableMany(914 - (global.wallWidth * 6),170 + (global.wallHeight * 6) , wallCreatorDirectionType.Left, 3);
-	
-	CreateWallMany(914 - (global.wallWidth * 9),170 + (global.wallHeight * 7) , wallType.Green, wallCreatorDirectionType.Left, 1);
-	CreateWallMany(914 - (global.wallWidth * 10),170 + (global.wallHeight * 8) , wallType.Green, wallCreatorDirectionType.Left, 1);
-	CreateWallMany(914 - (global.wallWidth * 11),170 + (global.wallHeight * 9) , wallType.Green, wallCreatorDirectionType.Left, 1);
+	CreateWallMany(0,400 , wallType.Blue, wallCreatorDirectionType.Right, 27);
+	CreateWallMany(0,434 , wallType.Blue, wallCreatorDirectionType.Right, 27);
+	CreateWallIndestructibleMany(970,550 , wallCreatorDirectionType.Left, 1);
 
-	
-	
-	
-	
 	//items
 	
 
-	CreateFoodByImageIndex(290, 50, 20);
-	CreateFoodByImageIndex(325, 50, 20);
-	CreateFoodByImageIndex(355, 50, 20);
-	
-	CreateFoodByImageIndex(390, 50, 20);
-	CreateFoodByImageIndex(420, 50, 20);
-	CreateFoodByImageIndex(450, 50, 20);
 
 	
-
-	CreateLifePoint(570, 50, lifePointType.Green);
-	CreateLifePoint(610, 50, lifePointType.Green);
-	CreateLifePoint(640, 50, lifePointType.Green);
-	
-	CreateLifePoint(675, 50, lifePointType.Green);
-	CreateLifePoint(705, 50, lifePointType.Green);
-	CreateLifePoint(735, 50, lifePointType.Green);
-	
-	CreateItem(100, 600, obj_item_health_potion);
-	CreateItem(900, 600, obj_item_first_aid_kit);
-	CreateItem(500, 400, obj_item_projectile_shield);
+	CreateItem(950, 100, obj_item_health_potion);
+	CreateItem(300, 100, obj_item_projectile_shield);
+	CreateItem(350, 100, obj_item_projectile_shield);
+	CreateItem(400, 100, obj_item_double_sting);
+	CreateItem(450, 100, obj_item_double_sting);
 
 	
 }
@@ -2722,39 +2645,50 @@ function CreateLevelNightmare41() {
 	// init
 	LoadBackgroundImage("kenya_night"); //Load background
 	CreateWallFrame(wallFrameType.Blue ?? noone); //wall frame creating
-	PlayMusic(snd_unreal1, true); // play music
-	CreatePlayer(500, 600); // create player
+	PlayMusic(snd_rodland1, true); // play music
+	CreatePlayer(50, 600); // create player
 	
 	//Enemy
 	
 	CreateSuperBallLarge(500, 100, 3, -1,
-	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_2, true);
+	normalBallColorType.Green, normalBallGiantDropItemType.DropQualityLevel_2, true);
 	
-	CreateHorizontalBallMedium(924, 500, false, true, true );
-	CreateHorizontalBallMedium(100, 500, true, true, true );
+	CreateHorizontalBallMedium(924, 200, false, true, true );
+
+	
+	CreateTongueWorm(100,300, 1, 0, true);
+	CreateTongueWorm(200,300, 1, 0, true);
+	CreateTongueWorm(300,300, 1, 0, true);
+	CreateTongueWorm(400,300, 1, 0, true);
+	CreateTongueWorm(500,300, 2, 0, true);
+	CreateTongueWorm(600,300, 1.5, 0, true);
+	CreateTongueWorm(700,300, 1.5, 0, true);
+	
+		
+			CreateManananggalChild(100, 100);
+	CreateManananggalChild(200, 100);
+	CreateManananggalChild(300, 100);
+
+	CreateManananggalChild(700, 100);
+	CreateManananggalChild(800, 100);
+	CreateManananggalChild(900, 100);
 	
 	
 
 	//wall
-	CreateWallMany(124, 320, wallType.Green, wallCreatorDirectionType.Right, 5);
-	CreateWallDestroyableMany(124 + (global.wallWidth*7), 320, wallCreatorDirectionType.Right, 3);
-	CreateWallDestroyableMany(124 + (global.wallWidth*12), 320, wallCreatorDirectionType.Right, 4);
-	CreateWallDestroyableMany(124 + (global.wallWidth*17), 320, wallCreatorDirectionType.Right, 3);
-	CreateWallMany(124 + (global.wallWidth*22), 320, wallType.Green, wallCreatorDirectionType.Right, 2);
-	
-	CreateWallMany(0, 500, wallType.Green, wallCreatorDirectionType.Right, 2);
-	CreateWallMany(996, 500, wallType.Green, wallCreatorDirectionType.Left, 2);
+	CreateWallMany(0,400 , wallType.Green, wallCreatorDirectionType.Right, 27);
+	CreateWallMany(0,434 , wallType.Green, wallCreatorDirectionType.Right, 27);
+	CreateWallIndestructibleMany(970,550 , wallCreatorDirectionType.Left, 1);
 	
 	//items
-	CreateFoodByImageIndex(30, 640, 18);
-	CreateFoodByImageIndex(70, 640, 18);
-	CreateFoodByImageIndex(110, 640, 18);
-	CreateFoodByImageIndex(150, 640, 18);
 	
-	CreateFoodByImageIndex(870, 640, 20);
-	CreateFoodByImageIndex(910, 640, 20);
-	CreateFoodByImageIndex(950, 640, 20);
-	CreateFoodByImageIndex(990, 640, 20);
+		CreateItem(950, 100, obj_item_health_potion);
+		CreateItem(1000, 600, obj_item_magnet);
+	CreateItem(300, 600, obj_item_projectile_shield);
+	CreateItem(400, 600, obj_item_double_sting);
+	CreateItem(500, 600, obj_item_land_mine);
+	CreateItem(600, 600, obj_item_land_mine);
+
 }
 
 #endregion
@@ -2773,7 +2707,13 @@ function CreateLevelNightmare42() {
 	
 	//Enemy
 	CreateManananggal(-300, 300, enemyStartDirectionType.Left);
-CreateSentinel_T_3000(500, 100,2,2,c_yellow, true );
+			CreateManananggalChild(100, 100);
+	CreateManananggalChild(200, 100);
+	CreateManananggalChild(300, 100);
+
+	CreateManananggalChild(700, 100);
+	CreateManananggalChild(800, 100);
+	CreateManananggalChild(900, 100);
 
 	
 	//wall
@@ -2801,46 +2741,51 @@ function CreateLevelNightmare43() {
 	
 	//Enemy
 	
-	CreateNormalBallLarge(800, 100, -global.normalBallLargeMoveX, global.normalBallLargeMoveY,
-	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
-	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_2, true);
+
 	
-	CreateNormalBallLarge(800, 100, global.normalBallLargeMoveX, global.normalBallLargeMoveY,
-	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
-	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_2, true);
+	CreateBlackBallLarge(800, 100, true, true );
 	
-	CreateBlackBallLarge(100, 100, true, true );
+	CreateTongueWorm(950,650, -2, 0, true);
 	
-	CreateWorm(900,600, -1, 0, true);
+		
+	CreateHorizontalBallMedium(200, 400, true, true, true );
+	CreateHorizontalBallMedium(400, 400, false, false, true );
+	CreateHorizontalBallMedium(600, 400, false, false, true );
+	CreateHorizontalBallMedium(990, 400, false, false, true );
+	
+		CreateColorfulBall(600, 100, true, true );
 	
 	
 
 	//wall
 	
-	//left
-	CreateWallMany(100,250 , wallType.Red, wallCreatorDirectionType.Right, 1);
-	CreateWallMany(400,500 , wallType.Red, wallCreatorDirectionType.Bottom, 4);
+
+
+	CreateWallMany(100,0 , wallType.Red, wallCreatorDirectionType.Bottom, 17);
+	CreateWallMany(300,0 , wallType.Red, wallCreatorDirectionType.Bottom, 12);
+	CreateWallMany(500,0 , wallType.Red, wallCreatorDirectionType.Bottom, 8);
+	CreateWallMany(700,0 , wallType.Red, wallCreatorDirectionType.Bottom, 12);
+	CreateWallMany(900,0 , wallType.Red, wallCreatorDirectionType.Bottom, 17);
+
 	
-	CreateWallDestroyableMany(900,300 , wallCreatorDirectionType.Left, 1);
-	CreateWallDestroyableMany(800,300 , wallCreatorDirectionType.Left, 1);
-	CreateWallDestroyableMany(700,300 , wallCreatorDirectionType.Left, 1);
-	CreateWallDestroyableMany(600,50 , wallCreatorDirectionType.Bottom, 5);
+
+
 
 	//items
 	
-	CreateItem(300, 600, obj_item_first_aid_kit);
-	CreateFoodByImageIndex(450, 500, 3);
-	CreateFoodByImageIndex(500, 500, 3);
-	CreateFoodByImageIndex(550, 500, 3);
-	CreateFoodByImageIndex(600, 500, 3);
-	CreateFoodByImageIndex(650, 500, 3);
-	CreateFoodByImageIndex(700, 500, 3);
-	CreateFoodByImageIndex(750, 500, 3);
-	CreateFoodByImageIndex(800, 500, 3);
-	CreateFoodByImageIndex(850, 500, 3);
-	CreateFoodByImageIndex(900, 500, 3);
-	CreateFoodByImageIndex(950, 500, 3);
-	CreateFoodByImageIndex(990, 500, 3);
+	CreateItem(300, 600, obj_item_energy_shield);
+	CreateFoodByImageIndex(450, 600, 3);
+	CreateFoodByImageIndex(500, 600, 3);
+	CreateFoodByImageIndex(550, 600, 3);
+	CreateFoodByImageIndex(600, 600, 3);
+	CreateFoodByImageIndex(650, 600, 3);
+	CreateFoodByImageIndex(700, 600, 3);
+	CreateFoodByImageIndex(750, 600, 3);
+	CreateFoodByImageIndex(800, 600, 3);
+	CreateFoodByImageIndex(850, 600, 3);
+	CreateFoodByImageIndex(900, 600, 3);
+	CreateFoodByImageIndex(950, 600, 3);
+	CreateFoodByImageIndex(990, 600, 3);
 }
 
 #endregion
@@ -2852,94 +2797,38 @@ function CreateLevelNightmare44() {
 	// init
 	LoadBackgroundImage("newYork_twilight"); //Load background
 	CreateWallFrame(wallFrameType.Red ?? noone); //wall frame creating
-	PlayMusic(snd_drakan_5, true); // play music
+	PlayMusic(snd_in_my_dreams, true); // play music
 	CreatePlayer(550, 600); // create player
 	
 	//Enemy
 	
-	CreateSentinel_T_X(500, 300,2,2,c_yellow, true );
-	CreateNormalBallSmall(40, 30, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
-	normalBallColorType.Blue,  true);
-	
-	CreateNormalBallSmall(80, 60, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
-	normalBallColorType.Blue,  true);
-	
-	CreateNormalBallSmall(120, 30, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
-	normalBallColorType.Blue,  true);
-	
-	CreateNormalBallSmall(160, 60, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
-	normalBallColorType.Blue,  true);
-	
-	CreateNormalBallSmall(200, 30, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
-	normalBallColorType.Blue,  true);
-	
-	CreateNormalBallSmall(240, 60, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
-	normalBallColorType.Blue,  true);
-	
-	CreateNormalBallSmall(280, 30, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
-	normalBallColorType.Blue,  true);
-	
-	CreateNormalBallSmall(320, 60, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
-	normalBallColorType.Blue,  true);
-	
-	CreateNormalBallSmall(360, 30, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
-	normalBallColorType.Blue,  true);
-	
-	CreateNormalBallSmall(400, 60, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
-	normalBallColorType.Blue,  true);
-	
-	CreateNormalBallSmall(440, 30, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
-	normalBallColorType.Blue,  true);
-	
-	CreateNormalBallSmall(480, 60, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
-	normalBallColorType.Blue,  true);
-	
-	CreateNormalBallSmall(520, 30, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
-	normalBallColorType.Blue,  true);
-	
-	CreateNormalBallSmall(560, 60, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
-	normalBallColorType.Blue,  true);
-	
-	CreateYellowBallGiant(550, 300, true, true );
-	CreateYellowBallGiant(550, 300, false, true );
+
+	CreateYellowBallGiant(100, 100, false, true );
+	CreateYellowBallGiant(200, 100, false, true );
+	CreateYellowBallGiant(300, 100, false, true );
+	CreateYellowBallGiant(400, 100, false, true );
+	CreateYellowBallGiant(500, 100, false, true );
+	CreateYellowBallGiant(600, 100, false, true );
 	
 	
+	CreateColorfulBall(200, 400, true, true );
+	CreateColorfulBall(800, 400, true, true );
 
 	
 	//wall
 
-	CreateWallMany(0, 100, wallType.Blue, wallCreatorDirectionType.Right, 10);
-	CreateWallDestroyableMany(global.wallWidth *10, 100, wallCreatorDirectionType.Right, 5);
-	CreateWallMany(global.wallWidth *15, 100, wallType.Blue, wallCreatorDirectionType.Right, 2);
-	CreateWallDestroyableMany(global.wallWidth *17, 100, wallCreatorDirectionType.Right, 3);
-	CreateWallMany(global.wallWidth *20, 100, wallType.Blue, wallCreatorDirectionType.Right, 12);
+
+	CreateWallDestroyableMany(0, 300, wallCreatorDirectionType.Right, 32);
 	
 	
 		
 	//items
-	CreateLifePoint(30, 640, lifePointType.Blue);
-	CreateLifePoint(70, 640, lifePointType.Blue);
-	CreateLifePoint(110, 640, lifePointType.Blue);
-	CreateLifePoint(150, 640, lifePointType.Blue);
 	
-	CreateLifePoint(870, 640, lifePointType.Blue);
-	CreateLifePoint(910, 640, lifePointType.Blue);
-	CreateLifePoint(950, 640, lifePointType.Blue);
-	CreateLifePoint(990, 640, lifePointType.Blue);
+			CreateItem(50, 600, obj_item_health_potion);
+		CreateItem(400, 600, obj_item_protecting_ring);
+	CreateItem(960, 600, obj_item_energy_shield);
+	CreateItem(700, 600, obj_item_double_sting);
+
 
 	
 }
@@ -2953,85 +2842,25 @@ function CreateLevelNightmare45() {
 	// init
 	LoadBackgroundImage("newYork_night"); //Load background
 	CreateWallFrame(wallFrameType.Red ?? noone); //wall frame creating
-	PlayMusic(snd_drakan_5, true); // play music
-	CreatePlayer(450, 50); // create player
+	PlayMusic(snd_criminal_case, true); // play music
+	CreatePlayer(500, 50); // create player
 	
 	//Enemy
 	
-	CreateSentinel_T_3000(500, 500,2,2,c_yellow, true );
-	
-	CreateNormalBallLarge(500, 310, -global.normalBallLargeMoveX, global.normalBallLargeMoveY,
-	global.normalBallLargeGravityY, -17,
-	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_2, true);
-	
-	CreateNormalBallLarge(500, 310, global.normalBallLargeMoveX, global.normalBallLargeMoveY,
-	global.normalBallLargeGravityY, -17,
-	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_2, true);
-	
-	CreateNormalBallSmall(280, 640, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY, -17,
-	normalBallColorType.Green,  true);
-	
-	CreateNormalBallSmall(320, 620, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY, -17,
-	normalBallColorType.Green,  true);
-	
-	CreateNormalBallSmall(360, 630, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY, -17,
-	normalBallColorType.Green,  true);
-	
-	CreateNormalBallSmall(400, 600, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY, -17,
-	normalBallColorType.Green,  true);
-	
-	CreateNormalBallSmall(440, 660, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY,-17,
-	normalBallColorType.Green,  true);
-	
-	CreateNormalBallSmall(480, 570, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY, -17,
-	normalBallColorType.Green,  true);
-	
-	CreateNormalBallSmall(520, 603, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY, -17,
-	normalBallColorType.Green,  true);
-	
-	CreateNormalBallSmall(560, 580, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY,-17,
-	normalBallColorType.Green,  true);
-	
-	CreateNormalBallSmall(600, 570, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY, -17,
-	normalBallColorType.Green,  true);
-	
-	CreateNormalBallSmall(640, 645, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY, -17,
-	normalBallColorType.Green,  true);
-	
-	CreateNormalBallSmall(680, 570, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY,-17,
-	normalBallColorType.Green,  true);
-	
-	CreateNormalBallSmall(720, 570, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY, -17,
-	normalBallColorType.Green,  true);
-	
-	CreateNormalBallSmall(740, 610, global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY, -17,
-	normalBallColorType.Green,  true);
-	
-	
+	CreateBlueBallBoss(400,-1);
+	CreateBlueBallBoss(600,3);
 
 	//wall
-	CreateWallMany(224, 666, wallType.Green, wallCreatorDirectionType.Top, 5);
-	CreateWallMany(768, 666, wallType.Green, wallCreatorDirectionType.Top, 5);
-	CreateWallDestroyableMany(416, 200, wallCreatorDirectionType.Right, 6);
+
 
 	
 	//items
-	CreateItem(50, 600, obj_item_double_sting);
-	CreateItem(100, 600, obj_item_first_aid_kit);
-	CreateItem(950, 600, obj_item_first_aid_kit);
+	CreateItem(650, 600, obj_item_double_sting);
+	CreateItem(400, 600, obj_item_double_sting);
+	CreateItem(950, 600, obj_item_health_potion);
+	CreateItem(900, 600, obj_item_energy_shield);
+	CreateItem(50, 600, obj_item_health_potion);
+	CreateItem(100, 600, obj_item_energy_shield);
 }
 
 #endregion
@@ -3044,44 +2873,28 @@ function CreateLevelNightmare46() {
 
 	LoadBackgroundImage("maya_morning"); //Load background
 	CreateWallFrame(wallFrameType.Purple ?? noone); //wall frame creating
-	PlayMusic(snd_unreal_remake5, true); // play music
-	CreatePlayer(900, 600); // create player
+	PlayMusic(snd_drakan_3, true); // play music
+	CreatePlayer(550, 600); // create player
 	
 	//Enemy
 	
-	CreateSentinel_T_3000(500, 200,2,4,c_yellow, true );
-	CreateNormalBallLarge(100, 100, global.normalBallLargeMoveX, global.normalBallLargeMoveY,
-	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
-	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_2, true);
+		CreateSuperBallGiant(300, 100, -2, -5,
+	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_3, true);
 	
-	CreateNormalBallGiant(550, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
-	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
-	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_2, true);
+			CreateSuperBallGiant(600, 100, 1, -5,
+	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_3, true);
 	
-	CreateAntiGravityBallMedium(100, 600, true, true, true );
-	CreateAntiGravityBallMedium(900, 200, true, true, true );
+			CreateSuperBallGiant(900, 100, 2, -5,
+	normalBallColorType.Green, normalBallGiantDropItemType.DropQualityLevel_3, true);
 
 
 	//wall
-	var startHeight = 500;
-	
-		for (var i = 0; i < 9; i++) {
-		CreateWallMany(500 + (global.wallWidth *i), startHeight, wallType.Red, wallCreatorDirectionType.Right, 1);
-		startHeight += -34;
-		}
-	
-	startHeight = 300;
-		for (var i = 0; i < 5; i++) {
-		CreateWallMany(200 + (global.wallWidth *i), startHeight, wallType.Red, wallCreatorDirectionType.Right, 1);
-		startHeight += -34;
-		}
-	
-	CreateWallMany(0,500 , wallType.Red, wallCreatorDirectionType.Right, 2);
+
 
 	//items
-	CreateItem(350, 50, obj_item_health_potion);
-	CreateItem(50, 50, obj_item_health_potion);
-	CreateItem(800, 600, obj_item_protecting_ring);
+
+	CreateItem(50, 500, obj_item_health_potion);
+
 	CreateFoodByImageIndex(100, 500, 7);
 	CreateFoodByImageIndex(150, 500, 7);
 	CreateFoodByImageIndex(200, 500, 7);
@@ -3102,74 +2915,30 @@ function CreateLevelNightmare47() {
 	// init
 	LoadBackgroundImage("maya_twilight"); //Load background
 	CreateWallFrame(wallFrameType.Purple ?? noone); //wall frame creating
-	PlayMusic(snd_unreal_remake5, true); // play music
-	CreatePlayer(400, 600); // create player
+	PlayMusic(snd_drakan_2, true); // play music
+	CreatePlayer(50, 600); // create player
 	
 	//Enemy
 	
-		CreateSentinel_T_3000(100, 100,2,4,c_yellow, true );
-	CreateNormalBallSmall(410, 250, -global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
-	normalBallColorType.Blue,  true);
+		CreateSentinel_T_3000(900, 100,2,4,c_yellow, true );
+
 	
-	CreateNormalBallSmall(600, 140, -global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
-	normalBallColorType.Blue,  true);
+	CreateAntiGravityBallMedium(500, 200, false, true, true );
+	CreateAntiGravityBallMedium(500, 200, true, true, true );
 	
-	CreateNormalBallSmall(80, 270, -global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
-	normalBallColorType.Blue,  true);
+		CreateWretched(500, -200, enemyStartDirectionType.Top);
 	
-	CreateNormalBallSmall(220, 450, -global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
-	normalBallColorType.Blue,  true);
-	
-	CreateNormalBallSmall(560, 450, -global.normalBallSmallMoveX, global.normalBallSmallMoveY,
-	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
-	normalBallColorType.Blue,  true);
-	
-	CreateAntiGravityBallMedium(100, 600, true, true, true );
-	CreateAntiGravityBallMedium(900, 200, true, true, true );
-	
-	CreateAntiGravityBallSmall(100, 100, false, true, true );
-	CreateAntiGravityBallSmall(900, 600, false, false, true );
+
 
 	
 	//wall
-	CreateWallMany(96 + (global.wallWidth*8), 200, wallType.Blue, wallCreatorDirectionType.Bottom, 3);
-	CreateWallDestroyableMany(96 + (global.wallWidth*11), 200, wallCreatorDirectionType.Bottom, 3);
-	CreateWallMany(96 + (global.wallWidth*9), 268, wallType.Blue, wallCreatorDirectionType.Right, 2);
-	
-	CreateWallDestroyableMany(96 + (global.wallWidth*14), 100, wallCreatorDirectionType.Bottom, 3);
-	CreateWallDestroyableMany(96 + (global.wallWidth*17), 100, wallCreatorDirectionType.Bottom, 3);
-	CreateWallDestroyableMany(96 + (global.wallWidth*15), 168, wallCreatorDirectionType.Right, 2);
-	
-	CreateWallMany(40 + (global.wallWidth*4), 400, wallType.Blue, wallCreatorDirectionType.Bottom, 3);
-	CreateWallDestroyableMany(40 + (global.wallWidth*7), 400, wallCreatorDirectionType.Bottom, 3);
-	CreateWallMany(40 + (global.wallWidth*5), 468, wallType.Blue, wallCreatorDirectionType.Right, 2);
-	
-	CreateWallMany(40 + (global.wallWidth*14), 400, wallType.Blue, wallCreatorDirectionType.Bottom, 3);
-	CreateWallDestroyableMany(40 + (global.wallWidth*17), 400, wallCreatorDirectionType.Bottom, 3);
-	CreateWallMany(40 + (global.wallWidth*15), 468, wallType.Blue, wallCreatorDirectionType.Right, 2);
-
-	
-	CreateWallMany(0 , 230, wallType.Blue, wallCreatorDirectionType.Bottom, 3);
-	CreateWallDestroyableMany(0 + (global.wallWidth*3), 230, wallCreatorDirectionType.Bottom, 3);
-	CreateWallMany(0 + (global.wallWidth*1), 298, wallType.Blue, wallCreatorDirectionType.Right, 2);
-	
-	CreateWallMany(998 , 550, wallType.Blue, wallCreatorDirectionType.Left, 5);
-	
+	CreateWallMany(200, 0, wallType.Blue, wallCreatorDirectionType.Bottom, 17);
+	CreateWallIndestructibleMany(980, 550, wallCreatorDirectionType.Left, 4);
 
 	
 		
 	//items
-	CreateLifePoint(30, 640, lifePointType.Blue);
-	CreateLifePoint(70, 640, lifePointType.Blue);
-	CreateLifePoint(110, 640, lifePointType.Blue);
-	CreateLifePoint(150, 640, lifePointType.Blue);
-	CreateLifePoint(190, 640, lifePointType.Blue);
-	CreateLifePoint(230, 640, lifePointType.Blue);
-	CreateLifePoint(270, 640, lifePointType.Blue);
+
 	
 	
 	
@@ -3181,8 +2950,12 @@ function CreateLevelNightmare47() {
 	CreateLifePoint(950, 640, lifePointType.Blue);
 	CreateLifePoint(990, 640, lifePointType.Blue);
 	
-		CreateItem(950, 300, obj_item_health_potion);
-			CreateItem(900, 300, obj_item_health_potion);
+		CreateItem(200, 600, obj_item_protecting_ring);
+		CreateItem(950, 300, obj_item_first_aid_kit);
+			CreateItem(250, 600, obj_item_projectile_shield);
+			CreateItem(350, 600, obj_item_machine_gun);
+			CreateItem(450, 600, obj_item_machine_gun);
+			CreateItem(550, 600, obj_item_machine_gun);
 
 
 	
@@ -3198,43 +2971,42 @@ function CreateLevelNightmare48() {
 	LoadBackgroundImage("maya_night"); //Load background
 	CreateWallFrame(wallFrameType.Purple ?? noone); //wall frame creating
 	PlayMusic(snd_unreal_remake5, true); // play music
-	CreatePlayer(400, 600); // create player
+	CreatePlayer(350, 600); // create player
 	
 	//Enemy
 	
-	CreateColorfulBall(200, 100, true, true );
-	CreateColorfulBall(400, 100, true, true );
-	CreateColorfulBall(600, 100, true, true );
-	CreateColorfulBall(800, 100, true, true );
 	CreateNormalBallLarge(189, 310, -global.normalBallLargeMoveX, global.normalBallLargeMoveY,
 	global.normalBallLargeGravityY, -17,
-	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_2, true);
+	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_5, true);
 	
 	CreateNormalBallLarge(850, 310, -global.normalBallLargeMoveX, global.normalBallLargeMoveY,
 	global.normalBallLargeGravityY, -17,
-	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_2, true);
+	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_5, true);
 	
 	CreateNormalBallLarge(500, 310, -global.normalBallLargeMoveX, global.normalBallLargeMoveY,
 	global.normalBallLargeGravityY, -17,
-	normalBallColorType.Green, normalBallGiantDropItemType.DropQualityLevel_2, true);
+	normalBallColorType.Green, normalBallGiantDropItemType.DropQualityLevel_5, true);
+	
+		CreateMalwrath(1350, 200, enemyStartDirectionType.Right);
+			CreateMalwrath(-250, 200, enemyStartDirectionType.Left);
 	
 	
 	//wall
-	CreateWallMany((global.wallWidth * 2), 550, wallType.Green, wallCreatorDirectionType.Right, 1);
-	CreateWallMany((global.wallWidth * 6), 550, wallType.Blue, wallCreatorDirectionType.Right, 1);
-	CreateWallMany((global.wallWidth * 10), 550, wallType.Red, wallCreatorDirectionType.Right, 1);
-	CreateWallMany((global.wallWidth * 14), 550, wallType.Green, wallCreatorDirectionType.Right, 1);
-	CreateWallMany((global.wallWidth * 18), 550, wallType.Blue, wallCreatorDirectionType.Right, 1);
-	CreateWallMany((global.wallWidth * 22), 550, wallType.Red, wallCreatorDirectionType.Right, 1);
-	CreateWallMany((global.wallWidth * 26), 550, wallType.Green, wallCreatorDirectionType.Right, 1);
-	CreateWallMany((global.wallWidth * 30), 550, wallType.Red, wallCreatorDirectionType.Right, 1);
+	CreateWallMany((global.wallWidth * 2), 550, wallType.Green, wallCreatorDirectionType.Right, 2);
+	CreateWallMany((global.wallWidth * 14), 550, wallType.Blue, wallCreatorDirectionType.Right, 2);
+	CreateWallMany((global.wallWidth * 26), 550, wallType.Red, wallCreatorDirectionType.Right, 2);
+
 
 	
 	//items
-	CreateItem(100, 600, obj_item_double_power_wire);
-	CreateItem(200, 650, obj_item_energy_shield);
-	CreateItem(824, 650, obj_item_first_aid_kit);
-	CreateItem(924, 600, obj_item_double_power_wire);
+	CreateItem(100, 600, obj_item_double_sting);
+	CreateItem(200, 650, obj_item_projectile_shield);
+	CreateItem(824, 650, obj_item_projectile_shield);
+	CreateItem(924, 600, obj_item_double_sting);
+	
+	CreateItem(90, 200, obj_item_health_potion);
+	CreateItem(480, 200, obj_item_protecting_ring);
+	CreateItem(860, 200, obj_item_first_aid_kit);
 }
 
 #endregion
@@ -3269,7 +3041,7 @@ function CreateLevelNightmare49() {
 	CreateWallMany(900,300 , wallType.Red, wallCreatorDirectionType.Left, 2);
 
 	//items
-	CreateItem(450, 600, obj_item_first_aid_kit);
+	CreateItem(450, 600, obj_item_health_potion);
 	CreateItem(500, 600, obj_item_health_potion);
 	CreateLifePoint(630, 640, lifePointType.Red);
 	CreateLifePoint(670, 640, lifePointType.Red);
@@ -3301,7 +3073,7 @@ function CreateLevelNightmare50() {
 	
 	//Enemy
 
-		CreateRedBallBoss(500,-0.1);
+		CreateBlueBallBoss(500,-3);
 
 	
 	CreateHorizontalBallMedium(100, 400, true, true, true );
@@ -3342,17 +3114,39 @@ function CreateLevelNightmare51() {
 	LoadBackgroundImage("antarctica_morning"); //Load background
 	CreateWallFrame(wallFrameType.Snow ?? noone); //wall frame creating
 	PlayMusic(snd_deathValley_music, true); // play music
-	CreatePlayer(600, 100); // create player
+	CreatePlayer(500, 600); // create player
 	
 	//Enemy
-	CreateSuperBallGiant(200, 300, 3, -5,
-	normalBallColorType.Red, normalBallGiantDropItemType.Nothing, true);
+	CreateNormalBallLarge(100, 310, 0, global.normalBallLargeMoveY,
+	global.normalBallLargeGravityY, -17,
+	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_5, true);
 	
+	CreateNormalBallLarge(200, 310, 0, global.normalBallLargeMoveY,
+	global.normalBallLargeGravityY, -17,
+	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_5, true);
 	
+	CreateNormalBallLarge(300, 310, 0, global.normalBallLargeMoveY,
+	global.normalBallLargeGravityY, -17,
+	normalBallColorType.Green, normalBallGiantDropItemType.DropQualityLevel_5, true);
+	
+		CreateNormalBallLarge(700, 310, 0, global.normalBallLargeMoveY,
+	global.normalBallLargeGravityY, -17,
+	normalBallColorType.Green, normalBallGiantDropItemType.DropQualityLevel_5, true);
+	
+	CreateNormalBallLarge(800, 310, 0, global.normalBallLargeMoveY,
+	global.normalBallLargeGravityY, -17,
+	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_5, true);
+	
+	CreateNormalBallLarge(900, 310, 0, global.normalBallLargeMoveY,
+	global.normalBallLargeGravityY, -17,
+	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_5, true);
+	
+	CreateBlackBallLarge(500, 100, true, true );
 
 	//items
 	CreateItem(900, 100, obj_item_health_potion);
 	CreateItem(100, 100, obj_item_health_potion);
+
 
 }
 
@@ -3366,17 +3160,34 @@ function CreateLevelNightmare52() {
 	LoadBackgroundImage("antarctica_twilight"); //Load background
 	CreateWallFrame(wallFrameType.Snow ?? noone); //wall frame creating
 	PlayMusic(snd_deathValley_music, true); // play music
-	CreatePlayer(600, 100); // create player
+	CreatePlayer(600, 500); // create player
 	
 	//Enemy
-	CreateSuperBallLarge(200, 300, 3, -5,
-	normalBallColorType.Blue, normalBallGiantDropItemType.Nothing, true);
+	CreateNormalBallMediumShield(100, 300, global.normalBallMediumMoveX, global.normalBallMediumMoveY,
+	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
+	normalBallColorType.Blue, true,2);
+	
+		CreateNormalBallMediumShield(900, 300, -global.normalBallMediumMoveX, global.normalBallMediumMoveY,
+	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
+	normalBallColorType.Blue, true,2);
+	
+		CreateNormalBallMediumShield(100, 100, global.normalBallMediumMoveX, global.normalBallMediumMoveY,
+	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
+	normalBallColorType.Blue, true,3);
+	
+		CreateNormalBallMediumShield(900, 100, global.normalBallMediumMoveX, global.normalBallMediumMoveY,
+	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
+	normalBallColorType.Blue, true,4);
+	
+			CreateBlueBallBoss(500,4);
 	
 	
 
 	//items
 	CreateItem(900, 100, obj_item_health_potion);
 	CreateItem(100, 100, obj_item_health_potion);
+	CreateItem(500, 100, obj_item_double_sting);
+
 
 }
 
@@ -3389,12 +3200,19 @@ function CreateLevelNightmare53() {
 	// init
 	LoadBackgroundImage("antarctica_night"); //Load background
 		CreateWallFrame(wallFrameType.Snow ?? noone); //wall frame creating
-	PlayMusic(snd_deathValley_music, true); // play music
+	PlayMusic(snd_TheDarkKnightRises, true); // play music
 	CreatePlayer(600, 100); // create player
 	
 	//Enemy
-	CreateSuperBallMedium(200, 300, 3, -5,
+	CreateSuperBallMedium(100, 300, 0, -5,
 	normalBallColorType.Green, true);
+	
+		CreateSuperBallMedium(900, 300, 0, -5,
+	normalBallColorType.Blue, true);
+	
+	
+			CreateMalwrath(1350, 200, enemyStartDirectionType.Right);
+
 	
 	
 
@@ -3412,7 +3230,7 @@ function CreateLevelNightmare53() {
 function CreateLevelNightmare54() {
 	
 	// init
-	LoadBackgroundImage("Nightmare_finalBattle_place"); //Load background
+	LoadBackgroundImage("nightmare_finalBattle_place"); //Load background
 	CreateWallFrame(wallFrameType.Gray ?? noone); //wall frame creating
 	PlayMusic(snd_galaxy_network, true); // play music
 	CreatePlayer(550, 500); // create player

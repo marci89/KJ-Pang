@@ -22,7 +22,13 @@ if(global.gameDifficult == gameDifficultType.Hard) {
 }
 
 if(global.gameDifficult == gameDifficultType.Nightmare) {
-	if (global.level == 1 || global.level == 4 || global.level == 10 || global.level == 39) {
+	if (global.level == 1 || global.level == 4 || global.level == 10 || global.level == 46) {
+		CreateMist();
+	}
+}
+
+if(global.gameDifficult == gameDifficultType.Impossible) {
+	if (global.level == 4 || global.level == 10 || global.level == 46) {
 		CreateMist();
 	}
 }

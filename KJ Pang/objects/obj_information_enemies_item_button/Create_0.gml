@@ -252,7 +252,7 @@ function Init() {
 	if(buttonId == 34) {
 		image = spr_enemy_expert_guardian_pic_small;
 		infoType = enemyInformationType.ExpertGuardian;
-		requiredDifficult = gameDifficultType.Nightmare;
+		requiredDifficult = gameDifficultType.Impossible;
 	}
 	
 	//set image
