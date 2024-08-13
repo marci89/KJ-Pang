@@ -6,8 +6,6 @@
 effect_create_layer("TopLayer", ef_flare, x, y, 0, c_white);
 
 
-
-	
 #region Screen collision
 
 var halfSpriteWidth = sprite_width / 2;
@@ -130,6 +128,8 @@ if (place_meeting(x, y, obj_player_one)) {
 			
 		}
 	}
+	
+	instance_destroy();
 }
 
 //player 2
@@ -144,6 +144,8 @@ if (place_meeting(x, y, obj_player_two)) {
 			controllerObj.CreateBlindFilter();
 		}
 	}
+	
+	instance_destroy();
 }
 
 #endregion

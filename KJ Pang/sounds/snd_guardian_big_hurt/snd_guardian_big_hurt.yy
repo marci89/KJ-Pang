@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_guardian_big_hurt.mp3",
   "type":0,
-  "volume":0.23,
+  "volume":0.48,
 }

@@ -1,9 +1,4 @@
 
-
-
-
-
-
 	
 #region Screen collision
 
@@ -31,8 +26,6 @@ if (CheckScreenCollisionBottomWithoutWallForObject(y-150, halfSpriteHeight)) {
 }
 
 #endregion
-
-
 
 #region Wall collision
 
@@ -115,6 +108,7 @@ if (bulletDirection == bulletDirectionType.PlayerDirection) {
 }
 
 #endregion
+
 
 event_inherited();
 

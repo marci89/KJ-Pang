@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_unreal_remake5.mp3",
   "type":0,
-  "volume":0.91,
+  "volume":0.7,
 }

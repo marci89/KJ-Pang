@@ -28,7 +28,7 @@ if(global.gameDifficult == gameDifficultType.Nightmare) {
 }
 
 if(global.gameDifficult == gameDifficultType.Impossible) {
-	if (global.level == 4 || global.level == 10 || global.level == 46) {
+	if (global.level == 46) {
 		CreateMist();
 	}
 }

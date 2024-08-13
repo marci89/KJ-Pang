@@ -764,13 +764,13 @@ function HandleImpossibleFinalBattleAction() {
 	if(actionNumber == 1) {
 	
 		CreateSuperBallLargeShield(-100, 200, 4, -2,
-	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_3, true,2);
+	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_3, true,3);
 	
 		CreateSuperBallLargeShield(1124, 200, -4, -3,
-	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_3, true,2);
+	normalBallColorType.Green, normalBallGiantDropItemType.DropQualityLevel_3, true,3);
 		alarm[0] = 1300
 		
-		CreateRedBallBoss(500,-3);
+			CreateManananggalChild(500, 100);
 	
 	}
 	
@@ -778,11 +778,11 @@ function HandleImpossibleFinalBattleAction() {
 		
 		CreateNormalBallLargeShield(1124, 300, -global.normalBallLargeMoveX, global.normalBallLargeMoveY,
 		global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
-		normalBallColorType.Green, normalBallGiantDropItemType.DropQualityLevel_5, true,4);
+		normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_5, true,4);
 	
 		CreateNormalBallMediumShield(-100, 300, global.normalBallMediumMoveX, global.normalBallMediumMoveY,
 		global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
-		normalBallColorType.Green, true,4);
+		normalBallColorType.Blue, true,4);
 		
 		CreateNormalBallMediumShield(-100, 100, global.normalBallMediumMoveX, global.normalBallMediumMoveY,
 		global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
@@ -792,6 +792,8 @@ function HandleImpossibleFinalBattleAction() {
 		CreateSmogBall(100, 100, 4,-2, true );
 		
 		CreateSmogBall(900, 100, -4,-2, true );
+		
+			CreateManananggalChild(500, 100);
 		alarm[0] = 1300
 	}
 	
@@ -800,7 +802,7 @@ function HandleImpossibleFinalBattleAction() {
 		CreateItem(400, 100, obj_item_invulnerability_potion);
 		
 		CreateSentinel_T_X(100, 100,3,4,c_aqua, true );
-		CreateSentinel_T_X(500, 100,2,4,c_lime, true );
+		CreateSentinel_T_3000(500, 100,2,4,c_lime, true );
 		CreateSentinel_T_X(900, 100,-3,5,c_lime, true );
 		CreateItem(500,100, obj_item_projectile_shield)
 		alarm[0] = 800
@@ -809,8 +811,9 @@ function HandleImpossibleFinalBattleAction() {
 	if(actionNumber == 4) {
 		
 		CreateItem(880, 100, obj_item_shotgun);
+		CreateItem(100, 100, obj_item_shotgun);
 		
-		CreateSentinel_T_800(500, 100,2,5,c_yellow, true );
+		CreateSentinel_T_X(500, 100,2,5,c_yellow, true );
 				
 			CreateNormalBallMediumShield(1224, 300, -global.normalBallMediumMoveX, global.normalBallMediumMoveY,
 	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
@@ -820,8 +823,8 @@ function HandleImpossibleFinalBattleAction() {
 	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
 	normalBallColorType.Red, true,4);
 		
-		CreateWorm (50,500, 0.3, 0, true);
-		CreateWorm (975,500, -0.3, 0, true);
+		CreateTongueWorm (50,500, 0.3, 0, true);
+		CreateTongueWorm (975,500, -0.3, 0, true);
 		
 			CreateHorizontalBallMedium(50, 300, true, true, true );
 			CreateHorizontalBallMedium(950, 300, false, true, true );
@@ -835,6 +838,8 @@ function HandleImpossibleFinalBattleAction() {
 			CreateItem(880, 100, obj_item_protecting_ring);
 		CreateAntiGravityBallMedium(-100, 500, false, true, true );
 		CreateYellowBallGiant(1124, 350, true, true );
+		
+			CreateManananggalChild(500, 100);
 		alarm[0] = 100
 	}
 	
@@ -843,22 +848,33 @@ function HandleImpossibleFinalBattleAction() {
 		
 	CreateHorizontalBallMedium(100, 300, true, true, true );
 	CreateHorizontalBallMedium(950, 300, false, true, true );
+	
+	CreateSentinel_T_Pro(500, 100,2,5,c_yellow, true );
+	
+		CreateItem(200,100, obj_item_projectile_shield)
+			CreateItem(800,100, obj_item_protecting_ring)
+			CreateItem(500,100, obj_item_first_aid_kit)
 		alarm[0] = 200;
 	}
 	
 	if(actionNumber == 7) {
 		CreateColorfulBall(500, 100, true, true );
+		CreateColorfulBall(500, 100, false, true );
+		
+			CreateCacodemon(-300, 300, enemyStartDirectionType.Left);
 		alarm[0] = 400;
+		
 	}
 	
 	if(actionNumber == 8) {
 		
 	CreateSmogBall(100, 100,2,2, true );
 	CreateSmogBall(900, 100,-2,2, true );
+	CreateSmogBall(500, 100,-2,2, true );
 	CreateHorizontalBallMedium(100, 500, true, true, true );
 	CreateHorizontalBallMedium(950, 500, false, true, true );
 	
-			CreateRedBallBoss(500,5);
+	CreateRedBallBoss(500,5);
 		alarm[0] = 1500;
 	}
 	
@@ -870,7 +886,8 @@ function HandleImpossibleFinalBattleAction() {
 	}
 	
 	if(actionNumber == 10) {
-		CreateSentinel_T_3000(500, 100,5,5,c_yellow, true );
+				CreateItem(500, 100, obj_item_shotgun);
+		CreateSentinel_T_3000(500, 100,5,3,c_yellow, true );
 		CreateAntiGravityBallMedium(-100, 500, false, true, true );
 		CreateAntiGravityBallMedium(1124, 500, true, true, true );
 		alarm[0] = 1500;
@@ -906,6 +923,7 @@ function HandleImpossibleFinalBattleAction() {
 			CreateSuperBallLargeShield(1124, 200, -4, -2,
 	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_3, true,3);
 		
+			CreateManananggal(-300, 300, enemyStartDirectionType.Left);
 	
 		alarm[0] = 1500;
 
@@ -922,6 +940,7 @@ function HandleImpossibleFinalBattleAction() {
 		
 			CreateSmogBall(100, 300,2,2, true );
 	CreateSmogBall(900, 300,-2,2, true );
+	CreateSmogBall(500, 300,-2,2, true );
 
 		
 	
@@ -934,6 +953,8 @@ function HandleImpossibleFinalBattleAction() {
 		
 	CreateSmogBall(100, 300,2,2, true );
 	CreateSmogBall(900, 300,-2,2, true );
+	
+
 
 		
 	
@@ -964,13 +985,14 @@ function HandleImpossibleFinalBattleAction() {
 	if(actionNumber == 17) {
 		
 	CreateRedBallBoss(200, 2);
+					CreateItem(356,100, obj_item_health_potion)
 		
 		alarm[0] = 500;
 	}
 	
 	if(actionNumber == 18) {
 		
-	CreateRedBallBoss(800,-2);
+	CreateBlueBallBoss(800,-2);
 		
 		alarm[0] = 2000;
 	}
@@ -993,7 +1015,8 @@ function HandleImpossibleFinalBattleAction() {
 		
 				CreateSuperBallGiant(600, 100, 2, -5,
 	normalBallColorType.Green, normalBallGiantDropItemType.DropQualityLevel_3, true);
-		
+	
+			CreateCacodemon(-300, 300, enemyStartDirectionType.Left);
 		alarm[0] = 1500;
 	}
 	
@@ -1011,8 +1034,13 @@ function HandleImpossibleFinalBattleAction() {
 	
 		if(actionNumber == 22) {
 		
-		CreateSentinel_T_800(200, 100,2,4,c_yellow, true );
-			CreateSentinel_T_800(900, 100,2,6,c_yellow, true );
+		CreateSentinel_T_X(200, 100,2,4,c_yellow, true );
+			CreateSentinel_T_3000(900, 100,2,6,c_yellow, true );
+				CreateItem(100, 100, obj_item_health_potion);
+				CreateItem(300, 100, obj_item_health_potion);
+				CreateItem(500, 100, obj_item_health_potion);
+				CreateItem(700, 100, obj_item_health_potion);
+				CreateItem(900, 100, obj_item_projectile_shield);
 
 		
 		alarm[0] = 1800;
@@ -1035,6 +1063,11 @@ function HandleImpossibleFinalBattleAction() {
 		
 	CreateHorizontalBallMedium(100, 500, true, true, true );
 	CreateHorizontalBallMedium(950, 500, false, true, true );
+	
+	
+				CreateManananggalChild(300, 100);
+							CreateManananggalChild(500, 100);
+										CreateManananggalChild(700, 100);
 
 		
 		alarm[0] = 1500;

@@ -22,6 +22,8 @@ var weaponInstance = instance_place(x, y, obj_weapon_parent);
 
 #region movement
 
+if(global.currentLevelEffect != levelEffectType.TimeFreeze &&
+global.currentLevelEffect != levelEffectType.TimeSlow) {
 	//random value for grav
 	gravSpeedY = random_range(-0.1, 0.1);
 	
@@ -37,6 +39,7 @@ var weaponInstance = instance_place(x, y, obj_weapon_parent);
 		if(moveX < -4) {
 		moveX = -4;
 	}
+}
 	
 	
 #endregion

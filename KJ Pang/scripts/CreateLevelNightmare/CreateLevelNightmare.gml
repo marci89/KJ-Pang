@@ -14,7 +14,7 @@ global.hasRoomWallFrame = false; // no wall frames
 global.isRestartLevelAfterDead = true; //restart after death
 global.levelTimeMax = 420; // level's max time
 //global.playerOneDefaultWeapon = weaponType.MachineGun;
-//global.level = 55;
+//global.level = 5;
 
 	//Giant normal ball default properties
 		global.normalBallGiantMoveX = 1.5;
@@ -1425,8 +1425,6 @@ function CreateLevelNightmare20() {
 	CreatePlayer(500, 600); // create player
 	
 	//Enemy
-		CreateSuperBallGiant(400, 200, -3, -5,
-	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_1, true);
 	
 		CreateSuperBallGiant(550, 200, 3, -5,
 	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_1, true);
@@ -1564,8 +1562,9 @@ CreateColorfulBall(800, 100, true, true );
 	//items
 	CreateFoodByImageIndex(840, 580, 1)
 	CreateFoodByImageIndex(890, 580, 1)
-	CreateItem(940, 580, obj_item_magnet);
-	CreateItem(990, 580, obj_item_health_potion);
+	CreateItem(240, 200, obj_item_energy_shield);
+	CreateItem(950, 580, obj_item_first_aid_kit);
+	CreateItem(990, 580, obj_item_magnet);
 
 	
 }

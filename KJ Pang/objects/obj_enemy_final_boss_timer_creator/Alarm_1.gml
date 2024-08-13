@@ -21,7 +21,8 @@ if (global.gameDifficult == gameDifficultType.Nightmare) {
 }
 
 if (global.gameDifficult == gameDifficultType.Impossible) {
-	CreateGuardian(500,1000,obj_enemy_guardian_pokemon_ball,guardianType.Expert);
+	CreateGuardian(100,900,obj_enemy_guardian_pokemon_ball,guardianType.Expert);
+	CreateGuardian(900,1100,obj_enemy_guardian_pokemon_ball,guardianType.Medior);
 }
 
 
