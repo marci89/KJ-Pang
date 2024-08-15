@@ -14,7 +14,7 @@ global.hasRoomWallFrame = false; // no wall frames
 global.isRestartLevelAfterDead = true; //restart after death
 global.levelTimeMax = 500; // level's max time
 //global.playerOneDefaultWeapon = weaponType.MachineGun;
-//global.level = 54;
+//global.level = 12;
 
 	//Giant normal ball default properties
 		global.normalBallGiantMoveX = 1.5;
@@ -396,28 +396,24 @@ function CreateLevelImpossible2() {
 	
 	CreateBlueBallBoss(200, -3);
 
+
 	
-	
-	CreateNormalBallGiant(500, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
-	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
-	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_4, true);
+		CreateNormalBallLarge(500, 100, global.normalBallLargeMoveX, global.normalBallLargeMoveY,
+	global.normalBallLargeGravityY, global.normalBallLargeJumpHeightMax,
+	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_5, true);
 	
 
 	
-		CreateSuperBallLarge(100, 300, 0, -6,
-	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_2, true);
-	
-			CreateSuperBallLarge(900, 300, 0, -6,
-	normalBallColorType.Blue, normalBallGiantDropItemType.DropQualityLevel_2, true);
+
 	
 		CreateWorm(510,30, -2, 0, true);
-		CreateWorm(510,30, 3, 0, true);
+		CreateWorm(510,30, 2, 0, true);
 	
 	//wall
 	CreateWallDestroyableMany(440, 200, wallCreatorDirectionType.Right, 4);
 	
 	//items
-	CreateFoodByImageIndex(30, 640, 17)
+
 	CreateFoodByImageIndex(70, 640, 17)
 	CreateFoodByImageIndex(110, 640, 17)
 	CreateFoodByImageIndex(150, 640, 17)
@@ -425,7 +421,10 @@ function CreateLevelImpossible2() {
 	CreateFoodByImageIndex(870, 640, 17);
 	CreateFoodByImageIndex(910, 640, 17);
 	CreateFoodByImageIndex(950, 640, 17);
-	CreateFoodByImageIndex(990, 640, 17);
+
+	
+		CreateItem(990, 640, obj_item_energy_shield)
+	CreateItem(30, 640, obj_item_energy_shield)
 	
 	
 	CreateLifePoint(475, 100, lifePointType.Blue);
@@ -557,7 +556,7 @@ function CreateLevelImpossible5() {
 	
 	//Enemy
 	
-		CreateBlueBallBoss(660, -4);
+		CreateRedBallBoss(660, -4);
 
 	
 	CreateNormalBallGiant(450, 100, 3, global.normalBallGiantMoveY,
@@ -1082,6 +1081,7 @@ function CreateLevelImpossible12() {
 
 	//items
 	CreateItem(510, 60, obj_item_health_potion);
+	CreateItem(50, 600, obj_item_projectile_shield);
 	CreateLifePoint(430, 200, lifePointType.Green);
 	CreateLifePoint(280, 100, lifePointType.Green);
 	CreateLifePoint(600, 200, lifePointType.Green);
@@ -1120,7 +1120,7 @@ function CreateLevelImpossible13() {
 	CreateManananggal(-300, 200, enemyStartDirectionType.Left);
 	CreateManananggal(1300, 300, enemyStartDirectionType.Right);
 	
-		CreateSentinel_T_Pro(500, 100,2,2,c_lime, true );
+		CreateSentinel_T_Pro(500, 100,3,4,c_lime, true );
 
 
 
@@ -1128,12 +1128,18 @@ function CreateLevelImpossible13() {
 	//wall
 	
 	//items
-	CreateItem(74, 550, obj_item_first_aid_kit);
-	CreateItem(130, 550, obj_item_projectile_shield);
-	CreateItem(230, 550, obj_item_double_sting);
-	CreateItem(750, 550, obj_item_double_sting);
-	CreateItem(890, 550, obj_item_projectile_shield);
+	CreateItem(50, 550, obj_item_first_aid_kit);
+	CreateItem(100, 550, obj_item_projectile_shield);
+	CreateItem(150, 550, obj_item_double_sting);
+	CreateItem(850, 550, obj_item_double_sting);
+	CreateItem(900, 550, obj_item_projectile_shield);
 	CreateItem(950, 550, obj_item_first_aid_kit);
+	
+	CreateItem(200, 550, obj_item_invulnerability_potion);
+	CreateItem(250, 550, obj_item_protecting_ring);
+	
+	CreateItem(800, 550, obj_item_invulnerability_potion);
+	CreateItem(750, 550, obj_item_protecting_ring);
 }
 
 #endregion
@@ -1986,21 +1992,25 @@ function CreateLevelImpossible26() {
 		CreateWretched(1300, 300, enemyStartDirectionType.Right);
 			CreateMalwrath(-100, 100, enemyStartDirectionType.Left);
 			
-			CreateSentinel_T_Pro(500, 100,3,4,c_yellow, true );
+			CreateSentinel_T_3000(500, 100,3,4,c_yellow, true );
 	
 	//wall
 	
 	//items
+
+	
 	CreateItem(50, 550, obj_item_first_aid_kit);
 	CreateItem(100, 550, obj_item_projectile_shield);
-	CreateItem(150, 550, obj_item_protecting_ring);
-	CreateItem(200, 550, obj_item_health_potion);
-	CreateItem(800, 550, obj_item_invulnerability_potion);
-	CreateItem(850, 550, obj_item_invulnerability_potion);
+	CreateItem(150, 550, obj_item_double_sting);
+	CreateItem(850, 550, obj_item_double_sting);
 	CreateItem(900, 550, obj_item_projectile_shield);
 	CreateItem(950, 550, obj_item_first_aid_kit);
-	CreateItem(750, 550, obj_item_double_sting);
-	CreateItem(250, 550, obj_item_double_sting);
+	
+	CreateItem(200, 550, obj_item_invulnerability_potion);
+	CreateItem(250, 550, obj_item_protecting_ring);
+	
+	CreateItem(800, 550, obj_item_invulnerability_potion);
+	CreateItem(750, 550, obj_item_protecting_ring);
 }
 
 #endregion
@@ -3597,7 +3607,9 @@ function CreateLevelImpossible49() {
 	CreateWallMany(900,300 , wallType.Red, wallCreatorDirectionType.Left, 2);
 
 	//items
-	CreateItem(500, 600, obj_item_health_potion);
+	CreateItem(500, 640, obj_item_health_potion);
+	CreateItem(50, 640, obj_item_energy_shield);
+	CreateItem(100, 640, obj_item_energy_shield);
 	CreateLifePoint(630, 640, lifePointType.Red);
 	CreateLifePoint(670, 640, lifePointType.Red);
 	CreateLifePoint(710, 640, lifePointType.Red);
