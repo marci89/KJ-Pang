@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CreateLevelCrazy",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CreateLevelCrazy",
+  "parent":{
+    "name":"Level",
+    "path":"folders/Scripts/Level.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

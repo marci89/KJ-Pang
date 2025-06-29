@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":45.244083,
+  "duration":45.1929,
   "name":"snd_SnowspeederRescue",
   "parent":{
     "name":"Other",

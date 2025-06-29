@@ -4,8 +4,8 @@ if (global.isEnemyInformationMode || isFarAwayFromScreen) {
 	return;
 }
 
-if (IsInstanceExists(hisTongue)){
-	instance_destroy(hisTongue);
+if (instance_exists(hisTongue)) {
+    instance_destroy(hisTongue);
 }
 
 effect_create_above( ef_smoke, x, y, 2, c_red);
@@ -17,7 +17,9 @@ effect_create_above( ef_smoke, x, y, 2, c_red);
 var isDropped = irandom(99) < 21;
 
 if (isDropped) {
+	if(global.gameDifficult != gameDifficultType.Impossible) {
    CreateItemWithMovement(x, y, 0, -4, obj_item_bounced_pearls);
+	}
 }
 
 //left side

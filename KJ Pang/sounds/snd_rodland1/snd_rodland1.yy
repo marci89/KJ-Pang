@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":100.02286,
+  "duration":99.98512,
   "name":"snd_rodland1",
   "parent":{
     "name":"Rodland",

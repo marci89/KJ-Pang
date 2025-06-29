@@ -15,6 +15,7 @@ enum gameDifficultType {
     Normal,
     Hard,
 	Nightmare,
+	Crazy,
 	Impossible
 };
 
@@ -432,6 +433,7 @@ enum guardianType{
 	Senior,
 	Robot,
 	Expert,
+	Master
 
 };
 

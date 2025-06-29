@@ -284,13 +284,13 @@ var nothingDropChance = 0.8;
 		pistolDropChance = 0.07;
 		shotgunDropChance = 0.05;
 		
-		dynamitDropChance = 0.06;
+	
 		magnetDropChance = 0.03;
 		grenadeDropChance = 0.03;
 		
 		
 		
-		nothingDropChance = 0.35;
+		nothingDropChance = 0.41;
 
 		//randomize chance
 		randomize();
@@ -320,17 +320,16 @@ var nothingDropChance = 0.8;
 		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance + machinegunDropChance + pistolDropChance + shotgunDropChance)) {
 		    CreateItemWithMovement(x, y,0,-4, obj_item_shotgun);
 			
-		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance + machinegunDropChance + pistolDropChance + shotgunDropChance + dynamitDropChance)) {
-		   CreateItemWithMovement(x, y,0,-4, obj_item_dynamite);
+	
 			
-		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance + machinegunDropChance + pistolDropChance + shotgunDropChance + dynamitDropChance + magnetDropChance)) {
+		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance + machinegunDropChance + pistolDropChance + shotgunDropChance + magnetDropChance)) {
 		   CreateItemWithMovement(x, y,0,-4, obj_item_magnet);
 			
-		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance + machinegunDropChance + pistolDropChance + shotgunDropChance + dynamitDropChance + magnetDropChance + grenadeDropChance)) {
+		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance + machinegunDropChance + pistolDropChance + shotgunDropChance + magnetDropChance + grenadeDropChance)) {
 		    CreateItemWithMovement(x, y,0,-4, obj_item_grenade);
 		
 		
-		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance + machinegunDropChance + pistolDropChance + shotgunDropChance + dynamitDropChance + magnetDropChance + grenadeDropChance + nothingDropChance)) {
+		} else if (randomChance < (doubleStingDropChance + timeFreezeDropChance + timeSlowDropChance + energyShieldDropChance + healthPotionDropChance + machinegunDropChance + pistolDropChance + shotgunDropChance + magnetDropChance + grenadeDropChance + nothingDropChance)) {
 		    show_debug_message("No item dropped.");
 		} else {
 		    show_debug_message("Invalid drop outcome.");

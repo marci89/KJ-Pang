@@ -14,7 +14,7 @@ global.hasRoomWallFrame = false; // no wall frames
 global.isRestartLevelAfterDead = true; //restart after death
 global.levelTimeMax = 420; // level's max time
 //global.playerOneDefaultWeapon = weaponType.MachineGun;
-//global.level = 5;
+//global.level = 9;
 
 	//Giant normal ball default properties
 		global.normalBallGiantMoveX = 1.5;
@@ -539,10 +539,12 @@ function CreateLevelNightmare5() {
 	//Enemy
 	
 	CreateEyeBall(500,300);
+	CreateEyeBall(200,100);
+	CreateEyeBall(300,100);
 	CreateEyeBall(100,100);
 	CreateEyeBall(900,100);
-	CreateEyeBall(750,200);
-	CreateEyeBall(250,200);
+	CreateEyeBall(700,200);
+	CreateEyeBall(800,200);
 
 
 	
@@ -550,9 +552,7 @@ function CreateLevelNightmare5() {
 
 		
 	//items
-	CreateItem(80, 600, obj_item_health_potion);
-	CreateItem(950, 600, obj_item_health_potion);
-	CreateItem(140, 600, obj_item_pistol);
+	CreateItem(80, 600, obj_item_pistol);
 	CreateItem(890, 600, obj_item_pistol);
 
 
@@ -620,10 +620,9 @@ function CreateLevelNightmare6() {
 	
 	CreateFoodByImageIndex(515, 80, 28);
 	
-	CreateFoodByImageIndex(779, 80, 28);
-	CreateFoodByImageIndex(779, 300, 28);
+	CreateFoodByImageIndex(769, 80, 28);
+	CreateFoodByImageIndex(769, 300, 28);
 	
-		CreateItem(80, 600, obj_item_health_potion);
 			CreateItem(950, 600, obj_item_health_potion);
 }
 
@@ -793,13 +792,11 @@ function CreateLevelNightmare9() {
 	
 	//Enemy
 	CreateManananggalChild(100, 50);
-	CreateManananggalChild(200, 50);
 	CreateManananggalChild(300, 50);
-	CreateManananggalChild(400, 50);
 	CreateManananggalChild(500, 50);
 	CreateManananggalChild(600, 50);
 	CreateManananggalChild(700, 50);
-	CreateManananggalChild(800, 50);
+	CreateManananggalChild(400, 50);
 	CreateManananggalChild(900, 50);
 	
 
@@ -846,6 +843,7 @@ function CreateLevelNightmare9() {
 	CreateItem(100, 400, obj_item_projectile_shield);
 	CreateItem(150, 400, obj_item_projectile_shield);
 	CreateItem(200, 400, obj_item_double_sting);
+
 	
 	
 	
@@ -891,7 +889,7 @@ function CreateLevelNightmare10() {
 	
 	//items
 	CreateItem(210, 300, obj_item_energy_shield)
-	CreateItem(810, 300, obj_item_health_potion)
+	CreateItem(810, 300, obj_item_energy_shield)
 	
 	
 	CreateLifePoint(40, 250, lifePointType.Red);
@@ -995,11 +993,11 @@ CreateMalwrath(1350, 300, enemyStartDirectionType.Right);
 	//wall
 	
 	//items
-	CreateItem(74, 550, obj_item_health_potion);
+	CreateItem(74, 550, obj_item_first_aid_kit);
 	CreateItem(130, 550, obj_item_projectile_shield);
 	CreateItem(230, 550, obj_item_double_sting);
 	CreateItem(790, 550, obj_item_double_sting);
-	CreateItem(890, 550, obj_item_energy_shield);
+	CreateItem(890, 550, obj_item_projectile_shield);
 	CreateItem(950, 550, obj_item_health_potion);
 }
 
@@ -1316,8 +1314,8 @@ function CreateLevelNightmare17() {
 
 	
 	//items
-	CreateItem(950, 600, obj_item_health_potion)
-	CreateItem(50, 600, obj_item_health_potion)
+	CreateItem(950, 600, obj_item_energy_shield)
+	CreateItem(50, 600, obj_item_energy_shield)
 }
 
 #endregion
@@ -1365,7 +1363,6 @@ PlayMusic(snd_unreal1, true); // play music
 	
 	CreateYellowBallGiant(230, 350, true, true );
 	
-	CreateSentinel_T_3000(200, 100,2,4,c_yellow, true );
 	CreateSentinel_T_3000(700, 100,-3,5,c_yellow, true );
 
 	
@@ -1431,6 +1428,7 @@ function CreateLevelNightmare20() {
 	
 	CreateEyeBall(100,100);
 	CreateEyeBall(900,100)
+	CreateEyeBall(500,100)
 	
 	//wall
 
@@ -1536,7 +1534,6 @@ function CreateLevelNightmare22() {
 	
 	//Enemy
 CreateColorfulBall(100, 100, false, true );
-
 CreateColorfulBall(500, 100, true, true );
 CreateColorfulBall(800, 100, true, true );
 	
@@ -1563,7 +1560,7 @@ CreateColorfulBall(800, 100, true, true );
 	CreateFoodByImageIndex(840, 580, 1)
 	CreateFoodByImageIndex(890, 580, 1)
 	CreateItem(240, 200, obj_item_energy_shield);
-	CreateItem(950, 580, obj_item_first_aid_kit);
+	CreateItem(950, 580, obj_item_health_potion);
 	CreateItem(990, 580, obj_item_magnet);
 
 	
@@ -2124,13 +2121,6 @@ function CreateLevelNightmare33() {
 	CreateBlackBallLarge(500, 300, true, true );
 	CreateYellowBallGiant(600, 400, false, true );
 	
-		CreateNormalBallGiant(250, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
-	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
-	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_5, true);
-	
-			CreateNormalBallGiant(750, 100, global.normalBallGiantMoveX, global.normalBallGiantMoveY,
-	global.normalBallGiantGravityY, global.normalBallGiantJumpHeightMax,
-	normalBallColorType.Red, normalBallGiantDropItemType.DropQualityLevel_5, true);
 	
 	
 	CreateHorizontalBallMedium(900, 500, false, true, true );
@@ -2216,8 +2206,7 @@ CreateBlueBallBoss(500,-3);
 
 		
 	//items
-	CreateItem(900, 600, obj_item_first_aid_kit);
-	CreateItem(850, 600, obj_item_double_sting);
+	CreateItem(900, 600, obj_item_double_sting);
 	CreateItem(50, 600, obj_item_energy_shield);
 	
 }
@@ -2482,7 +2471,7 @@ for (var i = 0; i < levels; i++) {
 	//items
 	CreateItem(650, 600, obj_item_projectile_shield);
 	CreateItem(400, 600, obj_item_projectile_shield);
-	CreateItem(350, 600, obj_item_first_aid_kit);
+	CreateItem(350, 600, obj_item_health_potion);
 	CreateItem(700, 600, obj_item_protecting_ring);
 
 	CreateFoodByImageIndex(30, 640, 0)
@@ -2575,7 +2564,7 @@ function CreateLevelNightmare39() {
 	CreateItem(400, 400, obj_item_first_aid_kit);
 	CreateItem(350, 400, obj_item_energy_shield);
 	CreateItem(150, 400, obj_item_double_sting);
-	CreateItem(100, 600, obj_item_protecting_ring);
+	CreateItem(100, 600, obj_item_energy_shield);
 	CreateItem(650, 400, obj_item_grenade);
 	CreateItem(700, 400, obj_item_grenade);
 
@@ -2856,9 +2845,7 @@ function CreateLevelNightmare45() {
 	//items
 	CreateItem(650, 600, obj_item_double_sting);
 	CreateItem(400, 600, obj_item_double_sting);
-	CreateItem(950, 600, obj_item_health_potion);
 	CreateItem(900, 600, obj_item_energy_shield);
-	CreateItem(50, 600, obj_item_health_potion);
 	CreateItem(100, 600, obj_item_energy_shield);
 }
 
@@ -3005,7 +2992,7 @@ function CreateLevelNightmare48() {
 	
 	CreateItem(90, 200, obj_item_health_potion);
 	CreateItem(480, 200, obj_item_protecting_ring);
-	CreateItem(860, 200, obj_item_first_aid_kit);
+	CreateItem(860, 200, obj_item_health_potion);
 }
 
 #endregion

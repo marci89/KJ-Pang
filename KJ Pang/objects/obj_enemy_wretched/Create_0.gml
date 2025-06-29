@@ -88,11 +88,11 @@ function SetStartValues() {
 	if (global.gameDifficult == gameDifficultType.Impossible) {
 		MoveToPlayer(4);
 		moveY = 11;
-		bulletShootTime = 150;
-		childNumber = 3;
-		maxChildNumber = 3;
-		childCreateTime = 60;
-		bulletSpeed = 17;
+		bulletShootTime = 110;
+		childNumber = 5;
+		maxChildNumber = 5;
+		childCreateTime = 30;
+		bulletSpeed = 20;
 	} else {
 		MoveToPlayer(3);
 		moveY = 9;

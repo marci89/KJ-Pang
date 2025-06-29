@@ -70,8 +70,10 @@ function Init() {
 		levelBonus = 3000;
 	} else if(global.gameDifficult == gameDifficultType.Nightmare) {
 		levelBonus = 4000;
-	} else if(global.gameDifficult == gameDifficultType.Impossible) {
+	} else if(global.gameDifficult == gameDifficultType.Crazy) {
 		levelBonus = 5000;
+	} else if(global.gameDifficult == gameDifficultType.Impossible) {
+		levelBonus = 7000;
 	} 
 		
 	//set sprite

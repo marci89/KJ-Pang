@@ -102,7 +102,7 @@ var nothingDropChance = 0.8;
 		   CreateItemWithMovement(x, y,0,-4, obj_item_tracking_rocket_launcher);
 		
 		} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance + trackingRocketLauncherDropChance + projectileShieldDropChance)) {
-		   CreateItemWithMovement(x, y,0,-4, obj_item_projectile_shield);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_energy_shield);
 		
 		} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance + trackingRocketLauncherDropChance + projectileShieldDropChance + healthPotionDropChance)) {
 		   CreateItemWithMovement(x, y,0,-4, obj_item_health_potion);
@@ -144,25 +144,25 @@ var nothingDropChance = 0.8;
 		   CreateItemWithMovement(x, y,0,-4, obj_item_tracking_rocket_launcher);
 		
 		} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance + trackingRocketLauncherDropChance + projectileShieldDropChance)) {
-		  CreateItemWithMovement(x, y,0,-4, obj_item_projectile_shield);
+		  CreateItemWithMovement(x, y,0,-4, obj_item_energy_shield);
 		
 		} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance + trackingRocketLauncherDropChance + projectileShieldDropChance + healthPotionDropChance)) {
 		   CreateItemWithMovement(x, y,0,-4, obj_item_health_potion);
 			
 		} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance + trackingRocketLauncherDropChance + projectileShieldDropChance + healthPotionDropChance + protectiveRingDropChance)) {
-		    CreateItemWithMovement(x, y,0,-4, obj_item_protecting_ring);
+		    CreateItemWithMovement(x, y,0,-4, obj_item_double_sting);
 			
 		} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance + trackingRocketLauncherDropChance + projectileShieldDropChance + healthPotionDropChance + protectiveRingDropChance + doublePowerWireDropChance)) {
 		   CreateItemWithMovement(x, y,0,-4, obj_item_double_power_wire);
 			
 		} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance + trackingRocketLauncherDropChance + projectileShieldDropChance + healthPotionDropChance + protectiveRingDropChance + doublePowerWireDropChance + invulnerabilityPotionDropChance)) {
-		  CreateItemWithMovement(x, y,0,-4, obj_item_invulnerability_potion);
+		  CreateItemWithMovement(x, y,0,-4, obj_item_bomb);
 			
 		} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance + trackingRocketLauncherDropChance + projectileShieldDropChance + healthPotionDropChance + protectiveRingDropChance + doublePowerWireDropChance + invulnerabilityPotionDropChance + rocketLauncherDropChance)) {
 		 CreateItemWithMovement(x, y,0,-4, obj_item_rocket_launcher);
 			
 			} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance + trackingRocketLauncherDropChance + projectileShieldDropChance + healthPotionDropChance + protectiveRingDropChance + doublePowerWireDropChance + invulnerabilityPotionDropChance + rocketLauncherDropChance + bombDropChance)) {
-		    CreateItemWithMovement(x, y,0,-4, obj_item_bomb);
+	 CreateItemWithMovement(x, y,0,-4, obj_item_bomb);
 			
 		
 	
@@ -200,17 +200,17 @@ var nothingDropChance = 0.8;
 		   CreateItemWithMovement(x, y,0,-4, obj_item_tracking_rocket_launcher);
 		
 		} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance + trackingRocketLauncherDropChance + projectileShieldDropChance)) {
-		   CreateItemWithMovement(x, y,0,-4, obj_item_projectile_shield);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_energy_shield);
 		
 		} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance + trackingRocketLauncherDropChance + projectileShieldDropChance + healthPotionDropChance)) {
-		    CreateItemWithMovement(x, y,0,-4, obj_item_health_potion);
+		    CreateItemWithMovement(x, y,0,-4, obj_item_double_sting);
 			
 		} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance + trackingRocketLauncherDropChance + projectileShieldDropChance + healthPotionDropChance + protectiveRingDropChance)) {
-		    CreateItemWithMovement(x, y,0,-4, obj_item_protecting_ring);
+		    CreateItemWithMovement(x, y,0,-4, obj_item_bomb);
 			
 			
 		} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance + trackingRocketLauncherDropChance + projectileShieldDropChance + healthPotionDropChance + protectiveRingDropChance  + invulnerabilityPotionDropChance)) {
-		   CreateItemWithMovement(x, y,0,-4, obj_item_invulnerability_potion);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_land_mine);
 			
 		} else if (randomChance < (doubleStingDropChance + flameThrowerDropChance + trackingRocketLauncherDropChance + projectileShieldDropChance + healthPotionDropChance + protectiveRingDropChance  + invulnerabilityPotionDropChance + rocketLauncherDropChance)) {
 		    CreateItemWithMovement(x, y,0,-4, obj_item_rocket_launcher);

@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":259.5004,
+  "duration":259.45978,
   "name":"snd_deathValley_music",
   "parent":{
     "name":"PangAdventures",

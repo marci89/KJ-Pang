@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":151.77142,
+  "duration":151.72095,
   "name":"snd_in_my_dreams",
   "parent":{
     "name":"Other",
@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_in_my_dreams.mp3",
   "type":0,
-  "volume":0.75,
+  "volume":0.85,
 }

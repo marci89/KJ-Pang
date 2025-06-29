@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":105.45633,
+  "duration":105.44433,
   "name":"snd_TheDarkKnightRises",
   "parent":{
     "name":"Other",

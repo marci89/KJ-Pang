@@ -1,0 +1,1 @@
+	CreateManananggalChild(x, y);

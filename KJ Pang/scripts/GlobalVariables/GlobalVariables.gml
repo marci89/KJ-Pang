@@ -13,6 +13,7 @@
 	global.isNormalDifficultEnable = false;
 	global.isHardDifficultEnable = false;
 	global.isNightmareDifficultEnable = false;
+	global.isCrazyDifficultEnable = false;
 	global.isImpossibleDifficultEnable = false;
 	
 

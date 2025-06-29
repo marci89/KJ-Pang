@@ -38,6 +38,14 @@ childNumber = 4;
 maxChildNumber = 4;
 childCreateTime = 60;
 
+
+if (global.gameDifficult == gameDifficultType.Impossible) {
+	childNumber = 7;
+maxChildNumber = 7;
+bulletShootTime = 150;
+}
+
+
 //start values
 alarm[6] = 400;
 

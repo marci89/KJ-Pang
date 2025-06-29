@@ -14,7 +14,9 @@ effect_create_above( ef_smoke, x, y, 2, c_red);
 var isDropped = irandom(99) < 28;
 
 if (isDropped) {
+	if(global.gameDifficult != gameDifficultType.Impossible) {
    CreateItemWithMovement(x, y, 0, -4, obj_item_bounced_pearl);
+	}
 }
 
 

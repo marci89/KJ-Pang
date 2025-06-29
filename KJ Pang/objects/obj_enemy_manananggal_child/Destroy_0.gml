@@ -14,7 +14,9 @@ PlaySound(snd_succubus_death, false, 2);
 var isDropped = irandom(99) < 40;
 
 if (isDropped) {
+		if(global.gameDifficult != gameDifficultType.Impossible) {
    CreateItemWithMovement(x, y, 0, -4, obj_item_bounced_pearl);
+		}
 }
 
 

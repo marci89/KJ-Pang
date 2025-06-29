@@ -31,6 +31,10 @@ function SetHeroText() {
 			text = GetLocalizedText("introStartSinglePalyerHeroNightmareMode");
 		}
 		
+			if (global.gameDifficult == gameDifficultType.Crazy) {
+			text = GetLocalizedText("introStartSinglePalyerHeroCrazyMode");
+		}
+		
 		if (global.gameDifficult == gameDifficultType.Impossible) {
 			text = GetLocalizedText("introStartSinglePalyerHeroImpossibleMode");
 		}
@@ -51,6 +55,10 @@ function SetHeroText() {
 		
 		if (global.gameDifficult == gameDifficultType.Nightmare) {
 			text = GetLocalizedText("introStartMultiPalyerHeroNightmareMode");
+		}
+		
+			if (global.gameDifficult == gameDifficultType.Crazy) {
+			text = GetLocalizedText("introStartMultiPalyerHeroCrazyMode");
 		}
 		
 		if (global.gameDifficult == gameDifficultType.Impossible) {

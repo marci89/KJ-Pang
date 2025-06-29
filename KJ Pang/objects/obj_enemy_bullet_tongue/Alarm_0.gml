@@ -15,4 +15,5 @@ if (isMaxSized) {
 	image_xscale += shrinkingAmount;
 }
 
+
 alarm[0]  = 5;

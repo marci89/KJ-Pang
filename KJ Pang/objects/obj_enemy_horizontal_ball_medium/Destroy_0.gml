@@ -36,6 +36,18 @@ else if (global.gameDifficult == gameDifficultType.Hard) {
 	CreateHorizontalBallSmall(x, y+childPositionY, isLeftSide, false, false);
 	CreateHorizontalBallSmall(x+6, y+childPositionY+2, isLeftSide, false, false);
 }
+
+else if(global.gameDifficult == gameDifficultType.Impossible) {
+		CreateHorizontalBallSmall(x, y-childPositionY, isLeftSide, true, false);
+	CreateHorizontalBallSmall(x, y+childPositionY, isLeftSide, false, false);
+	CreateHorizontalBallSmall(x+6, y+childPositionY+2, isLeftSide, false, false);
+	CreateHorizontalBallSmall(x-6, y-childPositionY, isLeftSide, true, false);
+	CreateHorizontalBallSmall(x-6, y+childPositionY, isLeftSide, false, false);
+	
+	CreateHorizontalBallSmall(x+10, y-childPositionY, isLeftSide, true, false);
+	CreateHorizontalBallSmall(x-10, y+childPositionY, isLeftSide, false, false);
+	
+}
 else {
  
 	CreateHorizontalBallSmall(x, y-childPositionY, isLeftSide, true, false);

@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":622.44,
+  "duration":127.62413,
   "name":"snd_TwoStepsFromHell",
   "parent":{
     "name":"Other",

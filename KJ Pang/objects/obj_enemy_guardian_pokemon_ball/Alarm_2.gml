@@ -12,5 +12,6 @@ global.hasLevelTime = true;
 		
 
 	
-
-PlayMusic(snd_final_boss_music, true); // play music
+if (global.gameDifficult != gameDifficultType.Impossible) {
+	PlayMusic(snd_final_boss_music, true); // play music
+}

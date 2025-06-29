@@ -76,6 +76,44 @@ else if (global.gameDifficult == gameDifficultType.Hard) {
 	normalBallColorType.Red, false);
 	
 }
+
+else if (global.gameDifficult == gameDifficultType.Impossible) {
+ 
+	CreateNormalBallMedium(x + childPositionX, y, global.normalBallMediumMoveX, global.normalBallMediumMoveY,
+	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
+	normalBallColorType.Red, false);
+	
+	CreateNormalBallMedium(x - childPositionX, y, -global.normalBallMediumMoveX, global.normalBallMediumMoveY,
+	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
+	normalBallColorType.Red, false);
+	
+	CreateNormalBallMedium(x - childPositionX, y + childPositionX, global.normalBallMediumMoveX + 0.5, global.normalBallMediumMoveY -1,
+	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
+	normalBallColorType.Red, false);
+	
+	CreateNormalBallMedium(x + childPositionX, y- childPositionX, -global.normalBallMediumMoveX-0.5, global.normalBallMediumMoveY -1,
+	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
+	normalBallColorType.Red, false);
+	
+			CreateNormalBallMedium(x - childPositionX, y + childPositionX, global.normalBallMediumMoveX + 0.5, global.normalBallMediumMoveY -3,
+	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
+	normalBallColorType.Red, false);
+	
+	CreateNormalBallMedium(x + childPositionX, y- childPositionX, -global.normalBallMediumMoveX-0.5, global.normalBallMediumMoveY -3,
+	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
+	normalBallColorType.Red, false);
+	
+	CreateNormalBallMediumShield(x - childPositionX, y + childPositionX, global.normalBallMediumMoveX + 2, global.normalBallMediumMoveY -5,
+	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
+	normalBallColorType.Red, false,4);
+	
+	CreateNormalBallMediumShield(x + childPositionX, y- childPositionX, -global.normalBallMediumMoveX-2, global.normalBallMediumMoveY -5,
+	global.normalBallMediumGravityY, global.normalBallMediumJumpHeightMax,
+	normalBallColorType.Red,false,4);
+	
+	
+	
+}
 else {
  
 	CreateNormalBallMedium(x + childPositionX, y, global.normalBallMediumMoveX, global.normalBallMediumMoveY,

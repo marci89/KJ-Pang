@@ -64,6 +64,23 @@ else if (global.gameDifficult == gameDifficultType.Hard) {
 	CreateYellowBallSmall(x-childPositionX, y, false);
 	CreateYellowBallSmall(x+childPositionX, y, false);
 }
+else if (global.gameDifficult == gameDifficultType.Impossible) {
+ 
+	CreateYellowBallSmall(x-childPositionX, y, false);
+	CreateYellowBallSmall(x+childPositionX, y, false);
+	childPositionX = random_range(5, 10);
+	CreateYellowBallSmall(x-childPositionX, y, false);
+	CreateYellowBallSmall(x+childPositionX, y, false);
+	childPositionX = random_range(4, 10);
+	CreateYellowBallSmall(x-childPositionX, y, false);
+	CreateYellowBallSmall(x+childPositionX, y, false);
+	childPositionX = random_range(7, 14);
+	CreateYellowBallSmall(x-childPositionX, y, false);
+	CreateYellowBallSmall(x+childPositionX, y, false);
+	childPositionX = random_range(5, 13);
+	CreateYellowBallSmall(x-childPositionX, y, false);
+	CreateYellowBallSmall(x+childPositionX, y, false);
+}
 else {
  
 	CreateYellowBallSmall(x-childPositionX, y, false);

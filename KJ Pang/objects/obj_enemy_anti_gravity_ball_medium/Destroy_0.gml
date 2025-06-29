@@ -37,6 +37,7 @@ else if (global.gameDifficult == gameDifficultType.Hard) {
 	CreateAntiGravityBallSmall(x-childPositionX, y, false, true, false);
 	CreateAntiGravityBallSmall(x+childPositionX, y, true, true, false);
 }
+
 else {
  
 	CreateAntiGravityBallSmall(x-childPositionX, y, false, false, false);

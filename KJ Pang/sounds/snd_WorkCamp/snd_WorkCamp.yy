@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":217.91347,
+  "duration":217.87283,
   "name":"snd_WorkCamp",
   "parent":{
     "name":"Other",

@@ -15,7 +15,7 @@ global.isRestartLevelAfterDead = true; //restart after death
 global.levelTimeMax = 350; // level's max time
 //global.playerOneDefaultWeapon = weaponType.ShotGun;
 //global.gameDifficult = gameDifficultType.Impossible;
-//global.level = 31;
+//global.level = 48;
 
 	//Giant normal ball default properties
 		global.normalBallGiantMoveX = 1.5;
@@ -3130,6 +3130,7 @@ CreatePlayer(400, 600); // create player
 	CreateItem(200, 650, obj_item_energy_shield);
 	CreateItem(824, 650, obj_item_first_aid_kit);
 	CreateItem(924, 650, obj_item_double_power_wire);
+	CreateItem(970, 500, obj_item_magnet);
 }
 
 #endregion

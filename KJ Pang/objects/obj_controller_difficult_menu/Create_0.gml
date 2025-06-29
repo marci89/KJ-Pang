@@ -13,7 +13,7 @@ buttonY = 150; // buttons y
 
 //selection
 currentSelectedButtonId = 0;
-maxButtonId = 5;
+maxButtonId = 6;
 
 #endregion
 
@@ -30,6 +30,9 @@ maxButtonId = 5;
  buttonY += 80;
  
  var nightmareButton = instance_create_layer(startX, buttonY,"Instances", obj_difficult_menu_nightmare_button);
+ buttonY += 80;
+ 
+  var crazyButton = instance_create_layer(startX, buttonY,"Instances", obj_difficult_menu_crazy_button);
  buttonY += 80;
  
  var impossibleButton = instance_create_layer(startX, buttonY,"Instances", obj_difficult_menu_impossible_button);
@@ -50,6 +53,10 @@ if (!global.isHardDifficultEnable) {
 }
 
 if (!global.isNightmareDifficultEnable) {
+	maxButtonId--;
+}
+
+if (!global.isCrazyDifficultEnable) {
 	maxButtonId--;
 }
 

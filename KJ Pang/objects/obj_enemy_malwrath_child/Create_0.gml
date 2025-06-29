@@ -52,6 +52,11 @@ function Init() {
 		
 		bulletShootTime = 350;
 		bulletSpeed = 5;
+		
+			if (global.gameDifficult == gameDifficultType.Impossible) {
+	bulletSpeed = 17;
+bulletShootTime = 200;
+}
 }
 
 #endregion

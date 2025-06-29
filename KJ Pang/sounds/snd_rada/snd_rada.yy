@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":262.464,
+  "duration":262.43195,
   "name":"snd_rada",
   "parent":{
     "name":"Other",

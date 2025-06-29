@@ -1,7 +1,7 @@
 event_inherited();
 
 text = GetLocalizedText("impossible"); // translate text
-buttonId = 4; // button identifier
+buttonId = 5; // button identifier
 isLocked = false;
 
 if(!global.isImpossibleDifficultEnable) {

@@ -16,6 +16,10 @@ function isLockedRequiredDifficultLevelItem(requiredDifficult){
 		finishedDifficultType = gameDifficultType.Nightmare;
 	}
 	
+		if(global.isCrazyDifficultEnable) {
+		finishedDifficultType = gameDifficultType.Crazy;
+	}
+	
 	if(global.isImpossibleDifficultEnable) {
 		finishedDifficultType = gameDifficultType.Impossible;
 	}

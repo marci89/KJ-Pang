@@ -163,7 +163,6 @@ var nothingDropChance = 0.8;
 		var randomChance = random(1);
 		
 		if (randomChance < bouncingPearlDropChance) {
-		CreateItemWithMovement(x, y,0,-4, obj_item_land_mine);
 		
 		} else if (randomChance < (bouncingPearlDropChance + timeFreezeDropChance)) {
 		   CreateItemWithMovement(x, y,0,-4, obj_item_time_freeze);
@@ -172,7 +171,6 @@ var nothingDropChance = 0.8;
 		   CreateItemWithMovement(x, y,0,-4, obj_item_time_slow);
 		
 		} else if (randomChance < (bouncingPearlDropChance + timeFreezeDropChance + timeSlowDropChance + projectileShieldDropChance)) {
-		   CreateItemWithMovement(x, y,0,-4, obj_item_projectile_shield);
 		
 		} else if (randomChance < (bouncingPearlDropChance + timeFreezeDropChance + timeSlowDropChance + projectileShieldDropChance + antiGravDropChance)) {
 		   CreateItemWithMovement(x, y,0,-4, obj_item_bounced_pearls);
@@ -199,7 +197,6 @@ var nothingDropChance = 0.8;
 		var randomChance = random(1);
 
 		if (randomChance < bouncingPearlDropChance) {
-			CreateItemWithMovement(x, y,0,-4, obj_item_land_mine);
 		
 		} else if (randomChance < (bouncingPearlDropChance + timeFreezeDropChance)) {
 		    CreateItemWithMovement(x, y,0,-4, obj_item_time_freeze);
@@ -208,11 +205,10 @@ var nothingDropChance = 0.8;
 		   CreateItemWithMovement(x, y,0,-4, obj_item_time_slow);
 		
 		} else if (randomChance < (bouncingPearlDropChance + timeFreezeDropChance + timeSlowDropChance + projectileShieldDropChance)) {
-		    CreateItemWithMovement(x, y,0,-4, obj_item_projectile_shield);
+		    CreateItemWithMovement(x, y,0,-4, obj_item_energy_shield);
 		
 		} else if (randomChance < (bouncingPearlDropChance + timeFreezeDropChance + timeSlowDropChance + projectileShieldDropChance + antiGravDropChance)) {
-		    CreateItemWithMovement(x, y,0,-4, obj_item_detonator);
-			
+				   CreateItemWithMovement(x, y,0,-4, obj_item_bounced_pearls);
 		} else if (randomChance < (bouncingPearlDropChance + timeFreezeDropChance + timeSlowDropChance + projectileShieldDropChance + antiGravDropChance + nothingDropChance)) {
 		    show_debug_message("No item dropped.");
 		} else {
@@ -236,7 +232,7 @@ var nothingDropChance = 0.8;
 		var randomChance = random(1);
 		
 		if (randomChance < bouncingPearlDropChance) {
-		CreateItemWithMovement(x, y,0,-4, obj_item_land_mine);
+	   CreateItemWithMovement(x, y,0,-4, obj_item_bounced_pearls);
 		
 		} else if (randomChance < (bouncingPearlDropChance + timeFreezeDropChance)) {
 		   CreateItemWithMovement(x, y,0,-4, obj_item_time_freeze);
@@ -245,10 +241,10 @@ var nothingDropChance = 0.8;
 		   CreateItemWithMovement(x, y,0,-4, obj_item_time_slow);
 		
 		} else if (randomChance < (bouncingPearlDropChance + timeFreezeDropChance + timeSlowDropChance + projectileShieldDropChance)) {
-		   CreateItemWithMovement(x, y,0,-4, obj_item_projectile_shield);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_energy_shield);
 		
 		} else if (randomChance < (bouncingPearlDropChance + timeFreezeDropChance + timeSlowDropChance + projectileShieldDropChance + antiGravDropChance)) {
-		  CreateItemWithMovement(x, y,0,-4, obj_item_detonator);
+		   CreateItemWithMovement(x, y,0,-4, obj_item_bounced_pearls);
 			
 		} else if (randomChance < (bouncingPearlDropChance + timeFreezeDropChance + timeSlowDropChance + projectileShieldDropChance + antiGravDropChance + nothingDropChance)) {
 		    show_debug_message("No item dropped.");

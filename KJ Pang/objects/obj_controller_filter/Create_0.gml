@@ -27,11 +27,18 @@ if(global.gameDifficult == gameDifficultType.Nightmare) {
 	}
 }
 
-if(global.gameDifficult == gameDifficultType.Impossible) {
+if(global.gameDifficult == gameDifficultType.Crazy) {
 	if (global.level == 46) {
 		CreateMist();
 	}
 }
+
+if(global.gameDifficult == gameDifficultType.Impossible) {
+	if (global.level == 4 || global.level == 33 || global.level == 46) {
+		CreateMist();
+	}
+}
+
 
 
 
@@ -63,6 +70,13 @@ if(global.gameDifficult == gameDifficultType.Hard) {
 }
 
 if(global.gameDifficult == gameDifficultType.Nightmare) {
+	if (global.level == 20 || global.level == 21 || global.level == 22
+	|| global.level == 51 || global.level == 52 || global.level == 53) {
+		CreateSnow(1);
+	}
+}
+
+if(global.gameDifficult == gameDifficultType.Crazy) {
 	if (global.level == 20 || global.level == 21 || global.level == 22
 	|| global.level == 51 || global.level == 52 || global.level == 53) {
 		CreateSnow(1);

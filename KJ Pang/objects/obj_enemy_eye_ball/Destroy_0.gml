@@ -11,10 +11,12 @@ PlaySound(snd_ball_destroy, false, 3);
 
 
 //drop item
-var isDropped = irandom(99) < 74;
+var isDropped = irandom(99) < 30;
 
 if (isDropped) {
+	if(global.gameDifficult != gameDifficultType.Impossible) {
    CreateItemWithMovement(x, y, 0, -4, obj_item_land_mine);
+	}
 }
 
 CreateItemWithMovement(x,y,0.2,-4, obj_item_food);

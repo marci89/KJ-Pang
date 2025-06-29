@@ -27,3 +27,27 @@ CreateNormalBallSmall(x+childPositionX, y, global.normalBallSmallMoveX, global.n
 	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
 	colorType, false);
 
+
+if (global.gameDifficult == gameDifficultType.Impossible) {
+ 
+  if(colorType = normalBallColorType.Blue) {
+	  CreateNormalBallSmall(x-childPositionX, y, 0, global.normalBallSmallMoveY-3,
+	global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
+	colorType, false);
+	
+  }
+
+
+	  if(colorType = normalBallColorType.Green) {
+		
+	 
+	 	CreateNormalBallSmall(x-childPositionX, y, -global.normalBallSmallMoveX, global.normalBallSmallMoveY -7,
+		global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
+		colorType, false);
+	
+		CreateNormalBallSmall(x+childPositionX, y, global.normalBallSmallMoveX, global.normalBallSmallMoveY-9,
+		global.normalBallSmallGravityY, global.normalBallSmallJumpHeightMax,
+		colorType, false);
+		}
+}
+

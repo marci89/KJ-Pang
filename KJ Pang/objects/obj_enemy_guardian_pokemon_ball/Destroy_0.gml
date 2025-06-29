@@ -54,6 +54,21 @@ if(enemyGuardianType == guardianType.Expert) {
 	CreateItem(950, 100, obj_item_health_potion);
 }
 
+if(enemyGuardianType == guardianType.Master) {
+	var master = instance_create_layer(x, y,"Enemy_level1", obj_enemy_master_guardian);
+	master.Init();
+	
+	CreateItem(100, 100, obj_item_first_aid_kit);
+	
+	CreateItem(300, 100, obj_item_projectile_shield);
+	
+	CreateItem(500, 100, obj_item_protecting_ring);
+	
+	CreateItem(700, 100, obj_item_invulnerability_potion);
+	
+	CreateItem(950, 100, obj_item_first_aid_kit);
+}
+
 
 //create poke ball parts
 

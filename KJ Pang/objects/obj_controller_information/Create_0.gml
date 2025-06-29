@@ -502,6 +502,101 @@ function CreateNightmareLevelInformation() {
 
 #endregion
 
+
+#region crazy level
+
+function CreateCrazyLevelInformation() {
+	
+	if (global.stageLevel == 1) {
+		text = GetLocalizedText("crazyInfoDesc");
+	}
+	
+	if (global.stageLevel == 2) {
+		room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 3) {
+		room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 4) {
+		
+		room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 5) {
+		room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 6) {
+		room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 7) {
+		room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 8) {
+		room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 9) {
+		room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 10) {
+		room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 11) {
+		room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 12) {
+		room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 13) {
+		room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 14) {
+		 room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 15) {
+		   room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 16) {
+		room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 17) {
+	   room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 18) {
+		   room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 19) {
+	   room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 20) {
+		   room_goto(rm_level);
+	}
+	
+	if (global.stageLevel == 21) {
+		newsText = GetLocalizedText("bossLevel");
+		text = GetLocalizedText("finalBattleShortDesc");
+	}
+	
+	
+}
+#endregion
+
 #region Impossible level
 
 function CreateImpossibleLevelInformation() {
@@ -615,6 +710,10 @@ function CreateIformation() {
 	
 	if(global.gameDifficult == gameDifficultType.Nightmare) {
 		CreateNightmareLevelInformation();
+	}
+	
+	if(global.gameDifficult == gameDifficultType.Crazy) {
+		CreateCrazyLevelInformation();
 	}
 	
 	if(global.gameDifficult == gameDifficultType.Impossible) {

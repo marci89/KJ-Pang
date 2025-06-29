@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":262.9747,
+  "duration":262.94,
   "name":"snd_space_music",
   "parent":{
     "name":"PangAdventures",

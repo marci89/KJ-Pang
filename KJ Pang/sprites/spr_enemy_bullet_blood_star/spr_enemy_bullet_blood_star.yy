@@ -48,13 +48,7 @@
     "resourceType":"GMNineSliceData",
     "resourceVersion":"2.0",
     "right":0,
-    "tileMode":[
-      0,
-      0,
-      0,
-      0,
-      0,
-    ],
+    "tileMode":[0,0,0,0,0,],
     "top":0,
   },
   "origin":4,
@@ -66,7 +60,7 @@
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
-    "$GMSequence":"",
+    "$GMSequence":"v1",
     "%Name":"spr_enemy_bullet_blood_star",
     "autoRecord":true,
     "backdropHeight":768,
@@ -102,54 +96,22 @@
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e26fc5e7-d9da-47d5-a674-1ee2da46d734","path":"sprites/spr_enemy_bullet_blood_star/spr_enemy_bullet_blood_star.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"7093b1ea-1458-41a1-93d5-cf4bbb1f67f4","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"9ca00f9e-3075-40a7-b276-a882fddafead","path":"sprites/spr_enemy_bullet_blood_star/spr_enemy_bullet_blood_star.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"26766f97-fadd-417c-818a-f2a53086418f","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7dfab148-bf93-435c-a0d7-0abd2a616e7e","path":"sprites/spr_enemy_bullet_blood_star/spr_enemy_bullet_blood_star.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"74e1e1dd-ba12-4092-ae5a-d541f3a7d353","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"44ad1bbb-04ef-4f8a-9071-34cf76af56da","path":"sprites/spr_enemy_bullet_blood_star/spr_enemy_bullet_blood_star.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"ced0f128-376b-4fd9-90d8-aa0f07e8c624","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"89afeb05-3049-4db1-ab35-51571c520f2e","path":"sprites/spr_enemy_bullet_blood_star/spr_enemy_bullet_blood_star.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"5bc1a5c4-47b2-4bd0-84dd-ce5e4ccdafe5","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"44408465-c1ef-4e73-9025-6ab51d215b7d","path":"sprites/spr_enemy_bullet_blood_star/spr_enemy_bullet_blood_star.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e1d59488-0b42-4d68-ba4e-14066045bb53","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c59d4453-78cf-4d8b-af4d-ffa4f6ea67e2","path":"sprites/spr_enemy_bullet_blood_star/spr_enemy_bullet_blood_star.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"fad1bb01-ac1a-4a16-b7d9-4bdcdee6d2cd","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"330bb2f1-bb47-4f8e-9295-eeb22892ab64","path":"sprites/spr_enemy_bullet_blood_star/spr_enemy_bullet_blood_star.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"094be8af-bf61-47f8-9edc-982c94ec59bb","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3273595d-ed0d-4b26-92a0-2285d6389d7b","path":"sprites/spr_enemy_bullet_blood_star/spr_enemy_bullet_blood_star.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"2db0ca3a-81db-49c9-90af-41c71c2fd193","IsCreationKey":false,"Key":8.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2cb1da15-5d92-426a-83b6-5652bdfe1f14","path":"sprites/spr_enemy_bullet_blood_star/spr_enemy_bullet_blood_star.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"2b7f95ea-9fda-4ca3-9d7f-c33431067690","IsCreationKey":false,"Key":9.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7de3b833-cba0-4823-a4c1-59412a4f2d45","path":"sprites/spr_enemy_bullet_blood_star/spr_enemy_bullet_blood_star.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"8f0aab82-c48c-4fd3-a676-dc13f4cc8254","IsCreationKey":false,"Key":10.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3d2a0756-5744-4b1f-8c89-aa531e8f84e9","path":"sprites/spr_enemy_bullet_blood_star/spr_enemy_bullet_blood_star.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e9e71d5e-2bc9-4114-9c1a-e42bc1cf1490","IsCreationKey":false,"Key":11.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"299103ee-86d0-4849-b92b-50be17290b39","path":"sprites/spr_enemy_bullet_blood_star/spr_enemy_bullet_blood_star.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f1da2e58-3198-457d-8d00-8239dc9f9323","IsCreationKey":false,"Key":12.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"06195c42-5c98-485a-a14a-f7b435a2aa89","path":"sprites/spr_enemy_bullet_blood_star/spr_enemy_bullet_blood_star.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"1c690667-1426-427f-8407-5a88c468fb05","IsCreationKey":false,"Key":13.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8de862d5-f76d-47be-bde2-e50c483073ab","path":"sprites/spr_enemy_bullet_blood_star/spr_enemy_bullet_blood_star.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"42d740e9-f8ba-40e1-b2a8-3ba00d07f90a","IsCreationKey":false,"Key":14.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"99c93208-8086-4379-bec6-ea20ed344f9f","path":"sprites/spr_enemy_bullet_blood_star/spr_enemy_bullet_blood_star.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"dfd5c71d-919b-46a1-a9ed-c5ba649635bb","IsCreationKey":false,"Key":15.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"e26fc5e7-d9da-47d5-a674-1ee2da46d734","path":"sprites/spr_enemy_bullet_blood_star/spr_enemy_bullet_blood_star.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"7093b1ea-1458-41a1-93d5-cf4bbb1f67f4","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"9ca00f9e-3075-40a7-b276-a882fddafead","path":"sprites/spr_enemy_bullet_blood_star/spr_enemy_bullet_blood_star.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"26766f97-fadd-417c-818a-f2a53086418f","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"7dfab148-bf93-435c-a0d7-0abd2a616e7e","path":"sprites/spr_enemy_bullet_blood_star/spr_enemy_bullet_blood_star.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"74e1e1dd-ba12-4092-ae5a-d541f3a7d353","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"44ad1bbb-04ef-4f8a-9071-34cf76af56da","path":"sprites/spr_enemy_bullet_blood_star/spr_enemy_bullet_blood_star.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"ced0f128-376b-4fd9-90d8-aa0f07e8c624","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"89afeb05-3049-4db1-ab35-51571c520f2e","path":"sprites/spr_enemy_bullet_blood_star/spr_enemy_bullet_blood_star.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"5bc1a5c4-47b2-4bd0-84dd-ce5e4ccdafe5","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"44408465-c1ef-4e73-9025-6ab51d215b7d","path":"sprites/spr_enemy_bullet_blood_star/spr_enemy_bullet_blood_star.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"e1d59488-0b42-4d68-ba4e-14066045bb53","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"c59d4453-78cf-4d8b-af4d-ffa4f6ea67e2","path":"sprites/spr_enemy_bullet_blood_star/spr_enemy_bullet_blood_star.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"fad1bb01-ac1a-4a16-b7d9-4bdcdee6d2cd","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"330bb2f1-bb47-4f8e-9295-eeb22892ab64","path":"sprites/spr_enemy_bullet_blood_star/spr_enemy_bullet_blood_star.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"094be8af-bf61-47f8-9edc-982c94ec59bb","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"3273595d-ed0d-4b26-92a0-2285d6389d7b","path":"sprites/spr_enemy_bullet_blood_star/spr_enemy_bullet_blood_star.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"2db0ca3a-81db-49c9-90af-41c71c2fd193","IsCreationKey":false,"Key":8.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"2cb1da15-5d92-426a-83b6-5652bdfe1f14","path":"sprites/spr_enemy_bullet_blood_star/spr_enemy_bullet_blood_star.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"2b7f95ea-9fda-4ca3-9d7f-c33431067690","IsCreationKey":false,"Key":9.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"7de3b833-cba0-4823-a4c1-59412a4f2d45","path":"sprites/spr_enemy_bullet_blood_star/spr_enemy_bullet_blood_star.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"8f0aab82-c48c-4fd3-a676-dc13f4cc8254","IsCreationKey":false,"Key":10.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"3d2a0756-5744-4b1f-8c89-aa531e8f84e9","path":"sprites/spr_enemy_bullet_blood_star/spr_enemy_bullet_blood_star.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"e9e71d5e-2bc9-4114-9c1a-e42bc1cf1490","IsCreationKey":false,"Key":11.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"299103ee-86d0-4849-b92b-50be17290b39","path":"sprites/spr_enemy_bullet_blood_star/spr_enemy_bullet_blood_star.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"f1da2e58-3198-457d-8d00-8239dc9f9323","IsCreationKey":false,"Key":12.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"06195c42-5c98-485a-a14a-f7b435a2aa89","path":"sprites/spr_enemy_bullet_blood_star/spr_enemy_bullet_blood_star.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"1c690667-1426-427f-8407-5a88c468fb05","IsCreationKey":false,"Key":13.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"8de862d5-f76d-47be-bde2-e50c483073ab","path":"sprites/spr_enemy_bullet_blood_star/spr_enemy_bullet_blood_star.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"42d740e9-f8ba-40e1-b2a8-3ba00d07f90a","IsCreationKey":false,"Key":14.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"99c93208-8086-4379-bec6-ea20ed344f9f","path":"sprites/spr_enemy_bullet_blood_star/spr_enemy_bullet_blood_star.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"dfd5c71d-919b-46a1-a9ed-c5ba649635bb","IsCreationKey":false,"Key":15.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

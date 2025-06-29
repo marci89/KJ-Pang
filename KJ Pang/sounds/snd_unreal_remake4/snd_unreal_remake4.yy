@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":189.98857,
+  "duration":189.96245,
   "name":"snd_unreal_remake4",
   "parent":{
     "name":"Unreal",

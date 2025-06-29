@@ -117,3 +117,11 @@ var child3 = CreateCacodemonChild(x, y);
 child3.StartUnhurtable();
 var child4 = CreateCacodemonChild(x, y);
 child4.StartUnhurtable();
+
+if (global.gameDifficult == gameDifficultType.Impossible) {
+	var child5 = CreateCacodemonChild(x, y);
+child5.StartUnhurtable();
+var child6 = CreateCacodemonChild(x, y);
+child6.StartUnhurtable();
+}
+

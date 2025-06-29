@@ -120,3 +120,11 @@ var child3 = CreateWretchedChild(x, y);
 child3.StartUnhurtable();
 var child4 = CreateWretchedChild(x, y);
 child4.StartUnhurtable();
+
+
+if (global.gameDifficult == gameDifficultType.Impossible) {
+	var child5 = CreateWretchedChild(x, y);
+child5.StartUnhurtable();
+var child6 = CreateWretchedChild(x, y);
+child6.StartUnhurtable();
+}

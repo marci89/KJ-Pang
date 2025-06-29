@@ -118,3 +118,11 @@ var child3 = CreateMalwrathChild(x, y);
 child3.StartUnhurtable();
 var child4 = CreateMalwrathChild(x, y);
 child4.StartUnhurtable();
+
+if (global.gameDifficult == gameDifficultType.Impossible) {
+	var child5 = CreateMalwrathChild(x, y);
+child5.StartUnhurtable();
+var child6 = CreateMalwrathChild(x, y);
+child6.StartUnhurtable();
+}
+

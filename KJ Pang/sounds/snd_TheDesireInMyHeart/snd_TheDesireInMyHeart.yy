@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":482.95184,
+  "duration":114.470024,
   "name":"snd_TheDesireInMyHeart",
   "parent":{
     "name":"Other",

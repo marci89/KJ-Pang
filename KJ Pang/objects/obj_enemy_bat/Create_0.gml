@@ -61,6 +61,15 @@ function Init() {
 		isCanAttack = true;
 		isAbleToGoStartY = false;
 		
+		
+		if (global.gameDifficult == gameDifficultType.Impossible) {
+			if (rangeChoice == 0) {
+			moveX = random_range(-1.5, -3.5);
+			} else {
+			moveX = random_range(1.5, 3.5);
+			}
+		}
+		
 		SetOriginalProperties();
 		
 
@@ -121,6 +130,10 @@ function MoveToPlayer() {
 		            PlaySound(snd_bat_attack, false, 1);
 		            moveX = 0;
 		            moveY = 4;
+					
+						if (global.gameDifficult == gameDifficultType.Impossible) {
+							           moveY = 7;
+						}
 			
 					isCanAttack = false;
 		 

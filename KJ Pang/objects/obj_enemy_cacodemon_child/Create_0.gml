@@ -28,6 +28,7 @@ bulletSpeed = 3;
 
 
 
+
 //shoot
 alarm[2] = irandom_range(100, 300);
 
@@ -53,6 +54,12 @@ function Init() {
 		
 		bulletShootTime = 500;
 		bulletSpeed = 3;
+		
+		if (global.gameDifficult == gameDifficultType.Impossible) {
+	bulletSpeed = 5;
+bulletShootTime = 300;
+}
+
 }
 
 #endregion

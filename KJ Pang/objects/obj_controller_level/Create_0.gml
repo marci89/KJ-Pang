@@ -51,6 +51,10 @@ if(global.gameDifficult == gameDifficultType.Nightmare) {
 	CreateLevelNightmare();
 }
 
+if(global.gameDifficult == gameDifficultType.Crazy) {
+	CreateLevelCrazy();
+}
+
 if(global.gameDifficult == gameDifficultType.Impossible) {
 	CreateLevelImpossible();
 }

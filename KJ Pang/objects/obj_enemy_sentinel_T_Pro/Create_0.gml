@@ -50,7 +50,7 @@ var randomChance = random(1);
 			CreateItemWithMovement(x, y, 0, -4, obj_item_protecting_ring);
 		
 		} else if (randomChance < (detonatorDropChance + healthPotionDropChance)) {
-			   CreateItemWithMovement(x, y, 0, -4, obj_item_first_aid_kit);
+			   CreateItemWithMovement(x, y, 0, -4, obj_item_health_potion);
 			
 		} else if (randomChance < (detonatorDropChance  + healthPotionDropChance + nothingDropChance)) {
 		    CreateItemWithMovement(x, y, 0, -4, obj_item_bomb);

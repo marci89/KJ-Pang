@@ -51,8 +51,8 @@ function Init() {
 		moveY = random_range(2, 4);
 		
 		if (global.gameDifficult == gameDifficultType.Impossible) {
-			bulletShootTime = 275;
-			bulletSpeed = 12;
+			bulletShootTime = 200;
+			bulletSpeed = 16;
 		} else {
 			bulletShootTime = 370;
 			bulletSpeed = 10;
