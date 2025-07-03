@@ -1107,6 +1107,8 @@ function HandleImpossibleFinalBattleAction() {
 		
 			CreateManananggalChild(500, 100);
 			CreateManananggalChild(400, 100);
+			
+					CreateDiablo(530, -160, enemyStartDirectionType.Top);
 	
 	}
 	
@@ -1235,6 +1237,8 @@ function HandleImpossibleFinalBattleAction() {
 				CreateItem(500, 100, obj_item_shotgun);
 				CreateItem(400, 100, obj_item_shotgun);
 				CreateItem(600, 100, obj_item_shotgun);
+					CreateItem(900, 100, obj_item_protecting_ring);
+						CreateItem(100, 100, obj_item_invulnerability_potion);
 		CreateSentinel_T_3000(500, 100,5,3,c_yellow, true );
 		CreateAntiGravityBallMedium(-100, 500, false, true, true );
 		CreateAntiGravityBallMedium(1124, 500, true, true, true );
@@ -1261,6 +1265,8 @@ function HandleImpossibleFinalBattleAction() {
 		alarm[0] = 1500;
 		
 			CreateRedBallBoss(100,0.5);
+			
+					CreateDiablo(600, -160, enemyStartDirectionType.Top);
 
 	}
 	
@@ -1268,6 +1274,7 @@ function HandleImpossibleFinalBattleAction() {
 		
 				CreateItem(400,100, obj_item_energy_shield)
 				CreateItem(500,100, obj_item_energy_shield)
+					CreateItem(900, 100, obj_item_protecting_ring);
 		CreateWorm (50,500, 0.5, 0, true);
 		CreateWorm (950,500, -0.5, 0, true);
 		
@@ -1411,6 +1418,12 @@ function HandleImpossibleFinalBattleAction() {
 				CreateItem(900, 100, obj_item_projectile_shield);
 				CreateItem(800, 100, obj_item_projectile_shield);
 				CreateItem(1000, 100, obj_item_projectile_shield);
+				
+					CreateItem(150, 100, obj_item_invulnerability_potion);
+						CreateItem(250, 100, obj_item_invulnerability_potion);
+						
+							CreateItem(850, 100, obj_item_protecting_ring);
+							CreateItem(900, 100, obj_item_protecting_ring);
 
 		
 		alarm[0] = 1800;
@@ -1424,6 +1437,7 @@ function HandleImpossibleFinalBattleAction() {
 	CreateItem(130, 100, obj_item_projectile_shield);
 	CreateItem(880, 100, obj_item_projectile_shield);
 	CreateItem(950, 100, obj_item_first_aid_kit);
+	CreateItem(210, 100, obj_item_first_aid_kit);
 
 		
 		alarm[0] = 600;
